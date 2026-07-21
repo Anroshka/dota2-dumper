@@ -1,7 +1,7 @@
-// Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-21 00:33:36.983799300 UTC
+// Generated using https://github.com/a2x/dota2-dumper
+// 2026-07-21 23:54:14.966407800 UTC
 
-namespace CS2Dumper.Schemas {
+namespace Dota2Dumper.Schemas {
     // Module: worldrenderer.dll
     // Class count: 33
     // Enum count: 3

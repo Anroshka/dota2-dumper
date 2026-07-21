@@ -1,9 +1,9 @@
-// Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-21 00:33:36.983799300 UTC
+// Generated using https://github.com/a2x/dota2-dumper
+// 2026-07-21 23:54:14.966407800 UTC
 
-namespace CS2Dumper.Schemas {
+namespace Dota2Dumper.Schemas {
     // Module: particles.dll
-    // Class count: 502
+    // Class count: 496
     // Enum count: 77
     public static class ParticlesDll {
         // Alignment: 4
@@ -223,7 +223,7 @@ namespace CS2Dumper.Schemas {
             SET_EXPRESSION_MAX = 0x6
         }
         // Alignment: 4
-        // Member count: 12
+        // Member count: 13
         public enum EventTypeSelection_t : uint {
             PARTICLE_EVENT_TYPE_MASK_NONE = 0x0,
             PARTICLE_EVENT_TYPE_MASK_SPAWNED = 0x1,
@@ -233,6 +233,7 @@ namespace CS2Dumper.Schemas {
             PARTICLE_EVENT_TYPE_MASK_COLLISION_STOPPED = 0x10,
             PARTICLE_EVENT_TYPE_MASK_KILLED_ON_COLLISION = 0x20,
             PARTICLE_EVENT_TYPE_MASK_KILLED_ON_CULL = 0x400,
+            PARTICLE_EVENT_TYPE_MASK_CULLED_ON_SPAWN = 0x800,
             PARTICLE_EVENT_TYPE_MASK_USER_1 = 0x40,
             PARTICLE_EVENT_TYPE_MASK_USER_2 = 0x80,
             PARTICLE_EVENT_TYPE_MASK_USER_3 = 0x100,
@@ -826,13 +827,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_Gradient = 0x48; // CColorGradient
         }
         // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MPropertyDescription
-        public static class CPulseCursorFuncs {
-        }
-        // Parent: None
         // Field count: 2
         //
         // Metadata:
@@ -902,13 +896,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_OnInterval = 0x120; // SignatureOutflow_Continue
         }
         // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MPropertyDescription
-        public static class CPulseTestScriptLib {
-        }
-        // Parent: None
         // Field count: 1
         //
         // Metadata:
@@ -957,13 +944,6 @@ namespace CS2Dumper.Schemas {
         public static class CPulseCell_BaseLerp__CursorState_t {
             public const nint m_StartTime = 0x0; // GameTime_t
             public const nint m_EndTime = 0x4; // GameTime_t
-        }
-        // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MPropertyDescription
-        public static class CPulseArraylib {
         }
         // Parent: None
         // Field count: 0
@@ -1125,23 +1105,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_UnyieldResume = 0xD8; // CPulse_ResumePoint
         }
         // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MPropertyDescription
-        public static class CPulseMathlib {
-        }
-        // Parent: None
         // Field count: 1
         public static class CPulseCell_Unknown {
             public const nint m_UnknownKeys = 0x48; // KeyValues3
-        }
-        // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MPropertyDescription
-        public static class CPulseStringlib {
         }
         // Parent: None
         // Field count: 1
@@ -1179,13 +1145,6 @@ namespace CS2Dumper.Schemas {
         // MPropertyDescription
         // MPulseEditorHeaderIcon
         public static class CPulseCell_Value_RandomInt {
-        }
-        // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MPropertyDescription
-        public static class CPulseEnumlib {
         }
         // Parent: None
         // Field count: 6
@@ -3250,14 +3209,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_nSetMethod = 0x200; // ParticleSetMethod_t
         }
         // Parent: None
-        // Field count: 3
+        // Field count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CParticleFunctionRenderer {
             public const nint VisibilityInputs = 0x1D8; // CParticleVisibilityInputs
             public const nint m_bCannotBeRefracted = 0x220; // bool
-            public const nint m_bSkipRenderingOnMobile = 0x221; // bool
         }
         // Parent: None
         // Field count: 66
@@ -3518,7 +3476,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nPriority = 0x3A0; // ParticlePostProcessPriorityGroup_t
         }
         // Parent: None
-        // Field count: 27
+        // Field count: 28
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -3545,7 +3503,8 @@ namespace CS2Dumper.Schemas {
             public const nint m_bDecayBounce = 0x850; // bool
             public const nint m_bKillonContact = 0x851; // bool
             public const nint m_flMinSpeed = 0x854; // float32
-            public const nint m_bSetNormal = 0x858; // bool
+            public const nint m_bKillonContactBounce = 0x858; // bool
+            public const nint m_bSetNormal = 0x859; // bool
             public const nint m_nStickOnCollisionField = 0x85C; // ParticleAttributeIndex_t
             public const nint m_flStopSpeed = 0x860; // CPerParticleFloatInput
             public const nint m_nEntityStickDataField = 0x9D0; // ParticleAttributeIndex_t

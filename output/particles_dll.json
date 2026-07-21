@@ -253,8 +253,7 @@
       "CParticleFunctionRenderer": {
         "fields": {
           "VisibilityInputs": 472,
-          "m_bCannotBeRefracted": 544,
-          "m_bSkipRenderingOnMobile": 545
+          "m_bCannotBeRefracted": 544
         },
         "metadata": [
           {
@@ -400,16 +399,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseArraylib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
             "type": "Unknown"
           }
         ],
@@ -1118,26 +1107,6 @@
         ],
         "parent": null
       },
-      "CPulseCursorFuncs": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseEnumlib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "CPulseExecCursor": {
         "fields": {},
         "metadata": [],
@@ -1163,36 +1132,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseMathlib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseStringlib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseTestScriptLib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
             "type": "Unknown"
           }
         ],
@@ -8156,7 +8095,8 @@
           "m_bDecayBounce": 2128,
           "m_bIncludeWater": 630,
           "m_bKillonContact": 2129,
-          "m_bSetNormal": 2136,
+          "m_bKillonContactBounce": 2136,
+          "m_bSetNormal": 2137,
           "m_bWorldOnly": 628,
           "m_flBounceAmount": 1024,
           "m_flCollisionConfirmationSpeed": 648,
@@ -8594,6 +8534,7 @@
         "members": {
           "PARTICLE_EVENT_TYPE_MASK_COLLISION": 4,
           "PARTICLE_EVENT_TYPE_MASK_COLLISION_STOPPED": 16,
+          "PARTICLE_EVENT_TYPE_MASK_CULLED_ON_SPAWN": 2048,
           "PARTICLE_EVENT_TYPE_MASK_FIRST_COLLISION": 8,
           "PARTICLE_EVENT_TYPE_MASK_KILLED": 2,
           "PARTICLE_EVENT_TYPE_MASK_KILLED_ON_COLLISION": 32,

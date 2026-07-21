@@ -132,21 +132,23 @@
       },
       "CSndBeatPattern": {
         "fields": {
-          "m_bLooping": 32,
-          "m_flLength": 28,
-          "m_flPlayBeatMult": 48,
-          "m_flSyncBeatMult": 40,
-          "m_flSyncPriority": 16,
-          "m_keyType": 52,
-          "m_launchSyncEventType": 36,
-          "m_launchSyncType": 12,
+          "m_bLooping": 36,
+          "m_flLength": 32,
+          "m_flPlayBeatMult": 44,
+          "m_flSyncBeatMult": 156,
+          "m_flSyncPriority": 12,
           "m_name": 0,
-          "m_playEventType": 44,
-          "m_timeSignature": 20,
+          "m_playEventType": 40,
+          "m_playKeyType": 48,
+          "m_syncEventType": 152,
+          "m_syncStartType": 16,
+          "m_syncType": 20,
+          "m_timeSignature": 24,
           "m_vecPatternFloats": 80,
           "m_vecPatternKeys": 56,
           "m_vecPatternMidi": 128,
-          "m_vecPatternSndEvts": 104
+          "m_vecPatternSndEvts": 104,
+          "m_vecSyncPatternKeys": 160
         },
         "metadata": [
           {
@@ -585,6 +587,7 @@
       "CVMixAudioMeter": {
         "fields": {
           "m_displayName": 8,
+          "m_nDebugId": 16,
           "m_name": 0
         },
         "metadata": [
@@ -626,6 +629,7 @@
         "fields": {
           "m_flxfade": 24,
           "m_nChannels": 20,
+          "m_nDebugId": 16,
           "m_name": 8
         },
         "metadata": [
@@ -896,20 +900,6 @@
         ],
         "parent": null
       },
-      "CVMixGraphDescData": {
-        "fields": {
-          "m_bIsMainGraph": 12,
-          "m_nGraphOutputChannels": 8,
-          "m_name": 0
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "CVMixImpulseResponseInput": {
         "fields": {},
         "metadata": [
@@ -1028,6 +1018,41 @@
         ],
         "parent": null
       },
+      "CVMixRuntimeGraph": {
+        "fields": {
+          "m_additionalOutputs": 448,
+          "m_audioMeters": 376,
+          "m_automaticControlInputs": 472,
+          "m_bIsMainGraph": 12,
+          "m_controlInputArrays": 112,
+          "m_controlInputs": 64,
+          "m_controlMeters": 400,
+          "m_controlOutputs": 136,
+          "m_controlPoints": 328,
+          "m_controlTransientInputs": 88,
+          "m_curves": 352,
+          "m_impulseResponseInputs": 208,
+          "m_impulseResponseValues": 304,
+          "m_mixCommands": 232,
+          "m_nGraphOutputChannels": 8,
+          "m_name": 0,
+          "m_nameInputMeters": 424,
+          "m_nameInputs": 160,
+          "m_processorNodes": 40,
+          "m_sources": 496,
+          "m_submixes": 16,
+          "m_valueArrays": 280,
+          "m_values": 256,
+          "m_vsndInputs": 184
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CVMixShaperProcessorDesc": {
         "fields": {
           "m_desc": 32
@@ -1100,6 +1125,18 @@
             "type": "Unknown"
           }
         ],
+        "parent": null
+      },
+      "CVMixSubmix": {
+        "fields": {
+          "m_SendNames": 16,
+          "m_nChannels": 52,
+          "m_nMixDownRule": 56,
+          "m_nSoloNameHash": 48,
+          "m_name": 0,
+          "m_sendOperator": 8
+        },
+        "metadata": [],
         "parent": null
       },
       "CVMixUtilityProcessorDesc": {
@@ -2564,16 +2601,6 @@
         },
         "type": "uint32"
       },
-      "SndBeatLaunchSyncType_t": {
-        "alignment": 4,
-        "members": {
-          "eSndBeatLaunchSyncTypeInvalid": 0,
-          "eSndBeatLaunchSyncTypeQueue": 1,
-          "eSndBeatLaunchSyncTypeReset": 3,
-          "eSndBeatLaunchSyncTypeSeek": 2
-        },
-        "type": "uint32"
-      },
       "SndBeatMidiStatusType_t": {
         "alignment": 4,
         "members": {
@@ -2584,6 +2611,24 @@
           "SndSeqMidiStatusNoteOn": 9,
           "SndSeqMidiStatusPitchBend": 14,
           "SndSeqMidiStatusProgramChange": 12
+        },
+        "type": "uint32"
+      },
+      "SndBeatSyncStartType_t": {
+        "alignment": 4,
+        "members": {
+          "eSndBeatSyncStartTypeImmediate": 1,
+          "eSndBeatSyncStartTypeInvalid": 0,
+          "eSndBeatSyncStartTypeQueue": 2
+        },
+        "type": "uint32"
+      },
+      "SndBeatSyncType_t": {
+        "alignment": 4,
+        "members": {
+          "eSndBeatSyncTypeInvalid": 0,
+          "eSndBeatSyncTypeReset": 1,
+          "eSndBeatSyncTypeSeekImmediate": 2
         },
         "type": "uint32"
       },

@@ -1,19 +1,14 @@
-// Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-21 00:33:36.983799300 UTC
+// Generated using https://github.com/a2x/dota2-dumper
+// 2026-07-21 23:54:14.966407800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
-pub mod cs2_dumper {
+pub mod dota2_dumper {
     pub mod schemas {
         // Module: host.dll
-        // Class count: 2
+        // Class count: 1
         // Enum count: 0
         pub mod host_dll {
-            // Parent: None
-            // Field count: 1
-            pub mod EmptyTestScript {
-                pub const m_hTest: usize = 0x10; // CAnimScriptParam<float32>
-            }
             // Parent: None
             // Field count: 1
             pub mod CAnimScriptBase {

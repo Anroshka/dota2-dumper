@@ -3468,9 +3468,22 @@
       },
       "CNmBodyGroupEvent": {
         "fields": {
+          "m_choiceName": 40,
           "m_groupName": 32,
-          "m_nGroupValue": 40,
           "m_target": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmBodyGroupNode__CDefinition": {
+        "fields": {
+          "m_event": 32,
+          "m_nEnabledNodeIdx": 24
         },
         "metadata": [
           {
@@ -6197,30 +6210,6 @@
         ],
         "parent": null
       },
-      "CPulseArraylib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseBreakpointLocation": {
-        "fields": {
-          "m_NodeID": 0,
-          "m_PortName": 24,
-          "m_SequencePoint": 8
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "CPulseCell_Base": {
         "fields": {
           "m_nEditorNodeID": 8
@@ -6924,26 +6913,6 @@
         ],
         "parent": null
       },
-      "CPulseCursorFuncs": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseEnumlib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "CPulseExecCursor": {
         "fields": {},
         "metadata": [],
@@ -6969,66 +6938,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseGraphExecutionHistory": {
-        "fields": {
-          "m_mapCellDesc": 40,
-          "m_mapCursorDesc": 80,
-          "m_nInstanceID": 0,
-          "m_strFileName": 8,
-          "m_vecHistory": 16
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseMathlib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseRuntimeMethodArg": {
-        "fields": {
-          "m_Description": 56,
-          "m_Name": 0,
-          "m_Type": 64
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseStringlib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseTestScriptLib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
             "type": "Unknown"
           }
         ],
@@ -7066,61 +6975,6 @@
         ],
         "parent": null
       },
-      "CPulse_Chunk": {
-        "fields": {
-          "m_InstructionDebugInfos": 32,
-          "m_Instructions": 0,
-          "m_Registers": 16
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulse_Constant": {
-        "fields": {
-          "m_Type": 0,
-          "m_Value": 24
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulse_DomainValue": {
-        "fields": {
-          "m_RequiredRuntimeType": 16,
-          "m_Value": 8,
-          "m_nType": 0
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulse_InstructionDebug": {
-        "fields": {
-          "m_SequencePointName": 8,
-          "m_nFlowNodeID": 0,
-          "m_nValueNodeID": 4
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "CPulse_InvokeBinding": {
         "fields": {
           "m_FuncName": 48,
@@ -7147,74 +7001,9 @@
         "metadata": [],
         "parent": null
       },
-      "CPulse_OutputConnection": {
-        "fields": {
-          "m_Param": 48,
-          "m_SourceOutput": 0,
-          "m_TargetEntity": 16,
-          "m_TargetInput": 32
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulse_PublicOutput": {
-        "fields": {
-          "m_Args": 24,
-          "m_Description": 16,
-          "m_Name": 0
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulse_RegisterInfo": {
-        "fields": {
-          "m_OriginName": 32,
-          "m_Type": 8,
-          "m_nLastReadByInstruction": 92,
-          "m_nReg": 0,
-          "m_nWrittenByInstruction": 88
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "CPulse_ResumePoint": {
         "fields": {},
         "metadata": [],
-        "parent": null
-      },
-      "CPulse_Variable": {
-        "fields": {
-          "m_DefaultValue": 48,
-          "m_Description": 16,
-          "m_Metadata": 80,
-          "m_Name": 0,
-          "m_Type": 24,
-          "m_bIsObservable": 73,
-          "m_bIsPublicBlackboardVariable": 72,
-          "m_nEditorNodeID": 76,
-          "m_nKeysSource": 68
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
         "parent": null
       },
       "CQuaternionAnimParameter": {
@@ -7353,11 +7142,11 @@
       },
       "CRenderMesh": {
         "fields": {
-          "m_bEmbeddedMapMesh": 493,
-          "m_bUseUV2ForCharting": 492,
+          "m_bEmbeddedMapMesh": 501,
+          "m_bUseUV2ForCharting": 500,
           "m_constraints": 208,
-          "m_meshDeformParams": 528,
-          "m_pGroomData": 544,
+          "m_meshDeformParams": 536,
+          "m_pGroomData": 552,
           "m_sceneObjects": 16,
           "m_skeleton": 224
         },
@@ -9259,29 +9048,6 @@
         "metadata": [],
         "parent": null
       },
-      "PGDInstruction_t": {
-        "fields": {
-          "m_nBlackboardReferenceIdx": 36,
-          "m_nCallInfoIndex": 28,
-          "m_nChunk": 20,
-          "m_nCode": 0,
-          "m_nConstIdx": 32,
-          "m_nDestInstruction": 24,
-          "m_nDomainValueIdx": 34,
-          "m_nInvokeBindingIndex": 16,
-          "m_nReg0": 8,
-          "m_nReg1": 10,
-          "m_nReg2": 12,
-          "m_nVar": 4
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "PairedSequenceData": {
         "fields": {
           "m_vecPairedSequences": 0
@@ -9522,80 +9288,6 @@
         ],
         "parent": null
       },
-      "PulseCursorID_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseCursorYieldToken_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseDocNodeID_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseGraphExecutionHistoryCursorDesc_t": {
-        "fields": {
-          "bWasAnObservableComputation": 40,
-          "flLastReferenced": 32,
-          "nLastValidEntryIdx": 36,
-          "nRetiredAtNodeID": 28,
-          "nSpawnNodeID": 24,
-          "vecAncestorCursorIDs": 0
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "PulseGraphExecutionHistoryEntry_t": {
-        "fields": {
-          "flExecTime": 8,
-          "nCursorID": 0,
-          "nEditorID": 4,
-          "tagName": 16,
-          "unFlags": 12
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "PulseGraphExecutionHistoryNodeDesc_t": {
-        "fields": {
-          "strBindingName": 16,
-          "strCellDesc": 0
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "PulseGraphInstanceID_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
       "PulseNodeDynamicOutflows_t": {
         "fields": {
           "m_Outflows": 0
@@ -9619,99 +9311,6 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
-      },
-      "PulseRegisterMap_t": {
-        "fields": {
-          "m_Inparams": 0,
-          "m_InparamsWhichCanBeMoved": 16,
-          "m_Outparams": 32
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseRuntimeBlackboardReferenceIndex_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseRuntimeCallInfoIndex_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseRuntimeCellIndex_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseRuntimeChunkIndex_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseRuntimeConstantIndex_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseRuntimeDomainValueIndex_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseRuntimeEntrypointIndex_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseRuntimeInvokeIndex_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseRuntimeOutputIndex_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseRuntimeRegisterIndex_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseRuntimeStateOffset_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
-      "PulseRuntimeVarIndex_t": {
-        "fields": {
-          "m_Value": 0
-        },
-        "metadata": [],
         "parent": null
       },
       "PulseSelectorOutflowList_t": {
@@ -10786,18 +10385,6 @@
         },
         "type": "uint32"
       },
-      "EPulseGraphExecutionHistoryFlag": {
-        "alignment": 4,
-        "members": {
-          "CURSOR_ADD_TAG": 1,
-          "CURSOR_REMOVE_TAG": 2,
-          "CURSOR_RETIRED": 4,
-          "NO_FLAGS": 0,
-          "REQUIREMENT_FAIL": 16,
-          "REQUIREMENT_PASS": 8
-        },
-        "type": "uint32"
-      },
       "FacingMode": {
         "alignment": 1,
         "members": {
@@ -11674,18 +11261,6 @@
         },
         "type": "uint8"
       },
-      "PulseApiFeature_t": {
-        "alignment": 4,
-        "members": {
-          "AF_ENTITIES": 1,
-          "AF_FAKE_ENTITIES": 16,
-          "AF_NONE": 0,
-          "AF_PANORAMA": 2,
-          "AF_PARTICLES": 8,
-          "AF_SELECTORS_WITHOUT_REQUIREMENTS": 32
-        },
-        "type": "uint32"
-      },
       "PulseBestOutflowRules_t": {
         "alignment": 4,
         "members": {
@@ -11712,214 +11287,11 @@
         },
         "type": "uint32"
       },
-      "PulseDomainValueType_t": {
-        "alignment": 4,
-        "members": {
-          "COUNT": 2,
-          "ENTITY_NAME": 0,
-          "INVALID": -1,
-          "PANEL_ID": 1
-        },
-        "type": "uint32"
-      },
-      "PulseDurationStringFormat_t": {
-        "alignment": 4,
-        "members": {
-          "MM_SS_LEADING_ZERO": 0
-        },
-        "type": "uint32"
-      },
-      "PulseInstructionCode_t": {
-        "alignment": 2,
-        "members": {
-          "ADD": 26,
-          "ADD_FLOAT": 51,
-          "ADD_FLOAT_GAMETIME": 59,
-          "ADD_GAMETIME_FLOAT": 58,
-          "ADD_INT": 50,
-          "ADD_STRING": 52,
-          "ADD_VEC2": 53,
-          "ADD_VEC3": 54,
-          "ADD_VEC3WS_VEC3": 55,
-          "ADD_VEC3_VEC3WS": 56,
-          "ADD_VEC4": 57,
-          "AND": 35,
-          "CELL_INVOKE": 12,
-          "CHUNK_LEAP": 7,
-          "CHUNK_LEAP_COND": 8,
-          "CONVERT_VALUE": 40,
-          "COPY": 23,
-          "CREATE_CHILD_CURSOR_OUTFLOW": 11,
-          "DETACH_REGISTER": 17,
-          "DIV": 29,
-          "DIV_FLOAT": 71,
-          "ELEMENT_ACCESS": 39,
-          "ELEMENT_ACCESS_COLOR_RGB": 124,
-          "ELEMENT_ACCESS_VEC2": 120,
-          "ELEMENT_ACCESS_VEC3": 121,
-          "ELEMENT_ACCESS_VEC3WS": 122,
-          "ELEMENT_ACCESS_VEC4": 123,
-          "EQ": 33,
-          "EQ_ARRAY": 95,
-          "EQ_BOOL": 80,
-          "EQ_COLOR_RGB": 94,
-          "EQ_EHANDLE": 90,
-          "EQ_ENTITY_NAME": 88,
-          "EQ_FLOAT": 82,
-          "EQ_GAMETIME": 96,
-          "EQ_INT": 81,
-          "EQ_OPAQUE_HANDLE": 92,
-          "EQ_PANEL_HANDLE": 91,
-          "EQ_SCHEMA_ENUM": 89,
-          "EQ_STRING": 87,
-          "EQ_TEST_HANDLE": 93,
-          "EQ_VEC2": 83,
-          "EQ_VEC3": 84,
-          "EQ_VEC3WS": 85,
-          "EQ_VEC4": 86,
-          "GET_ARRAY_ELEMENT": 21,
-          "GET_BLACKBOARD_REFERENCE": 42,
-          "GET_CONST": 20,
-          "GET_CONST_INLINE_STORAGE": 125,
-          "GET_DOMAIN_VALUE": 22,
-          "GET_VAR": 15,
-          "GET_VAR_DETACH": 16,
-          "IMMEDIATE_HALT": 1,
-          "INVALID": 0,
-          "JUMP": 5,
-          "JUMP_COND": 6,
-          "LAST_SERIALIZED_CODE": 44,
-          "LIBRARY_INVOKE": 13,
-          "LT": 31,
-          "LTE": 32,
-          "LTE_FLOAT": 78,
-          "LTE_GAMETIME": 79,
-          "LTE_INT": 77,
-          "LT_FLOAT": 75,
-          "LT_GAMETIME": 76,
-          "LT_INT": 74,
-          "MOD": 30,
-          "MOD_FLOAT": 73,
-          "MOD_INT": 72,
-          "MUL": 28,
-          "MUL_FLOAT": 70,
-          "MUL_INT": 69,
-          "NE": 34,
-          "NEGATE": 25,
-          "NEGATE_FLOAT": 46,
-          "NEGATE_INT": 45,
-          "NEGATE_VEC2": 47,
-          "NEGATE_VEC3": 48,
-          "NEGATE_VEC4": 49,
-          "NE_ARRAY": 112,
-          "NE_BOOL": 97,
-          "NE_COLOR_RGB": 111,
-          "NE_EHANDLE": 107,
-          "NE_ENTITY_NAME": 105,
-          "NE_FLOAT": 99,
-          "NE_GAMETIME": 113,
-          "NE_INT": 98,
-          "NE_OPAQUE_HANDLE": 109,
-          "NE_PANEL_HANDLE": 108,
-          "NE_SCHEMA_ENUM": 106,
-          "NE_STRING": 104,
-          "NE_TEST_HANDLE": 110,
-          "NE_VEC2": 100,
-          "NE_VEC3": 101,
-          "NE_VEC3WS": 102,
-          "NE_VEC4": 103,
-          "NOP": 4,
-          "NOT": 24,
-          "OR": 36,
-          "PULSE_CALL_ASYNC_FIRE": 10,
-          "PULSE_CALL_SYNC": 9,
-          "REINTERPRET_INSTANCE": 41,
-          "RETURN_VALUE": 3,
-          "RETURN_VOID": 2,
-          "SCALE": 37,
-          "SCALE_INV": 38,
-          "SCALE_INV_VEC2": 118,
-          "SCALE_INV_VEC3": 117,
-          "SCALE_INV_VEC4": 119,
-          "SCALE_VEC2": 115,
-          "SCALE_VEC3": 114,
-          "SCALE_VEC4": 116,
-          "SET_BLACKBOARD_REFERENCE": 43,
-          "SET_VAR": 14,
-          "SET_VAR_ARRAY_ELEMENT_1D": 18,
-          "SET_VAR_OBSERVABLE": 19,
-          "SUB": 27,
-          "SUB_FLOAT": 61,
-          "SUB_GAMETIME": 68,
-          "SUB_GAMETIME_FLOAT": 67,
-          "SUB_INT": 60,
-          "SUB_VEC2": 62,
-          "SUB_VEC3": 63,
-          "SUB_VEC3WS_VEC3": 64,
-          "SUB_VEC3WS_VEC3WS": 65,
-          "SUB_VEC4": 66
-        },
-        "type": "uint16"
-      },
       "PulseMethodCallMode_t": {
         "alignment": 4,
         "members": {
           "ASYNC_FIRE_AND_FORGET": 1,
           "SYNC_WAIT_FOR_COMPLETION": 0
-        },
-        "type": "uint32"
-      },
-      "PulseValueType_t": {
-        "alignment": 4,
-        "members": {
-          "PVAL_ANIM_SEQUENCE": 31,
-          "PVAL_ARRAY": 28,
-          "PVAL_BOOL": 0,
-          "PVAL_COLOR_RGB": 11,
-          "PVAL_COUNT": 33,
-          "PVAL_CURSOR_FLOW": 22,
-          "PVAL_EHANDLE": 13,
-          "PVAL_ENTITY_NAME": 18,
-          "PVAL_FLOAT": 2,
-          "PVAL_GAMETIME": 12,
-          "PVAL_INT": 1,
-          "PVAL_MODEL_MATERIAL_GROUP": 21,
-          "PVAL_OPAQUE_HANDLE": 19,
-          "PVAL_PANORAMA_PANEL_HANDLE": 26,
-          "PVAL_PARTICLE_EHANDLE": 30,
-          "PVAL_QANGLE": 6,
-          "PVAL_RESOURCE": 14,
-          "PVAL_RESOURCE_NAME": 15,
-          "PVAL_SCHEMA_ENUM": 25,
-          "PVAL_SNDEVT_GUID": 16,
-          "PVAL_SNDEVT_NAME": 17,
-          "PVAL_STRING": 3,
-          "PVAL_TEST_HANDLE": 27,
-          "PVAL_TRANSFORM": 9,
-          "PVAL_TRANSFORM_WORLDSPACE": 10,
-          "PVAL_TYPESAFE_INT": 20,
-          "PVAL_TYPESAFE_INT64": 29,
-          "PVAL_UNKNOWN": 24,
-          "PVAL_VARIANT": 23,
-          "PVAL_VDATA_CHOICE": 32,
-          "PVAL_VEC2": 4,
-          "PVAL_VEC3": 5,
-          "PVAL_VEC3_WORLDSPACE": 7,
-          "PVAL_VEC4": 8,
-          "PVAL_VOID": -1
-        },
-        "type": "uint32"
-      },
-      "PulseVariableKeysSource_t": {
-        "alignment": 4,
-        "members": {
-          "COUNT": 6,
-          "CPP": 1,
-          "PRIVATE": 0,
-          "VDATA": 5,
-          "VMAP": 2,
-          "VMDL": 3,
-          "XML": 4
         },
         "type": "uint32"
       },

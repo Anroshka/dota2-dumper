@@ -1,15 +1,15 @@
-// Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-21 00:33:36.983799300 UTC
+// Generated using https://github.com/a2x/dota2-dumper
+// 2026-07-21 23:54:14.966407800 UTC
 
 #pragma once
 
 #include <cstddef>
 #include <cstdint>
 
-namespace cs2_dumper {
+namespace dota2_dumper {
     namespace schemas {
         // Module: particles.dll
-        // Class count: 502
+        // Class count: 496
         // Enum count: 77
         namespace particles_dll {
             // Alignment: 4
@@ -229,7 +229,7 @@ namespace cs2_dumper {
                 SET_EXPRESSION_MAX = 0x6
             };
             // Alignment: 4
-            // Member count: 12
+            // Member count: 13
             enum class EventTypeSelection_t : uint32_t {
                 PARTICLE_EVENT_TYPE_MASK_NONE = 0x0,
                 PARTICLE_EVENT_TYPE_MASK_SPAWNED = 0x1,
@@ -239,6 +239,7 @@ namespace cs2_dumper {
                 PARTICLE_EVENT_TYPE_MASK_COLLISION_STOPPED = 0x10,
                 PARTICLE_EVENT_TYPE_MASK_KILLED_ON_COLLISION = 0x20,
                 PARTICLE_EVENT_TYPE_MASK_KILLED_ON_CULL = 0x400,
+                PARTICLE_EVENT_TYPE_MASK_CULLED_ON_SPAWN = 0x800,
                 PARTICLE_EVENT_TYPE_MASK_USER_1 = 0x40,
                 PARTICLE_EVENT_TYPE_MASK_USER_2 = 0x80,
                 PARTICLE_EVENT_TYPE_MASK_USER_3 = 0x100,
@@ -832,13 +833,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Gradient = 0x48; // CColorGradient
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            namespace CPulseCursorFuncs {
-            }
-            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -908,13 +902,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_OnInterval = 0x120; // SignatureOutflow_Continue
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            namespace CPulseTestScriptLib {
-            }
-            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -963,13 +950,6 @@ namespace cs2_dumper {
             namespace CPulseCell_BaseLerp__CursorState_t {
                 constexpr std::ptrdiff_t m_StartTime = 0x0; // GameTime_t
                 constexpr std::ptrdiff_t m_EndTime = 0x4; // GameTime_t
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            namespace CPulseArraylib {
             }
             // Parent: None
             // Field count: 0
@@ -1131,23 +1111,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_UnyieldResume = 0xD8; // CPulse_ResumePoint
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            namespace CPulseMathlib {
-            }
-            // Parent: None
             // Field count: 1
             namespace CPulseCell_Unknown {
                 constexpr std::ptrdiff_t m_UnknownKeys = 0x48; // KeyValues3
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            namespace CPulseStringlib {
             }
             // Parent: None
             // Field count: 1
@@ -1185,13 +1151,6 @@ namespace cs2_dumper {
             // MPropertyDescription
             // MPulseEditorHeaderIcon
             namespace CPulseCell_Value_RandomInt {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            namespace CPulseEnumlib {
             }
             // Parent: None
             // Field count: 6
@@ -3256,14 +3215,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nSetMethod = 0x200; // ParticleSetMethod_t
             }
             // Parent: None
-            // Field count: 3
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CParticleFunctionRenderer {
                 constexpr std::ptrdiff_t VisibilityInputs = 0x1D8; // CParticleVisibilityInputs
                 constexpr std::ptrdiff_t m_bCannotBeRefracted = 0x220; // bool
-                constexpr std::ptrdiff_t m_bSkipRenderingOnMobile = 0x221; // bool
             }
             // Parent: None
             // Field count: 66
@@ -3524,7 +3482,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nPriority = 0x3A0; // ParticlePostProcessPriorityGroup_t
             }
             // Parent: None
-            // Field count: 27
+            // Field count: 28
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -3551,7 +3509,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bDecayBounce = 0x850; // bool
                 constexpr std::ptrdiff_t m_bKillonContact = 0x851; // bool
                 constexpr std::ptrdiff_t m_flMinSpeed = 0x854; // float32
-                constexpr std::ptrdiff_t m_bSetNormal = 0x858; // bool
+                constexpr std::ptrdiff_t m_bKillonContactBounce = 0x858; // bool
+                constexpr std::ptrdiff_t m_bSetNormal = 0x859; // bool
                 constexpr std::ptrdiff_t m_nStickOnCollisionField = 0x85C; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_flStopSpeed = 0x860; // CPerParticleFloatInput
                 constexpr std::ptrdiff_t m_nEntityStickDataField = 0x9D0; // ParticleAttributeIndex_t

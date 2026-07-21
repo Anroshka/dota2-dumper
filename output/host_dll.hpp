@@ -1,22 +1,17 @@
-// Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-21 00:33:36.983799300 UTC
+// Generated using https://github.com/a2x/dota2-dumper
+// 2026-07-21 23:54:14.966407800 UTC
 
 #pragma once
 
 #include <cstddef>
 #include <cstdint>
 
-namespace cs2_dumper {
+namespace dota2_dumper {
     namespace schemas {
         // Module: host.dll
-        // Class count: 2
+        // Class count: 1
         // Enum count: 0
         namespace host_dll {
-            // Parent: None
-            // Field count: 1
-            namespace EmptyTestScript {
-                constexpr std::ptrdiff_t m_hTest = 0x10; // CAnimScriptParam<float32>
-            }
             // Parent: None
             // Field count: 1
             namespace CAnimScriptBase {

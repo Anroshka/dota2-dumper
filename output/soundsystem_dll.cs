@@ -1,10 +1,10 @@
-// Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-21 00:33:36.983799300 UTC
+// Generated using https://github.com/a2x/dota2-dumper
+// 2026-07-21 23:54:14.966407800 UTC
 
-namespace CS2Dumper.Schemas {
+namespace Dota2Dumper.Schemas {
     // Module: soundsystem.dll
-    // Class count: 150
-    // Enum count: 27
+    // Class count: 151
+    // Enum count: 28
     public static class SoundsystemDll {
         // Alignment: 4
         // Member count: 3
@@ -130,14 +130,6 @@ namespace CS2Dumper.Schemas {
             SOS_STOPTYPE_OPVAR = 0x2
         }
         // Alignment: 4
-        // Member count: 4
-        public enum SndBeatLaunchSyncType_t : uint {
-            eSndBeatLaunchSyncTypeInvalid = 0x0,
-            eSndBeatLaunchSyncTypeQueue = 0x1,
-            eSndBeatLaunchSyncTypeSeek = 0x2,
-            eSndBeatLaunchSyncTypeReset = 0x3
-        }
-        // Alignment: 4
         // Member count: 5
         public enum SndBeatKeyType_t : uint {
             eSndBeatPatternTypeNone = 0x0,
@@ -155,6 +147,13 @@ namespace CS2Dumper.Schemas {
             SOS_EDIT_ITEM_TYPE_STACK = 0x3,
             SOS_EDIT_ITEM_TYPE_OPERATOR = 0x4,
             SOS_EDIT_ITEM_TYPE_FIELD = 0x5
+        }
+        // Alignment: 4
+        // Member count: 3
+        public enum SndBeatSyncType_t : uint {
+            eSndBeatSyncTypeInvalid = 0x0,
+            eSndBeatSyncTypeReset = 0x1,
+            eSndBeatSyncTypeSeekImmediate = 0x2
         }
         // Alignment: 4
         // Member count: 5
@@ -284,6 +283,13 @@ namespace CS2Dumper.Schemas {
         public enum SosGroupType_t : uint {
             SOS_GROUPTYPE_DYNAMIC = 0x0,
             SOS_GROUPTYPE_STATIC = 0x1
+        }
+        // Alignment: 4
+        // Member count: 3
+        public enum SndBeatSyncStartType_t : uint {
+            eSndBeatSyncStartTypeInvalid = 0x0,
+            eSndBeatSyncStartTypeImmediate = 0x1,
+            eSndBeatSyncStartTypeQueue = 0x2
         }
         // Alignment: 4
         // Member count: 2
@@ -839,6 +845,37 @@ namespace CS2Dumper.Schemas {
             public const nint m_bandDesc = 0x10; // VMixDynamicsBand_t
         }
         // Parent: None
+        // Field count: 24
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CVMixRuntimeGraph {
+            public const nint m_name = 0x0; // CUtlString
+            public const nint m_nGraphOutputChannels = 0x8; // int32
+            public const nint m_bIsMainGraph = 0xC; // bool
+            public const nint m_submixes = 0x10; // CUtlVector<CVMixSubmix>
+            public const nint m_processorNodes = 0x28; // CUtlVector<std::unique_ptr<CVMixBaseProcessorDesc>>
+            public const nint m_controlInputs = 0x40; // CUtlVector<CVMixControlInput>
+            public const nint m_controlTransientInputs = 0x58; // CUtlVector<CVMixControlInput>
+            public const nint m_controlInputArrays = 0x70; // CUtlVector<CVMixControlInputArray>
+            public const nint m_controlOutputs = 0x88; // CUtlVector<CVMixControlOutput>
+            public const nint m_nameInputs = 0xA0; // CUtlVector<CVMixNameInput>
+            public const nint m_vsndInputs = 0xB8; // CUtlVector<CVMixVsndInput>
+            public const nint m_impulseResponseInputs = 0xD0; // CUtlVector<CVMixImpulseResponseInput>
+            public const nint m_mixCommands = 0xE8; // CUtlVector<CVMixCommand>
+            public const nint m_values = 0x100; // CUtlVector<float32>
+            public const nint m_valueArrays = 0x118; // CUtlVector<CUtlVector<float32>>
+            public const nint m_impulseResponseValues = 0x130; // CUtlVector<uint64>
+            public const nint m_controlPoints = 0x148; // CUtlVector<float32>
+            public const nint m_curves = 0x160; // CUtlVector<CVMixCurveHeader>
+            public const nint m_audioMeters = 0x178; // CUtlVector<CVMixAudioMeter>
+            public const nint m_controlMeters = 0x190; // CUtlVector<CVMixControlMeter>
+            public const nint m_nameInputMeters = 0x1A8; // CUtlVector<CVMixNameInputMeter>
+            public const nint m_additionalOutputs = 0x1C0; // CUtlVector<CVMixAdditionalOutput>
+            public const nint m_automaticControlInputs = 0x1D8; // CUtlVector<CVMixAutomaticControlInput>
+            public const nint m_sources = 0x1F0; // KeyValues3
+        }
+        // Parent: None
         // Field count: 1
         //
         // Metadata:
@@ -971,16 +1008,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_desc = 0x20; // VMixDynamicsDesc_t
         }
         // Parent: None
-        // Field count: 3
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class CVMixGraphDescData {
-            public const nint m_name = 0x0; // CUtlString
-            public const nint m_nGraphOutputChannels = 0x8; // int32
-            public const nint m_bIsMainGraph = 0xC; // bool
-        }
-        // Parent: None
         // Field count: 8
         //
         // Metadata:
@@ -1071,12 +1098,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_flThreshold = 0x50; // float32
         }
         // Parent: None
-        // Field count: 3
+        // Field count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CVMixBaseProcessorDesc {
             public const nint m_name = 0x8; // CUtlString
+            public const nint m_nDebugId = 0x10; // uint32
             public const nint m_nChannels = 0x14; // int32
             public const nint m_flxfade = 0x18; // float32
         }
@@ -1328,6 +1356,16 @@ namespace CS2Dumper.Schemas {
             public const nint itemPos = 0x28; // Vector2D
         }
         // Parent: None
+        // Field count: 6
+        public static class CVMixSubmix {
+            public const nint m_name = 0x0; // CUtlString
+            public const nint m_sendOperator = 0x8; // CUtlString
+            public const nint m_SendNames = 0x10; // CUtlString[4]
+            public const nint m_nSoloNameHash = 0x30; // uint32
+            public const nint m_nChannels = 0x34; // int32
+            public const nint m_nMixDownRule = 0x38; // int32
+        }
+        // Parent: None
         // Field count: 1
         //
         // Metadata:
@@ -1539,13 +1577,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_curve4 = 0x180; // CPiecewiseCurve
         }
         // Parent: None
-        // Field count: 2
+        // Field count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CVMixAudioMeter {
             public const nint m_name = 0x0; // CUtlString
             public const nint m_displayName = 0x8; // CUtlString
+            public const nint m_nDebugId = 0x10; // uint32
         }
         // Parent: None
         // Field count: 1
@@ -1872,7 +1911,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flQ = 0xC; // float32
         }
         // Parent: None
-        // Field count: 15
+        // Field count: 17
         //
         // Metadata:
         // MPropertyArrayElementNameKey
@@ -1880,20 +1919,22 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CSndBeatPattern {
             public const nint m_name = 0x0; // CUtlString
-            public const nint m_launchSyncType = 0xC; // SndBeatLaunchSyncType_t
-            public const nint m_flSyncPriority = 0x10; // float32
-            public const nint m_timeSignature = 0x14; // SndBeatTimeSignature_t
-            public const nint m_flLength = 0x1C; // float32
-            public const nint m_bLooping = 0x20; // bool
-            public const nint m_launchSyncEventType = 0x24; // SndBeatEventType_t
-            public const nint m_flSyncBeatMult = 0x28; // float32
-            public const nint m_playEventType = 0x2C; // SndBeatEventType_t
-            public const nint m_flPlayBeatMult = 0x30; // float32
-            public const nint m_keyType = 0x34; // SndBeatKeyType_t
+            public const nint m_flSyncPriority = 0xC; // float32
+            public const nint m_syncStartType = 0x10; // SndBeatSyncStartType_t
+            public const nint m_syncType = 0x14; // SndBeatSyncType_t
+            public const nint m_timeSignature = 0x18; // SndBeatTimeSignature_t
+            public const nint m_flLength = 0x20; // float32
+            public const nint m_bLooping = 0x24; // bool
+            public const nint m_playEventType = 0x28; // SndBeatEventType_t
+            public const nint m_flPlayBeatMult = 0x2C; // float32
+            public const nint m_playKeyType = 0x30; // SndBeatKeyType_t
             public const nint m_vecPatternKeys = 0x38; // CUtlVector<SndBeatEventKeys_t>
             public const nint m_vecPatternFloats = 0x50; // CUtlVector<SndBeatEventKeyedFloats_t>
             public const nint m_vecPatternSndEvts = 0x68; // CUtlVector<SndBeatEventKeyedSndEvts_t>
             public const nint m_vecPatternMidi = 0x80; // CUtlVector<SndBeatEventKeyedMidiNotes_t>
+            public const nint m_syncEventType = 0x98; // SndBeatEventType_t
+            public const nint m_flSyncBeatMult = 0x9C; // float32
+            public const nint m_vecSyncPatternKeys = 0xA0; // CUtlVector<SndBeatEventKeys_t>
         }
         // Parent: None
         // Field count: 3

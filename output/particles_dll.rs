@@ -1,12 +1,12 @@
-// Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-21 00:33:36.983799300 UTC
+// Generated using https://github.com/a2x/dota2-dumper
+// 2026-07-21 23:54:14.966407800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
-pub mod cs2_dumper {
+pub mod dota2_dumper {
     pub mod schemas {
         // Module: particles.dll
-        // Class count: 502
+        // Class count: 496
         // Enum count: 77
         pub mod particles_dll {
             // Alignment: 4
@@ -251,7 +251,7 @@ pub mod cs2_dumper {
                 SET_EXPRESSION_MAX = 0x6
             }
             // Alignment: 4
-            // Member count: 12
+            // Member count: 13
             #[repr(u32)]
             pub enum EventTypeSelection_t {
                 PARTICLE_EVENT_TYPE_MASK_NONE = 0x0,
@@ -262,6 +262,7 @@ pub mod cs2_dumper {
                 PARTICLE_EVENT_TYPE_MASK_COLLISION_STOPPED = 0x10,
                 PARTICLE_EVENT_TYPE_MASK_KILLED_ON_COLLISION = 0x20,
                 PARTICLE_EVENT_TYPE_MASK_KILLED_ON_CULL = 0x400,
+                PARTICLE_EVENT_TYPE_MASK_CULLED_ON_SPAWN = 0x800,
                 PARTICLE_EVENT_TYPE_MASK_USER_1 = 0x40,
                 PARTICLE_EVENT_TYPE_MASK_USER_2 = 0x80,
                 PARTICLE_EVENT_TYPE_MASK_USER_3 = 0x100,
@@ -906,13 +907,6 @@ pub mod cs2_dumper {
                 pub const m_Gradient: usize = 0x48; // CColorGradient
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            pub mod CPulseCursorFuncs {
-            }
-            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -982,13 +976,6 @@ pub mod cs2_dumper {
                 pub const m_OnInterval: usize = 0x120; // SignatureOutflow_Continue
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            pub mod CPulseTestScriptLib {
-            }
-            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -1037,13 +1024,6 @@ pub mod cs2_dumper {
             pub mod CPulseCell_BaseLerp__CursorState_t {
                 pub const m_StartTime: usize = 0x0; // GameTime_t
                 pub const m_EndTime: usize = 0x4; // GameTime_t
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            pub mod CPulseArraylib {
             }
             // Parent: None
             // Field count: 0
@@ -1205,23 +1185,9 @@ pub mod cs2_dumper {
                 pub const m_UnyieldResume: usize = 0xD8; // CPulse_ResumePoint
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            pub mod CPulseMathlib {
-            }
-            // Parent: None
             // Field count: 1
             pub mod CPulseCell_Unknown {
                 pub const m_UnknownKeys: usize = 0x48; // KeyValues3
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            pub mod CPulseStringlib {
             }
             // Parent: None
             // Field count: 1
@@ -1259,13 +1225,6 @@ pub mod cs2_dumper {
             // MPropertyDescription
             // MPulseEditorHeaderIcon
             pub mod CPulseCell_Value_RandomInt {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            pub mod CPulseEnumlib {
             }
             // Parent: None
             // Field count: 6
@@ -3330,14 +3289,13 @@ pub mod cs2_dumper {
                 pub const m_nSetMethod: usize = 0x200; // ParticleSetMethod_t
             }
             // Parent: None
-            // Field count: 3
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CParticleFunctionRenderer {
                 pub const VisibilityInputs: usize = 0x1D8; // CParticleVisibilityInputs
                 pub const m_bCannotBeRefracted: usize = 0x220; // bool
-                pub const m_bSkipRenderingOnMobile: usize = 0x221; // bool
             }
             // Parent: None
             // Field count: 66
@@ -3598,7 +3556,7 @@ pub mod cs2_dumper {
                 pub const m_nPriority: usize = 0x3A0; // ParticlePostProcessPriorityGroup_t
             }
             // Parent: None
-            // Field count: 27
+            // Field count: 28
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -3625,7 +3583,8 @@ pub mod cs2_dumper {
                 pub const m_bDecayBounce: usize = 0x850; // bool
                 pub const m_bKillonContact: usize = 0x851; // bool
                 pub const m_flMinSpeed: usize = 0x854; // float32
-                pub const m_bSetNormal: usize = 0x858; // bool
+                pub const m_bKillonContactBounce: usize = 0x858; // bool
+                pub const m_bSetNormal: usize = 0x859; // bool
                 pub const m_nStickOnCollisionField: usize = 0x85C; // ParticleAttributeIndex_t
                 pub const m_flStopSpeed: usize = 0x860; // CPerParticleFloatInput
                 pub const m_nEntityStickDataField: usize = 0x9D0; // ParticleAttributeIndex_t

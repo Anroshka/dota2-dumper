@@ -1,13 +1,13 @@
-// Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-21 00:33:36.983799300 UTC
+// Generated using https://github.com/a2x/dota2-dumper
+// 2026-07-21 23:54:14.966407800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
-pub mod cs2_dumper {
+pub mod dota2_dumper {
     pub mod schemas {
         // Module: soundsystem.dll
-        // Class count: 150
-        // Enum count: 27
+        // Class count: 151
+        // Enum count: 28
         pub mod soundsystem_dll {
             // Alignment: 4
             // Member count: 3
@@ -143,15 +143,6 @@ pub mod cs2_dumper {
                 SOS_STOPTYPE_OPVAR = 0x2
             }
             // Alignment: 4
-            // Member count: 4
-            #[repr(u32)]
-            pub enum SndBeatLaunchSyncType_t {
-                eSndBeatLaunchSyncTypeInvalid = 0x0,
-                eSndBeatLaunchSyncTypeQueue = 0x1,
-                eSndBeatLaunchSyncTypeSeek = 0x2,
-                eSndBeatLaunchSyncTypeReset = 0x3
-            }
-            // Alignment: 4
             // Member count: 5
             #[repr(u32)]
             pub enum SndBeatKeyType_t {
@@ -171,6 +162,14 @@ pub mod cs2_dumper {
                 SOS_EDIT_ITEM_TYPE_STACK = 0x3,
                 SOS_EDIT_ITEM_TYPE_OPERATOR = 0x4,
                 SOS_EDIT_ITEM_TYPE_FIELD = 0x5
+            }
+            // Alignment: 4
+            // Member count: 3
+            #[repr(u32)]
+            pub enum SndBeatSyncType_t {
+                eSndBeatSyncTypeInvalid = 0x0,
+                eSndBeatSyncTypeReset = 0x1,
+                eSndBeatSyncTypeSeekImmediate = 0x2
             }
             // Alignment: 4
             // Member count: 5
@@ -307,6 +306,14 @@ pub mod cs2_dumper {
             pub enum SosGroupType_t {
                 SOS_GROUPTYPE_DYNAMIC = 0x0,
                 SOS_GROUPTYPE_STATIC = 0x1
+            }
+            // Alignment: 4
+            // Member count: 3
+            #[repr(u32)]
+            pub enum SndBeatSyncStartType_t {
+                eSndBeatSyncStartTypeInvalid = 0x0,
+                eSndBeatSyncStartTypeImmediate = 0x1,
+                eSndBeatSyncStartTypeQueue = 0x2
             }
             // Alignment: 4
             // Member count: 2
@@ -864,6 +871,37 @@ pub mod cs2_dumper {
                 pub const m_bandDesc: usize = 0x10; // VMixDynamicsBand_t
             }
             // Parent: None
+            // Field count: 24
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CVMixRuntimeGraph {
+                pub const m_name: usize = 0x0; // CUtlString
+                pub const m_nGraphOutputChannels: usize = 0x8; // int32
+                pub const m_bIsMainGraph: usize = 0xC; // bool
+                pub const m_submixes: usize = 0x10; // CUtlVector<CVMixSubmix>
+                pub const m_processorNodes: usize = 0x28; // CUtlVector<std::unique_ptr<CVMixBaseProcessorDesc>>
+                pub const m_controlInputs: usize = 0x40; // CUtlVector<CVMixControlInput>
+                pub const m_controlTransientInputs: usize = 0x58; // CUtlVector<CVMixControlInput>
+                pub const m_controlInputArrays: usize = 0x70; // CUtlVector<CVMixControlInputArray>
+                pub const m_controlOutputs: usize = 0x88; // CUtlVector<CVMixControlOutput>
+                pub const m_nameInputs: usize = 0xA0; // CUtlVector<CVMixNameInput>
+                pub const m_vsndInputs: usize = 0xB8; // CUtlVector<CVMixVsndInput>
+                pub const m_impulseResponseInputs: usize = 0xD0; // CUtlVector<CVMixImpulseResponseInput>
+                pub const m_mixCommands: usize = 0xE8; // CUtlVector<CVMixCommand>
+                pub const m_values: usize = 0x100; // CUtlVector<float32>
+                pub const m_valueArrays: usize = 0x118; // CUtlVector<CUtlVector<float32>>
+                pub const m_impulseResponseValues: usize = 0x130; // CUtlVector<uint64>
+                pub const m_controlPoints: usize = 0x148; // CUtlVector<float32>
+                pub const m_curves: usize = 0x160; // CUtlVector<CVMixCurveHeader>
+                pub const m_audioMeters: usize = 0x178; // CUtlVector<CVMixAudioMeter>
+                pub const m_controlMeters: usize = 0x190; // CUtlVector<CVMixControlMeter>
+                pub const m_nameInputMeters: usize = 0x1A8; // CUtlVector<CVMixNameInputMeter>
+                pub const m_additionalOutputs: usize = 0x1C0; // CUtlVector<CVMixAdditionalOutput>
+                pub const m_automaticControlInputs: usize = 0x1D8; // CUtlVector<CVMixAutomaticControlInput>
+                pub const m_sources: usize = 0x1F0; // KeyValues3
+            }
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -996,16 +1034,6 @@ pub mod cs2_dumper {
                 pub const m_desc: usize = 0x20; // VMixDynamicsDesc_t
             }
             // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CVMixGraphDescData {
-                pub const m_name: usize = 0x0; // CUtlString
-                pub const m_nGraphOutputChannels: usize = 0x8; // int32
-                pub const m_bIsMainGraph: usize = 0xC; // bool
-            }
-            // Parent: None
             // Field count: 8
             //
             // Metadata:
@@ -1096,12 +1124,13 @@ pub mod cs2_dumper {
                 pub const m_flThreshold: usize = 0x50; // float32
             }
             // Parent: None
-            // Field count: 3
+            // Field count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CVMixBaseProcessorDesc {
                 pub const m_name: usize = 0x8; // CUtlString
+                pub const m_nDebugId: usize = 0x10; // uint32
                 pub const m_nChannels: usize = 0x14; // int32
                 pub const m_flxfade: usize = 0x18; // float32
             }
@@ -1353,6 +1382,16 @@ pub mod cs2_dumper {
                 pub const itemPos: usize = 0x28; // Vector2D
             }
             // Parent: None
+            // Field count: 6
+            pub mod CVMixSubmix {
+                pub const m_name: usize = 0x0; // CUtlString
+                pub const m_sendOperator: usize = 0x8; // CUtlString
+                pub const m_SendNames: usize = 0x10; // CUtlString[4]
+                pub const m_nSoloNameHash: usize = 0x30; // uint32
+                pub const m_nChannels: usize = 0x34; // int32
+                pub const m_nMixDownRule: usize = 0x38; // int32
+            }
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -1564,13 +1603,14 @@ pub mod cs2_dumper {
                 pub const m_curve4: usize = 0x180; // CPiecewiseCurve
             }
             // Parent: None
-            // Field count: 2
+            // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CVMixAudioMeter {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_displayName: usize = 0x8; // CUtlString
+                pub const m_nDebugId: usize = 0x10; // uint32
             }
             // Parent: None
             // Field count: 1
@@ -1897,7 +1937,7 @@ pub mod cs2_dumper {
                 pub const m_flQ: usize = 0xC; // float32
             }
             // Parent: None
-            // Field count: 15
+            // Field count: 17
             //
             // Metadata:
             // MPropertyArrayElementNameKey
@@ -1905,20 +1945,22 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CSndBeatPattern {
                 pub const m_name: usize = 0x0; // CUtlString
-                pub const m_launchSyncType: usize = 0xC; // SndBeatLaunchSyncType_t
-                pub const m_flSyncPriority: usize = 0x10; // float32
-                pub const m_timeSignature: usize = 0x14; // SndBeatTimeSignature_t
-                pub const m_flLength: usize = 0x1C; // float32
-                pub const m_bLooping: usize = 0x20; // bool
-                pub const m_launchSyncEventType: usize = 0x24; // SndBeatEventType_t
-                pub const m_flSyncBeatMult: usize = 0x28; // float32
-                pub const m_playEventType: usize = 0x2C; // SndBeatEventType_t
-                pub const m_flPlayBeatMult: usize = 0x30; // float32
-                pub const m_keyType: usize = 0x34; // SndBeatKeyType_t
+                pub const m_flSyncPriority: usize = 0xC; // float32
+                pub const m_syncStartType: usize = 0x10; // SndBeatSyncStartType_t
+                pub const m_syncType: usize = 0x14; // SndBeatSyncType_t
+                pub const m_timeSignature: usize = 0x18; // SndBeatTimeSignature_t
+                pub const m_flLength: usize = 0x20; // float32
+                pub const m_bLooping: usize = 0x24; // bool
+                pub const m_playEventType: usize = 0x28; // SndBeatEventType_t
+                pub const m_flPlayBeatMult: usize = 0x2C; // float32
+                pub const m_playKeyType: usize = 0x30; // SndBeatKeyType_t
                 pub const m_vecPatternKeys: usize = 0x38; // CUtlVector<SndBeatEventKeys_t>
                 pub const m_vecPatternFloats: usize = 0x50; // CUtlVector<SndBeatEventKeyedFloats_t>
                 pub const m_vecPatternSndEvts: usize = 0x68; // CUtlVector<SndBeatEventKeyedSndEvts_t>
                 pub const m_vecPatternMidi: usize = 0x80; // CUtlVector<SndBeatEventKeyedMidiNotes_t>
+                pub const m_syncEventType: usize = 0x98; // SndBeatEventType_t
+                pub const m_flSyncBeatMult: usize = 0x9C; // float32
+                pub const m_vecSyncPatternKeys: usize = 0xA0; // CUtlVector<SndBeatEventKeys_t>
             }
             // Parent: None
             // Field count: 3

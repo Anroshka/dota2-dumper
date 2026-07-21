@@ -1,7 +1,7 @@
-// Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-21 00:33:36.983799300 UTC
+// Generated using https://github.com/a2x/dota2-dumper
+// 2026-07-21 23:54:14.966407800 UTC
 
-pub const cs2_dumper = struct {
+pub const dota2_dumper = struct {
     pub const schemas = struct {
         // Module: worldrenderer.dll
         // Class count: 33
