@@ -7,7 +7,7 @@ use super::{CodeWriter, Formatter, InterfaceMap, slugify, zig_ident};
 
 impl CodeWriter for InterfaceMap {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
-        fmt.block("namespace CS2Dumper.Interfaces", false, |fmt| {
+        fmt.block("namespace Dota2Dumper.Interfaces", false, |fmt| {
             for (module_name, ifaces) in self {
                 writeln!(fmt, "// Module: {}", module_name)?;
 
@@ -41,7 +41,7 @@ impl CodeWriter for InterfaceMap {
         writeln!(fmt, "#include <cstddef>")?;
         writeln!(fmt, "#include <cstdint>\n")?;
 
-        fmt.block("namespace cs2_dumper", false, |fmt| {
+        fmt.block("namespace dota2_dumper", false, |fmt| {
             fmt.block("namespace interfaces", false, |fmt| {
                 for (module_name, ifaces) in self {
                     writeln!(fmt, "// Module: {}", module_name)?;
@@ -81,7 +81,7 @@ impl CodeWriter for InterfaceMap {
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
 
-        fmt.block("pub mod cs2_dumper", false, |fmt| {
+        fmt.block("pub mod dota2_dumper", false, |fmt| {
             fmt.block("pub mod interfaces", false, |fmt| {
                 for (module_name, ifaces) in self {
                     writeln!(fmt, "// Module: {}", module_name)?;
@@ -105,7 +105,7 @@ impl CodeWriter for InterfaceMap {
     }
 
     fn write_zig(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
-        fmt.block("pub const cs2_dumper = struct", true, |fmt| {
+        fmt.block("pub const dota2_dumper = struct", true, |fmt| {
             fmt.block("pub const interfaces = struct", true, |fmt| {
                 for (module_name, ifaces) in self {
                     writeln!(fmt, "// Module: {}", module_name)?;

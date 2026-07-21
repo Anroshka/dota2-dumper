@@ -6,7 +6,7 @@ use super::{CodeWriter, Formatter, OffsetMap, slugify, zig_ident};
 
 impl CodeWriter for OffsetMap {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
-        fmt.block("namespace CS2Dumper.Offsets", false, |fmt| {
+        fmt.block("namespace Dota2Dumper.Offsets", false, |fmt| {
             for (module_name, offsets) in self {
                 writeln!(fmt, "// Module: {}", module_name)?;
 
@@ -32,7 +32,7 @@ impl CodeWriter for OffsetMap {
         writeln!(fmt, "#include <cstddef>")?;
         writeln!(fmt, "#include <cstdint>\n")?;
 
-        fmt.block("namespace cs2_dumper", false, |fmt| {
+        fmt.block("namespace dota2_dumper", false, |fmt| {
             fmt.block("namespace offsets", false, |fmt| {
                 for (module_name, offsets) in self {
                     writeln!(fmt, "// Module: {}", module_name)?;
@@ -62,7 +62,7 @@ impl CodeWriter for OffsetMap {
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
 
-        fmt.block("pub mod cs2_dumper", false, |fmt| {
+        fmt.block("pub mod dota2_dumper", false, |fmt| {
             fmt.block("pub mod offsets", false, |fmt| {
                 for (module_name, offsets) in self {
                     writeln!(fmt, "// Module: {}", module_name)?;
@@ -86,7 +86,7 @@ impl CodeWriter for OffsetMap {
     }
 
     fn write_zig(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
-        fmt.block("pub const cs2_dumper = struct", true, |fmt| {
+        fmt.block("pub const dota2_dumper = struct", true, |fmt| {
             fmt.block("pub const offsets = struct", true, |fmt| {
                 for (module_name, offsets) in self {
                     writeln!(fmt, "// Module: {}", module_name)?;

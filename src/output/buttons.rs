@@ -5,7 +5,7 @@ use super::{ButtonMap, CodeWriter, Formatter, zig_ident};
 
 impl CodeWriter for ButtonMap {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
-        fmt.block("namespace CS2Dumper", false, |fmt| {
+        fmt.block("namespace Dota2Dumper", false, |fmt| {
             writeln!(fmt, "// Module: client.dll")?;
 
             fmt.block("public static class Buttons", false, |fmt| {
@@ -23,7 +23,7 @@ impl CodeWriter for ButtonMap {
         writeln!(fmt, "#include <cstddef>")?;
         writeln!(fmt, "#include <cstdint>\n")?;
 
-        fmt.block("namespace cs2_dumper", false, |fmt| {
+        fmt.block("namespace dota2_dumper", false, |fmt| {
             writeln!(fmt, "// Module: client.dll")?;
 
             fmt.block("namespace buttons", false, |fmt| {
@@ -49,7 +49,7 @@ impl CodeWriter for ButtonMap {
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
 
-        fmt.block("pub mod cs2_dumper", false, |fmt| {
+        fmt.block("pub mod dota2_dumper", false, |fmt| {
             writeln!(fmt, "// Module: client.dll")?;
 
             fmt.block("pub mod buttons", false, |fmt| {
@@ -69,7 +69,7 @@ impl CodeWriter for ButtonMap {
     }
 
     fn write_zig(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
-        fmt.block("pub const cs2_dumper = struct", true, |fmt| {
+        fmt.block("pub const dota2_dumper = struct", true, |fmt| {
             writeln!(fmt, "// Module: client.dll")?;
 
             fmt.block("pub const buttons = struct", true, |fmt| {
