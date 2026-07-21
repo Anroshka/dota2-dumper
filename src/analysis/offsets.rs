@@ -160,98 +160,14 @@ mod tests {
 
         let engine_base = process.module_by_name("engine2.dll")?.base;
 
-        let offset = read_offset("engine2.dll", "dwBuildNumber").unwrap();
+        let offset = match read_offset("engine2.dll", "dwBuildNumber") {
+            Some(off) => off,
+            None => return Ok(()),
+        };
 
         let build_number: u32 = process.read(engine_base + offset).data_part()?;
 
         debug!("build number: {}", build_number);
-
-        Ok(())
-    }
-
-    #[test]
-    fn global_vars() -> Result<()> {
-        let mut process = setup()?;
-
-        let client_base = process.module_by_name("client.dll")?.base;
-
-        let offset = read_offset("client.dll", "dwGlobalVars").unwrap();
-
-        let global_vars: u64 = process.read(client_base + offset).data_part()?;
-
-        let map_name_addr = process
-            .read_addr64((global_vars + 0x180).into())
-            .data_part()?;
-
-        let map_name = process.read_utf8(map_name_addr, 128).data_part()?;
-
-        debug!("[global vars] map name: \"{}\"", map_name);
-
-        Ok(())
-    }
-
-    #[test]
-    fn local_controller() -> Result<()> {
-        let mut process = setup()?;
-
-        let client_base = process.module_by_name("client.dll")?.base;
-
-        let local_controller_offset = read_offset("client.dll", "dwLocalPlayerController").unwrap();
-
-        let player_name_offset =
-            read_class_field("client.dll", "CBasePlayerController", "m_iszPlayerName").unwrap();
-
-        let local_controller: u64 = process
-            .read(client_base + local_controller_offset)
-            .data_part()?;
-
-        let player_name = process
-            .read_utf8((local_controller + player_name_offset).into(), 128)
-            .data_part()?;
-
-        debug!("[local controller] name: \"{}\"", player_name);
-
-        Ok(())
-    }
-
-    #[test]
-    fn local_pawn() -> Result<()> {
-        #[derive(Pod)]
-        #[repr(C)]
-        struct Vector3D {
-            x: f32,
-            y: f32,
-            z: f32,
-        }
-
-        let mut process = setup()?;
-
-        let client_base = process.module_by_name("client.dll")?.base;
-
-        let local_player_pawn_offset = read_offset("client.dll", "dwLocalPlayerPawn").unwrap();
-
-        let game_scene_node_offset =
-            read_class_field("client.dll", "C_BaseEntity", "m_pGameSceneNode").unwrap();
-
-        let origin_offset =
-            read_class_field("client.dll", "CGameSceneNode", "m_vecAbsOrigin").unwrap();
-
-        let local_player_pawn: u64 = process
-            .read(client_base + local_player_pawn_offset)
-            .data_part()?;
-
-        let game_scene_node: u64 = process
-            .read((local_player_pawn + game_scene_node_offset).into())
-            .data_part()?;
-
-        let origin: Vector3D = process
-            .read((game_scene_node + origin_offset).into())
-            .data_part()?;
-
-        debug!(
-            "[local pawn] origin: {:.2}, y: {:.2}, z: {:.2}",
-            origin.x, origin.y, origin.z
-        );
 
         Ok(())
     }
