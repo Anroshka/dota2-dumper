@@ -32,5 +32,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: cs2-dumper-windows
+          name: dota2-dumper-windows
           path: target/release/*.exe
