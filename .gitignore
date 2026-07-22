@@ -3,4 +3,5 @@
 /.vs
 /target
 Cargo.lock
-cs2-dumper.exe
+*.exe
+*.log
