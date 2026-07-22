@@ -141,7 +141,7 @@ impl<'a> Output<'a> {
     fn dump_info<P: MemoryView + Process>(&self, process: &mut P) -> Result<()> {
         let file_path = self.out_dir.join("info.json");
 
-        let build_number = self
+        let mut build_number = self
             .result
             .offsets
             .iter()
@@ -152,6 +152,23 @@ impl<'a> Output<'a> {
                 process.read::<u32>(module.base + offset).data_part().ok()
             })
             .unwrap_or(0);
+
+        if build_number < 1000 {
+            if let Ok(output) = std::process::Command::new("powershell")
+                .args([
+                    "-NoProfile",
+                    "-Command",
+                    "(Invoke-RestMethod 'https://api.steampowered.com/IGCVersion_570/GetClientVersion/v1/').result.active_version",
+                ])
+                .output()
+            {
+                if let Ok(s) = String::from_utf8(output.stdout) {
+                    if let Ok(parsed) = s.trim().parse::<u32>() {
+                        build_number = parsed;
+                    }
+                }
+            }
+        }
 
         let content = serde_json::to_string_pretty(&json!({
             "timestamp": self.timestamp.to_rfc3339(),
