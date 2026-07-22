@@ -193,7 +193,7 @@ impl<'a> Output<'a> {
     }
 
     fn write_banner(&self, fmt: &mut Formatter<'_>) -> Result<()> {
-        writeln!(fmt, "// Generated using https://github.com/a2x/dota2-dumper")?;
+        writeln!(fmt, "// Generated using https://github.com/Anroshka/dota2-dumper")?;
         writeln!(fmt, "// {}\n", self.timestamp)?;
 
         Ok(())

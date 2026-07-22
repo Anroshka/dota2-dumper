@@ -1,5 +1,5 @@
-// Generated using https://github.com/a2x/dota2-dumper
-// 2026-07-21 23:54:14.966407800 UTC
+// Generated using https://github.com/Anroshka/dota2-dumper
+// 2026-07-21 23:59:38.829068600 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: materialsystem2.dll
