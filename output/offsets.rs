@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-07-22 00:17:09.778744 UTC
+// 2026-07-25 01:27:41.234350800 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -7,18 +7,18 @@ pub mod dota2_dumper {
     pub mod offsets {
         // Module: client.dll
         pub mod client_dll {
-            pub const dwEntityList: usize = 0x6494BF0;
-            pub const dwGameEntitySystem: usize = 0x6494BF0;
+            pub const dwEntityList: usize = 0x64A5C50;
+            pub const dwGameEntitySystem: usize = 0x64A5C50;
             pub const dwGameEntitySystem_highestEntityIndex: usize = 0x2090;
-            pub const dwGameRules: usize = 0x6117AF0;
-            pub const dwGlobalVars: usize = 0x59EDFE0;
-            pub const dwViewMatrix: usize = 0x611D0F0;
-            pub const dwViewRender: usize = 0x611C7B8;
+            pub const dwGameRules: usize = 0x6128870;
+            pub const dwGlobalVars: usize = 0x59FCFD8;
+            pub const dwViewMatrix: usize = 0x612E1F0;
+            pub const dwViewRender: usize = 0x612D8B8;
         }
         // Module: engine2.dll
         pub mod engine2_dll {
-            pub const dwBuildNumber: usize = 0x60C694;
-            pub const dwNetworkGameClient: usize = 0x90A540;
+            pub const dwBuildNumber: usize = 0x60DD24;
+            pub const dwNetworkGameClient: usize = 0x90BBC0;
             pub const dwNetworkGameClient_clientTickCount: usize = 0x378;
             pub const dwNetworkGameClient_deltaTick: usize = 0x24C;
             pub const dwNetworkGameClient_isBackgroundMap: usize = 0x2C141F;
@@ -26,8 +26,8 @@ pub mod dota2_dumper {
             pub const dwNetworkGameClient_maxClients: usize = 0x240;
             pub const dwNetworkGameClient_serverTickCount: usize = 0x24C;
             pub const dwNetworkGameClient_signOnState: usize = 0x230;
-            pub const dwWindowHeight: usize = 0x90E90C;
-            pub const dwWindowWidth: usize = 0x90E908;
+            pub const dwWindowHeight: usize = 0x90FF8C;
+            pub const dwWindowWidth: usize = 0x90FF88;
         }
         // Module: inputsystem.dll
         pub mod inputsystem_dll {

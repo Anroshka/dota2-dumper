@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-07-22 00:17:09.778744 UTC
+// 2026-07-25 01:27:41.234350800 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: vphysics2.dll

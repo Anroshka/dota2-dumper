@@ -1,10 +1,10 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-07-22 00:17:09.778744 UTC
+// 2026-07-25 01:27:41.234350800 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: client.dll
-    // Class count: 7200
-    // Enum count: 118
+    // Class count: 7203
+    // Enum count: 120
     public static class ClientDll {
         // Alignment: 4
         // Member count: 5
@@ -435,7 +435,7 @@ namespace Dota2Dumper.Schemas {
             k_eBingoAuditAction_SupportStatThresholdFixup = 0xA
         }
         // Alignment: 4
-        // Member count: 16
+        // Member count: 17
         public enum DarkCarnivalRewardVisual_t : uint {
             k_eDarkCarnivalRewardVisual_Invalid = unchecked((uint)-1),
             k_eDarkCarnivalRewardVisual_Coin = 0x0,
@@ -450,9 +450,10 @@ namespace Dota2Dumper.Schemas {
             k_eDarkCarnivalRewardVisual_Oracle = 0x9,
             k_eDarkCarnivalRewardVisual_HeroItemSet = 0xA,
             k_eDarkCarnivalRewardVisual_ShowcaseDecoration = 0xB,
-            k_eDarkCarnivalRewardVisual_Start = 0xC,
-            k_eDarkCarnivalRewardVisual_End = 0xD,
-            k_eDarkCarnivalRewardVisual_Completed = 0xE
+            k_eDarkCarnivalRewardVisual_EconItem = 0xC,
+            k_eDarkCarnivalRewardVisual_Start = 0xD,
+            k_eDarkCarnivalRewardVisual_End = 0xE,
+            k_eDarkCarnivalRewardVisual_Completed = 0xF
         }
         // Alignment: 4
         // Member count: 29
@@ -1010,7 +1011,7 @@ namespace Dota2Dumper.Schemas {
             k_eShmupEventType_UI = 0x1
         }
         // Alignment: 4
-        // Member count: 14
+        // Member count: 15
         public enum DOTAVisualNovelTextColor_t : uint {
             VN_TEXT_COLOR_DEFAULT = 0x0,
             VN_TEXT_COLOR_GRAY = 0x1,
@@ -1025,7 +1026,8 @@ namespace Dota2Dumper.Schemas {
             VN_TEXT_COLOR_WHITE = 0xA,
             VN_TEXT_COLOR_PURPLE = 0xB,
             VN_TEXT_COLOR_YELLOW = 0xC,
-            VN_TEXT_COLOR_LIGHT_BROWN = 0xD
+            VN_TEXT_COLOR_LIGHT_BROWN = 0xD,
+            VN_TEXT_COLOR_TITLE = 0xE
         }
         // Alignment: 4
         // Member count: 12
@@ -1687,7 +1689,7 @@ namespace Dota2Dumper.Schemas {
             PLAYER_ULTIMATE_STATE_HIDDEN = unchecked((uint)-3)
         }
         // Alignment: 4
-        // Member count: 7
+        // Member count: 9
         public enum DOTAVisualNovelDialogueTextEffect_t : uint {
             VN_DIALOGUE_EFFECT_TEXT_NONE = 0x0,
             VN_DIALOGUE_EFFECT_TEXT_INSTANT = 0x1,
@@ -1695,7 +1697,9 @@ namespace Dota2Dumper.Schemas {
             VN_DIALOGUE_EFFECT_TEXT_BOLD = 0x4,
             VN_DIALOGUE_EFFECT_TEXT_SMALL = 0x8,
             VN_DIALOGUE_EFFECT_TEXT_NO_NAMEPLATE = 0x10,
-            VN_DIALOGUE_EFFECT_TEXT_NO_TEXT = 0x20
+            VN_DIALOGUE_EFFECT_TEXT_NO_TEXT = 0x20,
+            VN_DIALOGUE_EFFECT_TEXT_LARGE = 0x40,
+            VN_DIALOGUE_EFFECT_TEXT_NO_CURSOR = 0x80
         }
         // Alignment: 4
         // Member count: 8
@@ -14005,6 +14009,10 @@ namespace Dota2Dumper.Schemas {
         public static class CDOTA_Item_Tombstone_Drop {
             public const nint m_iTempViewer = 0xB80; // int32
             public const nint m_iTeam = 0xB84; // int32
+        }
+        // Parent: C_BaseModelEntity
+        // Field count: 0
+        public static class CDOTA_WhackAMoleGameEffectsEntity {
         }
         // Parent: C_DOTA_Item
         // Field count: 0
@@ -44552,13 +44560,14 @@ namespace Dota2Dumper.Schemas {
             public const nint m_Value = 0x0; // uint32
         }
         // Parent: None
-        // Field count: 1
+        // Field count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
         // MVDataNodeType
         public static class CDOTAMotionComicFrame {
             public const nint m_flAutoAdvanceDelay = 0x8; // float32
+            public const nint m_bFireEventOnStart = 0xC; // bool
         }
         // Parent: None
         // Field count: 4
@@ -47628,21 +47637,580 @@ namespace Dota2Dumper.Schemas {
             public const nint m_nDamageMultiplier = 0x10; // int32
         }
         // Parent: None
-        // Field count: 13
-        public static class m_vecChoices {
-            public const nint ������v=_ = 0xD74D3760; // 
-            public const nint ������v=_ = 0xD74D3760; // 
-            public const nint ������v=_ = 0xD74D3760; // 
-            public const nint ������v=_ = 0xD74D3760; // 
-            public const nint 2���������������H��(H�T$8�/_ = 0xD74D3560; // 
-            public const nint 2���������������H��(H�T$8�/_ = 0xD74D3560; // 
-            public const nint ������v=_ = 0xD74D3760; // 
-            public const nint ������v=_ = 0xD74D3760; // 
-            public const nint ������v=_ = 0xD74D3760; // 
-            public const nint 2���������������H��(H�T$8�/_ = 0xD74D3560; // 
-            public const nint ������v=_ = 0xD74D3760; // 
-            public const nint 2���������������H��(H�T$8�/_ = 0xD74D3560; // 
-            public const nint @SH�� H�H����� = 0xD6AF8510; // 
+        // Field count: 345
+        public static class _oS___ {
+            public const nint  = 0x0; // 
+            public const nint ؔ��� = 0x0; // 
+            public const nint 0v��� = 0x21; // CPortraitData
+            public const nint client = 0xDADE9610; // 
+            public const nint m_nHeroID = 0x19B0; // HeroID_t
+            public const nint m_actQueuedActivity = 0x19B4; // int32
+            public const nint m_szQueuedActivityModifier = 0x19B8; // char[64]
+            public const nint m_UnitName = 0x0; // char[260]
+            public const nint m_UnitLabel = 0x104; // char[260]
+            public const nint m_unUnitLabelIndex = 0x208; // uint8
+            public const nint m_hEntity = 0x20C; // CHandle<C_BaseEntity>
+            public const nint m_bIsIllusion = 0x210; // bool
+            public const nint m_IllusionLabel = 0x211; // char[260]
+            public const nint  = 0x0; // 
+            public const nint C_DOTA_LinearProjectileInfoParticleAPI::Velocity = 0xDA1262FA; // 
+            public const nint  = 0x0; // 
+            public const nint ����� = 0xDBFD0E60; // P����
+            public const nint 0v��� = 0x4161; // C_PortraitHero
+            public const nint  = 0xDBFD1A10; // 
+            public const nint 0v��� = 0x28; // NeutralCampStackPullAlarm_t
+            public const nint 0v��� = 0x61; // ClientQuickBuyItemState
+            public const nint  = 0xDADE9A30; // 
+            public const nint  = 0xDBFD1F40; // 
+            public const nint  = 0xDBFD2020; // 
+            public const nint 0v��� = 0x2C; // PlayerSeatAssignment_t
+            public const nint m_bWasDataUpdateCreated = 0x600; // bool
+            public const nint m_vecPlayerTeamData = 0x608; // C_UtlVectorEmbeddedNetworkVar<PlayerResourcePlayerTeamData_t>
+            public const nint m_vecPlayerData = 0x670; // C_UtlVectorEmbeddedNetworkVar<PlayerResourcePlayerData_t>
+            public const nint m_vecBrodcasterData = 0x6D8; // C_UtlVectorEmbeddedNetworkVar<PlayerResourceBroadcasterData_t>
+            public const nint m_vecEventsForDisplay = 0x740; // C_NetworkUtlVectorBase<uint32>
+            public const nint m_nPrimaryEventIndex = 0x758; // int8
+            public const nint m_nObsoleteEventIDAssociatedWithEventData = 0x75C; // uint32
+            public const nint m_playerIDToPlayer = 0x760; // CHandle<C_BaseEntity>[64]
+            public const nint m_playerIDToPawn = 0x860; // CHandle<C_BaseEntity>[64]
+            public const nint m_iszName = 0x960; // CUtlSymbolLarge[64]
+            public const nint m_iszHTMLSafeName = 0xB60; // CUtlSymbolLarge[64]
+            public const nint m_iszFilteredHTMLSafeName = 0xD60; // CUtlSymbolLarge[64]
+            public const nint m_bDirtySelection = 0x2860; // bool
+            public const nint m_bHasWorldTreesChanged = 0x2861; // bool
+            public const nint m_bWorldTreeModelsChanged = 0x2862; // bool
+            public const nint m_bSwapWillingness = 0x2863; // bool[24]
+            public const nint m_hTeamCouriers = 0x28B8; // CUtlVector<CHandle<C_DOTA_Unit_Courier>>[15]
+            public const nint m_hPlayerCouriers = 0x2A20; // CUtlVector<CHandle<C_DOTA_Unit_Courier>>[64]
+            public const nint m_vecOnstageHomeTeams = 0x3020; // CUtlVector<uint32>
+            public const nint m_pPlayerIDToOnstageSlot = 0x3038; // PlayerSeatAssignment_t*[24]
+            public const nint m_vecOnstagePlayerSeats = 0x30F8; // CUtlVector<PlayerSeatAssignment_t>
+            public const nint m_nEventNPCReplaced = 0x3110; // int32
+            public const nint m_nEventPlayerInfo = 0x3114; // int32
+            public const nint m_nInventoryUpdated = 0x3118; // int32
+            public const nint  = 0xDA330190; // C_BaseEntity
+            public const nint  = 0xDBFD3220; // 
+            public const nint @���� = 0xDBFD10C0; // ����
+            public const nint 0v��� = 0x4961; // C_DOTA_PlayerResource
+            public const nint m_iLastKillerTeam = 0x5F0; // int32
+            public const nint m_iKillCount = 0x5F4; // int32
+            public const nint m_vRoshanAltLocation = 0x5F8; // Vector
+            public const nint m_hRoshan = 0x604; // CHandle<C_BaseEntity>
+            public const nint  = 0xDBFD33C0; // C_PointEntity
+            public const nint ���� = 0xDBFD12D8; // �i���
+            public const nint 0v��� = 0x4161; // C_DOTA_RoshanSpawner
+            public const nint m_nVisualTeam = 0x5F0; // int32
+            public const nint m_bIsRadiantMiniboss = 0x5F4; // bool
+            public const nint  = 0xDBFD3480; // C_PointEntity
+            public const nint X�S�� = 0xDBFD1308; // �i���
+            public const nint 0v��� = 0x4161; // C_DOTA_MinibossSpawner
+            public const nint ���� = 0xD8124820; // �
+            public const nint � = 0xD8124810; // �
+            public const nint � = 0xD8124800; // �
+            public const nint � = 0xD81247D0; // �
+            public const nint � = 0xD8124850; // �
+            public const nint DOTAJoyHUDPanelFocusDisplay = 0xDADF4098; // Panel
+            public const nint  = 0xD8124870; // �
+            public const nint  
+            ��� = 0x1; // 
+            public const nint m_nHeroID = 0x4; // 
+            public const nint  = 0x363; // 
+            public const nint  = 0xF5DC; // 
+            public const nint  = 0xDADE93B8; // OnParticleCollectionCreated
+            public const nint  = 0x0; // InitialPosition
+            public const nint |�� = 0x0; // 
+            public const nint  = 0x4D7E6C00; // 
+            public const nint  = 0xFFFFFFFF; // 
+            public const nint Xy��� = 0xDC70AAB0; // Xy���
+            public const nint C_DOTAReflectionSkybox = 0x0; // 
+            public const nint m_iHeroKills = 0x6A8; // int32
+            public const nint m_iTowerKills = 0x6AC; // int32
+            public const nint m_iBarracksKills = 0x6B0; // int32
+            public const nint m_unTournamentTeamID = 0x6B4; // uint32
+            public const nint m_ulTeamLogo = 0x6B8; // uint64
+            public const nint m_ulTeamBaseLogo = 0x6C0; // uint64
+            public const nint m_ulTeamBannerLogo = 0x6C8; // uint64
+            public const nint m_bTeamComplete = 0x6D0; // bool
+            public const nint m_bTeamIsHomeTeam = 0x6D1; // bool
+            public const nint m_bTeamCanSeeExactRoshanTimer = 0x6D2; // bool
+            public const nint m_bTeamCanSeeNextPowerRune = 0x6D3; // bool
+            public const nint m_CustomHealthbarColor = 0x6D4; // Color
+            public const nint m_szTag = 0x6D8; // char[33]
+            public const nint  = 0xDBFD4D08; // C_Team
+            public const nint �<��� = 0xDA183F60; // 
+            public const nint  = 0xDBFD3AF0; // 
+            public const nint  = 0xDADF7EB0; // 
+            public const nint C_DOTAAmbientCreatureParticleZone = 0x0; // 
+            public const nint  = 0xDADAEE40; // 
+            public const nint C_DOTA_MapTree = 0x0; // 
+            public const nint ����� = 0x1; // 
+            public const nint ���� = 0xDBFD3E40; // 
+            public const nint  = 0xDBFD3AC0; // ����
+            public const nint 0v��� = 0x4161; // C_DOTAReflectionSkybox
+            public const nint  = 0x1; // 
+            public const nint ����� = 0xDADF8640; // 
+            public const nint  = 0xDBFD3F00; // 
+            public const nint  = 0x0; // 
+            public const nint �ai�� = 0xDBFD3DC0; // �����
+            public const nint 0v��� = 0x4161; // C_DOTA_MapTree
+            public const nint  = 0xDBFD4260; // CBaseAnimatingActivity
+            public const nint  = 0xDBFD3DF8; // �����
+            public const nint 0v��� = 0x4161; // C_DOTA_PortraitTree
+            public const nint  = 0xDADF8AC8; // 
+            public const nint m_SpeechBubbles = 0x5F0; // C_UtlVectorEmbeddedNetworkVar<C_SpeechBubbleInfo>
+            public const nint m_nLastCountInQueue = 0x13A8; // uint32[4]
+            public const nint  = 0xDBFD43A0; // C_BaseEntity
+            public const nint ����� = 0xDBFD3D60; // �8���
+            public const nint 0v��� = 0x4161; // C_DOTAAmbientCreatureParticleZone
+            public const nint  = 0xDBFD4350; // 
+            public const nint �H��� = 0x24D7F000; // 
+            public const nint �8��� = 0x1; // 
+            public const nint  = 0xBC639CA0; // 
+            public const nint  = 0xDA175608; // 
+            public const nint  = 0x0; // 
+            public const nint  = 0x0; // 
+            public const nint  = 0xDAD69BA8; // 
+            public const nint m_szTargetName = 0x4; // 
+            public const nint  = 0xDADF8950; // 
+            public const nint  = 0x0; // 
+            public const nint  = 0x0; // 
+            public const nint  = 0xDA13CCC8; // 
+            public const nint m_bShowInFow = 0x4; // 
+            public const nint  = 0xDAD662E0; // 
+            public const nint  = 0x0; // 
+            public const nint DOTAClientPrecache_client = 0xDBFD4CF8; // 
+            public const nint  = 0xDC70BAE8; // 
+            public const nint  = 0xDADF7900; // �
+            public const nint  = 0xDADF79B0; // dota
+            public const nint  = 0xC78B2220; // 
+            public const nint slow_percent = 0x1A58; // int32
+            public const nint m_bInRiver = 0x1A5C; // bool
+            public const nint  = 0xDBFD4E20; // CDOTA_Buff
+            public const nint �,4�� = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_Aghsfort_Reward_ArmorAura_Bonus
+            public const nint  = 0xDBFD4DD0; // 
+            public const nint  = 0xDADFEC68; // 
+            public const nint  = 0xDBFD4F60; // C_DOTABaseAbility
+            public const nint  = 0xDBFDAFB8; // �����
+            public const nint 0v��� = 0x4063; // CDOTA_Ability_Seasonal_TI11_RockPaperScissors_Base
+            public const nint  = 0x0; // 
+            public const nint  = 0xDBFDBAB0; // �����
+            public const nint 0v��� = 0x4161; // CDOTA_Ability_AghsFort_RestorativeFlower
+            public const nint disarm_duration = 0x1A58; // float32
+            public const nint  = 0xDADFECE0; // 
+            public const nint m_flStartTime = 0x1A58; // GameTime_t
+            public const nint  = 0xDBFD5140; // CDOTA_Buff
+            public const nint �d]�� = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_Wave_Blast_Knockback
+            public const nint  = 0xDBFD5110; // 
+            public const nint C_DOTA_Ability_AghsFort_Creature_Phoenix_FireSpirits = 0x0; // 
+            public const nint  = 0x0; // CDOTA_Modifier_Disarmed
+            public const nint  = 0x0; // 
+            public const nint  = 0xDBFDB4D0; // �����
+            public const nint 0v��� = 0x4161; // CDOTA_Ability_AghsFort_TreantMiniboss_NaturesGuise
+            public const nint  = 0x0; // CDOTA_Ability_Seasonal_TI11_RockPaperScissors_Base
+            public const nint  = 0xDADFF910; // 
+            public const nint  = 0xDBFDA540; // �����
+            public const nint 0v��� = 0x4161; // C_DOTA_Ability_AghsFort_Waveblaster_Leap
+            public const nint radius = 0x1A58; // int32
+            public const nint heal = 0x1A5C; // int32
+            public const nint vision_radius = 0x1A60; // int32
+            public const nint vision_duration = 0x1A64; // float32
+            public const nint model_scale = 0x1A68; // int32
+            public const nint bExploding = 0x1A6C; // bool
+            public const nint stun_duration = 0x1A70; // float32
+            public const nint m_nFXAmbient = 0x1A74; // ParticleIndex_t
+            public const nint  = 0x0; // 
+            public const nint  = 0xDBFD5410; // 
+            public const nint  = 0xDBFD5580; // 
+            public const nint CDOTA_Unit_CustomGameAnnouncerAghanim = 0x0; // 
+            public const nint m_RevealTimer = 0x1A58; // CountdownTimer
+            public const nint m_InvisAttackTimer = 0x1A70; // CountdownTimer
+            public const nint m_CooldownTimer = 0x1A88; // CountdownTimer
+            public const nint max_steps = 0x6A8; // int32
+            public const nint m_vTarget = 0x6AC; // VectorWS
+            public const nint m_vDir = 0x6B8; // Vector
+            public const nint m_nSteps = 0x6C4; // int32
+            public const nint m_nFXIndex = 0x6C8; // ParticleIndex_t
+            public const nint  = 0x0; // CDOTA_Buff
+            public const nint  = 0xDBFD5890; // 
+            public const nint % = 0xDAE00668; // 
+            public const nint �B�� = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_AghsFort_Ascension_PlasmaField_Slow
+            public const nint  = 0xDAE00698; // 
+            public const nint  = 0xDBFD58F0; // 
+            public const nint  = 0xDA494740; // C_DOTABaseAbility
+            public const nint  = 0xDBFD5C60; // CDOTA_Buff
+            public const nint x�6�� = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_AghsFort_Waveblaster_Leap
+            public const nint  = 0x0; // 
+            public const nint CDOTA_Ability_AghsFort_Ravage_Potion = 0x0; // 
+            public const nint  = 0xDBFD5C00; // 
+            public const nint  = 0xDBFDA8A0; // �����
+            public const nint 0v��� = 0x4161; // CDOTA_Ability_Ascension_Bulwark
+            public const nint  = 0xDBFD5E60; // C_DOTABaseAbility
+            public const nint  = 0xDBFD5860; // P����
+            public const nint 0v��� = 0x4161; // CDOTA_Unit_CustomGameAnnouncerAghanim
+            public const nint  = 0xDAE00728; // 
+            public const nint CDOTA_Ability_AghsFort_Creature_Phoenix_LaunchFireSpirit = 0x0; // 
+            public const nint  = 0xDC71EF00; // CDOTA_Modifier_Invisible
+            public const nint CDOTA_Ability_Aghsfort_TempBuff_CorpseExplosion = 0x0; // 
+            public const nint  = 0x0; // 
+            public const nint  = 0x0; // P����
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_AghsFort_TreantMiniboss_NaturesGuise_Invis
+            public const nint  = 0xDBFD6060; // CDOTA_Buff
+            public const nint  = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_AghsFort_TreantMiniboss_NaturesGuise_NearTreeDisplay
+            public const nint  = 0xDA152A44; // CDOTA_Ability_Seasonal_TI11_RockPaperScissors_Base
+            public const nint  = 0xDC71D9A0; // CDOTA_Buff
+            public const nint C_DOTA_Aghsfort_AbilityCrystalMaiden_FreezingField = 0x0; // 
+            public const nint  = 0x0; // 
+            public const nint D*�� = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_AghsFort_StonehallGeneral_OverwhelmingOdds_Thinker
+            public const nint physical_damage_reduction = 0x1A58; // float32
+            public const nint physical_damage_reduction_side = 0x1A5C; // float32
+            public const nint forward_angle = 0x1A60; // float32
+            public const nint side_angle = 0x1A64; // float32
+            public const nint  = 0xDBFD61C0; // 
+            public const nint  = 0xDBFE2158; // CDOTA_Buff
+            public const nint CDOTA_AghsFort_BossPreview = 0x0; // 
+            public const nint  = 0xDBFD6310; // 
+            public const nint  = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_AghsFort_Morphling_Waveform
+            public const nint  = 0xDAE01DA8; // 
+            public const nint CDOTA_Ability_UpheavalUrn_Reincarnation = 0x0; // 
+            public const nint m_nFXPreview = 0x6A8; // ParticleIndex_t
+            public const nint radius = 0x6AC; // float32
+            public const nint  = 0x0; // C_DOTABaseAbility
+            public const nint m_flRotation = 0x1A58; // float32
+            public const nint m_hWisp = 0x1A5C; // CHandle<C_BaseEntity>
+            public const nint m_flLastAttack = 0x1A60; // GameTime_t
+            public const nint reversed = 0x1A64; // bool
+            public const nint roaming_radius = 0x1A68; // int32
+            public const nint attack_radius = 0x1A6C; // int32
+            public const nint roaming_seconds_per_rotation = 0x1A70; // float32
+            public const nint attack_interval = 0x1A74; // float32
+            public const nint m_bSetupWarning = 0x1A78; // bool
+            public const nint m_nPreviewFX = 0x1A7C; // ParticleIndex_t
+            public const nint m_nPreviewFX = 0x6A8; // ParticleIndex_t
+            public const nint width = 0x6AC; // int32
+            public const nint duration = 0x6B0; // float32
+            public const nint length = 0x6B4; // int32
+            public const nint speed = 0x6B8; // int32
+            public const nint  = 0xDBFD6590; // 
+            public const nint  = 0x0; // 
+            public const nint  = 0xDAE01EB8; // 
+            public const nint ��I�� = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_Boss_DarkWillow_Bedlam
+            public const nint  = 0xDBFD6730; // 
+            public const nint  = 0xDAE02300; // 
+            public const nint C_DOTA_Ability_AttributeBonus = 0x0; // 
+            public const nint  = 0x0; // 
+            public const nint CDOTA_BaseNPC_AghsFort_Watch_Tower = 0x0; // 
+            public const nint  = 0xDAE036A8; // 
+            public const nint m_fCurRadius = 0x1A58; // float32
+            public const nint m_fLastThink = 0x1A5C; // GameTime_t
+            public const nint m_entitiesHit = 0x1A60; // CUtlVector<CHandle<C_BaseEntity>>
+            public const nint speed = 0x1A78; // int32
+            public const nint radius = 0x1A7C; // int32
+            public const nint start_radius = 0x1A80; // int32
+            public const nint duration = 0x1A84; // float32
+            public const nint  = 0xDBFD6C80; // CDOTA_Buff
+            public const nint �t�� = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_Ascension_AcidBlood_Thinker
+            public const nint  = 0xDBFD6D00; // CDOTA_Buff
+            public const nint  = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_AghsFort_Creature_Impale
+            public const nint  = 0xDAE037C0; // 
+            public const nint 8�A�� = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_AghsFort_PoisonNova_Creature_Thinker
+            public const nint  = 0x0; // CDOTA_BaseNPC_Seasonal_TI11_Balloon
+            public const nint armor_reduction = 0x1A58; // int32
+            public const nint  = 0xDBFD6E60; // CDOTA_Buff
+            public const nint ��@�� = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_Ascension_AcidBlood
+            public const nint damage = 0x1A58; // int32
+            public const nint  = 0xDBFD6F00; // CDOTA_Buff
+            public const nint  = 0xDBFDB590; // �����
+            public const nint 0v��� = 0x4161; // CDOTA_Ability_AghsFort_Creature_SpikedCarapace
+            public const nint  = 0x0; // 
+            public const nint �t�� = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_AghsFort_Creature_Venomancer_PoisonNova
+            public const nint  = 0x0; // C_DOTABaseAbility
+            public const nint  = 0xDBFD7080; // C_DOTABaseAbility
+            public const nint  = 0xDBFDB800; // �����
+            public const nint 0v��� = 0x4161; // CDOTA_Ability_AghsFort_Ascension_Firefly
+            public const nint  = 0xDAE04010; // 
+            public const nint  = 0xDBFD6A20; // �����
+            public const nint 0v��� = 0x4161; // C_DOTA_Ability_AttributeBonus
+            public const nint  = 0xDAE04080; // 
+            public const nint  = 0xDBFDDA70; // �����
+            public const nint 0v��� = 0x4161; // CDOTA_AghsFort_Ability_Creature_Venomancer_PoisonSting
+            public const nint  = 0xDAE04120; // 
+            public const nint  = 0xDAE04940; // 
+            public const nint �6�� = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_AghsFort_Creature_SpikedCarapace
+            public const nint  = 0xDC71B600; // C_DOTABaseAbility
+            public const nint C_DOTA_Ability_AghsFort_Shadow_Demon_Shadow_Poison = 0x0; // 
+            public const nint  = 0xDAE04AF8; // 
+            public const nint CDOTA_Ability_AghsFort_TrapRoom_MeatHook = 0x0; // 
+            public const nint  = 0x0; // C_DOTABaseAbility
+            public const nint  = 0xDBFD72C0; // 
+            public const nint  = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_AttributeBonus
+            public const nint  = 0x0; // 
+            public const nint pool_duration = 0x1A58; // float32
+            public const nint radius = 0x1A5C; // int32
+            public const nint m_ifirefly_Active = 0x1A60; // int32
+            public const nint tree_radius = 0x1A64; // int32
+            public const nint damage_pct_per_second = 0x1A68; // int32
+            public const nint movement_speed = 0x1A6C; // int32
+            public const nint trail_placement_duration = 0x1A70; // float32
+            public const nint burn_linger_duration = 0x1A74; // float32
+            public const nint m_bActive = 0x1A78; // bool
+            public const nint m_nFXIndex = 0x1A7C; // ParticleIndex_t
+            public const nint m_nFXIndexB = 0x1A80; // ParticleIndex_t
+            public const nint m_flStartTime = 0x1A84; // GameTime_t
+            public const nint m_vLastFirePoolLoc = 0x1A88; // VectorWS
+            public const nint m_vFirePoolLocations = 0x1A98; // CUtlVector<VectorWS>
+            public const nint  = 0xDBFD75C0; // 
+            public const nint  = 0xDAE04F58; // 
+            public const nint  6��� = 0x0; // �	�
+            public const nint 0v��� = 0x61; // CDOTA_Modifier_AghsFort_Firefly
+            public const nint m_iDamage = 0x1A58; // int32
+            public const nint movement_speed = 0x1A5C; // int32
+            public const nint m_nTicksRemaining = 0x1A60; // int32
+            public const nint m_flAttackDamage = 0x1A64; // float32
+            public const nint  = 0xDC71E0C0; // CDOTA_Buff
+            public const nint C_DOTA_Ability_Aghsfort_Pugna_Grandmaster_NetherWard = 0x0; // 
+            public const nint  = 0xDBFD78F0; // 
+            public const nint damage_pct_per_second = 0x1A58; // int32
+        }
+        // Parent: None
+        // Field count: 15
+        public static class ______ {
+            public const nint  = 0x0; // 
+            public const nint p��� = 0x1A8B9FF0; // 
+            public const nint p��� = 0xC43E557D; // _P�
+            public const nint  = 0x0; // 
+            public const nint @���� = 0x1A8BCFF0; // 
+            public const nint @���� = 0x800000FD; // 
+            public const nint  = 0x0; // 
+            public const nint  = 0xFFFFFFFF; // 
+            public const nint  = 0x0; // 
+            public const nint  = 0x9; // 
+            public const nint  = 0x0; // 
+            public const nint  = 0x736F7349; // 
+            public const nint  = 0x0; // 
+            public const nint  = 0xFFFFFFFF; // 
+            public const nint  = 0x0; // 
+        }
+        // Parent: None
+        // Field count: 196
+        public static class ______ {
+            public const nint �� = 0x1A8B9000; // 
+            public const nint  = 0xDBE54E00; // ��
+            public const nint  = 0xDBFD17D0; // $�
+            public const nint  = 0xDBFD1480; // ���I
+            public const nint  = 0xDBF19570; // c��V
+            public const nint  = 0xDBF28560; // �$�
+            public const nint  = 0xDBF0E100; // X%�
+            public const nint  = 0xDBF0DF40; // d�#W
+            public const nint  = 0xDBEA3060; // �S
+            public const nint  = 0xDBEC1AA0; // �o�
+            public const nint 0e�,����2�J����X>���H��"���[^`�P/�q�9o e����E��"&!�0 = 0xDBEB5820; // P��
+            public const nint  = 0xDBEC47D0; // �8
+            public const nint  = 0xDBED39C0; // V~�
+            public const nint  = 0xDBEC9870; // ��=
+            public const nint  = 0xDBEC5170; // �GY
+            public const nint  = 0xDBEE7D50; // '��v
+            public const nint  = 0xDBEBFF00; // Ѯ��
+            public const nint 6�s�B�&�T�JCAX5
+            �����`�^�uLAME3.100UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU = 0xDBEB2010; // �T�
+            public const nint  = 0xDBEAD790; // �W<�
+            public const nint  = 0xDBEDBB10; // J��
+            public const nint  = 0xDBEDC780; // �
+            public const nint  = 0xDBEB6080; // m+
+            public const nint  = 0xDBEB04A0; // WC�
+            public const nint  = 0xDBEAFE70; // �
+            public const nint  = 0xDBEAC9E0; // V�9�
+            public const nint  = 0xDBEA2020; // �O�
+            public const nint  = 0xDBEBA8C0; // �1��
+            public const nint  = 0xDBECCC50; // ?�h�
+            public const nint  = 0xDBEB3500; // 5=�
+            public const nint  5� = 0xDBEDC470; // !��
+            public const nint  = 0xDBECE000; // �pJ
+            public const nint  = 0xDBEBFC40; // {b2�
+            public const nint  = 0xDBEDEE50; // T�"�
+            public const nint  = 0x1A8BA000; // ��
+            public const nint П� = 0x1A8BB000; // @��
+            public const nint  = 0x80F64910; // $(^
+            public const nint  = 0xDC02F000; // ��u�
+            public const nint  = 0xDC02E530; // �;�
+            public const nint  = 0xDC033BC0; // ����
+            public const nint  = 0xDC02CC30; // )��#
+            public const nint  = 0xDBFEC4F0; // ��Ț
+            public const nint  = 0xDC04FC80; // Z�,
+            public const nint  = 0xDBFD1C90; // ����
+            public const nint  = 0xDC04AEE0; // �Zb
+            public const nint  = 0xDBFF34A0; // I���
+            public const nint  = 0xDC0411E0; // @��
+            public const nint  = 0xDC046E00; // Ǎd�
+            public const nint  = 0xDC04BA70; // �VX7
+            public const nint  = 0xDC02E480; // �y�M
+            public const nint  = 0xDBFE2B50; // �%`k
+            public const nint  = 0xDC0501E0; // kb��
+            public const nint  = 0xDC02C970; // q���
+            public const nint  = 0xDBFE2D10; // *P��
+            public const nint  = 0xDBE58200; // �N�%
+            public const nint  = 0xDBF304C0; // lp
+            public const nint  = 0xDC04D270; // _P�
+            public const nint  = 0xDC04DE70; // )�x�
+            public const nint  = 0xDBFF40C0; // ���
+            public const nint  = 0xDC034060; // ����
+            public const nint  = 0xDC049D50; // ˇ+
+            public const nint  = 0xDBFEBB10; // �@
+            public const nint  = 0xDC046A80; // GW*<
+            public const nint  = 0xDC04C020; // J].
+            public const nint  = 0xDBFD1700; // �\*
+            public const nint  = 0xDC047420; // Op�3
+            public const nint  = 0xDBFEFC60; // �H[:
+            public const nint  = 0xDC02FDC0; // 1�~�
+            public const nint  = 0xDC058440; // ;`
+            public const nint  = 0xDBFF3B80; // 9���
+            public const nint  = 0xDBFD2EA0; // �	�3
+            public const nint  = 0xDC04E140; // �`�
+            public const nint  = 0xDC04F9B0; // ��g�
+            public const nint  = 0xDC048620; // ����
+            public const nint  = 0xDC041270; // �K�=
+            public const nint  = 0xDC041BB0; // 4�nq
+            public const nint  = 0xDBFC6920; // \�|
+            public const nint  = 0xDC04F3D0; // ���
+            public const nint  = 0xDBFA6D30; // ��
+            public const nint  = 0xDC04DDE0; // ڋ�W
+            public const nint  = 0xDC04A080; // �Er
+            public const nint  = 0xDBFECB90; // ��.�
+            public const nint  = 0xDBFF7B20; // c�P�
+            public const nint  = 0xDC02D9A0; // ʵ4�
+            public const nint  = 0xDC04B970; // ,p�
+            public const nint  = 0xDC04A310; // p7_
+            public const nint  = 0xDC02FF90; // �"ad
+            public const nint  = 0xDC0584D0; // �Z�(
+            public const nint  = 0xDBFE9260; // h���
+            public const nint  = 0xDBFF2AB0; // V��
+            public const nint  = 0xDC04B9E0; // 92{
+            public const nint  = 0xDC0496C0; // �
+            public const nint  = 0xDC04A880; // _��
+            public const nint  = 0xDC04CC70; // ���
+            public const nint  = 0xDBFE9440; // 5�
+            public const nint  = 0xDC04A1F0; // U/Lk
+            public const nint  = 0xDC04CA20; // ���
+            public const nint  = 0xDC049CD0; // �|�
+            public const nint  = 0xDC02F680; // �.%
+            public const nint  = 0xDC04BC00; // ps
+            public const nint  = 0xDC04EBA0; // ��ƅ
+            public const nint  = 0xDBFF4750; // ��
+            public const nint ��t� = 0xDBFEC790; // ��
+            �
+            public const nint  = 0xDC04B770; // ӳ,�
+            public const nint  = 0xDC04BE20; // ��@�
+            public const nint  = 0xDC0383B0; // �B�
+            public const nint  = 0xDC02CBA0; // nU7
+            public const nint  = 0xDC04D160; // ���
+            public const nint ���� = 0xDC02D020; // FB
+            public const nint  = 0xDC04BCC0; // �̕�
+            public const nint  = 0xDC04A000; // %o�
+            public const nint  = 0xDC040BF0; // r�
+            public const nint  = 0xDC02FCB0; // ���
+            public const nint  = 0xDC041390; // P���
+            public const nint UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU��m�� = 0xDBFF4390; // o[��
+            public const nint  = 0xDC04FB60; // {ƫ�
+            public const nint UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUtVZ�uo�D��W�.�� ��~�H�҅F��? I;k��V0�XܡG,C0��Οg=�P����e�ju��۟���]@�J�Ãne� = 0xDC04CAF0; // z��
+            public const nint U(�ʁ[�%7^���Iǥ0a���9�f_eR�4��M[%�R��l���d���I�y�pO$;�<�x	l�k�0GAI$�<����f�E��I�z\�8�1Nm�,ś�hAv���Y!�`쳬��
+            <��� = 0xDC04AA20; // V�
+            public const nint UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU = 0xDBFF35B0; // ��
+            public const nint  = 0xDC038300; // /�i
+            public const nint  = 0xDC04F080; // T�
+            public const nint  = 0xDC04C6D0; // �9/
+            public const nint  = 0xDC0419F0; // ���2
+            public const nint  = 0xDBFF37A0; // �x�t
+            public const nint  = 0xDBFEFD10; // ���
+            public const nint  = 0xDC049AD0; // �I�
+            public const nint  = 0xDBDBFB20; // ����
+            public const nint  = 0xDC050B10; // 63T
+            public const nint  = 0xDC033780; // �{�
+            public const nint  = 0xDC048F00; // 
+            public const nint  = 0xDC0415B0; // ˌ"P
+            public const nint  = 0xDBDF6EC0; // �z�
+            public const nint  = 0xDC02E870; // �A#
+            public const nint ?�^����? = 0xDC04E1B0; // ��d
+            public const nint  = 0xDC04A6A0; // �/�
+            public const nint  = 0xDC02DEE0; // ]�%G
+            public const nint  = 0xDC02F320; // �>�
+            public const nint ) = 0xDC050900; // )T�
+            public const nint  = 0xDC0471F0; // ��:
+            public const nint  = 0xDC0585F0; // ��ib
+            public const nint  = 0xDC02CD50; // �?D{
+            public const nint S� = 0xDC04B6E0; // 
+            ?��
+            public const nint  = 0xDC048690; // ��)�
+            public const nint  = 0xDC038240; // ���
+            public const nint  = 0xDC0509C0; // 
+            �d�
+            public const nint  = 0xDC033F00; // �C�
+            public const nint  = 0xDC049C10; // ���
+            public const nint  = 0xDC050690; // �;b
+            public const nint �? = 0xDBFF33E0; // W���
+            public const nint  = 0xDC04DFC0; // ގ�3
+            public const nint  = 0xDBFE96D0; // Vm:�
+            public const nint  = 0xDBDF9220; // �rrk
+            public const nint  = 0xDBDF6DB0; // �El�
+            public const nint ����o� = 0xDC04F940; // �豒
+            public const nint  = 0xDC047330; // ��
+            public const nint � = 0xDC04AE50; // �^1.
+            public const nint  = 0xDC04A630; // ��[�
+            public const nint  = 0xDC04A590; // .C�v
+            public const nint  = 0x1A8BD000; // �R~�
+            public const nint �ϋ = 0x1A8BE000; // 
+            public const nint  = 0x5D93A270; // 
+            public const nint  = 0x5D93A2C0; // ���
+            public const nint  = 0xDC029B90; // <Ҝ
+            public const nint  = 0xDBFF1B40; // \8T
+            public const nint  = 0xDC04D3D0; // ��)^
+            public const nint  = 0xDBFF1840; // ��c
+            public const nint  = 0xDBDFE860; // �`r�
+            public const nint  = 0xDC043BA0; // G��5
+            public const nint  = 0xDBE113B0; // �a/�
+            public const nint  = 0xDC0502F0; // ^�M�
+            public const nint  = 0xDC0503E0; // ��
+            public const nint  = 0xDBE114A0; // 
+            public const nint  = 0xDBE08E80; // �Ɲ�
+            public const nint  = 0xDBDFE8B0; // G
+            public const nint  = 0xDC049030; // ȉ��
+            public const nint  = 0xDBE09490; // B�dX
+            public const nint  = 0xDC043C40; // 9��
+            public const nint  = 0xDC0583D0; // jL&
+            public const nint  = 0xDBDFBDD0; // �UO�
+            public const nint  = 0xDBDFBE20; // I>
+            
+            public const nint  = 0xDBFF1890; // 5ծ�
+            public const nint  = 0xDBFEB260; // 
+            public const nint  = 0xDBE08F80; // ���3
+            public const nint  = 0xDC0407F0; // 8�@�
+            public const nint  = 0xDBDFEB80; // @��
+            
+            public const nint  = 0xDC02EEB0; // ��/�
+            public const nint  = 0xDBE11640; // Y��
+            public const nint  = 0xDBFF17F0; // �Hu�
+            public const nint  = 0xDBDFE810; // ��h�
+            public const nint �? = 0xDC051B00; // 0�wb
+            public const nint  = 0xDC029BE0; // �mP1
+            public const nint Y�"��\�����݄�(OX�4 = 0xDC02C9F0; // >`C�
+            public const nint  = 0xDBE08ED0; // ��Ӆ
+            public const nint  = 0xDBDFEA90; // �-*
+            public const nint &� = 0xDBDFBC40; // ���
+            public const nint  = 0xDBDFEA40; // %�߭
+            public const nint  = 0x1A8BF000; // Ћ
         }
     }
 }
