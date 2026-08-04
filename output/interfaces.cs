@@ -1,24 +1,24 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-07-28 17:41:19.827321600 UTC
+// 2026-08-04 02:35:54.030902600 UTC
 
 namespace Dota2Dumper.Interfaces {
     // Module: animationsystem.dll
     public static class AnimationsystemDll {
-        public const nint AnimationSystemUtils_001 = 0x839F10;
-        public const nint AnimationSystem_001 = 0x831E30;
+        public const nint AnimationSystemUtils_001 = 0x839F50;
+        public const nint AnimationSystem_001 = 0x831E70;
     }
     // Module: client.dll
     public static class ClientDll {
-        public const nint ClientToolsInfo_001 = 0x5A019D0;
-        public const nint DOTA_CLIENT_GCCLIENT = 0x62D0DC0;
-        public const nint GameClientExports001 = 0x59FD6F8;
-        public const nint LegacyGameUI001 = 0x5A6BBD0;
-        public const nint PanoramaUIClient001 = 0x5A98230;
-        public const nint PlayButtonService001 = 0x5A79320;
-        public const nint Source2Client002 = 0x6124150;
-        public const nint Source2ClientConfig001 = 0x60CC1D0;
-        public const nint Source2ClientPrediction001 = 0x5A05EC0;
-        public const nint Source2ClientUI001 = 0x57EF5C0;
+        public const nint ClientToolsInfo_001 = 0x5A81B50;
+        public const nint DOTA_CLIENT_GCCLIENT = 0x6358FB0;
+        public const nint GameClientExports001 = 0x5A7D878;
+        public const nint LegacyGameUI001 = 0x5AEBFA0;
+        public const nint PanoramaUIClient001 = 0x5B18BE0;
+        public const nint PlayButtonService001 = 0x5AF9C88;
+        public const nint Source2Client002 = 0x61AC030;
+        public const nint Source2ClientConfig001 = 0x6154450;
+        public const nint Source2ClientPrediction001 = 0x5A86030;
+        public const nint Source2ClientUI001 = 0x586F5C0;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
@@ -153,14 +153,14 @@ namespace Dota2Dumper.Interfaces {
     }
     // Module: server.dll
     public static class ServerDll {
-        public const nint EntitySubclassUtilsV001 = 0x4741A00;
-        public const nint NavGameTest001 = 0x49E4B00;
-        public const nint ServerToolsInfo_001 = 0x494DF28;
-        public const nint Source2GameClients001 = 0x49480E0;
-        public const nint Source2GameDirector001 = 0x5025F60;
-        public const nint Source2GameEntities001 = 0x494D6D0;
-        public const nint Source2Server001 = 0x494D520;
-        public const nint Source2ServerConfig001 = 0x4F50578;
+        public const nint EntitySubclassUtilsV001 = 0x4752A00;
+        public const nint NavGameTest001 = 0x49F6190;
+        public const nint ServerToolsInfo_001 = 0x495F208;
+        public const nint Source2GameClients001 = 0x49593C0;
+        public const nint Source2GameDirector001 = 0x5037D20;
+        public const nint Source2GameEntities001 = 0x495E9B0;
+        public const nint Source2Server001 = 0x495E800;
+        public const nint Source2ServerConfig001 = 0x4F62AB8;
     }
     // Module: soundsystem.dll
     public static class SoundsystemDll {

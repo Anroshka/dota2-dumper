@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-07-28 17:41:19.827321600 UTC
+// 2026-08-04 02:35:54.030902600 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: soundsystem.dll

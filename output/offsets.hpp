@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-07-28 17:41:19.827321600 UTC
+// 2026-08-04 02:35:54.030902600 UTC
 
 #pragma once
 
@@ -10,13 +10,13 @@ namespace dota2_dumper {
     namespace offsets {
         // Module: client.dll
         namespace client_dll {
-            constexpr std::ptrdiff_t dwEntityList = 0x64A5C50;
-            constexpr std::ptrdiff_t dwGameEntitySystem = 0x64A5C50;
+            constexpr std::ptrdiff_t dwEntityList = 0x652E8F0;
+            constexpr std::ptrdiff_t dwGameEntitySystem = 0x652E8F0;
             constexpr std::ptrdiff_t dwGameEntitySystem_highestEntityIndex = 0x2090;
-            constexpr std::ptrdiff_t dwGameRules = 0x6128870;
-            constexpr std::ptrdiff_t dwGlobalVars = 0x59FCFD8;
-            constexpr std::ptrdiff_t dwViewMatrix = 0x612E1F0;
-            constexpr std::ptrdiff_t dwViewRender = 0x612D8B8;
+            constexpr std::ptrdiff_t dwGameRules = 0x61AD560;
+            constexpr std::ptrdiff_t dwGlobalVars = 0x5A7D180;
+            constexpr std::ptrdiff_t dwViewMatrix = 0x61B5D20;
+            constexpr std::ptrdiff_t dwViewRender = 0x61B66D8;
         }
         // Module: engine2.dll
         namespace engine2_dll {
@@ -29,8 +29,8 @@ namespace dota2_dumper {
             constexpr std::ptrdiff_t dwNetworkGameClient_maxClients = 0x240;
             constexpr std::ptrdiff_t dwNetworkGameClient_serverTickCount = 0x24C;
             constexpr std::ptrdiff_t dwNetworkGameClient_signOnState = 0x230;
-            constexpr std::ptrdiff_t dwWindowHeight = 0x90FF8C;
-            constexpr std::ptrdiff_t dwWindowWidth = 0x90FF88;
+            constexpr std::ptrdiff_t dwWindowHeight = 0x90FF7C;
+            constexpr std::ptrdiff_t dwWindowWidth = 0x90FF78;
         }
         // Module: inputsystem.dll
         namespace inputsystem_dll {

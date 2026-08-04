@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-07-28 17:41:19.827321600 UTC
+// 2026-08-04 02:35:54.030902600 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -7,13 +7,13 @@ pub mod dota2_dumper {
     pub mod offsets {
         // Module: client.dll
         pub mod client_dll {
-            pub const dwEntityList: usize = 0x64A5C50;
-            pub const dwGameEntitySystem: usize = 0x64A5C50;
+            pub const dwEntityList: usize = 0x652E8F0;
+            pub const dwGameEntitySystem: usize = 0x652E8F0;
             pub const dwGameEntitySystem_highestEntityIndex: usize = 0x2090;
-            pub const dwGameRules: usize = 0x6128870;
-            pub const dwGlobalVars: usize = 0x59FCFD8;
-            pub const dwViewMatrix: usize = 0x612E1F0;
-            pub const dwViewRender: usize = 0x612D8B8;
+            pub const dwGameRules: usize = 0x61AD560;
+            pub const dwGlobalVars: usize = 0x5A7D180;
+            pub const dwViewMatrix: usize = 0x61B5D20;
+            pub const dwViewRender: usize = 0x61B66D8;
         }
         // Module: engine2.dll
         pub mod engine2_dll {
@@ -26,8 +26,8 @@ pub mod dota2_dumper {
             pub const dwNetworkGameClient_maxClients: usize = 0x240;
             pub const dwNetworkGameClient_serverTickCount: usize = 0x24C;
             pub const dwNetworkGameClient_signOnState: usize = 0x230;
-            pub const dwWindowHeight: usize = 0x90FF8C;
-            pub const dwWindowWidth: usize = 0x90FF88;
+            pub const dwWindowHeight: usize = 0x90FF7C;
+            pub const dwWindowWidth: usize = 0x90FF78;
         }
         // Module: inputsystem.dll
         pub mod inputsystem_dll {

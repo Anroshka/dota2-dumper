@@ -1,16 +1,16 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-07-28 17:41:19.827321600 UTC
+// 2026-08-04 02:35:54.030902600 UTC
 
 namespace Dota2Dumper.Offsets {
     // Module: client.dll
     public static class ClientDll {
-        public const nint dwEntityList = 0x64A5C50;
-        public const nint dwGameEntitySystem = 0x64A5C50;
+        public const nint dwEntityList = 0x652E8F0;
+        public const nint dwGameEntitySystem = 0x652E8F0;
         public const nint dwGameEntitySystem_highestEntityIndex = 0x2090;
-        public const nint dwGameRules = 0x6128870;
-        public const nint dwGlobalVars = 0x59FCFD8;
-        public const nint dwViewMatrix = 0x612E1F0;
-        public const nint dwViewRender = 0x612D8B8;
+        public const nint dwGameRules = 0x61AD560;
+        public const nint dwGlobalVars = 0x5A7D180;
+        public const nint dwViewMatrix = 0x61B5D20;
+        public const nint dwViewRender = 0x61B66D8;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
@@ -23,8 +23,8 @@ namespace Dota2Dumper.Offsets {
         public const nint dwNetworkGameClient_maxClients = 0x240;
         public const nint dwNetworkGameClient_serverTickCount = 0x24C;
         public const nint dwNetworkGameClient_signOnState = 0x230;
-        public const nint dwWindowHeight = 0x90FF8C;
-        public const nint dwWindowWidth = 0x90FF88;
+        public const nint dwWindowHeight = 0x90FF7C;
+        public const nint dwWindowWidth = 0x90FF78;
     }
     // Module: inputsystem.dll
     public static class InputsystemDll {

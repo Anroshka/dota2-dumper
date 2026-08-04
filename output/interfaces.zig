@@ -1,25 +1,25 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-07-28 17:41:19.827321600 UTC
+// 2026-08-04 02:35:54.030902600 UTC
 
 pub const dota2_dumper = struct {
     pub const interfaces = struct {
         // Module: animationsystem.dll
         pub const animationsystem_dll = struct {
-            pub const AnimationSystemUtils_001: usize = 0x839F10;
-            pub const AnimationSystem_001: usize = 0x831E30;
+            pub const AnimationSystemUtils_001: usize = 0x839F50;
+            pub const AnimationSystem_001: usize = 0x831E70;
         };
         // Module: client.dll
         pub const client_dll = struct {
-            pub const ClientToolsInfo_001: usize = 0x5A019D0;
-            pub const DOTA_CLIENT_GCCLIENT: usize = 0x62D0DC0;
-            pub const GameClientExports001: usize = 0x59FD6F8;
-            pub const LegacyGameUI001: usize = 0x5A6BBD0;
-            pub const PanoramaUIClient001: usize = 0x5A98230;
-            pub const PlayButtonService001: usize = 0x5A79320;
-            pub const Source2Client002: usize = 0x6124150;
-            pub const Source2ClientConfig001: usize = 0x60CC1D0;
-            pub const Source2ClientPrediction001: usize = 0x5A05EC0;
-            pub const Source2ClientUI001: usize = 0x57EF5C0;
+            pub const ClientToolsInfo_001: usize = 0x5A81B50;
+            pub const DOTA_CLIENT_GCCLIENT: usize = 0x6358FB0;
+            pub const GameClientExports001: usize = 0x5A7D878;
+            pub const LegacyGameUI001: usize = 0x5AEBFA0;
+            pub const PanoramaUIClient001: usize = 0x5B18BE0;
+            pub const PlayButtonService001: usize = 0x5AF9C88;
+            pub const Source2Client002: usize = 0x61AC030;
+            pub const Source2ClientConfig001: usize = 0x6154450;
+            pub const Source2ClientPrediction001: usize = 0x5A86030;
+            pub const Source2ClientUI001: usize = 0x586F5C0;
         };
         // Module: engine2.dll
         pub const engine2_dll = struct {
@@ -154,14 +154,14 @@ pub const dota2_dumper = struct {
         };
         // Module: server.dll
         pub const server_dll = struct {
-            pub const EntitySubclassUtilsV001: usize = 0x4741A00;
-            pub const NavGameTest001: usize = 0x49E4B00;
-            pub const ServerToolsInfo_001: usize = 0x494DF28;
-            pub const Source2GameClients001: usize = 0x49480E0;
-            pub const Source2GameDirector001: usize = 0x5025F60;
-            pub const Source2GameEntities001: usize = 0x494D6D0;
-            pub const Source2Server001: usize = 0x494D520;
-            pub const Source2ServerConfig001: usize = 0x4F50578;
+            pub const EntitySubclassUtilsV001: usize = 0x4752A00;
+            pub const NavGameTest001: usize = 0x49F6190;
+            pub const ServerToolsInfo_001: usize = 0x495F208;
+            pub const Source2GameClients001: usize = 0x49593C0;
+            pub const Source2GameDirector001: usize = 0x5037D20;
+            pub const Source2GameEntities001: usize = 0x495E9B0;
+            pub const Source2Server001: usize = 0x495E800;
+            pub const Source2ServerConfig001: usize = 0x4F62AB8;
         };
         // Module: soundsystem.dll
         pub const soundsystem_dll = struct {
