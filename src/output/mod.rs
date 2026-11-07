@@ -101,6 +101,7 @@ pub struct Output<'a> {
     out_dir: &'a Path,
     result: &'a AnalysisResult,
     timestamp: DateTime<Utc>,
+    read_local_files: bool,
 }
 
 impl<'a> Output<'a> {
@@ -109,6 +110,7 @@ impl<'a> Output<'a> {
         indent_size: usize,
         out_dir: &'a Path,
         result: &'a AnalysisResult,
+        read_local_files: bool,
     ) -> Result<Self> {
         fs::create_dir_all(&out_dir)?;
 
@@ -118,6 +120,7 @@ impl<'a> Output<'a> {
             out_dir,
             result,
             timestamp: Utc::now(),
+            read_local_files,
         })
     }
 
@@ -141,38 +144,31 @@ impl<'a> Output<'a> {
     fn dump_info<P: MemoryView + Process>(&self, process: &mut P) -> Result<()> {
         let file_path = self.out_dir.join("info.json");
 
-        let mut build_number = self
-            .result
-            .offsets
-            .iter()
-            .find_map(|(module_name, offsets)| {
-                let module = process.module_by_name(module_name).ok()?;
-                let offset = offsets.iter().find(|(name, _)| *name == "dwBuildNumber")?.1;
-
-                process.read::<u32>(module.base + offset).data_part().ok()
-            })
-            .unwrap_or(0);
-
-        if build_number < 1000 {
-            if let Ok(output) = std::process::Command::new("powershell")
-                .args([
-                    "-NoProfile",
-                    "-Command",
-                    "(Invoke-RestMethod 'https://api.steampowered.com/IGCVersion_570/GetClientVersion/v1/').result.active_version",
-                ])
-                .output()
-            {
-                if let Ok(s) = String::from_utf8(output.stdout) {
-                    if let Ok(parsed) = s.trim().parse::<u32>() {
-                        build_number = parsed;
-                    }
-                }
-            }
+        // The old dwBuildNumber signature reads 48 in build 6972, not ClientVersion.
+        // Do not disguise a failed read with the latest version of a different build
+        // fetched from Steam. Native captures can identify the installed build locally.
+        let build_number = if self.read_local_files {
+            process
+                .module_by_name("engine2.dll")
+                .ok()
+                .and_then(|module| {
+                    let path = std::path::PathBuf::from(module.path.to_string());
+                    let game_dir = path.parent()?.parent()?.parent()?;
+                    let content =
+                        fs::read_to_string(game_dir.join("dota").join("steam.inf")).ok()?;
+                    parse_client_version(&content)
+                })
+        } else {
+            None
+        };
+        if build_number.is_none() {
+            log::warn!("installed ClientVersion unavailable; info.json build_number will be null");
         }
 
         let content = serde_json::to_string_pretty(&json!({
             "timestamp": self.timestamp.to_rfc3339(),
             "build_number": build_number,
+            "build_number_source": build_number.map(|_| "local_steam_inf"),
         }))?;
 
         fs::write(&file_path, &content)?;
@@ -210,7 +206,10 @@ impl<'a> Output<'a> {
     }
 
     fn write_banner(&self, fmt: &mut Formatter<'_>) -> Result<()> {
-        writeln!(fmt, "// Generated using https://github.com/Anroshka/dota2-dumper")?;
+        writeln!(
+            fmt,
+            "// Generated using https://github.com/Anroshka/dota2-dumper"
+        )?;
         writeln!(fmt, "// {}\n", self.timestamp)?;
 
         Ok(())
@@ -220,6 +219,69 @@ impl<'a> Output<'a> {
 #[inline]
 fn slugify(input: &str) -> String {
     input.replace(|c: char| !c.is_alphanumeric(), "_")
+}
+
+fn rust_ident(input: &str) -> String {
+    match input {
+        "Self" | "self" | "super" | "crate" => format!("{input}_"),
+        "as" | "async" | "await" | "break" | "const" | "continue" | "dyn" | "else" | "enum"
+        | "extern" | "false" | "fn" | "for" | "gen" | "if" | "impl" | "in" | "let" | "loop"
+        | "match" | "mod" | "move" | "mut" | "pub" | "ref" | "return" | "static" | "struct"
+        | "trait" | "true" | "type" | "unsafe" | "use" | "where" | "while" | "abstract"
+        | "become" | "box" | "do" | "final" | "macro" | "override" | "priv" | "typeof"
+        | "unsized" | "virtual" | "yield" | "try" => format!("r#{input}"),
+        _ => input.to_string(),
+    }
+}
+
+fn parse_client_version(content: &str) -> Option<u32> {
+    let value = |key: &str| {
+        content
+            .lines()
+            .filter_map(|line| line.split_once('='))
+            .find_map(|(name, value)| (name.trim() == key).then_some(value.trim()))
+    };
+    if value("appID") != Some("570") {
+        return None;
+    }
+    value("ClientVersion")?
+        .parse::<u32>()
+        .ok()
+        .filter(|version| *version > 0)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{parse_client_version, rust_ident};
+
+    #[test]
+    fn escapes_rust_keywords_in_engine_names() {
+        assert_eq!(rust_ident("type"), "r#type");
+        assert_eq!(rust_ident("gen"), "r#gen");
+        assert_eq!(rust_ident("Self"), "Self_");
+        assert_eq!(rust_ident("m_name"), "m_name");
+    }
+
+    #[test]
+    fn identifies_installed_dota_version_instead_of_server_or_steam_build_id() {
+        assert_eq!(
+            parse_client_version("ClientVersion=6972\r\nServerVersion=6971\r\nappID=570\r\n"),
+            Some(6972)
+        );
+        assert_eq!(
+            parse_client_version("ClientVersion=6972\nappID=730\n"),
+            None
+        );
+        assert_eq!(
+            parse_client_version("appID=570\nClientVersion=not-a-version\n"),
+            None
+        );
+        assert_eq!(parse_client_version("appID=570\nClientVersion=0\n"), None);
+        assert_eq!(
+            parse_client_version("appID=570\nServerVersion=6972\n"),
+            None
+        );
+    }
 }
 
 #[inline]

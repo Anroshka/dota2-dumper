@@ -1,10 +1,10 @@
 [package]
 name = "dota2-dumper"
 version = "0.1.3"
-authors = ["a2x"]
+authors = ["Anroshka", "a2x"]
 edition = "2024"
 readme = "README.md"
-repository = "https://github.com/a2x/dota2-dumper"
+repository = "https://github.com/Anroshka/dota2-dumper"
 license = "MIT"
 
 [dependencies]

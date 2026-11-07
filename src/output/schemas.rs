@@ -5,7 +5,7 @@ use heck::{AsPascalCase, AsSnakeCase};
 
 use serde_json::json;
 
-use super::{CodeWriter, Formatter, SchemaMap, slugify, zig_ident};
+use super::{CodeWriter, Formatter, SchemaMap, rust_ident, slugify, zig_ident};
 
 use crate::analysis::ClassMetadata;
 
@@ -135,21 +135,10 @@ impl CodeWriter for SchemaMap {
                                             .members
                                             .iter()
                                             .map(|member| {
-                                                let formatted_value = if (0..=i32::MAX as i64)
-                                                    .contains(&member.value)
-                                                {
-                                                    format!("{:#X}", member.value)
-                                                } else {
-                                                    let max_value = match type_name {
-                                                        "uint8_t" => 0xFFu64,
-                                                        "uint16_t" => 0xFFFFu64,
-                                                        "uint32_t" => 0xFFFFFFFFu64,
-                                                        "uint64_t" => 0xFFFFFFFFFFFFFFFFu64,
-                                                        _ => 0,
-                                                    };
-
-                                                    format!("{:#X}", max_value)
-                                                };
+                                                let formatted_value = format!(
+                                                    "{:#X}",
+                                                    enum_member_bits(member.value, enum_.alignment)
+                                                );
 
                                                 format!("{} = {}", member.name, formatted_value)
                                             })
@@ -318,7 +307,7 @@ impl CodeWriter for SchemaMap {
                                     &format!(
                                         "#[repr({})]\npub enum {}",
                                         type_name,
-                                        slugify(&enum_.name),
+                                        rust_ident(&slugify(&enum_.name)),
                                     ),
                                     false,
                                     |fmt| {
@@ -328,20 +317,20 @@ impl CodeWriter for SchemaMap {
                                             .members
                                             .iter()
                                             .filter_map(|member| {
-                                                // Skip duplicate values.
-                                                if !used_values.insert(member.value) {
+                                                let bits =
+                                                    enum_member_bits(member.value, enum_.alignment);
+                                                // Deduplicate after narrowing: -1 and u32::MAX
+                                                // describe the same discriminant in a u32 enum.
+                                                if !used_values.insert(bits) {
                                                     return None;
                                                 }
 
-                                                let formatted_value = if member.value == -1 {
-                                                    format!("{}::MAX", type_name)
-                                                } else {
-                                                    format!("{:#X}", member.value)
-                                                };
+                                                let formatted_value = format!("{:#X}", bits);
 
                                                 Some(format!(
                                                     "{} = {}",
-                                                    member.name, formatted_value
+                                                    rust_ident(&member.name),
+                                                    formatted_value
                                                 ))
                                             })
                                             .collect::<Vec<_>>()
@@ -365,14 +354,16 @@ impl CodeWriter for SchemaMap {
                                 write_metadata(fmt, &class.metadata)?;
 
                                 fmt.block(
-                                    &format!("pub mod {}", slugify(&class.name)),
+                                    &format!("pub mod {}", rust_ident(&slugify(&class.name))),
                                     false,
                                     |fmt| {
                                         for field in &class.fields {
                                             writeln!(
                                                 fmt,
                                                 "pub const {}: usize = {:#X}; // {}",
-                                                field.name, field.offset, field.type_name
+                                                rust_ident(&field.name),
+                                                field.offset,
+                                                field.type_name
                                             )?;
                                         }
 
@@ -430,7 +421,10 @@ impl CodeWriter for SchemaMap {
                                             .iter()
                                             .filter_map(|member| {
                                                 // Skip duplicate values.
-                                                if !used_values.insert(member.value) {
+                                                if !used_values.insert(enum_member_bits(
+                                                    member.value,
+                                                    enum_.alignment,
+                                                )) {
                                                     return None;
                                                 }
 
@@ -536,4 +530,70 @@ fn format_zig_enum_member_value(value: i64, type_name: &str) -> String {
     };
 
     format!("{:#X}", wrapped_value)
+}
+
+fn enum_member_bits(value: i64, width: u8) -> u64 {
+    match width {
+        1 => value as u8 as u64,
+        2 => value as u16 as u64,
+        4 => value as u32 as u64,
+        8 => value as u64,
+        _ => unreachable!("unsupported enum width"),
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::analysis::{Enum, EnumMember};
+
+    #[test]
+    fn serializes_negative_states_and_high_bit_flags_without_corruption() {
+        let schema = SchemaMap::from([(
+            "client.dll".to_string(),
+            (
+                Vec::new(),
+                vec![Enum {
+                    name: "PlayerUltimateStateOrTime_t".to_string(),
+                    alignment: 4,
+                    size: 5,
+                    members: [
+                        ("HIDDEN", -3),
+                        ("NOT_LEVELED", -2),
+                        ("MAX", -1),
+                        ("HIGH_BIT", 0x80000000),
+                        ("ALIAS_MAX", 0xFFFFFFFF),
+                    ]
+                    .into_iter()
+                    .map(|(name, value)| EnumMember {
+                        name: name.to_string(),
+                        value,
+                    })
+                    .collect(),
+                }],
+            ),
+        )]);
+        for language in ["hpp", "rs", "zig"] {
+            let mut out = String::new();
+            let mut fmt = Formatter::new(&mut out, 4);
+            match language {
+                "hpp" => schema.write_hpp(&mut fmt).unwrap(),
+                "rs" => schema.write_rs(&mut fmt).unwrap(),
+                "zig" => schema.write_zig(&mut fmt).unwrap(),
+                _ => unreachable!(),
+            }
+            assert!(out.contains("HIDDEN = 0xFFFFFFFD"), "{language}");
+            assert!(out.contains("NOT_LEVELED = 0xFFFFFFFE"), "{language}");
+            assert!(out.contains("HIGH_BIT = 0x80000000"), "{language}");
+            if language != "hpp" {
+                assert!(
+                    !out.contains("ALIAS_MAX ="),
+                    "duplicate discriminant in {language}"
+                );
+            }
+        }
+        assert_eq!(enum_member_bits(-3, 1), 0xFD);
+        assert_eq!(enum_member_bits(-3, 2), 0xFFFD);
+        assert_eq!(enum_member_bits(-3, 8), 0xFFFFFFFFFFFFFFFD);
+    }
 }

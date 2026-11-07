@@ -5,14 +5,14 @@ use memflow::prelude::v1::*;
 use super::UtlMemoryPool;
 
 #[repr(C)]
-pub struct UtlTsHashAllocatedBlob<D> {
-    pub next: Pointer64<UtlTsHashAllocatedBlob<D>>, // 0x0000
-    pad_0: [u8; 0x8],                               // 0x0008
-    pub data: Pointer64<D>,                         // 0x0010
-    pad_1: [u8; 0x18],                              // 0x0018
+pub struct UtlTsHashPoolEntry<D> {
+    pub next: Pointer64<UtlTsHashPoolEntry<D>>,
+    pad_0: [u8; 0x8],
+    pub data: Pointer64<D>,
+    pad_1: [u8; 0x18],
 }
 
-unsafe impl<D: 'static> Pod for UtlTsHashAllocatedBlob<D> {}
+unsafe impl<D: 'static> Pod for UtlTsHashPoolEntry<D> {}
 
 #[repr(C)]
 pub struct UtlTsHashFixedData<D, K> {
@@ -42,79 +42,86 @@ pub struct UtlTsHash<D, const C: usize = 256, K = u64> {
 
 impl<D: Pod, const C: usize, K: Pod> UtlTsHash<D, C, K> {
     pub fn elements(&self, mem: &mut impl MemoryView) -> Vec<Pointer64<D>> {
-        let allocated = self.allocated_elements(mem);
-        let unallocated = self.unallocated_elements(mem);
-
-        let mut result = Vec::with_capacity(allocated.len() + unallocated.len());
-
-        result.extend(allocated);
-        result.extend(unallocated);
-
-        let mut seen = HashSet::with_capacity(result.capacity());
-
-        // Remove duplicate pointers that exist in both lists.
-        result.retain(|ptr| seen.insert(ptr.address().to_umem()));
-
-        result
-    }
-
-    fn allocated_elements(&self, mem: &mut impl MemoryView) -> Vec<Pointer64<D>> {
-        let used_count = self.entry_mem.blocks_allocated as usize;
-
-        let mut elements = Vec::with_capacity(used_count);
-
+        let mut elements = Vec::new();
+        let mut seen_nodes = HashSet::new();
+        let mut seen_data = HashSet::new();
+        // Include both bucket chains, including committed registrations.
         for bucket in &self.buckets {
-            let mut node_ptr = bucket.first_uncommitted;
-
-            while !node_ptr.is_null() {
-                let node = match mem.read_ptr(node_ptr).data_part() {
-                    Ok(n) => n,
-                    Err(_) => break,
-                };
-
-                if !node.data.is_null() {
-                    elements.push(node.data);
+            for mut node_ptr in [bucket.first, bucket.first_uncommitted] {
+                while !node_ptr.is_null() && seen_nodes.insert(node_ptr.address().to_umem()) {
+                    let node = match mem.read_ptr(node_ptr).data_part() {
+                        Ok(node) => node,
+                        Err(_) => break,
+                    };
+                    if !node.data.is_null() && seen_data.insert(node.data.address().to_umem()) {
+                        elements.push(node.data);
+                    }
+                    node_ptr = node.next;
                 }
-
-                if elements.len() >= used_count {
-                    break;
-                }
-
-                node_ptr = node.next;
             }
         }
-
-        elements
-    }
-
-    fn unallocated_elements(&self, mem: &mut impl MemoryView) -> Vec<Pointer64<D>> {
-        let free_count = self.entry_mem.peak_allocated as usize;
-
-        let mut elements = Vec::with_capacity(free_count);
-
-        let mut blob_ptr = Pointer64::<UtlTsHashAllocatedBlob<D>>::from(
+        // Some Source 2 layouts retain bindings in the pool chain as well. These
+        // are candidates, NOT proof of live registrations: schema readers must
+        // validate the binding's owning type scope before interpreting it.
+        let limit = usize::try_from(self.entry_mem.peak_allocated).unwrap_or(0);
+        let mut seen_pool = HashSet::new();
+        let mut entry_ptr = Pointer64::<UtlTsHashPoolEntry<D>>::from(
             self.entry_mem.free_blocks.head.next.address(),
         );
-
-        while !blob_ptr.is_null() {
-            let blob = match mem.read_ptr(blob_ptr).data_part() {
-                Ok(b) => b,
+        while !entry_ptr.is_null()
+            && seen_pool.len() < limit
+            && seen_pool.insert(entry_ptr.address().to_umem())
+        {
+            let entry = match mem.read_ptr(entry_ptr).data_part() {
+                Ok(entry) => entry,
                 Err(_) => break,
             };
-
-            if !blob.data.is_null() {
-                elements.push(blob.data);
+            if !entry.data.is_null() && seen_data.insert(entry.data.address().to_umem()) {
+                elements.push(entry.data);
             }
-
-            if elements.len() >= free_count {
-                break;
-            }
-
-            blob_ptr = blob.next;
+            entry_ptr = entry.next;
         }
-
         elements
     }
 }
 
 unsafe impl<D: 'static, const C: usize, K: 'static> Pod for UtlTsHash<D, C, K> {}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use memflow::connector::FileIoMemory;
+    use std::io::Cursor;
+
+    #[test]
+    fn enumerates_both_chains_and_pool_candidates_without_cycles() {
+        let mut bytes = vec![0u8; 0x400];
+        for (at, value) in [
+            (0x108, 0x100u64),
+            (0x110, 0x1000),
+            (0x148, 0x100),
+            (0x150, 0x2000),
+            (0x190, 0xBAD),
+        ] {
+            bytes[at..at + 8].copy_from_slice(&value.to_le_bytes());
+        }
+        let mut mem = FileIoMemory::with_size(Cursor::new(bytes), 0x400)
+            .unwrap()
+            .into_phys_view();
+        // Zero is a valid representation for the pointers, counters, bool and
+        // MemoryPoolGrowType::None in this read-only test fixture.
+        let mut hash: UtlTsHash<u64, 1> = unsafe { std::mem::zeroed() };
+        hash.buckets[0].first = Pointer64::from(Address::from(0x100u64));
+        hash.buckets[0].first_uncommitted = Pointer64::from(Address::from(0x140u64));
+        hash.entry_mem.free_blocks.head.next = Pointer64::from(Address::from(0x180u64));
+        hash.entry_mem.blocks_allocated = 1;
+        hash.entry_mem.peak_allocated = 1;
+        let mut result: Vec<_> = hash
+            .elements(&mut mem)
+            .iter()
+            .map(|ptr| ptr.address().to_umem())
+            .collect();
+        result.sort_unstable();
+        assert_eq!(result, [0xBAD, 0x1000, 0x2000]);
+    }
+}

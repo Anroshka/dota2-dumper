@@ -3,11 +3,9 @@ pub use interfaces::*;
 pub use offsets::*;
 pub use schemas::*;
 
-use std::any::type_name;
+use anyhow::{Context, Result, ensure};
 
-use anyhow::Result;
-
-use log::{error, info};
+use log::info;
 
 use memflow::prelude::v1::*;
 
@@ -25,11 +23,13 @@ pub struct AnalysisResult {
 }
 
 pub fn analyze_all<P: Process + MemoryView>(process: &mut P) -> Result<AnalysisResult> {
-    let buttons = analyze(process, buttons);
+    let buttons = buttons(process).context("button analysis failed")?;
+    ensure!(!buttons.is_empty(), "no registered buttons found");
 
     info!("found {} buttons", buttons.len());
 
-    let interfaces = analyze(process, interfaces);
+    let interfaces = interfaces(process).context("interface analysis failed")?;
+    ensure!(!interfaces.is_empty(), "no interfaces found");
 
     info!(
         "found {} interfaces across {} modules",
@@ -40,7 +40,7 @@ pub fn analyze_all<P: Process + MemoryView>(process: &mut P) -> Result<AnalysisR
         interfaces.len()
     );
 
-    let offsets = analyze(process, offsets);
+    let offsets = offsets(process).context("offset analysis failed")?;
 
     info!(
         "found {} offsets across {} modules",
@@ -51,7 +51,11 @@ pub fn analyze_all<P: Process + MemoryView>(process: &mut P) -> Result<AnalysisR
         offsets.len()
     );
 
-    let schemas = analyze(process, schemas);
+    let schemas = schemas(process).context("schema analysis failed")?;
+    ensure!(
+        schemas.contains_key("client.dll"),
+        "client.dll schemas missing"
+    );
 
     let (class_count, enum_count) =
         schemas
@@ -73,22 +77,4 @@ pub fn analyze_all<P: Process + MemoryView>(process: &mut P) -> Result<AnalysisR
         offsets,
         schemas,
     })
-}
-
-fn analyze<P, F, T>(process: &mut P, f: F) -> T
-where
-    P: Process + MemoryView,
-    F: FnOnce(&mut P) -> Result<T>,
-    T: Default,
-{
-    let name = type_name::<F>();
-
-    match f(process) {
-        Ok(result) => result,
-        Err(err) => {
-            error!("failed to read {}: {}", name, err);
-
-            T::default()
-        }
-    }
 }

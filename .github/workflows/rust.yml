@@ -29,6 +29,12 @@ jobs:
       - name: Build Release
         run: cargo build --release
 
+      - name: Offline Tests
+        run: cargo test --release
+
+      - name: Validate Checked-in Snapshot and Generated Rust
+        run: python scripts/check_generated.py output --compile-rust
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:

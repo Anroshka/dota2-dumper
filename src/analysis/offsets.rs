@@ -1,8 +1,8 @@
 use std::collections::BTreeMap;
 
-use anyhow::Result;
+use anyhow::{Context, Result, bail};
 
-use log::{debug, error};
+use log::debug;
 
 use memflow::prelude::v1::*;
 
@@ -32,16 +32,14 @@ macro_rules! pattern_map {
                     $($name => ($pattern, $($callback)?)),+
                 };
 
-                pub fn offsets(view: PeView<'_>) -> BTreeMap<String, Rva> {
+                pub fn offsets(view: PeView<'_>) -> Result<BTreeMap<String, Rva>> {
                     let mut map = BTreeMap::new();
 
                     for (&name, (pat, callback)) in &PATTERNS {
                         let mut save = vec![0; save_len(pat)];
 
                         if !view.scanner().finds_code(pat, &mut save) {
-                            error!("outdated pattern: {}", name);
-
-                            continue;
+                            bail!("missing or ambiguous pattern: {}.dll::{}", stringify!($module), name);
                         }
 
                         let rva = save[1];
@@ -54,16 +52,20 @@ macro_rules! pattern_map {
                     }
 
                     for (name, value) in &map {
-                        debug!(
-                            "found \"{}\" at {:#X} ({}.dll + {:#X})",
-                            name,
-                            *value as u64 + view.optional_header().ImageBase,
-                            stringify!($module),
-                            value
-                        );
+                        if let Some((owner, _)) = name.split_once('_') {
+                            debug!("found field \"{}\" at {} + {:#X}", name, owner, value);
+                        } else {
+                            debug!(
+                                "found \"{}\" at {:#X} ({}.dll + {:#X})",
+                                name,
+                                *value as u64 + view.optional_header().ImageBase,
+                                stringify!($module),
+                                value
+                            );
+                        }
                     }
 
-                    map
+                    Ok(map)
                 }
             }
         )+
@@ -74,14 +76,14 @@ pattern_map! {
     client => {
         "dwEntityList" => pattern!("48890d${'} e9${} cc") => None,
         "dwGameEntitySystem" => pattern!("488b1d${'} 48891d[4] 4c63b3") => None,
-        "dwGameEntitySystem_highestEntityIndex" => pattern!("ff81u4 4885d2") => None,
+        // Incremented on entity creation; this is a count, not the highest handle index.
+        "dwGameEntitySystem_entityCount" => pattern!("ff81u4 4885d2") => None,
         "dwGameRules" => pattern!("f6c1010f85${} 4c8b05${'} 4d85") => None,
         "dwGlobalVars" => pattern!("488915${'} 488942") => None,
         "dwViewMatrix" => pattern!("488d0d${'} 48c1e006") => None,
         "dwViewRender" => pattern!("488905${'} 488bc8 4885c0") => None,
     },
     engine2 => {
-        "dwBuildNumber" => pattern!("8905${'} 488d0d${} ff15${} 488b0d") => None,
         "dwNetworkGameClient" => pattern!("48893d${'} ff87") => None,
         "dwNetworkGameClient_clientTickCount" => pattern!("8b81u4 c3 cccccccccccccccccc 8b81${} c3 cccccccccccccccccc 83b9") => None,
         "dwNetworkGameClient_deltaTick" => pattern!("4c8db7u4 4c897c24") => None,
@@ -98,14 +100,13 @@ pattern_map! {
     },
     soundsystem => {
         "dwSoundSystem" => pattern!("488d0d${'} e8${} 488b0d${} [3] 4c8b82") => None,
-        "dwSoundSystem_engineViewData" => pattern!("0f1147u1 0f104e? 0f118f") => None,
     },
 }
 
 pub fn offsets<P: Process + MemoryView>(process: &mut P) -> Result<OffsetMap> {
     let mut map = BTreeMap::new();
 
-    let modules: [(&str, fn(PeView) -> BTreeMap<String, u32>); 4] = [
+    let modules: [(&str, fn(PeView) -> Result<BTreeMap<String, u32>>); 4] = [
         ("client.dll", client::offsets),
         ("engine2.dll", engine2::offsets),
         ("inputsystem.dll", input_system::offsets),
@@ -113,84 +114,117 @@ pub fn offsets<P: Process + MemoryView>(process: &mut P) -> Result<OffsetMap> {
     ];
 
     for (module_name, offsets) in &modules {
-        let module = match process.module_by_name(module_name) {
-            Ok(m) => m,
-            Err(_) => {
-                log::warn!("module {} not found, skipping", module_name);
-                continue;
-            }
-        };
+        let module = process
+            .module_by_name(module_name)
+            .with_context(|| format!("required module {module_name} not found"))?;
+        let buf = process
+            .read_raw(module.base, module.size as _)
+            .data_part()
+            .with_context(|| format!("failed to read {module_name}"))?;
+        let view =
+            PeView::from_bytes(&buf).with_context(|| format!("invalid PE image: {module_name}"))?;
 
-        let buf = match process.read_raw(module.base, module.size as _).data_part() {
-            Ok(b) => b,
-            Err(e) => {
-                log::warn!("failed to read memory for {}: {}", module_name, e);
-                continue;
-            }
-        };
-
-        let view = match PeView::from_bytes(&buf) {
-            Ok(v) => v,
-            Err(e) => {
-                log::warn!("failed to parse PE headers for {}: {}", module_name, e);
-                continue;
-            }
-        };
-
-        map.insert(module_name.to_string(), offsets(view));
+        map.insert(module_name.to_string(), offsets(view)?);
     }
 
     Ok(map)
 }
 
-#[cfg(test)]
+#[cfg(all(test, windows))]
 mod tests {
-    use std::fs;
     use std::sync::Once;
-
-    use serde_json::Value;
 
     use simplelog::*;
 
     use super::*;
 
     #[test]
-    fn build_number() -> Result<()> {
+    #[ignore = "requires Dota 2; GameRules RTTI is checked only while a map is loaded"]
+    fn live_offset_targets() -> Result<()> {
         let mut process = setup()?;
-
-        let engine_base = process.module_by_name("engine2.dll")?.base;
-
-        let offset = match read_offset("engine2.dll", "dwBuildNumber") {
-            Some(off) => off,
-            None => return Ok(()),
-        };
-
-        let build_number: u32 = process.read(engine_base + offset).data_part()?;
-
-        debug!("build number: {}", build_number);
-
-        Ok(())
-    }
-
-    #[test]
-    fn window_size() -> Result<()> {
-        let mut process = setup()?;
-
-        let engine_base = process.module_by_name("engine2.dll")?.base;
-
-        let window_width_offset = read_offset("engine2.dll", "dwWindowWidth").unwrap();
-        let window_height_offset = read_offset("engine2.dll", "dwWindowHeight").unwrap();
-
-        let window_width: u32 = process
-            .read(engine_base + window_width_offset)
+        // Scan the running image, not a potentially stale output/offsets.json.
+        let found = offsets(&mut process)?;
+        assert!(!found["client.dll"].contains_key("dwGameEntitySystem_highestEntityIndex"));
+        assert!(!found["engine2.dll"].contains_key("dwBuildNumber"));
+        assert!(!found["soundsystem.dll"].contains_key("dwSoundSystem_engineViewData"));
+        for (module_name, offset_name, class_name, indirect) in [
+            (
+                "client.dll",
+                "dwEntityList",
+                ".?AVCGameEntitySystem@@",
+                true,
+            ),
+            (
+                "client.dll",
+                "dwGameEntitySystem",
+                ".?AVCGameEntitySystem@@",
+                true,
+            ),
+            ("client.dll", "dwGameRules", ".?AVC_DOTAGamerules@@", true),
+            ("client.dll", "dwViewRender", ".?AVCDOTAViewRender@@", true),
+            (
+                "engine2.dll",
+                "dwNetworkGameClient",
+                ".?AVCNetworkGameClient@@",
+                true,
+            ),
+            (
+                "inputsystem.dll",
+                "dwInputSystem",
+                ".?AVCInputSystem@@",
+                false,
+            ),
+            (
+                "soundsystem.dll",
+                "dwSoundSystem",
+                ".?AVCSoundSystem@@",
+                false,
+            ),
+        ] {
+            let module = process.module_by_name(module_name)?;
+            let address = module.base + found[module_name][offset_name];
+            let object = if indirect {
+                process
+                    .read_addr64(address)
+                    .data_part()
+                    .with_context(|| format!("pointer read failed: {module_name}::{offset_name}"))?
+            } else {
+                address
+            };
+            // GameRules is intentionally null after leaving a match.
+            if offset_name == "dwGameRules" && object.is_null() {
+                eprintln!("GameRules is null (no map); its RTTI check is not applicable");
+                continue;
+            }
+            let actual = (|| -> Result<String> {
+                let vtable = process.read_addr64(object).data_part()?;
+                let locator = process.read_addr64(vtable - 8).data_part()?;
+                let descriptor: u32 = process.read(locator + 12).data_part()?;
+                Ok(process
+                    .read_utf8_lossy(module.base + descriptor + 16, 128)
+                    .data_part()?)
+            })()
+            .with_context(|| format!("RTTI check failed: {module_name}::{offset_name}"))?;
+            assert_eq!(actual, class_name, "{module_name}::{offset_name}");
+        }
+        let module = process.module_by_name("engine2.dll")?;
+        for name in ["dwWindowWidth", "dwWindowHeight"] {
+            let pixels: u32 = process
+                .read(module.base + found["engine2.dll"][name])
+                .data_part()?;
+            assert!((1..=32768).contains(&pixels), "invalid {name}: {pixels}");
+        }
+        let network = process
+            .read_addr64(module.base + found["engine2.dll"]["dwNetworkGameClient"])
             .data_part()?;
-
-        let window_height: u32 = process
-            .read(engine_base + window_height_offset)
+        let background: u8 = process
+            .read(network + found["engine2.dll"]["dwNetworkGameClient_isBackgroundMap"])
             .data_part()?;
-
-        debug!("window size: {}x{}", window_width, window_height);
-
+        assert!(background <= 1);
+        let max_clients: u32 = process
+            .read(network + found["engine2.dll"]["dwNetworkGameClient_maxClients"])
+            .data_part()?;
+        assert!((1..=64).contains(&max_clients));
         Ok(())
     }
 
@@ -206,29 +240,5 @@ mod tests {
         let process = os.into_process_by_name("dota2.exe")?;
 
         Ok(process)
-    }
-
-    fn read_class_field(module_name: &str, class_name: &str, field_name: &str) -> Option<u64> {
-        let content =
-            fs::read_to_string(format!("output/{}.json", module_name.replace(".", "_"))).ok()?;
-
-        let value: Value = serde_json::from_str(&content).ok()?;
-
-        value
-            .get(module_name)?
-            .get("classes")?
-            .get(class_name)?
-            .get("fields")?
-            .get(field_name)?
-            .as_u64()
-    }
-
-    fn read_offset(module_name: &str, offset_name: &str) -> Option<u64> {
-        let content = fs::read_to_string("output/offsets.json").ok()?;
-        let value: Value = serde_json::from_str(&content).ok()?;
-
-        let offset = value.get(module_name)?.get(offset_name)?;
-
-        offset.as_u64()
     }
 }

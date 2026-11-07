@@ -98,6 +98,7 @@ fn main() -> Result<()> {
         .map(|s| ConnectorArgs::from_str(&s).expect("unable to parse connector arguments"))
         .unwrap_or_default();
 
+    let read_local_files = args.connector.is_none();
     let mut os = match args.connector {
         Some(conn) => {
             let mut inventory = Inventory::scan();
@@ -126,7 +127,13 @@ fn main() -> Result<()> {
     let now = Instant::now();
 
     let result = analysis::analyze_all(&mut process)?;
-    let output = Output::new(&args.file_types, args.indent_size, &args.output, &result)?;
+    let output = Output::new(
+        &args.file_types,
+        args.indent_size,
+        &args.output,
+        &result,
+        read_local_files,
+    )?;
 
     output.dump_all(&mut process)?;
 
