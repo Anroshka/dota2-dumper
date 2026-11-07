@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-08-04 02:35:54.030902600 UTC
+// 2026-11-07 09:16:29.927261200 UTC
 
 #pragma once
 
@@ -9,19 +9,19 @@
 namespace dota2_dumper {
     // Module: client.dll
     namespace buttons {
-        constexpr std::ptrdiff_t attack = 0x5A82340;
-        constexpr std::ptrdiff_t attack2 = 0x5A823D0;
-        constexpr std::ptrdiff_t back = 0x5A82610;
-        constexpr std::ptrdiff_t duck = 0x5A828E0;
-        constexpr std::ptrdiff_t forward = 0x5A82580;
-        constexpr std::ptrdiff_t jump = 0x5A82850;
-        constexpr std::ptrdiff_t left = 0x5A826A0;
-        constexpr std::ptrdiff_t query = 0x61F1620;
-        constexpr std::ptrdiff_t reload = 0x5A822B0;
-        constexpr std::ptrdiff_t right = 0x5A82730;
-        constexpr std::ptrdiff_t sprint = 0x5A82220;
-        constexpr std::ptrdiff_t turnleft = 0x5A82460;
-        constexpr std::ptrdiff_t turnright = 0x5A824F0;
-        constexpr std::ptrdiff_t use = 0x5A827C0;
+        constexpr std::ptrdiff_t attack = 0x5B300F0;
+        constexpr std::ptrdiff_t attack2 = 0x5B30180;
+        constexpr std::ptrdiff_t back = 0x5B303C0;
+        constexpr std::ptrdiff_t duck = 0x5B30690;
+        constexpr std::ptrdiff_t forward = 0x5B30330;
+        constexpr std::ptrdiff_t jump = 0x5B30600;
+        constexpr std::ptrdiff_t left = 0x5B30450;
+        constexpr std::ptrdiff_t query = 0x6256590;
+        constexpr std::ptrdiff_t reload = 0x5B30060;
+        constexpr std::ptrdiff_t right = 0x5B304E0;
+        constexpr std::ptrdiff_t sprint = 0x5B2FFD0;
+        constexpr std::ptrdiff_t turnleft = 0x5B30210;
+        constexpr std::ptrdiff_t turnright = 0x5B302A0;
+        constexpr std::ptrdiff_t use = 0x5B30570;
     }
 }

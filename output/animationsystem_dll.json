@@ -2703,21 +2703,22 @@
         "fields": {
           "m_flAlpha": 16,
           "m_flUvDensity": 0,
-          "m_indexBuffer": 192,
-          "m_material": 272,
-          "m_meshletPackedIVB": 224,
-          "m_nAppliedIndexOffset": 32,
-          "m_nBaseVertex": 76,
-          "m_nDepthVertexBufferIndex": 36,
-          "m_nFirstMeshlet": 28,
-          "m_nIndexCount": 88,
-          "m_nMeshletPackedIVBIndex": 37,
-          "m_nNumMeshlets": 22,
-          "m_nPrimitiveType": 72,
-          "m_nStartIndex": 84,
-          "m_nVertexCount": 80,
-          "m_rigidMeshParts": 40,
-          "m_rootBvhNodes": 56,
+          "m_indexBuffer": 200,
+          "m_material": 280,
+          "m_meshletPackedIVB": 232,
+          "m_nAppliedIndexOffset": 36,
+          "m_nBaseVertex": 84,
+          "m_nDepthVertexBufferIndex": 44,
+          "m_nEmissivePrimitiveCount": 40,
+          "m_nFirstMeshlet": 32,
+          "m_nIndexCount": 96,
+          "m_nMeshletPackedIVBIndex": 45,
+          "m_nNumMeshlets": 24,
+          "m_nPrimitiveType": 80,
+          "m_nStartIndex": 92,
+          "m_nVertexCount": 88,
+          "m_rigidMeshParts": 48,
+          "m_rootBvhNodes": 64,
           "m_vTintColor": 4
         },
         "metadata": [
@@ -2747,6 +2748,7 @@
         "fields": {
           "m_CullingData": 8,
           "m_PackedAABB": 0,
+          "m_nBoneIndex": 22,
           "m_nTriangleCount": 21,
           "m_nTriangleOffset": 16,
           "m_nVertexCount": 20,
@@ -2799,6 +2801,8 @@
           "m_MaterialGroupOnOtherModels": 152,
           "m_aAngOffset": 108,
           "m_bBoneMergeFlex": 140,
+          "m_bCollideOutsideHierarchy": 161,
+          "m_bCollideWithHierarchy": 160,
           "m_bUserSpecifiedColor": 141,
           "m_bUserSpecifiedMaterialGroup": 142,
           "m_hModel": 88,
@@ -3322,6 +3326,10 @@
           {
             "name": "MFgdHelper",
             "type": "Unknown"
+          },
+          {
+            "name": "MCustomFGDMetadata",
+            "type": "Unknown"
           }
         ],
         "parent": null
@@ -3651,6 +3659,30 @@
         ],
         "parent": null
       },
+      "CNmCameraDOFEvent": {
+        "fields": {
+          "m_curve": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmCameraFOVEvent": {
+        "fields": {
+          "m_curve": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CNmChainLookatNode__CDefinition": {
         "fields": {
           "m_bIsTargetInWorldSpace": 113,
@@ -3702,13 +3734,13 @@
       },
       "CNmClipNode__CDefinition": {
         "fields": {
-          "m_bAllowLooping": 21,
-          "m_bSampleRootMotion": 20,
+          "m_bAllowLooping": 19,
+          "m_bSampleRootMotion": 18,
           "m_flSpeedMultiplier": 64,
           "m_graphEvents": 24,
-          "m_nDataSlotIdx": 22,
+          "m_nDataSlotIdx": 20,
           "m_nPlayInReverseValueNodeIdx": 16,
-          "m_nResetTimeValueNodeIdx": 18,
+          "m_nResetTimeValueNodeIdx": 22,
           "m_nStartSyncEventOffset": 68
         },
         "metadata": [
@@ -3747,6 +3779,24 @@
           "m_nBoneIdx": 0,
           "m_nParentBoneIdx": 4,
           "m_nParentChainLinkIdx": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmClothEvent": {
+        "fields": {
+          "m_effectName": 56,
+          "m_flLengthSeconds": 40,
+          "m_flSpeedIn": 32,
+          "m_flSpeedOut": 36,
+          "m_flStiffness": 28,
+          "m_type": 24,
+          "m_vertexSetName": 48
         },
         "metadata": [
           {
@@ -3807,6 +3857,55 @@
       "CNmConstVectorNode__CDefinition": {
         "fields": {
           "m_value": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmContactAudioActionVData": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MVDataOverlayType",
+            "type": "Unknown"
+          },
+          {
+            "name": "MVDataAssociatedFile",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmContactAudioTypeVData": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MVDataOverlayType",
+            "type": "Unknown"
+          },
+          {
+            "name": "MVDataAssociatedFile",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmContactEvent": {
+        "fields": {
+          "m_attachmentOrBoneID": 24,
+          "m_audioInfo": 32
         },
         "metadata": [
           {
@@ -4770,12 +4869,13 @@
       },
       "CNmOrientationWarpNode__CDefinition": {
         "fields": {
+          "m_alignmentMode": 23,
           "m_bIsOffsetNode": 20,
           "m_bIsOffsetRelativeToCharacter": 21,
           "m_bWarpTranslation": 22,
           "m_nClipReferenceNodeIdx": 16,
           "m_nTargetValueNodeIdx": 18,
-          "m_samplingMode": 23
+          "m_samplingMode": 24
         },
         "metadata": [
           {
@@ -5024,11 +5124,13 @@
       "CNmSkeleton": {
         "fields": {
           "m_ID": 0,
-          "m_bIsPropSkeleton": 200,
+          "m_bIsPropSkeleton": 100,
           "m_boneIDs": 8,
           "m_floatChannelSets": 184,
+          "m_gameplayRelevantBoneIndices": 200,
           "m_maskDefinitions": 136,
           "m_modelSpaceReferencePose": 72,
+          "m_nSpecialDependencyHash": 224,
           "m_numBonesToSampleAtLowLOD": 96,
           "m_parentIndices": 24,
           "m_parentSpaceReferencePose": 48,
@@ -5303,6 +5405,7 @@
       },
       "CNmTargetSelectorNode__CDefinition": {
         "fields": {
+          "m_alignmentBoneID": 56,
           "m_bIgnoreInvalidOptions": 50,
           "m_bIsWorldSpaceTarget": 51,
           "m_flOrientationScoreWeight": 40,
@@ -5365,6 +5468,22 @@
           "m_operator": 25,
           "m_sourceStateNodeIdx": 16,
           "m_type": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmTimeControlledClipNode__CDefinition": {
+        "fields": {
+          "m_bSampleRootMotion": 18,
+          "m_graphEvents": 24,
+          "m_nDataSlotIdx": 20,
+          "m_nPlayInReverseValueNodeIdx": 16,
+          "m_nTimeValueNodeIdx": 22
         },
         "metadata": [
           {
@@ -5444,13 +5563,6 @@
       },
       "CNmTwoBoneIKTask": {
         "fields": {
-          "m_bIsRunningFromDeserializedData": 217,
-          "m_bIsTargetInWorldSpace": 216,
-          "m_blendMode": 208,
-          "m_debugEffectorBoneID": 224,
-          "m_effectorTarget": 160,
-          "m_flBlendWeight": 212,
-          "m_flChainRotationWeight": 220,
           "m_nEffectorBoneIdx": 112,
           "m_nEffectorTargetBoneIdx": 116,
           "m_targetTransform": 128
@@ -5794,6 +5906,7 @@
           "m_bReverseOrder": 112,
           "m_bUseBoundsCenter": 244,
           "m_flBiasParameter": 296,
+          "m_flCompareValue": 368,
           "m_flInput0": 256,
           "m_flInput1": 260,
           "m_flLOD0": 152,
@@ -5952,15 +6065,15 @@
       "CParticleVecInput": {
         "fields": {
           "m_FloatComponentX": 168,
-          "m_FloatComponentY": 536,
-          "m_FloatComponentZ": 904,
-          "m_FloatInterp": 1272,
-          "m_Gradient": 1672,
+          "m_FloatComponentY": 544,
+          "m_FloatComponentZ": 920,
+          "m_FloatInterp": 1296,
+          "m_Gradient": 1704,
           "m_LiteralColor": 32,
           "m_NamedValue": 40,
           "m_bFollowNamedValue": 104,
-          "m_flInterpInput0": 1640,
-          "m_flInterpInput1": 1644,
+          "m_flInterpInput0": 1672,
+          "m_flInterpInput1": 1676,
           "m_nControlPoint": 124,
           "m_nDeltaControlPoint": 128,
           "m_nType": 16,
@@ -5968,11 +6081,11 @@
           "m_vCPRelativeDir": 156,
           "m_vCPRelativePosition": 144,
           "m_vCPValueScale": 132,
-          "m_vInterpOutput0": 1648,
-          "m_vInterpOutput1": 1660,
+          "m_vInterpOutput0": 1680,
+          "m_vInterpOutput1": 1692,
           "m_vLiteralValue": 20,
-          "m_vRandomMax": 1708,
-          "m_vRandomMin": 1696,
+          "m_vRandomMax": 1740,
+          "m_vRandomMin": 1728,
           "m_vVectorAttributeScale": 112
         },
         "metadata": [
@@ -6311,8 +6424,8 @@
       "CPulseCell_BooleanSwitchState": {
         "fields": {
           "m_Condition": 216,
-          "m_WhenFalse": 408,
-          "m_WhenTrue": 336
+          "m_WhenFalse": 432,
+          "m_WhenTrue": 360
         },
         "metadata": [
           {
@@ -6425,10 +6538,10 @@
       },
       "CPulseCell_Inflow_Method": {
         "fields": {
-          "m_Args": 184,
+          "m_Args": 160,
           "m_Description": 144,
           "m_MethodName": 128,
-          "m_ReturnType": 160,
+          "m_ReturnValues": 176,
           "m_bIsPublic": 152
         },
         "metadata": [
@@ -6608,6 +6721,27 @@
         ],
         "parent": null
       },
+      "CPulseCell_ObservableSwitchState": {
+        "fields": {
+          "m_Cases": 360,
+          "m_SwitchValue": 216
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CPulseCell_Outflow_CycleOrdered": {
         "fields": {
           "m_Outputs": 72
@@ -6693,6 +6827,29 @@
           },
           {
             "name": "MPulseEditorCanvasItemSpecKV3",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_RaceCursors": {
+        "fields": {
+          "m_OnFinished": 240,
+          "m_Outflows": 216
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_ReturnValues": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
           }
         ],
@@ -6891,7 +7048,7 @@
       "CPulseCell_WaitForObservable": {
         "fields": {
           "m_Condition": 216,
-          "m_OnTrue": 336
+          "m_OnTrue": 360
         },
         "metadata": [
           {
@@ -6920,19 +7077,20 @@
       },
       "CPulseGraphDef": {
         "fields": {
-          "m_BlackboardReferences": 272,
-          "m_CallInfos": 200,
+          "m_BlackboardReferences": 296,
+          "m_CallInfos": 224,
           "m_Cells": 104,
           "m_Chunks": 80,
-          "m_Constants": 224,
+          "m_Constants": 248,
           "m_DomainIdentifier": 8,
           "m_DomainSubType": 24,
-          "m_DomainValues": 248,
-          "m_InvokeBindings": 176,
-          "m_OutputConnections": 296,
+          "m_DomainValues": 272,
+          "m_InvokeBindings": 200,
+          "m_OutputConnections": 320,
           "m_ParentMapName": 48,
           "m_ParentXmlName": 64,
-          "m_PublicOutputs": 152,
+          "m_PublicOutputs": 176,
+          "m_TempVarBanks": 152,
           "m_Vars": 128
         },
         "metadata": [
@@ -6963,6 +7121,8 @@
           "m_CallMethodID": 72,
           "m_PortName": 0,
           "m_RegisterMap": 24,
+          "m_nBreakDestChunk": 84,
+          "m_nBreakDestInstruction": 88,
           "m_nEditorNodeID": 16,
           "m_nSrcChunk": 76,
           "m_nSrcInstruction": 80
@@ -7217,18 +7377,20 @@
       "CSceneObjectData__RTProxyDrawDescriptor_t": {
         "fields": {
           "m_drawDesc": 8,
-          "m_fEmissiveFactor": 348,
-          "m_mWorldFromLocal": 288,
+          "m_fEmissiveFactor": 356,
+          "m_fTriangleAreaSize": 364,
+          "m_mWorldFromLocal": 296,
           "m_materialGroupToken": 0,
+          "m_nAliasTableIB": 360,
           "m_nSrcDrawIndex": 4,
-          "m_nVertexAlbedoFormat": 336,
-          "m_nVertexAlbedoOffset": 338,
-          "m_nVertexAlbedoStride": 340,
-          "m_nVertexAlbedoVB": 337,
-          "m_nVertexEmissiveFormat": 342,
-          "m_nVertexEmissiveOffset": 344,
-          "m_nVertexEmissiveStride": 346,
-          "m_nVertexEmissiveVB": 343
+          "m_nVertexAlbedoFormat": 344,
+          "m_nVertexAlbedoOffset": 346,
+          "m_nVertexAlbedoStride": 348,
+          "m_nVertexAlbedoVB": 345,
+          "m_nVertexEmissiveFormat": 350,
+          "m_nVertexEmissiveOffset": 352,
+          "m_nVertexEmissiveStride": 354,
+          "m_nVertexEmissiveVB": 351
         },
         "metadata": [
           {
@@ -8975,6 +9137,20 @@
         ],
         "parent": null
       },
+      "NmContactAudioInfo_t": {
+        "fields": {
+          "m_audioActionID": 0,
+          "m_audioTypeID": 8,
+          "m_soundeventOverrideID": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "NmFloatCurveCompressionSettings_t": {
         "fields": {
           "m_bIsStatic": 8,
@@ -9101,6 +9277,13 @@
             "type": "Unknown"
           }
         ],
+        "parent": null
+      },
+      "ParticleAttributeIndex_t": {
+        "fields": {
+          "m_Value": 0
+        },
+        "metadata": [],
         "parent": null
       },
       "ParticleNamedValueConfiguration_t": {
@@ -9657,6 +9840,7 @@
       },
       "VPhysXAggregateData_t": {
         "fields": {
+          "m_bCompoundsPacked": 4,
           "m_bindPose": 104,
           "m_boneNames": 32,
           "m_boneParents": 232,
@@ -9685,18 +9869,18 @@
       },
       "VPhysXBodyPart_t": {
         "fields": {
-          "m_bOverrideMassCenter": 152,
-          "m_flAngularDamping": 140,
-          "m_flAngularDrag": 148,
-          "m_flInertiaScale": 132,
-          "m_flLinearDamping": 136,
-          "m_flLinearDrag": 144,
+          "m_bOverrideMassCenter": 136,
+          "m_flAngularDamping": 124,
+          "m_flAngularDrag": 132,
+          "m_flInertiaScale": 116,
+          "m_flLinearDamping": 120,
+          "m_flLinearDrag": 128,
           "m_flMass": 4,
-          "m_nCollisionAttributeIndex": 128,
+          "m_nCollisionAttributeIndex": 112,
           "m_nFlags": 0,
-          "m_nReserved": 130,
+          "m_nReserved": 114,
           "m_rnShape": 8,
-          "m_vMassCenterOverride": 156
+          "m_vMassCenterOverride": 140
         },
         "metadata": [
           {
@@ -9856,10 +10040,11 @@
       },
       "VPhysics2ShapeDef_t": {
         "fields": {
-          "m_CollisionAttributeIndices": 96,
-          "m_capsules": 24,
-          "m_hulls": 48,
-          "m_meshes": 72,
+          "m_CollisionAttributeIndices": 80,
+          "m_capsules": 16,
+          "m_compounds": 64,
+          "m_hulls": 32,
+          "m_meshes": 48,
           "m_spheres": 0
         },
         "metadata": [
@@ -10129,6 +10314,14 @@
         },
         "type": "uint32"
       },
+      "CNmClothEvent__Type_t": {
+        "alignment": 4,
+        "members": {
+          "Effect": 1,
+          "Stiffen": 0
+        },
+        "type": "uint32"
+      },
       "CNmCurrentSyncEventNode__InfoType_t": {
         "alignment": 1,
         "members": {
@@ -10201,6 +10394,14 @@
         "members": {
           "DoesntMatch": 1,
           "Matches": 0
+        },
+        "type": "uint8"
+      },
+      "CNmOrientationWarpNode__AlignmentMode_t": {
+        "alignment": 1,
+        "members": {
+          "AnimationEndFacing": 1,
+          "MovementDirection": 0
         },
         "type": "uint8"
       },
@@ -10643,10 +10844,12 @@
         "type": "uint32"
       },
       "ModelMeshBufferUsage_t": {
-        "alignment": 1,
+        "alignment": 2,
         "members": {
           "MESH_BUFFER_USAGE_ADJACENCY": 4,
+          "MESH_BUFFER_USAGE_ALIAS_TABLE": 256,
           "MESH_BUFFER_USAGE_IB": 2,
+          "MESH_BUFFER_USAGE_MESHLETS": 128,
           "MESH_BUFFER_USAGE_MESHLET_TRIS": 8,
           "MESH_BUFFER_USAGE_NONE": 0,
           "MESH_BUFFER_USAGE_RT_PROXY": 16,
@@ -10654,7 +10857,7 @@
           "MESH_BUFFER_USAGE_VERTEX_ALBEDO": 32,
           "MESH_BUFFER_USAGE_VERTEX_EMISSIVE": 64
         },
-        "type": "uint8"
+        "type": "uint16"
       },
       "ModelSkeletonData_t__BoneFlags_t": {
         "alignment": 4,
@@ -10715,7 +10918,8 @@
       "MovementCapability_t": {
         "alignment": 4,
         "members": {
-          "eCount": 9,
+          "eCount": 10,
+          "eForwardStartOnly": 9,
           "eIdleTurn": 1,
           "eInstantStop": 4,
           "eLean": 8,
@@ -11098,10 +11302,13 @@
       "ParticleFloatMapType_t": {
         "alignment": 4,
         "members": {
-          "PF_MAP_TYPE_COUNT": 7,
+          "PF_MAP_TYPE_COUNT": 10,
           "PF_MAP_TYPE_CURVE": 4,
           "PF_MAP_TYPE_DIRECT": 0,
           "PF_MAP_TYPE_INVALID": -1,
+          "PF_MAP_TYPE_MAX": 8,
+          "PF_MAP_TYPE_MIN": 7,
+          "PF_MAP_TYPE_MOD": 9,
           "PF_MAP_TYPE_MULT": 1,
           "PF_MAP_TYPE_NOTCHED": 5,
           "PF_MAP_TYPE_REMAP": 2,
@@ -11134,39 +11341,40 @@
       "ParticleFloatType_t": {
         "alignment": 4,
         "members": {
-          "PF_TYPE_CLOSEST_CAMERA_DISTANCE": 11,
+          "PF_TYPE_CLOSEST_CAMERA_DISTANCE": 12,
           "PF_TYPE_COLLECTION_AGE": 4,
-          "PF_TYPE_CONCURRENT_DEF_COUNT": 10,
+          "PF_TYPE_CONCURRENT_DEF_COUNT": 11,
           "PF_TYPE_CONTROL_POINT_CHANGE_AGE": 7,
           "PF_TYPE_CONTROL_POINT_COMPONENT": 6,
-          "PF_TYPE_CONTROL_POINT_IS_SET": 14,
+          "PF_TYPE_CONTROL_POINT_DISTANCE": 9,
+          "PF_TYPE_CONTROL_POINT_IS_SET": 15,
           "PF_TYPE_CONTROL_POINT_SPEED": 8,
-          "PF_TYPE_COUNT": 31,
+          "PF_TYPE_COUNT": 32,
           "PF_TYPE_ENDCAP_AGE": 5,
           "PF_TYPE_INVALID": -1,
           "PF_TYPE_LITERAL": 0,
           "PF_TYPE_NAMED_VALUE": 1,
-          "PF_TYPE_PARTICLE_AGE": 18,
-          "PF_TYPE_PARTICLE_AGE_NORMALIZED": 19,
-          "PF_TYPE_PARTICLE_DETAIL_LEVEL": 9,
-          "PF_TYPE_PARTICLE_FLOAT": 20,
-          "PF_TYPE_PARTICLE_INITIAL_FLOAT": 21,
-          "PF_TYPE_PARTICLE_INITIAL_VECTOR_COMPONENT": 23,
-          "PF_TYPE_PARTICLE_NOISE": 17,
-          "PF_TYPE_PARTICLE_NUMBER": 25,
-          "PF_TYPE_PARTICLE_NUMBER_NORMALIZED": 26,
-          "PF_TYPE_PARTICLE_ROPE_SEGMENT": 27,
-          "PF_TYPE_PARTICLE_ROPE_SEGMENT_NORMALIZED": 28,
-          "PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE": 29,
-          "PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT": 30,
-          "PF_TYPE_PARTICLE_SPEED": 24,
-          "PF_TYPE_PARTICLE_VECTOR_COMPONENT": 22,
+          "PF_TYPE_PARTICLE_AGE": 19,
+          "PF_TYPE_PARTICLE_AGE_NORMALIZED": 20,
+          "PF_TYPE_PARTICLE_DETAIL_LEVEL": 10,
+          "PF_TYPE_PARTICLE_FLOAT": 21,
+          "PF_TYPE_PARTICLE_INITIAL_FLOAT": 22,
+          "PF_TYPE_PARTICLE_INITIAL_VECTOR_COMPONENT": 24,
+          "PF_TYPE_PARTICLE_NOISE": 18,
+          "PF_TYPE_PARTICLE_NUMBER": 26,
+          "PF_TYPE_PARTICLE_NUMBER_NORMALIZED": 27,
+          "PF_TYPE_PARTICLE_ROPE_SEGMENT": 28,
+          "PF_TYPE_PARTICLE_ROPE_SEGMENT_NORMALIZED": 29,
+          "PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE": 30,
+          "PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT": 31,
+          "PF_TYPE_PARTICLE_SPEED": 25,
+          "PF_TYPE_PARTICLE_VECTOR_COMPONENT": 23,
           "PF_TYPE_RANDOM_BIASED": 3,
           "PF_TYPE_RANDOM_UNIFORM": 2,
-          "PF_TYPE_RENDERER_CAMERA_DISTANCE": 15,
-          "PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT": 16,
-          "PF_TYPE_SNAPSHOT_CHANGED": 13,
-          "PF_TYPE_SNAPSHOT_COUNT": 12
+          "PF_TYPE_RENDERER_CAMERA_DISTANCE": 16,
+          "PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT": 17,
+          "PF_TYPE_SNAPSHOT_CHANGED": 14,
+          "PF_TYPE_SNAPSHOT_COUNT": 13
         },
         "type": "uint32"
       },

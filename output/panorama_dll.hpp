@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-08-04 02:35:54.030902600 UTC
+// 2026-11-07 09:16:29.927261200 UTC
 
 #pragma once
 

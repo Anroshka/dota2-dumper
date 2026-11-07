@@ -1,9 +1,9 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-08-04 02:35:54.030902600 UTC
+// 2026-11-07 09:16:29.927261200 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: pulse_system.dll
-    // Class count: 125
+    // Class count: 132
     // Enum count: 15
     public static class PulseSystemDll {
         // Alignment: 4
@@ -79,17 +79,20 @@ namespace Dota2Dumper.Schemas {
             MM_SS_LEADING_ZERO = 0x0
         }
         // Alignment: 4
-        // Member count: 6
+        // Member count: 9
         public enum EPulseGraphExecutionHistoryFlag : uint {
             NO_FLAGS = 0x0,
             CURSOR_ADD_TAG = 0x1,
             CURSOR_REMOVE_TAG = 0x2,
             CURSOR_RETIRED = 0x4,
-            REQUIREMENT_PASS = 0x8,
-            REQUIREMENT_FAIL = 0x10
+            CURSOR_CREATE_CHILD = 0x8,
+            REQUIREMENT_PASS = 0x10,
+            REQUIREMENT_FAIL = 0x20,
+            CALL_TO_PULSE = 0x40,
+            RETURN = 0x80
         }
         // Alignment: 4
-        // Member count: 35
+        // Member count: 32
         public enum PulseValueType_t : uint {
             PVAL_VOID = unchecked((uint)-1),
             PVAL_BOOL = 0x0,
@@ -111,21 +114,18 @@ namespace Dota2Dumper.Schemas {
             PVAL_SNDEVT_GUID = 0x10,
             PVAL_SNDEVT_NAME = 0x11,
             PVAL_ENTITY_NAME = 0x12,
-            PVAL_OPAQUE_HANDLE = 0x13,
-            PVAL_TYPESAFE_INT = 0x14,
-            PVAL_MODEL_MATERIAL_GROUP = 0x15,
-            PVAL_CURSOR_FLOW = 0x16,
-            PVAL_VARIANT = 0x17,
-            PVAL_UNKNOWN = 0x18,
-            PVAL_SCHEMA_ENUM = 0x19,
-            PVAL_PANORAMA_PANEL_HANDLE = 0x1A,
-            PVAL_TEST_HANDLE = 0x1B,
-            PVAL_ARRAY = 0x1C,
-            PVAL_TYPESAFE_INT64 = 0x1D,
-            PVAL_PARTICLE_EHANDLE = 0x1E,
-            PVAL_ANIM_SEQUENCE = 0x1F,
-            PVAL_VDATA_CHOICE = 0x20,
-            PVAL_COUNT = 0x21
+            PVAL_LEAF = 0x13,
+            PVAL_MODEL_MATERIAL_GROUP = 0x14,
+            PVAL_CURSOR_FLOW = 0x15,
+            PVAL_VARIANT = 0x16,
+            PVAL_UNKNOWN = 0x17,
+            PVAL_ENUM = 0x18,
+            PVAL_PANORAMA_PANEL_HANDLE = 0x19,
+            PVAL_ARRAY = 0x1A,
+            PVAL_PARTICLE_EHANDLE = 0x1B,
+            PVAL_ANIM_SEQUENCE = 0x1C,
+            PVAL_VDATA_CHOICE = 0x1D,
+            PVAL_COUNT = 0x1E
         }
         // Alignment: 4
         // Member count: 6
@@ -138,134 +138,136 @@ namespace Dota2Dumper.Schemas {
             AF_SELECTORS_WITHOUT_REQUIREMENTS = 0x20
         }
         // Alignment: 2
-        // Member count: 126
+        // Member count: 128
         public enum PulseInstructionCode_t : ushort {
             INVALID = 0x0,
             IMMEDIATE_HALT = 0x1,
             RETURN_VOID = 0x2,
             RETURN_VALUE = 0x3,
-            NOP = 0x4,
-            JUMP = 0x5,
-            JUMP_COND = 0x6,
-            CHUNK_LEAP = 0x7,
-            CHUNK_LEAP_COND = 0x8,
-            PULSE_CALL_SYNC = 0x9,
-            PULSE_CALL_ASYNC_FIRE = 0xA,
-            CREATE_CHILD_CURSOR_OUTFLOW = 0xB,
-            CELL_INVOKE = 0xC,
-            LIBRARY_INVOKE = 0xD,
-            SET_VAR = 0xE,
-            GET_VAR = 0xF,
-            GET_VAR_DETACH = 0x10,
-            DETACH_REGISTER = 0x11,
-            SET_VAR_ARRAY_ELEMENT_1D = 0x12,
-            SET_VAR_OBSERVABLE = 0x13,
-            GET_CONST = 0x14,
-            GET_ARRAY_ELEMENT = 0x15,
-            GET_DOMAIN_VALUE = 0x16,
-            COPY = 0x17,
-            NOT = 0x18,
-            NEGATE = 0x19,
-            ADD = 0x1A,
-            SUB = 0x1B,
-            MUL = 0x1C,
-            DIV = 0x1D,
-            MOD = 0x1E,
-            LT = 0x1F,
-            LTE = 0x20,
-            EQ = 0x21,
-            NE = 0x22,
-            AND = 0x23,
-            OR = 0x24,
-            SCALE = 0x25,
-            SCALE_INV = 0x26,
-            ELEMENT_ACCESS = 0x27,
-            CONVERT_VALUE = 0x28,
-            REINTERPRET_INSTANCE = 0x29,
-            GET_BLACKBOARD_REFERENCE = 0x2A,
-            SET_BLACKBOARD_REFERENCE = 0x2B,
-            LAST_SERIALIZED_CODE = 0x2C,
-            NEGATE_INT = 0x2D,
-            NEGATE_FLOAT = 0x2E,
-            NEGATE_VEC2 = 0x2F,
-            NEGATE_VEC3 = 0x30,
-            NEGATE_VEC4 = 0x31,
-            ADD_INT = 0x32,
-            ADD_FLOAT = 0x33,
-            ADD_STRING = 0x34,
-            ADD_VEC2 = 0x35,
-            ADD_VEC3 = 0x36,
-            ADD_VEC3WS_VEC3 = 0x37,
-            ADD_VEC3_VEC3WS = 0x38,
-            ADD_VEC4 = 0x39,
-            ADD_GAMETIME_FLOAT = 0x3A,
-            ADD_FLOAT_GAMETIME = 0x3B,
-            SUB_INT = 0x3C,
-            SUB_FLOAT = 0x3D,
-            SUB_VEC2 = 0x3E,
-            SUB_VEC3 = 0x3F,
-            SUB_VEC3WS_VEC3 = 0x40,
-            SUB_VEC3WS_VEC3WS = 0x41,
-            SUB_VEC4 = 0x42,
-            SUB_GAMETIME_FLOAT = 0x43,
-            SUB_GAMETIME = 0x44,
-            MUL_INT = 0x45,
-            MUL_FLOAT = 0x46,
-            DIV_FLOAT = 0x47,
-            MOD_INT = 0x48,
-            MOD_FLOAT = 0x49,
-            LT_INT = 0x4A,
-            LT_FLOAT = 0x4B,
-            LT_GAMETIME = 0x4C,
-            LTE_INT = 0x4D,
-            LTE_FLOAT = 0x4E,
-            LTE_GAMETIME = 0x4F,
-            EQ_BOOL = 0x50,
-            EQ_INT = 0x51,
-            EQ_FLOAT = 0x52,
-            EQ_VEC2 = 0x53,
-            EQ_VEC3 = 0x54,
-            EQ_VEC3WS = 0x55,
-            EQ_VEC4 = 0x56,
-            EQ_STRING = 0x57,
-            EQ_ENTITY_NAME = 0x58,
-            EQ_SCHEMA_ENUM = 0x59,
-            EQ_EHANDLE = 0x5A,
-            EQ_PANEL_HANDLE = 0x5B,
-            EQ_OPAQUE_HANDLE = 0x5C,
-            EQ_TEST_HANDLE = 0x5D,
-            EQ_COLOR_RGB = 0x5E,
-            EQ_ARRAY = 0x5F,
-            EQ_GAMETIME = 0x60,
-            NE_BOOL = 0x61,
-            NE_INT = 0x62,
-            NE_FLOAT = 0x63,
-            NE_VEC2 = 0x64,
-            NE_VEC3 = 0x65,
-            NE_VEC3WS = 0x66,
-            NE_VEC4 = 0x67,
-            NE_STRING = 0x68,
-            NE_ENTITY_NAME = 0x69,
-            NE_SCHEMA_ENUM = 0x6A,
-            NE_EHANDLE = 0x6B,
-            NE_PANEL_HANDLE = 0x6C,
-            NE_OPAQUE_HANDLE = 0x6D,
-            NE_TEST_HANDLE = 0x6E,
-            NE_COLOR_RGB = 0x6F,
-            NE_ARRAY = 0x70,
-            NE_GAMETIME = 0x71,
-            SCALE_VEC3 = 0x72,
-            SCALE_VEC2 = 0x73,
-            SCALE_VEC4 = 0x74,
-            SCALE_INV_VEC3 = 0x75,
-            SCALE_INV_VEC2 = 0x76,
-            SCALE_INV_VEC4 = 0x77,
-            ELEMENT_ACCESS_VEC2 = 0x78,
-            ELEMENT_ACCESS_VEC3 = 0x79,
-            ELEMENT_ACCESS_VEC3WS = 0x7A,
-            ELEMENT_ACCESS_VEC4 = 0x7B,
-            ELEMENT_ACCESS_COLOR_RGB = 0x7C,
-            GET_CONST_INLINE_STORAGE = 0x7D
+            LOOP_BREAK = 0x4,
+            NOP = 0x5,
+            JUMP = 0x6,
+            JUMP_COND = 0x7,
+            CHUNK_LEAP = 0x8,
+            CHUNK_LEAP_COND = 0x9,
+            PULSE_CALL_SYNC = 0xA,
+            PULSE_CALL_ASYNC_FIRE = 0xB,
+            CREATE_CHILD_CURSOR_OUTFLOW = 0xC,
+            CELL_INVOKE = 0xD,
+            LIBRARY_INVOKE = 0xE,
+            SET_VAR = 0xF,
+            GET_VAR = 0x10,
+            GET_VAR_DETACH = 0x11,
+            DETACH_REGISTER = 0x12,
+            SET_VAR_ARRAY_ELEMENT_1D = 0x13,
+            SET_VAR_OBSERVABLE = 0x14,
+            GET_CONST = 0x15,
+            GET_ARRAY_ELEMENT = 0x16,
+            GET_DOMAIN_VALUE = 0x17,
+            COPY = 0x18,
+            NOT = 0x19,
+            NEGATE = 0x1A,
+            ADD = 0x1B,
+            SUB = 0x1C,
+            MUL = 0x1D,
+            DIV = 0x1E,
+            MOD = 0x1F,
+            LT = 0x20,
+            LTE = 0x21,
+            EQ = 0x22,
+            NE = 0x23,
+            AND = 0x24,
+            OR = 0x25,
+            SCALE = 0x26,
+            SCALE_INV = 0x27,
+            ELEMENT_ACCESS = 0x28,
+            CONVERT_VALUE = 0x29,
+            REINTERPRET_INSTANCE = 0x2A,
+            GET_BLACKBOARD_REFERENCE = 0x2B,
+            SET_BLACKBOARD_REFERENCE = 0x2C,
+            GET_TEMPVAR = 0x2D,
+            SET_TEMPVAR = 0x2E,
+            SET_TEMPVAR_OBSERVABLE = 0x2F,
+            LAST_SERIALIZED_CODE = 0x30,
+            NEGATE_INT = 0x31,
+            NEGATE_FLOAT = 0x32,
+            NEGATE_VEC2 = 0x33,
+            NEGATE_VEC3 = 0x34,
+            NEGATE_VEC4 = 0x35,
+            ADD_INT = 0x36,
+            ADD_FLOAT = 0x37,
+            ADD_STRING = 0x38,
+            ADD_VEC2 = 0x39,
+            ADD_VEC3 = 0x3A,
+            ADD_VEC3WS_VEC3 = 0x3B,
+            ADD_VEC3_VEC3WS = 0x3C,
+            ADD_VEC4 = 0x3D,
+            ADD_GAMETIME_FLOAT = 0x3E,
+            ADD_FLOAT_GAMETIME = 0x3F,
+            SUB_INT = 0x40,
+            SUB_FLOAT = 0x41,
+            SUB_VEC2 = 0x42,
+            SUB_VEC3 = 0x43,
+            SUB_VEC3WS_VEC3 = 0x44,
+            SUB_VEC3WS_VEC3WS = 0x45,
+            SUB_VEC4 = 0x46,
+            SUB_GAMETIME_FLOAT = 0x47,
+            SUB_GAMETIME = 0x48,
+            MUL_INT = 0x49,
+            MUL_FLOAT = 0x4A,
+            DIV_FLOAT = 0x4B,
+            MOD_INT = 0x4C,
+            MOD_FLOAT = 0x4D,
+            LT_INT = 0x4E,
+            LT_FLOAT = 0x4F,
+            LT_GAMETIME = 0x50,
+            LTE_INT = 0x51,
+            LTE_FLOAT = 0x52,
+            LTE_GAMETIME = 0x53,
+            EQ_BOOL = 0x54,
+            EQ_INT = 0x55,
+            EQ_FLOAT = 0x56,
+            EQ_VEC2 = 0x57,
+            EQ_VEC3 = 0x58,
+            EQ_VEC3WS = 0x59,
+            EQ_VEC4 = 0x5A,
+            EQ_STRING = 0x5B,
+            EQ_ENTITY_NAME = 0x5C,
+            EQ_ENUM = 0x5D,
+            EQ_EHANDLE = 0x5E,
+            EQ_PANEL_HANDLE = 0x5F,
+            EQ_LEAF = 0x60,
+            EQ_COLOR_RGB = 0x61,
+            EQ_ARRAY = 0x62,
+            EQ_GAMETIME = 0x63,
+            NE_BOOL = 0x64,
+            NE_INT = 0x65,
+            NE_FLOAT = 0x66,
+            NE_VEC2 = 0x67,
+            NE_VEC3 = 0x68,
+            NE_VEC3WS = 0x69,
+            NE_VEC4 = 0x6A,
+            NE_STRING = 0x6B,
+            NE_ENTITY_NAME = 0x6C,
+            NE_ENUM = 0x6D,
+            NE_EHANDLE = 0x6E,
+            NE_PANEL_HANDLE = 0x6F,
+            NE_LEAF = 0x70,
+            NE_COLOR_RGB = 0x71,
+            NE_ARRAY = 0x72,
+            NE_GAMETIME = 0x73,
+            SCALE_VEC3 = 0x74,
+            SCALE_VEC2 = 0x75,
+            SCALE_VEC4 = 0x76,
+            SCALE_INV_VEC3 = 0x77,
+            SCALE_INV_VEC2 = 0x78,
+            SCALE_INV_VEC4 = 0x79,
+            ELEMENT_ACCESS_VEC2 = 0x7A,
+            ELEMENT_ACCESS_VEC3 = 0x7B,
+            ELEMENT_ACCESS_VEC3WS = 0x7C,
+            ELEMENT_ACCESS_VEC4 = 0x7D,
+            ELEMENT_ACCESS_COLOR_RGB = 0x7E,
+            GET_CONST_INLINE_STORAGE = 0x7F
         }
         // Alignment: 4
         // Member count: 4
@@ -294,6 +296,15 @@ namespace Dota2Dumper.Schemas {
         public static class CPulseCell_WaitForCursorsWithTag {
             public const nint m_bTagSelfWhenComplete = 0x128; // bool
             public const nint m_nDesiredKillPriority = 0x12C; // PulseCursorCancelPriority_t
+        }
+        // Parent: None
+        // Field count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CPulseCell_RaceCursors {
+            public const nint m_Outflows = 0xD8; // CUtlVector<CPulse_OutflowConnection>
+            public const nint m_OnFinished = 0xF0; // CPulse_ResumePoint
         }
         // Parent: None
         // Field count: 0
@@ -347,7 +358,7 @@ namespace Dota2Dumper.Schemas {
         // MPropertyDescription
         public static class CPulseCell_WaitForObservable {
             public const nint m_Condition = 0xD8; // CPulseObservableExpression<bool>
-            public const nint m_OnTrue = 0x150; // CPulse_ResumePoint
+            public const nint m_OnTrue = 0x168; // CPulse_ResumePoint
         }
         // Parent: None
         // Field count: 4
@@ -358,25 +369,26 @@ namespace Dota2Dumper.Schemas {
             public const nint m_OutflowRegisterMap = 0x18; // PulseRegisterMap_t
         }
         // Parent: None
-        // Field count: 14
+        // Field count: 15
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CPulseGraphDef {
             public const nint m_DomainIdentifier = 0x8; // PulseSymbol_t
-            public const nint m_DomainSubType = 0x18; // CPulseValueFullType
+            public const nint m_DomainSubType = 0x18; // CPulseType
             public const nint m_ParentMapName = 0x30; // PulseSymbol_t
             public const nint m_ParentXmlName = 0x40; // PulseSymbol_t
             public const nint m_Chunks = 0x50; // CUtlVector<CPulse_Chunk*>
             public const nint m_Cells = 0x68; // CUtlVector<CPulseCell_Base*>
             public const nint m_Vars = 0x80; // CUtlVector<CPulse_Variable>
-            public const nint m_PublicOutputs = 0x98; // CUtlVector<CPulse_PublicOutput>
-            public const nint m_InvokeBindings = 0xB0; // CUtlVector<CPulse_InvokeBinding*>
-            public const nint m_CallInfos = 0xC8; // CUtlVector<CPulse_CallInfo*>
-            public const nint m_Constants = 0xE0; // CUtlVector<CPulse_Constant>
-            public const nint m_DomainValues = 0xF8; // CUtlVector<CPulse_DomainValue>
-            public const nint m_BlackboardReferences = 0x110; // CUtlVector<CPulse_BlackboardReference>
-            public const nint m_OutputConnections = 0x128; // CUtlVector<CPulse_OutputConnection*>
+            public const nint m_TempVarBanks = 0x98; // CUtlVector<CPulse_TempVarBankDefinition*>
+            public const nint m_PublicOutputs = 0xB0; // CUtlVector<CPulse_PublicOutput>
+            public const nint m_InvokeBindings = 0xC8; // CUtlVector<CPulse_InvokeBinding*>
+            public const nint m_CallInfos = 0xE0; // CUtlVector<CPulse_CallInfo*>
+            public const nint m_Constants = 0xF8; // CUtlVector<CPulse_Constant>
+            public const nint m_DomainValues = 0x110; // CUtlVector<CPulse_DomainValue>
+            public const nint m_BlackboardReferences = 0x128; // CUtlVector<CPulse_BlackboardReference>
+            public const nint m_OutputConnections = 0x140; // CUtlVector<CPulse_OutputConnection*>
         }
         // Parent: None
         // Field count: 0
@@ -675,20 +687,20 @@ namespace Dota2Dumper.Schemas {
         // Parent: None
         // Field count: 1
         public static class CPulseGraphInstance_TestDomain_Derived {
-            public const nint m_nInstanceValueX = 0x158; // int32
+            public const nint m_nInstanceValueX = 0xD8; // int32
         }
         // Parent: None
         // Field count: 9
         public static class CPulseGraphInstance_TestDomain {
-            public const nint m_bIsRunningUnitTests = 0x128; // bool
-            public const nint m_bExplicitTimeStepping = 0x129; // bool
-            public const nint m_bExpectingToDestroyWithYieldedCursors = 0x12A; // bool
-            public const nint m_bQuietTracepoints = 0x12B; // bool
-            public const nint m_bExpectingCursorTerminatedDueToMaxInstructions = 0x12C; // bool
-            public const nint m_nCursorsTerminatedDueToMaxInstructions = 0x130; // int32
-            public const nint m_nNextValidateIndex = 0x134; // int32
-            public const nint m_Tracepoints = 0x138; // CUtlVector<CUtlString>
-            public const nint m_bTestYesOrNoPath = 0x150; // bool
+            public const nint m_bIsRunningUnitTests = 0xA8; // bool
+            public const nint m_bExplicitTimeStepping = 0xA9; // bool
+            public const nint m_bExpectingToDestroyWithYieldedCursors = 0xAA; // bool
+            public const nint m_bQuietTracepoints = 0xAB; // bool
+            public const nint m_bExpectingCursorTerminatedDueToMaxInstructions = 0xAC; // bool
+            public const nint m_nCursorsTerminatedDueToMaxInstructions = 0xB0; // int32
+            public const nint m_nNextValidateIndex = 0xB4; // int32
+            public const nint m_Tracepoints = 0xB8; // CUtlVector<CUtlString>
+            public const nint m_bTestYesOrNoPath = 0xD0; // bool
         }
         // Parent: None
         // Field count: 0
@@ -712,7 +724,7 @@ namespace Dota2Dumper.Schemas {
         public static class CPulseCell_Inflow_EntOutputHandler {
             public const nint m_SourceEntity = 0x80; // PulseSymbol_t
             public const nint m_SourceOutput = 0x90; // PulseSymbol_t
-            public const nint m_ExpectedParamType = 0xA0; // CPulseValueFullType
+            public const nint m_ExpectedParamType = 0xA0; // CPulseType
         }
         // Parent: None
         // Field count: 2
@@ -799,6 +811,17 @@ namespace Dota2Dumper.Schemas {
             public const nint m_bSelfReference = 0x82; // bool
         }
         // Parent: None
+        // Field count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
+        // MPropertyDescription
+        public static class CPulseCell_ObservableSwitchState {
+            public const nint m_SwitchValue = 0xD8; // CPulseObservableExpression<CPulseVariant>
+            public const nint m_Cases = 0x168; // CPulseObservableSwitchCases
+        }
+        // Parent: None
         // Field count: 1
         //
         // Metadata:
@@ -864,8 +887,8 @@ namespace Dota2Dumper.Schemas {
             public const nint m_MethodName = 0x80; // PulseSymbol_t
             public const nint m_Description = 0x90; // CUtlString
             public const nint m_bIsPublic = 0x98; // bool
-            public const nint m_ReturnType = 0xA0; // CPulseValueFullType
-            public const nint m_Args = 0xB8; // CUtlLeanVector<CPulseRuntimeMethodArg>
+            public const nint m_Args = 0xA0; // CUtlLeanVector<CPulseRuntimeMethodArg>
+            public const nint m_ReturnValues = 0xB0; // CUtlLeanVector<CPulseRuntimeMethodArg>
         }
         // Parent: None
         // Field count: 0
@@ -884,8 +907,8 @@ namespace Dota2Dumper.Schemas {
         // MPulseEditorCanvasItemSpecKV3
         public static class CPulseCell_BooleanSwitchState {
             public const nint m_Condition = 0xD8; // CPulseObservableExpression<bool>
-            public const nint m_WhenTrue = 0x150; // CPulse_OutflowConnection
-            public const nint m_WhenFalse = 0x198; // CPulse_OutflowConnection
+            public const nint m_WhenTrue = 0x168; // CPulse_OutflowConnection
+            public const nint m_WhenFalse = 0x1B0; // CPulse_OutflowConnection
         }
         // Parent: None
         // Field count: 1
@@ -940,6 +963,13 @@ namespace Dota2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        public static class CPulseCell_ReturnValues {
+        }
+        // Parent: None
+        // Field count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
         // MPropertyFriendlyName
         // MPropertyDescription
         // MPulseEditorHeaderIcon
@@ -978,7 +1008,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_OutflowList = 0x48; // PulseSelectorOutflowList_t
         }
         // Parent: None
-        // Field count: 6
+        // Field count: 8
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -989,6 +1019,8 @@ namespace Dota2Dumper.Schemas {
             public const nint m_CallMethodID = 0x48; // PulseDocNodeID_t
             public const nint m_nSrcChunk = 0x4C; // PulseRuntimeChunkIndex_t
             public const nint m_nSrcInstruction = 0x50; // int32
+            public const nint m_nBreakDestChunk = 0x54; // PulseRuntimeChunkIndex_t
+            public const nint m_nBreakDestInstruction = 0x58; // int32
         }
         // Parent: None
         // Field count: 4
@@ -1060,9 +1092,9 @@ namespace Dota2Dumper.Schemas {
         public static class CPulseCell_TestYieldWithObservables {
             public const nint m_flWatchForFloatValue = 0xD8; // float32
             public const nint m_LiveFloatValue = 0xE0; // CPulseObservableExpression<float32>
-            public const nint m_WatchForStringValue = 0x158; // CUtlString
-            public const nint m_LiveStringValue = 0x160; // CPulseObservableExpression<CUtlString>
-            public const nint m_WakeResume = 0x1D8; // CPulse_ResumePoint
+            public const nint m_WatchForStringValue = 0x170; // CUtlString
+            public const nint m_LiveStringValue = 0x178; // CPulseObservableExpression<CUtlString>
+            public const nint m_WakeResume = 0x208; // CPulse_ResumePoint
         }
         // Parent: None
         // Field count: 1
@@ -1105,7 +1137,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_Value = 0x0; // int16
         }
         // Parent: None
-        // Field count: 3
+        // Field count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1113,9 +1145,10 @@ namespace Dota2Dumper.Schemas {
             public const nint m_Instructions = 0x0; // CUtlLeanVector<PGDInstruction_t>
             public const nint m_Registers = 0x10; // CUtlLeanVector<CPulse_RegisterInfo>
             public const nint m_InstructionDebugInfos = 0x20; // CUtlLeanVector<CPulse_InstructionDebug>
+            public const nint m_nTempVarBank = 0x30; // PulseRuntimeTempVarBankIndex_t
         }
         // Parent: None
-        // Field count: 3
+        // Field count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1123,6 +1156,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_NodeID = 0x0; // PulseDocNodeID_t
             public const nint m_SequencePoint = 0x8; // PulseSymbol_t
             public const nint m_PortName = 0x18; // PulseSymbol_t
+            public const nint m_bDeferBreak = 0x28; // bool
         }
         // Parent: None
         // Field count: 1
@@ -1154,6 +1188,11 @@ namespace Dota2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 1
+        public static class PulseRuntimeTempVarIndex_t {
+            public const nint m_Value = 0x0; // int16
+        }
+        // Parent: None
+        // Field count: 1
         public static class TestComponent_t {
             public const nint m_ComponentData = 0x8; // CUtlString
         }
@@ -1163,6 +1202,14 @@ namespace Dota2Dumper.Schemas {
             public const nint m_Inparams = 0x0; // KeyValues3
             public const nint m_InparamsWhichCanBeMoved = 0x10; // CKV3MemberNameSet
             public const nint m_Outparams = 0x20; // KeyValues3
+        }
+        // Parent: None
+        // Field count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CPulse_TempVarBankDefinition {
+            public const nint m_TempVars = 0x0; // CUtlVector<CPulse_TempVarInfo>
         }
         // Parent: None
         // Field count: 3
@@ -1195,16 +1242,18 @@ namespace Dota2Dumper.Schemas {
             public const nint strBindingName = 0x10; // PulseSymbol_t
         }
         // Parent: None
-        // Field count: 5
+        // Field count: 7
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class PulseGraphExecutionHistoryEntry_t {
             public const nint nCursorID = 0x0; // PulseCursorID_t
             public const nint nEditorID = 0x4; // PulseDocNodeID_t
-            public const nint flExecTime = 0x8; // float32
-            public const nint unFlags = 0xC; // uint32
-            public const nint tagName = 0x10; // PulseSymbol_t
+            public const nint seqPoint = 0x8; // PulseSymbol_t
+            public const nint flExecTime = 0x18; // float32
+            public const nint unFlags = 0x1C; // uint32
+            public const nint tagName = 0x20; // PulseSymbol_t
+            public const nint childID = 0x30; // PulseCursorID_t
         }
         // Parent: None
         // Field count: 1
@@ -1224,7 +1273,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_mapCursorDesc = 0x50; // CUtlOrderedMap<PulseCursorID_t,PulseGraphExecutionHistoryCursorDesc_t*>
         }
         // Parent: None
-        // Field count: 12
+        // Field count: 13
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1241,6 +1290,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_nConstIdx = 0x20; // PulseRuntimeConstantIndex_t
             public const nint m_nDomainValueIdx = 0x22; // PulseRuntimeDomainValueIndex_t
             public const nint m_nBlackboardReferenceIdx = 0x24; // PulseRuntimeBlackboardReferenceIndex_t
+            public const nint m_nTempVarIdx = 0x26; // PulseRuntimeTempVarIndex_t
         }
         // Parent: None
         // Field count: 9
@@ -1250,7 +1300,7 @@ namespace Dota2Dumper.Schemas {
         public static class CPulse_Variable {
             public const nint m_Name = 0x0; // PulseSymbol_t
             public const nint m_Description = 0x10; // CUtlString
-            public const nint m_Type = 0x18; // CPulseValueFullType
+            public const nint m_Type = 0x18; // CPulseType
             public const nint m_DefaultValue = 0x30; // KeyValues3
             public const nint m_nKeysSource = 0x44; // PulseVariableKeysSource_t
             public const nint m_bIsPublicBlackboardVariable = 0x48; // bool
@@ -1271,12 +1321,23 @@ namespace Dota2Dumper.Schemas {
         public static class CPulse_DomainValue {
             public const nint m_nType = 0x0; // PulseDomainValueType_t
             public const nint m_Value = 0x8; // CGlobalSymbolCaseSensitive
-            public const nint m_RequiredRuntimeType = 0x10; // CPulseValueFullType
+            public const nint m_RequiredRuntimeType = 0x10; // CPulseType
         }
         // Parent: None
         // Field count: 1
         public static class PulseRuntimeBlackboardReferenceIndex_t {
             public const nint m_Value = 0x0; // int16
+        }
+        // Parent: None
+        // Field count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CPulse_TempVarInfo {
+            public const nint m_Name = 0x0; // PulseSymbol_t
+            public const nint m_Type = 0x10; // CPulseType
+            public const nint m_nEditorNodeID = 0x28; // PulseDocNodeID_t
+            public const nint m_bIsObservable = 0x2C; // bool
         }
         // Parent: None
         // Field count: 1
@@ -1295,7 +1356,7 @@ namespace Dota2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CPulse_RegisterInfo {
             public const nint m_nReg = 0x0; // PulseRuntimeRegisterIndex_t
-            public const nint m_Type = 0x8; // CPulseValueFullType
+            public const nint m_Type = 0x8; // CPulseType
             public const nint m_OriginName = 0x20; // CKV3MemberNameWithStorage
             public const nint m_nWrittenByInstruction = 0x58; // int32
             public const nint m_nLastReadByInstruction = 0x5C; // int32
@@ -1304,6 +1365,11 @@ namespace Dota2Dumper.Schemas {
         // Field count: 1
         public static class PulseRuntimeCellIndex_t {
             public const nint m_Value = 0x0; // int32
+        }
+        // Parent: None
+        // Field count: 1
+        public static class PulseRuntimeTempVarBankIndex_t {
+            public const nint m_Value = 0x0; // int16
         }
         // Parent: None
         // Field count: 1
@@ -1316,7 +1382,7 @@ namespace Dota2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CPulse_Constant {
-            public const nint m_Type = 0x0; // CPulseValueFullType
+            public const nint m_Type = 0x0; // CPulseType
             public const nint m_Value = 0x18; // KeyValues3
         }
         // Parent: None
@@ -1337,7 +1403,7 @@ namespace Dota2Dumper.Schemas {
         public static class CPulseRuntimeMethodArg {
             public const nint m_Name = 0x0; // CKV3MemberNameWithStorage
             public const nint m_Description = 0x38; // CUtlString
-            public const nint m_Type = 0x40; // CPulseValueFullType
+            public const nint m_Type = 0x40; // CPulseType
         }
         // Parent: None
         // Field count: 1

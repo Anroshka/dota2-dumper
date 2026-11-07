@@ -1,13 +1,13 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-08-04 02:35:54.030902600 UTC
+// 2026-11-07 09:16:29.927261200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod dota2_dumper {
     pub mod schemas {
         // Module: animationsystem.dll
-        // Class count: 662
-        // Enum count: 143
+        // Class count: 674
+        // Enum count: 145
         pub mod animationsystem_dll {
             // Alignment: 4
             // Member count: 2
@@ -84,7 +84,7 @@ pub mod dota2_dumper {
             // Member count: 4
             #[repr(u32)]
             pub enum BoneTransformSpace_t {
-                BoneTransformSpace_Invalid = u32::MAX,
+                BoneTransformSpace_Invalid = 0xFFFFFFFF,
                 BoneTransformSpace_Parent = 0x0,
                 BoneTransformSpace_Model = 0x1,
                 BoneTransformSpace_World = 0x2
@@ -146,7 +146,7 @@ pub mod dota2_dumper {
             // Member count: 5
             #[repr(u32)]
             pub enum ParticleFloatBiasType_t {
-                PF_BIAS_TYPE_INVALID = u32::MAX,
+                PF_BIAS_TYPE_INVALID = 0xFFFFFFFF,
                 PF_BIAS_TYPE_STANDARD = 0x0,
                 PF_BIAS_TYPE_GAIN = 0x1,
                 PF_BIAS_TYPE_EXPONENTIAL = 0x2,
@@ -165,7 +165,7 @@ pub mod dota2_dumper {
             // Member count: 6
             #[repr(u8)]
             pub enum SharedMovementGait_t {
-                eInvalid = u8::MAX,
+                eInvalid = 0xFF,
                 eSlow = 0x0,
                 eMedium = 0x1,
                 eFast = 0x2,
@@ -189,10 +189,10 @@ pub mod dota2_dumper {
                 IKTARGETCOORDINATESYSTEM_COUNT = 0x2
             }
             // Alignment: 4
-            // Member count: 33
+            // Member count: 34
             #[repr(u32)]
             pub enum ParticleFloatType_t {
-                PF_TYPE_INVALID = u32::MAX,
+                PF_TYPE_INVALID = 0xFFFFFFFF,
                 PF_TYPE_LITERAL = 0x0,
                 PF_TYPE_NAMED_VALUE = 0x1,
                 PF_TYPE_RANDOM_UNIFORM = 0x2,
@@ -202,29 +202,30 @@ pub mod dota2_dumper {
                 PF_TYPE_CONTROL_POINT_COMPONENT = 0x6,
                 PF_TYPE_CONTROL_POINT_CHANGE_AGE = 0x7,
                 PF_TYPE_CONTROL_POINT_SPEED = 0x8,
-                PF_TYPE_PARTICLE_DETAIL_LEVEL = 0x9,
-                PF_TYPE_CONCURRENT_DEF_COUNT = 0xA,
-                PF_TYPE_CLOSEST_CAMERA_DISTANCE = 0xB,
-                PF_TYPE_SNAPSHOT_COUNT = 0xC,
-                PF_TYPE_SNAPSHOT_CHANGED = 0xD,
-                PF_TYPE_CONTROL_POINT_IS_SET = 0xE,
-                PF_TYPE_RENDERER_CAMERA_DISTANCE = 0xF,
-                PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT = 0x10,
-                PF_TYPE_PARTICLE_NOISE = 0x11,
-                PF_TYPE_PARTICLE_AGE = 0x12,
-                PF_TYPE_PARTICLE_AGE_NORMALIZED = 0x13,
-                PF_TYPE_PARTICLE_FLOAT = 0x14,
-                PF_TYPE_PARTICLE_INITIAL_FLOAT = 0x15,
-                PF_TYPE_PARTICLE_VECTOR_COMPONENT = 0x16,
-                PF_TYPE_PARTICLE_INITIAL_VECTOR_COMPONENT = 0x17,
-                PF_TYPE_PARTICLE_SPEED = 0x18,
-                PF_TYPE_PARTICLE_NUMBER = 0x19,
-                PF_TYPE_PARTICLE_NUMBER_NORMALIZED = 0x1A,
-                PF_TYPE_PARTICLE_ROPE_SEGMENT = 0x1B,
-                PF_TYPE_PARTICLE_ROPE_SEGMENT_NORMALIZED = 0x1C,
-                PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE = 0x1D,
-                PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT = 0x1E,
-                PF_TYPE_COUNT = 0x1F
+                PF_TYPE_CONTROL_POINT_DISTANCE = 0x9,
+                PF_TYPE_PARTICLE_DETAIL_LEVEL = 0xA,
+                PF_TYPE_CONCURRENT_DEF_COUNT = 0xB,
+                PF_TYPE_CLOSEST_CAMERA_DISTANCE = 0xC,
+                PF_TYPE_SNAPSHOT_COUNT = 0xD,
+                PF_TYPE_SNAPSHOT_CHANGED = 0xE,
+                PF_TYPE_CONTROL_POINT_IS_SET = 0xF,
+                PF_TYPE_RENDERER_CAMERA_DISTANCE = 0x10,
+                PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT = 0x11,
+                PF_TYPE_PARTICLE_NOISE = 0x12,
+                PF_TYPE_PARTICLE_AGE = 0x13,
+                PF_TYPE_PARTICLE_AGE_NORMALIZED = 0x14,
+                PF_TYPE_PARTICLE_FLOAT = 0x15,
+                PF_TYPE_PARTICLE_INITIAL_FLOAT = 0x16,
+                PF_TYPE_PARTICLE_VECTOR_COMPONENT = 0x17,
+                PF_TYPE_PARTICLE_INITIAL_VECTOR_COMPONENT = 0x18,
+                PF_TYPE_PARTICLE_SPEED = 0x19,
+                PF_TYPE_PARTICLE_NUMBER = 0x1A,
+                PF_TYPE_PARTICLE_NUMBER_NORMALIZED = 0x1B,
+                PF_TYPE_PARTICLE_ROPE_SEGMENT = 0x1C,
+                PF_TYPE_PARTICLE_ROPE_SEGMENT_NORMALIZED = 0x1D,
+                PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE = 0x1E,
+                PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT = 0x1F,
+                PF_TYPE_COUNT = 0x20
             }
             // Alignment: 1
             // Member count: 4
@@ -355,9 +356,9 @@ pub mod dota2_dumper {
                 ConditionallyAllowed = 0x2,
                 Blocked = 0x3
             }
-            // Alignment: 1
-            // Member count: 8
-            #[repr(u8)]
+            // Alignment: 2
+            // Member count: 10
+            #[repr(u16)]
             pub enum ModelMeshBufferUsage_t {
                 MESH_BUFFER_USAGE_NONE = 0x0,
                 MESH_BUFFER_USAGE_VB = 0x1,
@@ -366,7 +367,9 @@ pub mod dota2_dumper {
                 MESH_BUFFER_USAGE_MESHLET_TRIS = 0x8,
                 MESH_BUFFER_USAGE_RT_PROXY = 0x10,
                 MESH_BUFFER_USAGE_VERTEX_ALBEDO = 0x20,
-                MESH_BUFFER_USAGE_VERTEX_EMISSIVE = 0x40
+                MESH_BUFFER_USAGE_VERTEX_EMISSIVE = 0x40,
+                MESH_BUFFER_USAGE_MESHLETS = 0x80,
+                MESH_BUFFER_USAGE_ALIAS_TABLE = 0x100
             }
             // Alignment: 4
             // Member count: 2
@@ -557,7 +560,7 @@ pub mod dota2_dumper {
             // Member count: 5
             #[repr(u32)]
             pub enum ParticleFloatRoundType_t {
-                PF_ROUND_TYPE_INVALID = u32::MAX,
+                PF_ROUND_TYPE_INVALID = 0xFFFFFFFF,
                 PF_ROUND_TYPE_NEAREST = 0x0,
                 PF_ROUND_TYPE_FLOOR = 0x1,
                 PF_ROUND_TYPE_CEIL = 0x2,
@@ -628,7 +631,7 @@ pub mod dota2_dumper {
             // Member count: 4
             #[repr(u32)]
             pub enum ModelBoneFlexComponent_t {
-                MODEL_BONE_FLEX_INVALID = u32::MAX,
+                MODEL_BONE_FLEX_INVALID = 0xFFFFFFFF,
                 MODEL_BONE_FLEX_TX = 0x0,
                 MODEL_BONE_FLEX_TY = 0x1,
                 MODEL_BONE_FLEX_TZ = 0x2
@@ -647,6 +650,13 @@ pub mod dota2_dumper {
                 POSETYPE_STATIC = 0x0,
                 POSETYPE_DYNAMIC = 0x1,
                 POSETYPE_INVALID = 0xFF
+            }
+            // Alignment: 4
+            // Member count: 2
+            #[repr(u32)]
+            pub enum CNmClothEvent__Type_t {
+                Stiffen = 0x0,
+                Effect = 0x1
             }
             // Alignment: 1
             // Member count: 2
@@ -807,10 +817,10 @@ pub mod dota2_dumper {
                 FLAG0_SHIFT_BREAKABLE_TORQUE = 0x3
             }
             // Alignment: 4
-            // Member count: 9
+            // Member count: 12
             #[repr(u32)]
             pub enum ParticleFloatMapType_t {
-                PF_MAP_TYPE_INVALID = u32::MAX,
+                PF_MAP_TYPE_INVALID = 0xFFFFFFFF,
                 PF_MAP_TYPE_DIRECT = 0x0,
                 PF_MAP_TYPE_MULT = 0x1,
                 PF_MAP_TYPE_REMAP = 0x2,
@@ -818,7 +828,10 @@ pub mod dota2_dumper {
                 PF_MAP_TYPE_CURVE = 0x4,
                 PF_MAP_TYPE_NOTCHED = 0x5,
                 PF_MAP_TYPE_ROUND = 0x6,
-                PF_MAP_TYPE_COUNT = 0x7
+                PF_MAP_TYPE_MIN = 0x7,
+                PF_MAP_TYPE_MAX = 0x8,
+                PF_MAP_TYPE_MOD = 0x9,
+                PF_MAP_TYPE_COUNT = 0xA
             }
             // Alignment: 4
             // Member count: 5
@@ -905,6 +918,13 @@ pub mod dota2_dumper {
                 FLAG_RIGIDLENGTH = 0x200000,
                 FLAG_PROCEDURAL = 0x400000
             }
+            // Alignment: 1
+            // Member count: 2
+            #[repr(u8)]
+            pub enum CNmOrientationWarpNode__AlignmentMode_t {
+                MovementDirection = 0x0,
+                AnimationEndFacing = 0x1
+            }
             // Alignment: 4
             // Member count: 3
             #[repr(u32)]
@@ -941,7 +961,7 @@ pub mod dota2_dumper {
             // Member count: 4
             #[repr(u32)]
             pub enum ParticleFloatInputMode_t {
-                PF_INPUT_MODE_INVALID = u32::MAX,
+                PF_INPUT_MODE_INVALID = 0xFFFFFFFF,
                 PF_INPUT_MODE_CLAMPED = 0x0,
                 PF_INPUT_MODE_LOOPED = 0x1,
                 PF_INPUT_MODE_COUNT = 0x2
@@ -1002,7 +1022,7 @@ pub mod dota2_dumper {
             // Member count: 4
             #[repr(u32)]
             pub enum ParticleFloatRandomMode_t {
-                PF_RANDOM_MODE_INVALID = u32::MAX,
+                PF_RANDOM_MODE_INVALID = 0xFFFFFFFF,
                 PF_RANDOM_MODE_CONSTANT = 0x0,
                 PF_RANDOM_MODE_VARYING = 0x1,
                 PF_RANDOM_MODE_COUNT = 0x2
@@ -1020,7 +1040,7 @@ pub mod dota2_dumper {
             // Member count: 21
             #[repr(u32)]
             pub enum ParticleVecType_t {
-                PVEC_TYPE_INVALID = u32::MAX,
+                PVEC_TYPE_INVALID = 0xFFFFFFFF,
                 PVEC_TYPE_LITERAL = 0x0,
                 PVEC_TYPE_LITERAL_COLOR = 0x1,
                 PVEC_TYPE_NAMED_VALUE = 0x2,
@@ -1160,7 +1180,7 @@ pub mod dota2_dumper {
             // Member count: 3
             #[repr(u16)]
             pub enum AnimScriptType {
-                ANIMSCRIPT_TYPE_INVALID = u16::MAX,
+                ANIMSCRIPT_TYPE_INVALID = 0xFFFF,
                 ANIMSCRIPT_FUSE_GENERAL = 0x0,
                 ANIMSCRIPT_FUSE_STATEMACHINE = 0x1
             }
@@ -1211,7 +1231,7 @@ pub mod dota2_dumper {
             // Member count: 4
             #[repr(u32)]
             pub enum HandshakeTagType_t {
-                eInvalid = u32::MAX,
+                eInvalid = 0xFFFFFFFF,
                 eTask = 0x0,
                 eMovement = 0x1,
                 eCount = 0x2
@@ -1247,7 +1267,7 @@ pub mod dota2_dumper {
             // Member count: 18
             #[repr(u32)]
             pub enum ParticleAttachment_t {
-                PATTACH_INVALID = u32::MAX,
+                PATTACH_INVALID = 0xFFFFFFFF,
                 PATTACH_ABSORIGIN = 0x0,
                 PATTACH_ABSORIGIN_FOLLOW = 0x1,
                 PATTACH_CUSTOMORIGIN = 0x2,
@@ -1270,7 +1290,7 @@ pub mod dota2_dumper {
             // Member count: 4
             #[repr(u32)]
             pub enum CNmEventTargetEntity_t {
-                Self = 0x0,
+                Self_ = 0x0,
                 Weapon = 0x1,
                 HeldItem = 0x2,
                 Custom = 0x3
@@ -1331,7 +1351,7 @@ pub mod dota2_dumper {
             // Member count: 4
             #[repr(u32)]
             pub enum ScriptedHeldWeaponBehavior_t {
-                eInvalid = u32::MAX,
+                eInvalid = 0xFFFFFFFF,
                 eHolster = 0x0,
                 eDeploy = 0x1,
                 eDrop = 0x2
@@ -1447,7 +1467,7 @@ pub mod dota2_dumper {
             // Member count: 3
             #[repr(u8)]
             pub enum RenderMeshSlotType_t {
-                RENDERMESH_SLOT_INVALID = u8::MAX,
+                RENDERMESH_SLOT_INVALID = 0xFF,
                 RENDERMESH_SLOT_PER_VERTEX = 0x0,
                 RENDERMESH_SLOT_PER_INSTANCE = 0x1
             }
@@ -1461,7 +1481,7 @@ pub mod dota2_dumper {
                 BlendSpace_Model_TranslationOnly = 0x3
             }
             // Alignment: 4
-            // Member count: 10
+            // Member count: 11
             #[repr(u32)]
             pub enum MovementCapability_t {
                 eStrafe = 0x0,
@@ -1473,13 +1493,14 @@ pub mod dota2_dumper {
                 ePlantedTurn = 0x6,
                 eUseStartAsPlantedTurn = 0x7,
                 eLean = 0x8,
-                eCount = 0x9
+                eForwardStartOnly = 0x9,
+                eCount = 0xA
             }
             // Alignment: 4
             // Member count: 5
             #[repr(u32)]
             pub enum ModelConfigAttachmentType_t {
-                MODEL_CONFIG_ATTACHMENT_INVALID = u32::MAX,
+                MODEL_CONFIG_ATTACHMENT_INVALID = 0xFFFFFFFF,
                 MODEL_CONFIG_ATTACHMENT_BONE_OR_ATTACHMENT = 0x0,
                 MODEL_CONFIG_ATTACHMENT_ROOT_RELATIVE = 0x1,
                 MODEL_CONFIG_ATTACHMENT_BONEMERGE = 0x2,
@@ -1531,6 +1552,15 @@ pub mod dota2_dumper {
                 pub const m_nDesiredKillPriority: usize = 0x12C; // PulseCursorCancelPriority_t
             }
             // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CPulseCell_RaceCursors {
+                pub const m_Outflows: usize = 0xD8; // CUtlVector<CPulse_OutflowConnection>
+                pub const m_OnFinished: usize = 0xF0; // CPulse_ResumePoint
+            }
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -1569,7 +1599,7 @@ pub mod dota2_dumper {
             // MPropertyDescription
             pub mod CPulseCell_WaitForObservable {
                 pub const m_Condition: usize = 0xD8; // CPulseObservableExpression<bool>
-                pub const m_OnTrue: usize = 0x150; // CPulse_ResumePoint
+                pub const m_OnTrue: usize = 0x168; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 4
@@ -1580,25 +1610,26 @@ pub mod dota2_dumper {
                 pub const m_OutflowRegisterMap: usize = 0x18; // PulseRegisterMap_t
             }
             // Parent: None
-            // Field count: 14
+            // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CPulseGraphDef {
                 pub const m_DomainIdentifier: usize = 0x8; // PulseSymbol_t
-                pub const m_DomainSubType: usize = 0x18; // CPulseValueFullType
+                pub const m_DomainSubType: usize = 0x18; // CPulseType
                 pub const m_ParentMapName: usize = 0x30; // PulseSymbol_t
                 pub const m_ParentXmlName: usize = 0x40; // PulseSymbol_t
                 pub const m_Chunks: usize = 0x50; // CUtlVector<CPulse_Chunk*>
                 pub const m_Cells: usize = 0x68; // CUtlVector<CPulseCell_Base*>
                 pub const m_Vars: usize = 0x80; // CUtlVector<CPulse_Variable>
-                pub const m_PublicOutputs: usize = 0x98; // CUtlVector<CPulse_PublicOutput>
-                pub const m_InvokeBindings: usize = 0xB0; // CUtlVector<CPulse_InvokeBinding*>
-                pub const m_CallInfos: usize = 0xC8; // CUtlVector<CPulse_CallInfo*>
-                pub const m_Constants: usize = 0xE0; // CUtlVector<CPulse_Constant>
-                pub const m_DomainValues: usize = 0xF8; // CUtlVector<CPulse_DomainValue>
-                pub const m_BlackboardReferences: usize = 0x110; // CUtlVector<CPulse_BlackboardReference>
-                pub const m_OutputConnections: usize = 0x128; // CUtlVector<CPulse_OutputConnection*>
+                pub const m_TempVarBanks: usize = 0x98; // CUtlVector<CPulse_TempVarBankDefinition*>
+                pub const m_PublicOutputs: usize = 0xB0; // CUtlVector<CPulse_PublicOutput>
+                pub const m_InvokeBindings: usize = 0xC8; // CUtlVector<CPulse_InvokeBinding*>
+                pub const m_CallInfos: usize = 0xE0; // CUtlVector<CPulse_CallInfo*>
+                pub const m_Constants: usize = 0xF8; // CUtlVector<CPulse_Constant>
+                pub const m_DomainValues: usize = 0x110; // CUtlVector<CPulse_DomainValue>
+                pub const m_BlackboardReferences: usize = 0x128; // CUtlVector<CPulse_BlackboardReference>
+                pub const m_OutputConnections: usize = 0x140; // CUtlVector<CPulse_OutputConnection*>
             }
             // Parent: None
             // Field count: 3
@@ -1814,7 +1845,7 @@ pub mod dota2_dumper {
             pub mod CPulseCell_Inflow_EntOutputHandler {
                 pub const m_SourceEntity: usize = 0x80; // PulseSymbol_t
                 pub const m_SourceOutput: usize = 0x90; // PulseSymbol_t
-                pub const m_ExpectedParamType: usize = 0xA0; // CPulseValueFullType
+                pub const m_ExpectedParamType: usize = 0xA0; // CPulseType
             }
             // Parent: None
             // Field count: 1
@@ -1876,6 +1907,17 @@ pub mod dota2_dumper {
                 pub const m_bSelfReference: usize = 0x82; // bool
             }
             // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            pub mod CPulseCell_ObservableSwitchState {
+                pub const m_SwitchValue: usize = 0xD8; // CPulseObservableExpression<CPulseVariant>
+                pub const m_Cases: usize = 0x168; // CPulseObservableSwitchCases
+            }
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -1920,8 +1962,8 @@ pub mod dota2_dumper {
                 pub const m_MethodName: usize = 0x80; // PulseSymbol_t
                 pub const m_Description: usize = 0x90; // CUtlString
                 pub const m_bIsPublic: usize = 0x98; // bool
-                pub const m_ReturnType: usize = 0xA0; // CPulseValueFullType
-                pub const m_Args: usize = 0xB8; // CUtlLeanVector<CPulseRuntimeMethodArg>
+                pub const m_Args: usize = 0xA0; // CUtlLeanVector<CPulseRuntimeMethodArg>
+                pub const m_ReturnValues: usize = 0xB0; // CUtlLeanVector<CPulseRuntimeMethodArg>
             }
             // Parent: None
             // Field count: 0
@@ -1940,8 +1982,8 @@ pub mod dota2_dumper {
             // MPulseEditorCanvasItemSpecKV3
             pub mod CPulseCell_BooleanSwitchState {
                 pub const m_Condition: usize = 0xD8; // CPulseObservableExpression<bool>
-                pub const m_WhenTrue: usize = 0x150; // CPulse_OutflowConnection
-                pub const m_WhenFalse: usize = 0x198; // CPulse_OutflowConnection
+                pub const m_WhenTrue: usize = 0x168; // CPulse_OutflowConnection
+                pub const m_WhenFalse: usize = 0x1B0; // CPulse_OutflowConnection
             }
             // Parent: None
             // Field count: 1
@@ -1988,6 +2030,13 @@ pub mod dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            pub mod CPulseCell_ReturnValues {
+            }
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseEditorHeaderIcon
@@ -2012,7 +2061,7 @@ pub mod dota2_dumper {
                 pub const m_nPriority: usize = 0x48; // int32
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -2023,6 +2072,8 @@ pub mod dota2_dumper {
                 pub const m_CallMethodID: usize = 0x48; // PulseDocNodeID_t
                 pub const m_nSrcChunk: usize = 0x4C; // PulseRuntimeChunkIndex_t
                 pub const m_nSrcInstruction: usize = 0x50; // int32
+                pub const m_nBreakDestChunk: usize = 0x54; // PulseRuntimeChunkIndex_t
+                pub const m_nBreakDestInstruction: usize = 0x58; // int32
             }
             // Parent: None
             // Field count: 4
@@ -3353,13 +3404,14 @@ pub mod dota2_dumper {
                 pub const m_id: usize = 0x0; // uint32
             }
             // Parent: None
-            // Field count: 17
+            // Field count: 18
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod VPhysXAggregateData_t {
                 pub const m_nFlags: usize = 0x0; // uint16
                 pub const m_nRefCounter: usize = 0x2; // uint16
+                pub const m_bCompoundsPacked: usize = 0x4; // bool
                 pub const m_bonesHash: usize = 0x8; // CUtlVector<uint32>
                 pub const m_boneNames: usize = 0x20; // CUtlVector<CUtlString>
                 pub const m_indexNames: usize = 0x38; // CUtlVector<uint16>
@@ -3714,7 +3766,7 @@ pub mod dota2_dumper {
                 pub const m_foot: usize = 0x58; // FootFallTagFoot_t
             }
             // Parent: None
-            // Field count: 18
+            // Field count: 19
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -3722,24 +3774,25 @@ pub mod dota2_dumper {
                 pub const m_flUvDensity: usize = 0x0; // float32
                 pub const m_vTintColor: usize = 0x4; // Vector
                 pub const m_flAlpha: usize = 0x10; // float32
-                pub const m_nNumMeshlets: usize = 0x16; // uint16
-                pub const m_nFirstMeshlet: usize = 0x1C; // uint32
-                pub const m_nAppliedIndexOffset: usize = 0x20; // uint32
-                pub const m_nDepthVertexBufferIndex: usize = 0x24; // uint8
-                pub const m_nMeshletPackedIVBIndex: usize = 0x25; // uint8
-                pub const m_rigidMeshParts: usize = 0x28; // CUtlLeanVector<CMaterialDrawDescriptor::RigidMeshPart_t>
-                pub const m_rootBvhNodes: usize = 0x38; // CUtlLeanVector<uint16>
-                pub const m_nPrimitiveType: usize = 0x48; // RenderPrimitiveType_t
-                pub const m_nBaseVertex: usize = 0x4C; // int32
-                pub const m_nVertexCount: usize = 0x50; // int32
-                pub const m_nStartIndex: usize = 0x54; // int32
-                pub const m_nIndexCount: usize = 0x58; // int32
-                pub const m_indexBuffer: usize = 0xC0; // CRenderBufferBinding
-                pub const m_meshletPackedIVB: usize = 0xE0; // CRenderBufferBinding
-                pub const m_material: usize = 0x110; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_nNumMeshlets: usize = 0x18; // uint32
+                pub const m_nFirstMeshlet: usize = 0x20; // uint32
+                pub const m_nAppliedIndexOffset: usize = 0x24; // uint32
+                pub const m_nEmissivePrimitiveCount: usize = 0x28; // int32
+                pub const m_nDepthVertexBufferIndex: usize = 0x2C; // uint8
+                pub const m_nMeshletPackedIVBIndex: usize = 0x2D; // uint8
+                pub const m_rigidMeshParts: usize = 0x30; // CUtlLeanVector<CMaterialDrawDescriptor::RigidMeshPart_t>
+                pub const m_rootBvhNodes: usize = 0x40; // CUtlLeanVector<uint16>
+                pub const m_nPrimitiveType: usize = 0x50; // RenderPrimitiveType_t
+                pub const m_nBaseVertex: usize = 0x54; // int32
+                pub const m_nVertexCount: usize = 0x58; // int32
+                pub const m_nStartIndex: usize = 0x5C; // int32
+                pub const m_nIndexCount: usize = 0x60; // int32
+                pub const m_indexBuffer: usize = 0xC8; // CRenderBufferBinding
+                pub const m_meshletPackedIVB: usize = 0xE8; // CRenderBufferBinding
+                pub const m_material: usize = 0x118; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
             // Parent: None
-            // Field count: 10
+            // Field count: 12
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -3750,10 +3803,12 @@ pub mod dota2_dumper {
                 pub const m_parentSpaceReferencePose: usize = 0x30; // CUtlVector<CTransform>
                 pub const m_modelSpaceReferencePose: usize = 0x48; // CUtlVector<CTransform>
                 pub const m_numBonesToSampleAtLowLOD: usize = 0x60; // int32
+                pub const m_bIsPropSkeleton: usize = 0x64; // bool
                 pub const m_maskDefinitions: usize = 0x88; // CUtlLeanVector<NmBoneMaskSetDefinition_t>
                 pub const m_secondarySkeletons: usize = 0xA8; // CUtlLeanVector<CNmSkeleton::SecondarySkeleton_t>
                 pub const m_floatChannelSets: usize = 0xB8; // CUtlLeanVector<CNmFloatChannelSet_t>
-                pub const m_bIsPropSkeleton: usize = 0xC8; // bool
+                pub const m_gameplayRelevantBoneIndices: usize = 0xC8; // CUtlVector<int32>
+                pub const m_nSpecialDependencyHash: usize = 0xE0; // int64
             }
             // Parent: None
             // Field count: 2
@@ -3774,6 +3829,20 @@ pub mod dota2_dumper {
             // Parent: None
             // Field count: 0
             pub mod CNmZeroPoseTask {
+            }
+            // Parent: None
+            // Field count: 7
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CNmClothEvent {
+                pub const m_type: usize = 0x18; // CNmClothEvent::Type_t
+                pub const m_flStiffness: usize = 0x1C; // float32
+                pub const m_flSpeedIn: usize = 0x20; // float32
+                pub const m_flSpeedOut: usize = 0x24; // float32
+                pub const m_flLengthSeconds: usize = 0x28; // float32
+                pub const m_vertexSetName: usize = 0x30; // CUtlString
+                pub const m_effectName: usize = 0x38; // CUtlString
             }
             // Parent: None
             // Field count: 2
@@ -3840,16 +3909,16 @@ pub mod dota2_dumper {
                 pub const m_vCPRelativePosition: usize = 0x90; // Vector
                 pub const m_vCPRelativeDir: usize = 0x9C; // Vector
                 pub const m_FloatComponentX: usize = 0xA8; // CParticleFloatInput
-                pub const m_FloatComponentY: usize = 0x218; // CParticleFloatInput
-                pub const m_FloatComponentZ: usize = 0x388; // CParticleFloatInput
-                pub const m_FloatInterp: usize = 0x4F8; // CParticleFloatInput
-                pub const m_flInterpInput0: usize = 0x668; // float32
-                pub const m_flInterpInput1: usize = 0x66C; // float32
-                pub const m_vInterpOutput0: usize = 0x670; // Vector
-                pub const m_vInterpOutput1: usize = 0x67C; // Vector
-                pub const m_Gradient: usize = 0x688; // CColorGradient
-                pub const m_vRandomMin: usize = 0x6A0; // Vector
-                pub const m_vRandomMax: usize = 0x6AC; // Vector
+                pub const m_FloatComponentY: usize = 0x220; // CParticleFloatInput
+                pub const m_FloatComponentZ: usize = 0x398; // CParticleFloatInput
+                pub const m_FloatInterp: usize = 0x510; // CParticleFloatInput
+                pub const m_flInterpInput0: usize = 0x688; // float32
+                pub const m_flInterpInput1: usize = 0x68C; // float32
+                pub const m_vInterpOutput0: usize = 0x690; // Vector
+                pub const m_vInterpOutput1: usize = 0x69C; // Vector
+                pub const m_Gradient: usize = 0x6A8; // CColorGradient
+                pub const m_vRandomMin: usize = 0x6C0; // Vector
+                pub const m_vRandomMax: usize = 0x6CC; // Vector
             }
             // Parent: None
             // Field count: 11
@@ -4023,6 +4092,11 @@ pub mod dota2_dumper {
             pub mod CMotionDataSet {
                 pub const m_groups: usize = 0x0; // CUtlVector<CMotionGraphGroup>
                 pub const m_nDimensionCount: usize = 0x18; // int32
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod ParticleAttributeIndex_t {
+                pub const m_Value: usize = 0x0; // int32
             }
             // Parent: None
             // Field count: 2
@@ -4214,10 +4288,10 @@ pub mod dota2_dumper {
             // MGetKV3ClassDefaults
             pub mod CNmClipNode__CDefinition {
                 pub const m_nPlayInReverseValueNodeIdx: usize = 0x10; // int16
-                pub const m_nResetTimeValueNodeIdx: usize = 0x12; // int16
-                pub const m_bSampleRootMotion: usize = 0x14; // bool
-                pub const m_bAllowLooping: usize = 0x15; // bool
-                pub const m_nDataSlotIdx: usize = 0x16; // int16
+                pub const m_bSampleRootMotion: usize = 0x12; // bool
+                pub const m_bAllowLooping: usize = 0x13; // bool
+                pub const m_nDataSlotIdx: usize = 0x14; // int16
+                pub const m_nResetTimeValueNodeIdx: usize = 0x16; // int16
                 pub const m_graphEvents: usize = 0x18; // CUtlVectorFixedGrowable<CGlobalSymbol,2>
                 pub const m_flSpeedMultiplier: usize = 0x40; // float32
                 pub const m_nStartSyncEventOffset: usize = 0x44; // int32
@@ -4381,7 +4455,7 @@ pub mod dota2_dumper {
             pub mod ParticleNamedValueSource_t {
                 pub const m_Name: usize = 0x0; // CUtlString
                 pub const m_IsPublic: usize = 0x8; // bool
-                pub const m_ValueType: usize = 0x10; // CPulseValueFullType
+                pub const m_ValueType: usize = 0x10; // CPulseType
                 pub const m_DefaultConfig: usize = 0x28; // ParticleNamedValueConfiguration_t
             }
             // Parent: None
@@ -4475,6 +4549,7 @@ pub mod dota2_dumper {
             // MGetKV3ClassDefaults
             // MFgdHelper
             // MFgdHelper
+            // MCustomFGDMetadata
             pub mod CNPCPhysicsHull {
                 pub const m_sName: usize = 0x0; // CGlobalSymbol
                 pub const m_eType: usize = 0x8; // NPCPhysicsHullType_t
@@ -4671,6 +4746,14 @@ pub mod dota2_dumper {
                 pub const m_flTransitionDurationSeconds: usize = 0x14; // float32
             }
             // Parent: None
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CNmCameraFOVEvent {
+                pub const m_curve: usize = 0x18; // CPiecewiseCurve
+            }
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -4763,6 +4846,23 @@ pub mod dota2_dumper {
                 pub const m_previousChoice: usize = 0x1C; // int32
                 pub const m_flClipStartTime: usize = 0x20; // CAnimNetVar<float32>
                 pub const m_choicePreviousCycle: usize = 0x2C; // float32
+            }
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MVDataOverlayType
+            // MVDataAssociatedFile
+            pub mod CNmContactAudioTypeVData {
+            }
+            // Parent: None
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CNmCameraDOFEvent {
+                pub const m_curve: usize = 0x18; // CPiecewiseCurve
             }
             // Parent: None
             // Field count: 9
@@ -5330,7 +5430,7 @@ pub mod dota2_dumper {
             // MPropertyCustomEditor
             pub mod CParticleVariableRef {
                 pub const m_variableName: usize = 0x0; // CKV3MemberNameWithStorage
-                pub const m_variableType: usize = 0x38; // CPulseValueFullType
+                pub const m_variableType: usize = 0x38; // CPulseType
             }
             // Parent: None
             // Field count: 4
@@ -5473,7 +5573,7 @@ pub mod dota2_dumper {
                 pub const m_bCreateBufferUAV: usize = 0x11; // bool
                 pub const m_bCreateRawBuffer: usize = 0x12; // bool
                 pub const m_bCreatePooledBuffer: usize = 0x13; // bool
-                pub const m_nBufferUsage: usize = 0x14; // uint8
+                pub const m_nBufferUsage: usize = 0x14; // uint16
                 pub const m_inputLayoutFields: usize = 0x18; // CUtlVector<RenderInputLayoutField_t>
             }
             // Parent: None
@@ -6014,7 +6114,7 @@ pub mod dota2_dumper {
                 pub const m_trajectories: usize = 0x40; // CFootTrajectories
             }
             // Parent: None
-            // Field count: 13
+            // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -6022,16 +6122,18 @@ pub mod dota2_dumper {
                 pub const m_materialGroupToken: usize = 0x0; // uint32
                 pub const m_nSrcDrawIndex: usize = 0x4; // int32
                 pub const m_drawDesc: usize = 0x8; // CMaterialDrawDescriptor
-                pub const m_mWorldFromLocal: usize = 0x120; // matrix3x4_t
-                pub const m_nVertexAlbedoFormat: usize = 0x150; // VertexAlbedoFormat_t
-                pub const m_nVertexAlbedoVB: usize = 0x151; // int8
-                pub const m_nVertexAlbedoOffset: usize = 0x152; // uint16
-                pub const m_nVertexAlbedoStride: usize = 0x154; // uint16
-                pub const m_nVertexEmissiveFormat: usize = 0x156; // VertexAlbedoFormat_t
-                pub const m_nVertexEmissiveVB: usize = 0x157; // int8
-                pub const m_nVertexEmissiveOffset: usize = 0x158; // uint16
-                pub const m_nVertexEmissiveStride: usize = 0x15A; // uint16
-                pub const m_fEmissiveFactor: usize = 0x15C; // float32
+                pub const m_mWorldFromLocal: usize = 0x128; // matrix3x4_t
+                pub const m_nVertexAlbedoFormat: usize = 0x158; // VertexAlbedoFormat_t
+                pub const m_nVertexAlbedoVB: usize = 0x159; // int8
+                pub const m_nVertexAlbedoOffset: usize = 0x15A; // uint16
+                pub const m_nVertexAlbedoStride: usize = 0x15C; // uint16
+                pub const m_nVertexEmissiveFormat: usize = 0x15E; // VertexAlbedoFormat_t
+                pub const m_nVertexEmissiveVB: usize = 0x15F; // int8
+                pub const m_nVertexEmissiveOffset: usize = 0x160; // uint16
+                pub const m_nVertexEmissiveStride: usize = 0x162; // uint16
+                pub const m_fEmissiveFactor: usize = 0x164; // float32
+                pub const m_nAliasTableIB: usize = 0x168; // int8
+                pub const m_fTriangleAreaSize: usize = 0x16C; // float32
             }
             // Parent: None
             // Field count: 2
@@ -6324,7 +6426,7 @@ pub mod dota2_dumper {
                 pub const m_nInputValueNodeIdx: usize = 0x10; // int16
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -6335,6 +6437,7 @@ pub mod dota2_dumper {
                 pub const m_nTriangleOffset: usize = 0x10; // uint32
                 pub const m_nVertexCount: usize = 0x14; // uint8
                 pub const m_nTriangleCount: usize = 0x15; // uint8
+                pub const m_nBoneIndex: usize = 0x16; // uint16
             }
             // Parent: None
             // Field count: 8
@@ -6485,6 +6588,15 @@ pub mod dota2_dumper {
                 pub const m_bDisabled: usize = 0x0; // bitfield:1
             }
             // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CNmContactEvent {
+                pub const m_attachmentOrBoneID: usize = 0x18; // CGlobalSymbol
+                pub const m_audioInfo: usize = 0x20; // NmContactAudioInfo_t
+            }
+            // Parent: None
             // Field count: 0
             //
             // Metadata:
@@ -6586,6 +6698,16 @@ pub mod dota2_dumper {
                 pub const m_decodeKey: usize = 0x98; // CAnimKeyData
                 pub const m_szScripts: usize = 0x110; // CUtlVector<CBufferString>
                 pub const m_AdditionalExtRefs: usize = 0x128; // CUtlVector<CStrongHandleVoid>
+            }
+            // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod NmContactAudioInfo_t {
+                pub const m_audioActionID: usize = 0x0; // CGlobalSymbol
+                pub const m_audioTypeID: usize = 0x8; // CGlobalSymbol
+                pub const m_soundeventOverrideID: usize = 0x10; // CGlobalSymbol
             }
             // Parent: None
             // Field count: 2
@@ -6863,12 +6985,25 @@ pub mod dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            pub mod CNmTimeControlledClipNode__CDefinition {
+                pub const m_nPlayInReverseValueNodeIdx: usize = 0x10; // int16
+                pub const m_bSampleRootMotion: usize = 0x12; // bool
+                pub const m_nDataSlotIdx: usize = 0x14; // int16
+                pub const m_nTimeValueNodeIdx: usize = 0x16; // int16
+                pub const m_graphEvents: usize = 0x18; // CUtlVectorFixedGrowable<CGlobalSymbol,2>
+            }
+            // Parent: None
+            // Field count: 6
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             pub mod VPhysics2ShapeDef_t {
-                pub const m_spheres: usize = 0x0; // CUtlVector<RnSphereDesc_t>
-                pub const m_capsules: usize = 0x18; // CUtlVector<RnCapsuleDesc_t>
-                pub const m_hulls: usize = 0x30; // CUtlVector<RnHullDesc_t>
-                pub const m_meshes: usize = 0x48; // CUtlVector<RnMeshDesc_t>
-                pub const m_CollisionAttributeIndices: usize = 0x60; // CUtlVector<uint16>
+                pub const m_spheres: usize = 0x0; // CUtlLeanVector<RnSphereDesc_t>
+                pub const m_capsules: usize = 0x10; // CUtlLeanVector<RnCapsuleDesc_t>
+                pub const m_hulls: usize = 0x20; // CUtlLeanVector<RnHullDesc_t>
+                pub const m_meshes: usize = 0x30; // CUtlLeanVector<RnMeshDesc_t>
+                pub const m_compounds: usize = 0x40; // CUtlLeanVector<RnCompoundDesc_t>
+                pub const m_CollisionAttributeIndices: usize = 0x50; // CUtlVector<uint16>
             }
             // Parent: None
             // Field count: 2
@@ -7155,7 +7290,7 @@ pub mod dota2_dumper {
                 pub const m_bIsWorldSpaceTarget: usize = 0x12; // bool
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -7166,6 +7301,7 @@ pub mod dota2_dumper {
                 pub const m_parameterNodeIdx: usize = 0x30; // int16
                 pub const m_bIgnoreInvalidOptions: usize = 0x32; // bool
                 pub const m_bIsWorldSpaceTarget: usize = 0x33; // bool
+                pub const m_alignmentBoneID: usize = 0x38; // CGlobalSymbol
             }
             // Parent: None
             // Field count: 0
@@ -7249,18 +7385,11 @@ pub mod dota2_dumper {
                 pub const m_inputList: usize = 0x60; // CUtlVector<CBoneConstraintPoseSpaceBone::Input_t>
             }
             // Parent: None
-            // Field count: 10
+            // Field count: 3
             pub mod CNmTwoBoneIKTask {
                 pub const m_nEffectorBoneIdx: usize = 0x70; // int32
                 pub const m_nEffectorTargetBoneIdx: usize = 0x74; // int32
                 pub const m_targetTransform: usize = 0x80; // CTransform
-                pub const m_effectorTarget: usize = 0xA0; // CNmTarget
-                pub const m_blendMode: usize = 0xD0; // NmIKBlendMode_t
-                pub const m_flBlendWeight: usize = 0xD4; // float32
-                pub const m_bIsTargetInWorldSpace: usize = 0xD8; // bool
-                pub const m_bIsRunningFromDeserializedData: usize = 0xD9; // bool
-                pub const m_flChainRotationWeight: usize = 0xDC; // float32
-                pub const m_debugEffectorBoneID: usize = 0xE0; // CGlobalSymbol
             }
             // Parent: None
             // Field count: 2
@@ -7294,6 +7423,15 @@ pub mod dota2_dumper {
                 pub const m_fMinValue: usize = 0x84; // float32
                 pub const m_fMaxValue: usize = 0x88; // float32
                 pub const m_bInterpolate: usize = 0x8C; // bool
+            }
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MVDataOverlayType
+            // MVDataAssociatedFile
+            pub mod CNmContactAudioActionVData {
             }
             // Parent: None
             // Field count: 2
@@ -7768,7 +7906,7 @@ pub mod dota2_dumper {
             pub mod CLeafUpdateNode {
             }
             // Parent: None
-            // Field count: 49
+            // Field count: 50
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -7823,6 +7961,7 @@ pub mod dota2_dumper {
                 pub const m_nBiasType: usize = 0x124; // ParticleFloatBiasType_t
                 pub const m_flBiasParameter: usize = 0x128; // float32
                 pub const m_Curve: usize = 0x130; // CPiecewiseCurve
+                pub const m_flCompareValue: usize = 0x170; // float32
             }
             // Parent: None
             // Field count: 1
@@ -8014,7 +8153,7 @@ pub mod dota2_dumper {
             pub mod CNmZeroPoseNode__CDefinition {
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -8024,7 +8163,8 @@ pub mod dota2_dumper {
                 pub const m_bIsOffsetNode: usize = 0x14; // bool
                 pub const m_bIsOffsetRelativeToCharacter: usize = 0x15; // bool
                 pub const m_bWarpTranslation: usize = 0x16; // bool
-                pub const m_samplingMode: usize = 0x17; // CNmRootMotionData::SamplingMode_t
+                pub const m_alignmentMode: usize = 0x17; // CNmOrientationWarpNode::AlignmentMode_t
+                pub const m_samplingMode: usize = 0x18; // CNmRootMotionData::SamplingMode_t
             }
             // Parent: None
             // Field count: 1
@@ -8219,15 +8359,15 @@ pub mod dota2_dumper {
                 pub const m_nFlags: usize = 0x0; // uint32
                 pub const m_flMass: usize = 0x4; // float32
                 pub const m_rnShape: usize = 0x8; // VPhysics2ShapeDef_t
-                pub const m_nCollisionAttributeIndex: usize = 0x80; // uint16
-                pub const m_nReserved: usize = 0x82; // uint16
-                pub const m_flInertiaScale: usize = 0x84; // float32
-                pub const m_flLinearDamping: usize = 0x88; // float32
-                pub const m_flAngularDamping: usize = 0x8C; // float32
-                pub const m_flLinearDrag: usize = 0x90; // float32
-                pub const m_flAngularDrag: usize = 0x94; // float32
-                pub const m_bOverrideMassCenter: usize = 0x98; // bool
-                pub const m_vMassCenterOverride: usize = 0x9C; // Vector
+                pub const m_nCollisionAttributeIndex: usize = 0x70; // uint16
+                pub const m_nReserved: usize = 0x72; // uint16
+                pub const m_flInertiaScale: usize = 0x74; // float32
+                pub const m_flLinearDamping: usize = 0x78; // float32
+                pub const m_flAngularDamping: usize = 0x7C; // float32
+                pub const m_flLinearDrag: usize = 0x80; // float32
+                pub const m_flAngularDrag: usize = 0x84; // float32
+                pub const m_bOverrideMassCenter: usize = 0x88; // bool
+                pub const m_vMassCenterOverride: usize = 0x8C; // Vector
             }
             // Parent: None
             // Field count: 0
@@ -8661,7 +8801,7 @@ pub mod dota2_dumper {
                 pub const m_animationLayers: usize = 0xE8; // CUtlVector<MoodAnimationLayer_t>
             }
             // Parent: None
-            // Field count: 13
+            // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -8679,6 +8819,8 @@ pub mod dota2_dumper {
                 pub const m_bUserSpecifiedMaterialGroup: usize = 0x8E; // bool
                 pub const m_BodygroupOnOtherModels: usize = 0x90; // CUtlString
                 pub const m_MaterialGroupOnOtherModels: usize = 0x98; // CUtlString
+                pub const m_bCollideWithHierarchy: usize = 0xA0; // bool
+                pub const m_bCollideOutsideHierarchy: usize = 0xA1; // bool
             }
             // Parent: None
             // Field count: 1

@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-08-04 02:35:54.030902600 UTC
+// 2026-11-07 09:16:29.927261200 UTC
 
 #pragma once
 
@@ -8,10 +8,10 @@
 
 namespace dota2_dumper {
     namespace schemas {
-        // Module: rendersystemdx11.dll
+        // Module: rendersystemvulkan.dll
         // Class count: 8
         // Enum count: 9
-        namespace rendersystemdx11_dll {
+        namespace rendersystemvulkan_dll {
             // Alignment: 4
             // Member count: 14
             enum class RenderPrimitiveType_t : uint32_t {

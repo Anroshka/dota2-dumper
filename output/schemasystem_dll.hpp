@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-08-04 02:35:54.030902600 UTC
+// 2026-11-07 09:16:29.927261200 UTC
 
 #pragma once
 
@@ -36,8 +36,8 @@ namespace dota2_dumper {
                 FIELD_INPUT = 0x12,
                 FIELD_FUNCTION = 0x13,
                 FIELD_VMATRIX = 0x14,
-                FIELD_VMATRIX_WORLDSPACE = 0x15,
-                FIELD_MATRIX3X4_WORLDSPACE = 0x16,
+                FIELD_xxxAvail1 = 0x15,
+                FIELD_xxxAvail2 = 0x16,
                 FIELD_INTERVAL = 0x17,
                 FIELD_UNUSED = 0x18,
                 FIELD_VECTOR2D = 0x19,

@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-08-04 02:35:54.030902600 UTC
+// 2026-11-07 09:16:29.927261200 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@
 namespace dota2_dumper {
     namespace schemas {
         // Module: engine2.dll
-        // Class count: 58
+        // Class count: 57
         // Enum count: 2
         namespace engine2_dll {
             // Alignment: 4
@@ -38,7 +38,7 @@ namespace dota2_dumper {
             // Field count: 0
             namespace CEntityComponent {
             }
-            // Parent: CEntityComponent
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -125,7 +125,7 @@ namespace dota2_dumper {
             namespace EventServerBeginSimulate_t {
             }
             // Parent: None
-            // Field count: 8
+            // Field count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -138,6 +138,8 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_hCaller = 0x24; // CEntityHandle
                 constexpr std::ptrdiff_t m_hEntTarget = 0x28; // CEntityHandle
                 constexpr std::ptrdiff_t m_variantValue = 0x30; // CVariantBase<CVariantDefaultAllocator>
+                constexpr std::ptrdiff_t m_PulseArguments = 0x40; // CPulseArgumentPack
+                constexpr std::ptrdiff_t m_paramMap = 0x78; // CPulseInputParamMap
             }
             // Parent: None
             // Field count: 0
@@ -146,10 +148,6 @@ namespace dota2_dumper {
             // Parent: None
             // Field count: 0
             namespace EventClientAdvanceTick_t {
-            }
-            // Parent: None
-            // Field count: 0
-            namespace EntInput_t {
             }
             // Parent: None
             // Field count: 1
@@ -339,7 +337,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_pNetworkDataReferencedPtrPropDescription = 0x18; // char*
                 constexpr std::ptrdiff_t m_nRuntimeIndex = 0x20; // int32
                 constexpr std::ptrdiff_t m_nFlags = 0x24; // uint32
-                constexpr std::ptrdiff_t m_pBaseClassComponentHelper = 0x60; // CEntityComponentHelper*
+                constexpr std::ptrdiff_t m_pBaseClassComponentHelper = 0x58; // CEntityComponentHelper*
             }
             // Parent: None
             // Field count: 4

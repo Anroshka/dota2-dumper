@@ -1,9 +1,9 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-08-04 02:35:54.030902600 UTC
+// 2026-11-07 09:16:29.927261200 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: engine2.dll
-    // Class count: 58
+    // Class count: 57
     // Enum count: 2
     public static class Engine2Dll {
         // Alignment: 4
@@ -32,7 +32,7 @@ namespace Dota2Dumper.Schemas {
         // Field count: 0
         public static class CEntityComponent {
         }
-        // Parent: CEntityComponent
+        // Parent: None
         // Field count: 1
         //
         // Metadata:
@@ -119,7 +119,7 @@ namespace Dota2Dumper.Schemas {
         public static class EventServerBeginSimulate_t {
         }
         // Parent: None
-        // Field count: 8
+        // Field count: 10
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -132,6 +132,8 @@ namespace Dota2Dumper.Schemas {
             public const nint m_hCaller = 0x24; // CEntityHandle
             public const nint m_hEntTarget = 0x28; // CEntityHandle
             public const nint m_variantValue = 0x30; // CVariantBase<CVariantDefaultAllocator>
+            public const nint m_PulseArguments = 0x40; // CPulseArgumentPack
+            public const nint m_paramMap = 0x78; // CPulseInputParamMap
         }
         // Parent: None
         // Field count: 0
@@ -140,10 +142,6 @@ namespace Dota2Dumper.Schemas {
         // Parent: None
         // Field count: 0
         public static class EventClientAdvanceTick_t {
-        }
-        // Parent: None
-        // Field count: 0
-        public static class EntInput_t {
         }
         // Parent: None
         // Field count: 1
@@ -333,7 +331,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_pNetworkDataReferencedPtrPropDescription = 0x18; // char*
             public const nint m_nRuntimeIndex = 0x20; // int32
             public const nint m_nFlags = 0x24; // uint32
-            public const nint m_pBaseClassComponentHelper = 0x60; // CEntityComponentHelper*
+            public const nint m_pBaseClassComponentHelper = 0x58; // CEntityComponentHelper*
         }
         // Parent: None
         // Field count: 4

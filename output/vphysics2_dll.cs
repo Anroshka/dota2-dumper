@@ -1,9 +1,9 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-08-04 02:35:54.030902600 UTC
+// 2026-11-07 09:16:29.927261200 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: vphysics2.dll
-    // Class count: 113
+    // Class count: 117
     // Enum count: 5
     public static class Vphysics2Dll {
         // Alignment: 4
@@ -62,6 +62,14 @@ namespace Dota2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        public static class RnCompoundDesc_t {
+            public const nint m_Compound = 0x18; // RnCompound_t
+        }
+        // Parent: None
+        // Field count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
         public static class RnSoftbodyParticle_t {
             public const nint m_flMassInv = 0x0; // float32
         }
@@ -82,7 +90,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_Capsule = 0x18; // RnCapsule_t
         }
         // Parent: None
-        // Field count: 111
+        // Field count: 115
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -112,92 +120,96 @@ namespace Dota2Dumper.Schemas {
             public const nint m_Quads = 0xA8; // CUtlVector<FeQuad_t>
             public const nint m_SimdQuads = 0xC0; // CUtlVector<FeSimdQuad_t>
             public const nint m_SimdTris = 0xD8; // CUtlVector<FeSimdTri_t>
-            public const nint m_SimdRods = 0xF0; // CUtlVector<FeSimdRodConstraint_t>
-            public const nint m_SimdRodsAnim = 0x108; // CUtlVector<FeSimdRodConstraintAnim_t>
-            public const nint m_InitPose = 0x120; // CUtlVector<CTransform>
-            public const nint m_Rods = 0x138; // CUtlVector<FeRodConstraint_t>
-            public const nint m_Twists = 0x150; // CUtlVector<FeTwistConstraint_t>
-            public const nint m_HingeLimits = 0x168; // CUtlVector<FeHingeLimit_t>
-            public const nint m_AntiTunnelBytecode = 0x180; // CUtlVector<uint32>
-            public const nint m_DynKinLinks = 0x198; // CUtlVector<FeDynKinLink_t>
-            public const nint m_BoneMergeLinks = 0x1B0; // CUtlVector<FeBoneMergeLink_t>
-            public const nint m_AntiTunnelProbes = 0x1C8; // CUtlVector<FeAntiTunnelProbe_t>
-            public const nint m_AntiTunnelTargetNodes = 0x1E0; // CUtlVector<uint16>
-            public const nint m_NodeStrayBoxes = 0x1F8; // CUtlVector<FeNodeStrayBox_t>
-            public const nint m_AxialEdges = 0x210; // CUtlVector<FeAxialEdgeBend_t>
-            public const nint m_NodeInvMasses = 0x228; // CUtlVector<float32>
-            public const nint m_CtrlOffsets = 0x240; // CUtlVector<FeCtrlOffset_t>
-            public const nint m_CtrlOsOffsets = 0x258; // CUtlVector<FeCtrlOsOffset_t>
-            public const nint m_FollowNodes = 0x270; // CUtlVector<FeFollowNode_t>
-            public const nint m_CollisionPlanes = 0x288; // CUtlVector<FeCollisionPlane_t>
-            public const nint m_NodeIntegrator = 0x2A0; // CUtlVector<FeNodeIntegrator_t>
-            public const nint m_SpringIntegrator = 0x2B8; // CUtlVector<FeSpringIntegrator_t>
-            public const nint m_SimdSpringIntegrator = 0x2D0; // CUtlVector<FeSimdSpringIntegrator_t>
-            public const nint m_WorldCollisionParams = 0x2E8; // CUtlVector<FeWorldCollisionParams_t>
-            public const nint m_LegacyStretchForce = 0x300; // CUtlVector<float32>
-            public const nint m_NodeCollisionRadii = 0x318; // CUtlVector<float32>
-            public const nint m_DynNodeFriction = 0x330; // CUtlVector<float32>
-            public const nint m_LocalRotation = 0x348; // CUtlVector<float32>
-            public const nint m_LocalForce = 0x360; // CUtlVector<float32>
-            public const nint m_TaperedCapsuleStretches = 0x378; // CUtlVector<FeTaperedCapsuleStretch_t>
-            public const nint m_TaperedCapsuleRigids = 0x390; // CUtlVector<FeTaperedCapsuleRigid_t>
-            public const nint m_SphereRigids = 0x3A8; // CUtlVector<FeSphereRigid_t>
-            public const nint m_WorldCollisionNodes = 0x3C0; // CUtlVector<uint16>
-            public const nint m_TreeParents = 0x3D8; // CUtlVector<uint16>
-            public const nint m_TreeCollisionMasks = 0x3F0; // CUtlVector<uint16>
-            public const nint m_TreeChildren = 0x408; // CUtlVector<FeTreeChildren_t>
-            public const nint m_FreeNodes = 0x420; // CUtlVector<uint16>
-            public const nint m_FitMatrices = 0x438; // CUtlVector<FeFitMatrix_t>
-            public const nint m_FitWeights = 0x450; // CUtlVector<FeFitWeight_t>
-            public const nint m_ReverseOffsets = 0x468; // CUtlVector<FeNodeReverseOffset_t>
-            public const nint m_AnimStrayRadii = 0x480; // CUtlVector<FeAnimStrayRadius_t>
-            public const nint m_SimdAnimStrayRadii = 0x498; // CUtlVector<FeSimdAnimStrayRadius_t>
-            public const nint m_KelagerBends = 0x4B0; // CUtlVector<FeKelagerBend2_t>
-            public const nint m_CtrlSoftOffsets = 0x4C8; // CUtlVector<FeCtrlSoftOffset_t>
-            public const nint m_JiggleBones = 0x4E0; // CUtlVector<CFeIndexedJiggleBone>
-            public const nint m_SourceElems = 0x4F8; // CUtlVector<uint16>
-            public const nint m_GoalDampedSpringIntegrators = 0x510; // CUtlVector<uint32>
-            public const nint m_Tris = 0x528; // CUtlVector<FeTri_t>
-            public const nint m_nTriCount1 = 0x540; // uint16
-            public const nint m_nTriCount2 = 0x542; // uint16
-            public const nint m_nReservedUint8 = 0x544; // uint8
-            public const nint m_nExtraPressureIterations = 0x545; // uint8
-            public const nint m_nExtraGoalIterations = 0x546; // uint8
-            public const nint m_nExtraIterations = 0x547; // uint8
-            public const nint m_SDFRigids = 0x548; // CUtlVector<FeSDFRigid_t>
-            public const nint m_BoxRigids = 0x560; // CUtlVector<FeBoxRigid_t>
-            public const nint m_DynNodeVertexSet = 0x578; // CUtlVector<uint8>
-            public const nint m_VertexSetNames = 0x590; // CUtlVector<uint32>
-            public const nint m_RigidColliderPriorities = 0x5A8; // CUtlVector<FeRigidColliderIndices_t>
-            public const nint m_MorphLayers = 0x5C0; // CUtlVector<FeMorphLayerDepr_t>
-            public const nint m_MorphSetData = 0x5D8; // CUtlVector<uint8>
-            public const nint m_VertexMaps = 0x5F0; // CUtlVector<FeVertexMapDesc_t>
-            public const nint m_VertexMapValues = 0x608; // CUtlVector<uint8>
-            public const nint m_Effects = 0x620; // CUtlVector<FeEffectDesc_t>
-            public const nint m_LockToParent = 0x638; // CUtlVector<FeCtrlOffset_t>
-            public const nint m_LockToGoal = 0x650; // CUtlVector<uint16>
-            public const nint m_SkelParents = 0x668; // CUtlVector<int16>
-            public const nint m_DynNodeWindBases = 0x680; // CUtlVector<FeNodeWindBase_t>
-            public const nint m_SelfCollisionLayers = 0x698; // CUtlVector<FeModelSelfCollisionLayer_t>
-            public const nint m_flInternalPressure = 0x6B0; // float32
-            public const nint m_flDefaultTimeDilation = 0x6B4; // float32
-            public const nint m_flWindage = 0x6B8; // float32
-            public const nint m_flWindDrag = 0x6BC; // float32
-            public const nint m_flDefaultSurfaceStretch = 0x6C0; // float32
-            public const nint m_flDefaultThreadStretch = 0x6C4; // float32
-            public const nint m_flDefaultGravityScale = 0x6C8; // float32
-            public const nint m_flDefaultVelAirDrag = 0x6CC; // float32
-            public const nint m_flDefaultExpAirDrag = 0x6D0; // float32
-            public const nint m_flDefaultVelQuadAirDrag = 0x6D4; // float32
-            public const nint m_flDefaultExpQuadAirDrag = 0x6D8; // float32
-            public const nint m_flRodVelocitySmoothRate = 0x6DC; // float32
-            public const nint m_flQuadVelocitySmoothRate = 0x6E0; // float32
-            public const nint m_flAddWorldCollisionRadius = 0x6E4; // float32
-            public const nint m_flDefaultVolumetricSolveAmount = 0x6E8; // float32
-            public const nint m_flMotionSmoothCDT = 0x6EC; // float32
-            public const nint m_flLocalDrag1 = 0x6F0; // float32
-            public const nint m_nRodVelocitySmoothIterations = 0x6F4; // uint16
-            public const nint m_nQuadVelocitySmoothIterations = 0x6F6; // uint16
+            public const nint m_Prisms = 0xF0; // CUtlVector<FePrism_t>
+            public const nint m_PrismVolumes = 0x108; // CUtlVector<float32>
+            public const nint m_SimdPrisms = 0x120; // CUtlVector<FeSimdPrism_t>
+            public const nint m_SimdPrismVolumes = 0x138; // CUtlVector<fltx4>
+            public const nint m_SimdRods = 0x150; // CUtlVector<FeSimdRodConstraint_t>
+            public const nint m_SimdRodsAnim = 0x168; // CUtlVector<FeSimdRodConstraintAnim_t>
+            public const nint m_InitPose = 0x180; // CUtlVector<CTransform>
+            public const nint m_Rods = 0x198; // CUtlVector<FeRodConstraint_t>
+            public const nint m_Twists = 0x1B0; // CUtlVector<FeTwistConstraint_t>
+            public const nint m_HingeLimits = 0x1C8; // CUtlVector<FeHingeLimit_t>
+            public const nint m_AntiTunnelBytecode = 0x1E0; // CUtlVector<uint32>
+            public const nint m_DynKinLinks = 0x1F8; // CUtlVector<FeDynKinLink_t>
+            public const nint m_BoneMergeLinks = 0x210; // CUtlVector<FeBoneMergeLink_t>
+            public const nint m_AntiTunnelProbes = 0x228; // CUtlVector<FeAntiTunnelProbe_t>
+            public const nint m_AntiTunnelTargetNodes = 0x240; // CUtlVector<uint16>
+            public const nint m_NodeStrayBoxes = 0x258; // CUtlVector<FeNodeStrayBox_t>
+            public const nint m_AxialEdges = 0x270; // CUtlVector<FeAxialEdgeBend_t>
+            public const nint m_NodeInvMasses = 0x288; // CUtlVector<float32>
+            public const nint m_CtrlOffsets = 0x2A0; // CUtlVector<FeCtrlOffset_t>
+            public const nint m_CtrlOsOffsets = 0x2B8; // CUtlVector<FeCtrlOsOffset_t>
+            public const nint m_FollowNodes = 0x2D0; // CUtlVector<FeFollowNode_t>
+            public const nint m_CollisionPlanes = 0x2E8; // CUtlVector<FeCollisionPlane_t>
+            public const nint m_NodeIntegrator = 0x300; // CUtlVector<FeNodeIntegrator_t>
+            public const nint m_SpringIntegrator = 0x318; // CUtlVector<FeSpringIntegrator_t>
+            public const nint m_SimdSpringIntegrator = 0x330; // CUtlVector<FeSimdSpringIntegrator_t>
+            public const nint m_WorldCollisionParams = 0x348; // CUtlVector<FeWorldCollisionParams_t>
+            public const nint m_LegacyStretchForce = 0x360; // CUtlVector<float32>
+            public const nint m_NodeCollisionRadii = 0x378; // CUtlVector<float32>
+            public const nint m_DynNodeFriction = 0x390; // CUtlVector<float32>
+            public const nint m_LocalRotation = 0x3A8; // CUtlVector<float32>
+            public const nint m_LocalForce = 0x3C0; // CUtlVector<float32>
+            public const nint m_TaperedCapsuleStretches = 0x3D8; // CUtlVector<FeTaperedCapsuleStretch_t>
+            public const nint m_TaperedCapsuleRigids = 0x3F0; // CUtlVector<FeTaperedCapsuleRigid_t>
+            public const nint m_SphereRigids = 0x408; // CUtlVector<FeSphereRigid_t>
+            public const nint m_WorldCollisionNodes = 0x420; // CUtlVector<uint16>
+            public const nint m_TreeParents = 0x438; // CUtlVector<uint16>
+            public const nint m_TreeCollisionMasks = 0x450; // CUtlVector<uint16>
+            public const nint m_TreeChildren = 0x468; // CUtlVector<FeTreeChildren_t>
+            public const nint m_FreeNodes = 0x480; // CUtlVector<uint16>
+            public const nint m_FitMatrices = 0x498; // CUtlVector<FeFitMatrix_t>
+            public const nint m_FitWeights = 0x4B0; // CUtlVector<FeFitWeight_t>
+            public const nint m_ReverseOffsets = 0x4C8; // CUtlVector<FeNodeReverseOffset_t>
+            public const nint m_AnimStrayRadii = 0x4E0; // CUtlVector<FeAnimStrayRadius_t>
+            public const nint m_SimdAnimStrayRadii = 0x4F8; // CUtlVector<FeSimdAnimStrayRadius_t>
+            public const nint m_KelagerBends = 0x510; // CUtlVector<FeKelagerBend2_t>
+            public const nint m_CtrlSoftOffsets = 0x528; // CUtlVector<FeCtrlSoftOffset_t>
+            public const nint m_JiggleBones = 0x540; // CUtlVector<CFeIndexedJiggleBone>
+            public const nint m_SourceElems = 0x558; // CUtlVector<uint16>
+            public const nint m_GoalDampedSpringIntegrators = 0x570; // CUtlVector<uint32>
+            public const nint m_Tris = 0x588; // CUtlVector<FeTri_t>
+            public const nint m_nTriCount1 = 0x5A0; // uint16
+            public const nint m_nTriCount2 = 0x5A2; // uint16
+            public const nint m_nReservedUint8 = 0x5A4; // uint8
+            public const nint m_nExtraPressureIterations = 0x5A5; // uint8
+            public const nint m_nExtraGoalIterations = 0x5A6; // uint8
+            public const nint m_nExtraIterations = 0x5A7; // uint8
+            public const nint m_SDFRigids = 0x5A8; // CUtlVector<FeSDFRigid_t>
+            public const nint m_BoxRigids = 0x5C0; // CUtlVector<FeBoxRigid_t>
+            public const nint m_DynNodeVertexSet = 0x5D8; // CUtlVector<uint8>
+            public const nint m_VertexSetNames = 0x5F0; // CUtlVector<uint32>
+            public const nint m_RigidColliderPriorities = 0x608; // CUtlVector<FeRigidColliderIndices_t>
+            public const nint m_MorphLayers = 0x620; // CUtlVector<FeMorphLayerDepr_t>
+            public const nint m_MorphSetData = 0x638; // CUtlVector<uint8>
+            public const nint m_VertexMaps = 0x650; // CUtlVector<FeVertexMapDesc_t>
+            public const nint m_VertexMapValues = 0x668; // CUtlVector<uint8>
+            public const nint m_Effects = 0x680; // CUtlVector<FeEffectDesc_t>
+            public const nint m_LockToParent = 0x698; // CUtlVector<FeCtrlOffset_t>
+            public const nint m_LockToGoal = 0x6B0; // CUtlVector<uint16>
+            public const nint m_SkelParents = 0x6C8; // CUtlVector<int16>
+            public const nint m_DynNodeWindBases = 0x6E0; // CUtlVector<FeNodeWindBase_t>
+            public const nint m_SelfCollisionLayers = 0x6F8; // CUtlVector<FeModelSelfCollisionLayer_t>
+            public const nint m_flInternalPressure = 0x710; // float32
+            public const nint m_flDefaultTimeDilation = 0x714; // float32
+            public const nint m_flWindage = 0x718; // float32
+            public const nint m_flWindDrag = 0x71C; // float32
+            public const nint m_flDefaultSurfaceStretch = 0x720; // float32
+            public const nint m_flDefaultThreadStretch = 0x724; // float32
+            public const nint m_flDefaultGravityScale = 0x728; // float32
+            public const nint m_flDefaultVelAirDrag = 0x72C; // float32
+            public const nint m_flDefaultExpAirDrag = 0x730; // float32
+            public const nint m_flDefaultVelQuadAirDrag = 0x734; // float32
+            public const nint m_flDefaultExpQuadAirDrag = 0x738; // float32
+            public const nint m_flRodVelocitySmoothRate = 0x73C; // float32
+            public const nint m_flQuadVelocitySmoothRate = 0x740; // float32
+            public const nint m_flAddWorldCollisionRadius = 0x744; // float32
+            public const nint m_flDefaultVolumetricSolveAmount = 0x748; // float32
+            public const nint m_flMotionSmoothCDT = 0x74C; // float32
+            public const nint m_flLocalDrag1 = 0x750; // float32
+            public const nint m_nRodVelocitySmoothIterations = 0x754; // uint16
+            public const nint m_nQuadVelocitySmoothIterations = 0x756; // uint16
         }
         // Parent: None
         // Field count: 1
@@ -245,14 +257,6 @@ namespace Dota2Dumper.Schemas {
             public const nint m_nAntitunnelGroupBits = 0x48; // uint32
         }
         // Parent: None
-        // Field count: 1
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class RnCompoundDesc_t {
-            public const nint m_Compound = 0x18; // RnCompound_t
-        }
-        // Parent: None
         // Field count: 3
         //
         // Metadata:
@@ -286,6 +290,15 @@ namespace Dota2Dumper.Schemas {
             public const nint flDistMin = 0x0; // float32
             public const nint flDistMax = 0x4; // float32
             public const nint nNode = 0x8; // uint16[6]
+        }
+        // Parent: None
+        // Field count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class RnCompoundTree_t {
+            public const nint m_Nodes = 0x0; // CUtlLeanVector<RnCompoundTreeNode_t>
+            public const nint m_nStartIterationIndex = 0x10; // uint32
         }
         // Parent: None
         // Field count: 4
@@ -416,6 +429,14 @@ namespace Dota2Dumper.Schemas {
             public const nint m_jiggleBone = 0x34; // CFeJiggleBone
         }
         // Parent: None
+        // Field count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FePrism_t {
+            public const nint nNode = 0x0; // uint16[6]
+        }
+        // Parent: None
         // Field count: 7
         //
         // Metadata:
@@ -502,7 +523,7 @@ namespace Dota2Dumper.Schemas {
             public const nint flWeight = 0x4; // float32
         }
         // Parent: None
-        // Field count: 11
+        // Field count: 12
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -518,6 +539,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_vOrthographicAreas = 0xA8; // Vector
             public const nint m_nFlags = 0xB4; // uint32
             public const nint m_nDebugFlags = 0xB8; // uint32
+            public const nint m_flSurfaceArea = 0xBC; // float32
         }
         // Parent: None
         // Field count: 2
@@ -528,6 +550,17 @@ namespace Dota2Dumper.Schemas {
         // Parent: None
         // Field count: 0
         public static class IPhysicsRagdollControl {
+        }
+        // Parent: None
+        // Field count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class RnCompoundTreeNode_t {
+            public const nint m_vMin = 0x0; // Vector
+            public const nint m_vMax = 0xC; // Vector
+            public const nint m_nType = 0x0; // bitfield:3
+            public const nint m_nSubtreeEndOrCompoundId = 0x0; // bitfield:29
         }
         // Parent: None
         // Field count: 3
@@ -588,19 +621,24 @@ namespace Dota2Dumper.Schemas {
             public const nint m_Id = 0x0; // uint32
         }
         // Parent: None
-        // Field count: 8
+        // Field count: 13
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class RnCompound_t {
-            public const nint m_Spheres = 0x0; // CUtlVector<RnSphere_t>
-            public const nint m_Capsules = 0x18; // CUtlVector<RnCapsule_t>
-            public const nint m_Hulls = 0x30; // CUtlVector<RnHull_t>
-            public const nint m_Meshes = 0x48; // CUtlVector<RnMesh_t>
-            public const nint m_Bounds = 0x60; // AABB_t
-            public const nint m_vOrthographicAreas = 0x78; // Vector
-            public const nint m_flSurfaceArea = 0x84; // float32
-            public const nint m_flVolume = 0x88; // float32
+            public const nint m_Tree = 0x0; // RnCompoundTree_t
+            public const nint m_nHullBaseIndex = 0x18; // int32
+            public const nint m_nMeshBaseIndex = 0x1C; // int32
+            public const nint m_nShapeCount = 0x20; // int32
+            public const nint m_Meshes = 0x28; // CUtlLeanVectorFixedGrowable<RnMesh_t,1>
+            public const nint m_Hulls = 0xF0; // CUtlLeanVector<RnHull_t>
+            public const nint m_Capsules = 0x100; // CUtlLeanVector<RnCapsule_t>
+            public const nint m_Spheres = 0x110; // CUtlLeanVector<RnSphere_t>
+            public const nint m_CompoundMaterialIndices = 0x120; // CUtlLeanVector<uint8>
+            public const nint m_Bounds = 0x130; // AABB_t
+            public const nint m_vOrthographicAreas = 0x148; // Vector
+            public const nint m_flSurfaceArea = 0x154; // float32
+            public const nint m_flVolume = 0x158; // float32
         }
         // Parent: None
         // Field count: 12
@@ -1070,18 +1108,19 @@ namespace Dota2Dumper.Schemas {
             public const nint v2 = 0x14; // Vector2D
         }
         // Parent: None
-        // Field count: 14
+        // Field count: 15
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class RnHull_t {
             public const nint m_vCentroid = 0x0; // Vector
             public const nint m_flMaxAngularRadius = 0xC; // float32
-            public const nint m_Bounds = 0x10; // AABB_t
-            public const nint m_vOrthographicAreas = 0x28; // Vector
-            public const nint m_MassProperties = 0x34; // matrix3x4_t
-            public const nint m_flVolume = 0x64; // float32
-            public const nint m_flSurfaceArea = 0x68; // float32
+            public const nint m_flMinCentroidRadius = 0x10; // float32
+            public const nint m_Bounds = 0x14; // AABB_t
+            public const nint m_vOrthographicAreas = 0x2C; // Vector
+            public const nint m_MassProperties = 0x38; // matrix3x4_t
+            public const nint m_flVolume = 0x68; // float32
+            public const nint m_flSurfaceArea = 0x6C; // float32
             public const nint m_VertexPositions = 0x70; // CUtlVector<Vector>
             public const nint m_FacePlanes = 0x88; // CUtlVector<RnPlane_t>
             public const nint m_nFlags = 0xA0; // uint32
@@ -1163,6 +1202,14 @@ namespace Dota2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class RnFace_t {
             public const nint m_nEdge = 0x0; // uint8
+        }
+        // Parent: None
+        // Field count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FeSimdPrism_t {
+            public const nint nNode = 0x0; // uint16[4][6]
         }
         // Parent: None
         // Field count: 2
