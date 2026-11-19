@@ -1,10 +1,10 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 pub const dota2_dumper = struct {
     pub const schemas = struct {
         // Module: resourcesystem.dll
-        // Class count: 62
+        // Class count: 61
         // Enum count: 5
         pub const resourcesystem_dll = struct {
             // Alignment: 4
@@ -119,6 +119,9 @@ pub const dota2_dumper = struct {
             };
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedIntegerType
             pub const FuseFunctionIndex_t = struct {
                 pub const m_Value: usize = 0x0; // uint16
             };
@@ -128,6 +131,13 @@ pub const dota2_dumper = struct {
             // Metadata:
             // MResourceTypeForInfoType
             pub const InfoForResourceTypeCGcExportableExternalData = struct {
+            };
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub const InfoForResourceTypeCSurfaceGraph2 = struct {
             };
             // Parent: None
             // Field count: 0
@@ -321,13 +331,6 @@ pub const dota2_dumper = struct {
             //
             // Metadata:
             // MResourceTypeForInfoType
-            pub const InfoForResourceTypeCSurfaceGraph = struct {
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
             pub const InfoForResourceTypeCCSGOEconItem = struct {
             };
             // Parent: None
@@ -354,13 +357,6 @@ pub const dota2_dumper = struct {
             // Metadata:
             // MResourceTypeForInfoType
             pub const InfoForResourceTypeCCompositeMaterialKit = struct {
-            };
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub const InfoForResourceTypeCVMixListResource = struct {
             };
             // Parent: None
             // Field count: 0
@@ -482,6 +478,9 @@ pub const dota2_dumper = struct {
             };
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedIntegerType
             pub const FuseVariableIndex_t = struct {
                 pub const m_Value: usize = 0x0; // uint16
             };

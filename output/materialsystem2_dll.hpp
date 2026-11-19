@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 #pragma once
 
@@ -57,7 +57,7 @@ namespace dota2_dumper {
             namespace MaterialParam_t {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
             }
-            // Parent: None
+            // Parent: MaterialParam_t
             // Field count: 1
             //
             // Metadata:
@@ -65,7 +65,7 @@ namespace dota2_dumper {
             namespace MaterialParamVector_t {
                 constexpr std::ptrdiff_t m_value = 0x8; // Vector4D
             }
-            // Parent: None
+            // Parent: MaterialParam_t
             // Field count: 1
             //
             // Metadata:
@@ -95,7 +95,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bHasLocalExposureParams = 0x144; // bool
                 constexpr std::ptrdiff_t m_localExposureParams = 0x148; // PostProcessingLocalExposureParameters_t
             }
-            // Parent: None
+            // Parent: MaterialParam_t
             // Field count: 1
             //
             // Metadata:
@@ -165,7 +165,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_fWaterDensity = 0x18; // float32
                 constexpr std::ptrdiff_t m_fWaterDepthBlurRadius = 0x1C; // float32
             }
-            // Parent: None
+            // Parent: MaterialParam_t
             // Field count: 1
             //
             // Metadata:
@@ -217,7 +217,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flBlurWeight = 0x38; // float32[5]
                 constexpr std::ptrdiff_t m_vBlurTint = 0x4C; // Vector[5]
             }
-            // Parent: None
+            // Parent: MaterialParam_t
             // Field count: 1
             //
             // Metadata:
@@ -236,7 +236,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_fSigma = 0x8; // float32
                 constexpr std::ptrdiff_t m_fBoostLocalContrast = 0xC; // float32
             }
-            // Parent: None
+            // Parent: MaterialParam_t
             // Field count: 1
             //
             // Metadata:

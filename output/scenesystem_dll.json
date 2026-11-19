@@ -215,7 +215,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CSSDSMsg_LayerBase"
       },
       "CSSDSMsg_PreLayer": {
         "fields": {},
@@ -225,7 +225,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CSSDSMsg_LayerBase"
       },
       "CSSDSMsg_ViewRender": {
         "fields": {
@@ -324,7 +324,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "BaseSceneObjectOverride_t"
       },
       "MaterialOverride_t": {
         "fields": {
@@ -339,7 +339,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "BaseSceneObjectOverride_t"
       },
       "RTProxyBLAS_t": {
         "fields": {

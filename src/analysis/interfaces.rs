@@ -1,6 +1,6 @@
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, BTreeSet};
 
-use anyhow::Result;
+use anyhow::{Result, ensure};
 
 use log::debug;
 
@@ -36,7 +36,12 @@ pub fn interfaces<P: Process + MemoryView>(process: &mut P) -> Result<InterfaceM
 
             match ci_export {
                 Export::Symbol(symbol) => {
-                    let list_ptr = address::resolve_rip(process, module.base + symbol).ok()?;
+                    let entry = module.base + symbol;
+                    let opcode: [u8; 3] = process.read(entry).data_part().ok()?;
+                    if !matches!(opcode, [0x4C | 0x48, 0x8B, op] if op & 0xC7 == 0x05) {
+                        return None;
+                    }
+                    let list_ptr = address::resolve_rip(process, entry).ok()?;
                     let list_head = process.read_addr64(list_ptr).data_part().ok()?;
 
                     return read_interfaces(process, module, list_head)
@@ -57,15 +62,31 @@ fn read_interfaces(
 ) -> Result<BTreeMap<String, umem>> {
     let mut result = BTreeMap::new();
 
+    let mut seen = BTreeSet::new();
     let mut reg_ptr = Pointer64::<InterfaceReg>::from(list_head);
 
     while !reg_ptr.is_null() {
+        ensure!(
+            seen.insert(reg_ptr.address()),
+            "cycle in {} interface list",
+            module.name
+        );
         let reg = mem.read_ptr(reg_ptr).data_part()?;
-        let name = mem.read_utf8_lossy(reg.name.address(), 128).data_part()?;
+        reg_ptr = reg.next;
+        let name = mem.read_utf8(reg.name.address(), 128).data_part()?;
+        let function = reg.create_fn.address();
+        let bytes: [u8; 8] = mem.read(function).data_part()?;
+        if !matches!(bytes, [0x48, 0x8D, 0x05, .., 0xC3]) {
+            debug!("skipping non-static interface {}::{name}", module.name);
+            continue;
+        }
 
-        let instance_addr = address::resolve_rip(mem, reg.create_fn.address())?;
-
-        if let Some(instance_rva) = instance_addr.to_umem().checked_sub(module.base.to_umem()) {
+        let instance_addr = address::resolve_rip(mem, function)?;
+        if let Some(instance_rva) = instance_addr
+            .to_umem()
+            .checked_sub(module.base.to_umem())
+            .filter(|&rva| rva < module.size)
+        {
             debug!(
                 "found \"{}\" at {:#X} ({} + {:#X})",
                 name,
@@ -74,10 +95,13 @@ fn read_interfaces(
                 instance_rva
             );
 
+            ensure!(
+                !result.contains_key(&name),
+                "duplicate interface {}::{name}",
+                module.name
+            );
             result.insert(name, instance_rva);
         }
-
-        reg_ptr = reg.next;
     }
 
     Ok(result)

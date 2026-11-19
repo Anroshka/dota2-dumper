@@ -1,10 +1,10 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 pub const dota2_dumper = struct {
     pub const schemas = struct {
         // Module: engine2.dll
-        // Class count: 57
+        // Class count: 58
         // Enum count: 2
         pub const engine2_dll = struct {
             // Alignment: 4
@@ -33,7 +33,7 @@ pub const dota2_dumper = struct {
             // Field count: 0
             pub const CEntityComponent = struct {
             };
-            // Parent: None
+            // Parent: CEntityComponent
             // Field count: 1
             //
             // Metadata:
@@ -60,7 +60,7 @@ pub const dota2_dumper = struct {
                 pub const m_pPrevByClass: usize = 0x60; // CEntityIdentity*
                 pub const m_pNextByClass: usize = 0x68; // CEntityIdentity*
             };
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 0
             pub const EventClientPostSimulate_t = struct {
             };
@@ -71,7 +71,7 @@ pub const dota2_dumper = struct {
                 pub const m_flRealTime: usize = 0x28; // float32
                 pub const m_flFrameTime: usize = 0x2C; // float32
             };
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 4
             pub const EventPostAdvanceTick_t = struct {
                 pub const m_nCurrentTick: usize = 0x30; // int32
@@ -97,7 +97,7 @@ pub const dota2_dumper = struct {
                 pub const m_flRenderFrameTimeUnbounded: usize = 0x30; // float32
                 pub const m_bRenderOnly: usize = 0x34; // bool
             };
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 1
             pub const EventServerPostSimulate_t = struct {
                 pub const m_bLastTickBeforeClientUpdate: usize = 0x30; // bool
@@ -112,10 +112,13 @@ pub const dota2_dumper = struct {
             };
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedFloatType
             pub const GameTime_t = struct {
                 pub const m_Value: usize = 0x0; // float32
             };
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 0
             pub const EventServerBeginSimulate_t = struct {
             };
@@ -140,7 +143,7 @@ pub const dota2_dumper = struct {
             // Field count: 0
             pub const EventServerEndAsyncPostTickWork_t = struct {
             };
-            // Parent: None
+            // Parent: EventAdvanceTick_t
             // Field count: 0
             pub const EventClientAdvanceTick_t = struct {
             };
@@ -149,7 +152,7 @@ pub const dota2_dumper = struct {
             pub const CNetworkVarChainer = struct {
                 pub const m_PathIndex: usize = 0x20; // ChangeAccessorFieldPathIndex_t
             };
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 0
             pub const EventClientSimulate_t = struct {
             };
@@ -164,8 +167,15 @@ pub const dota2_dumper = struct {
             };
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedIntegerType
             pub const GameTick_t = struct {
                 pub const m_Value: usize = 0x0; // int32
+            };
+            // Parent: None
+            // Field count: 0
+            pub const EventPlayerConsoleCommand_t = struct {
             };
             // Parent: None
             // Field count: 2
@@ -195,7 +205,7 @@ pub const dota2_dumper = struct {
             pub const EventAppShutdown_t = struct {
                 pub const m_nDummy0: usize = 0x0; // int32
             };
-            // Parent: None
+            // Parent: EventPostAdvanceTick_t
             // Field count: 1
             pub const EventServerPostAdvanceTick_t = struct {
                 pub const m_bLastTickBeforeClientUpdate: usize = 0x40; // bool
@@ -210,11 +220,11 @@ pub const dota2_dumper = struct {
             pub const EventPostDataUpdate_t = struct {
                 pub const m_nCount: usize = 0x0; // int32
             };
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 0
             pub const EventClientPreSimulate_t = struct {
             };
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 0
             pub const EventClientPauseSimulate_t = struct {
             };
@@ -229,11 +239,11 @@ pub const dota2_dumper = struct {
                 pub const m_Attributes: usize = 0x0; // CUtlOrderedMap<CUtlStringTokenNoRegistration,Attribute_t>
                 pub const m_Names: usize = 0x28; // CUtlOrderedMap<CUtlStringTokenNoRegistration,CUtlString>
             };
-            // Parent: None
+            // Parent: EventClientPreOutput_t
             // Field count: 0
             pub const EventClientPreOutputParallelWithServer_t = struct {
             };
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 4
             pub const EventAdvanceTick_t = struct {
                 pub const m_nCurrentTick: usize = 0x30; // int32
@@ -245,7 +255,7 @@ pub const dota2_dumper = struct {
             // Field count: 0
             pub const EventSplitScreenStateChanged_t = struct {
             };
-            // Parent: None
+            // Parent: EventPostAdvanceTick_t
             // Field count: 0
             pub const EventClientPostAdvanceTick_t = struct {
             };
@@ -284,7 +294,7 @@ pub const dota2_dumper = struct {
                 pub const m_flFrameTime: usize = 0x2C; // float32
                 pub const m_bScheduleSendTickPacket: usize = 0x30; // bool
             };
-            // Parent: None
+            // Parent: EventAdvanceTick_t
             // Field count: 0
             pub const EventServerAdvanceTick_t = struct {
             };
@@ -312,10 +322,11 @@ pub const dota2_dumper = struct {
             pub const CEntityKeyValues = struct {
             };
             // Parent: None
-            // Field count: 0
+            // Field count: 1
             pub const EventClientAdvanceNonRenderedFrame_t = struct {
+                pub const m_bRenderOnly: usize = 0x0; // bool
             };
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 0
             pub const EventServerProcessNetworking_t = struct {
             };
@@ -332,7 +343,7 @@ pub const dota2_dumper = struct {
                 pub const m_pNetworkDataReferencedPtrPropDescription: usize = 0x18; // char*
                 pub const m_nRuntimeIndex: usize = 0x20; // int32
                 pub const m_nFlags: usize = 0x24; // uint32
-                pub const m_pBaseClassComponentHelper: usize = 0x58; // CEntityComponentHelper*
+                pub const m_pBaseClassComponentHelper: usize = 0x78; // CEntityComponentHelper*
             };
             // Parent: None
             // Field count: 4
@@ -343,9 +354,10 @@ pub const dota2_dumper = struct {
                 pub const m_nRenderHeight: usize = 0x24; // int32
             };
             // Parent: None
-            // Field count: 1
+            // Field count: 2
             pub const EventClientPollNetworking_t = struct {
                 pub const m_nTickCount: usize = 0x0; // int32
+                pub const m_nTotalTicks: usize = 0x4; // int32
             };
             // Parent: None
             // Field count: 1
@@ -365,7 +377,7 @@ pub const dota2_dumper = struct {
             pub const EventServerEndSimulate_t = struct {
                 pub const m_bLastTick: usize = 0x0; // bool
             };
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 0
             pub const EventServerPollNetworking_t = struct {
             };

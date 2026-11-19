@@ -1,9 +1,9 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: engine2.dll
-    // Class count: 57
+    // Class count: 58
     // Enum count: 2
     public static class Engine2Dll {
         // Alignment: 4
@@ -32,7 +32,7 @@ namespace Dota2Dumper.Schemas {
         // Field count: 0
         public static class CEntityComponent {
         }
-        // Parent: None
+        // Parent: CEntityComponent
         // Field count: 1
         //
         // Metadata:
@@ -59,7 +59,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_pPrevByClass = 0x60; // CEntityIdentity*
             public const nint m_pNextByClass = 0x68; // CEntityIdentity*
         }
-        // Parent: None
+        // Parent: EventSimulate_t
         // Field count: 0
         public static class EventClientPostSimulate_t {
         }
@@ -70,7 +70,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flRealTime = 0x28; // float32
             public const nint m_flFrameTime = 0x2C; // float32
         }
-        // Parent: None
+        // Parent: EventSimulate_t
         // Field count: 4
         public static class EventPostAdvanceTick_t {
             public const nint m_nCurrentTick = 0x30; // int32
@@ -96,7 +96,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flRenderFrameTimeUnbounded = 0x30; // float32
             public const nint m_bRenderOnly = 0x34; // bool
         }
-        // Parent: None
+        // Parent: EventSimulate_t
         // Field count: 1
         public static class EventServerPostSimulate_t {
             public const nint m_bLastTickBeforeClientUpdate = 0x30; // bool
@@ -111,10 +111,13 @@ namespace Dota2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 1
+        //
+        // Metadata:
+        // MIsBoxedFloatType
         public static class GameTime_t {
             public const nint m_Value = 0x0; // float32
         }
-        // Parent: None
+        // Parent: EventSimulate_t
         // Field count: 0
         public static class EventServerBeginSimulate_t {
         }
@@ -139,7 +142,7 @@ namespace Dota2Dumper.Schemas {
         // Field count: 0
         public static class EventServerEndAsyncPostTickWork_t {
         }
-        // Parent: None
+        // Parent: EventAdvanceTick_t
         // Field count: 0
         public static class EventClientAdvanceTick_t {
         }
@@ -148,7 +151,7 @@ namespace Dota2Dumper.Schemas {
         public static class CNetworkVarChainer {
             public const nint m_PathIndex = 0x20; // ChangeAccessorFieldPathIndex_t
         }
-        // Parent: None
+        // Parent: EventSimulate_t
         // Field count: 0
         public static class EventClientSimulate_t {
         }
@@ -163,8 +166,15 @@ namespace Dota2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 1
+        //
+        // Metadata:
+        // MIsBoxedIntegerType
         public static class GameTick_t {
             public const nint m_Value = 0x0; // int32
+        }
+        // Parent: None
+        // Field count: 0
+        public static class EventPlayerConsoleCommand_t {
         }
         // Parent: None
         // Field count: 2
@@ -194,7 +204,7 @@ namespace Dota2Dumper.Schemas {
         public static class EventAppShutdown_t {
             public const nint m_nDummy0 = 0x0; // int32
         }
-        // Parent: None
+        // Parent: EventPostAdvanceTick_t
         // Field count: 1
         public static class EventServerPostAdvanceTick_t {
             public const nint m_bLastTickBeforeClientUpdate = 0x40; // bool
@@ -209,11 +219,11 @@ namespace Dota2Dumper.Schemas {
         public static class EventPostDataUpdate_t {
             public const nint m_nCount = 0x0; // int32
         }
-        // Parent: None
+        // Parent: EventSimulate_t
         // Field count: 0
         public static class EventClientPreSimulate_t {
         }
-        // Parent: None
+        // Parent: EventSimulate_t
         // Field count: 0
         public static class EventClientPauseSimulate_t {
         }
@@ -228,11 +238,11 @@ namespace Dota2Dumper.Schemas {
             public const nint m_Attributes = 0x0; // CUtlOrderedMap<CUtlStringTokenNoRegistration,Attribute_t>
             public const nint m_Names = 0x28; // CUtlOrderedMap<CUtlStringTokenNoRegistration,CUtlString>
         }
-        // Parent: None
+        // Parent: EventClientPreOutput_t
         // Field count: 0
         public static class EventClientPreOutputParallelWithServer_t {
         }
-        // Parent: None
+        // Parent: EventSimulate_t
         // Field count: 4
         public static class EventAdvanceTick_t {
             public const nint m_nCurrentTick = 0x30; // int32
@@ -244,7 +254,7 @@ namespace Dota2Dumper.Schemas {
         // Field count: 0
         public static class EventSplitScreenStateChanged_t {
         }
-        // Parent: None
+        // Parent: EventPostAdvanceTick_t
         // Field count: 0
         public static class EventClientPostAdvanceTick_t {
         }
@@ -283,7 +293,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flFrameTime = 0x2C; // float32
             public const nint m_bScheduleSendTickPacket = 0x30; // bool
         }
-        // Parent: None
+        // Parent: EventAdvanceTick_t
         // Field count: 0
         public static class EventServerAdvanceTick_t {
         }
@@ -311,10 +321,11 @@ namespace Dota2Dumper.Schemas {
         public static class CEntityKeyValues {
         }
         // Parent: None
-        // Field count: 0
+        // Field count: 1
         public static class EventClientAdvanceNonRenderedFrame_t {
+            public const nint m_bRenderOnly = 0x0; // bool
         }
-        // Parent: None
+        // Parent: EventSimulate_t
         // Field count: 0
         public static class EventServerProcessNetworking_t {
         }
@@ -331,7 +342,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_pNetworkDataReferencedPtrPropDescription = 0x18; // char*
             public const nint m_nRuntimeIndex = 0x20; // int32
             public const nint m_nFlags = 0x24; // uint32
-            public const nint m_pBaseClassComponentHelper = 0x58; // CEntityComponentHelper*
+            public const nint m_pBaseClassComponentHelper = 0x78; // CEntityComponentHelper*
         }
         // Parent: None
         // Field count: 4
@@ -342,9 +353,10 @@ namespace Dota2Dumper.Schemas {
             public const nint m_nRenderHeight = 0x24; // int32
         }
         // Parent: None
-        // Field count: 1
+        // Field count: 2
         public static class EventClientPollNetworking_t {
             public const nint m_nTickCount = 0x0; // int32
+            public const nint m_nTotalTicks = 0x4; // int32
         }
         // Parent: None
         // Field count: 1
@@ -364,7 +376,7 @@ namespace Dota2Dumper.Schemas {
         public static class EventServerEndSimulate_t {
             public const nint m_bLastTick = 0x0; // bool
         }
-        // Parent: None
+        // Parent: EventSimulate_t
         // Field count: 0
         public static class EventServerPollNetworking_t {
         }

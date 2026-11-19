@@ -48,7 +48,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CEntityComponent"
       },
       "CVoxelVisibility": {
         "fields": {

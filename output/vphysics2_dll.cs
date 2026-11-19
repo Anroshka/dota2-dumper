@@ -1,9 +1,9 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: vphysics2.dll
-    // Class count: 117
+    // Class count: 119
     // Enum count: 5
     public static class Vphysics2Dll {
         // Alignment: 4
@@ -49,7 +49,7 @@ namespace Dota2Dumper.Schemas {
             GENERIC_SHAPE_CAPSULE = 0x3,
             GENERIC_SHAPE_HULL = 0x4
         }
-        // Parent: None
+        // Parent: RnShapeDesc_t
         // Field count: 1
         //
         // Metadata:
@@ -57,7 +57,7 @@ namespace Dota2Dumper.Schemas {
         public static class RnSphereDesc_t {
             public const nint m_Sphere = 0x18; // RnSphere_t
         }
-        // Parent: None
+        // Parent: RnShapeDesc_t
         // Field count: 1
         //
         // Metadata:
@@ -73,7 +73,7 @@ namespace Dota2Dumper.Schemas {
         public static class RnSoftbodyParticle_t {
             public const nint m_flMassInv = 0x0; // float32
         }
-        // Parent: None
+        // Parent: RnShapeDesc_t
         // Field count: 1
         //
         // Metadata:
@@ -81,7 +81,7 @@ namespace Dota2Dumper.Schemas {
         public static class RnHullDesc_t {
             public const nint m_Hull = 0x18; // RnHull_t
         }
-        // Parent: None
+        // Parent: RnShapeDesc_t
         // Field count: 1
         //
         // Metadata:
@@ -90,7 +90,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_Capsule = 0x18; // RnCapsule_t
         }
         // Parent: None
-        // Field count: 115
+        // Field count: 116
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -191,27 +191,28 @@ namespace Dota2Dumper.Schemas {
             public const nint m_SkelParents = 0x6C8; // CUtlVector<int16>
             public const nint m_DynNodeWindBases = 0x6E0; // CUtlVector<FeNodeWindBase_t>
             public const nint m_SelfCollisionLayers = 0x6F8; // CUtlVector<FeModelSelfCollisionLayer_t>
-            public const nint m_flInternalPressure = 0x710; // float32
-            public const nint m_flDefaultTimeDilation = 0x714; // float32
-            public const nint m_flWindage = 0x718; // float32
-            public const nint m_flWindDrag = 0x71C; // float32
-            public const nint m_flDefaultSurfaceStretch = 0x720; // float32
-            public const nint m_flDefaultThreadStretch = 0x724; // float32
-            public const nint m_flDefaultGravityScale = 0x728; // float32
-            public const nint m_flDefaultVelAirDrag = 0x72C; // float32
-            public const nint m_flDefaultExpAirDrag = 0x730; // float32
-            public const nint m_flDefaultVelQuadAirDrag = 0x734; // float32
-            public const nint m_flDefaultExpQuadAirDrag = 0x738; // float32
-            public const nint m_flRodVelocitySmoothRate = 0x73C; // float32
-            public const nint m_flQuadVelocitySmoothRate = 0x740; // float32
-            public const nint m_flAddWorldCollisionRadius = 0x744; // float32
-            public const nint m_flDefaultVolumetricSolveAmount = 0x748; // float32
-            public const nint m_flMotionSmoothCDT = 0x74C; // float32
-            public const nint m_flLocalDrag1 = 0x750; // float32
-            public const nint m_nRodVelocitySmoothIterations = 0x754; // uint16
-            public const nint m_nQuadVelocitySmoothIterations = 0x756; // uint16
+            public const nint m_Deformers = 0x710; // CUtlVector<FeModelDeformer_t>
+            public const nint m_flInternalPressure = 0x728; // float32
+            public const nint m_flDefaultTimeDilation = 0x72C; // float32
+            public const nint m_flWindage = 0x730; // float32
+            public const nint m_flWindDrag = 0x734; // float32
+            public const nint m_flDefaultSurfaceStretch = 0x738; // float32
+            public const nint m_flDefaultThreadStretch = 0x73C; // float32
+            public const nint m_flDefaultGravityScale = 0x740; // float32
+            public const nint m_flDefaultVelAirDrag = 0x744; // float32
+            public const nint m_flDefaultExpAirDrag = 0x748; // float32
+            public const nint m_flDefaultVelQuadAirDrag = 0x74C; // float32
+            public const nint m_flDefaultExpQuadAirDrag = 0x750; // float32
+            public const nint m_flRodVelocitySmoothRate = 0x754; // float32
+            public const nint m_flQuadVelocitySmoothRate = 0x758; // float32
+            public const nint m_flAddWorldCollisionRadius = 0x75C; // float32
+            public const nint m_flDefaultVolumetricSolveAmount = 0x760; // float32
+            public const nint m_flMotionSmoothCDT = 0x764; // float32
+            public const nint m_flLocalDrag1 = 0x768; // float32
+            public const nint m_nRodVelocitySmoothIterations = 0x76C; // uint16
+            public const nint m_nQuadVelocitySmoothIterations = 0x76E; // uint16
         }
-        // Parent: None
+        // Parent: RnShapeDesc_t
         // Field count: 1
         //
         // Metadata:
@@ -238,7 +239,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flRadius = 0x18; // float32
             public const nint m_nParticle = 0x1C; // uint16[2]
         }
-        // Parent: None
+        // Parent: RnBodyDesc_t
         // Field count: 1
         //
         // Metadata:
@@ -246,7 +247,7 @@ namespace Dota2Dumper.Schemas {
         public static class vphysics_save_cphysicsbody_t {
             public const nint m_nOldPointer = 0xE0; // uint64
         }
-        // Parent: None
+        // Parent: FeBoxRigid_t
         // Field count: 3
         //
         // Metadata:
@@ -275,7 +276,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_nParentHash = 0x0; // uint32
             public const nint m_nChildNode = 0x4; // uint16
         }
-        // Parent: None
+        // Parent: IPhysicsBodyList
         // Field count: 2
         public static class IPhysAggregateInstance {
             public const nint m_pSkeleton = 0x8; // void*
@@ -360,7 +361,7 @@ namespace Dota2Dumper.Schemas {
         // Field count: 0
         public static class IPhysicsBodyList {
         }
-        // Parent: None
+        // Parent: FeSphereRigid_t
         // Field count: 3
         //
         // Metadata:
@@ -542,6 +543,17 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flSurfaceArea = 0xBC; // float32
         }
         // Parent: None
+        // Field count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FeModelDeformer_t__FfdLayerZ_t {
+            public const nint flZin = 0x0; // float32
+            public const nint flZout = 0x4; // float32
+            public const nint flScale = 0x8; // float32
+            public const nint flGoalStrength = 0xC; // float32
+        }
+        // Parent: None
         // Field count: 2
         public static class VertexPositionNormal_t {
             public const nint m_vPosition = 0x0; // Vector
@@ -562,7 +574,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_nType = 0x0; // bitfield:3
             public const nint m_nSubtreeEndOrCompoundId = 0x0; // bitfield:29
         }
-        // Parent: None
+        // Parent: FeSDFRigid_t
         // Field count: 3
         //
         // Metadata:
@@ -822,7 +834,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_nTriangleOffset = 0x1C; // uint32
         }
         // Parent: None
-        // Field count: 5
+        // Field count: 6
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -832,6 +844,7 @@ namespace Dota2Dumper.Schemas {
             public const nint nEnd = 0x2C; // uint16
             public const nint nNode = 0x2E; // uint16
             public const nint nBeginDynamic = 0x30; // uint16
+            public const nint nFlags = 0x32; // uint16
         }
         // Parent: None
         // Field count: 4
@@ -915,6 +928,7 @@ namespace Dota2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MVDataRoot
         // MVDataOutlinerLeafNameFn
         public static class CollisionDetailLayerInfo_t {
             public const nint m_sDescription = 0x0; // CUtlString
@@ -1108,7 +1122,7 @@ namespace Dota2Dumper.Schemas {
             public const nint v2 = 0x14; // Vector2D
         }
         // Parent: None
-        // Field count: 15
+        // Field count: 14
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1124,10 +1138,9 @@ namespace Dota2Dumper.Schemas {
             public const nint m_VertexPositions = 0x70; // CUtlVector<Vector>
             public const nint m_FacePlanes = 0x88; // CUtlVector<RnPlane_t>
             public const nint m_nFlags = 0xA0; // uint32
-            public const nint m_pRegionSVM = 0xA8; // CRegionSVM*
-            public const nint m_Vertices = 0xB0; // CUtlVector<RnVertex_t>
-            public const nint m_Edges = 0xC8; // CUtlVector<RnHalfEdge_t>
-            public const nint m_Faces = 0xE0; // CUtlVector<RnFace_t>
+            public const nint m_Vertices = 0xA8; // CUtlVector<RnVertex_t>
+            public const nint m_Edges = 0xC0; // CUtlVector<RnHalfEdge_t>
+            public const nint m_Faces = 0xD8; // CUtlVector<RnFace_t>
         }
         // Parent: None
         // Field count: 5
@@ -1163,6 +1176,9 @@ namespace Dota2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 1
+        //
+        // Metadata:
+        // MIsBoxedIntegerType
         public static class PhysicsParticleId_t {
             public const nint m_Value = 0x0; // uint32
         }
@@ -1314,11 +1330,12 @@ namespace Dota2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MVDataRoot
         public static class CollisionDetailLayerInfo_t__Name_t {
             public const nint m_nNameToken = 0x0; // CUtlStringToken
             public const nint m_sNameString = 0x8; // CUtlString
         }
-        // Parent: None
+        // Parent: FeTaperedCapsuleRigid_t
         // Field count: 3
         //
         // Metadata:
@@ -1406,6 +1423,19 @@ namespace Dota2Dumper.Schemas {
             public const nint w2 = 0x40; // fltx4
             public const nint v1x = 0x50; // fltx4
             public const nint v2 = 0x60; // FourVectors2D
+        }
+        // Parent: None
+        // Field count: 6
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FeModelDeformer_t {
+            public const nint m_FfdZLayers = 0x0; // FeModelDeformer_t::FfdLayerZ_t[3]
+            public const nint m_flDisplayRadius = 0x30; // float32
+            public const nint m_nVertexMapNameHash = 0x34; // uint32
+            public const nint m_nVertexMapIndex = 0x38; // uint16
+            public const nint m_nReferenceNode = 0x3A; // uint16
+            public const nint m_nFlags = 0x3C; // uint32
         }
         // Parent: None
         // Field count: 1

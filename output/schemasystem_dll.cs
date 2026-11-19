@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: schemasystem.dll
@@ -135,7 +135,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_ResourceTypes = 0x160; // CResourceArray<CResourcePointer<CResourceString>>
             public const nint m_KV3 = 0x168; // KeyValues3
         }
-        // Parent: None
+        // Parent: CExampleSchemaVData_PolymorphicBase
         // Field count: 1
         //
         // Metadata:
@@ -151,7 +151,7 @@ namespace Dota2Dumper.Schemas {
         public static class CExampleSchemaVData_PolymorphicBase {
             public const nint m_nBase = 0x8; // int32
         }
-        // Parent: None
+        // Parent: CExampleSchemaVData_PolymorphicBase
         // Field count: 1
         //
         // Metadata:
@@ -161,6 +161,9 @@ namespace Dota2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 1
+        //
+        // Metadata:
+        // MIsBoxedIntegerType
         public static class ResourceId_t {
             public const nint m_Value = 0x0; // uint64
         }

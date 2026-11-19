@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: rendersystemvulkan.dll
@@ -120,6 +120,9 @@ namespace Dota2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 1
+        //
+        // Metadata:
+        // MIsBoxedIntegerType
         public static class SheetSequenceIntegerId_t {
             public const nint m_Value = 0x0; // uint32
         }

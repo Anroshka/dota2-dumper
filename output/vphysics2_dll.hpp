@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@
 namespace dota2_dumper {
     namespace schemas {
         // Module: vphysics2.dll
-        // Class count: 117
+        // Class count: 119
         // Enum count: 5
         namespace vphysics2_dll {
             // Alignment: 4
@@ -55,7 +55,7 @@ namespace dota2_dumper {
                 GENERIC_SHAPE_CAPSULE = 0x3,
                 GENERIC_SHAPE_HULL = 0x4
             };
-            // Parent: None
+            // Parent: RnShapeDesc_t
             // Field count: 1
             //
             // Metadata:
@@ -63,7 +63,7 @@ namespace dota2_dumper {
             namespace RnSphereDesc_t {
                 constexpr std::ptrdiff_t m_Sphere = 0x18; // RnSphere_t
             }
-            // Parent: None
+            // Parent: RnShapeDesc_t
             // Field count: 1
             //
             // Metadata:
@@ -79,7 +79,7 @@ namespace dota2_dumper {
             namespace RnSoftbodyParticle_t {
                 constexpr std::ptrdiff_t m_flMassInv = 0x0; // float32
             }
-            // Parent: None
+            // Parent: RnShapeDesc_t
             // Field count: 1
             //
             // Metadata:
@@ -87,7 +87,7 @@ namespace dota2_dumper {
             namespace RnHullDesc_t {
                 constexpr std::ptrdiff_t m_Hull = 0x18; // RnHull_t
             }
-            // Parent: None
+            // Parent: RnShapeDesc_t
             // Field count: 1
             //
             // Metadata:
@@ -96,7 +96,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_Capsule = 0x18; // RnCapsule_t
             }
             // Parent: None
-            // Field count: 115
+            // Field count: 116
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -197,27 +197,28 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_SkelParents = 0x6C8; // CUtlVector<int16>
                 constexpr std::ptrdiff_t m_DynNodeWindBases = 0x6E0; // CUtlVector<FeNodeWindBase_t>
                 constexpr std::ptrdiff_t m_SelfCollisionLayers = 0x6F8; // CUtlVector<FeModelSelfCollisionLayer_t>
-                constexpr std::ptrdiff_t m_flInternalPressure = 0x710; // float32
-                constexpr std::ptrdiff_t m_flDefaultTimeDilation = 0x714; // float32
-                constexpr std::ptrdiff_t m_flWindage = 0x718; // float32
-                constexpr std::ptrdiff_t m_flWindDrag = 0x71C; // float32
-                constexpr std::ptrdiff_t m_flDefaultSurfaceStretch = 0x720; // float32
-                constexpr std::ptrdiff_t m_flDefaultThreadStretch = 0x724; // float32
-                constexpr std::ptrdiff_t m_flDefaultGravityScale = 0x728; // float32
-                constexpr std::ptrdiff_t m_flDefaultVelAirDrag = 0x72C; // float32
-                constexpr std::ptrdiff_t m_flDefaultExpAirDrag = 0x730; // float32
-                constexpr std::ptrdiff_t m_flDefaultVelQuadAirDrag = 0x734; // float32
-                constexpr std::ptrdiff_t m_flDefaultExpQuadAirDrag = 0x738; // float32
-                constexpr std::ptrdiff_t m_flRodVelocitySmoothRate = 0x73C; // float32
-                constexpr std::ptrdiff_t m_flQuadVelocitySmoothRate = 0x740; // float32
-                constexpr std::ptrdiff_t m_flAddWorldCollisionRadius = 0x744; // float32
-                constexpr std::ptrdiff_t m_flDefaultVolumetricSolveAmount = 0x748; // float32
-                constexpr std::ptrdiff_t m_flMotionSmoothCDT = 0x74C; // float32
-                constexpr std::ptrdiff_t m_flLocalDrag1 = 0x750; // float32
-                constexpr std::ptrdiff_t m_nRodVelocitySmoothIterations = 0x754; // uint16
-                constexpr std::ptrdiff_t m_nQuadVelocitySmoothIterations = 0x756; // uint16
+                constexpr std::ptrdiff_t m_Deformers = 0x710; // CUtlVector<FeModelDeformer_t>
+                constexpr std::ptrdiff_t m_flInternalPressure = 0x728; // float32
+                constexpr std::ptrdiff_t m_flDefaultTimeDilation = 0x72C; // float32
+                constexpr std::ptrdiff_t m_flWindage = 0x730; // float32
+                constexpr std::ptrdiff_t m_flWindDrag = 0x734; // float32
+                constexpr std::ptrdiff_t m_flDefaultSurfaceStretch = 0x738; // float32
+                constexpr std::ptrdiff_t m_flDefaultThreadStretch = 0x73C; // float32
+                constexpr std::ptrdiff_t m_flDefaultGravityScale = 0x740; // float32
+                constexpr std::ptrdiff_t m_flDefaultVelAirDrag = 0x744; // float32
+                constexpr std::ptrdiff_t m_flDefaultExpAirDrag = 0x748; // float32
+                constexpr std::ptrdiff_t m_flDefaultVelQuadAirDrag = 0x74C; // float32
+                constexpr std::ptrdiff_t m_flDefaultExpQuadAirDrag = 0x750; // float32
+                constexpr std::ptrdiff_t m_flRodVelocitySmoothRate = 0x754; // float32
+                constexpr std::ptrdiff_t m_flQuadVelocitySmoothRate = 0x758; // float32
+                constexpr std::ptrdiff_t m_flAddWorldCollisionRadius = 0x75C; // float32
+                constexpr std::ptrdiff_t m_flDefaultVolumetricSolveAmount = 0x760; // float32
+                constexpr std::ptrdiff_t m_flMotionSmoothCDT = 0x764; // float32
+                constexpr std::ptrdiff_t m_flLocalDrag1 = 0x768; // float32
+                constexpr std::ptrdiff_t m_nRodVelocitySmoothIterations = 0x76C; // uint16
+                constexpr std::ptrdiff_t m_nQuadVelocitySmoothIterations = 0x76E; // uint16
             }
-            // Parent: None
+            // Parent: RnShapeDesc_t
             // Field count: 1
             //
             // Metadata:
@@ -244,7 +245,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flRadius = 0x18; // float32
                 constexpr std::ptrdiff_t m_nParticle = 0x1C; // uint16[2]
             }
-            // Parent: None
+            // Parent: RnBodyDesc_t
             // Field count: 1
             //
             // Metadata:
@@ -252,7 +253,7 @@ namespace dota2_dumper {
             namespace vphysics_save_cphysicsbody_t {
                 constexpr std::ptrdiff_t m_nOldPointer = 0xE0; // uint64
             }
-            // Parent: None
+            // Parent: FeBoxRigid_t
             // Field count: 3
             //
             // Metadata:
@@ -281,7 +282,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nParentHash = 0x0; // uint32
                 constexpr std::ptrdiff_t m_nChildNode = 0x4; // uint16
             }
-            // Parent: None
+            // Parent: IPhysicsBodyList
             // Field count: 2
             namespace IPhysAggregateInstance {
                 constexpr std::ptrdiff_t m_pSkeleton = 0x8; // void*
@@ -366,7 +367,7 @@ namespace dota2_dumper {
             // Field count: 0
             namespace IPhysicsBodyList {
             }
-            // Parent: None
+            // Parent: FeSphereRigid_t
             // Field count: 3
             //
             // Metadata:
@@ -548,6 +549,17 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flSurfaceArea = 0xBC; // float32
             }
             // Parent: None
+            // Field count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace FeModelDeformer_t__FfdLayerZ_t {
+                constexpr std::ptrdiff_t flZin = 0x0; // float32
+                constexpr std::ptrdiff_t flZout = 0x4; // float32
+                constexpr std::ptrdiff_t flScale = 0x8; // float32
+                constexpr std::ptrdiff_t flGoalStrength = 0xC; // float32
+            }
+            // Parent: None
             // Field count: 2
             namespace VertexPositionNormal_t {
                 constexpr std::ptrdiff_t m_vPosition = 0x0; // Vector
@@ -568,7 +580,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nType = 0x0; // bitfield:3
                 constexpr std::ptrdiff_t m_nSubtreeEndOrCompoundId = 0x0; // bitfield:29
             }
-            // Parent: None
+            // Parent: FeSDFRigid_t
             // Field count: 3
             //
             // Metadata:
@@ -828,7 +840,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nTriangleOffset = 0x1C; // uint32
             }
             // Parent: None
-            // Field count: 5
+            // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -838,6 +850,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t nEnd = 0x2C; // uint16
                 constexpr std::ptrdiff_t nNode = 0x2E; // uint16
                 constexpr std::ptrdiff_t nBeginDynamic = 0x30; // uint16
+                constexpr std::ptrdiff_t nFlags = 0x32; // uint16
             }
             // Parent: None
             // Field count: 4
@@ -921,6 +934,7 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataRoot
             // MVDataOutlinerLeafNameFn
             namespace CollisionDetailLayerInfo_t {
                 constexpr std::ptrdiff_t m_sDescription = 0x0; // CUtlString
@@ -1114,7 +1128,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t v2 = 0x14; // Vector2D
             }
             // Parent: None
-            // Field count: 15
+            // Field count: 14
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1130,10 +1144,9 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_VertexPositions = 0x70; // CUtlVector<Vector>
                 constexpr std::ptrdiff_t m_FacePlanes = 0x88; // CUtlVector<RnPlane_t>
                 constexpr std::ptrdiff_t m_nFlags = 0xA0; // uint32
-                constexpr std::ptrdiff_t m_pRegionSVM = 0xA8; // CRegionSVM*
-                constexpr std::ptrdiff_t m_Vertices = 0xB0; // CUtlVector<RnVertex_t>
-                constexpr std::ptrdiff_t m_Edges = 0xC8; // CUtlVector<RnHalfEdge_t>
-                constexpr std::ptrdiff_t m_Faces = 0xE0; // CUtlVector<RnFace_t>
+                constexpr std::ptrdiff_t m_Vertices = 0xA8; // CUtlVector<RnVertex_t>
+                constexpr std::ptrdiff_t m_Edges = 0xC0; // CUtlVector<RnHalfEdge_t>
+                constexpr std::ptrdiff_t m_Faces = 0xD8; // CUtlVector<RnFace_t>
             }
             // Parent: None
             // Field count: 5
@@ -1169,6 +1182,9 @@ namespace dota2_dumper {
             }
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedIntegerType
             namespace PhysicsParticleId_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // uint32
             }
@@ -1320,11 +1336,12 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataRoot
             namespace CollisionDetailLayerInfo_t__Name_t {
                 constexpr std::ptrdiff_t m_nNameToken = 0x0; // CUtlStringToken
                 constexpr std::ptrdiff_t m_sNameString = 0x8; // CUtlString
             }
-            // Parent: None
+            // Parent: FeTaperedCapsuleRigid_t
             // Field count: 3
             //
             // Metadata:
@@ -1412,6 +1429,19 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t w2 = 0x40; // fltx4
                 constexpr std::ptrdiff_t v1x = 0x50; // fltx4
                 constexpr std::ptrdiff_t v2 = 0x60; // FourVectors2D
+            }
+            // Parent: None
+            // Field count: 6
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace FeModelDeformer_t {
+                constexpr std::ptrdiff_t m_FfdZLayers = 0x0; // FeModelDeformer_t::FfdLayerZ_t[3]
+                constexpr std::ptrdiff_t m_flDisplayRadius = 0x30; // float32
+                constexpr std::ptrdiff_t m_nVertexMapNameHash = 0x34; // uint32
+                constexpr std::ptrdiff_t m_nVertexMapIndex = 0x38; // uint16
+                constexpr std::ptrdiff_t m_nReferenceNode = 0x3A; // uint16
+                constexpr std::ptrdiff_t m_nFlags = 0x3C; // uint32
             }
             // Parent: None
             // Field count: 1

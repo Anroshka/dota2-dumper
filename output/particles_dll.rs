@@ -1,13 +1,13 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod dota2_dumper {
     pub mod schemas {
         // Module: particles.dll
-        // Class count: 502
-        // Enum count: 77
+        // Class count: 504
+        // Enum count: 78
         pub mod particles_dll {
             // Alignment: 4
             // Member count: 2
@@ -31,6 +31,168 @@ pub mod dota2_dumper {
             pub enum PulseMethodCallMode_t {
                 SYNC_WAIT_FOR_COMPLETION = 0x0,
                 ASYNC_FIRE_AND_FORGET = 0x1
+            }
+            // Alignment: 2
+            // Member count: 157
+            #[repr(u16)]
+            pub enum PulseInstructionCode_t {
+                INVALID = 0x0,
+                IMMEDIATE_HALT = 0x1,
+                RETURN_VOID = 0x2,
+                RETURN_VALUE = 0x3,
+                LOOP_BREAK = 0x4,
+                NOP = 0x5,
+                JUMP = 0x6,
+                JUMP_COND = 0x7,
+                CHUNK_LEAP = 0x8,
+                CHUNK_LEAP_COND = 0x9,
+                PULSE_CALL_SYNC = 0xA,
+                PULSE_CALL_ASYNC_FIRE = 0xB,
+                CREATE_CHILD_CURSOR_OUTFLOW = 0xC,
+                CELL_INVOKE = 0xD,
+                LIBRARY_INVOKE = 0xE,
+                BROADCAST_INVOKE = 0xF,
+                SET_VAR = 0x10,
+                GET_VAR = 0x11,
+                GET_VAR_DETACH = 0x12,
+                DETACH_REGISTER = 0x13,
+                SET_VAR_ARRAY_ELEMENT_1D = 0x14,
+                SET_VAR_OBSERVABLE = 0x15,
+                GET_CONST = 0x16,
+                GET_ARRAY_ELEMENT = 0x17,
+                GET_DOMAIN_VALUE = 0x18,
+                COPY = 0x19,
+                NOT = 0x1A,
+                NEGATE = 0x1B,
+                ADD = 0x1C,
+                SUB = 0x1D,
+                MUL = 0x1E,
+                DIV = 0x1F,
+                MOD = 0x20,
+                LT = 0x21,
+                LTE = 0x22,
+                EQ = 0x23,
+                NE = 0x24,
+                AND = 0x25,
+                OR = 0x26,
+                SCALE = 0x27,
+                SCALE_INV = 0x28,
+                ELEMENT_ACCESS = 0x29,
+                CONVERT_VALUE = 0x2A,
+                REINTERPRET_INSTANCE = 0x2B,
+                GET_BLACKBOARD_REFERENCE = 0x2C,
+                SET_BLACKBOARD_REFERENCE = 0x2D,
+                GET_TEMPVAR = 0x2E,
+                SET_TEMPVAR = 0x2F,
+                SET_TEMPVAR_OBSERVABLE = 0x30,
+                BIND_LAMBDA = 0x31,
+                LAST_SERIALIZED_CODE = 0x32,
+                NEGATE_INT = 0x33,
+                NEGATE_FLOAT = 0x34,
+                NEGATE_VEC2 = 0x35,
+                NEGATE_VEC3 = 0x36,
+                NEGATE_VEC4 = 0x37,
+                ADD_INT = 0x38,
+                ADD_FLOAT = 0x39,
+                ADD_STRING = 0x3A,
+                ADD_VEC2 = 0x3B,
+                ADD_VEC3 = 0x3C,
+                ADD_VEC3WS_VEC3 = 0x3D,
+                ADD_VEC3_VEC3WS = 0x3E,
+                ADD_VEC4 = 0x3F,
+                ADD_GAMETIME_FLOAT = 0x40,
+                ADD_FLOAT_GAMETIME = 0x41,
+                SUB_INT = 0x42,
+                SUB_FLOAT = 0x43,
+                SUB_VEC2 = 0x44,
+                SUB_VEC3 = 0x45,
+                SUB_VEC3WS_VEC3 = 0x46,
+                SUB_VEC3WS_VEC3WS = 0x47,
+                SUB_VEC4 = 0x48,
+                SUB_GAMETIME_FLOAT = 0x49,
+                SUB_GAMETIME = 0x4A,
+                MUL_INT = 0x4B,
+                MUL_FLOAT = 0x4C,
+                DIV_FLOAT = 0x4D,
+                MOD_INT = 0x4E,
+                MOD_FLOAT = 0x4F,
+                LT_INT = 0x50,
+                LT_FLOAT = 0x51,
+                LT_GAMETIME = 0x52,
+                LTE_INT = 0x53,
+                LTE_FLOAT = 0x54,
+                LTE_GAMETIME = 0x55,
+                EQ_BOOL = 0x56,
+                NE_BOOL = 0x57,
+                EQ_INT = 0x58,
+                NE_INT = 0x59,
+                EQ_FLOAT = 0x5A,
+                NE_FLOAT = 0x5B,
+                EQ_STRING = 0x5C,
+                NE_STRING = 0x5D,
+                EQ_VEC2 = 0x5E,
+                NE_VEC2 = 0x5F,
+                EQ_VEC3 = 0x60,
+                NE_VEC3 = 0x61,
+                EQ_QANGLE = 0x62,
+                NE_QANGLE = 0x63,
+                EQ_VEC3WS = 0x64,
+                NE_VEC3WS = 0x65,
+                EQ_VEC4 = 0x66,
+                NE_VEC4 = 0x67,
+                EQ_TRANSFORM = 0x68,
+                NE_TRANSFORM = 0x69,
+                EQ_TRANSFORMWS = 0x6A,
+                NE_TRANSFORMWS = 0x6B,
+                EQ_COLOR_RGB = 0x6C,
+                NE_COLOR_RGB = 0x6D,
+                EQ_GAMETIME = 0x6E,
+                NE_GAMETIME = 0x6F,
+                EQ_EHANDLE = 0x70,
+                NE_EHANDLE = 0x71,
+                EQ_RESOURCE = 0x72,
+                NE_RESOURCE = 0x73,
+                EQ_RESOURCE_NAME = 0x74,
+                NE_RESOURCE_NAME = 0x75,
+                EQ_SNDEVT_GUID = 0x76,
+                NE_SNDEVT_GUID = 0x77,
+                EQ_SNDEVT_NAME = 0x78,
+                NE_SNDEVT_NAME = 0x79,
+                EQ_ENTITY_NAME = 0x7A,
+                NE_ENTITY_NAME = 0x7B,
+                EQ_LEAF = 0x7C,
+                NE_LEAF = 0x7D,
+                EQ_MODEL_MATERIAL_GROUP = 0x7E,
+                NE_MODEL_MATERIAL_GROUP = 0x7F,
+                EQ_VARIANT = 0x80,
+                NE_VARIANT = 0x81,
+                EQ_ENUM = 0x82,
+                NE_ENUM = 0x83,
+                EQ_PANEL_HANDLE = 0x84,
+                NE_PANEL_HANDLE = 0x85,
+                EQ_ARRAY = 0x86,
+                NE_ARRAY = 0x87,
+                EQ_PARTICLE_EHANDLE = 0x88,
+                NE_PARTICLE_EHANDLE = 0x89,
+                EQ_ANIM_SEQUENCE = 0x8A,
+                NE_ANIM_SEQUENCE = 0x8B,
+                EQ_VDATA_CHOICE = 0x8C,
+                NE_VDATA_CHOICE = 0x8D,
+                SCALE_VEC3 = 0x8E,
+                SCALE_VEC2 = 0x8F,
+                SCALE_VEC4 = 0x90,
+                SCALE_INV_VEC3 = 0x91,
+                SCALE_INV_VEC2 = 0x92,
+                SCALE_INV_VEC4 = 0x93,
+                ELEMENT_ACCESS_VEC2 = 0x94,
+                ELEMENT_ACCESS_VEC3 = 0x95,
+                ELEMENT_ACCESS_VEC3WS = 0x96,
+                ELEMENT_ACCESS_VEC4 = 0x97,
+                ELEMENT_ACCESS_COLOR_RGB = 0x98,
+                GET_CONST_INLINE_STORAGE = 0x99,
+                BROADCAST_INVOKE_DOMAIN = 0x9A,
+                BROADCAST_INVOKE_ARRAY_SIMPLE = 0x9B,
+                BROADCAST_INVOKE_ARRAY_DOMAIN = 0x9C
             }
             // Alignment: 4
             // Member count: 2
@@ -756,19 +918,20 @@ pub mod dota2_dumper {
                 TEXTURE_REPETITION_PARTICLE = 0x0,
                 TEXTURE_REPETITION_PATH = 0x1
             }
-            // Parent: None
+            // Parent: CPulseCell_WaitForCursorsWithTagBase
             // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
+            // MPulseEditorSearchExpr
             // MPropertyDescription
             // MPulseEditorHeaderIcon
             pub mod CPulseCell_WaitForCursorsWithTag {
                 pub const m_bTagSelfWhenComplete: usize = 0x128; // bool
                 pub const m_nDesiredKillPriority: usize = 0x12C; // PulseCursorCancelPriority_t
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 2
             //
             // Metadata:
@@ -785,11 +948,11 @@ pub mod dota2_dumper {
             pub mod CPulseCell_Base {
                 pub const m_nEditorNodeID: usize = 0x8; // PulseDocNodeID_t
             }
-            // Parent: None
+            // Parent: CPulse_OutflowConnection
             // Field count: 0
             pub mod CPulse_ResumePoint {
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 2
             //
             // Metadata:
@@ -802,12 +965,12 @@ pub mod dota2_dumper {
                 pub const m_nCheckType: usize = 0x48; // PulseBestOutflowRules_t
                 pub const m_OutflowList: usize = 0x50; // PulseSelectorOutflowList_t
             }
-            // Parent: None
+            // Parent: CParticleCollectionBindingInstance
             // Field count: 0
             pub mod CParticleBindingRealPulse {
             }
-            // Parent: None
-            // Field count: 2
+            // Parent: CPulseCell_BaseYieldingInflow
+            // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -815,8 +978,7 @@ pub mod dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CPulseCell_WaitForObservable {
-                pub const m_Condition: usize = 0xD8; // CPulseObservableExpression<bool>
-                pub const m_OnTrue: usize = 0x168; // CPulse_ResumePoint
+                pub const m_OnTrue: usize = 0xD8; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 4
@@ -827,7 +989,7 @@ pub mod dota2_dumper {
                 pub const m_OutflowRegisterMap: usize = 0x18; // PulseRegisterMap_t
             }
             // Parent: None
-            // Field count: 15
+            // Field count: 16
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -846,9 +1008,10 @@ pub mod dota2_dumper {
                 pub const m_Constants: usize = 0xF8; // CUtlVector<CPulse_Constant>
                 pub const m_DomainValues: usize = 0x110; // CUtlVector<CPulse_DomainValue>
                 pub const m_BlackboardReferences: usize = 0x128; // CUtlVector<CPulse_BlackboardReference>
-                pub const m_OutputConnections: usize = 0x140; // CUtlVector<CPulse_OutputConnection*>
+                pub const m_LambdaDefs: usize = 0x140; // CUtlVector<CPulse_LambdaDef>
+                pub const m_OutputConnections: usize = 0x158; // CUtlVector<CPulse_OutputConnection*>
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 3
             //
             // Metadata:
@@ -868,7 +1031,7 @@ pub mod dota2_dumper {
                 pub const m_EventOutflow: usize = 0x8; // CPulse_OutflowConnection
             }
             // Parent: None
-            // Field count: 5
+            // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -878,15 +1041,16 @@ pub mod dota2_dumper {
                 pub const m_flWaitInterval: usize = 0x8; // float32
                 pub const m_flWaitIntervalHigh: usize = 0xC; // float32
                 pub const m_bCompleteOnNextWake: usize = 0x10; // bool
+                pub const m_bCompletingVeryCloseToEndOfInterval: usize = 0x11; // bool
             }
-            // Parent: None
+            // Parent: CPulseCell_Base
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CPulseCell_BaseRequirement {
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 0
             //
             // Metadata:
@@ -905,21 +1069,12 @@ pub mod dota2_dumper {
                 pub const m_RequirementNodeIDs: usize = 0x50; // CUtlVector<PulseDocNodeID_t>
                 pub const m_nCursorStateBlockIndex: usize = 0x68; // CUtlVector<int32>
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseRequirement
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CPulseCell_IsRequirementValid {
-            }
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            pub mod CPulseCell_Value_Gradient {
-                pub const m_Gradient: usize = 0x48; // CColorGradient
             }
             // Parent: None
             // Field count: 2
@@ -934,7 +1089,7 @@ pub mod dota2_dumper {
             // Field count: 0
             pub mod CBasePulseGraphInstance {
             }
-            // Parent: None
+            // Parent: CPulseCell_Inflow_BaseEntrypoint
             // Field count: 1
             //
             // Metadata:
@@ -942,11 +1097,11 @@ pub mod dota2_dumper {
             pub mod CPulseCell_Inflow_GraphHook {
                 pub const m_HookName: usize = 0x80; // PulseSymbol_t
             }
-            // Parent: None
+            // Parent: CPulse_ResumePoint
             // Field count: 0
             pub mod SignatureOutflow_Resume {
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 2
             //
             // Metadata:
@@ -955,7 +1110,7 @@ pub mod dota2_dumper {
                 pub const m_EntryChunk: usize = 0x48; // PulseRuntimeChunkIndex_t
                 pub const m_RegisterMap: usize = 0x50; // PulseRegisterMap_t
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 2
             //
             // Metadata:
@@ -977,8 +1132,8 @@ pub mod dota2_dumper {
                 pub const m_nSrcChunk: usize = 0x44; // PulseRuntimeChunkIndex_t
                 pub const m_nSrcInstruction: usize = 0x48; // int32
             }
-            // Parent: None
-            // Field count: 2
+            // Parent: CPulseCell_BaseYieldingInflow
+            // Field count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -989,8 +1144,10 @@ pub mod dota2_dumper {
             pub mod CPulseCell_IntervalTimer {
                 pub const m_Completed: usize = 0xD8; // CPulse_ResumePoint
                 pub const m_OnInterval: usize = 0x120; // SignatureOutflow_Continue
+                pub const m_bFireAtStart: usize = 0x168; // bool
+                pub const m_bFireAtEnd: usize = 0x169; // bool
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 1
             //
             // Metadata:
@@ -1003,11 +1160,10 @@ pub mod dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            pub mod CPulseCell_Value_Curve {
-                pub const m_Curve: usize = 0x48; // CPiecewiseCurve
+            pub mod CPulseCell_WaitForObservable__CursorState_t {
+                pub const m_Condition: usize = 0x0; // HPulseObservableLambda<bool>
             }
-            // Parent: None
+            // Parent: CPulseCell_Inflow_BaseEntrypoint
             // Field count: 1
             //
             // Metadata:
@@ -1015,12 +1171,33 @@ pub mod dota2_dumper {
             pub mod CPulseCell_Inflow_EventHandler {
                 pub const m_EventName: usize = 0x80; // PulseSymbol_t
             }
-            // Parent: None
+            // Parent: CPulseCell_Base
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CPulseCell_BaseFlow {
+            }
+            // Parent: None
+            // Field count: 14
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod PGDInstruction_t {
+                pub const m_nCode: usize = 0x0; // PulseInstructionCode_t
+                pub const m_nVar: usize = 0x4; // PulseRuntimeVarIndex_t
+                pub const m_nReg0: usize = 0x8; // PulseRuntimeRegisterIndex_t
+                pub const m_nReg1: usize = 0xA; // PulseRuntimeRegisterIndex_t
+                pub const m_nReg2: usize = 0xC; // PulseRuntimeRegisterIndex_t
+                pub const m_nLambdaIdx: usize = 0xE; // PulseRuntimeLambdaIndex_t
+                pub const m_nInvokeBindingIndex: usize = 0x10; // PulseRuntimeInvokeIndex_t
+                pub const m_nChunk: usize = 0x14; // PulseRuntimeChunkIndex_t
+                pub const m_nDestInstruction: usize = 0x18; // int32
+                pub const m_nCallInfoIndex: usize = 0x1C; // PulseRuntimeCallInfoIndex_t
+                pub const m_nConstIdx: usize = 0x20; // PulseRuntimeConstantIndex_t
+                pub const m_nDomainValueIdx: usize = 0x22; // PulseRuntimeDomainValueIndex_t
+                pub const m_nBlackboardReferenceIdx: usize = 0x24; // PulseRuntimeBlackboardReferenceIndex_t
+                pub const m_nTempVarIdx: usize = 0x26; // PulseRuntimeTempVarIndex_t
             }
             // Parent: None
             // Field count: 2
@@ -1040,11 +1217,11 @@ pub mod dota2_dumper {
                 pub const m_StartTime: usize = 0x0; // GameTime_t
                 pub const m_EndTime: usize = 0x4; // GameTime_t
             }
-            // Parent: None
+            // Parent: CPulse_OutflowConnection
             // Field count: 0
             pub mod SignatureOutflow_Continue {
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 3
             //
             // Metadata:
@@ -1054,7 +1231,7 @@ pub mod dota2_dumper {
                 pub const m_bWaitForChildOutflows: usize = 0xF0; // bool
                 pub const m_OnFinished: usize = 0xF8; // CPulse_ResumePoint
             }
-            // Parent: None
+            // Parent: CPulseCell_Inflow_BaseEntrypoint
             // Field count: 3
             //
             // Metadata:
@@ -1072,7 +1249,7 @@ pub mod dota2_dumper {
             pub mod CPulseCell_Outflow_CycleOrdered__InstanceState_t {
                 pub const m_nNextIndex: usize = 0x0; // int32
             }
-            // Parent: None
+            // Parent: CBasePulseGraphInstance
             // Field count: 0
             pub mod CParticleCollectionBindingInstance {
             }
@@ -1084,14 +1261,14 @@ pub mod dota2_dumper {
             pub mod CPulseCell_LimitCount__InstanceState_t {
                 pub const m_nCurrentCount: usize = 0x0; // int32
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CPulseCell_Step_DebugLog {
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 2
             //
             // Metadata:
@@ -1114,7 +1291,7 @@ pub mod dota2_dumper {
             pub mod CPulseCell_IsRequirementValid__Criteria_t {
                 pub const m_bIsValid: usize = 0x0; // bool
             }
-            // Parent: None
+            // Parent: CPulseCell_Inflow_BaseEntrypoint
             // Field count: 2
             //
             // Metadata:
@@ -1123,18 +1300,17 @@ pub mod dota2_dumper {
                 pub const m_nBlackboardReference: usize = 0x80; // PulseRuntimeBlackboardReferenceIndex_t
                 pub const m_bSelfReference: usize = 0x82; // bool
             }
-            // Parent: None
-            // Field count: 2
+            // Parent: CPulseCell_BaseState
+            // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CPulseCell_ObservableSwitchState {
-                pub const m_SwitchValue: usize = 0xD8; // CPulseObservableExpression<CPulseVariant>
-                pub const m_Cases: usize = 0x168; // CPulseObservableSwitchCases
+                pub const m_Cases: usize = 0xD8; // CPulseObservableSwitchCases
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 1
             //
             // Metadata:
@@ -1150,7 +1326,7 @@ pub mod dota2_dumper {
             pub mod PulseSelectorOutflowList_t {
                 pub const m_Outflows: usize = 0x0; // CUtlVector<OutflowWithRequirements_t>
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 1
             //
             // Metadata:
@@ -1162,7 +1338,7 @@ pub mod dota2_dumper {
             pub mod CPulseCell_Inflow_Wait {
                 pub const m_WakeResume: usize = 0xD8; // CPulse_ResumePoint
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 1
             //
             // Metadata:
@@ -1170,7 +1346,7 @@ pub mod dota2_dumper {
             pub mod CPulseCell_Outflow_CycleShuffled {
                 pub const m_Outputs: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
             }
-            // Parent: None
+            // Parent: CPulseCell_Inflow_BaseEntrypoint
             // Field count: 5
             //
             // Metadata:
@@ -1182,15 +1358,15 @@ pub mod dota2_dumper {
                 pub const m_Args: usize = 0xA0; // CUtlLeanVector<CPulseRuntimeMethodArg>
                 pub const m_ReturnValues: usize = 0xB0; // CUtlLeanVector<CPulseRuntimeMethodArg>
             }
-            // Parent: None
+            // Parent: CPulseCell_Base
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CPulseCell_BaseValue {
             }
-            // Parent: None
-            // Field count: 3
+            // Parent: CPulseCell_BaseState
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1198,11 +1374,10 @@ pub mod dota2_dumper {
             // MPropertyDescription
             // MPulseEditorCanvasItemSpecKV3
             pub mod CPulseCell_BooleanSwitchState {
-                pub const m_Condition: usize = 0xD8; // CPulseObservableExpression<bool>
-                pub const m_WhenTrue: usize = 0x168; // CPulse_OutflowConnection
-                pub const m_WhenFalse: usize = 0x1B0; // CPulse_OutflowConnection
+                pub const m_WhenTrue: usize = 0xD8; // CPulse_OutflowConnection
+                pub const m_WhenFalse: usize = 0x120; // CPulse_OutflowConnection
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 1
             //
             // Metadata:
@@ -1210,12 +1385,12 @@ pub mod dota2_dumper {
             pub mod CPulseCell_Inflow_Yield {
                 pub const m_UnyieldResume: usize = 0xD8; // CPulse_ResumePoint
             }
-            // Parent: None
+            // Parent: CPulseCell_Base
             // Field count: 1
             pub mod CPulseCell_Unknown {
                 pub const m_UnknownKeys: usize = 0x48; // KeyValues3
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 1
             //
             // Metadata:
@@ -1223,7 +1398,7 @@ pub mod dota2_dumper {
             pub mod CPulseCell_Outflow_CycleRandom {
                 pub const m_Outputs: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 1
             //
             // Metadata:
@@ -1243,6 +1418,14 @@ pub mod dota2_dumper {
                 pub const m_NodeName: usize = 0x20; // CGlobalSymbol
             }
             // Parent: None
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CPulseCell_ObservableSwitchState__CursorState_t {
+                pub const m_SwitchValue: usize = 0x0; // HPulseObservableLambda<CPulseVariant>
+            }
+            // Parent: CPulseCell_BaseFlow
             // Field count: 0
             //
             // Metadata:
@@ -1250,14 +1433,12 @@ pub mod dota2_dumper {
             pub mod CPulseCell_ReturnValues {
             }
             // Parent: None
-            // Field count: 0
+            // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            // MPulseEditorHeaderIcon
-            pub mod CPulseCell_Value_RandomInt {
+            pub mod CPulseCell_BooleanSwitchState__CursorState_t {
+                pub const m_Condition: usize = 0x0; // HPulseObservableLambda<bool>
             }
             // Parent: None
             // Field count: 8
@@ -1274,11 +1455,12 @@ pub mod dota2_dumper {
                 pub const m_nBreakDestChunk: usize = 0x54; // PulseRuntimeChunkIndex_t
                 pub const m_nBreakDestInstruction: usize = 0x58; // int32
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPulseFunctionHiddenInTool
             pub mod CPulseCell_InlineNodeSkipSelector {
                 pub const m_nFlowNodeID: usize = 0x48; // PulseDocNodeID_t
                 pub const m_bAnd: usize = 0x4C; // bool
@@ -1286,6 +1468,20 @@ pub mod dota2_dumper {
                 pub const m_FailOutflow: usize = 0x68; // CPulse_OutflowConnection
             }
             // Parent: None
+            // Field count: 7
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CPulse_LambdaDef {
+                pub const m_EvaluateConnection: usize = 0x0; // CPulse_OutflowConnection
+                pub const m_ResultType: usize = 0x48; // CPulseType
+                pub const m_nEditorNodeID: usize = 0x60; // PulseDocNodeID_t
+                pub const m_PortName: usize = 0x68; // PulseSymbol_t
+                pub const m_DependentObservableVars: usize = 0x78; // CUtlVector<PulseRuntimeVarIndex_t>
+                pub const m_DependentObservableBlackboardReferences: usize = 0x90; // CUtlVector<PulseRuntimeBlackboardReferenceIndex_t>
+                pub const m_DependentObservableTempVars: usize = 0xA8; // CUtlVector<PulseDocNodeID_t>
+            }
+            // Parent: CPulseCell_BaseRequirement
             // Field count: 1
             //
             // Metadata:
@@ -1295,7 +1491,7 @@ pub mod dota2_dumper {
             pub mod CPulseCell_LimitCount {
                 pub const m_nLimitCount: usize = 0x48; // int32
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 5
             //
             // Metadata:
@@ -1312,7 +1508,7 @@ pub mod dota2_dumper {
             pub mod CPulseCell_LimitCount__Criteria_t {
                 pub const m_bLimitCountPasses: usize = 0x0; // bool
             }
-            // Parent: None
+            // Parent: CPulseCell_WaitForCursorsWithTagBase
             // Field count: 1
             //
             // Metadata:
@@ -1325,23 +1521,13 @@ pub mod dota2_dumper {
             }
             // Parent: None
             // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            // MPulseEditorHeaderIcon
-            pub mod CPulseCell_Value_RandomFloat {
-            }
-            // Parent: None
-            // Field count: 0
             pub mod CPulseExecCursor {
             }
             // Parent: None
             // Field count: 0
             pub mod IParticleCollection {
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -1352,39 +1538,40 @@ pub mod dota2_dumper {
                 pub const m_nSetMethod: usize = 0x8BC; // ParticleSetMethod_t
                 pub const m_bNormalizedOutput: usize = 0x8C0; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_Decay {
                 pub const m_bRopeDecay: usize = 0x1E0; // bool
                 pub const m_bForcePreserveParticleOrder: usize = 0x1E1; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 16
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderDeferredLight {
-                pub const m_flRadiusScale: usize = 0x230; // float32
-                pub const m_flAlphaScale: usize = 0x234; // float32
-                pub const m_nAlpha2Field: usize = 0x238; // ParticleAttributeIndex_t
-                pub const m_vecColorScale: usize = 0x240; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0x918; // ParticleColorBlendType_t
-                pub const m_bUseTexture: usize = 0x91C; // bool
-                pub const m_bUseAlphaTestWindow: usize = 0x91D; // bool
-                pub const m_hTexture: usize = 0x920; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_nAlphaTestPointField: usize = 0x928; // ParticleAttributeIndex_t
-                pub const m_nAlphaTestRangeField: usize = 0x92C; // ParticleAttributeIndex_t
-                pub const m_nAlphaTestSharpnessField: usize = 0x930; // ParticleAttributeIndex_t
-                pub const m_flLightDistance: usize = 0x934; // float32
-                pub const m_flStartFalloff: usize = 0x938; // float32
-                pub const m_flDistanceFalloff: usize = 0x93C; // float32
-                pub const m_flSpotFoV: usize = 0x940; // float32
-                pub const m_nHSVShiftControlPoint: usize = 0x944; // int32
+                pub const m_flRadiusScale: usize = 0x228; // float32
+                pub const m_flAlphaScale: usize = 0x22C; // float32
+                pub const m_nAlpha2Field: usize = 0x230; // ParticleAttributeIndex_t
+                pub const m_vecColorScale: usize = 0x238; // CParticleCollectionVecInput
+                pub const m_nColorBlendType: usize = 0x910; // ParticleColorBlendType_t
+                pub const m_bUseTexture: usize = 0x914; // bool
+                pub const m_bUseAlphaTestWindow: usize = 0x915; // bool
+                pub const m_hTexture: usize = 0x918; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_nAlphaTestPointField: usize = 0x920; // ParticleAttributeIndex_t
+                pub const m_nAlphaTestRangeField: usize = 0x924; // ParticleAttributeIndex_t
+                pub const m_nAlphaTestSharpnessField: usize = 0x928; // ParticleAttributeIndex_t
+                pub const m_flLightDistance: usize = 0x92C; // float32
+                pub const m_flStartFalloff: usize = 0x930; // float32
+                pub const m_flDistanceFalloff: usize = 0x934; // float32
+                pub const m_flSpotFoV: usize = 0x938; // float32
+                pub const m_nHSVShiftControlPoint: usize = 0x93C; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 8
             //
             // Metadata:
@@ -1399,7 +1586,7 @@ pub mod dota2_dumper {
                 pub const m_flOutputMax: usize = 0x200; // float32
                 pub const m_bUseDeltaV: usize = 0x204; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 1
             //
             // Metadata:
@@ -1415,7 +1602,7 @@ pub mod dota2_dumper {
             pub mod CollisionGroupContext_t {
                 pub const m_nCollisionGroupNumber: usize = 0x0; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 1
             //
             // Metadata:
@@ -1423,16 +1610,17 @@ pub mod dota2_dumper {
             pub mod CParticleFunctionPreEmission {
                 pub const m_bRunOnce: usize = 0x1E0; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_FadeOutSimple {
                 pub const m_flFadeOutTime: usize = 0x1E0; // float32
                 pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionConstraint
             // Field count: 5
             //
             // Metadata:
@@ -1444,47 +1632,47 @@ pub mod dota2_dumper {
                 pub const m_flRestingLength: usize = 0x648; // CPerParticleFloatInput
                 pub const m_vecAnchorVector: usize = 0x7C0; // CPerParticleVecInput
             }
-            // Parent: None
+            // Parent: CBaseRendererSource2
             // Field count: 33
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderRopes {
-                pub const m_bEnableFadingAndClamping: usize = 0x2ED8; // bool
-                pub const m_flMinSize: usize = 0x2EDC; // float32
-                pub const m_flMaxSize: usize = 0x2EE0; // float32
-                pub const m_flStartFadeSize: usize = 0x2EE4; // float32
-                pub const m_flEndFadeSize: usize = 0x2EE8; // float32
-                pub const m_flStartFadeDot: usize = 0x2EEC; // float32
-                pub const m_flEndFadeDot: usize = 0x2EF0; // float32
-                pub const m_flSubPixelAAScale: usize = 0x2EF8; // CParticleCollectionRendererFloatInput
-                pub const m_flRadiusTaper: usize = 0x3070; // float32
-                pub const m_nMinTesselation: usize = 0x3074; // int32
-                pub const m_nMaxTesselation: usize = 0x3078; // int32
-                pub const m_flTessScale: usize = 0x307C; // float32
-                pub const m_flTextureVWorldSize: usize = 0x3080; // CParticleCollectionRendererFloatInput
-                pub const m_flTextureVScrollRate: usize = 0x31F8; // CParticleCollectionRendererFloatInput
-                pub const m_flTextureVOffset: usize = 0x3370; // CParticleCollectionRendererFloatInput
-                pub const m_nTextureVParamsCP: usize = 0x34E8; // int32
-                pub const m_bClampV: usize = 0x34EC; // bool
-                pub const m_nScaleCP1: usize = 0x34F0; // int32
-                pub const m_nScaleCP2: usize = 0x34F4; // int32
-                pub const m_flScaleVSizeByControlPointDistance: usize = 0x34F8; // float32
-                pub const m_flScaleVScrollByControlPointDistance: usize = 0x34FC; // float32
-                pub const m_flScaleVOffsetByControlPointDistance: usize = 0x3500; // float32
-                pub const m_bUseScalarForTextureCoordinate: usize = 0x3505; // bool
-                pub const m_nScalarFieldForTextureCoordinate: usize = 0x3508; // ParticleAttributeIndex_t
-                pub const m_flScalarAttributeTextureCoordScale: usize = 0x350C; // float32
-                pub const m_bReverseOrder: usize = 0x3510; // bool
-                pub const m_bClosedLoop: usize = 0x3511; // bool
-                pub const m_nSplitField: usize = 0x3514; // ParticleAttributeIndex_t
-                pub const m_bSortBySegmentID: usize = 0x3518; // bool
-                pub const m_nOrientationType: usize = 0x351C; // ParticleOrientationChoiceList_t
-                pub const m_nVectorFieldForOrientation: usize = 0x3520; // ParticleAttributeIndex_t
-                pub const m_bDrawAsOpaque: usize = 0x3524; // bool
-                pub const m_bGenerateNormals: usize = 0x3525; // bool
+                pub const m_bEnableFadingAndClamping: usize = 0x2ED0; // bool
+                pub const m_flMinSize: usize = 0x2ED4; // float32
+                pub const m_flMaxSize: usize = 0x2ED8; // float32
+                pub const m_flStartFadeSize: usize = 0x2EDC; // float32
+                pub const m_flEndFadeSize: usize = 0x2EE0; // float32
+                pub const m_flStartFadeDot: usize = 0x2EE4; // float32
+                pub const m_flEndFadeDot: usize = 0x2EE8; // float32
+                pub const m_flSubPixelAAScale: usize = 0x2EF0; // CParticleCollectionRendererFloatInput
+                pub const m_flRadiusTaper: usize = 0x3068; // float32
+                pub const m_nMinTesselation: usize = 0x306C; // int32
+                pub const m_nMaxTesselation: usize = 0x3070; // int32
+                pub const m_flTessScale: usize = 0x3074; // float32
+                pub const m_flTextureVWorldSize: usize = 0x3078; // CParticleCollectionRendererFloatInput
+                pub const m_flTextureVScrollRate: usize = 0x31F0; // CParticleCollectionRendererFloatInput
+                pub const m_flTextureVOffset: usize = 0x3368; // CParticleCollectionRendererFloatInput
+                pub const m_nTextureVParamsCP: usize = 0x34E0; // int32
+                pub const m_bClampV: usize = 0x34E4; // bool
+                pub const m_nScaleCP1: usize = 0x34E8; // int32
+                pub const m_nScaleCP2: usize = 0x34EC; // int32
+                pub const m_flScaleVSizeByControlPointDistance: usize = 0x34F0; // float32
+                pub const m_flScaleVScrollByControlPointDistance: usize = 0x34F4; // float32
+                pub const m_flScaleVOffsetByControlPointDistance: usize = 0x34F8; // float32
+                pub const m_bUseScalarForTextureCoordinate: usize = 0x34FD; // bool
+                pub const m_nScalarFieldForTextureCoordinate: usize = 0x3500; // ParticleAttributeIndex_t
+                pub const m_flScalarAttributeTextureCoordScale: usize = 0x3504; // float32
+                pub const m_bReverseOrder: usize = 0x3508; // bool
+                pub const m_bClosedLoop: usize = 0x3509; // bool
+                pub const m_nSplitField: usize = 0x350C; // ParticleAttributeIndex_t
+                pub const m_bSortBySegmentID: usize = 0x3510; // bool
+                pub const m_nOrientationType: usize = 0x3514; // ParticleOrientationChoiceList_t
+                pub const m_nVectorFieldForOrientation: usize = 0x3518; // ParticleAttributeIndex_t
+                pub const m_bDrawAsOpaque: usize = 0x351C; // bool
+                pub const m_bGenerateNormals: usize = 0x351D; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 19
             //
             // Metadata:
@@ -1510,27 +1698,27 @@ pub mod dota2_dumper {
                 pub const m_flSFXSDetailScrollZ: usize = 0x22C; // float32
                 pub const m_flSFXSUseModelUVs: usize = 0x230; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 12
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderSound {
-                pub const m_flDurationScale: usize = 0x230; // float32
-                pub const m_flSndLvlScale: usize = 0x234; // float32
-                pub const m_flPitchScale: usize = 0x238; // float32
-                pub const m_flVolumeScale: usize = 0x23C; // float32
-                pub const m_nSndLvlField: usize = 0x240; // ParticleAttributeIndex_t
-                pub const m_nDurationField: usize = 0x244; // ParticleAttributeIndex_t
-                pub const m_nPitchField: usize = 0x248; // ParticleAttributeIndex_t
-                pub const m_nVolumeField: usize = 0x24C; // ParticleAttributeIndex_t
-                pub const m_nChannel: usize = 0x250; // int32
-                pub const m_nCPReference: usize = 0x254; // int32
-                pub const m_pszSoundName: usize = 0x258; // char[256]
-                pub const m_bSuppressStopSoundEvent: usize = 0x358; // bool
+                pub const m_flDurationScale: usize = 0x228; // float32
+                pub const m_flSndLvlScale: usize = 0x22C; // float32
+                pub const m_flPitchScale: usize = 0x230; // float32
+                pub const m_flVolumeScale: usize = 0x234; // float32
+                pub const m_nSndLvlField: usize = 0x238; // ParticleAttributeIndex_t
+                pub const m_nDurationField: usize = 0x23C; // ParticleAttributeIndex_t
+                pub const m_nPitchField: usize = 0x240; // ParticleAttributeIndex_t
+                pub const m_nVolumeField: usize = 0x244; // ParticleAttributeIndex_t
+                pub const m_nChannel: usize = 0x248; // int32
+                pub const m_nCPReference: usize = 0x24C; // int32
+                pub const m_pszSoundName: usize = 0x250; // char[256]
+                pub const m_bSuppressStopSoundEvent: usize = 0x350; // bool
             }
             // Parent: None
-            // Field count: 19
+            // Field count: 18
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1552,10 +1740,9 @@ pub mod dota2_dumper {
                 pub const m_flAlphaScaleMax: usize = 0x34; // float32
                 pub const m_flRadiusScaleMin: usize = 0x38; // float32
                 pub const m_flRadiusScaleMax: usize = 0x3C; // float32
-                pub const m_flRadiusScaleFOVBase: usize = 0x40; // float32
-                pub const m_bRightEye: usize = 0x44; // bool
+                pub const m_bRightEye: usize = 0x40; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 8
             //
             // Metadata:
@@ -1570,7 +1757,7 @@ pub mod dota2_dumper {
                 pub const m_nOrientationMode: usize = 0x1F4; // ParticleOrientationSetMode_t
                 pub const m_nSetParent: usize = 0x1F8; // ParticleParentSetMode_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -1581,7 +1768,7 @@ pub mod dota2_dumper {
                 pub const m_flScale: usize = 0x1E8; // float32
                 pub const m_bNormalize: usize = 0x1EC; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -1600,7 +1787,7 @@ pub mod dota2_dumper {
                 pub const m_bodyGroupName: usize = 0x0; // CUtlString
                 pub const m_nValue: usize = 0x8; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
@@ -1612,7 +1799,7 @@ pub mod dota2_dumper {
                 pub const m_flOscMult: usize = 0x1EC; // float32
                 pub const m_flOscAdd: usize = 0x1F0; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 18
             //
             // Metadata:
@@ -1637,11 +1824,12 @@ pub mod dota2_dumper {
                 pub const m_flMetalnessBlendToFull: usize = 0x228; // float32
                 pub const m_flSelfIllumBlendToFull: usize = 0x22C; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_RtEnvCull {
                 pub const m_vecTestDir: usize = 0x1E8; // Vector
                 pub const m_vecTestNormal: usize = 0x1F4; // Vector
@@ -1652,11 +1840,12 @@ pub mod dota2_dumper {
                 pub const m_nRTEnvCP: usize = 0x284; // int32
                 pub const m_nComponent: usize = 0x288; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionConstraint
             // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_ConstrainDistance {
                 pub const m_fMinDistance: usize = 0x1E0; // CParticleCollectionFloatInput
                 pub const m_fMaxDistance: usize = 0x358; // CParticleCollectionFloatInput
@@ -1664,7 +1853,7 @@ pub mod dota2_dumper {
                 pub const m_CenterOffset: usize = 0x538; // CParticleCollectionVecInput
                 pub const m_bGlobalCenter: usize = 0xC10; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 4
             //
             // Metadata:
@@ -1675,11 +1864,12 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0x200; // ParticleAttributeIndex_t
                 pub const m_randomnessParameters: usize = 0x204; // CRandomNumberGeneratorParameters
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_InitialVelocityNoise {
                 pub const m_vecAbsVal: usize = 0x1E8; // Vector
                 pub const m_vecAbsValInv: usize = 0x1F4; // Vector
@@ -1704,7 +1894,7 @@ pub mod dota2_dumper {
                 pub const m_bDisableChild: usize = 0xD; // bool
                 pub const m_nDetailLevel: usize = 0x10; // ParticleDetailLevel_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 8
             //
             // Metadata:
@@ -1719,14 +1909,14 @@ pub mod dota2_dumper {
                 pub const m_flOutputMax: usize = 0x1F8; // float32
                 pub const m_flRemapTime: usize = 0x1FC; // float32
             }
-            // Parent: None
+            // Parent: C_INIT_RandomNamedModelElement
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RandomNamedModelSequence {
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -1737,11 +1927,12 @@ pub mod dota2_dumper {
                 pub const m_bLocalSpace: usize = 0x8C0; // bool
                 pub const m_flPlaneOffset: usize = 0x8C4; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_VelocityRandom {
                 pub const m_nControlPointNumber: usize = 0x1E8; // int32
                 pub const m_fSpeedMin: usize = 0x1F0; // CPerParticleFloatInput
@@ -1751,7 +1942,7 @@ pub mod dota2_dumper {
                 pub const m_bIgnoreDT: usize = 0x1290; // bool
                 pub const m_randomnessParameters: usize = 0x1294; // CRandomNumberGeneratorParameters
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -1765,7 +1956,7 @@ pub mod dota2_dumper {
                 pub const m_vecPosOffset: usize = 0x268; // CPerParticleVecInput
                 pub const m_fDrag: usize = 0x940; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 4
             //
             // Metadata:
@@ -1776,7 +1967,7 @@ pub mod dota2_dumper {
                 pub const m_bLocalSpace: usize = 0x200; // bool
                 pub const m_nControlPointNumber: usize = 0x204; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 11
             //
             // Metadata:
@@ -1794,7 +1985,7 @@ pub mod dota2_dumper {
                 pub const m_flArcSpeed: usize = 0x20C; // float32
                 pub const m_flAlpha: usize = 0x210; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 5
             //
             // Metadata:
@@ -1806,86 +1997,86 @@ pub mod dota2_dumper {
                 pub const m_bSetMagnitude: usize = 0x8C8; // bool
                 pub const m_nOutVectorField: usize = 0x8CC; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 65
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CBaseRendererSource2 {
-                pub const m_flRadiusScale: usize = 0x230; // CParticleCollectionRendererFloatInput
-                pub const m_flAlphaScale: usize = 0x3A8; // CParticleCollectionRendererFloatInput
-                pub const m_flRollScale: usize = 0x520; // CParticleCollectionRendererFloatInput
-                pub const m_nAlpha2Field: usize = 0x698; // ParticleAttributeIndex_t
-                pub const m_vecColorScale: usize = 0x6A0; // CParticleCollectionRendererVecInput
-                pub const m_nColorBlendType: usize = 0xD78; // ParticleColorBlendType_t
-                pub const m_nShaderType: usize = 0xD7C; // SpriteCardShaderType_t
-                pub const m_strShaderOverride: usize = 0xD80; // CUtlString
-                pub const m_flCenterXOffset: usize = 0xD88; // CParticleCollectionRendererFloatInput
-                pub const m_flCenterYOffset: usize = 0xF00; // CParticleCollectionRendererFloatInput
-                pub const m_flBumpStrength: usize = 0x1078; // float32
-                pub const m_nCropTextureOverride: usize = 0x107C; // ParticleSequenceCropOverride_t
-                pub const m_vecTexturesInput: usize = 0x1080; // CUtlLeanVector<TextureGroup_t>
-                pub const m_flAnimationRate: usize = 0x1090; // float32
-                pub const m_nAnimationType: usize = 0x1094; // AnimationType_t
-                pub const m_bAnimateInFPS: usize = 0x1098; // bool
-                pub const m_flMotionVectorScaleU: usize = 0x10A0; // CParticleCollectionRendererFloatInput
-                pub const m_flMotionVectorScaleV: usize = 0x1218; // CParticleCollectionRendererFloatInput
-                pub const m_flSelfIllumAmount: usize = 0x1390; // CParticleCollectionRendererFloatInput
-                pub const m_flDiffuseAmount: usize = 0x1508; // CParticleCollectionRendererFloatInput
-                pub const m_flDiffuseClamp: usize = 0x1680; // CParticleCollectionRendererFloatInput
-                pub const m_nLightingControlPoint: usize = 0x17F8; // int32
-                pub const m_nOutputBlendMode: usize = 0x17FC; // ParticleOutputBlendMode_t
-                pub const m_bGammaCorrectVertexColors: usize = 0x1800; // bool
-                pub const m_bSaturateColorPreAlphaBlend: usize = 0x1801; // bool
-                pub const m_flAddSelfAmount: usize = 0x1808; // CParticleCollectionRendererFloatInput
-                pub const m_flDesaturation: usize = 0x1980; // CParticleCollectionRendererFloatInput
-                pub const m_flOverbrightFactor: usize = 0x1AF8; // CParticleCollectionRendererFloatInput
-                pub const m_nHSVShiftControlPoint: usize = 0x1C70; // int32
-                pub const m_nFogType: usize = 0x1C74; // ParticleFogType_t
-                pub const m_flFogAmount: usize = 0x1C78; // CParticleCollectionRendererFloatInput
-                pub const m_bTintByFOW: usize = 0x1DF0; // bool
-                pub const m_bTintByGlobalLight: usize = 0x1DF1; // bool
-                pub const m_nPerParticleAlphaReference: usize = 0x1DF4; // SpriteCardPerParticleScale_t
-                pub const m_nPerParticleAlphaRefWindow: usize = 0x1DF8; // SpriteCardPerParticleScale_t
-                pub const m_nAlphaReferenceType: usize = 0x1DFC; // ParticleAlphaReferenceType_t
-                pub const m_flAlphaReferenceSoftness: usize = 0x1E00; // CParticleCollectionRendererFloatInput
-                pub const m_flSourceAlphaValueToMapToZero: usize = 0x1F78; // CParticleCollectionRendererFloatInput
-                pub const m_flSourceAlphaValueToMapToOne: usize = 0x20F0; // CParticleCollectionRendererFloatInput
-                pub const m_bRefract: usize = 0x2268; // bool
-                pub const m_bRefractSolid: usize = 0x2269; // bool
-                pub const m_bRefract2Passes: usize = 0x226A; // bool
-                pub const m_flRefractAmount: usize = 0x2270; // CParticleCollectionRendererFloatInput
-                pub const m_nRefractBlurRadius: usize = 0x23E8; // int32
-                pub const m_nRefractBlurType: usize = 0x23EC; // BlurFilterType_t
-                pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x23F0; // bool
-                pub const m_bOnlyRenderInEffectsWaterPass: usize = 0x23F1; // bool
-                pub const m_bUseMixedResolutionRendering: usize = 0x23F2; // bool
-                pub const m_bOnlyRenderInEffecsGameOverlay: usize = 0x23F3; // bool
-                pub const m_stencilTestID: usize = 0x23F4; // char[128]
-                pub const m_bStencilTestExclude: usize = 0x2474; // bool
-                pub const m_stencilWriteID: usize = 0x2475; // char[128]
-                pub const m_bWriteStencilOnDepthPass: usize = 0x24F5; // bool
-                pub const m_bWriteStencilOnDepthFail: usize = 0x24F6; // bool
-                pub const m_bReverseZBuffering: usize = 0x24F7; // bool
-                pub const m_bDisableZBuffering: usize = 0x24F8; // bool
-                pub const m_nFeatheringMode: usize = 0x24FC; // ParticleDepthFeatheringMode_t
-                pub const m_flFeatheringMinDist: usize = 0x2500; // CParticleCollectionRendererFloatInput
-                pub const m_flFeatheringMaxDist: usize = 0x2678; // CParticleCollectionRendererFloatInput
-                pub const m_flFeatheringFilter: usize = 0x27F0; // CParticleCollectionRendererFloatInput
-                pub const m_flFeatheringDepthMapFilter: usize = 0x2968; // CParticleCollectionRendererFloatInput
-                pub const m_flDepthBias: usize = 0x2AE0; // CParticleCollectionRendererFloatInput
-                pub const m_nSortMethod: usize = 0x2C58; // ParticleSortingChoiceList_t
-                pub const m_bBlendFramesSeq0: usize = 0x2C5C; // bool
-                pub const m_bMaxLuminanceBlendingSequence0: usize = 0x2C5D; // bool
+                pub const m_flRadiusScale: usize = 0x228; // CParticleCollectionRendererFloatInput
+                pub const m_flAlphaScale: usize = 0x3A0; // CParticleCollectionRendererFloatInput
+                pub const m_flRollScale: usize = 0x518; // CParticleCollectionRendererFloatInput
+                pub const m_nAlpha2Field: usize = 0x690; // ParticleAttributeIndex_t
+                pub const m_vecColorScale: usize = 0x698; // CParticleCollectionRendererVecInput
+                pub const m_nColorBlendType: usize = 0xD70; // ParticleColorBlendType_t
+                pub const m_nShaderType: usize = 0xD74; // SpriteCardShaderType_t
+                pub const m_strShaderOverride: usize = 0xD78; // CUtlString
+                pub const m_flCenterXOffset: usize = 0xD80; // CParticleCollectionRendererFloatInput
+                pub const m_flCenterYOffset: usize = 0xEF8; // CParticleCollectionRendererFloatInput
+                pub const m_flBumpStrength: usize = 0x1070; // float32
+                pub const m_nCropTextureOverride: usize = 0x1074; // ParticleSequenceCropOverride_t
+                pub const m_vecTexturesInput: usize = 0x1078; // CUtlLeanVector<TextureGroup_t>
+                pub const m_flAnimationRate: usize = 0x1088; // float32
+                pub const m_nAnimationType: usize = 0x108C; // AnimationType_t
+                pub const m_bAnimateInFPS: usize = 0x1090; // bool
+                pub const m_flMotionVectorScaleU: usize = 0x1098; // CParticleCollectionRendererFloatInput
+                pub const m_flMotionVectorScaleV: usize = 0x1210; // CParticleCollectionRendererFloatInput
+                pub const m_flSelfIllumAmount: usize = 0x1388; // CParticleCollectionRendererFloatInput
+                pub const m_flDiffuseAmount: usize = 0x1500; // CParticleCollectionRendererFloatInput
+                pub const m_flDiffuseClamp: usize = 0x1678; // CParticleCollectionRendererFloatInput
+                pub const m_nLightingControlPoint: usize = 0x17F0; // int32
+                pub const m_nOutputBlendMode: usize = 0x17F4; // ParticleOutputBlendMode_t
+                pub const m_bGammaCorrectVertexColors: usize = 0x17F8; // bool
+                pub const m_bSaturateColorPreAlphaBlend: usize = 0x17F9; // bool
+                pub const m_flAddSelfAmount: usize = 0x1800; // CParticleCollectionRendererFloatInput
+                pub const m_flDesaturation: usize = 0x1978; // CParticleCollectionRendererFloatInput
+                pub const m_flOverbrightFactor: usize = 0x1AF0; // CParticleCollectionRendererFloatInput
+                pub const m_nHSVShiftControlPoint: usize = 0x1C68; // int32
+                pub const m_nFogType: usize = 0x1C6C; // ParticleFogType_t
+                pub const m_flFogAmount: usize = 0x1C70; // CParticleCollectionRendererFloatInput
+                pub const m_bTintByFOW: usize = 0x1DE8; // bool
+                pub const m_bTintByGlobalLight: usize = 0x1DE9; // bool
+                pub const m_nPerParticleAlphaReference: usize = 0x1DEC; // SpriteCardPerParticleScale_t
+                pub const m_nPerParticleAlphaRefWindow: usize = 0x1DF0; // SpriteCardPerParticleScale_t
+                pub const m_nAlphaReferenceType: usize = 0x1DF4; // ParticleAlphaReferenceType_t
+                pub const m_flAlphaReferenceSoftness: usize = 0x1DF8; // CParticleCollectionRendererFloatInput
+                pub const m_flSourceAlphaValueToMapToZero: usize = 0x1F70; // CParticleCollectionRendererFloatInput
+                pub const m_flSourceAlphaValueToMapToOne: usize = 0x20E8; // CParticleCollectionRendererFloatInput
+                pub const m_bRefract: usize = 0x2260; // bool
+                pub const m_bRefractSolid: usize = 0x2261; // bool
+                pub const m_bRefract2Passes: usize = 0x2262; // bool
+                pub const m_flRefractAmount: usize = 0x2268; // CParticleCollectionRendererFloatInput
+                pub const m_nRefractBlurRadius: usize = 0x23E0; // int32
+                pub const m_nRefractBlurType: usize = 0x23E4; // BlurFilterType_t
+                pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x23E8; // bool
+                pub const m_bOnlyRenderInEffectsWaterPass: usize = 0x23E9; // bool
+                pub const m_bUseMixedResolutionRendering: usize = 0x23EA; // bool
+                pub const m_bOnlyRenderInEffecsGameOverlay: usize = 0x23EB; // bool
+                pub const m_stencilTestID: usize = 0x23EC; // char[128]
+                pub const m_bStencilTestExclude: usize = 0x246C; // bool
+                pub const m_stencilWriteID: usize = 0x246D; // char[128]
+                pub const m_bWriteStencilOnDepthPass: usize = 0x24ED; // bool
+                pub const m_bWriteStencilOnDepthFail: usize = 0x24EE; // bool
+                pub const m_bReverseZBuffering: usize = 0x24EF; // bool
+                pub const m_bDisableZBuffering: usize = 0x24F0; // bool
+                pub const m_nFeatheringMode: usize = 0x24F4; // ParticleDepthFeatheringMode_t
+                pub const m_flFeatheringMinDist: usize = 0x24F8; // CParticleCollectionRendererFloatInput
+                pub const m_flFeatheringMaxDist: usize = 0x2670; // CParticleCollectionRendererFloatInput
+                pub const m_flFeatheringFilter: usize = 0x27E8; // CParticleCollectionRendererFloatInput
+                pub const m_flFeatheringDepthMapFilter: usize = 0x2960; // CParticleCollectionRendererFloatInput
+                pub const m_flDepthBias: usize = 0x2AD8; // CParticleCollectionRendererFloatInput
+                pub const m_nSortMethod: usize = 0x2C50; // ParticleSortingChoiceList_t
+                pub const m_bBlendFramesSeq0: usize = 0x2C54; // bool
+                pub const m_bMaxLuminanceBlendingSequence0: usize = 0x2C55; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CSpinUpdateBase {
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -1896,7 +2087,7 @@ pub mod dota2_dumper {
                 pub const m_flSpinStrength: usize = 0x8BC; // float32
                 pub const m_nFieldOutput: usize = 0x8C0; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 8
             //
             // Metadata:
@@ -1911,7 +2102,7 @@ pub mod dota2_dumper {
                 pub const m_flOutputMin: usize = 0x4E8; // CParticleCollectionFloatInput
                 pub const m_flOutputMax: usize = 0x660; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: C_INIT_RemapParticleCountToScalar
             // Field count: 4
             //
             // Metadata:
@@ -1922,34 +2113,35 @@ pub mod dota2_dumper {
                 pub const m_outputMaxName: usize = 0x228; // CUtlString
                 pub const m_bModelFromRenderer: usize = 0x230; // bool
             }
-            // Parent: None
+            // Parent: CBaseTrailRenderer
             // Field count: 20
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_RenderTrails {
-                pub const m_bEnableFadingAndClamping: usize = 0x3358; // bool
-                pub const m_flStartFadeDot: usize = 0x335C; // float32
-                pub const m_flEndFadeDot: usize = 0x3360; // float32
-                pub const m_nPrevPntSource: usize = 0x3364; // ParticleAttributeIndex_t
-                pub const m_flMaxLength: usize = 0x3368; // float32
-                pub const m_flMinLength: usize = 0x336C; // float32
-                pub const m_bIgnoreDT: usize = 0x3370; // bool
-                pub const m_flConstrainRadiusToLengthRatio: usize = 0x3374; // float32
-                pub const m_flLengthScale: usize = 0x3378; // float32
-                pub const m_flLengthFadeInTime: usize = 0x337C; // float32
-                pub const m_flRadiusHeadTaper: usize = 0x3380; // CPerParticleFloatInput
-                pub const m_vecHeadColorScale: usize = 0x34F8; // CParticleCollectionVecInput
-                pub const m_flHeadAlphaScale: usize = 0x3BD0; // CPerParticleFloatInput
-                pub const m_flRadiusTaper: usize = 0x3D48; // CPerParticleFloatInput
-                pub const m_vecTailColorScale: usize = 0x3EC0; // CParticleCollectionVecInput
-                pub const m_flTailAlphaScale: usize = 0x4598; // CPerParticleFloatInput
-                pub const m_nHorizCropField: usize = 0x4710; // ParticleAttributeIndex_t
-                pub const m_nVertCropField: usize = 0x4714; // ParticleAttributeIndex_t
-                pub const m_flForwardShift: usize = 0x4718; // float32
-                pub const m_bFlipUVBasedOnPitchYaw: usize = 0x471C; // bool
+                pub const m_bEnableFadingAndClamping: usize = 0x3350; // bool
+                pub const m_flStartFadeDot: usize = 0x3354; // float32
+                pub const m_flEndFadeDot: usize = 0x3358; // float32
+                pub const m_nPrevPntSource: usize = 0x335C; // ParticleAttributeIndex_t
+                pub const m_flMaxLength: usize = 0x3360; // float32
+                pub const m_flMinLength: usize = 0x3364; // float32
+                pub const m_bIgnoreDT: usize = 0x3368; // bool
+                pub const m_flConstrainRadiusToLengthRatio: usize = 0x336C; // float32
+                pub const m_flLengthScale: usize = 0x3370; // float32
+                pub const m_flLengthFadeInTime: usize = 0x3374; // float32
+                pub const m_flRadiusHeadTaper: usize = 0x3378; // CPerParticleFloatInput
+                pub const m_vecHeadColorScale: usize = 0x34F0; // CParticleCollectionVecInput
+                pub const m_flHeadAlphaScale: usize = 0x3BC8; // CPerParticleFloatInput
+                pub const m_flRadiusTaper: usize = 0x3D40; // CPerParticleFloatInput
+                pub const m_vecTailColorScale: usize = 0x3EB8; // CParticleCollectionVecInput
+                pub const m_flTailAlphaScale: usize = 0x4590; // CPerParticleFloatInput
+                pub const m_nHorizCropField: usize = 0x4708; // ParticleAttributeIndex_t
+                pub const m_nVertCropField: usize = 0x470C; // ParticleAttributeIndex_t
+                pub const m_flForwardShift: usize = 0x4710; // float32
+                pub const m_bFlipUVBasedOnPitchYaw: usize = 0x4714; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 3
             //
             // Metadata:
@@ -1959,7 +2151,7 @@ pub mod dota2_dumper {
                 pub const m_pszTimeOfDayParameter: usize = 0x1EC; // char[128]
                 pub const m_vecDefaultValue: usize = 0x26C; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -1973,7 +2165,7 @@ pub mod dota2_dumper {
                 pub const m_flScale: usize = 0x200; // CParticleCollectionFloatInput
                 pub const m_bKillNewest: usize = 0x378; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 3
             //
             // Metadata:
@@ -1983,7 +2175,7 @@ pub mod dota2_dumper {
                 pub const m_SequenceName: usize = 0x2E8; // char[256]
                 pub const m_hModel: usize = 0x3E8; // CStrongHandle<InfoForResourceTypeCModel>
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 5
             //
             // Metadata:
@@ -1995,7 +2187,7 @@ pub mod dota2_dumper {
                 pub const m_bExplosions: usize = 0x36A; // bool
                 pub const m_bParticles: usize = 0x36B; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 11
             //
             // Metadata:
@@ -2013,7 +2205,7 @@ pub mod dota2_dumper {
                 pub const m_vecComparisonVelocity: usize = 0x7E0; // CParticleCollectionVecInput
                 pub const m_HitboxSetName: usize = 0xEB8; // char[128]
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 4
             //
             // Metadata:
@@ -2024,7 +2216,7 @@ pub mod dota2_dumper {
                 pub const m_nAlphaMax: usize = 0x1F0; // int32
                 pub const m_flAlphaRandExponent: usize = 0x1FC; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 2
             //
             // Metadata:
@@ -2033,16 +2225,17 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
                 pub const m_flScale: usize = 0x1E4; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_FadeInSimple {
                 pub const m_flFadeInTime: usize = 0x1E0; // float32
                 pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 5
             //
             // Metadata:
@@ -2054,7 +2247,7 @@ pub mod dota2_dumper {
                 pub const m_flClusterCooldown: usize = 0x4E0; // CParticleCollectionFloatInput
                 pub const m_bLimitChildCount: usize = 0x658; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -2064,7 +2257,7 @@ pub mod dota2_dumper {
                 pub const m_flScale: usize = 0x1E4; // float32
                 pub const m_bNormalize: usize = 0x1E8; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 9
             //
             // Metadata:
@@ -2080,11 +2273,12 @@ pub mod dota2_dumper {
                 pub const m_flHybridRatio: usize = 0x950; // CParticleCollectionFloatInput
                 pub const m_bUpdatePosition: usize = 0xAC8; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 11
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_RingWave {
                 pub const m_TransformInput: usize = 0x1E8; // CParticleTransformInput
                 pub const m_flParticlesPerOrbit: usize = 0x250; // CParticleCollectionFloatInput
@@ -2098,7 +2292,7 @@ pub mod dota2_dumper {
                 pub const m_bEvenDistribution: usize = 0xE10; // bool
                 pub const m_bXYVelocityOnly: usize = 0xE11; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 3
             //
             // Metadata:
@@ -2108,7 +2302,7 @@ pub mod dota2_dumper {
                 pub const m_flMaxLength: usize = 0x1EC; // float32
                 pub const m_flLengthRandExponent: usize = 0x1F0; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -2122,7 +2316,7 @@ pub mod dota2_dumper {
                 pub const m_flOutputMax: usize = 0x1F4; // float32
                 pub const m_bOldCode: usize = 0x1F8; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 13
             //
             // Metadata:
@@ -2142,7 +2336,7 @@ pub mod dota2_dumper {
                 pub const m_bLOS: usize = 0x924; // bool
                 pub const m_nSetMethod: usize = 0x928; // ParticleSetMethod_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 1
             //
             // Metadata:
@@ -2150,7 +2344,7 @@ pub mod dota2_dumper {
             pub mod C_OP_DecayOffscreen {
                 pub const m_flOffscreenTime: usize = 0x1E0; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
@@ -2165,15 +2359,16 @@ pub mod dota2_dumper {
                 pub const m_bSaveOffset: usize = 0x1F2; // bool
                 pub const m_PathParams: usize = 0x200; // CPathParameters
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_EndCapTimedDecay {
                 pub const m_flDecayTime: usize = 0x1E0; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
@@ -2185,7 +2380,7 @@ pub mod dota2_dumper {
                 pub const m_flMaxInputValue: usize = 0x1EC; // float32
                 pub const m_bInfiniteLine: usize = 0x1F0; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionEmitter
             // Field count: 12
             //
             // Metadata:
@@ -2204,7 +2399,7 @@ pub mod dota2_dumper {
                 pub const m_bForceEmitOnFirstUpdate: usize = 0x674; // bool
                 pub const m_bForceEmitOnLastUpdate: usize = 0x675; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
@@ -2217,7 +2412,7 @@ pub mod dota2_dumper {
                 pub const m_flOscAdd: usize = 0x200; // float32
                 pub const m_bOffset: usize = 0x204; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 1
             //
             // Metadata:
@@ -2225,7 +2420,7 @@ pub mod dota2_dumper {
             pub mod C_INIT_SequenceLifeTime {
                 pub const m_flFramerate: usize = 0x1E8; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 7
             //
             // Metadata:
@@ -2239,8 +2434,8 @@ pub mod dota2_dumper {
                 pub const m_nEndControlPointNumber: usize = 0x940; // int32
                 pub const m_bTrailBias: usize = 0x944; // bool
             }
-            // Parent: None
-            // Field count: 23
+            // Parent: CParticleFunctionInitializer
+            // Field count: 24
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -2264,12 +2459,13 @@ pub mod dota2_dumper {
                 pub const m_flSFXSDetailScrollY: usize = 0x228; // float32
                 pub const m_flSFXSDetailScrollZ: usize = 0x22C; // float32
                 pub const m_bAnimatedDetail: usize = 0x230; // bool
-                pub const m_flSFXDetailAnimationTimePerFrame: usize = 0x234; // float32
-                pub const m_flSFXDetailAnimationTimeOffset: usize = 0x238; // float32
+                pub const m_bAnimatedNormal: usize = 0x231; // bool
+                pub const m_flSFXAnimationTimePerFrame: usize = 0x234; // float32
+                pub const m_flSFXAnimationTimeOffset: usize = 0x238; // float32
                 pub const m_flSFXSUseModelUVs: usize = 0x23C; // float32
                 pub const m_flSFXEnvMapAmount: usize = 0x240; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
@@ -2281,7 +2477,7 @@ pub mod dota2_dumper {
                 pub const m_flFallingEdge: usize = 0x4D8; // CPerParticleFloatInput
                 pub const m_nFallingEventType: usize = 0x650; // EventTypeSelection_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 2
             //
             // Metadata:
@@ -2290,11 +2486,12 @@ pub mod dota2_dumper {
                 pub const m_InputValue: usize = 0x1E0; // CPerParticleFloatInput
                 pub const m_nOutputField: usize = 0x358; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_BasicMovement {
                 pub const m_Gravity: usize = 0x1E0; // CParticleCollectionVecInput
                 pub const m_fDrag: usize = 0x8B8; // CParticleCollectionFloatInput
@@ -2302,7 +2499,7 @@ pub mod dota2_dumper {
                 pub const m_nMaxConstraintPasses: usize = 0xEA0; // int32
                 pub const m_bUseNewCode: usize = 0xEA4; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
@@ -2315,16 +2512,17 @@ pub mod dota2_dumper {
                 pub const m_bModelFromRenderer: usize = 0x20A; // bool
                 pub const m_nFieldOutput: usize = 0x20C; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_InitFromParentKilled {
                 pub const m_nAttributeToCopy: usize = 0x1E8; // ParticleAttributeIndex_t
                 pub const m_nEventType: usize = 0x1EC; // EventTypeSelection_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 0
             //
             // Metadata:
@@ -2355,7 +2553,7 @@ pub mod dota2_dumper {
                 pub const m_bDisableOperator: usize = 0x1BA; // bool
                 pub const m_Notes: usize = 0x1C0; // CUtlString
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -2365,7 +2563,7 @@ pub mod dota2_dumper {
                 pub const m_bClampLowerRange: usize = 0x1E4; // bool
                 pub const m_bClampUpperRange: usize = 0x1E5; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 5
             //
             // Metadata:
@@ -2377,7 +2575,7 @@ pub mod dota2_dumper {
                 pub const m_vecOutputMax: usize = 0x1FC; // Vector
                 pub const m_randomnessParameters: usize = 0x208; // CRandomNumberGeneratorParameters
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 8
             //
             // Metadata:
@@ -2392,7 +2590,7 @@ pub mod dota2_dumper {
                 pub const m_nAttributeToRead: usize = 0x1F8; // ParticleAttributeIndex_t
                 pub const m_nCPField: usize = 0x1FC; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 5
             //
             // Metadata:
@@ -2404,7 +2602,7 @@ pub mod dota2_dumper {
                 pub const m_nFirstSourcePoint: usize = 0x1F4; // int32
                 pub const m_bSetOrientation: usize = 0x1F8; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionConstraint
             // Field count: 5
             //
             // Metadata:
@@ -2416,7 +2614,7 @@ pub mod dota2_dumper {
                 pub const m_bLocalSpace: usize = 0xF94; // bool
                 pub const m_bAccountForRadius: usize = 0xF95; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 14
             //
             // Metadata:
@@ -2437,11 +2635,12 @@ pub mod dota2_dumper {
                 pub const m_bUseWithContEmit: usize = 0x215; // bool
                 pub const m_bUseOrigRadius: usize = 0x216; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_AttractToControlPoint {
                 pub const m_vecComponentScale: usize = 0x1F0; // Vector
                 pub const m_fForceAmount: usize = 0x200; // CPerParticleFloatInput
@@ -2451,7 +2650,7 @@ pub mod dota2_dumper {
                 pub const m_fForceAmountMin: usize = 0x560; // CPerParticleFloatInput
                 pub const m_bApplyMinForce: usize = 0x6D8; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 3
             //
             // Metadata:
@@ -2461,14 +2660,14 @@ pub mod dota2_dumper {
                 pub const m_fLifetimeMax: usize = 0x1EC; // float32
                 pub const m_fLifetimeRandExponent: usize = 0x1F0; // float32
             }
-            // Parent: None
+            // Parent: C_INIT_RemapParticleCountToNamedModelElementScalar
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RemapParticleCountToNamedModelSequenceScalar {
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 8
             //
             // Metadata:
@@ -2483,7 +2682,7 @@ pub mod dota2_dumper {
                 pub const m_vecLocalCoordinateSystemSpeedScale: usize = 0x1290; // Vector
                 pub const m_bIgnoreDelta: usize = 0x129D; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 3
             //
             // Metadata:
@@ -2493,7 +2692,7 @@ pub mod dota2_dumper {
                 pub const m_flRadiusMax: usize = 0x1EC; // float32
                 pub const m_flRadiusRandExponent: usize = 0x1F0; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -2537,7 +2736,7 @@ pub mod dota2_dumper {
                 pub const m_vOffsetFromControlPoint: usize = 0x4; // Vector
                 pub const m_bOffsetInLocalSpace: usize = 0x10; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 6
             //
             // Metadata:
@@ -2550,7 +2749,7 @@ pub mod dota2_dumper {
                 pub const m_flLerp: usize = 0xFA0; // CPerParticleFloatInput
                 pub const m_bNormalizedOutput: usize = 0x1118; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 20
             //
             // Metadata:
@@ -2577,14 +2776,14 @@ pub mod dota2_dumper {
                 pub const m_flRadiusEnd: usize = 0x13B0; // CParticleCollectionFloatInput
                 pub const m_flDedicatedPool: usize = 0x1528; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: C_OP_RemapNamedModelElementOnceTimed
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RemapNamedModelMeshGroupOnceTimed {
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 1
             //
             // Metadata:
@@ -2592,7 +2791,7 @@ pub mod dota2_dumper {
             pub mod C_INIT_RemapQAnglesToRotation {
                 pub const m_TransformInput: usize = 0x1E8; // CParticleTransformInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 10
             //
             // Metadata:
@@ -2609,7 +2808,7 @@ pub mod dota2_dumper {
                 pub const m_bInvertWarp: usize = 0xFB0; // bool
                 pub const m_bUseCount: usize = 0xFB1; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 7
             //
             // Metadata:
@@ -2623,26 +2822,26 @@ pub mod dota2_dumper {
                 pub const m_nOutVectorField: usize = 0x65C; // int32
                 pub const m_flInterpolation: usize = 0x660; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_CreateParticleSystemRenderer {
-                pub const m_hEffect: usize = 0x230; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-                pub const m_nEventType: usize = 0x238; // EventTypeSelection_t
-                pub const m_vecCPs: usize = 0x240; // CUtlLeanVector<CPAssignment_t>
-                pub const m_szParticleConfig: usize = 0x250; // CUtlString
-                pub const m_AggregationPos: usize = 0x258; // CPerParticleVecInput
+                pub const m_hEffect: usize = 0x228; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+                pub const m_nEventType: usize = 0x230; // EventTypeSelection_t
+                pub const m_vecCPs: usize = 0x238; // CUtlLeanVector<CPAssignment_t>
+                pub const m_szParticleConfig: usize = 0x248; // CUtlString
+                pub const m_AggregationPos: usize = 0x250; // CPerParticleVecInput
             }
-            // Parent: None
+            // Parent: CParticleFunction
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CParticleFunctionForce {
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 4
             //
             // Metadata:
@@ -2653,7 +2852,7 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0x1F0; // ParticleAttributeIndex_t
                 pub const m_nComponent: usize = 0x1F4; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -2666,7 +2865,7 @@ pub mod dota2_dumper {
                 pub const m_nIncrement: usize = 0x1E8; // int32
                 pub const m_bRandomDistribution: usize = 0x1EC; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 7
             //
             // Metadata:
@@ -2680,7 +2879,7 @@ pub mod dota2_dumper {
                 pub const m_nSetMethod: usize = 0x111C; // ParticleSetMethod_t
                 pub const m_bNormalizedOutput: usize = 0x1120; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 8
             //
             // Metadata:
@@ -2695,7 +2894,7 @@ pub mod dota2_dumper {
                 pub const m_vecOutputMax: usize = 0x268; // Vector
                 pub const m_flRadius: usize = 0x274; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -2705,7 +2904,7 @@ pub mod dota2_dumper {
                 pub const m_vecPoint1: usize = 0x1E8; // CPerParticleVecInput
                 pub const m_vecPoint2: usize = 0x8C0; // CPerParticleVecInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -2716,23 +2915,23 @@ pub mod dota2_dumper {
                 pub const m_vecScale: usize = 0x360; // CParticleCollectionVecInput
                 pub const m_nDistSqrAttr: usize = 0xA38; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderSimpleModelCollection {
-                pub const m_bCenterOffset: usize = 0x230; // bool
-                pub const m_hModel: usize = 0x238; // CStrongHandle<InfoForResourceTypeCModel>
-                pub const m_modelInput: usize = 0x240; // CParticleModelInput
-                pub const m_fSizeCullScale: usize = 0x2A0; // CParticleCollectionFloatInput
-                pub const m_bDisableShadows: usize = 0x418; // bool
-                pub const m_bDisableMotionBlur: usize = 0x419; // bool
-                pub const m_bAcceptsDecals: usize = 0x41A; // bool
-                pub const m_fDrawFilter: usize = 0x420; // CPerParticleFloatInput
-                pub const m_nAngularVelocityField: usize = 0x598; // ParticleAttributeIndex_t
+                pub const m_bCenterOffset: usize = 0x228; // bool
+                pub const m_hModel: usize = 0x230; // CStrongHandle<InfoForResourceTypeCModel>
+                pub const m_modelInput: usize = 0x238; // CParticleModelInput
+                pub const m_fSizeCullScale: usize = 0x298; // CParticleCollectionFloatInput
+                pub const m_bDisableShadows: usize = 0x410; // bool
+                pub const m_bDisableMotionBlur: usize = 0x411; // bool
+                pub const m_bAcceptsDecals: usize = 0x412; // bool
+                pub const m_fDrawFilter: usize = 0x418; // CPerParticleFloatInput
+                pub const m_nAngularVelocityField: usize = 0x590; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 4
             //
             // Metadata:
@@ -2743,7 +2942,7 @@ pub mod dota2_dumper {
                 pub const m_nOutVectorField: usize = 0x364; // int32
                 pub const m_flQuantizeValue: usize = 0x368; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 2
             //
             // Metadata:
@@ -2752,7 +2951,7 @@ pub mod dota2_dumper {
                 pub const m_bFireOnEmissionEnd: usize = 0x1E8; // bool
                 pub const m_bIncludeChildren: usize = 0x1E9; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 2
             //
             // Metadata:
@@ -2777,7 +2976,7 @@ pub mod dota2_dumper {
                 pub const m_vMidPointOffset: usize = 0x24; // Vector
                 pub const m_vEndOffset: usize = 0x30; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
@@ -2790,7 +2989,7 @@ pub mod dota2_dumper {
                 pub const m_flOutputMin: usize = 0x1F0; // float32
                 pub const m_flOutputMax: usize = 0x1F4; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 3
             //
             // Metadata:
@@ -2800,7 +2999,7 @@ pub mod dota2_dumper {
                 pub const m_vecOffsetMax: usize = 0x1F4; // Vector
                 pub const m_bUseNormal: usize = 0x201; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -2810,7 +3009,7 @@ pub mod dota2_dumper {
                 pub const m_flComparsion2: usize = 0x358; // CPerParticleFloatInput
                 pub const m_flCullTime: usize = 0x4D0; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 5
             //
             // Metadata:
@@ -2822,14 +3021,15 @@ pub mod dota2_dumper {
                 pub const m_nCPOutField: usize = 0x1FC; // int32
                 pub const m_nCPSSPosOut: usize = 0x200; // int32
             }
-            // Parent: None
+            // Parent: CSpinUpdateBase
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_SpinUpdate {
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 5
             //
             // Metadata:
@@ -2841,7 +3041,7 @@ pub mod dota2_dumper {
                 pub const m_bLocalCoords: usize = 0x204; // bool
                 pub const m_bNormalize: usize = 0x205; // bool
             }
-            // Parent: None
+            // Parent: C_OP_RemapDistanceToLineSegmentBase
             // Field count: 3
             //
             // Metadata:
@@ -2851,22 +3051,22 @@ pub mod dota2_dumper {
                 pub const m_vMinOutputValue: usize = 0x1FC; // Vector
                 pub const m_vMaxOutputValue: usize = 0x208; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderAsModels {
-                pub const m_ModelList: usize = 0x230; // CUtlVector<ModelReference_t>
-                pub const m_flModelScale: usize = 0x24C; // float32
-                pub const m_bFitToModelSize: usize = 0x250; // bool
-                pub const m_bNonUniformScaling: usize = 0x251; // bool
-                pub const m_nXAxisScalingAttribute: usize = 0x254; // ParticleAttributeIndex_t
-                pub const m_nYAxisScalingAttribute: usize = 0x258; // ParticleAttributeIndex_t
-                pub const m_nZAxisScalingAttribute: usize = 0x25C; // ParticleAttributeIndex_t
-                pub const m_nSizeCullBloat: usize = 0x260; // int32
+                pub const m_ModelList: usize = 0x228; // CUtlVector<ModelReference_t>
+                pub const m_flModelScale: usize = 0x244; // float32
+                pub const m_bFitToModelSize: usize = 0x248; // bool
+                pub const m_bNonUniformScaling: usize = 0x249; // bool
+                pub const m_nXAxisScalingAttribute: usize = 0x24C; // ParticleAttributeIndex_t
+                pub const m_nYAxisScalingAttribute: usize = 0x250; // ParticleAttributeIndex_t
+                pub const m_nZAxisScalingAttribute: usize = 0x254; // ParticleAttributeIndex_t
+                pub const m_nSizeCullBloat: usize = 0x258; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 10
             //
             // Metadata:
@@ -2883,26 +3083,26 @@ pub mod dota2_dumper {
                 pub const m_vecOffsetLoc: usize = 0x204; // Vector
                 pub const m_flWorldTimeScale: usize = 0x210; // float32
             }
-            // Parent: None
+            // Parent: CGeneralSpin
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_Spin {
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_GameLiquidSpill {
-                pub const m_flLiquidContentsField: usize = 0x230; // CParticleCollectionFloatInput
-                pub const m_flExpirationTime: usize = 0x3A8; // CParticleCollectionFloatInput
-                pub const m_flRadius: usize = 0x520; // CParticleCollectionFloatInput
-                pub const m_bCheckExposedToSky: usize = 0x698; // bool
-                pub const m_nAmountAttribute: usize = 0x69C; // ParticleAttributeIndex_t
+                pub const m_flLiquidContentsField: usize = 0x228; // CParticleCollectionFloatInput
+                pub const m_flExpirationTime: usize = 0x3A0; // CParticleCollectionFloatInput
+                pub const m_flRadius: usize = 0x518; // CParticleCollectionFloatInput
+                pub const m_bCheckExposedToSky: usize = 0x690; // bool
+                pub const m_nAmountAttribute: usize = 0x694; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionEmitter
             // Field count: 9
             //
             // Metadata:
@@ -2918,7 +3118,7 @@ pub mod dota2_dumper {
                 pub const m_strSnapshotSubset: usize = 0x660; // CUtlString
                 pub const m_bResetSnapshotIndexOnChanges: usize = 0x668; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionConstraint
             // Field count: 2
             //
             // Metadata:
@@ -2927,7 +3127,7 @@ pub mod dota2_dumper {
                 pub const m_flMinDistance: usize = 0x1E0; // float32
                 pub const m_flMaxDistance: usize = 0x1E4; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 8
             //
             // Metadata:
@@ -2942,33 +3142,34 @@ pub mod dota2_dumper {
                 pub const m_nTraceSet: usize = 0x288; // ParticleTraceSet_t
                 pub const m_bIncludeWater: usize = 0x298; // bool
             }
-            // Parent: None
+            // Parent: CBaseRendererSource2
             // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CBaseTrailRenderer {
-                pub const m_nOrientationType: usize = 0x2ED8; // ParticleOrientationChoiceList_t
-                pub const m_nOrientationControlPoint: usize = 0x2EDC; // int32
-                pub const m_flMinSize: usize = 0x2EE0; // float32
-                pub const m_flMaxSize: usize = 0x2EE4; // float32
-                pub const m_flStartFadeSize: usize = 0x2EE8; // CParticleCollectionRendererFloatInput
-                pub const m_flEndFadeSize: usize = 0x3060; // CParticleCollectionRendererFloatInput
-                pub const m_flSubPixelAAScale: usize = 0x31D8; // CParticleCollectionRendererFloatInput
-                pub const m_bClampV: usize = 0x3350; // bool
+                pub const m_nOrientationType: usize = 0x2ED0; // ParticleOrientationChoiceList_t
+                pub const m_nOrientationControlPoint: usize = 0x2ED4; // int32
+                pub const m_flMinSize: usize = 0x2ED8; // float32
+                pub const m_flMaxSize: usize = 0x2EDC; // float32
+                pub const m_flStartFadeSize: usize = 0x2EE0; // CParticleCollectionRendererFloatInput
+                pub const m_flEndFadeSize: usize = 0x3058; // CParticleCollectionRendererFloatInput
+                pub const m_flSubPixelAAScale: usize = 0x31D0; // CParticleCollectionRendererFloatInput
+                pub const m_bClampV: usize = 0x3348; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_VelocityFromCP {
                 pub const m_velocityInput: usize = 0x1E8; // CParticleCollectionVecInput
                 pub const m_transformInput: usize = 0x8C0; // CParticleTransformInput
                 pub const m_flVelocityScale: usize = 0x928; // float32
                 pub const m_bDirectionOnly: usize = 0x92C; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 8
             //
             // Metadata:
@@ -2983,7 +3184,7 @@ pub mod dota2_dumper {
                 pub const m_vecRotationB: usize = 0x200; // QAngle
                 pub const m_flInterpolation: usize = 0x210; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 12
             //
             // Metadata:
@@ -3002,7 +3203,7 @@ pub mod dota2_dumper {
                 pub const m_nSnapShotStartPoint: usize = 0x660; // CParticleCollectionFloatInput
                 pub const m_flInterpolation: usize = 0x7D8; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 15
             //
             // Metadata:
@@ -3024,7 +3225,7 @@ pub mod dota2_dumper {
                 pub const m_bPrependEmpty: usize = 0x1898; // bool
                 pub const m_flDigitsAfterDecimal: usize = 0x18A0; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 15
             //
             // Metadata:
@@ -3046,11 +3247,12 @@ pub mod dota2_dumper {
                 pub const m_flOscAdd: usize = 0x3A0; // CPerParticleFloatInput
                 pub const m_flRateScale: usize = 0x518; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_PositionLock {
                 pub const m_TransformInput: usize = 0x1E0; // CParticleTransformInput
                 pub const m_flStartTime_min: usize = 0x248; // float32
@@ -3068,18 +3270,18 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0xAC8; // ParticleAttributeIndex_t
                 pub const m_nFieldOutputPrev: usize = 0xACC; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderVRHapticEvent {
-                pub const m_nHand: usize = 0x230; // ParticleVRHandChoiceList_t
-                pub const m_nOutputHandCP: usize = 0x234; // int32
-                pub const m_nOutputField: usize = 0x238; // int32
-                pub const m_flAmplitude: usize = 0x240; // CPerParticleFloatInput
+                pub const m_nHand: usize = 0x228; // ParticleVRHandChoiceList_t
+                pub const m_nOutputHandCP: usize = 0x22C; // int32
+                pub const m_nOutputField: usize = 0x230; // int32
+                pub const m_flAmplitude: usize = 0x238; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 12
             //
             // Metadata:
@@ -3098,11 +3300,12 @@ pub mod dota2_dumper {
                 pub const m_bTraceToClosestSurface: usize = 0x409; // bool
                 pub const m_bIncludeWater: usize = 0x40A; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_InterpolateRadius {
                 pub const m_flStartTime: usize = 0x1E0; // float32
                 pub const m_flEndTime: usize = 0x1E4; // float32
@@ -3111,7 +3314,7 @@ pub mod dota2_dumper {
                 pub const m_bEaseInAndOut: usize = 0x1F0; // bool
                 pub const m_flBias: usize = 0x1F4; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -3121,7 +3324,7 @@ pub mod dota2_dumper {
                 pub const m_flOutputMin: usize = 0x1E4; // float32
                 pub const m_flOutputMax: usize = 0x1E8; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 8
             //
             // Metadata:
@@ -3136,7 +3339,7 @@ pub mod dota2_dumper {
                 pub const m_vecNoiseAmount2: usize = 0x218; // Vector
                 pub const m_vecNoiseAmount3: usize = 0x224; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 9
             //
             // Metadata:
@@ -3152,7 +3355,7 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0x238; // ParticleAttributeIndex_t
                 pub const m_flRemapTime: usize = 0x23C; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 6
             //
             // Metadata:
@@ -3165,7 +3368,7 @@ pub mod dota2_dumper {
                 pub const m_nRadiusCP: usize = 0x200; // int32
                 pub const m_nRadiusCPField: usize = 0x204; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 1
             //
             // Metadata:
@@ -3173,22 +3376,24 @@ pub mod dota2_dumper {
             pub mod C_OP_EndCapTimedFreeze {
                 pub const m_flFreezeTime: usize = 0x1E0; // CParticleCollectionFloatInput
             }
-            // Parent: None
-            // Field count: 8
+            // Parent: CParticleFunctionRenderer
+            // Field count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_RenderGpuImplicit {
-                pub const m_bUsePerParticleRadius: usize = 0x230; // bool
-                pub const m_nVertexCountKb: usize = 0x234; // uint32
-                pub const m_nIndexCountKb: usize = 0x238; // uint32
-                pub const m_fGridSize: usize = 0x240; // CParticleCollectionRendererFloatInput
-                pub const m_fRadiusScale: usize = 0x3B8; // CParticleCollectionRendererFloatInput
-                pub const m_fIsosurfaceThreshold: usize = 0x530; // CParticleCollectionRendererFloatInput
-                pub const m_nScaleCP: usize = 0x6A8; // int32
-                pub const m_hMaterial: usize = 0x6B0; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_bUsePerParticleRadius: usize = 0x228; // bool
+                pub const m_nVertexCountKb: usize = 0x22C; // uint32
+                pub const m_nIndexCountKb: usize = 0x230; // uint32
+                pub const m_fGridSize: usize = 0x238; // CParticleCollectionRendererFloatInput
+                pub const m_fRadiusScale: usize = 0x3B0; // CParticleCollectionRendererFloatInput
+                pub const m_fIsosurfaceThreshold: usize = 0x528; // CParticleCollectionRendererFloatInput
+                pub const m_nScaleCP: usize = 0x6A0; // int32
+                pub const m_hMaterial: usize = 0x6A8; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_bUseParticleColorForVertColor: usize = 0x6B0; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 8
             //
             // Metadata:
@@ -3203,29 +3408,29 @@ pub mod dota2_dumper {
                 pub const m_vecCPMaxPos: usize = 0x37C; // Vector
                 pub const m_flInterpolation: usize = 0x388; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderVolumetricEmitter {
-                pub const m_strChannelType: usize = 0x230; // CUtlString
-                pub const m_nType: usize = 0x238; // ParticleVolumetricSmokeType_t
-                pub const m_nCreationType: usize = 0x23C; // ParticleVolumetricSmokeCreationType_t
-                pub const m_nEventType: usize = 0x240; // EventTypeSelection_t
-                pub const m_vecPos: usize = 0x248; // CPerParticleVecInput
-                pub const m_vecVelocity: usize = 0x920; // CPerParticleVecInput
-                pub const m_vPrevPosition: usize = 0xFF8; // CPerParticleVecInput
-                pub const m_flSpeed: usize = 0x16D0; // CPerParticleFloatInput
-                pub const m_flRadius: usize = 0x1848; // CPerParticleFloatInput
-                pub const m_flDensity: usize = 0x19C0; // CPerParticleFloatInput
-                pub const m_flTemperature: usize = 0x1B38; // CPerParticleFloatInput
-                pub const m_flMagnitude: usize = 0x1CB0; // CPerParticleFloatInput
-                pub const m_flKillRadius: usize = 0x1E28; // CPerParticleFloatInput
-                pub const m_flKillDensityScale: usize = 0x1FA0; // CPerParticleFloatInput
-                pub const m_flFalloff: usize = 0x2118; // CPerParticleFloatInput
+                pub const m_strChannelType: usize = 0x228; // CUtlString
+                pub const m_nType: usize = 0x230; // ParticleVolumetricSmokeType_t
+                pub const m_nCreationType: usize = 0x234; // ParticleVolumetricSmokeCreationType_t
+                pub const m_nEventType: usize = 0x238; // EventTypeSelection_t
+                pub const m_vecPos: usize = 0x240; // CPerParticleVecInput
+                pub const m_vecVelocity: usize = 0x918; // CPerParticleVecInput
+                pub const m_vPrevPosition: usize = 0xFF0; // CPerParticleVecInput
+                pub const m_flSpeed: usize = 0x16C8; // CPerParticleFloatInput
+                pub const m_flRadius: usize = 0x1840; // CPerParticleFloatInput
+                pub const m_flDensity: usize = 0x19B8; // CPerParticleFloatInput
+                pub const m_flTemperature: usize = 0x1B30; // CPerParticleFloatInput
+                pub const m_flMagnitude: usize = 0x1CA8; // CPerParticleFloatInput
+                pub const m_flKillRadius: usize = 0x1E20; // CPerParticleFloatInput
+                pub const m_flKillDensityScale: usize = 0x1F98; // CPerParticleFloatInput
+                pub const m_flFalloff: usize = 0x2110; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 8
             //
             // Metadata:
@@ -3240,7 +3445,7 @@ pub mod dota2_dumper {
                 pub const m_flOutputMax: usize = 0x260; // float32
                 pub const m_flRadius: usize = 0x264; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -3250,7 +3455,7 @@ pub mod dota2_dumper {
                 pub const m_flScale: usize = 0x1E4; // float32
                 pub const m_nControlPointNumber: usize = 0x1E8; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
@@ -3262,14 +3467,14 @@ pub mod dota2_dumper {
                 pub const m_flBehindOutputRemap: usize = 0x8C0; // CParticleRemapFloatInput
                 pub const m_nBehindSetMethod: usize = 0xA38; // ParticleSetMethod_t
             }
-            // Parent: None
+            // Parent: CParticleFunction
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CParticleFunctionOperator {
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
@@ -3281,7 +3486,7 @@ pub mod dota2_dumper {
                 pub const m_vecPlaneNormal: usize = 0x4D8; // CParticleCollectionVecInput
                 pub const m_nControlPointNumber: usize = 0xBB0; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 2
             //
             // Metadata:
@@ -3290,14 +3495,14 @@ pub mod dota2_dumper {
                 pub const m_nCPInput: usize = 0x1E0; // int32
                 pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CGeneralRandomRotation
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RandomYaw {
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -3307,7 +3512,7 @@ pub mod dota2_dumper {
                 pub const m_bTransformRadii: usize = 0x1E1; // bool
                 pub const m_nControlPointNumber: usize = 0x1E4; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 4
             //
             // Metadata:
@@ -3318,7 +3523,7 @@ pub mod dota2_dumper {
                 pub const m_vecCP1Pos: usize = 0x1F0; // CParticleCollectionVecInput
                 pub const m_transformInput: usize = 0x8C8; // CParticleTransformInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 7
             //
             // Metadata:
@@ -3332,7 +3537,7 @@ pub mod dota2_dumper {
                 pub const m_nSetMethod: usize = 0x660; // ParticleSetMethod_t
                 pub const m_bUseNeighbor: usize = 0x664; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 11
             //
             // Metadata:
@@ -3350,17 +3555,17 @@ pub mod dota2_dumper {
                 pub const m_flInterpRate: usize = 0x204; // float32
                 pub const m_nSetMethod: usize = 0x208; // ParticleSetMethod_t
             }
-            // Parent: None
+            // Parent: CParticleFunction
             // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CParticleFunctionRenderer {
                 pub const VisibilityInputs: usize = 0x1E0; // CParticleVisibilityInputs
-                pub const m_bCannotBeRefracted: usize = 0x228; // bool
+                pub const m_bCannotBeRefracted: usize = 0x224; // bool
             }
-            // Parent: None
-            // Field count: 66
+            // Parent: IParticleSystemDefinition
+            // Field count: 64
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -3412,34 +3617,32 @@ pub mod dota2_dumper {
                 pub const m_flMinimumTimeStep: usize = 0x32C; // float32
                 pub const m_nMinimumFrames: usize = 0x330; // int32
                 pub const m_bIsGPUParticleSystem: usize = 0x334; // bool
-                pub const m_nMinCPULevel: usize = 0x338; // int32
-                pub const m_nMinGPULevel: usize = 0x33C; // int32
-                pub const m_flNoDrawTimeToGoToSleep: usize = 0x340; // float32
-                pub const m_flMaxDrawDistance: usize = 0x344; // float32
-                pub const m_flStartFadeDistance: usize = 0x348; // float32
-                pub const m_flMaxCreationDistance: usize = 0x34C; // float32
-                pub const m_nAggregationMinAvailableParticles: usize = 0x350; // int32
-                pub const m_flAggregateRadius: usize = 0x354; // float32
-                pub const m_bShouldBatch: usize = 0x358; // bool
-                pub const m_bShouldHitboxesFallbackToRenderBounds: usize = 0x359; // bool
-                pub const m_bShouldHitboxesFallbackToSnapshot: usize = 0x35A; // bool
-                pub const m_bShouldHitboxesFallbackToCollisionHulls: usize = 0x35B; // bool
-                pub const m_nViewModelEffect: usize = 0x35C; // InheritableBoolType_t
-                pub const m_bScreenSpaceEffect: usize = 0x360; // bool
-                pub const m_pszTargetLayerID: usize = 0x368; // CUtlSymbolLarge
-                pub const m_nSkipRenderControlPoint: usize = 0x370; // int32
-                pub const m_nAllowRenderControlPoint: usize = 0x374; // int32
-                pub const m_bShouldSort: usize = 0x378; // bool
-                pub const m_controlPointConfigurations: usize = 0x3C0; // CUtlVector<ParticleControlPointConfiguration_t>
+                pub const m_flNoDrawTimeToGoToSleep: usize = 0x338; // float32
+                pub const m_flMaxDrawDistance: usize = 0x33C; // float32
+                pub const m_flStartFadeDistance: usize = 0x340; // float32
+                pub const m_flMaxCreationDistance: usize = 0x344; // float32
+                pub const m_nAggregationMinAvailableParticles: usize = 0x348; // int32
+                pub const m_flAggregateRadius: usize = 0x34C; // float32
+                pub const m_bShouldBatch: usize = 0x350; // bool
+                pub const m_bShouldHitboxesFallbackToRenderBounds: usize = 0x351; // bool
+                pub const m_bShouldHitboxesFallbackToSnapshot: usize = 0x352; // bool
+                pub const m_bShouldHitboxesFallbackToCollisionHulls: usize = 0x353; // bool
+                pub const m_nViewModelEffect: usize = 0x354; // InheritableBoolType_t
+                pub const m_bScreenSpaceEffect: usize = 0x358; // bool
+                pub const m_pszTargetLayerID: usize = 0x360; // CUtlSymbolLarge
+                pub const m_nSkipRenderControlPoint: usize = 0x368; // int32
+                pub const m_nAllowRenderControlPoint: usize = 0x36C; // int32
+                pub const m_bShouldSort: usize = 0x370; // bool
+                pub const m_controlPointConfigurations: usize = 0x3B8; // CUtlVector<ParticleControlPointConfiguration_t>
             }
-            // Parent: None
+            // Parent: C_OP_RemapNamedModelElementEndCap
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RemapNamedModelMeshGroupEndCap {
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 10
             //
             // Metadata:
@@ -3456,16 +3659,17 @@ pub mod dota2_dumper {
                 pub const m_bActiveRange: usize = 0x2DC; // bool
                 pub const m_bRadialCheck: usize = 0x2DD; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 2
             //
             // Metadata:
+            // MObsoleteParticleFunction
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderScreenVelocityRotate {
-                pub const m_flRotateRateDegrees: usize = 0x230; // float32
-                pub const m_flForwardDegrees: usize = 0x234; // float32
+                pub const m_flRotateRateDegrees: usize = 0x228; // float32
+                pub const m_flForwardDegrees: usize = 0x22C; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
@@ -3478,7 +3682,7 @@ pub mod dota2_dumper {
                 pub const m_flMaximumLightingRadius: usize = 0x1F0; // float32
                 pub const m_flPositionDampingConstant: usize = 0x1F4; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
@@ -3491,7 +3695,7 @@ pub mod dota2_dumper {
                 pub const m_randomnessParameters: usize = 0xFA0; // CRandomNumberGeneratorParameters
                 pub const m_bUseNewCode: usize = 0xFA8; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 2
             //
             // Metadata:
@@ -3500,7 +3704,7 @@ pub mod dota2_dumper {
                 pub const m_nChildGroupID: usize = 0x1E8; // int32
                 pub const m_flNumberOfChildren: usize = 0x1F0; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 33
             //
             // Metadata:
@@ -3540,7 +3744,7 @@ pub mod dota2_dumper {
                 pub const m_bClampLowerRange: usize = 0x6EE; // bool
                 pub const m_bClampUpperRange: usize = 0x6EF; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 9
             //
             // Metadata:
@@ -3556,7 +3760,7 @@ pub mod dota2_dumper {
                 pub const m_bLockToSurface: usize = 0xA45; // bool
                 pub const m_flGridSpacing: usize = 0xA48; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 11
             //
             // Metadata:
@@ -3574,11 +3778,12 @@ pub mod dota2_dumper {
                 pub const m_bAdditive: usize = 0x89D; // bool
                 pub const m_bCapsule: usize = 0x89E; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_PositionPlaceOnGround {
                 pub const m_flOffset: usize = 0x1E8; // CPerParticleFloatInput
                 pub const m_flMaxTraceLength: usize = 0x360; // CPerParticleFloatInput
@@ -3596,7 +3801,7 @@ pub mod dota2_dumper {
                 pub const m_nPreserveOffsetCP: usize = 0xC5C; // int32
                 pub const m_nIgnoreCP: usize = 0xC60; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 4
             //
             // Metadata:
@@ -3607,21 +3812,22 @@ pub mod dota2_dumper {
                 pub const m_flExponent: usize = 0x1F0; // float32
                 pub const m_nFieldOutput: usize = 0x1F4; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderPostProcessing {
-                pub const m_flPostProcessStrength: usize = 0x230; // CPerParticleFloatInput
-                pub const m_hPostTexture: usize = 0x3A8; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
-                pub const m_nPriority: usize = 0x3B0; // ParticlePostProcessPriorityGroup_t
+                pub const m_flPostProcessStrength: usize = 0x228; // CPerParticleFloatInput
+                pub const m_hPostTexture: usize = 0x3A0; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
+                pub const m_nPriority: usize = 0x3A8; // ParticlePostProcessPriorityGroup_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionConstraint
             // Field count: 28
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_WorldTraceConstraint {
                 pub const m_nCP: usize = 0x1E0; // int32
                 pub const m_vecCpOffset: usize = 0x1E4; // Vector
@@ -3652,12 +3858,13 @@ pub mod dota2_dumper {
                 pub const m_nEntityStickDataField: usize = 0xA00; // ParticleAttributeIndex_t
                 pub const m_nEntityStickNormalField: usize = 0xA04; // ParticleAttributeIndex_t
             }
-            // Parent: None
-            // Field count: 8
+            // Parent: CParticleFunctionRenderer
+            // Field count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderBlobs {
+                pub const m_bUseParticleColorForVertColor: usize = 0x228; // bool
                 pub const m_cubeWidth: usize = 0x230; // CParticleCollectionRendererFloatInput
                 pub const m_cutoffRadius: usize = 0x3A8; // CParticleCollectionRendererFloatInput
                 pub const m_renderRadius: usize = 0x520; // CParticleCollectionRendererFloatInput
@@ -3667,7 +3874,7 @@ pub mod dota2_dumper {
                 pub const m_MaterialVars: usize = 0x6A8; // CUtlVector<MaterialVariable_t>
                 pub const m_hMaterial: usize = 0x6D8; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 13
             //
             // Metadata:
@@ -3687,7 +3894,7 @@ pub mod dota2_dumper {
                 pub const m_flOscMult: usize = 0x208; // float32
                 pub const m_flOscAdd: usize = 0x20C; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
@@ -3700,26 +3907,27 @@ pub mod dota2_dumper {
                 pub const m_bProportional: usize = 0x220; // bool
                 pub const m_bEaseInAndOut: usize = 0x221; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_WaterImpulseRenderer {
-                pub const m_vecPos: usize = 0x230; // CPerParticleVecInput
-                pub const m_flRadius: usize = 0x908; // CPerParticleFloatInput
-                pub const m_flMagnitude: usize = 0xA80; // CPerParticleFloatInput
-                pub const m_flShape: usize = 0xBF8; // CPerParticleFloatInput
-                pub const m_flWindSpeed: usize = 0xD70; // CPerParticleFloatInput
-                pub const m_flWobble: usize = 0xEE8; // CPerParticleFloatInput
-                pub const m_bIsRadialWind: usize = 0x1060; // bool
-                pub const m_nEventType: usize = 0x1064; // EventTypeSelection_t
+                pub const m_vecPos: usize = 0x228; // CPerParticleVecInput
+                pub const m_flRadius: usize = 0x900; // CPerParticleFloatInput
+                pub const m_flMagnitude: usize = 0xA78; // CPerParticleFloatInput
+                pub const m_flShape: usize = 0xBF0; // CPerParticleFloatInput
+                pub const m_flWindSpeed: usize = 0xD68; // CPerParticleFloatInput
+                pub const m_flWobble: usize = 0xEE0; // CPerParticleFloatInput
+                pub const m_bIsRadialWind: usize = 0x1058; // bool
+                pub const m_nEventType: usize = 0x105C; // EventTypeSelection_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_RandomSequence {
                 pub const m_nSequenceMin: usize = 0x1E8; // int32
                 pub const m_nSequenceMax: usize = 0x1EC; // int32
@@ -3727,7 +3935,7 @@ pub mod dota2_dumper {
                 pub const m_bLinear: usize = 0x1F1; // bool
                 pub const m_WeightedList: usize = 0x1F8; // CUtlVector<SequenceWeightedList_t>
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
@@ -3739,7 +3947,7 @@ pub mod dota2_dumper {
                 pub const m_nField: usize = 0x210; // ParticleAttributeIndex_t
                 pub const m_bEaseOut: usize = 0x214; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 3
             //
             // Metadata:
@@ -3749,7 +3957,7 @@ pub mod dota2_dumper {
                 pub const m_flDistance: usize = 0x1F0; // CParticleCollectionFloatInput
                 pub const m_bCullInside: usize = 0x368; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionConstraint
             // Field count: 2
             //
             // Metadata:
@@ -3758,7 +3966,7 @@ pub mod dota2_dumper {
                 pub const m_flParentRadiusScale: usize = 0x1E0; // CPerParticleFloatInput
                 pub const m_flRadiusScale: usize = 0x358; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 5
             //
             // Metadata:
@@ -3770,7 +3978,7 @@ pub mod dota2_dumper {
                 pub const m_bUseVerticalVelocity: usize = 0x1F4; // bool
                 pub const m_vecScale: usize = 0x1F8; // CPerParticleVecInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -3784,7 +3992,7 @@ pub mod dota2_dumper {
                 pub const m_nSetMethod: usize = 0x1114; // ParticleSetMethod_t
                 pub const m_bNormalizedOutput: usize = 0x1118; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
@@ -3797,7 +4005,7 @@ pub mod dota2_dumper {
                 pub const m_vOffsetMax: usize = 0x208; // Vector
                 pub const m_randomnessParameters: usize = 0x214; // CRandomNumberGeneratorParameters
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 5
             //
             // Metadata:
@@ -3809,7 +4017,7 @@ pub mod dota2_dumper {
                 pub const m_flOutputMin: usize = 0x1F8; // float32
                 pub const m_flOutputMax: usize = 0x1FC; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -3820,30 +4028,31 @@ pub mod dota2_dumper {
                 pub const m_flRotOffset: usize = 0x24C; // float32
                 pub const m_flSpinStrength: usize = 0x250; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderStatusEffect {
-                pub const m_pTextureColorWarp: usize = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureDetail2: usize = 0x238; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureDiffuseWarp: usize = 0x240; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureFresnelColorWarp: usize = 0x248; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureFresnelWarp: usize = 0x250; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureSpecularWarp: usize = 0x258; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureEnvMap: usize = 0x260; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureColorWarp: usize = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureDetail2: usize = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureDiffuseWarp: usize = 0x238; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureFresnelColorWarp: usize = 0x240; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureFresnelWarp: usize = 0x248; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureSpecularWarp: usize = 0x250; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureEnvMap: usize = 0x258; // CStrongHandle<InfoForResourceTypeCTextureBase>
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_RandomForce {
                 pub const m_MinForce: usize = 0x1F0; // Vector
                 pub const m_MaxForce: usize = 0x1FC; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -3882,7 +4091,7 @@ pub mod dota2_dumper {
                 pub const m_vecPreviewGravity: usize = 0x58; // Vector
                 pub const m_vecPreviewWind: usize = 0x64; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 3
             //
             // Metadata:
@@ -3892,7 +4101,7 @@ pub mod dota2_dumper {
                 pub const m_nScaleCP: usize = 0x1F4; // int32
                 pub const m_vecAccel: usize = 0x1F8; // CParticleCollectionVecInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
@@ -3904,18 +4113,19 @@ pub mod dota2_dumper {
                 pub const m_bUseBones: usize = 0x1E6; // bool
                 pub const m_HitboxSetName: usize = 0x1E7; // char[128]
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_SetFloat {
                 pub const m_InputValue: usize = 0x1E0; // CPerParticleFloatInput
                 pub const m_nOutputField: usize = 0x358; // ParticleAttributeIndex_t
                 pub const m_nSetMethod: usize = 0x35C; // ParticleSetMethod_t
                 pub const m_Lerp: usize = 0x360; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 13
             //
             // Metadata:
@@ -3935,7 +4145,7 @@ pub mod dota2_dumper {
                 pub const m_bAccelerate: usize = 0x2FD; // bool
                 pub const m_flRemapBias: usize = 0x300; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -3946,21 +4156,21 @@ pub mod dota2_dumper {
                 pub const m_flOutputRemap: usize = 0x360; // CParticleRemapFloatInput
                 pub const m_nSetMethod: usize = 0x4D8; // ParticleSetMethod_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderStatusEffectTf {
-                pub const m_pTextureColorWarp: usize = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureNormal: usize = 0x238; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureMetalness: usize = 0x240; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureRoughness: usize = 0x248; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureSelfIllum: usize = 0x250; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureDetail: usize = 0x258; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureEnvMap: usize = 0x260; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureColorWarp: usize = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureNormal: usize = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureMetalness: usize = 0x238; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureRoughness: usize = 0x240; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureSelfIllum: usize = 0x248; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureDetail: usize = 0x250; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureEnvMap: usize = 0x258; // CStrongHandle<InfoForResourceTypeCTextureBase>
             }
-            // Parent: None
+            // Parent: C_OP_RemapDistanceToLineSegmentBase
             // Field count: 3
             //
             // Metadata:
@@ -3970,7 +4180,7 @@ pub mod dota2_dumper {
                 pub const m_flMinOutputValue: usize = 0x1FC; // float32
                 pub const m_flMaxOutputValue: usize = 0x200; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -3980,7 +4190,7 @@ pub mod dota2_dumper {
                 pub const m_nFieldInput: usize = 0x1E4; // ParticleAttributeIndex_t
                 pub const m_nParticleNumber: usize = 0x1E8; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 13
             //
             // Metadata:
@@ -4000,7 +4210,7 @@ pub mod dota2_dumper {
                 pub const m_bSubSample: usize = 0x670; // bool
                 pub const m_bPrev: usize = 0x671; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 15
             //
             // Metadata:
@@ -4022,7 +4232,7 @@ pub mod dota2_dumper {
                 pub const m_nTraceSet: usize = 0x298; // ParticleTraceSet_t
                 pub const m_nSetParent: usize = 0x29C; // ParticleParentSetMode_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 4
             //
             // Metadata:
@@ -4033,7 +4243,7 @@ pub mod dota2_dumper {
                 pub const m_vecCP1Pos: usize = 0x1F0; // Vector
                 pub const m_bOrientToHand: usize = 0x1FC; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionConstraint
             // Field count: 8
             //
             // Metadata:
@@ -4048,7 +4258,7 @@ pub mod dota2_dumper {
                 pub const m_nFieldScale: usize = 0x234; // ParticleAttributeIndex_t
                 pub const m_nManualTField: usize = 0x238; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
@@ -4060,11 +4270,12 @@ pub mod dota2_dumper {
                 pub const m_bCullInside: usize = 0x368; // bool
                 pub const m_nAttribute: usize = 0x36C; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_CreateAlongPath {
                 pub const m_fMaxDistance: usize = 0x1E8; // CPerParticleFloatInput
                 pub const m_fT: usize = 0x360; // CPerParticleFloatInput
@@ -4073,30 +4284,30 @@ pub mod dota2_dumper {
                 pub const m_vEndOffset: usize = 0x524; // Vector
                 pub const m_bSaveOffset: usize = 0x530; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 16
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_GameDecalRenderer {
-                pub const m_sDecalGroupName: usize = 0x230; // CGlobalSymbol
-                pub const m_nEventType: usize = 0x238; // EventTypeSelection_t
-                pub const m_nInteractionMask: usize = 0x240; // ParticleCollisionMask_t
-                pub const m_nCollisionGroup: usize = 0x248; // ParticleCollisionGroup_t
-                pub const m_vecStartPos: usize = 0x250; // CPerParticleVecInput
-                pub const m_vecEndPos: usize = 0x928; // CPerParticleVecInput
-                pub const m_flTraceBloat: usize = 0x1000; // CPerParticleFloatInput
-                pub const m_flDecalSize: usize = 0x1178; // CPerParticleFloatInput
-                pub const m_nDecalGroupIndex: usize = 0x12F0; // CPerParticleFloatInput
-                pub const m_flDecalRotation: usize = 0x1468; // CPerParticleFloatInput
-                pub const m_vModulationColor: usize = 0x15E0; // CPerParticleVecInput
-                pub const m_bUseGameDefaultDecalSize: usize = 0x1CB8; // bool
-                pub const m_bRandomDecalRotation: usize = 0x1CB9; // bool
-                pub const m_bRandomlySelectDecalInGroup: usize = 0x1CBA; // bool
-                pub const m_bNoDecalsOnOwner: usize = 0x1CBB; // bool
-                pub const m_bVisualizeTraces: usize = 0x1CBC; // bool
+                pub const m_sDecalGroupName: usize = 0x228; // CGlobalSymbol
+                pub const m_nEventType: usize = 0x230; // EventTypeSelection_t
+                pub const m_nInteractionMask: usize = 0x238; // ParticleCollisionMask_t
+                pub const m_nCollisionGroup: usize = 0x240; // ParticleCollisionGroup_t
+                pub const m_vecStartPos: usize = 0x248; // CPerParticleVecInput
+                pub const m_vecEndPos: usize = 0x920; // CPerParticleVecInput
+                pub const m_flTraceBloat: usize = 0xFF8; // CPerParticleFloatInput
+                pub const m_flDecalSize: usize = 0x1170; // CPerParticleFloatInput
+                pub const m_nDecalGroupIndex: usize = 0x12E8; // CPerParticleFloatInput
+                pub const m_flDecalRotation: usize = 0x1460; // CPerParticleFloatInput
+                pub const m_vModulationColor: usize = 0x15D8; // CPerParticleVecInput
+                pub const m_bUseGameDefaultDecalSize: usize = 0x1CB0; // bool
+                pub const m_bRandomDecalRotation: usize = 0x1CB1; // bool
+                pub const m_bRandomlySelectDecalInGroup: usize = 0x1CB2; // bool
+                pub const m_bNoDecalsOnOwner: usize = 0x1CB3; // bool
+                pub const m_bVisualizeTraces: usize = 0x1CB4; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -4110,7 +4321,7 @@ pub mod dota2_dumper {
                 pub const m_bSkin: usize = 0x2EC; // bool
                 pub const m_bAttachment: usize = 0x2ED; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
@@ -4123,28 +4334,29 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0x214; // ParticleAttributeIndex_t
                 pub const m_bEaseInOut: usize = 0x218; // bool
             }
-            // Parent: None
+            // Parent: C_INIT_RemapNamedModelElementToScalar
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RemapNamedModelSequenceToScalar {
             }
-            // Parent: None
+            // Parent: C_OP_RenderPoints
             // Field count: 7
             //
             // Metadata:
+            // MObsoleteParticleFunction
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderLights {
-                pub const m_flAnimationRate: usize = 0x238; // float32
-                pub const m_nAnimationType: usize = 0x23C; // AnimationType_t
-                pub const m_bAnimateInFPS: usize = 0x240; // bool
-                pub const m_flMinSize: usize = 0x244; // float32
-                pub const m_flMaxSize: usize = 0x248; // float32
-                pub const m_flStartFadeSize: usize = 0x24C; // float32
-                pub const m_flEndFadeSize: usize = 0x250; // float32
+                pub const m_flAnimationRate: usize = 0x230; // float32
+                pub const m_nAnimationType: usize = 0x234; // AnimationType_t
+                pub const m_bAnimateInFPS: usize = 0x238; // bool
+                pub const m_flMinSize: usize = 0x23C; // float32
+                pub const m_flMaxSize: usize = 0x240; // float32
+                pub const m_flStartFadeSize: usize = 0x244; // float32
+                pub const m_flEndFadeSize: usize = 0x248; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 1
             //
             // Metadata:
@@ -4161,7 +4373,7 @@ pub mod dota2_dumper {
                 pub const m_bDistributeEvenly: usize = 0x0; // bool
                 pub const m_nSeed: usize = 0x4; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 7
             //
             // Metadata:
@@ -4175,15 +4387,16 @@ pub mod dota2_dumper {
                 pub const m_nTintBlendMode: usize = 0x214; // ParticleColorBlendMode_t
                 pub const m_flLightAmplification: usize = 0x218; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 1
             //
             // Metadata:
+            // MObsoleteParticleFunction
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderPoints {
-                pub const m_hMaterial: usize = 0x230; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_hMaterial: usize = 0x228; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
@@ -4196,7 +4409,7 @@ pub mod dota2_dumper {
                 pub const m_nOutputField: usize = 0x658; // ParticleAttributeIndex_t
                 pub const m_nSetMethod: usize = 0x65C; // ParticleSetMethod_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 10
             //
             // Metadata:
@@ -4213,7 +4426,7 @@ pub mod dota2_dumper {
                 pub const m_bCenter: usize = 0xABD; // bool
                 pub const m_bHollow: usize = 0xABE; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 3
             //
             // Metadata:
@@ -4223,7 +4436,7 @@ pub mod dota2_dumper {
                 pub const m_vecRateMin: usize = 0x1EC; // Vector
                 pub const m_vecRateMax: usize = 0x1F8; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
@@ -4236,7 +4449,7 @@ pub mod dota2_dumper {
                 pub const m_bUseAABB: usize = 0x1F0; // bool
                 pub const m_nCPBroadcast: usize = 0x1F4; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 3
             //
             // Metadata:
@@ -4246,7 +4459,7 @@ pub mod dota2_dumper {
                 pub const m_flMax: usize = 0x1EC; // float32
                 pub const m_flExponent: usize = 0x1F0; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 14
             //
             // Metadata:
@@ -4267,7 +4480,7 @@ pub mod dota2_dumper {
                 pub const m_flHitboxVelocityScale: usize = 0x11A8; // CParticleCollectionFloatInput
                 pub const m_flMaxBoneVelocity: usize = 0x1320; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 10
             //
             // Metadata:
@@ -4284,7 +4497,7 @@ pub mod dota2_dumper {
                 pub const m_bSetGravity: usize = 0x832; // bool
                 pub const m_bSetUV: usize = 0x833; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
@@ -4297,14 +4510,15 @@ pub mod dota2_dumper {
                 pub const m_nChildGroupID: usize = 0x1F0; // int32
                 pub const m_bOnlyChildren: usize = 0x1F4; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 0
             //
             // Metadata:
+            // MObsoleteParticleFunction
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderClothForce {
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -4318,12 +4532,13 @@ pub mod dota2_dumper {
                 pub const m_flOutputMax: usize = 0x1F4; // float32
                 pub const m_flRadiusScale: usize = 0x1F8; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
             // MParticleMinVersion
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_CreateSequentialPathV2 {
                 pub const m_fMaxDistance: usize = 0x1E8; // CPerParticleFloatInput
                 pub const m_flNumToAssign: usize = 0x360; // CParticleCollectionFloatInput
@@ -4341,11 +4556,12 @@ pub mod dota2_dumper {
                 pub const m_strVariable: usize = 0x0; // CUtlString
                 pub const m_vecInput: usize = 0x8; // CParticleCollectionVecInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_RemapInitialDirectionToTransformToVector {
                 pub const m_TransformInput: usize = 0x1E8; // CParticleTransformInput
                 pub const m_nFieldOutput: usize = 0x250; // ParticleAttributeIndex_t
@@ -4354,7 +4570,7 @@ pub mod dota2_dumper {
                 pub const m_vecOffsetAxis: usize = 0x25C; // Vector
                 pub const m_bNormalize: usize = 0x268; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -4366,7 +4582,7 @@ pub mod dota2_dumper {
                 pub const m_bCPPairs: usize = 0x1E8; // bool
                 pub const m_PathParams: usize = 0x1F0; // CPathParameters
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 1
             //
             // Metadata:
@@ -4374,7 +4590,7 @@ pub mod dota2_dumper {
             pub mod C_OP_NormalLock {
                 pub const m_nControlPointNumber: usize = 0x1E0; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 4
             //
             // Metadata:
@@ -4385,7 +4601,7 @@ pub mod dota2_dumper {
                 pub const m_bUseQuat: usize = 0x25C; // bool
                 pub const m_bWriteNormal: usize = 0x25D; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -4396,11 +4612,12 @@ pub mod dota2_dumper {
                 pub const m_flCullEnd: usize = 0x1E8; // float32
                 pub const m_flCullExp: usize = 0x1EC; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_RandomYawFlip {
                 pub const m_flPercent: usize = 0x1E8; // float32
             }
@@ -4413,7 +4630,7 @@ pub mod dota2_dumper {
                 pub const m_nSequence: usize = 0x0; // int32
                 pub const m_flRelativeWeight: usize = 0x4; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
@@ -4425,16 +4642,16 @@ pub mod dota2_dumper {
                 pub const m_DistanceCheck: usize = 0x1F0; // CPerParticleFloatInput
                 pub const m_flInterpolation: usize = 0x368; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderText {
-                pub const m_OutlineColor: usize = 0x230; // Color
-                pub const m_DefaultText: usize = 0x238; // CUtlString
+                pub const m_OutlineColor: usize = 0x228; // Color
+                pub const m_DefaultText: usize = 0x230; // CUtlString
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
@@ -4446,24 +4663,25 @@ pub mod dota2_dumper {
                 pub const m_flScale: usize = 0x368; // CParticleCollectionFloatInput
                 pub const m_vecScale: usize = 0x4E0; // CParticleCollectionVecInput
             }
-            // Parent: None
+            // Parent: CGeneralRandomRotation
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RandomRotation {
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_LerpEndCapVector {
                 pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
                 pub const m_vecOutput: usize = 0x1E4; // Vector
                 pub const m_flLerpTime: usize = 0x1F0; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 1
             //
             // Metadata:
@@ -4471,7 +4689,7 @@ pub mod dota2_dumper {
             pub mod C_OP_VelocityDecay {
                 pub const m_flMinVelocity: usize = 0x1E0; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 6
             //
             // Metadata:
@@ -4484,7 +4702,7 @@ pub mod dota2_dumper {
                 pub const m_bAvoidSingularity: usize = 0x369; // bool
                 pub const m_bPointAway: usize = 0x36A; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
@@ -4496,11 +4714,12 @@ pub mod dota2_dumper {
                 pub const m_bClosedLoop: usize = 0x201; // bool
                 pub const m_nNumPointsAlongPath: usize = 0x204; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_CreateWithinCone {
                 pub const m_TransformInput: usize = 0x1E8; // CParticleTransformInput
                 pub const m_flInnerAngle: usize = 0x250; // CPerParticleFloatInput
@@ -4510,7 +4729,7 @@ pub mod dota2_dumper {
                 pub const m_bCollapseOffset: usize = 0x830; // bool
                 pub const m_randomnessParameters: usize = 0x834; // CRandomNumberGeneratorParameters
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 18
             //
             // Metadata:
@@ -4535,7 +4754,7 @@ pub mod dota2_dumper {
                 pub const m_nPreserveOffsetCP: usize = 0xAE4; // int32
                 pub const m_nIgnoreCP: usize = 0xAE8; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 2
             //
             // Metadata:
@@ -4544,7 +4763,7 @@ pub mod dota2_dumper {
                 pub const m_nInputControlPoint: usize = 0x1E0; // int32
                 pub const m_nOutputControlPoint: usize = 0x1E4; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -4555,7 +4774,7 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0xF90; // ParticleAttributeIndex_t
                 pub const m_bNormalize: usize = 0xF94; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -4566,14 +4785,14 @@ pub mod dota2_dumper {
                 pub const m_bUseQuat: usize = 0x254; // bool
                 pub const m_bWriteNormal: usize = 0x255; // bool
             }
-            // Parent: None
+            // Parent: CGeneralRandomRotation
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RandomRotationSpeed {
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 8
             //
             // Metadata:
@@ -4589,7 +4808,7 @@ pub mod dota2_dumper {
                 pub const m_nMissingParentBehavior: usize = 0x4DC; // MissingParentInheritBehavior_t
                 pub const m_flInterpolation: usize = 0x4E0; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 2
             //
             // Metadata:
@@ -4598,7 +4817,7 @@ pub mod dota2_dumper {
                 pub const m_nSequenceMin: usize = 0x1E8; // int32
                 pub const m_nSequenceMax: usize = 0x1EC; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -4619,7 +4838,7 @@ pub mod dota2_dumper {
                 pub const m_bLocalCoords: usize = 0x4; // bool
                 pub const m_vOffset: usize = 0x8; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 4
             //
             // Metadata:
@@ -4630,7 +4849,7 @@ pub mod dota2_dumper {
                 pub const m_nHeadLocationMax: usize = 0x1F0; // int32
                 pub const m_flResetRate: usize = 0x1F8; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -4640,7 +4859,7 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
                 pub const m_nVoxelGridResolution: usize = 0x1E8; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 8
             //
             // Metadata:
@@ -4655,7 +4874,7 @@ pub mod dota2_dumper {
                 pub const m_flNoiseScaleLoc: usize = 0x1FC; // float32
                 pub const m_vecOffsetLoc: usize = 0x200; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -4665,7 +4884,7 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
                 pub const m_nComponent: usize = 0x1E8; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
@@ -4678,7 +4897,7 @@ pub mod dota2_dumper {
                 pub const m_flRotationRandExponent: usize = 0x1F8; // float32
                 pub const m_bRandomlyFlipDirection: usize = 0x1FC; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 9
             //
             // Metadata:
@@ -4694,7 +4913,7 @@ pub mod dota2_dumper {
                 pub const m_nSetMethod: usize = 0x1578; // ParticleSetMethod_t
                 pub const m_bDeltaTime: usize = 0x157C; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -4704,7 +4923,7 @@ pub mod dota2_dumper {
                 pub const m_flRange: usize = 0x1E4; // float32
                 pub const m_flScale: usize = 0x1E8; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 11
             //
             // Metadata:
@@ -4722,11 +4941,12 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0x22C; // ParticleAttributeIndex_t
                 pub const m_vFinalOutputScale: usize = 0x230; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_LockToBone {
                 pub const m_modelInput: usize = 0x1E0; // CParticleModelInput
                 pub const m_transformInput: usize = 0x240; // CParticleTransformInput
@@ -4744,14 +4964,14 @@ pub mod dota2_dumper {
                 pub const m_vecRotation: usize = 0x350; // CPerParticleVecInput
                 pub const m_flRotLerp: usize = 0xA28; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: C_OP_RemapNamedModelElementOnceTimed
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RemapNamedModelBodyPartOnceTimed {
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -4762,7 +4982,7 @@ pub mod dota2_dumper {
                 pub const m_nSetMethod: usize = 0xA30; // ParticleSetMethod_t
                 pub const m_flScreenEdgeAlignmentDistance: usize = 0xA38; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -4772,7 +4992,7 @@ pub mod dota2_dumper {
                 pub const m_nCP: usize = 0x1EC; // int32
                 pub const m_bRadiusScale: usize = 0x1F0; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 11
             //
             // Metadata:
@@ -4790,11 +5010,12 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0x1760; // ParticleAttributeIndex_t
                 pub const m_nFieldVelocity: usize = 0x1764; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_SetVec {
                 pub const m_InputValue: usize = 0x1E0; // CPerParticleVecInput
                 pub const m_nOutputField: usize = 0x8B8; // ParticleAttributeIndex_t
@@ -4802,7 +5023,7 @@ pub mod dota2_dumper {
                 pub const m_Lerp: usize = 0x8C0; // CPerParticleFloatInput
                 pub const m_bNormalizedOutput: usize = 0xA38; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
@@ -4815,7 +5036,7 @@ pub mod dota2_dumper {
                 pub const m_bSubFrame: usize = 0x1F8; // bool
                 pub const m_bSetRopeSegmentID: usize = 0x1F9; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 4
             //
             // Metadata:
@@ -4826,51 +5047,52 @@ pub mod dota2_dumper {
                 pub const m_flOutputRemap: usize = 0x368; // CParticleRemapFloatInput
                 pub const m_nSetMethod: usize = 0x4E0; // ParticleSetMethod_t
             }
-            // Parent: None
+            // Parent: C_INIT_RandomNamedModelElement
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RandomNamedModelBodyPart {
             }
-            // Parent: None
-            // Field count: 30
+            // Parent: CParticleFunctionRenderer
+            // Field count: 31
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderOmni2Light {
-                pub const m_nLightType: usize = 0x230; // ParticleOmni2LightTypeChoiceList_t
-                pub const m_nMaxAllowed: usize = 0x234; // uint16
-                pub const m_vColorBlend: usize = 0x238; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0x910; // ParticleColorBlendType_t
-                pub const m_strLightStyle: usize = 0x918; // CUtlString
-                pub const m_flLightStyleTime: usize = 0x920; // CPerParticleFloatInput
-                pub const m_nBrightnessUnit: usize = 0xA98; // ParticleLightUnitChoiceList_t
-                pub const m_flBrightnessLumens: usize = 0xAA0; // CPerParticleFloatInput
-                pub const m_flBrightnessCandelas: usize = 0xC18; // CPerParticleFloatInput
-                pub const m_bCastShadows: usize = 0xD90; // bool
-                pub const m_bDynamicBounce: usize = 0xD91; // bool
-                pub const m_flBounceScale: usize = 0xD98; // CParticleCollectionFloatInput
-                pub const m_bFog: usize = 0xF10; // bool
-                pub const m_flFogScale: usize = 0xF18; // CPerParticleFloatInput
-                pub const m_flLuminaireRadius: usize = 0x1090; // CPerParticleFloatInput
-                pub const m_nOrientationType: usize = 0x1208; // ParticleOmni2LighOrientationChoiceList_t
-                pub const m_vNormal: usize = 0x1210; // CPerParticleVecInput
-                pub const m_vTarget: usize = 0x18E8; // CPerParticleVecInput
-                pub const m_flFOVAngle: usize = 0x1FC0; // CPerParticleFloatInput
-                pub const m_flBarnShape: usize = 0x2138; // CPerParticleFloatInput
-                pub const m_flBarnNearSizeX: usize = 0x22B0; // CPerParticleFloatInput
-                pub const m_flBarnNearSizeY: usize = 0x2428; // CPerParticleFloatInput
-                pub const m_flBarnSoftX: usize = 0x25A0; // CPerParticleFloatInput
-                pub const m_flBarnSoftY: usize = 0x2718; // CPerParticleFloatInput
-                pub const m_flSkirt: usize = 0x2890; // CPerParticleFloatInput
-                pub const m_flRange: usize = 0x2A08; // CPerParticleFloatInput
-                pub const m_flInnerConeAngle: usize = 0x2B80; // CPerParticleFloatInput
-                pub const m_flOuterConeAngle: usize = 0x2CF8; // CPerParticleFloatInput
-                pub const m_hLightCookie: usize = 0x2E70; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_bSphericalCookie: usize = 0x2E78; // bool
+                pub const m_nLightType: usize = 0x228; // ParticleOmni2LightTypeChoiceList_t
+                pub const m_nMaxAllowed: usize = 0x22C; // uint16
+                pub const m_vColorBlend: usize = 0x230; // CParticleCollectionVecInput
+                pub const m_nColorBlendType: usize = 0x908; // ParticleColorBlendType_t
+                pub const m_strLightStyle: usize = 0x910; // CUtlString
+                pub const m_flLightStyleTime: usize = 0x918; // CPerParticleFloatInput
+                pub const m_nBrightnessUnit: usize = 0xA90; // ParticleLightUnitChoiceList_t
+                pub const m_flBrightnessLumens: usize = 0xA98; // CPerParticleFloatInput
+                pub const m_flBrightnessCandelas: usize = 0xC10; // CPerParticleFloatInput
+                pub const m_bCastShadows: usize = 0xD88; // bool
+                pub const m_bDynamicBounce: usize = 0xD89; // bool
+                pub const m_flBounceScale: usize = 0xD90; // CParticleCollectionFloatInput
+                pub const m_bFog: usize = 0xF08; // bool
+                pub const m_flFogScale: usize = 0xF10; // CPerParticleFloatInput
+                pub const m_flMinRoughness: usize = 0x1088; // CPerParticleFloatInput
+                pub const m_flLuminaireRadius: usize = 0x1200; // CPerParticleFloatInput
+                pub const m_nOrientationType: usize = 0x1378; // ParticleOmni2LighOrientationChoiceList_t
+                pub const m_vNormal: usize = 0x1380; // CPerParticleVecInput
+                pub const m_vTarget: usize = 0x1A58; // CPerParticleVecInput
+                pub const m_flFOVAngle: usize = 0x2130; // CPerParticleFloatInput
+                pub const m_flBarnShape: usize = 0x22A8; // CPerParticleFloatInput
+                pub const m_flBarnNearSizeX: usize = 0x2420; // CPerParticleFloatInput
+                pub const m_flBarnNearSizeY: usize = 0x2598; // CPerParticleFloatInput
+                pub const m_flBarnSoftX: usize = 0x2710; // CPerParticleFloatInput
+                pub const m_flBarnSoftY: usize = 0x2888; // CPerParticleFloatInput
+                pub const m_flSkirt: usize = 0x2A00; // CPerParticleFloatInput
+                pub const m_flRange: usize = 0x2B78; // CPerParticleFloatInput
+                pub const m_flInnerConeAngle: usize = 0x2CF0; // CPerParticleFloatInput
+                pub const m_flOuterConeAngle: usize = 0x2E68; // CPerParticleFloatInput
+                pub const m_hLightCookie: usize = 0x2FE0; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_bSphericalCookie: usize = 0x2FE8; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
@@ -4892,18 +5114,19 @@ pub mod dota2_dumper {
                 pub const m_Pos: usize = 0x8; // CPerParticleVecInput
                 pub const m_nOrientationMode: usize = 0x6E0; // ParticleOrientationSetMode_t
             }
-            // Parent: None
+            // Parent: C_INIT_RemapParticleCountToNamedModelElementScalar
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RemapParticleCountToNamedModelBodyPartScalar {
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 19
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_InitSkinnedPositionFromCPSnapshot {
                 pub const m_nSnapshotControlPointNumber: usize = 0x1E8; // int32
                 pub const m_nControlPointNumber: usize = 0x1EC; // int32
@@ -4925,7 +5148,7 @@ pub mod dota2_dumper {
                 pub const m_bCopyAlpha: usize = 0x395; // bool
                 pub const m_bSetRadius: usize = 0x396; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -4936,7 +5159,7 @@ pub mod dota2_dumper {
                 pub const m_nLatencyCPField: usize = 0x1E8; // int32
                 pub const m_nDesiredVelocityCPField: usize = 0x1EC; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionConstraint
             // Field count: 2
             //
             // Metadata:
@@ -4945,11 +5168,12 @@ pub mod dota2_dumper {
                 pub const m_flRadiusScale: usize = 0x1E0; // CPerParticleFloatInput
                 pub const m_flMinimumSpeed: usize = 0x358; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_Noise {
                 pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
                 pub const m_flOutputMin: usize = 0x1E4; // float32
@@ -4958,7 +5182,7 @@ pub mod dota2_dumper {
                 pub const m_bAdditive: usize = 0x1F0; // bool
                 pub const m_flNoiseAnimationTimeScale: usize = 0x1F4; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
@@ -4971,7 +5195,7 @@ pub mod dota2_dumper {
                 pub const m_flStartAlpha: usize = 0x1F0; // float32
                 pub const m_flEndAlpha: usize = 0x1F4; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -4992,7 +5216,7 @@ pub mod dota2_dumper {
                 pub const m_flNominalRadius: usize = 0x180; // CPerParticleFloatInput
                 pub const m_flScale: usize = 0x2F8; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 8
             //
             // Metadata:
@@ -5007,7 +5231,7 @@ pub mod dota2_dumper {
                 pub const m_flOutputMax: usize = 0x1F8; // float32
                 pub const m_nSetMethod: usize = 0x1FC; // ParticleSetMethod_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 1
             //
             // Metadata:
@@ -5015,7 +5239,7 @@ pub mod dota2_dumper {
             pub mod C_OP_AlphaDecay {
                 pub const m_flMinAlpha: usize = 0x1E0; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 2
             //
             // Metadata:
@@ -5024,11 +5248,12 @@ pub mod dota2_dumper {
                 pub const m_flRadiusScale: usize = 0x1E0; // float32
                 pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_InitVec {
                 pub const m_InputValue: usize = 0x1E8; // CPerParticleVecInput
                 pub const m_nOutputField: usize = 0x8C0; // ParticleAttributeIndex_t
@@ -5036,7 +5261,7 @@ pub mod dota2_dumper {
                 pub const m_bNormalizedOutput: usize = 0x8C8; // bool
                 pub const m_bWritePreviousPosition: usize = 0x8C9; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 17
             //
             // Metadata:
@@ -5060,7 +5285,7 @@ pub mod dota2_dumper {
                 pub const m_strEndPointsName: usize = 0x14A0; // CUtlString
                 pub const m_strLastValidName: usize = 0x14A8; // CUtlString
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 10
             //
             // Metadata:
@@ -5077,7 +5302,7 @@ pub mod dota2_dumper {
                 pub const m_HitboxSetName: usize = 0x8DE; // char[128]
                 pub const m_flShellSize: usize = 0x960; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
@@ -5090,7 +5315,7 @@ pub mod dota2_dumper {
                 pub const m_flInterpolation: usize = 0x1F0; // CPerParticleFloatInput
                 pub const m_flTValue: usize = 0x368; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -5101,7 +5326,7 @@ pub mod dota2_dumper {
                 pub const m_flStartTime: usize = 0x360; // float32
                 pub const m_flEndTime: usize = 0x364; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 13
             //
             // Metadata:
@@ -5121,7 +5346,7 @@ pub mod dota2_dumper {
                 pub const m_nChildCP: usize = 0x294; // int32
                 pub const m_nChildGroupID: usize = 0x298; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -5131,7 +5356,7 @@ pub mod dota2_dumper {
                 pub const m_flOutputMin: usize = 0x1E8; // CPerParticleFloatInput
                 pub const m_flOutputMax: usize = 0x360; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 3
             //
             // Metadata:
@@ -5141,7 +5366,7 @@ pub mod dota2_dumper {
                 pub const m_vecCP1Pos: usize = 0x1EC; // Vector
                 pub const m_bOrientToHMD: usize = 0x1F8; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 9
             //
             // Metadata:
@@ -5157,7 +5382,7 @@ pub mod dota2_dumper {
                 pub const m_bActiveRange: usize = 0x1FC; // bool
                 pub const m_bSetPreviousParticle: usize = 0x1FD; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 7
             //
             // Metadata:
@@ -5171,7 +5396,7 @@ pub mod dota2_dumper {
                 pub const m_nOutputCP: usize = 0x1290; // int32
                 pub const m_nOutVectorField: usize = 0x1294; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 10
             //
             // Metadata:
@@ -5188,28 +5413,30 @@ pub mod dota2_dumper {
                 pub const m_bActiveRange: usize = 0x2CC; // bool
                 pub const m_bRadialCheck: usize = 0x2CD; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_PlaneCull {
                 pub const m_nControlPoint: usize = 0x1E8; // int32
                 pub const m_flDistance: usize = 0x1F0; // CParticleCollectionFloatInput
                 pub const m_bCullInside: usize = 0x368; // bool
             }
-            // Parent: None
+            // Parent: C_OP_RemapNamedModelElementEndCap
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RemapNamedModelSequenceEndCap {
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 12
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_InitFromCPSnapshot {
                 pub const m_nControlPointNumber: usize = 0x1E8; // int32
                 pub const m_strSnapshotSubset: usize = 0x1F0; // CUtlString
@@ -5224,47 +5451,48 @@ pub mod dota2_dumper {
                 pub const m_nRandomSeed: usize = 0x500; // int32
                 pub const m_bLocalSpaceAngles: usize = 0x504; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 24
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderCables {
-                pub const m_flRadiusScale: usize = 0x230; // CParticleCollectionFloatInput
-                pub const m_flAlphaScale: usize = 0x3A8; // CParticleCollectionFloatInput
-                pub const m_vecColorScale: usize = 0x520; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0xBF8; // ParticleColorBlendType_t
-                pub const m_hMaterial: usize = 0xC00; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                pub const m_nTextureRepetitionMode: usize = 0xC08; // TextureRepetitionMode_t
-                pub const m_flTextureRepeatsPerSegment: usize = 0xC10; // CParticleCollectionFloatInput
-                pub const m_flTextureRepeatsCircumference: usize = 0xD88; // CParticleCollectionFloatInput
-                pub const m_flColorMapOffsetV: usize = 0xF00; // CParticleCollectionFloatInput
-                pub const m_flColorMapOffsetU: usize = 0x1078; // CParticleCollectionFloatInput
-                pub const m_flNormalMapOffsetV: usize = 0x11F0; // CParticleCollectionFloatInput
-                pub const m_flNormalMapOffsetU: usize = 0x1368; // CParticleCollectionFloatInput
-                pub const m_bDrawCableCaps: usize = 0x14E0; // bool
-                pub const m_flCapRoundness: usize = 0x14E4; // float32
-                pub const m_flCapOffsetAmount: usize = 0x14E8; // float32
-                pub const m_flTessScale: usize = 0x14EC; // float32
-                pub const m_nMinTesselation: usize = 0x14F0; // int32
-                pub const m_nMaxTesselation: usize = 0x14F4; // int32
-                pub const m_nRoundness: usize = 0x14F8; // int32
-                pub const m_nForceRoundnessFixed: usize = 0x14FC; // bool
-                pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x14FD; // bool
-                pub const m_LightingTransform: usize = 0x1500; // CParticleTransformInput
-                pub const m_MaterialFloatVars: usize = 0x1568; // CUtlLeanVector<FloatInputMaterialVariable_t>
-                pub const m_MaterialVecVars: usize = 0x1588; // CUtlLeanVector<VecInputMaterialVariable_t>
+                pub const m_flRadiusScale: usize = 0x228; // CParticleCollectionFloatInput
+                pub const m_flAlphaScale: usize = 0x3A0; // CParticleCollectionFloatInput
+                pub const m_vecColorScale: usize = 0x518; // CParticleCollectionVecInput
+                pub const m_nColorBlendType: usize = 0xBF0; // ParticleColorBlendType_t
+                pub const m_hMaterial: usize = 0xBF8; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_nTextureRepetitionMode: usize = 0xC00; // TextureRepetitionMode_t
+                pub const m_flTextureRepeatsPerSegment: usize = 0xC08; // CParticleCollectionFloatInput
+                pub const m_flTextureRepeatsCircumference: usize = 0xD80; // CParticleCollectionFloatInput
+                pub const m_flColorMapOffsetV: usize = 0xEF8; // CParticleCollectionFloatInput
+                pub const m_flColorMapOffsetU: usize = 0x1070; // CParticleCollectionFloatInput
+                pub const m_flNormalMapOffsetV: usize = 0x11E8; // CParticleCollectionFloatInput
+                pub const m_flNormalMapOffsetU: usize = 0x1360; // CParticleCollectionFloatInput
+                pub const m_bDrawCableCaps: usize = 0x14D8; // bool
+                pub const m_flCapRoundness: usize = 0x14DC; // float32
+                pub const m_flCapOffsetAmount: usize = 0x14E0; // float32
+                pub const m_flTessScale: usize = 0x14E4; // float32
+                pub const m_nMinTesselation: usize = 0x14E8; // int32
+                pub const m_nMaxTesselation: usize = 0x14EC; // int32
+                pub const m_nRoundness: usize = 0x14F0; // int32
+                pub const m_nForceRoundnessFixed: usize = 0x14F4; // bool
+                pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x14F5; // bool
+                pub const m_LightingTransform: usize = 0x14F8; // CParticleTransformInput
+                pub const m_MaterialFloatVars: usize = 0x1560; // CUtlLeanVector<FloatInputMaterialVariable_t>
+                pub const m_MaterialVecVars: usize = 0x1580; // CUtlLeanVector<VecInputMaterialVariable_t>
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_InheritVelocity {
                 pub const m_nControlPointNumber: usize = 0x1E8; // int32
                 pub const m_flVelocityScale: usize = 0x1EC; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 7
             //
             // Metadata:
@@ -5278,11 +5506,12 @@ pub mod dota2_dumper {
                 pub const m_flRetestRate: usize = 0x200; // CParticleCollectionFloatInput
                 pub const m_bAdaptiveThreshold: usize = 0x378; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_PositionOffset {
                 pub const m_OffsetMin: usize = 0x1E8; // CPerParticleVecInput
                 pub const m_OffsetMax: usize = 0x8C0; // CPerParticleVecInput
@@ -5291,7 +5520,7 @@ pub mod dota2_dumper {
                 pub const m_bProportional: usize = 0x1001; // bool
                 pub const m_randomnessParameters: usize = 0x1004; // CRandomNumberGeneratorParameters
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 2
             //
             // Metadata:
@@ -5300,7 +5529,7 @@ pub mod dota2_dumper {
                 pub const m_transformInput: usize = 0x1E8; // CParticleTransformInput
                 pub const m_nControlPointAxis: usize = 0x250; // ParticleControlPointAxis_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionConstraint
             // Field count: 1
             //
             // Metadata:
@@ -5308,7 +5537,7 @@ pub mod dota2_dumper {
             pub mod C_OP_ShapeMatchingConstraint {
                 pub const m_flShapeRestorationTime: usize = 0x1E0; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -5322,7 +5551,7 @@ pub mod dota2_dumper {
                 pub const m_bSetOrientation: usize = 0x369; // bool
                 pub const m_nOrientation: usize = 0x36C; // ParticleOrientationType_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 10
             //
             // Metadata:
@@ -5339,7 +5568,7 @@ pub mod dota2_dumper {
                 pub const m_nLocalSpaceControlPoint: usize = 0x157C; // int32
                 pub const m_b3D: usize = 0x1580; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -5353,7 +5582,7 @@ pub mod dota2_dumper {
                 pub const m_bNormalize: usize = 0x1FC; // bool
                 pub const m_nFieldStrength: usize = 0x200; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 9
             //
             // Metadata:
@@ -5369,7 +5598,7 @@ pub mod dota2_dumper {
                 pub const m_OperatorName: usize = 0x208; // CUtlString
                 pub const m_FieldName: usize = 0x210; // CUtlString
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 4
             //
             // Metadata:
@@ -5380,11 +5609,12 @@ pub mod dota2_dumper {
                 pub const m_nBehindFieldOutput: usize = 0x8C4; // ParticleAttributeIndex_t
                 pub const m_flBehindOutputRemap: usize = 0x8C8; // CParticleRemapFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_RtEnvCull {
                 pub const m_vecTestDir: usize = 0x1E0; // Vector
                 pub const m_vecTestNormal: usize = 0x1EC; // Vector
@@ -5394,7 +5624,7 @@ pub mod dota2_dumper {
                 pub const m_nRTEnvCP: usize = 0x27C; // int32
                 pub const m_nComponent: usize = 0x280; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 14
             //
             // Metadata:
@@ -5415,7 +5645,7 @@ pub mod dota2_dumper {
                 pub const m_flInterpolation: usize = 0x1030; // CPerParticleFloatInput
                 pub const m_bRetainInitialVelocity: usize = 0x11A8; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 13
             //
             // Metadata:
@@ -5435,7 +5665,7 @@ pub mod dota2_dumper {
                 pub const m_bOffset: usize = 0x22C; // bool
                 pub const m_bAccelerate: usize = 0x22D; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 5
             //
             // Metadata:
@@ -5447,7 +5677,7 @@ pub mod dota2_dumper {
                 pub const m_InputFalloffExp: usize = 0x4E0; // CPerParticleFloatInput
                 pub const m_nImpulseType: usize = 0x658; // ParticleImpulseType_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 3
             //
             // Metadata:
@@ -5457,7 +5687,7 @@ pub mod dota2_dumper {
                 pub const m_flForceScale: usize = 0x1F4; // float32
                 pub const m_flTargetDensity: usize = 0x1F8; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 10
             //
             // Metadata:
@@ -5474,7 +5704,7 @@ pub mod dota2_dumper {
                 pub const m_bUseLocalCoords: usize = 0x839; // bool
                 pub const m_bOffsetExistingPos: usize = 0x83A; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionConstraint
             // Field count: 5
             //
             // Metadata:
@@ -5486,7 +5716,7 @@ pub mod dota2_dumper {
                 pub const m_bLoopedPath: usize = 0x1EC; // bool
                 pub const m_pointList: usize = 0x1F0; // CUtlVector<PointDefinitionWithTimeValues_t>
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 12
             //
             // Metadata:
@@ -5505,7 +5735,7 @@ pub mod dota2_dumper {
                 pub const m_vecCP4Pos: usize = 0x220; // Vector
                 pub const m_nHeadLocation: usize = 0x22C; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
@@ -5518,7 +5748,7 @@ pub mod dota2_dumper {
                 pub const m_nOutputField: usize = 0x1110; // ParticleAttributeIndex_t
                 pub const m_nSetMethod: usize = 0x1114; // ParticleSetMethod_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -5529,7 +5759,7 @@ pub mod dota2_dumper {
                 pub const m_TransformInput: usize = 0xA30; // CParticleTransformInput
                 pub const m_bLocalSpace: usize = 0xA98; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 7
             //
             // Metadata:
@@ -5543,22 +5773,24 @@ pub mod dota2_dumper {
                 pub const m_flRepulsionMaxStrength: usize = 0x204; // float32
                 pub const m_bUseAABB: usize = 0x208; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_InitFloat {
                 pub const m_InputValue: usize = 0x1E8; // CPerParticleFloatInput
                 pub const m_nOutputField: usize = 0x360; // ParticleAttributeIndex_t
                 pub const m_nSetMethod: usize = 0x364; // ParticleSetMethod_t
                 pub const m_InputStrength: usize = 0x368; // CPerParticleFloatInput
             }
-            // Parent: None
-            // Field count: 17
+            // Parent: CParticleFunctionInitializer
+            // Field count: 19
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_CreateOnModel {
                 pub const m_modelInput: usize = 0x1E8; // CParticleModelInput
                 pub const m_transformInput: usize = 0x248; // CParticleTransformInput
@@ -5576,9 +5808,11 @@ pub mod dota2_dumper {
                 pub const m_bUseBones: usize = 0x1271; // bool
                 pub const m_bUseMesh: usize = 0x1272; // bool
                 pub const m_flMeshNormalOffset: usize = 0x1274; // float32
-                pub const m_flShellSize: usize = 0x1278; // CParticleCollectionFloatInput
+                pub const m_bInitColorToAlbedo: usize = 0x1278; // bool
+                pub const m_bInitNormal: usize = 0x1279; // bool
+                pub const m_flShellSize: usize = 0x1280; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -5589,7 +5823,7 @@ pub mod dota2_dumper {
                 pub const m_nIncrement: usize = 0x1E8; // int32
                 pub const m_nGroupID: usize = 0x1EC; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 3
             //
             // Metadata:
@@ -5599,39 +5833,39 @@ pub mod dota2_dumper {
                 pub const m_vForce: usize = 0x368; // CPerParticleVecInput
                 pub const m_nCP: usize = 0xA40; // int32
             }
-            // Parent: None
+            // Parent: C_INIT_RandomNamedModelElement
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RandomNamedModelMeshGroup {
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 18
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderProjected {
-                pub const m_bProjectCharacter: usize = 0x230; // bool
-                pub const m_bProjectWorld: usize = 0x231; // bool
-                pub const m_bProjectWater: usize = 0x232; // bool
-                pub const m_bFlipHorizontal: usize = 0x233; // bool
-                pub const m_bEnableProjectedDepthControls: usize = 0x234; // bool
-                pub const m_flMinProjectionDepth: usize = 0x238; // float32
-                pub const m_flMaxProjectionDepth: usize = 0x23C; // float32
-                pub const m_vecProjectedMaterials: usize = 0x240; // CUtlVector<RenderProjectedMaterial_t>
-                pub const m_flMaterialSelection: usize = 0x258; // CPerParticleFloatInput
-                pub const m_flAnimationTimeScale: usize = 0x3D0; // float32
-                pub const m_bOrientToNormal: usize = 0x3D4; // bool
-                pub const m_MaterialVars: usize = 0x3D8; // CUtlVector<MaterialVariable_t>
-                pub const m_flRadiusScale: usize = 0x3F0; // CParticleCollectionFloatInput
-                pub const m_flAlphaScale: usize = 0x568; // CParticleCollectionFloatInput
-                pub const m_flRollScale: usize = 0x6E0; // CParticleCollectionFloatInput
-                pub const m_nAlpha2Field: usize = 0x858; // ParticleAttributeIndex_t
-                pub const m_vecColorScale: usize = 0x860; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0xF38; // ParticleColorBlendType_t
+                pub const m_bProjectCharacter: usize = 0x228; // bool
+                pub const m_bProjectWorld: usize = 0x229; // bool
+                pub const m_bProjectWater: usize = 0x22A; // bool
+                pub const m_bFlipHorizontal: usize = 0x22B; // bool
+                pub const m_bEnableProjectedDepthControls: usize = 0x22C; // bool
+                pub const m_flMinProjectionDepth: usize = 0x230; // float32
+                pub const m_flMaxProjectionDepth: usize = 0x234; // float32
+                pub const m_vecProjectedMaterials: usize = 0x238; // CUtlVector<RenderProjectedMaterial_t>
+                pub const m_flMaterialSelection: usize = 0x250; // CPerParticleFloatInput
+                pub const m_flAnimationTimeScale: usize = 0x3C8; // float32
+                pub const m_bOrientToNormal: usize = 0x3CC; // bool
+                pub const m_MaterialVars: usize = 0x3D0; // CUtlVector<MaterialVariable_t>
+                pub const m_flRadiusScale: usize = 0x3E8; // CParticleCollectionFloatInput
+                pub const m_flAlphaScale: usize = 0x560; // CParticleCollectionFloatInput
+                pub const m_flRollScale: usize = 0x6D8; // CParticleCollectionFloatInput
+                pub const m_nAlpha2Field: usize = 0x850; // ParticleAttributeIndex_t
+                pub const m_vecColorScale: usize = 0x858; // CParticleCollectionVecInput
+                pub const m_nColorBlendType: usize = 0xF30; // ParticleColorBlendType_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 2
             //
             // Metadata:
@@ -5640,17 +5874,18 @@ pub mod dota2_dumper {
                 pub const m_flMaxVelocity: usize = 0x1E0; // CPerParticleFloatInput
                 pub const m_flMinVelocity: usize = 0x358; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_VelocityFromNormal {
                 pub const m_fSpeedMin: usize = 0x1E8; // float32
                 pub const m_fSpeedMax: usize = 0x1EC; // float32
                 pub const m_bIgnoreDt: usize = 0x1F0; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionEmitter
             // Field count: 9
             //
             // Metadata:
@@ -5666,7 +5901,7 @@ pub mod dota2_dumper {
                 pub const m_bFinalEmitOnStop: usize = 0x4F1; // bool
                 pub const m_flScale: usize = 0x4F8; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 3
             //
             // Metadata:
@@ -5676,7 +5911,7 @@ pub mod dota2_dumper {
                 pub const m_nControlPointNumberEnd: usize = 0x1EC; // int32
                 pub const m_bLocalCoords: usize = 0x1F0; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 4
             //
             // Metadata:
@@ -5687,7 +5922,7 @@ pub mod dota2_dumper {
                 pub const m_flOffsetRot: usize = 0x254; // float32
                 pub const m_nComponent: usize = 0x258; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -5701,7 +5936,7 @@ pub mod dota2_dumper {
                 pub const m_flEndAlpha: usize = 0x1F4; // float32
                 pub const m_bForcePreserveParticleOrder: usize = 0x1F8; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
@@ -5713,7 +5948,7 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0x1F8; // ParticleAttributeIndex_t
                 pub const m_bEaseInOut: usize = 0x1FC; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 10
             //
             // Metadata:
@@ -5730,14 +5965,26 @@ pub mod dota2_dumper {
                 pub const m_bProportionalOp: usize = 0x224; // bool
                 pub const m_bEaseOut: usize = 0x225; // bool
             }
-            // Parent: None
+            // Parent: C_OP_RemapNamedModelElementOnceTimed
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RemapNamedModelSequenceOnceTimed {
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
+            // Field count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_SetControlPointFromRenderAttribute {
+                pub const m_nCPInput: usize = 0x1E8; // int32
+                pub const m_nCPOutput: usize = 0x1EC; // int32
+                pub const m_nComponent: usize = 0x1F0; // int32
+                pub const m_pszAttributeName: usize = 0x1F4; // char[128]
+                pub const m_flDefaultValue: usize = 0x274; // float32
+            }
+            // Parent: CParticleFunctionPreEmission
             // Field count: 2
             //
             // Metadata:
@@ -5746,7 +5993,7 @@ pub mod dota2_dumper {
                 pub const m_nCPInput: usize = 0x1E8; // int32
                 pub const m_nCPOutput: usize = 0x1EC; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -5760,14 +6007,14 @@ pub mod dota2_dumper {
                 pub const m_bUseParticleCount: usize = 0x64D; // bool
                 pub const m_PathParams: usize = 0x650; // CPathParameters
             }
-            // Parent: None
+            // Parent: C_OP_RemapNamedModelElementEndCap
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RemapNamedModelBodyPartEndCap {
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 3
             //
             // Metadata:
@@ -5777,7 +6024,7 @@ pub mod dota2_dumper {
                 pub const m_bDestroyImmediately: usize = 0x360; // bool
                 pub const m_bPlayEndCap: usize = 0x361; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -5787,7 +6034,7 @@ pub mod dota2_dumper {
                 pub const m_nSpinRateMinDegrees: usize = 0x1E4; // int32
                 pub const m_fSpinRateStopTime: usize = 0x1EC; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -5800,7 +6047,7 @@ pub mod dota2_dumper {
                 pub const m_bCPPairs: usize = 0x1EC; // bool
                 pub const m_PathParams: usize = 0x1F0; // CPathParameters
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 7
             //
             // Metadata:
@@ -5814,7 +6061,7 @@ pub mod dota2_dumper {
                 pub const m_nSetMethod: usize = 0x228; // ParticleSetMethod_t
                 pub const m_bModelFromRenderer: usize = 0x22C; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -5824,18 +6071,18 @@ pub mod dota2_dumper {
                 pub const m_vecOutputMin: usize = 0x1E8; // CPerParticleVecInput
                 pub const m_vecOutputMax: usize = 0x8C0; // CPerParticleVecInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderStatusEffectCitadel {
-                pub const m_pTextureColorWarp: usize = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureNormal: usize = 0x238; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureMetalness: usize = 0x240; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureRoughness: usize = 0x248; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureSelfIllum: usize = 0x250; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureDetail: usize = 0x258; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureColorWarp: usize = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureNormal: usize = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureMetalness: usize = 0x238; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureRoughness: usize = 0x240; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureSelfIllum: usize = 0x248; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureDetail: usize = 0x250; // CStrongHandle<InfoForResourceTypeCTextureBase>
             }
             // Parent: None
             // Field count: 0
@@ -5844,7 +6091,7 @@ pub mod dota2_dumper {
             // MGetKV3ClassDefaults
             pub mod IParticleSystemDefinition {
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 3
             //
             // Metadata:
@@ -5854,7 +6101,7 @@ pub mod dota2_dumper {
                 pub const m_flScale: usize = 0x8C0; // CPerParticleFloatInput
                 pub const m_bSampleFans: usize = 0xA38; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 1
             //
             // Metadata:
@@ -5862,7 +6109,7 @@ pub mod dota2_dumper {
             pub mod C_OP_WindForce {
                 pub const m_vForce: usize = 0x1F0; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 6
             //
             // Metadata:
@@ -5875,52 +6122,53 @@ pub mod dota2_dumper {
                 pub const m_vecInput: usize = 0x2B8; // CParticleCollectionVecInput
                 pub const m_floatInput: usize = 0x990; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 34
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderStandardLight {
-                pub const m_nLightType: usize = 0x230; // ParticleLightTypeChoiceList_t
-                pub const m_nMaxAllowed: usize = 0x234; // uint16
-                pub const m_vecColorScale: usize = 0x238; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0x910; // ParticleColorBlendType_t
-                pub const m_strLightStyle: usize = 0x918; // CUtlString
-                pub const m_flLightStyleTime: usize = 0x920; // CPerParticleFloatInput
-                pub const m_flIntensity: usize = 0xA98; // CPerParticleFloatInput
-                pub const m_bCastShadows: usize = 0xC10; // bool
-                pub const m_bDynamicBounce: usize = 0xC11; // bool
-                pub const m_flBounceScale: usize = 0xC18; // CParticleCollectionFloatInput
-                pub const m_flTheta: usize = 0xD90; // CParticleCollectionFloatInput
-                pub const m_flPhi: usize = 0xF08; // CParticleCollectionFloatInput
-                pub const m_flRadiusMultiplier: usize = 0x1080; // CParticleCollectionFloatInput
-                pub const m_nAttenuationStyle: usize = 0x11F8; // StandardLightingAttenuationStyle_t
-                pub const m_flFalloffLinearity: usize = 0x1200; // CParticleCollectionFloatInput
-                pub const m_flFiftyPercentFalloff: usize = 0x1378; // CParticleCollectionFloatInput
-                pub const m_flZeroPercentFalloff: usize = 0x14F0; // CParticleCollectionFloatInput
-                pub const m_bRenderDiffuse: usize = 0x1668; // bool
-                pub const m_bRenderSpecular: usize = 0x1669; // bool
-                pub const m_lightCookie: usize = 0x1670; // CUtlString
-                pub const m_nPriority: usize = 0x1678; // int32
-                pub const m_nFogLightingMode: usize = 0x167C; // ParticleLightFogLightingMode_t
-                pub const m_flFogContribution: usize = 0x1680; // CParticleCollectionRendererFloatInput
-                pub const m_nCapsuleLightBehavior: usize = 0x17F8; // ParticleLightBehaviorChoiceList_t
-                pub const m_flCapsuleLength: usize = 0x17FC; // float32
-                pub const m_bReverseOrder: usize = 0x1800; // bool
-                pub const m_bClosedLoop: usize = 0x1801; // bool
-                pub const m_nPrevPntSource: usize = 0x1804; // ParticleAttributeIndex_t
-                pub const m_flMaxLength: usize = 0x1808; // float32
-                pub const m_flMinLength: usize = 0x180C; // float32
-                pub const m_bIgnoreDT: usize = 0x1810; // bool
-                pub const m_flConstrainRadiusToLengthRatio: usize = 0x1814; // float32
-                pub const m_flLengthScale: usize = 0x1818; // float32
-                pub const m_flLengthFadeInTime: usize = 0x181C; // float32
+                pub const m_nLightType: usize = 0x228; // ParticleLightTypeChoiceList_t
+                pub const m_nMaxAllowed: usize = 0x22C; // uint16
+                pub const m_vecColorScale: usize = 0x230; // CParticleCollectionVecInput
+                pub const m_nColorBlendType: usize = 0x908; // ParticleColorBlendType_t
+                pub const m_strLightStyle: usize = 0x910; // CUtlString
+                pub const m_flLightStyleTime: usize = 0x918; // CPerParticleFloatInput
+                pub const m_flIntensity: usize = 0xA90; // CPerParticleFloatInput
+                pub const m_bCastShadows: usize = 0xC08; // bool
+                pub const m_bDynamicBounce: usize = 0xC09; // bool
+                pub const m_flBounceScale: usize = 0xC10; // CParticleCollectionFloatInput
+                pub const m_flTheta: usize = 0xD88; // CParticleCollectionFloatInput
+                pub const m_flPhi: usize = 0xF00; // CParticleCollectionFloatInput
+                pub const m_flRadiusMultiplier: usize = 0x1078; // CParticleCollectionFloatInput
+                pub const m_nAttenuationStyle: usize = 0x11F0; // StandardLightingAttenuationStyle_t
+                pub const m_flFalloffLinearity: usize = 0x11F8; // CParticleCollectionFloatInput
+                pub const m_flFiftyPercentFalloff: usize = 0x1370; // CParticleCollectionFloatInput
+                pub const m_flZeroPercentFalloff: usize = 0x14E8; // CParticleCollectionFloatInput
+                pub const m_bRenderDiffuse: usize = 0x1660; // bool
+                pub const m_bRenderSpecular: usize = 0x1661; // bool
+                pub const m_lightCookie: usize = 0x1668; // CUtlString
+                pub const m_nPriority: usize = 0x1670; // int32
+                pub const m_nFogLightingMode: usize = 0x1674; // ParticleLightFogLightingMode_t
+                pub const m_flFogContribution: usize = 0x1678; // CParticleCollectionRendererFloatInput
+                pub const m_nCapsuleLightBehavior: usize = 0x17F0; // ParticleLightBehaviorChoiceList_t
+                pub const m_flCapsuleLength: usize = 0x17F4; // float32
+                pub const m_bReverseOrder: usize = 0x17F8; // bool
+                pub const m_bClosedLoop: usize = 0x17F9; // bool
+                pub const m_nPrevPntSource: usize = 0x17FC; // ParticleAttributeIndex_t
+                pub const m_flMaxLength: usize = 0x1800; // float32
+                pub const m_flMinLength: usize = 0x1804; // float32
+                pub const m_bIgnoreDT: usize = 0x1808; // bool
+                pub const m_flConstrainRadiusToLengthRatio: usize = 0x180C; // float32
+                pub const m_flLengthScale: usize = 0x1810; // float32
+                pub const m_flLengthFadeInTime: usize = 0x1814; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_DistanceToTransform {
                 pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
                 pub const m_flInputMin: usize = 0x1E8; // CPerParticleFloatInput
@@ -5938,7 +6186,7 @@ pub mod dota2_dumper {
                 pub const m_bAdditive: usize = 0x8C5; // bool
                 pub const m_vecComponentScale: usize = 0x8C8; // CPerParticleVecInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -5949,7 +6197,7 @@ pub mod dota2_dumper {
                 pub const m_flOffsetRot: usize = 0x1E8; // float32
                 pub const m_nComponent: usize = 0x1EC; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 4
             //
             // Metadata:
@@ -5960,7 +6208,7 @@ pub mod dota2_dumper {
                 pub const m_bUseAvgParticlePos: usize = 0x1F8; // bool
                 pub const m_nSetParent: usize = 0x1FC; // ParticleParentSetMode_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 6
             //
             // Metadata:
@@ -5973,7 +6221,7 @@ pub mod dota2_dumper {
                 pub const m_nField: usize = 0x370; // ParticleAttributeIndex_t
                 pub const m_flOutputRemap: usize = 0x378; // CParticleRemapFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 11
             //
             // Metadata:
@@ -5991,7 +6239,7 @@ pub mod dota2_dumper {
                 pub const m_bActiveRange: usize = 0x204; // bool
                 pub const m_bUseParticleNormal: usize = 0x205; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 10
             //
             // Metadata:
@@ -6008,7 +6256,7 @@ pub mod dota2_dumper {
                 pub const m_bDerivative: usize = 0x208; // bool
                 pub const m_flInterpRate: usize = 0x20C; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 4
             //
             // Metadata:
@@ -6019,11 +6267,12 @@ pub mod dota2_dumper {
                 pub const m_nCP: usize = 0xA38; // int32
                 pub const m_nLocalCP: usize = 0xA3C; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_CurlNoiseForce {
                 pub const m_nNoiseType: usize = 0x1F0; // ParticleDirectionNoiseType_t
                 pub const m_vecNoiseFreq: usize = 0x1F8; // CPerParticleVecInput
@@ -6033,7 +6282,7 @@ pub mod dota2_dumper {
                 pub const m_flWorleySeed: usize = 0x1D58; // CPerParticleFloatInput
                 pub const m_flWorleyJitter: usize = 0x1ED0; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 3
             //
             // Metadata:
@@ -6043,7 +6292,7 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0x1EC; // ParticleAttributeIndex_t
                 pub const m_flRotOffset: usize = 0x1F0; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 1
             //
             // Metadata:
@@ -6051,7 +6300,7 @@ pub mod dota2_dumper {
             pub mod C_OP_SetSimulationRate {
                 pub const m_flSimulationScale: usize = 0x1E8; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -6062,23 +6311,23 @@ pub mod dota2_dumper {
                 pub const m_flFadeInTimeExp: usize = 0x1E8; // float32
                 pub const m_bProportional: usize = 0x1EC; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderScreenShake {
-                pub const m_flDurationScale: usize = 0x230; // float32
-                pub const m_flRadiusScale: usize = 0x234; // float32
-                pub const m_flFrequencyScale: usize = 0x238; // float32
-                pub const m_flAmplitudeScale: usize = 0x23C; // float32
-                pub const m_nRadiusField: usize = 0x240; // ParticleAttributeIndex_t
-                pub const m_nDurationField: usize = 0x244; // ParticleAttributeIndex_t
-                pub const m_nFrequencyField: usize = 0x248; // ParticleAttributeIndex_t
-                pub const m_nAmplitudeField: usize = 0x24C; // ParticleAttributeIndex_t
-                pub const m_nFilterCP: usize = 0x250; // int32
+                pub const m_flDurationScale: usize = 0x228; // float32
+                pub const m_flRadiusScale: usize = 0x22C; // float32
+                pub const m_flFrequencyScale: usize = 0x230; // float32
+                pub const m_flAmplitudeScale: usize = 0x234; // float32
+                pub const m_nRadiusField: usize = 0x238; // ParticleAttributeIndex_t
+                pub const m_nDurationField: usize = 0x23C; // ParticleAttributeIndex_t
+                pub const m_nFrequencyField: usize = 0x240; // ParticleAttributeIndex_t
+                pub const m_nAmplitudeField: usize = 0x244; // ParticleAttributeIndex_t
+                pub const m_nFilterCP: usize = 0x248; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 5
             //
             // Metadata:
@@ -6090,7 +6339,7 @@ pub mod dota2_dumper {
                 pub const m_flOutputMin: usize = 0x1F4; // float32
                 pub const m_flOutputMax: usize = 0x1F8; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 4
             //
             // Metadata:
@@ -6101,7 +6350,7 @@ pub mod dota2_dumper {
                 pub const m_nOutputCP: usize = 0x1F0; // int32
                 pub const m_DefaultHSVColor: usize = 0x1F4; // Color
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 2
             //
             // Metadata:
@@ -6110,7 +6359,7 @@ pub mod dota2_dumper {
                 pub const m_vecInput: usize = 0x1E0; // CPerParticleVecInput
                 pub const m_vecRotation: usize = 0x8B8; // CPerParticleVecInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
@@ -6123,7 +6372,7 @@ pub mod dota2_dumper {
                 pub const m_bScalePosition: usize = 0x1F5; // bool
                 pub const m_bScaleVelocity: usize = 0x1F6; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 1
             //
             // Metadata:
@@ -6131,7 +6380,7 @@ pub mod dota2_dumper {
             pub mod C_INIT_RadiusFromCPObject {
                 pub const m_nControlPoint: usize = 0x1E8; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 5
             //
             // Metadata:
@@ -6143,7 +6392,7 @@ pub mod dota2_dumper {
                 pub const m_HitboxSetName: usize = 0x1F4; // char[128]
                 pub const m_bUseBones: usize = 0x274; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 5
             //
             // Metadata:
@@ -6155,7 +6404,7 @@ pub mod dota2_dumper {
                 pub const m_flEndTime: usize = 0x1F4; // float32
                 pub const m_nSetMethod: usize = 0x1F8; // ParticleSetMethod_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 3
             //
             // Metadata:
@@ -6181,7 +6430,7 @@ pub mod dota2_dumper {
                 pub const m_flTextureBlend: usize = 0x38; // CParticleCollectionRendererFloatInput
                 pub const m_TextureControls: usize = 0x1B0; // TextureControls_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 4
             //
             // Metadata:
@@ -6192,7 +6441,7 @@ pub mod dota2_dumper {
                 pub const m_flEndLerpTime: usize = 0x200; // float32
                 pub const m_EndingForce: usize = 0x204; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 9
             //
             // Metadata:
@@ -6208,11 +6457,12 @@ pub mod dota2_dumper {
                 pub const m_nOutputCP: usize = 0x278; // int32
                 pub const m_bIncludeWater: usize = 0x288; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_SnapshotSkinToBones {
                 pub const m_bTransformNormals: usize = 0x1E0; // bool
                 pub const m_bTransformRadii: usize = 0x1E1; // bool
@@ -6222,11 +6472,12 @@ pub mod dota2_dumper {
                 pub const m_flJumpThreshold: usize = 0x1F0; // float32
                 pub const m_flPrevPosScale: usize = 0x1F4; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 13
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_CreateWithinSphereTransform {
                 pub const m_fRadiusMin: usize = 0x1E8; // CPerParticleFloatInput
                 pub const m_fRadiusMax: usize = 0x360; // CPerParticleFloatInput
@@ -6242,7 +6493,7 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0x1CD0; // ParticleAttributeIndex_t
                 pub const m_nFieldVelocity: usize = 0x1CD4; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 1
             //
             // Metadata:
@@ -6250,14 +6501,14 @@ pub mod dota2_dumper {
             pub mod C_OP_RadiusDecay {
                 pub const m_flMinRadius: usize = 0x1E0; // float32
             }
-            // Parent: None
+            // Parent: C_INIT_RemapNamedModelElementToScalar
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RemapNamedModelBodyPartToScalar {
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 12
             //
             // Metadata:
@@ -6276,7 +6527,7 @@ pub mod dota2_dumper {
                 pub const m_bLocalCoords: usize = 0x220; // bool
                 pub const m_flRemapBias: usize = 0x224; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 8
             //
             // Metadata:
@@ -6291,7 +6542,7 @@ pub mod dota2_dumper {
                 pub const m_flOutputMax: usize = 0x200; // float32
                 pub const m_nSetMethod: usize = 0x204; // ParticleSetMethod_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionEmitter
             // Field count: 15
             //
             // Metadata:
@@ -6313,7 +6564,7 @@ pub mod dota2_dumper {
                 pub const m_vecOffsetLoc: usize = 0x218; // Vector
                 pub const m_flWorldTimeScale: usize = 0x224; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunction
             // Field count: 1
             //
             // Metadata:
@@ -6321,7 +6572,7 @@ pub mod dota2_dumper {
             pub mod CParticleFunctionInitializer {
                 pub const m_nAssociatedEmitterIndex: usize = 0x1E0; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 5
             //
             // Metadata:
@@ -6342,7 +6593,7 @@ pub mod dota2_dumper {
                 pub const m_model: usize = 0x0; // CStrongHandle<InfoForResourceTypeCModel>
                 pub const m_flRelativeProbabilityOfSpawn: usize = 0x8; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionConstraint
             // Field count: 8
             //
             // Metadata:
@@ -6357,7 +6608,7 @@ pub mod dota2_dumper {
                 pub const m_flMaximumDistanceToCP: usize = 0x378; // CParticleCollectionFloatInput
                 pub const m_bUseOldCode: usize = 0x4F0; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 4
             //
             // Metadata:
@@ -6368,7 +6619,7 @@ pub mod dota2_dumper {
                 pub const m_nMaxCP: usize = 0x1F0; // int32
                 pub const m_nDynamicCPCount: usize = 0x1F8; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
@@ -6381,7 +6632,7 @@ pub mod dota2_dumper {
                 pub const m_nControlPoint: usize = 0x1F0; // int32
                 pub const m_flBlendValue: usize = 0x1F4; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
@@ -6394,7 +6645,7 @@ pub mod dota2_dumper {
                 pub const m_flInitialSpeedMax: usize = 0x6B8; // CPerParticleFloatInput
                 pub const m_bUseParticleCount: usize = 0x830; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 2
             //
             // Metadata:
@@ -6403,7 +6654,7 @@ pub mod dota2_dumper {
                 pub const m_nControlPointNumber: usize = 0x1F0; // int32
                 pub const m_flScale: usize = 0x1F8; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -6417,7 +6668,7 @@ pub mod dota2_dumper {
                 pub const m_nFieldInput: usize = 0x234; // ParticleAttributeIndex_t
                 pub const m_nFieldOutput: usize = 0x238; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 1
             //
             // Metadata:
@@ -6425,7 +6676,7 @@ pub mod dota2_dumper {
             pub mod C_INIT_ScaleVelocity {
                 pub const m_vecScale: usize = 0x1E8; // CPerParticleVecInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 9
             //
             // Metadata:
@@ -6441,7 +6692,7 @@ pub mod dota2_dumper {
                 pub const m_nLerpType: usize = 0x33C; // HitboxLerpType_t
                 pub const m_flInterpolation: usize = 0x340; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -6451,7 +6702,7 @@ pub mod dota2_dumper {
                 pub const m_nParticleNumber: usize = 0x1E8; // CParticleCollectionFloatInput
                 pub const m_flInterpolation: usize = 0x360; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 5
             //
             // Metadata:
@@ -6463,7 +6714,7 @@ pub mod dota2_dumper {
                 pub const m_bClosedLoop: usize = 0x209; // bool
                 pub const m_nNumPointsAlongPath: usize = 0x20C; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -6474,11 +6725,12 @@ pub mod dota2_dumper {
                 pub const m_nFieldInput: usize = 0x35C; // ParticleAttributeIndex_t
                 pub const m_nFieldOutput: usize = 0x360; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_RandomColor {
                 pub const m_ColorMin: usize = 0x204; // Color
                 pub const m_ColorMax: usize = 0x208; // Color
@@ -6491,7 +6743,7 @@ pub mod dota2_dumper {
                 pub const m_nTintBlendMode: usize = 0x224; // ParticleColorBlendMode_t
                 pub const m_flLightAmplification: usize = 0x228; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 6
             //
             // Metadata:
@@ -6504,7 +6756,7 @@ pub mod dota2_dumper {
                 pub const m_bSetOrientation: usize = 0x369; // bool
                 pub const m_bSetZDown: usize = 0x36A; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 12
             //
             // Metadata:
@@ -6523,11 +6775,12 @@ pub mod dota2_dumper {
                 pub const m_bWrap: usize = 0x20A; // bool
                 pub const m_flRemapBias: usize = 0x20C; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_InheritFromParentParticles {
                 pub const m_flScale: usize = 0x1E8; // float32
                 pub const m_nFieldOutput: usize = 0x1EC; // ParticleAttributeIndex_t
@@ -6535,7 +6788,7 @@ pub mod dota2_dumper {
                 pub const m_bRandomDistribution: usize = 0x1F4; // bool
                 pub const m_nRandomSeed: usize = 0x1F8; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 4
             //
             // Metadata:
@@ -6546,7 +6799,7 @@ pub mod dota2_dumper {
                 pub const m_flEndTime: usize = 0x1E8; // float32
                 pub const m_nField: usize = 0x210; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 9
             //
             // Metadata:
@@ -6562,7 +6815,7 @@ pub mod dota2_dumper {
                 pub const m_nBaseCP: usize = 0x204; // int32
                 pub const m_bUniformSpeed: usize = 0x208; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
@@ -6575,55 +6828,56 @@ pub mod dota2_dumper {
                 pub const m_nFieldOutput: usize = 0x1F0; // ParticleAttributeIndex_t
                 pub const m_bOffsetLocal: usize = 0x1F4; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderFlattenGrass {
-                pub const m_flFlattenStrength: usize = 0x230; // float32
-                pub const m_nStrengthFieldOverride: usize = 0x234; // ParticleAttributeIndex_t
-                pub const m_flRadiusScale: usize = 0x238; // float32
+                pub const m_flFlattenStrength: usize = 0x228; // float32
+                pub const m_nStrengthFieldOverride: usize = 0x22C; // ParticleAttributeIndex_t
+                pub const m_flRadiusScale: usize = 0x230; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 20
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderLightBeam {
-                pub const m_nMaxAllowed: usize = 0x230; // uint16
-                pub const m_vColorBlend: usize = 0x238; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0x910; // ParticleColorBlendType_t
-                pub const m_strLightStyle: usize = 0x918; // CUtlString
-                pub const m_flLightStyleTime: usize = 0x920; // CPerParticleFloatInput
-                pub const m_flBrightnessLumensPerMeter: usize = 0xA98; // CParticleCollectionFloatInput
-                pub const m_flNumberOfLightsToCreate: usize = 0xC10; // CParticleCollectionFloatInput
-                pub const m_bCastShadows: usize = 0xD88; // bool
-                pub const m_bDynamicBounce: usize = 0xD89; // bool
-                pub const m_flBounceScale: usize = 0xD90; // CParticleCollectionFloatInput
-                pub const m_flSkirt: usize = 0xF08; // CParticleCollectionFloatInput
-                pub const m_flRange: usize = 0x1080; // CParticleCollectionFloatInput
-                pub const m_flThickness: usize = 0x11F8; // CParticleCollectionFloatInput
-                pub const m_flInnerConeAngle: usize = 0x1370; // CParticleCollectionFloatInput
-                pub const m_flOuterConeAngle: usize = 0x14E8; // CParticleCollectionFloatInput
-                pub const m_vecConeRotationOffset: usize = 0x1660; // CParticleCollectionVecInput
-                pub const m_nFogLightingMode: usize = 0x1D38; // ParticleLightFogLightingMode_t
-                pub const m_flFogContribution: usize = 0x1D40; // CParticleCollectionRendererFloatInput
-                pub const m_flRenderFilter: usize = 0x1EB8; // CPerParticleFloatInput
-                pub const m_bDebugOrientation: usize = 0x2030; // bool
+                pub const m_nMaxAllowed: usize = 0x228; // uint16
+                pub const m_vColorBlend: usize = 0x230; // CParticleCollectionVecInput
+                pub const m_nColorBlendType: usize = 0x908; // ParticleColorBlendType_t
+                pub const m_strLightStyle: usize = 0x910; // CUtlString
+                pub const m_flLightStyleTime: usize = 0x918; // CPerParticleFloatInput
+                pub const m_flBrightnessLumensPerMeter: usize = 0xA90; // CParticleCollectionFloatInput
+                pub const m_flNumberOfLightsToCreate: usize = 0xC08; // CParticleCollectionFloatInput
+                pub const m_bCastShadows: usize = 0xD80; // bool
+                pub const m_bDynamicBounce: usize = 0xD81; // bool
+                pub const m_flBounceScale: usize = 0xD88; // CParticleCollectionFloatInput
+                pub const m_flSkirt: usize = 0xF00; // CParticleCollectionFloatInput
+                pub const m_flRange: usize = 0x1078; // CParticleCollectionFloatInput
+                pub const m_flThickness: usize = 0x11F0; // CParticleCollectionFloatInput
+                pub const m_flInnerConeAngle: usize = 0x1368; // CParticleCollectionFloatInput
+                pub const m_flOuterConeAngle: usize = 0x14E0; // CParticleCollectionFloatInput
+                pub const m_vecConeRotationOffset: usize = 0x1658; // CParticleCollectionVecInput
+                pub const m_nFogLightingMode: usize = 0x1D30; // ParticleLightFogLightingMode_t
+                pub const m_flFogContribution: usize = 0x1D38; // CParticleCollectionRendererFloatInput
+                pub const m_flRenderFilter: usize = 0x1EB0; // CPerParticleFloatInput
+                pub const m_bDebugOrientation: usize = 0x2028; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_INIT_SkyVisCull {
                 pub const m_vecTestPosition: usize = 0x1E8; // CPerParticleVecInput
                 pub const m_vecTestDir: usize = 0x8C0; // CParticleCollectionVecInput
                 pub const m_nTraceSet: usize = 0xF98; // ParticleTraceSet_t
                 pub const m_bCullOnSky: usize = 0xF9C; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 6
             //
             // Metadata:
@@ -6636,7 +6890,7 @@ pub mod dota2_dumper {
                 pub const m_bPlayEndcapOnStop: usize = 0x369; // bool
                 pub const m_bDestroyImmediately: usize = 0x36A; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 15
             //
             // Metadata:
@@ -6658,14 +6912,14 @@ pub mod dota2_dumper {
                 pub const m_vecDistanceScale: usize = 0x9E4; // Vector
                 pub const m_flRemapBias: usize = 0x9F0; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_EndCapDecay {
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 7
             //
             // Metadata:
@@ -6679,7 +6933,7 @@ pub mod dota2_dumper {
                 pub const m_nControlPointNumber: usize = 0x21C; // int32
                 pub const m_flExponent: usize = 0x220; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 8
             //
             // Metadata:
@@ -6704,7 +6958,7 @@ pub mod dota2_dumper {
                 pub const m_drivers: usize = 0x8; // CUtlVector<ParticleControlPointDriver_t>
                 pub const m_previewState: usize = 0x20; // ParticlePreviewState_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 4
             //
             // Metadata:
@@ -6725,14 +6979,14 @@ pub mod dota2_dumper {
                 pub const m_nVariableField: usize = 0x8; // ParticleAttributeIndex_t
                 pub const m_flScale: usize = 0xC; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunction
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CParticleFunctionConstraint {
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -6746,82 +7000,82 @@ pub mod dota2_dumper {
                 pub const m_nSetMethod: usize = 0x1F4; // ParticleSetMethod_t
                 pub const m_bIgnoreDelta: usize = 0x1F8; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 58
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderModels {
-                pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x230; // bool
-                pub const m_bOnlyRenderInEffectsWaterPass: usize = 0x231; // bool
-                pub const m_bUseMixedResolutionRendering: usize = 0x232; // bool
-                pub const m_bOnlyRenderInEffecsGameOverlay: usize = 0x233; // bool
-                pub const m_ModelList: usize = 0x238; // CUtlVector<ModelReference_t>
-                pub const m_nBodyGroupField: usize = 0x250; // ParticleAttributeIndex_t
-                pub const m_nSubModelField: usize = 0x254; // ParticleAttributeIndex_t
-                pub const m_bIgnoreNormal: usize = 0x258; // bool
-                pub const m_bOrientZ: usize = 0x259; // bool
-                pub const m_bCenterOffset: usize = 0x25A; // bool
-                pub const m_vecLocalOffset: usize = 0x260; // CPerParticleVecInput
-                pub const m_vecLocalRotation: usize = 0x938; // CPerParticleVecInput
-                pub const m_bIgnoreRadius: usize = 0x1010; // bool
-                pub const m_nModelScaleCP: usize = 0x1014; // int32
-                pub const m_vecComponentScale: usize = 0x1018; // CPerParticleVecInput
-                pub const m_bLocalScale: usize = 0x16F0; // bool
-                pub const m_nSizeCullBloat: usize = 0x16F4; // int32
-                pub const m_bAnimated: usize = 0x16F8; // bool
-                pub const m_flAnimationRate: usize = 0x1700; // CPerParticleFloatInput
-                pub const m_bScaleAnimationRate: usize = 0x1878; // bool
-                pub const m_bForceLoopingAnimation: usize = 0x1879; // bool
-                pub const m_bResetAnimOnStop: usize = 0x187A; // bool
-                pub const m_bManualAnimFrame: usize = 0x187B; // bool
-                pub const m_nAnimationScaleField: usize = 0x187C; // ParticleAttributeIndex_t
-                pub const m_nAnimationField: usize = 0x1880; // ParticleAttributeIndex_t
-                pub const m_nManualFrameField: usize = 0x1884; // ParticleAttributeIndex_t
-                pub const m_ActivityName: usize = 0x1888; // char[256]
-                pub const m_SequenceName: usize = 0x1988; // char[256]
-                pub const m_bEnableClothSimulation: usize = 0x1A88; // bool
-                pub const m_bDisableClothGroundCollision: usize = 0x1A89; // bool
-                pub const m_ClothEffectName: usize = 0x1A8A; // char[64]
-                pub const m_hOverrideMaterial: usize = 0x1AD0; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                pub const m_bOverrideTranslucentMaterials: usize = 0x1AD8; // bool
-                pub const m_nSkin: usize = 0x1AE0; // CPerParticleFloatInput
-                pub const m_MaterialVars: usize = 0x1C58; // CUtlVector<MaterialVariable_t>
-                pub const m_flRenderFilter: usize = 0x1C70; // CPerParticleFloatInput
-                pub const m_flManualModelSelection: usize = 0x1DE8; // CPerParticleFloatInput
-                pub const m_modelInput: usize = 0x1F60; // CParticleModelInput
-                pub const m_nLOD: usize = 0x1FC0; // int32
-                pub const m_EconSlotName: usize = 0x1FC4; // char[256]
-                pub const m_bOriginalModel: usize = 0x20C4; // bool
-                pub const m_bSuppressTint: usize = 0x20C5; // bool
-                pub const m_nSubModelFieldType: usize = 0x20C8; // RenderModelSubModelFieldType_t
-                pub const m_bDisableShadows: usize = 0x20CC; // bool
-                pub const m_bDisableDepthPrepass: usize = 0x20CD; // bool
-                pub const m_bAcceptsDecals: usize = 0x20CE; // bool
-                pub const m_bForceDrawInterlevedWithSiblings: usize = 0x20CF; // bool
-                pub const m_bDoNotDrawInParticlePass: usize = 0x20D0; // bool
-                pub const m_bAllowApproximateTransforms: usize = 0x20D1; // bool
-                pub const m_szRenderAttribute: usize = 0x20D2; // char[260]
-                pub const m_flRadiusScale: usize = 0x21D8; // CParticleCollectionFloatInput
-                pub const m_flAlphaScale: usize = 0x2350; // CParticleCollectionFloatInput
-                pub const m_flRollScale: usize = 0x24C8; // CParticleCollectionFloatInput
-                pub const m_nAlpha2Field: usize = 0x2640; // ParticleAttributeIndex_t
-                pub const m_vecColorScale: usize = 0x2648; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0x2D20; // ParticleColorBlendType_t
-                pub const m_strLightStyle: usize = 0x2D28; // CUtlString
-                pub const m_flLightStyleTime: usize = 0x2D30; // CPerParticleFloatInput
+                pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x228; // bool
+                pub const m_bOnlyRenderInEffectsWaterPass: usize = 0x229; // bool
+                pub const m_bUseMixedResolutionRendering: usize = 0x22A; // bool
+                pub const m_bOnlyRenderInEffecsGameOverlay: usize = 0x22B; // bool
+                pub const m_ModelList: usize = 0x230; // CUtlVector<ModelReference_t>
+                pub const m_nBodyGroupField: usize = 0x248; // ParticleAttributeIndex_t
+                pub const m_nSubModelField: usize = 0x24C; // ParticleAttributeIndex_t
+                pub const m_bIgnoreNormal: usize = 0x250; // bool
+                pub const m_bOrientZ: usize = 0x251; // bool
+                pub const m_bCenterOffset: usize = 0x252; // bool
+                pub const m_vecLocalOffset: usize = 0x258; // CPerParticleVecInput
+                pub const m_vecLocalRotation: usize = 0x930; // CPerParticleVecInput
+                pub const m_bIgnoreRadius: usize = 0x1008; // bool
+                pub const m_nModelScaleCP: usize = 0x100C; // int32
+                pub const m_vecComponentScale: usize = 0x1010; // CPerParticleVecInput
+                pub const m_bLocalScale: usize = 0x16E8; // bool
+                pub const m_nSizeCullBloat: usize = 0x16EC; // int32
+                pub const m_bAnimated: usize = 0x16F0; // bool
+                pub const m_flAnimationRate: usize = 0x16F8; // CPerParticleFloatInput
+                pub const m_bScaleAnimationRate: usize = 0x1870; // bool
+                pub const m_bForceLoopingAnimation: usize = 0x1871; // bool
+                pub const m_bResetAnimOnStop: usize = 0x1872; // bool
+                pub const m_bManualAnimFrame: usize = 0x1873; // bool
+                pub const m_nAnimationScaleField: usize = 0x1874; // ParticleAttributeIndex_t
+                pub const m_nAnimationField: usize = 0x1878; // ParticleAttributeIndex_t
+                pub const m_nManualFrameField: usize = 0x187C; // ParticleAttributeIndex_t
+                pub const m_ActivityName: usize = 0x1880; // char[256]
+                pub const m_SequenceName: usize = 0x1980; // char[256]
+                pub const m_bEnableClothSimulation: usize = 0x1A80; // bool
+                pub const m_bDisableClothGroundCollision: usize = 0x1A81; // bool
+                pub const m_ClothEffectName: usize = 0x1A82; // char[64]
+                pub const m_hOverrideMaterial: usize = 0x1AC8; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_bOverrideTranslucentMaterials: usize = 0x1AD0; // bool
+                pub const m_nSkin: usize = 0x1AD8; // CPerParticleFloatInput
+                pub const m_MaterialVars: usize = 0x1C50; // CUtlVector<MaterialVariable_t>
+                pub const m_flRenderFilter: usize = 0x1C68; // CPerParticleFloatInput
+                pub const m_flManualModelSelection: usize = 0x1DE0; // CPerParticleFloatInput
+                pub const m_modelInput: usize = 0x1F58; // CParticleModelInput
+                pub const m_nLOD: usize = 0x1FB8; // int32
+                pub const m_EconSlotName: usize = 0x1FBC; // char[256]
+                pub const m_bOriginalModel: usize = 0x20BC; // bool
+                pub const m_bSuppressTint: usize = 0x20BD; // bool
+                pub const m_nSubModelFieldType: usize = 0x20C0; // RenderModelSubModelFieldType_t
+                pub const m_bDisableShadows: usize = 0x20C4; // bool
+                pub const m_bDisableDepthPrepass: usize = 0x20C5; // bool
+                pub const m_bAcceptsDecals: usize = 0x20C6; // bool
+                pub const m_bForceDrawInterlevedWithSiblings: usize = 0x20C7; // bool
+                pub const m_bDoNotDrawInParticlePass: usize = 0x20C8; // bool
+                pub const m_bAllowApproximateTransforms: usize = 0x20C9; // bool
+                pub const m_szRenderAttribute: usize = 0x20CA; // char[260]
+                pub const m_flRadiusScale: usize = 0x21D0; // CParticleCollectionFloatInput
+                pub const m_flAlphaScale: usize = 0x2348; // CParticleCollectionFloatInput
+                pub const m_flRollScale: usize = 0x24C0; // CParticleCollectionFloatInput
+                pub const m_nAlpha2Field: usize = 0x2638; // ParticleAttributeIndex_t
+                pub const m_vecColorScale: usize = 0x2640; // CParticleCollectionVecInput
+                pub const m_nColorBlendType: usize = 0x2D18; // ParticleColorBlendType_t
+                pub const m_strLightStyle: usize = 0x2D20; // CUtlString
+                pub const m_flLightStyleTime: usize = 0x2D28; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderClientPhysicsImpulse {
-                pub const m_flRadius: usize = 0x230; // CPerParticleFloatInput
-                pub const m_flMagnitude: usize = 0x3A8; // CPerParticleFloatInput
-                pub const m_nSimIdFilter: usize = 0x520; // int32
+                pub const m_flRadius: usize = 0x228; // CPerParticleFloatInput
+                pub const m_flMagnitude: usize = 0x3A0; // CPerParticleFloatInput
+                pub const m_nSimIdFilter: usize = 0x518; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunction
             // Field count: 1
             //
             // Metadata:
@@ -6829,14 +7083,14 @@ pub mod dota2_dumper {
             pub mod CParticleFunctionEmitter {
                 pub const m_nEmitterIndex: usize = 0x1E0; // int32
             }
-            // Parent: None
+            // Parent: C_INIT_RemapNamedModelElementToScalar
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RemapNamedModelMeshGroupToScalar {
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 2
             //
             // Metadata:
@@ -6845,7 +7099,7 @@ pub mod dota2_dumper {
                 pub const m_nCPInput: usize = 0x1E8; // int32
                 pub const m_nCPOutput: usize = 0x1EC; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionConstraint
             // Field count: 5
             //
             // Metadata:
@@ -6857,7 +7111,7 @@ pub mod dota2_dumper {
                 pub const m_flAdjustmentScale: usize = 0x648; // float32
                 pub const m_flInitialRestingLength: usize = 0x650; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
@@ -6870,7 +7124,7 @@ pub mod dota2_dumper {
                 pub const m_nScaleControlPointNumber: usize = 0x37C; // int32
                 pub const m_nControlPointNumber: usize = 0x380; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 1
             //
             // Metadata:
@@ -6878,7 +7132,7 @@ pub mod dota2_dumper {
             pub mod C_OP_ForceControlPointStub {
                 pub const m_ControlPoint: usize = 0x1E8; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -6892,7 +7146,7 @@ pub mod dota2_dumper {
                 pub const m_bOffset: usize = 0x201; // bool
                 pub const m_flNoiseAnimationTimeScale: usize = 0x204; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -6906,7 +7160,7 @@ pub mod dota2_dumper {
                 pub const m_bActiveRange: usize = 0x7C8; // bool
                 pub const m_nSetMethod: usize = 0x7CC; // ParticleSetMethod_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 2
             //
             // Metadata:
@@ -6915,7 +7169,7 @@ pub mod dota2_dumper {
                 pub const m_InputValue: usize = 0x1E8; // CPerParticleFloatInput
                 pub const m_nOutputField: usize = 0x360; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 11
             //
             // Metadata:
@@ -6933,7 +7187,7 @@ pub mod dota2_dumper {
                 pub const m_bBBoxOnly: usize = 0x20C; // bool
                 pub const m_bCubeRoot: usize = 0x20D; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
@@ -6956,7 +7210,7 @@ pub mod dota2_dumper {
                 pub const m_angOffset: usize = 0x2C; // QAngle
                 pub const m_entityName: usize = 0x38; // CUtlString
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 3
             //
             // Metadata:
@@ -6966,7 +7220,7 @@ pub mod dota2_dumper {
                 pub const m_vecTwistAxis: usize = 0x1F4; // Vector
                 pub const m_bFlipBasedOnYaw: usize = 0x200; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionPreEmission
             // Field count: 6
             //
             // Metadata:
@@ -6979,36 +7233,36 @@ pub mod dota2_dumper {
                 pub const m_nCPField: usize = 0x1F8; // int32
                 pub const m_vecComparisonVelocity: usize = 0x200; // CParticleCollectionVecInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_ClientPhysics {
-                pub const m_strPhysicsType: usize = 0x230; // CUtlString
-                pub const m_bStartAsleep: usize = 0x238; // bool
-                pub const m_flPlayerWakeRadius: usize = 0x240; // CParticleCollectionFloatInput
-                pub const m_flVehicleWakeRadius: usize = 0x3B8; // CParticleCollectionFloatInput
-                pub const m_bUseHighQualitySimulation: usize = 0x530; // bool
-                pub const m_nMaxParticleCount: usize = 0x534; // int32
-                pub const m_bRespectExclusionVolumes: usize = 0x538; // bool
-                pub const m_bKillParticles: usize = 0x539; // bool
-                pub const m_bDeleteSim: usize = 0x53A; // bool
-                pub const m_nControlPoint: usize = 0x53C; // int32
-                pub const m_nForcedSimId: usize = 0x540; // int32
-                pub const m_nColorBlendType: usize = 0x544; // ParticleColorBlendType_t
-                pub const m_nForcedStatusEffects: usize = 0x548; // ParticleAttrBoxFlags_t
-                pub const m_nNoCollisionAttribute: usize = 0x54C; // ParticleAttributeIndex_t
-                pub const m_nZeroGravityAttribute: usize = 0x550; // ParticleAttributeIndex_t
+                pub const m_strPhysicsType: usize = 0x228; // CUtlString
+                pub const m_bStartAsleep: usize = 0x230; // bool
+                pub const m_flPlayerWakeRadius: usize = 0x238; // CParticleCollectionFloatInput
+                pub const m_flVehicleWakeRadius: usize = 0x3B0; // CParticleCollectionFloatInput
+                pub const m_bUseHighQualitySimulation: usize = 0x528; // bool
+                pub const m_nMaxParticleCount: usize = 0x52C; // int32
+                pub const m_bRespectExclusionVolumes: usize = 0x530; // bool
+                pub const m_bKillParticles: usize = 0x531; // bool
+                pub const m_bDeleteSim: usize = 0x532; // bool
+                pub const m_nControlPoint: usize = 0x534; // int32
+                pub const m_nForcedSimId: usize = 0x538; // int32
+                pub const m_nColorBlendType: usize = 0x53C; // ParticleColorBlendType_t
+                pub const m_nForcedStatusEffects: usize = 0x540; // ParticleAttrBoxFlags_t
+                pub const m_nNoCollisionAttribute: usize = 0x544; // ParticleAttributeIndex_t
+                pub const m_nZeroGravityAttribute: usize = 0x548; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: CGeneralSpin
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_SpinYaw {
             }
-            // Parent: None
+            // Parent: PointDefinition_t
             // Field count: 1
             //
             // Metadata:
@@ -7024,7 +7278,7 @@ pub mod dota2_dumper {
             pub mod RenderProjectedMaterial_t {
                 pub const m_hMaterial: usize = 0x0; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 6
             //
             // Metadata:
@@ -7037,11 +7291,12 @@ pub mod dota2_dumper {
                 pub const m_nOutputField: usize = 0x1118; // ParticleAttributeIndex_t
                 pub const m_nSetMethod: usize = 0x111C; // ParticleSetMethod_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionForce
             // Field count: 11
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_ExternalWindForce {
                 pub const m_vecSamplePosition: usize = 0x1F0; // CPerParticleVecInput
                 pub const m_vecScale: usize = 0x8C8; // CPerParticleVecInput
@@ -7055,7 +7310,7 @@ pub mod dota2_dumper {
                 pub const m_flLocalBuoyancyScale: usize = 0x1800; // CPerParticleFloatInput
                 pub const m_vecBuoyancyForce: usize = 0x1978; // CPerParticleVecInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 5
             //
             // Metadata:
@@ -7067,43 +7322,44 @@ pub mod dota2_dumper {
                 pub const m_bUseBones: usize = 0x1EE; // bool
                 pub const m_HitboxSetName: usize = 0x1EF; // char[128]
             }
-            // Parent: None
+            // Parent: CBaseRendererSource2
             // Field count: 29
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_RenderSprites {
-                pub const m_nSequenceOverride: usize = 0x2ED8; // CParticleCollectionRendererFloatInput
-                pub const m_bSequenceNumbersAreRawSequenceIndices: usize = 0x3050; // bool
-                pub const m_nOrientationType: usize = 0x3054; // ParticleOrientationChoiceList_t
-                pub const m_nOrientationControlPoint: usize = 0x3058; // int32
-                pub const m_bUseYawWithNormalAligned: usize = 0x305C; // bool
-                pub const m_flMinSize: usize = 0x3060; // CParticleCollectionRendererFloatInput
-                pub const m_flMaxSize: usize = 0x31D8; // CParticleCollectionRendererFloatInput
-                pub const m_flSubPixelAAScale: usize = 0x3350; // CParticleCollectionRendererFloatInput
-                pub const m_flStartFadeSize: usize = 0x34C8; // CParticleCollectionRendererFloatInput
-                pub const m_flEndFadeSize: usize = 0x3640; // CParticleCollectionRendererFloatInput
-                pub const m_flStartFadeDot: usize = 0x37B8; // float32
-                pub const m_flEndFadeDot: usize = 0x37BC; // float32
-                pub const m_bDistanceAlpha: usize = 0x37C0; // bool
-                pub const m_bSoftEdges: usize = 0x37C1; // bool
-                pub const m_flEdgeSoftnessStart: usize = 0x37C4; // float32
-                pub const m_flEdgeSoftnessEnd: usize = 0x37C8; // float32
-                pub const m_bOutline: usize = 0x37CC; // bool
-                pub const m_OutlineColor: usize = 0x37D0; // Color
-                pub const m_nOutlineAlpha: usize = 0x37D4; // int32
-                pub const m_flOutlineStart0: usize = 0x37D8; // float32
-                pub const m_flOutlineStart1: usize = 0x37DC; // float32
-                pub const m_flOutlineEnd0: usize = 0x37E0; // float32
-                pub const m_flOutlineEnd1: usize = 0x37E4; // float32
-                pub const m_nLightingMode: usize = 0x37E8; // ParticleLightingQuality_t
-                pub const m_vecLightingOverride: usize = 0x37F0; // CParticleCollectionRendererVecInput
-                pub const m_flLightingTessellation: usize = 0x3EC8; // CParticleCollectionRendererFloatInput
-                pub const m_flLightingDirectionality: usize = 0x4040; // CParticleCollectionRendererFloatInput
-                pub const m_bParticleShadows: usize = 0x41B8; // bool
-                pub const m_flShadowDensity: usize = 0x41BC; // float32
+                pub const m_nSequenceOverride: usize = 0x2ED0; // CParticleCollectionRendererFloatInput
+                pub const m_bSequenceNumbersAreRawSequenceIndices: usize = 0x3048; // bool
+                pub const m_nOrientationType: usize = 0x304C; // ParticleOrientationChoiceList_t
+                pub const m_nOrientationControlPoint: usize = 0x3050; // int32
+                pub const m_bUseYawWithNormalAligned: usize = 0x3054; // bool
+                pub const m_flMinSize: usize = 0x3058; // CParticleCollectionRendererFloatInput
+                pub const m_flMaxSize: usize = 0x31D0; // CParticleCollectionRendererFloatInput
+                pub const m_flSubPixelAAScale: usize = 0x3348; // CParticleCollectionRendererFloatInput
+                pub const m_flStartFadeSize: usize = 0x34C0; // CParticleCollectionRendererFloatInput
+                pub const m_flEndFadeSize: usize = 0x3638; // CParticleCollectionRendererFloatInput
+                pub const m_flStartFadeDot: usize = 0x37B0; // float32
+                pub const m_flEndFadeDot: usize = 0x37B4; // float32
+                pub const m_bDistanceAlpha: usize = 0x37B8; // bool
+                pub const m_bSoftEdges: usize = 0x37B9; // bool
+                pub const m_flEdgeSoftnessStart: usize = 0x37BC; // float32
+                pub const m_flEdgeSoftnessEnd: usize = 0x37C0; // float32
+                pub const m_bOutline: usize = 0x37C4; // bool
+                pub const m_OutlineColor: usize = 0x37C8; // Color
+                pub const m_nOutlineAlpha: usize = 0x37CC; // int32
+                pub const m_flOutlineStart0: usize = 0x37D0; // float32
+                pub const m_flOutlineStart1: usize = 0x37D4; // float32
+                pub const m_flOutlineEnd0: usize = 0x37D8; // float32
+                pub const m_flOutlineEnd1: usize = 0x37DC; // float32
+                pub const m_nLightingMode: usize = 0x37E0; // ParticleLightingQuality_t
+                pub const m_vecLightingOverride: usize = 0x37E8; // CParticleCollectionRendererVecInput
+                pub const m_flLightingTessellation: usize = 0x3EC0; // CParticleCollectionRendererFloatInput
+                pub const m_flLightingDirectionality: usize = 0x4038; // CParticleCollectionRendererFloatInput
+                pub const m_bParticleShadows: usize = 0x41B0; // bool
+                pub const m_flShadowDensity: usize = 0x41B4; // float32
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 12
             //
             // Metadata:
@@ -7122,7 +7378,7 @@ pub mod dota2_dumper {
                 pub const m_bActiveRange: usize = 0x2D4; // bool
                 pub const m_bRadialCheck: usize = 0x2D5; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 8
             //
             // Metadata:
@@ -7137,31 +7393,31 @@ pub mod dota2_dumper {
                 pub const m_nOrientationField: usize = 0x4E4; // ParticleAttributeIndex_t
                 pub const m_bNumBasedOnParticleCount: usize = 0x4E8; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderTreeShake {
-                pub const m_flPeakStrength: usize = 0x230; // float32
-                pub const m_nPeakStrengthFieldOverride: usize = 0x234; // ParticleAttributeIndex_t
-                pub const m_flRadius: usize = 0x238; // float32
-                pub const m_nRadiusFieldOverride: usize = 0x23C; // ParticleAttributeIndex_t
-                pub const m_flShakeDuration: usize = 0x240; // float32
-                pub const m_flTransitionTime: usize = 0x244; // float32
-                pub const m_flTwistAmount: usize = 0x248; // float32
-                pub const m_flRadialAmount: usize = 0x24C; // float32
-                pub const m_flControlPointOrientationAmount: usize = 0x250; // float32
-                pub const m_nControlPointForLinearDirection: usize = 0x254; // int32
+                pub const m_flPeakStrength: usize = 0x228; // float32
+                pub const m_nPeakStrengthFieldOverride: usize = 0x22C; // ParticleAttributeIndex_t
+                pub const m_flRadius: usize = 0x230; // float32
+                pub const m_nRadiusFieldOverride: usize = 0x234; // ParticleAttributeIndex_t
+                pub const m_flShakeDuration: usize = 0x238; // float32
+                pub const m_flTransitionTime: usize = 0x23C; // float32
+                pub const m_flTwistAmount: usize = 0x240; // float32
+                pub const m_flRadialAmount: usize = 0x244; // float32
+                pub const m_flControlPointOrientationAmount: usize = 0x248; // float32
+                pub const m_nControlPointForLinearDirection: usize = 0x24C; // int32
             }
-            // Parent: None
+            // Parent: CParticleFunctionConstraint
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_WorldCollideConstraint {
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 6
             //
             // Metadata:
@@ -7174,7 +7430,7 @@ pub mod dota2_dumper {
                 pub const m_nOutputField: usize = 0x650; // ParticleAttributeIndex_t
                 pub const m_nSetMethod: usize = 0x654; // ParticleSetMethod_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 10
             //
             // Metadata:
@@ -7191,20 +7447,20 @@ pub mod dota2_dumper {
                 pub const m_nCPFieldMax: usize = 0x1FC; // int32
                 pub const m_nSetMethod: usize = 0x200; // ParticleSetMethod_t
             }
-            // Parent: None
+            // Parent: CParticleFunctionRenderer
             // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderMaterialProxy {
-                pub const m_nMaterialControlPoint: usize = 0x230; // int32
-                pub const m_nProxyType: usize = 0x234; // MaterialProxyType_t
-                pub const m_MaterialVars: usize = 0x238; // CUtlVector<MaterialVariable_t>
-                pub const m_hOverrideMaterial: usize = 0x250; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                pub const m_flMaterialOverrideEnabled: usize = 0x258; // CParticleCollectionFloatInput
-                pub const m_vecColorScale: usize = 0x3D0; // CParticleCollectionVecInput
-                pub const m_flAlpha: usize = 0xAA8; // CPerParticleFloatInput
-                pub const m_nColorBlendType: usize = 0xC20; // ParticleColorBlendType_t
+                pub const m_nMaterialControlPoint: usize = 0x228; // int32
+                pub const m_nProxyType: usize = 0x22C; // MaterialProxyType_t
+                pub const m_MaterialVars: usize = 0x230; // CUtlVector<MaterialVariable_t>
+                pub const m_hOverrideMaterial: usize = 0x248; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_flMaterialOverrideEnabled: usize = 0x250; // CParticleCollectionFloatInput
+                pub const m_vecColorScale: usize = 0x3C8; // CParticleCollectionVecInput
+                pub const m_flAlpha: usize = 0xAA0; // CPerParticleFloatInput
+                pub const m_nColorBlendType: usize = 0xC18; // ParticleColorBlendType_t
             }
             // Parent: None
             // Field count: 2
@@ -7215,7 +7471,7 @@ pub mod dota2_dumper {
                 pub const m_strVariable: usize = 0x0; // CUtlString
                 pub const m_flInput: usize = 0x8; // CParticleCollectionFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 8
             //
             // Metadata:
@@ -7230,7 +7486,7 @@ pub mod dota2_dumper {
                 pub const m_nField: usize = 0x220; // ParticleAttributeIndex_t
                 pub const m_bProportionalOp: usize = 0x224; // bool
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 7
             //
             // Metadata:
@@ -7244,7 +7500,7 @@ pub mod dota2_dumper {
                 pub const m_bNormalize: usize = 0x204; // bool
                 pub const m_flScale: usize = 0x208; // CPerParticleFloatInput
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 2
             //
             // Metadata:
@@ -7253,14 +7509,14 @@ pub mod dota2_dumper {
                 pub const m_InputValue: usize = 0x1E8; // CParticleCollectionVecInput
                 pub const m_nOutputField: usize = 0x8C0; // ParticleAttributeIndex_t
             }
-            // Parent: None
+            // Parent: C_INIT_RemapParticleCountToNamedModelElementScalar
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RemapParticleCountToNamedModelMeshGroupScalar {
             }
-            // Parent: None
+            // Parent: CParticleFunctionInitializer
             // Field count: 4
             //
             // Metadata:
@@ -7271,7 +7527,7 @@ pub mod dota2_dumper {
                 pub const m_nCP: usize = 0x1EC; // int32
                 pub const m_vecOffset: usize = 0x1F0; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 11
             //
             // Metadata:
@@ -7289,11 +7545,12 @@ pub mod dota2_dumper {
                 pub const m_bScaleOffset: usize = 0x201; // bool
                 pub const m_vecOffset: usize = 0x204; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFunctionOperator
             // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MGPUParticleFunction
             pub mod C_OP_LerpEndCapScalar {
                 pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
                 pub const m_flOutput: usize = 0x1E4; // float32

@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 pub const dota2_dumper = struct {
     pub const schemas = struct {
@@ -18,7 +18,7 @@ pub const dota2_dumper = struct {
             // Field count: 0
             pub const CEntityComponent = struct {
             };
-            // Parent: None
+            // Parent: CEntityComponent
             // Field count: 1
             //
             // Metadata:

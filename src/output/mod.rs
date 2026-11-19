@@ -286,7 +286,7 @@ mod tests {
 
 #[inline]
 fn zig_ident(input: &str) -> String {
-    if is_zig_identifier(input) && !is_zig_keyword(input) {
+    if is_zig_identifier(input) && !is_zig_keyword(input) && !is_zig_primitive(input) {
         input.to_string()
     } else {
         let escaped = input.replace('\\', "\\\\").replace('"', "\\\"");
@@ -305,6 +305,40 @@ fn is_zig_identifier(input: &str) -> bool {
     }
 
     chars.all(|c| c == '_' || c.is_ascii_alphanumeric())
+}
+
+fn is_zig_primitive(input: &str) -> bool {
+    matches!(
+        input,
+        "_" | "anyerror"
+            | "anyopaque"
+            | "bool"
+            | "c_char"
+            | "c_short"
+            | "c_ushort"
+            | "c_int"
+            | "c_uint"
+            | "c_long"
+            | "c_ulong"
+            | "c_longlong"
+            | "c_ulonglong"
+            | "c_longdouble"
+            | "comptime_float"
+            | "comptime_int"
+            | "f16"
+            | "f32"
+            | "f64"
+            | "f80"
+            | "f128"
+            | "isize"
+            | "noreturn"
+            | "type"
+            | "undefined"
+            | "usize"
+            | "void"
+    ) || input
+        .strip_prefix(['i', 'u'])
+        .is_some_and(|width| !width.is_empty() && width.bytes().all(|byte| byte.is_ascii_digit()))
 }
 
 #[inline]

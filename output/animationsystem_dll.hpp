@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 #pragma once
 
@@ -9,8 +9,8 @@
 namespace dota2_dumper {
     namespace schemas {
         // Module: animationsystem.dll
-        // Class count: 674
-        // Enum count: 145
+        // Class count: 677
+        // Enum count: 146
         namespace animationsystem_dll {
             // Alignment: 4
             // Member count: 2
@@ -31,6 +31,167 @@ namespace dota2_dumper {
             enum class PulseMethodCallMode_t : uint32_t {
                 SYNC_WAIT_FOR_COMPLETION = 0x0,
                 ASYNC_FIRE_AND_FORGET = 0x1
+            };
+            // Alignment: 2
+            // Member count: 157
+            enum class PulseInstructionCode_t : uint16_t {
+                INVALID = 0x0,
+                IMMEDIATE_HALT = 0x1,
+                RETURN_VOID = 0x2,
+                RETURN_VALUE = 0x3,
+                LOOP_BREAK = 0x4,
+                NOP = 0x5,
+                JUMP = 0x6,
+                JUMP_COND = 0x7,
+                CHUNK_LEAP = 0x8,
+                CHUNK_LEAP_COND = 0x9,
+                PULSE_CALL_SYNC = 0xA,
+                PULSE_CALL_ASYNC_FIRE = 0xB,
+                CREATE_CHILD_CURSOR_OUTFLOW = 0xC,
+                CELL_INVOKE = 0xD,
+                LIBRARY_INVOKE = 0xE,
+                BROADCAST_INVOKE = 0xF,
+                SET_VAR = 0x10,
+                GET_VAR = 0x11,
+                GET_VAR_DETACH = 0x12,
+                DETACH_REGISTER = 0x13,
+                SET_VAR_ARRAY_ELEMENT_1D = 0x14,
+                SET_VAR_OBSERVABLE = 0x15,
+                GET_CONST = 0x16,
+                GET_ARRAY_ELEMENT = 0x17,
+                GET_DOMAIN_VALUE = 0x18,
+                COPY = 0x19,
+                NOT = 0x1A,
+                NEGATE = 0x1B,
+                ADD = 0x1C,
+                SUB = 0x1D,
+                MUL = 0x1E,
+                DIV = 0x1F,
+                MOD = 0x20,
+                LT = 0x21,
+                LTE = 0x22,
+                EQ = 0x23,
+                NE = 0x24,
+                AND = 0x25,
+                OR = 0x26,
+                SCALE = 0x27,
+                SCALE_INV = 0x28,
+                ELEMENT_ACCESS = 0x29,
+                CONVERT_VALUE = 0x2A,
+                REINTERPRET_INSTANCE = 0x2B,
+                GET_BLACKBOARD_REFERENCE = 0x2C,
+                SET_BLACKBOARD_REFERENCE = 0x2D,
+                GET_TEMPVAR = 0x2E,
+                SET_TEMPVAR = 0x2F,
+                SET_TEMPVAR_OBSERVABLE = 0x30,
+                BIND_LAMBDA = 0x31,
+                LAST_SERIALIZED_CODE = 0x32,
+                NEGATE_INT = 0x33,
+                NEGATE_FLOAT = 0x34,
+                NEGATE_VEC2 = 0x35,
+                NEGATE_VEC3 = 0x36,
+                NEGATE_VEC4 = 0x37,
+                ADD_INT = 0x38,
+                ADD_FLOAT = 0x39,
+                ADD_STRING = 0x3A,
+                ADD_VEC2 = 0x3B,
+                ADD_VEC3 = 0x3C,
+                ADD_VEC3WS_VEC3 = 0x3D,
+                ADD_VEC3_VEC3WS = 0x3E,
+                ADD_VEC4 = 0x3F,
+                ADD_GAMETIME_FLOAT = 0x40,
+                ADD_FLOAT_GAMETIME = 0x41,
+                SUB_INT = 0x42,
+                SUB_FLOAT = 0x43,
+                SUB_VEC2 = 0x44,
+                SUB_VEC3 = 0x45,
+                SUB_VEC3WS_VEC3 = 0x46,
+                SUB_VEC3WS_VEC3WS = 0x47,
+                SUB_VEC4 = 0x48,
+                SUB_GAMETIME_FLOAT = 0x49,
+                SUB_GAMETIME = 0x4A,
+                MUL_INT = 0x4B,
+                MUL_FLOAT = 0x4C,
+                DIV_FLOAT = 0x4D,
+                MOD_INT = 0x4E,
+                MOD_FLOAT = 0x4F,
+                LT_INT = 0x50,
+                LT_FLOAT = 0x51,
+                LT_GAMETIME = 0x52,
+                LTE_INT = 0x53,
+                LTE_FLOAT = 0x54,
+                LTE_GAMETIME = 0x55,
+                EQ_BOOL = 0x56,
+                NE_BOOL = 0x57,
+                EQ_INT = 0x58,
+                NE_INT = 0x59,
+                EQ_FLOAT = 0x5A,
+                NE_FLOAT = 0x5B,
+                EQ_STRING = 0x5C,
+                NE_STRING = 0x5D,
+                EQ_VEC2 = 0x5E,
+                NE_VEC2 = 0x5F,
+                EQ_VEC3 = 0x60,
+                NE_VEC3 = 0x61,
+                EQ_QANGLE = 0x62,
+                NE_QANGLE = 0x63,
+                EQ_VEC3WS = 0x64,
+                NE_VEC3WS = 0x65,
+                EQ_VEC4 = 0x66,
+                NE_VEC4 = 0x67,
+                EQ_TRANSFORM = 0x68,
+                NE_TRANSFORM = 0x69,
+                EQ_TRANSFORMWS = 0x6A,
+                NE_TRANSFORMWS = 0x6B,
+                EQ_COLOR_RGB = 0x6C,
+                NE_COLOR_RGB = 0x6D,
+                EQ_GAMETIME = 0x6E,
+                NE_GAMETIME = 0x6F,
+                EQ_EHANDLE = 0x70,
+                NE_EHANDLE = 0x71,
+                EQ_RESOURCE = 0x72,
+                NE_RESOURCE = 0x73,
+                EQ_RESOURCE_NAME = 0x74,
+                NE_RESOURCE_NAME = 0x75,
+                EQ_SNDEVT_GUID = 0x76,
+                NE_SNDEVT_GUID = 0x77,
+                EQ_SNDEVT_NAME = 0x78,
+                NE_SNDEVT_NAME = 0x79,
+                EQ_ENTITY_NAME = 0x7A,
+                NE_ENTITY_NAME = 0x7B,
+                EQ_LEAF = 0x7C,
+                NE_LEAF = 0x7D,
+                EQ_MODEL_MATERIAL_GROUP = 0x7E,
+                NE_MODEL_MATERIAL_GROUP = 0x7F,
+                EQ_VARIANT = 0x80,
+                NE_VARIANT = 0x81,
+                EQ_ENUM = 0x82,
+                NE_ENUM = 0x83,
+                EQ_PANEL_HANDLE = 0x84,
+                NE_PANEL_HANDLE = 0x85,
+                EQ_ARRAY = 0x86,
+                NE_ARRAY = 0x87,
+                EQ_PARTICLE_EHANDLE = 0x88,
+                NE_PARTICLE_EHANDLE = 0x89,
+                EQ_ANIM_SEQUENCE = 0x8A,
+                NE_ANIM_SEQUENCE = 0x8B,
+                EQ_VDATA_CHOICE = 0x8C,
+                NE_VDATA_CHOICE = 0x8D,
+                SCALE_VEC3 = 0x8E,
+                SCALE_VEC2 = 0x8F,
+                SCALE_VEC4 = 0x90,
+                SCALE_INV_VEC3 = 0x91,
+                SCALE_INV_VEC2 = 0x92,
+                SCALE_INV_VEC4 = 0x93,
+                ELEMENT_ACCESS_VEC2 = 0x94,
+                ELEMENT_ACCESS_VEC3 = 0x95,
+                ELEMENT_ACCESS_VEC3WS = 0x96,
+                ELEMENT_ACCESS_VEC4 = 0x97,
+                ELEMENT_ACCESS_COLOR_RGB = 0x98,
+                GET_CONST_INLINE_STORAGE = 0x99,
+                BROADCAST_INVOKE_DOMAIN = 0x9A,
+                BROADCAST_INVOKE_ARRAY_SIMPLE = 0x9B,
+                BROADCAST_INVOKE_ARRAY_DOMAIN = 0x9C
             };
             // Alignment: 4
             // Member count: 2
@@ -173,7 +334,7 @@ namespace dota2_dumper {
                 IKTARGETCOORDINATESYSTEM_COUNT = 0x2
             };
             // Alignment: 4
-            // Member count: 34
+            // Member count: 35
             enum class ParticleFloatType_t : uint32_t {
                 PF_TYPE_INVALID = 0xFFFFFFFF,
                 PF_TYPE_LITERAL = 0x0,
@@ -186,29 +347,30 @@ namespace dota2_dumper {
                 PF_TYPE_CONTROL_POINT_CHANGE_AGE = 0x7,
                 PF_TYPE_CONTROL_POINT_SPEED = 0x8,
                 PF_TYPE_CONTROL_POINT_DISTANCE = 0x9,
-                PF_TYPE_PARTICLE_DETAIL_LEVEL = 0xA,
-                PF_TYPE_CONCURRENT_DEF_COUNT = 0xB,
-                PF_TYPE_CLOSEST_CAMERA_DISTANCE = 0xC,
-                PF_TYPE_SNAPSHOT_COUNT = 0xD,
-                PF_TYPE_SNAPSHOT_CHANGED = 0xE,
-                PF_TYPE_CONTROL_POINT_IS_SET = 0xF,
-                PF_TYPE_RENDERER_CAMERA_DISTANCE = 0x10,
-                PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT = 0x11,
-                PF_TYPE_PARTICLE_NOISE = 0x12,
-                PF_TYPE_PARTICLE_AGE = 0x13,
-                PF_TYPE_PARTICLE_AGE_NORMALIZED = 0x14,
-                PF_TYPE_PARTICLE_FLOAT = 0x15,
-                PF_TYPE_PARTICLE_INITIAL_FLOAT = 0x16,
-                PF_TYPE_PARTICLE_VECTOR_COMPONENT = 0x17,
-                PF_TYPE_PARTICLE_INITIAL_VECTOR_COMPONENT = 0x18,
-                PF_TYPE_PARTICLE_SPEED = 0x19,
-                PF_TYPE_PARTICLE_NUMBER = 0x1A,
-                PF_TYPE_PARTICLE_NUMBER_NORMALIZED = 0x1B,
-                PF_TYPE_PARTICLE_ROPE_SEGMENT = 0x1C,
-                PF_TYPE_PARTICLE_ROPE_SEGMENT_NORMALIZED = 0x1D,
-                PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE = 0x1E,
-                PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT = 0x1F,
-                PF_TYPE_COUNT = 0x20
+                PF_TYPE_CONTROL_POINT_PLANE_DISTANCE = 0xA,
+                PF_TYPE_PARTICLE_DETAIL_LEVEL = 0xB,
+                PF_TYPE_CONCURRENT_DEF_COUNT = 0xC,
+                PF_TYPE_CLOSEST_CAMERA_DISTANCE = 0xD,
+                PF_TYPE_SNAPSHOT_COUNT = 0xE,
+                PF_TYPE_SNAPSHOT_CHANGED = 0xF,
+                PF_TYPE_CONTROL_POINT_IS_SET = 0x10,
+                PF_TYPE_RENDERER_CAMERA_DISTANCE = 0x11,
+                PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT = 0x12,
+                PF_TYPE_PARTICLE_NOISE = 0x13,
+                PF_TYPE_PARTICLE_AGE = 0x14,
+                PF_TYPE_PARTICLE_AGE_NORMALIZED = 0x15,
+                PF_TYPE_PARTICLE_FLOAT = 0x16,
+                PF_TYPE_PARTICLE_INITIAL_FLOAT = 0x17,
+                PF_TYPE_PARTICLE_VECTOR_COMPONENT = 0x18,
+                PF_TYPE_PARTICLE_INITIAL_VECTOR_COMPONENT = 0x19,
+                PF_TYPE_PARTICLE_SPEED = 0x1A,
+                PF_TYPE_PARTICLE_NUMBER = 0x1B,
+                PF_TYPE_PARTICLE_NUMBER_NORMALIZED = 0x1C,
+                PF_TYPE_PARTICLE_ROPE_SEGMENT = 0x1D,
+                PF_TYPE_PARTICLE_ROPE_SEGMENT_NORMALIZED = 0x1E,
+                PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE = 0x1F,
+                PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT = 0x20,
+                PF_TYPE_COUNT = 0x21
             };
             // Alignment: 1
             // Member count: 4
@@ -1002,15 +1164,6 @@ namespace dota2_dumper {
                 FOOTLOCKSUBVISUALIZATION_ReachabilityAnalysis = 0x0,
                 FOOTLOCKSUBVISUALIZATION_IKSolve = 0x1
             };
-            // Alignment: 4
-            // Member count: 5
-            enum class CNmSoundEvent__Position_t : uint32_t {
-                None = 0x0,
-                World = 0x1,
-                EntityPos = 0x2,
-                EntityEyePos = 0x3,
-                EntityAttachment = 0x4
-            };
             // Alignment: 1
             // Member count: 4
             enum class FootstepJumpPhase_t : uint8_t {
@@ -1304,6 +1457,15 @@ namespace dota2_dumper {
                 IterateRandom = 0x3
             };
             // Alignment: 4
+            // Member count: 5
+            enum class CNmSoundEventBase__Position_t : uint32_t {
+                None = 0x0,
+                World = 0x1,
+                EntityPos = 0x2,
+                EntityEyePos = 0x3,
+                EntityAttachment = 0x4
+            };
+            // Alignment: 4
             // Member count: 14
             enum class AnimVectorSource : uint32_t {
                 MoveDirection = 0x0,
@@ -1345,7 +1507,7 @@ namespace dota2_dumper {
                 BlendSpace_Model_TranslationOnly = 0x3
             };
             // Alignment: 4
-            // Member count: 11
+            // Member count: 13
             enum class MovementCapability_t : uint32_t {
                 eStrafe = 0x0,
                 eIdleTurn = 0x1,
@@ -1356,8 +1518,10 @@ namespace dota2_dumper {
                 ePlantedTurn = 0x6,
                 eUseStartAsPlantedTurn = 0x7,
                 eLean = 0x8,
-                eForwardStartOnly = 0x9,
-                eCount = 0xA
+                eTurnToStart = 0x9,
+                eAim = 0xA,
+                eForwardStopOnly = 0xB,
+                eCount = 0xC
             };
             // Alignment: 4
             // Member count: 5
@@ -1397,19 +1561,20 @@ namespace dota2_dumper {
                 eMoodType_Head = 0x0,
                 eMoodType_Body = 0x1
             };
-            // Parent: None
+            // Parent: CPulseCell_WaitForCursorsWithTagBase
             // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
+            // MPulseEditorSearchExpr
             // MPropertyDescription
             // MPulseEditorHeaderIcon
             namespace CPulseCell_WaitForCursorsWithTag {
                 constexpr std::ptrdiff_t m_bTagSelfWhenComplete = 0x128; // bool
                 constexpr std::ptrdiff_t m_nDesiredKillPriority = 0x12C; // PulseCursorCancelPriority_t
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 2
             //
             // Metadata:
@@ -1426,11 +1591,11 @@ namespace dota2_dumper {
             namespace CPulseCell_Base {
                 constexpr std::ptrdiff_t m_nEditorNodeID = 0x8; // PulseDocNodeID_t
             }
-            // Parent: None
+            // Parent: CPulse_OutflowConnection
             // Field count: 0
             namespace CPulse_ResumePoint {
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 2
             //
             // Metadata:
@@ -1443,12 +1608,12 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nCheckType = 0x48; // PulseBestOutflowRules_t
                 constexpr std::ptrdiff_t m_OutflowList = 0x50; // PulseSelectorOutflowList_t
             }
-            // Parent: None
+            // Parent: CParticleCollectionBindingInstance
             // Field count: 0
             namespace CParticleBindingRealPulse {
             }
-            // Parent: None
-            // Field count: 2
+            // Parent: CPulseCell_BaseYieldingInflow
+            // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1456,8 +1621,7 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CPulseCell_WaitForObservable {
-                constexpr std::ptrdiff_t m_Condition = 0xD8; // CPulseObservableExpression<bool>
-                constexpr std::ptrdiff_t m_OnTrue = 0x168; // CPulse_ResumePoint
+                constexpr std::ptrdiff_t m_OnTrue = 0xD8; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 4
@@ -1468,7 +1632,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_OutflowRegisterMap = 0x18; // PulseRegisterMap_t
             }
             // Parent: None
-            // Field count: 15
+            // Field count: 16
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1487,9 +1651,10 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_Constants = 0xF8; // CUtlVector<CPulse_Constant>
                 constexpr std::ptrdiff_t m_DomainValues = 0x110; // CUtlVector<CPulse_DomainValue>
                 constexpr std::ptrdiff_t m_BlackboardReferences = 0x128; // CUtlVector<CPulse_BlackboardReference>
-                constexpr std::ptrdiff_t m_OutputConnections = 0x140; // CUtlVector<CPulse_OutputConnection*>
+                constexpr std::ptrdiff_t m_LambdaDefs = 0x140; // CUtlVector<CPulse_LambdaDef>
+                constexpr std::ptrdiff_t m_OutputConnections = 0x158; // CUtlVector<CPulse_OutputConnection*>
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 3
             //
             // Metadata:
@@ -1509,7 +1674,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_EventOutflow = 0x8; // CPulse_OutflowConnection
             }
             // Parent: None
-            // Field count: 5
+            // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1519,15 +1684,16 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flWaitInterval = 0x8; // float32
                 constexpr std::ptrdiff_t m_flWaitIntervalHigh = 0xC; // float32
                 constexpr std::ptrdiff_t m_bCompleteOnNextWake = 0x10; // bool
+                constexpr std::ptrdiff_t m_bCompletingVeryCloseToEndOfInterval = 0x11; // bool
             }
-            // Parent: None
+            // Parent: CPulseCell_Base
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPulseCell_BaseRequirement {
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 0
             //
             // Metadata:
@@ -1546,21 +1712,12 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_RequirementNodeIDs = 0x50; // CUtlVector<PulseDocNodeID_t>
                 constexpr std::ptrdiff_t m_nCursorStateBlockIndex = 0x68; // CUtlVector<int32>
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseRequirement
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPulseCell_IsRequirementValid {
-            }
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            namespace CPulseCell_Value_Gradient {
-                constexpr std::ptrdiff_t m_Gradient = 0x48; // CColorGradient
             }
             // Parent: None
             // Field count: 2
@@ -1575,7 +1732,7 @@ namespace dota2_dumper {
             // Field count: 0
             namespace CBasePulseGraphInstance {
             }
-            // Parent: None
+            // Parent: CPulseCell_Inflow_BaseEntrypoint
             // Field count: 1
             //
             // Metadata:
@@ -1583,11 +1740,11 @@ namespace dota2_dumper {
             namespace CPulseCell_Inflow_GraphHook {
                 constexpr std::ptrdiff_t m_HookName = 0x80; // PulseSymbol_t
             }
-            // Parent: None
+            // Parent: CPulse_ResumePoint
             // Field count: 0
             namespace SignatureOutflow_Resume {
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 2
             //
             // Metadata:
@@ -1596,7 +1753,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_EntryChunk = 0x48; // PulseRuntimeChunkIndex_t
                 constexpr std::ptrdiff_t m_RegisterMap = 0x50; // PulseRegisterMap_t
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 2
             //
             // Metadata:
@@ -1618,8 +1775,8 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nSrcChunk = 0x44; // PulseRuntimeChunkIndex_t
                 constexpr std::ptrdiff_t m_nSrcInstruction = 0x48; // int32
             }
-            // Parent: None
-            // Field count: 2
+            // Parent: CPulseCell_BaseYieldingInflow
+            // Field count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1630,8 +1787,10 @@ namespace dota2_dumper {
             namespace CPulseCell_IntervalTimer {
                 constexpr std::ptrdiff_t m_Completed = 0xD8; // CPulse_ResumePoint
                 constexpr std::ptrdiff_t m_OnInterval = 0x120; // SignatureOutflow_Continue
+                constexpr std::ptrdiff_t m_bFireAtStart = 0x168; // bool
+                constexpr std::ptrdiff_t m_bFireAtEnd = 0x169; // bool
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 1
             //
             // Metadata:
@@ -1644,11 +1803,10 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            namespace CPulseCell_Value_Curve {
-                constexpr std::ptrdiff_t m_Curve = 0x48; // CPiecewiseCurve
+            namespace CPulseCell_WaitForObservable__CursorState_t {
+                constexpr std::ptrdiff_t m_Condition = 0x0; // HPulseObservableLambda<bool>
             }
-            // Parent: None
+            // Parent: CPulseCell_Inflow_BaseEntrypoint
             // Field count: 1
             //
             // Metadata:
@@ -1656,12 +1814,33 @@ namespace dota2_dumper {
             namespace CPulseCell_Inflow_EventHandler {
                 constexpr std::ptrdiff_t m_EventName = 0x80; // PulseSymbol_t
             }
-            // Parent: None
+            // Parent: CPulseCell_Base
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPulseCell_BaseFlow {
+            }
+            // Parent: None
+            // Field count: 14
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace PGDInstruction_t {
+                constexpr std::ptrdiff_t m_nCode = 0x0; // PulseInstructionCode_t
+                constexpr std::ptrdiff_t m_nVar = 0x4; // PulseRuntimeVarIndex_t
+                constexpr std::ptrdiff_t m_nReg0 = 0x8; // PulseRuntimeRegisterIndex_t
+                constexpr std::ptrdiff_t m_nReg1 = 0xA; // PulseRuntimeRegisterIndex_t
+                constexpr std::ptrdiff_t m_nReg2 = 0xC; // PulseRuntimeRegisterIndex_t
+                constexpr std::ptrdiff_t m_nLambdaIdx = 0xE; // PulseRuntimeLambdaIndex_t
+                constexpr std::ptrdiff_t m_nInvokeBindingIndex = 0x10; // PulseRuntimeInvokeIndex_t
+                constexpr std::ptrdiff_t m_nChunk = 0x14; // PulseRuntimeChunkIndex_t
+                constexpr std::ptrdiff_t m_nDestInstruction = 0x18; // int32
+                constexpr std::ptrdiff_t m_nCallInfoIndex = 0x1C; // PulseRuntimeCallInfoIndex_t
+                constexpr std::ptrdiff_t m_nConstIdx = 0x20; // PulseRuntimeConstantIndex_t
+                constexpr std::ptrdiff_t m_nDomainValueIdx = 0x22; // PulseRuntimeDomainValueIndex_t
+                constexpr std::ptrdiff_t m_nBlackboardReferenceIdx = 0x24; // PulseRuntimeBlackboardReferenceIndex_t
+                constexpr std::ptrdiff_t m_nTempVarIdx = 0x26; // PulseRuntimeTempVarIndex_t
             }
             // Parent: None
             // Field count: 2
@@ -1681,11 +1860,11 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_StartTime = 0x0; // GameTime_t
                 constexpr std::ptrdiff_t m_EndTime = 0x4; // GameTime_t
             }
-            // Parent: None
+            // Parent: CPulse_OutflowConnection
             // Field count: 0
             namespace SignatureOutflow_Continue {
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 3
             //
             // Metadata:
@@ -1695,7 +1874,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bWaitForChildOutflows = 0xF0; // bool
                 constexpr std::ptrdiff_t m_OnFinished = 0xF8; // CPulse_ResumePoint
             }
-            // Parent: None
+            // Parent: CPulseCell_Inflow_BaseEntrypoint
             // Field count: 3
             //
             // Metadata:
@@ -1713,7 +1892,7 @@ namespace dota2_dumper {
             namespace CPulseCell_Outflow_CycleOrdered__InstanceState_t {
                 constexpr std::ptrdiff_t m_nNextIndex = 0x0; // int32
             }
-            // Parent: None
+            // Parent: CBasePulseGraphInstance
             // Field count: 0
             namespace CParticleCollectionBindingInstance {
             }
@@ -1725,14 +1904,14 @@ namespace dota2_dumper {
             namespace CPulseCell_LimitCount__InstanceState_t {
                 constexpr std::ptrdiff_t m_nCurrentCount = 0x0; // int32
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPulseCell_Step_DebugLog {
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 2
             //
             // Metadata:
@@ -1755,7 +1934,7 @@ namespace dota2_dumper {
             namespace CPulseCell_IsRequirementValid__Criteria_t {
                 constexpr std::ptrdiff_t m_bIsValid = 0x0; // bool
             }
-            // Parent: None
+            // Parent: CPulseCell_Inflow_BaseEntrypoint
             // Field count: 2
             //
             // Metadata:
@@ -1764,18 +1943,17 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nBlackboardReference = 0x80; // PulseRuntimeBlackboardReferenceIndex_t
                 constexpr std::ptrdiff_t m_bSelfReference = 0x82; // bool
             }
-            // Parent: None
-            // Field count: 2
+            // Parent: CPulseCell_BaseState
+            // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CPulseCell_ObservableSwitchState {
-                constexpr std::ptrdiff_t m_SwitchValue = 0xD8; // CPulseObservableExpression<CPulseVariant>
-                constexpr std::ptrdiff_t m_Cases = 0x168; // CPulseObservableSwitchCases
+                constexpr std::ptrdiff_t m_Cases = 0xD8; // CPulseObservableSwitchCases
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 1
             //
             // Metadata:
@@ -1791,7 +1969,7 @@ namespace dota2_dumper {
             namespace PulseSelectorOutflowList_t {
                 constexpr std::ptrdiff_t m_Outflows = 0x0; // CUtlVector<OutflowWithRequirements_t>
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 1
             //
             // Metadata:
@@ -1803,7 +1981,7 @@ namespace dota2_dumper {
             namespace CPulseCell_Inflow_Wait {
                 constexpr std::ptrdiff_t m_WakeResume = 0xD8; // CPulse_ResumePoint
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 1
             //
             // Metadata:
@@ -1811,7 +1989,7 @@ namespace dota2_dumper {
             namespace CPulseCell_Outflow_CycleShuffled {
                 constexpr std::ptrdiff_t m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
             }
-            // Parent: None
+            // Parent: CPulseCell_Inflow_BaseEntrypoint
             // Field count: 5
             //
             // Metadata:
@@ -1823,15 +2001,15 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_Args = 0xA0; // CUtlLeanVector<CPulseRuntimeMethodArg>
                 constexpr std::ptrdiff_t m_ReturnValues = 0xB0; // CUtlLeanVector<CPulseRuntimeMethodArg>
             }
-            // Parent: None
+            // Parent: CPulseCell_Base
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPulseCell_BaseValue {
             }
-            // Parent: None
-            // Field count: 3
+            // Parent: CPulseCell_BaseState
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1839,11 +2017,10 @@ namespace dota2_dumper {
             // MPropertyDescription
             // MPulseEditorCanvasItemSpecKV3
             namespace CPulseCell_BooleanSwitchState {
-                constexpr std::ptrdiff_t m_Condition = 0xD8; // CPulseObservableExpression<bool>
-                constexpr std::ptrdiff_t m_WhenTrue = 0x168; // CPulse_OutflowConnection
-                constexpr std::ptrdiff_t m_WhenFalse = 0x1B0; // CPulse_OutflowConnection
+                constexpr std::ptrdiff_t m_WhenTrue = 0xD8; // CPulse_OutflowConnection
+                constexpr std::ptrdiff_t m_WhenFalse = 0x120; // CPulse_OutflowConnection
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 1
             //
             // Metadata:
@@ -1851,12 +2028,12 @@ namespace dota2_dumper {
             namespace CPulseCell_Inflow_Yield {
                 constexpr std::ptrdiff_t m_UnyieldResume = 0xD8; // CPulse_ResumePoint
             }
-            // Parent: None
+            // Parent: CPulseCell_Base
             // Field count: 1
             namespace CPulseCell_Unknown {
                 constexpr std::ptrdiff_t m_UnknownKeys = 0x48; // KeyValues3
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 1
             //
             // Metadata:
@@ -1864,7 +2041,7 @@ namespace dota2_dumper {
             namespace CPulseCell_Outflow_CycleRandom {
                 constexpr std::ptrdiff_t m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 1
             //
             // Metadata:
@@ -1884,6 +2061,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_NodeName = 0x20; // CGlobalSymbol
             }
             // Parent: None
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CPulseCell_ObservableSwitchState__CursorState_t {
+                constexpr std::ptrdiff_t m_SwitchValue = 0x0; // HPulseObservableLambda<CPulseVariant>
+            }
+            // Parent: CPulseCell_BaseFlow
             // Field count: 0
             //
             // Metadata:
@@ -1891,17 +2076,7 @@ namespace dota2_dumper {
             namespace CPulseCell_ReturnValues {
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            // MPulseEditorHeaderIcon
-            namespace CPulseCell_Value_RandomInt {
-            }
-            // Parent: None
-            // Field count: 11
+            // Field count: 12
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1911,12 +2086,21 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flCycle = 0x10; // CAnimNetVar<float32>
                 constexpr std::ptrdiff_t m_flWeight = 0x1C; // CAnimNetVar<float32>
                 constexpr std::ptrdiff_t m_nOrder = 0x28; // CAnimNetVar<int32>
-                constexpr std::ptrdiff_t m_bLooping = 0x34; // bool
-                constexpr std::ptrdiff_t m_nFlags = 0x38; // int32
-                constexpr std::ptrdiff_t m_bSequenceFinished = 0x3C; // bool
-                constexpr std::ptrdiff_t m_flKillRate = 0x40; // float32
-                constexpr std::ptrdiff_t m_flKillDelay = 0x44; // float32
-                constexpr std::ptrdiff_t m_nPriority = 0x48; // int32
+                constexpr std::ptrdiff_t m_bDisableSequenceFadeOut = 0x34; // CAnimNetVar<bool>
+                constexpr std::ptrdiff_t m_bLooping = 0x40; // bool
+                constexpr std::ptrdiff_t m_nFlags = 0x44; // int32
+                constexpr std::ptrdiff_t m_bSequenceFinished = 0x48; // bool
+                constexpr std::ptrdiff_t m_flKillRate = 0x4C; // float32
+                constexpr std::ptrdiff_t m_flKillDelay = 0x50; // float32
+                constexpr std::ptrdiff_t m_nPriority = 0x54; // int32
+            }
+            // Parent: None
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CPulseCell_BooleanSwitchState__CursorState_t {
+                constexpr std::ptrdiff_t m_Condition = 0x0; // HPulseObservableLambda<bool>
             }
             // Parent: None
             // Field count: 8
@@ -1933,11 +2117,12 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nBreakDestChunk = 0x54; // PulseRuntimeChunkIndex_t
                 constexpr std::ptrdiff_t m_nBreakDestInstruction = 0x58; // int32
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseFlow
             // Field count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPulseFunctionHiddenInTool
             namespace CPulseCell_InlineNodeSkipSelector {
                 constexpr std::ptrdiff_t m_nFlowNodeID = 0x48; // PulseDocNodeID_t
                 constexpr std::ptrdiff_t m_bAnd = 0x4C; // bool
@@ -1945,6 +2130,20 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_FailOutflow = 0x68; // CPulse_OutflowConnection
             }
             // Parent: None
+            // Field count: 7
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CPulse_LambdaDef {
+                constexpr std::ptrdiff_t m_EvaluateConnection = 0x0; // CPulse_OutflowConnection
+                constexpr std::ptrdiff_t m_ResultType = 0x48; // CPulseType
+                constexpr std::ptrdiff_t m_nEditorNodeID = 0x60; // PulseDocNodeID_t
+                constexpr std::ptrdiff_t m_PortName = 0x68; // PulseSymbol_t
+                constexpr std::ptrdiff_t m_DependentObservableVars = 0x78; // CUtlVector<PulseRuntimeVarIndex_t>
+                constexpr std::ptrdiff_t m_DependentObservableBlackboardReferences = 0x90; // CUtlVector<PulseRuntimeBlackboardReferenceIndex_t>
+                constexpr std::ptrdiff_t m_DependentObservableTempVars = 0xA8; // CUtlVector<PulseDocNodeID_t>
+            }
+            // Parent: CPulseCell_BaseRequirement
             // Field count: 1
             //
             // Metadata:
@@ -1954,7 +2153,7 @@ namespace dota2_dumper {
             namespace CPulseCell_LimitCount {
                 constexpr std::ptrdiff_t m_nLimitCount = 0x48; // int32
             }
-            // Parent: None
+            // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 5
             //
             // Metadata:
@@ -1971,7 +2170,7 @@ namespace dota2_dumper {
             namespace CPulseCell_LimitCount__Criteria_t {
                 constexpr std::ptrdiff_t m_bLimitCountPasses = 0x0; // bool
             }
-            // Parent: None
+            // Parent: CPulseCell_WaitForCursorsWithTagBase
             // Field count: 1
             //
             // Metadata:
@@ -1981,16 +2180,6 @@ namespace dota2_dumper {
             // MPulseEditorHeaderIcon
             namespace CPulseCell_CursorQueue {
                 constexpr std::ptrdiff_t m_nCursorsAllowedToRunParallel = 0x128; // int32
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            // MPulseEditorHeaderIcon
-            namespace CPulseCell_Value_RandomFloat {
             }
             // Parent: None
             // Field count: 0
@@ -2006,14 +2195,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nEndFrame = 0x4; // int32
                 constexpr std::ptrdiff_t m_segmentIndexArray = 0x8; // CUtlVector<int32>
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CZeroPoseUpdateNode {
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 1
             //
             // Metadata:
@@ -2021,7 +2210,7 @@ namespace dota2_dumper {
             namespace CSlowDownOnSlopesUpdateNode {
                 constexpr std::ptrdiff_t m_flSlowDownStrength = 0x70; // float32
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 13
             //
             // Metadata:
@@ -2055,7 +2244,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bNetworkingRequested = 0x68; // bool
                 constexpr std::ptrdiff_t m_bIsReferenced = 0x69; // bool
             }
-            // Parent: None
+            // Parent: CAnimTagBase
             // Field count: 1
             //
             // Metadata:
@@ -2078,14 +2267,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_rtProxyDrawCalls = 0x48; // CUtlLeanVector<CSceneObjectData::RTProxyDrawDescriptor_t>
                 constexpr std::ptrdiff_t m_vTintColor = 0x58; // Vector4D
             }
-            // Parent: None
+            // Parent: CCycleBase
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CFootCycle {
             }
-            // Parent: None
+            // Parent: CParticleInput
             // Field count: 3
             //
             // Metadata:
@@ -2097,14 +2286,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_NamedValue = 0x18; // CParticleNamedValueRef
                 constexpr std::ptrdiff_t m_nControlPoint = 0x58; // int32
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CInputStreamUpdateNode {
             }
-            // Parent: None
+            // Parent: CNmPoseTask
             // Field count: 12
             namespace CNmFootIKTask {
                 constexpr std::ptrdiff_t m_nLeftEffectorBoneIdx = 0x70; // int32
@@ -2120,7 +2309,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bIsTargetInWorldSpace = 0x138; // bool
                 constexpr std::ptrdiff_t m_bIsRunningFromDeserializedData = 0x139; // bool
             }
-            // Parent: None
+            // Parent: CConcreteAnimParameter
             // Field count: 3
             //
             // Metadata:
@@ -2131,7 +2320,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_minValue = 0x84; // int32
                 constexpr std::ptrdiff_t m_maxValue = 0x88; // int32
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -2141,7 +2330,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nInputParameterValueNodeIdx = 0x28; // int16
                 constexpr std::ptrdiff_t m_bAllowLooping = 0x2A; // bool
             }
-            // Parent: None
+            // Parent: CNmPoseTask
             // Field count: 0
             namespace CNmScaleTask {
             }
@@ -2164,7 +2353,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bIsClient = 0x6B6; // bool
                 constexpr std::ptrdiff_t m_bIsPredicted = 0x6B7; // bool
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 1
             //
             // Metadata:
@@ -2241,7 +2430,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_hSequence = 0x38; // HSequence
                 constexpr std::ptrdiff_t m_flCycle = 0x3C; // float32
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 4
             //
             // Metadata:
@@ -2252,7 +2441,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nSourceStateNodeIdx = 0x1C; // int16
                 constexpr std::ptrdiff_t m_ruleCondition = 0x1E; // NmTransitionRuleCondition_t
             }
-            // Parent: None
+            // Parent: CAnimTagBase
             // Field count: 0
             //
             // Metadata:
@@ -2362,7 +2551,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_InteractExcludeStrings = 0xA0; // CUtlVector<CUtlString>
                 constexpr std::ptrdiff_t m_DetailLayerStrings = 0xB8; // CUtlVector<CUtlString>
             }
-            // Parent: None
+            // Parent: CSequenceUpdateNodeBase
             // Field count: 4
             //
             // Metadata:
@@ -2384,7 +2573,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_prevStateIndex = 0x10; // int32
                 constexpr std::ptrdiff_t m_scheduledTransitionIndex = 0x14; // int32
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -2392,7 +2581,7 @@ namespace dota2_dumper {
             namespace CNmPassthroughNode__CDefinition {
                 constexpr std::ptrdiff_t m_nChildNodeIdx = 0x10; // int16
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 0
             //
             // Metadata:
@@ -2408,7 +2597,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nNodeIdx = 0x0; // int16
                 constexpr std::ptrdiff_t m_slotID = 0x8; // CGlobalSymbol
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 8
             //
             // Metadata:
@@ -2480,7 +2669,7 @@ namespace dota2_dumper {
             namespace IKBoneNameAndIndex_t {
                 constexpr std::ptrdiff_t m_Name = 0x0; // CUtlString
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 1
             //
             // Metadata:
@@ -2488,7 +2677,7 @@ namespace dota2_dumper {
             namespace CStanceScaleUpdateNode {
                 constexpr std::ptrdiff_t m_hParam = 0x70; // CAnimParamHandle
             }
-            // Parent: None
+            // Parent: CNmBoneMaskValueNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -2498,7 +2687,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nTargetMaskNodeIdx = 0x12; // int16
                 constexpr std::ptrdiff_t m_nBlendWeightValueNodeIdx = 0x14; // int16
             }
-            // Parent: None
+            // Parent: CNmIDValueNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -2532,7 +2721,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flHipDipImpactScale = 0x3C; // float32
                 constexpr std::ptrdiff_t m_flHipDipDelay = 0x40; // float32
             }
-            // Parent: None
+            // Parent: CNmGraphNode__CDefinition
             // Field count: 0
             namespace CNmPoseNode__CDefinition {
             }
@@ -2548,7 +2737,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_tagID = 0x30; // AnimTagID
                 constexpr std::ptrdiff_t m_bIsReferenced = 0x48; // bool
             }
-            // Parent: None
+            // Parent: CParticleVecInput
             // Field count: 0
             //
             // Metadata:
@@ -2570,7 +2759,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nConfigCount = 0x50; // int32
                 constexpr std::ptrdiff_t m_bLoop = 0x54; // bool
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -2579,7 +2768,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nInputValueNodeIdx = 0x10; // int16
                 constexpr std::ptrdiff_t m_desiredInfo = 0x12; // CNmVectorInfoNode::Info_t
             }
-            // Parent: None
+            // Parent: AnimationSnapshotBase_t
             // Field count: 2
             //
             // Metadata:
@@ -2588,11 +2777,11 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nEntIndex = 0x110; // int32
                 constexpr std::ptrdiff_t m_modelName = 0x118; // CUtlString
             }
-            // Parent: None
+            // Parent: CNmBlendTaskBase
             // Field count: 0
             namespace CNmBlendTask {
             }
-            // Parent: None
+            // Parent: CNmValueNode__CDefinition
             // Field count: 0
             namespace CNmVectorValueNode__CDefinition {
             }
@@ -2616,7 +2805,7 @@ namespace dota2_dumper {
             // MGetKV3ClassDefaults
             namespace CAnimGraphSettingsGroup {
             }
-            // Parent: None
+            // Parent: CNmTargetValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -2636,7 +2825,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_writeIndex = 0x64; // int32
                 constexpr std::ptrdiff_t m_frameCount = 0x68; // int32
             }
-            // Parent: None
+            // Parent: CConcreteAnimParameter
             // Field count: 3
             //
             // Metadata:
@@ -2647,7 +2836,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bInterpolate = 0x8C; // bool
                 constexpr std::ptrdiff_t m_vectorType = 0x90; // AnimParamVectorType_t
             }
-            // Parent: None
+            // Parent: CNmPoseTask
             // Field count: 0
             namespace CNmCachedPoseReadTask {
             }
@@ -2661,7 +2850,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nEntryConditionNodeIdx = 0x2; // int16
                 constexpr std::ptrdiff_t m_transitionDefinitions = 0x8; // CUtlLeanVectorFixedGrowable<CNmStateMachineNode::TransitionDefinition_t,5>
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 4
             //
             // Metadata:
@@ -2729,7 +2918,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bResetPending = 0x130; // bool
                 constexpr std::ptrdiff_t m_SequenceCycleZeroTime = 0x138; // CAnimNetVar<float32>
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 11
             //
             // Metadata:
@@ -2747,7 +2936,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_blendWeightEasing = 0x2A; // NmEasingOperation_t
                 constexpr std::ptrdiff_t m_rootMotionBlend = 0x2B; // NmRootMotionBlendMode_t
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 5
             //
             // Metadata:
@@ -2781,14 +2970,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bHasMorphBitArray = 0x78; // CUtlVector<uint8>
                 constexpr std::ptrdiff_t m_bHasUserBitArray = 0x90; // CUtlVector<uint8>
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CRootUpdateNode {
             }
-            // Parent: None
+            // Parent: CNmTargetValueNode__CDefinition
             // Field count: 4
             //
             // Metadata:
@@ -2808,7 +2997,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_currentSelection = 0x2C; // MotionSelection
                 constexpr std::ptrdiff_t m_previousSelection = 0x84; // MotionSelection
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Field count: 1
             //
             // Metadata:
@@ -2816,7 +3005,7 @@ namespace dota2_dumper {
             namespace CMotionGraphUpdateNode {
                 constexpr std::ptrdiff_t m_pMotionGraph = 0x58; // CSmartPtr<CMotionGraph>
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -2864,7 +3053,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bMatchTranslation = 0x85; // bool
                 constexpr std::ptrdiff_t m_bMatchRotation = 0x86; // bool
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -2881,7 +3070,7 @@ namespace dota2_dumper {
             namespace AnimNodeID {
                 constexpr std::ptrdiff_t m_id = 0x0; // uint32
             }
-            // Parent: None
+            // Parent: CNmClipReferenceNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -2890,7 +3079,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_optionNodeIndices = 0x10; // CUtlLeanVectorFixedGrowable<int16,8>
                 constexpr std::ptrdiff_t m_conditionNodeIndices = 0x28; // CUtlLeanVectorFixedGrowable<int16,8>
             }
-            // Parent: None
+            // Parent: CAnimComponentUpdater
             // Field count: 9
             //
             // Metadata:
@@ -2906,15 +3095,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_hLookTargetWorldSpace = 0x42; // CAnimParamHandle
                 constexpr std::ptrdiff_t m_bNetworkLookTarget = 0x44; // bool
             }
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            namespace CNmIsExternalPoseSetNode__CDefinition {
-                constexpr std::ptrdiff_t m_nExternalPoseNodeIdx = 0x10; // int16
-            }
-            // Parent: None
+            // Parent: CAnimGraphSettingsGroup
             // Field count: 1
             //
             // Metadata:
@@ -2923,7 +3104,7 @@ namespace dota2_dumper {
             namespace CAnimGraphNetworkSettings {
                 constexpr std::ptrdiff_t m_bNetworkingEnabled = 0x20; // bool
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Field count: 4
             //
             // Metadata:
@@ -2934,7 +3115,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_hSequence = 0x74; // HSequence
                 constexpr std::ptrdiff_t m_flCycle = 0x78; // float32
             }
-            // Parent: None
+            // Parent: CNmPassthroughNode__CDefinition
             // Field count: 9
             //
             // Metadata:
@@ -2950,7 +3131,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nChainLength = 0x70; // uint8
                 constexpr std::ptrdiff_t m_bIsTargetInWorldSpace = 0x71; // bool
             }
-            // Parent: None
+            // Parent: CNmPassthroughNode__CDefinition
             // Field count: 4
             //
             // Metadata:
@@ -2961,7 +3142,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nEnabledNodeIdx = 0x28; // int16
                 constexpr std::ptrdiff_t m_mode = 0x2A; // NmFollowBoneMode_t
             }
-            // Parent: None
+            // Parent: CMotionMetricEvaluator
             // Field count: 0
             //
             // Metadata:
@@ -2993,7 +3174,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_vFacingPosition = 0xC8; // CAnimNetVar<Vector>
                 constexpr std::ptrdiff_t m_vPrevFacingPosition = 0xDC; // Vector
             }
-            // Parent: None
+            // Parent: CAnimComponentUpdater
             // Field count: 1
             //
             // Metadata:
@@ -3034,7 +3215,7 @@ namespace dota2_dumper {
             namespace AnimStateID {
                 constexpr std::ptrdiff_t m_id = 0x0; // uint32
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -3063,7 +3244,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_morphRectDatas = 0x8; // CUtlVector<CMorphRectData>
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 4
             //
             // Metadata:
@@ -3089,7 +3270,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bZ = 0x36; // bool
                 constexpr std::ptrdiff_t m_eType = 0x38; // int32
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -3112,7 +3293,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nInfluences = 0x83; // uint8
                 constexpr std::ptrdiff_t m_bIgnoreRotation = 0x84; // bool
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Field count: 2
             //
             // Metadata:
@@ -3179,7 +3360,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bReset = 0x0; // bitfield:1
                 constexpr std::ptrdiff_t m_resetCycleOption = 0x0; // bitfield:3
             }
-            // Parent: None
+            // Parent: CMotionMetricEvaluator
             // Field count: 4
             //
             // Metadata:
@@ -3206,7 +3387,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_ElementName = 0x8; // CUtlString
                 constexpr std::ptrdiff_t m_NestedElements = 0x10; // CUtlVector<CModelConfigElement*>
             }
-            // Parent: None
+            // Parent: CNmVectorValueNode__CDefinition
             // Field count: 0
             //
             // Metadata:
@@ -3230,7 +3411,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nDisableTagIndex = 0x38; // int32
                 constexpr std::ptrdiff_t m_nFootIndex = 0x3C; // int32
             }
-            // Parent: None
+            // Parent: CNmBoneMaskValueNode__CDefinition
             // Field count: 5
             //
             // Metadata:
@@ -3307,7 +3488,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nodePaths = 0x150; // CUtlVector<CUtlString>
                 constexpr std::ptrdiff_t m_resources = 0x168; // CUtlVector<CStrongHandleVoid>
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -3372,7 +3553,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flMin = 0x0; // float32
                 constexpr std::ptrdiff_t m_flMax = 0x4; // float32
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 5
             //
             // Metadata:
@@ -3384,7 +3565,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flMinScale = 0x80; // float32
                 constexpr std::ptrdiff_t m_damping = 0x88; // CAnimInputDamping
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -3406,7 +3587,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bHasRotation = 0x2C; // bool
                 constexpr std::ptrdiff_t m_bHasMovement = 0x2D; // bool
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -3415,14 +3596,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nInputValueNodeIdx = 0x10; // int16
                 constexpr std::ptrdiff_t m_mode = 0x14; // NmCachedValueMode_t
             }
-            // Parent: None
+            // Parent: CCycleBase
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CAnimCycle {
             }
-            // Parent: None
+            // Parent: CAnimComponentUpdater
             // Field count: 1
             //
             // Metadata:
@@ -3444,7 +3625,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_resetCycleValue = 0x34; // CAnimNetVar<float32>
                 constexpr std::ptrdiff_t m_resetCount = 0x40; // CAnimNetVar<float32>
             }
-            // Parent: None
+            // Parent: CPathAnimMotorUpdaterBase
             // Field count: 7
             //
             // Metadata:
@@ -3458,7 +3639,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flMinSpringTension = 0x3C; // float32
                 constexpr std::ptrdiff_t m_flMaxSpringTension = 0x40; // float32
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -3467,7 +3648,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nInputValueNodeIdx = 0x10; // int16
                 constexpr std::ptrdiff_t m_mode = 0x14; // NmCachedValueMode_t
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 5
             //
             // Metadata:
@@ -3479,7 +3660,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flFalseValue = 0x18; // float32
                 constexpr std::ptrdiff_t m_flTrueValue = 0x1C; // float32
             }
-            // Parent: None
+            // Parent: CModelConfigElement
             // Field count: 1
             //
             // Metadata:
@@ -3499,7 +3680,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_compressedData = 0x28; // CUtlVector<uint16>
                 constexpr std::ptrdiff_t m_compressedOffsets = 0x40; // CUtlVector<uint32>
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 2
             //
             // Metadata:
@@ -3508,7 +3689,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_target = 0x18; // CNmEventTargetEntity_t
                 constexpr std::ptrdiff_t m_attributeName = 0x20; // CUtlString
             }
-            // Parent: None
+            // Parent: CNmBoneMaskValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -3525,7 +3706,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_hSequence = 0x0; // HSequence
                 constexpr std::ptrdiff_t m_cycle = 0x4; // CNetworkedCycle
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 2
             //
             // Metadata:
@@ -3554,7 +3735,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_offsets = 0x8; // CUtlVector<float32>
                 constexpr std::ptrdiff_t m_ranges = 0x20; // CUtlVector<float32>
             }
-            // Parent: None
+            // Parent: CModelConfigElement
             // Field count: 1
             //
             // Metadata:
@@ -3571,7 +3752,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_positionHandle = 0x0; // CAnimParamHandle
                 constexpr std::ptrdiff_t m_orientationHandle = 0x2; // CAnimParamHandle
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 9
             //
             // Metadata:
@@ -3587,14 +3768,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bResetChild = 0xA8; // bool
                 constexpr std::ptrdiff_t m_bAnimationDriven = 0xA9; // bool
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CChoreoUpdateNode {
             }
-            // Parent: None
+            // Parent: CBaseConstraint
             // Field count: 2
             //
             // Metadata:
@@ -3614,7 +3795,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nStartIndexOffset = 0x4; // uint32
                 constexpr std::ptrdiff_t m_nPrimitiveCount = 0x8; // uint32
             }
-            // Parent: None
+            // Parent: CAnimTagBase
             // Field count: 1
             //
             // Metadata:
@@ -3668,7 +3849,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_gameplayRelevantBoneIndices = 0xC8; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_nSpecialDependencyHash = 0xE0; // int64
             }
-            // Parent: None
+            // Parent: CMotionMetricEvaluator
             // Field count: 2
             //
             // Metadata:
@@ -3677,18 +3858,18 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_footIndices = 0x50; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_flMinStepsRemaining = 0x68; // float32
             }
-            // Parent: None
+            // Parent: CNmParameterizedBlendNode__CDefinition
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CNmVelocityBlendNode__CDefinition {
             }
-            // Parent: None
+            // Parent: CNmPoseTask
             // Field count: 0
             namespace CNmZeroPoseTask {
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 7
             //
             // Metadata:
@@ -3736,7 +3917,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_strEntityScope = 0x28; // CUtlString
                 constexpr std::ptrdiff_t m_strAttachmentName = 0x30; // CUtlString
             }
-            // Parent: None
+            // Parent: CNmVectorValueNode__CDefinition
             // Field count: 4
             //
             // Metadata:
@@ -3747,7 +3928,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_inputValueYNodeIdx = 0x14; // int16
                 constexpr std::ptrdiff_t m_inputValueZNodeIdx = 0x16; // int16
             }
-            // Parent: None
+            // Parent: CParticleInput
             // Field count: 23
             //
             // Metadata:
@@ -3778,7 +3959,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_vRandomMin = 0x6C0; // Vector
                 constexpr std::ptrdiff_t m_vRandomMax = 0x6CC; // Vector
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 11
             //
             // Metadata:
@@ -3796,7 +3977,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bIsOffState = 0xAE; // bool
                 constexpr std::ptrdiff_t m_bUseActualElapsedTimeInStateForTimedEvents = 0xAF; // bool
             }
-            // Parent: None
+            // Parent: CNmBoneMaskValueNode__CDefinition
             // Field count: 6
             //
             // Metadata:
@@ -3809,7 +3990,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_parameterValues = 0x30; // CUtlLeanVectorFixedGrowable<CGlobalSymbol,7>
                 constexpr std::ptrdiff_t m_flBlendTimeSeconds = 0x70; // float32
             }
-            // Parent: None
+            // Parent: CNmVectorValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -3817,7 +3998,7 @@ namespace dota2_dumper {
             namespace CNmVirtualParameterVectorNode__CDefinition {
                 constexpr std::ptrdiff_t m_nChildNodeIdx = 0x10; // int16
             }
-            // Parent: None
+            // Parent: CMotionMetricEvaluator
             // Field count: 1
             //
             // Metadata:
@@ -3825,7 +4006,7 @@ namespace dota2_dumper {
             namespace CFootCycleMetricEvaluator {
                 constexpr std::ptrdiff_t m_footIndices = 0x50; // CUtlVector<int32>
             }
-            // Parent: None
+            // Parent: CNmIDValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -3853,7 +4034,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_cRenderColor = 0x44; // Color
                 constexpr std::ptrdiff_t m_nHitBoxIndex = 0x48; // uint16
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 5
             //
             // Metadata:
@@ -3898,7 +4079,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flRangeStart = 0x0; // float32
                 constexpr std::ptrdiff_t m_flRangeLength = 0x4; // float32
             }
-            // Parent: None
+            // Parent: CNmPoseTask
             // Field count: 0
             namespace CNmBlendTaskBase {
             }
@@ -3912,7 +4093,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_startCycle = 0x4; // float32
                 constexpr std::ptrdiff_t m_endCycle = 0x8; // float32
             }
-            // Parent: None
+            // Parent: CNmTargetValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -3953,6 +4134,9 @@ namespace dota2_dumper {
             }
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedIntegerType
             namespace ParticleAttributeIndex_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // int32
             }
@@ -3965,7 +4149,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_subQuantizers = 0x0; // CUtlVector<CVectorQuantizer>
                 constexpr std::ptrdiff_t m_nDimensions = 0x18; // int32
             }
-            // Parent: None
+            // Parent: CAnimUpdateNodeBase
             // Field count: 10
             //
             // Metadata:
@@ -3992,7 +4176,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_BindPose = 0x10; // CTransform
                 constexpr std::ptrdiff_t m_nParent = 0x30; // int32
             }
-            // Parent: None
+            // Parent: CAnimActionUpdater
             // Field count: 3
             //
             // Metadata:
@@ -4002,7 +4186,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_eParamType = 0x1A; // AnimParamType_t
                 constexpr std::ptrdiff_t m_hScript = 0x1C; // AnimScriptHandle
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 6
             //
             // Metadata:
@@ -4015,7 +4199,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_operator = 0x16; // CNmFloatMathNode::Operator_t
                 constexpr std::ptrdiff_t m_flValueB = 0x18; // float32
             }
-            // Parent: None
+            // Parent: CAnimationGraphVisualizerPrimitiveBase
             // Field count: 3
             //
             // Metadata:
@@ -4025,7 +4209,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_vWsPositionEnd = 0x50; // VectorAligned
                 constexpr std::ptrdiff_t m_Color = 0x60; // Color
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 3
             //
             // Metadata:
@@ -4035,7 +4219,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_paramIndex = 0x74; // CAnimParamHandle
                 constexpr std::ptrdiff_t m_bLockWhenWaning = 0x76; // bool
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -4045,7 +4229,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_infoType = 0x14; // CNmTargetInfoNode::Info_t
                 constexpr std::ptrdiff_t m_bIsWorldSpaceTarget = 0x18; // bool
             }
-            // Parent: None
+            // Parent: CAnimComponentUpdater
             // Field count: 1
             //
             // Metadata:
@@ -4053,7 +4237,7 @@ namespace dota2_dumper {
             namespace CDampedValueComponentUpdater {
                 constexpr std::ptrdiff_t m_items = 0x30; // CUtlVector<CDampedValueUpdateItem>
             }
-            // Parent: None
+            // Parent: CBoneConstraintBase
             // Field count: 4
             //
             // Metadata:
@@ -4064,7 +4248,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_slaves = 0x38; // CUtlLeanVector<CConstraintSlave>
                 constexpr std::ptrdiff_t m_targets = 0x48; // CUtlVector<CConstraintTarget>
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 0
             //
             // Metadata:
@@ -4094,7 +4278,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_vAcceleration = 0xC; // Vector
                 constexpr std::ptrdiff_t m_bStopping = 0x24; // bool
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -4102,8 +4286,8 @@ namespace dota2_dumper {
             namespace CNmIsExternalGraphSlotFilledNode__CDefinition {
                 constexpr std::ptrdiff_t m_nExternalGraphNodeIdx = 0x10; // int16
             }
-            // Parent: None
-            // Field count: 33
+            // Parent: IParticleEffect
+            // Field count: 32
             namespace CNewParticleEffect {
                 constexpr std::ptrdiff_t m_pNext = 0x10; // CNewParticleEffect*
                 constexpr std::ptrdiff_t m_pPrev = 0x18; // CNewParticleEffect*
@@ -4135,11 +4319,10 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flFreezeTransitionOverride = 0x78; // float32
                 constexpr std::ptrdiff_t m_LastMin = 0x7C; // Vector
                 constexpr std::ptrdiff_t m_LastMax = 0x88; // Vector
-                constexpr std::ptrdiff_t m_nSplitScreenUser = 0x94; // CSplitScreenSlot
-                constexpr std::ptrdiff_t m_vecAggregationCenter = 0x98; // Vector
-                constexpr std::ptrdiff_t m_RefCount = 0xD0; // int32
+                constexpr std::ptrdiff_t m_vecAggregationCenter = 0x94; // Vector
+                constexpr std::ptrdiff_t m_RefCount = 0xC8; // int32
             }
-            // Parent: None
+            // Parent: CNmClipReferenceNode__CDefinition
             // Field count: 8
             //
             // Metadata:
@@ -4154,7 +4337,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flSpeedMultiplier = 0x40; // float32
                 constexpr std::ptrdiff_t m_nStartSyncEventOffset = 0x44; // int32
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 7
             //
             // Metadata:
@@ -4177,7 +4360,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_TagStatus = 0x0; // TagActionStatus
                 constexpr std::ptrdiff_t m_flTagStartAnimTime = 0x4; // float32
             }
-            // Parent: None
+            // Parent: CNmParameterizedBlendNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -4185,7 +4368,7 @@ namespace dota2_dumper {
             namespace CNmBlend1DNode__CDefinition {
                 constexpr std::ptrdiff_t m_parameterization = 0x30; // CNmParameterizedBlendNode::Parameterization_t
             }
-            // Parent: None
+            // Parent: CAnimParameterBase
             // Field count: 6
             //
             // Metadata:
@@ -4208,7 +4391,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_boneIDs = 0xE0; // CUtlVector<CGlobalSymbol>
                 constexpr std::ptrdiff_t m_weights = 0xF8; // CUtlVector<float32>
             }
-            // Parent: None
+            // Parent: CSequenceUpdateNodeBase
             // Field count: 1
             //
             // Metadata:
@@ -4216,7 +4399,7 @@ namespace dota2_dumper {
             namespace CPairedSequenceUpdateNode {
                 constexpr std::ptrdiff_t m_sPairedSequenceRole = 0x78; // CGlobalSymbol
             }
-            // Parent: None
+            // Parent: CModelConfigElement
             // Field count: 2
             //
             // Metadata:
@@ -4225,11 +4408,11 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_Choices = 0x48; // CUtlVector<CUtlString>
                 constexpr std::ptrdiff_t m_ChoiceWeights = 0x60; // CUtlVector<float32>
             }
-            // Parent: None
+            // Parent: CNmPoseTask
             // Field count: 0
             namespace CNmReferencePoseTask {
             }
-            // Parent: None
+            // Parent: CNmPassthroughNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -4288,7 +4471,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_name = 0x0; // CBufferString
                 constexpr std::ptrdiff_t m_nType = 0x10; // int32
             }
-            // Parent: None
+            // Parent: CAnimComponentUpdater
             // Field count: 10
             //
             // Metadata:
@@ -4371,7 +4554,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_networkMode = 0x24; // AnimNodeNetworkMode
                 constexpr std::ptrdiff_t m_bStartEnabled = 0x28; // bool
             }
-            // Parent: None
+            // Parent: CAnimUpdateNodeBase
             // Field count: 15
             //
             // Metadata:
@@ -4393,7 +4576,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bLockWhenWaning = 0xF2; // bool
                 constexpr std::ptrdiff_t m_bAnimEventsAndTagsOnMostWeightedOnly = 0xF3; // bool
             }
-            // Parent: None
+            // Parent: CNmSpeedScaleBaseNode__CDefinition
             // Field count: 0
             //
             // Metadata:
@@ -4405,6 +4588,7 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MModelGameData
             // MFgdHelper
             // MFgdHelper
             // MCustomFGDMetadata
@@ -4429,7 +4613,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nParent = 0x28; // int32
                 constexpr std::ptrdiff_t m_refModel = 0x30; // CStrongHandle<InfoForResourceTypeCModel>
             }
-            // Parent: None
+            // Parent: CNmIDValueNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -4438,7 +4622,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nInputValueNodeIdx = 0x10; // int16
                 constexpr std::ptrdiff_t m_mode = 0x14; // NmCachedValueMode_t
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Field count: 10
             //
             // Metadata:
@@ -4455,7 +4639,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flMaxValue = 0xE4; // float32
                 constexpr std::ptrdiff_t m_nSequenceMaxFrame = 0xE8; // int32
             }
-            // Parent: None
+            // Parent: CConcreteAnimParameter
             // Field count: 1
             //
             // Metadata:
@@ -4464,7 +4648,7 @@ namespace dota2_dumper {
             namespace CSymbolAnimParameter {
                 constexpr std::ptrdiff_t m_defaultValue = 0x80; // CGlobalSymbol
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 4
             //
             // Metadata:
@@ -4490,7 +4674,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nTransitionNodeIdx = 0x4; // int16
                 constexpr std::ptrdiff_t m_bCanBeForced = 0x6; // bool
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 5
             //
             // Metadata:
@@ -4502,7 +4686,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flEaseTime = 0x4C; // float32
                 constexpr std::ptrdiff_t m_easingOp = 0x50; // NmEasingOperation_t
             }
-            // Parent: None
+            // Parent: CAnimUpdateNodeBase
             // Field count: 10
             //
             // Metadata:
@@ -4535,7 +4719,7 @@ namespace dota2_dumper {
             namespace CHitBoxSetList {
                 constexpr std::ptrdiff_t m_HitBoxSets = 0x0; // CUtlVector<CHitBoxSet>
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 0
             //
             // Metadata:
@@ -4559,7 +4743,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_sequenceName = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_tags = 0x8; // CUtlVector<TagSpan_t>
             }
-            // Parent: None
+            // Parent: CParticleVecInput
             // Field count: 0
             //
             // Metadata:
@@ -4585,7 +4769,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flBegin = 0x0; // float32
                 constexpr std::ptrdiff_t m_flEnd = 0x4; // float32
             }
-            // Parent: None
+            // Parent: CNmIDValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -4593,7 +4777,7 @@ namespace dota2_dumper {
             namespace CNmCurrentSyncEventIDNode__CDefinition {
                 constexpr std::ptrdiff_t m_nSourceStateNodeIdx = 0x10; // int16
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -4603,7 +4787,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nTransitionDurationOverrideNodeIdx = 0x12; // int16
                 constexpr std::ptrdiff_t m_flTransitionDurationSeconds = 0x14; // float32
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 1
             //
             // Metadata:
@@ -4611,7 +4795,7 @@ namespace dota2_dumper {
             namespace CNmCameraFOVEvent {
                 constexpr std::ptrdiff_t m_curve = 0x18; // CPiecewiseCurve
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 2
             //
             // Metadata:
@@ -4635,7 +4819,7 @@ namespace dota2_dumper {
             // MGetKV3ClassDefaults
             namespace CAnimActionUpdater {
             }
-            // Parent: None
+            // Parent: CAnimTagBase
             // Field count: 11
             //
             // Metadata:
@@ -4674,7 +4858,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bWorldCoodinateTarget = 0xC; // bool
                 constexpr std::ptrdiff_t m_bMatchTargetOrientation = 0xD; // bool
             }
-            // Parent: None
+            // Parent: CNmIDValueNode__CDefinition
             // Field count: 5
             //
             // Metadata:
@@ -4686,7 +4870,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_falseValue = 0x18; // CGlobalSymbol
                 constexpr std::ptrdiff_t m_trueValue = 0x20; // CGlobalSymbol
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 1
             //
             // Metadata:
@@ -4710,11 +4894,12 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataRoot
             // MVDataOverlayType
             // MVDataAssociatedFile
             namespace CNmContactAudioTypeVData {
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 1
             //
             // Metadata:
@@ -4738,7 +4923,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bHasDecodeDump = 0x94; // bool
                 constexpr std::ptrdiff_t m_DecodeDump = 0x98; // AnimationDecodeDebugDumpElement_t
             }
-            // Parent: None
+            // Parent: CAnimActionUpdater
             // Field count: 2
             //
             // Metadata:
@@ -4760,7 +4945,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bSmoothNormalsAcrossUvSeams = 0xA; // bool
                 constexpr std::ptrdiff_t m_bEnableEyeBulgeDeformation = 0xB; // bool
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 5
             //
             // Metadata:
@@ -4772,7 +4957,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_type = 0x18; // CNmTimeConditionNode::ComparisonType_t
                 constexpr std::ptrdiff_t m_operator = 0x19; // CNmTimeConditionNode::Operator_t
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -4792,7 +4977,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_transitions = 0x20; // CUtlVector<CTransitionUpdateData>
                 constexpr std::ptrdiff_t m_startStateIndex = 0x50; // int32
             }
-            // Parent: None
+            // Parent: CAnimUpdateNodeBase
             // Field count: 1
             //
             // Metadata:
@@ -4800,7 +4985,7 @@ namespace dota2_dumper {
             namespace CUnaryUpdateNode {
                 constexpr std::ptrdiff_t m_pChildNode = 0x60; // CAnimUpdateNodeRef
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 4
             //
             // Metadata:
@@ -4821,7 +5006,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_vVelocityWS = 0xC; // Vector
                 constexpr std::ptrdiff_t m_vAccelerationWS = 0x18; // Vector
             }
-            // Parent: None
+            // Parent: CAnimUpdateNodeBase
             // Field count: 10
             //
             // Metadata:
@@ -4846,7 +5031,7 @@ namespace dota2_dumper {
             namespace NmPercent_t {
                 constexpr std::ptrdiff_t m_flValue = 0x0; // float32
             }
-            // Parent: None
+            // Parent: CAnimComponentUpdater
             // Field count: 1
             //
             // Metadata:
@@ -4878,7 +5063,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_audioSounds = 0x48; // CPhysSurfacePropertiesSoundNames
                 constexpr std::ptrdiff_t m_audioParams = 0xA8; // CPhysSurfacePropertiesAudio
             }
-            // Parent: None
+            // Parent: CNmValueNode__CDefinition
             // Field count: 0
             namespace CNmBoneMaskValueNode__CDefinition {
             }
@@ -4894,7 +5079,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flLoop = 0x18; // float32
                 constexpr std::ptrdiff_t m_bLooping = 0x1C; // bool
             }
-            // Parent: None
+            // Parent: CModelConfigElement
             // Field count: 2
             //
             // Metadata:
@@ -4917,7 +5102,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t vector = 0x14; // Vector
                 constexpr std::ptrdiff_t position = 0x20; // Vector
             }
-            // Parent: None
+            // Parent: CParticleFloatInput
             // Field count: 0
             //
             // Metadata:
@@ -4953,7 +5138,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_startTime = 0x0; // NmPercent_t
                 constexpr std::ptrdiff_t m_ID = 0x8; // CGlobalSymbol
             }
-            // Parent: None
+            // Parent: CMotionMetricEvaluator
             // Field count: 4
             //
             // Metadata:
@@ -4964,7 +5149,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bExtrapolateMovement = 0x6C; // bool
                 constexpr std::ptrdiff_t m_flMinExtrapolationSpeed = 0x70; // float32
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 20
             //
             // Metadata:
@@ -4991,14 +5176,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bEnableVerticalCurvedPaths = 0x154; // bool
                 constexpr std::ptrdiff_t m_bEnableRootHeightDamping = 0x155; // bool
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CNmOrientationWarpEvent {
             }
-            // Parent: None
+            // Parent: CNmValueNode__CDefinition
             // Field count: 0
             namespace CNmIDValueNode__CDefinition {
             }
@@ -5016,7 +5201,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_vBoundsMinLS = 0x1C; // Vector
                 constexpr std::ptrdiff_t m_eSimSpace = 0x28; // JiggleBoneSimSpace
             }
-            // Parent: None
+            // Parent: CSequenceUpdateNode
             // Field count: 8
             //
             // Metadata:
@@ -5031,14 +5216,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bTranslationAxis = 0xD0; // bool[3]
                 constexpr std::ptrdiff_t m_bScaleSpeed = 0xD3; // bool
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CNmControlParameterBoolNode__CDefinition {
             }
-            // Parent: None
+            // Parent: CNmPoseTask
             // Field count: 0
             namespace CNmChainLookatTask {
             }
@@ -5067,7 +5252,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flMaxStretchAmount = 0x5C; // float32
                 constexpr std::ptrdiff_t m_flStretchExtensionScale = 0x60; // float32
             }
-            // Parent: None
+            // Parent: CMotionMetricEvaluator
             // Field count: 1
             //
             // Metadata:
@@ -5075,7 +5260,7 @@ namespace dota2_dumper {
             namespace CBoneVelocityMetricEvaluator {
                 constexpr std::ptrdiff_t m_nBoneIndex = 0x50; // int32
             }
-            // Parent: None
+            // Parent: CWarpSectionAnimTagBase
             // Field count: 2
             //
             // Metadata:
@@ -5096,7 +5281,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_currentIndex = 0x14; // int32
                 constexpr std::ptrdiff_t m_previousIndex = 0x18; // int32
             }
-            // Parent: None
+            // Parent: CModelConfigElement
             // Field count: 1
             //
             // Metadata:
@@ -5114,7 +5299,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_name = 0x18; // CUtlString
                 constexpr std::ptrdiff_t m_bAdditive = 0x20; // bool
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 1
             //
             // Metadata:
@@ -5122,7 +5307,7 @@ namespace dota2_dumper {
             namespace CJiggleBoneUpdateNode {
                 constexpr std::ptrdiff_t m_opFixedData = 0x70; // JiggleBoneSettingsList_t
             }
-            // Parent: None
+            // Parent: CNmVectorValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -5140,7 +5325,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_sName = 0x0; // CModelAnimNameWithDeltas
                 constexpr std::ptrdiff_t m_flWeight = 0x8; // float32
             }
-            // Parent: None
+            // Parent: CAnimComponentUpdater
             // Field count: 1
             //
             // Metadata:
@@ -5148,7 +5333,7 @@ namespace dota2_dumper {
             namespace CLODComponentUpdater {
                 constexpr std::ptrdiff_t m_nServerLOD = 0x30; // int32
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -5181,15 +5366,15 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nElementIndexArray = 0x60; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_nElementMaskArray = 0x78; // CUtlVector<uint32>
             }
-            // Parent: None
+            // Parent: CAnimComponentUpdater
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPairedSequenceComponentUpdater {
             }
-            // Parent: None
-            // Field count: 14
+            // Parent: CNmEvent
+            // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -5202,6 +5387,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bStopImmediately = 0x38; // bool
                 constexpr std::ptrdiff_t m_bDetachFromOwner = 0x39; // bool
                 constexpr std::ptrdiff_t m_bPlayEndCap = 0x3A; // bool
+                constexpr std::ptrdiff_t m_bAggregate = 0x3B; // bool
                 constexpr std::ptrdiff_t m_attachmentPoint0 = 0x40; // CUtlString
                 constexpr std::ptrdiff_t m_attachmentType0 = 0x48; // ParticleAttachment_t
                 constexpr std::ptrdiff_t m_attachmentPoint1 = 0x50; // CUtlString
@@ -5245,14 +5431,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_ankleBoneIndex = 0x20; // int32
                 constexpr std::ptrdiff_t m_toeBoneIndex = 0x24; // int32
             }
-            // Parent: None
+            // Parent: CBaseConstraint
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CParentConstraint {
             }
-            // Parent: None
+            // Parent: CNmVectorValueNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -5271,7 +5457,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flTimeValueSeconds = 0x8; // float32
                 constexpr std::ptrdiff_t m_comparisionOperator = 0xC; // CNmStateNode::TimedEvent_t::Comparison_t
             }
-            // Parent: None
+            // Parent: CMotionMetricEvaluator
             // Field count: 2
             //
             // Metadata:
@@ -5303,6 +5489,9 @@ namespace dota2_dumper {
             }
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedIntegerType
             namespace HSequence {
                 constexpr std::ptrdiff_t m_Value = 0x0; // int32
             }
@@ -5329,7 +5518,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nTailFrame = 0x28; // int32
                 constexpr std::ptrdiff_t m_nEndFrame = 0x2C; // int32
             }
-            // Parent: None
+            // Parent: CAnimUpdateNodeBase
             // Field count: 13
             //
             // Metadata:
@@ -5349,7 +5538,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bLockWhenWaning = 0xD7; // bool
                 constexpr std::ptrdiff_t m_bIsAngle = 0xD8; // bool
             }
-            // Parent: None
+            // Parent: CConcreteAnimParameter
             // Field count: 2
             //
             // Metadata:
@@ -5391,7 +5580,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_animGraph2Refs = 0x2C8; // CUtlVector<ModelAnimGraph2Ref_t>
                 constexpr std::ptrdiff_t m_vecNmSkeletonRefs = 0x2E0; // CUtlVector<CStrongHandle<InfoForResourceTypeCNmSkeleton>>
             }
-            // Parent: None
+            // Parent: CNmPoseTask
             // Field count: 0
             namespace CNmSampleTask {
             }
@@ -5407,7 +5596,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flPredictionScale = 0x10; // CAnimNetVar<float32>
                 constexpr std::ptrdiff_t m_flLastPathTime = 0x1C; // float32
             }
-            // Parent: None
+            // Parent: CStaticPoseCache
             // Field count: 0
             //
             // Metadata:
@@ -5415,7 +5604,7 @@ namespace dota2_dumper {
             namespace CStaticPoseCacheBuilder {
             }
             // Parent: None
-            // Field count: 13
+            // Field count: 14
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -5427,11 +5616,12 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bMeshoptIndexSequence = 0xD; // bool
                 constexpr std::ptrdiff_t m_nMeshoptMeshletEncodeVersion = 0xE; // int8
                 constexpr std::ptrdiff_t m_bCompressedZSTD = 0xF; // bool
-                constexpr std::ptrdiff_t m_bCreateBufferSRV = 0x10; // bool
-                constexpr std::ptrdiff_t m_bCreateBufferUAV = 0x11; // bool
-                constexpr std::ptrdiff_t m_bCreateRawBuffer = 0x12; // bool
-                constexpr std::ptrdiff_t m_bCreatePooledBuffer = 0x13; // bool
-                constexpr std::ptrdiff_t m_nBufferUsage = 0x14; // uint16
+                constexpr std::ptrdiff_t m_bCompressedZ3 = 0x10; // bool
+                constexpr std::ptrdiff_t m_bCreateBufferSRV = 0x11; // bool
+                constexpr std::ptrdiff_t m_bCreateBufferUAV = 0x12; // bool
+                constexpr std::ptrdiff_t m_bCreateRawBuffer = 0x13; // bool
+                constexpr std::ptrdiff_t m_bCreatePooledBuffer = 0x14; // bool
+                constexpr std::ptrdiff_t m_nBufferUsage = 0x16; // uint16
                 constexpr std::ptrdiff_t m_inputLayoutFields = 0x18; // CUtlVector<RenderInputLayoutField_t>
             }
             // Parent: None
@@ -5455,7 +5645,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_keyValues = 0x110; // KeyValues3
                 constexpr std::ptrdiff_t m_localIKAutoplayLockArray = 0x120; // CUtlVector<CSeqIKLock>
             }
-            // Parent: None
+            // Parent: CAnimUpdateNodeBase
             // Field count: 6
             //
             // Metadata:
@@ -5468,7 +5658,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bLockStateWhenWaning = 0xFD; // bool
                 constexpr std::ptrdiff_t m_bResetWhenActivated = 0xFE; // bool
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 5
             //
             // Metadata:
@@ -5480,7 +5670,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nFallbackNodeIdx = 0x5A; // int16
                 constexpr std::ptrdiff_t m_bIgnoreInvalidOptions = 0x5C; // bool
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 6
             //
             // Metadata:
@@ -5509,7 +5699,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_FeModelPos = 0x90; // CUtlVector<VectorAligned>
                 constexpr std::ptrdiff_t m_FlexControllerWeights = 0xA8; // CUtlVector<float32>
             }
-            // Parent: None
+            // Parent: CModelConfigElement
             // Field count: 2
             //
             // Metadata:
@@ -5570,7 +5760,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_OpCode = 0x0; // FlexOpCode_t
                 constexpr std::ptrdiff_t m_Data = 0x4; // int32
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 8
             //
             // Metadata:
@@ -5585,7 +5775,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flMinDelayBetweenHits = 0xC8; // float32
                 constexpr std::ptrdiff_t m_bResetChild = 0xCC; // bool
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 6
             //
             // Metadata:
@@ -5673,7 +5863,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flFadeIn = 0x54; // float32
                 constexpr std::ptrdiff_t m_flFadeOut = 0x58; // float32
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 1
             //
             // Metadata:
@@ -5690,7 +5880,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_sSequenceName = 0x0; // CGlobalSymbol
                 constexpr std::ptrdiff_t m_tags = 0x8; // CUtlVector<TagSpan_t>
             }
-            // Parent: None
+            // Parent: CModelConfigElement
             // Field count: 2
             //
             // Metadata:
@@ -5699,14 +5889,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_GroupName = 0x48; // CUtlString
                 constexpr std::ptrdiff_t m_nChoice = 0x50; // int32
             }
-            // Parent: None
+            // Parent: CMotionMetricEvaluator
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CCurrentVelocityMetricEvaluator {
             }
-            // Parent: None
+            // Parent: CNmValueNode__CDefinition
             // Field count: 0
             namespace CNmBoolValueNode__CDefinition {
             }
@@ -5722,7 +5912,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_localToWorldTransform = 0x60; // CTransform
                 constexpr std::ptrdiff_t m_timeStamp = 0x80; // float32
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 2
             //
             // Metadata:
@@ -5731,7 +5921,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_rule = 0x18; // NmTransitionRule_t
                 constexpr std::ptrdiff_t m_ID = 0x20; // CGlobalSymbol
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 2
             //
             // Metadata:
@@ -5740,7 +5930,15 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_ID = 0x18; // CGlobalSymbol
                 constexpr std::ptrdiff_t m_curve = 0x20; // CPiecewiseCurve
             }
-            // Parent: None
+            // Parent: CNmSoundEventBase
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CNmTaggedSoundEvent {
+                constexpr std::ptrdiff_t m_name = 0x30; // CUtlString
+            }
+            // Parent: CParticleInput
             // Field count: 8
             //
             // Metadata:
@@ -5757,7 +5955,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nControlPointRangeMax = 0x60; // int32
                 constexpr std::ptrdiff_t m_flEndCPGrowthTime = 0x64; // float32
             }
-            // Parent: None
+            // Parent: CAnimMotorUpdaterBase
             // Field count: 1
             //
             // Metadata:
@@ -5765,7 +5963,7 @@ namespace dota2_dumper {
             namespace CPathAnimMotorUpdaterBase {
                 constexpr std::ptrdiff_t m_bLockToPath = 0x20; // bool
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -5798,7 +5996,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_tmCamera = 0x0; // CTransform
                 constexpr std::ptrdiff_t m_flTime = 0x20; // float32
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -5808,7 +6006,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_eventConditionRules = 0x14; // CNmBitFlags
                 constexpr std::ptrdiff_t m_conditions = 0x18; // CUtlVectorFixedGrowable<CNmGraphEventConditionNode::Condition_t,5>
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 1
             //
             // Metadata:
@@ -5816,7 +6014,7 @@ namespace dota2_dumper {
             namespace CFollowAttachmentUpdateNode {
                 constexpr std::ptrdiff_t m_opFixedData = 0x70; // FollowAttachmentSettings_t
             }
-            // Parent: None
+            // Parent: CAnimComponentUpdater
             // Field count: 8
             //
             // Metadata:
@@ -5831,7 +6029,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bNetworkFacing = 0x72; // bool
                 constexpr std::ptrdiff_t m_paramHandles = 0x73; // CAnimParamHandle[34]
             }
-            // Parent: None
+            // Parent: CModelConfigElement
             // Field count: 1
             //
             // Metadata:
@@ -5843,7 +6041,7 @@ namespace dota2_dumper {
             // Field count: 0
             namespace IParticleEffect {
             }
-            // Parent: None
+            // Parent: CMotionMetricEvaluator
             // Field count: 2
             //
             // Metadata:
@@ -5852,7 +6050,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flDistance = 0x50; // float32
                 constexpr std::ptrdiff_t m_flTime = 0x54; // float32
             }
-            // Parent: None
+            // Parent: CNmClipReferenceNode__CDefinition
             // Field count: 5
             //
             // Metadata:
@@ -5894,7 +6092,7 @@ namespace dota2_dumper {
             namespace PARTICLE_EHANDLE__ {
                 constexpr std::ptrdiff_t unused = 0x0; // int32
             }
-            // Parent: None
+            // Parent: CBinaryUpdateNode
             // Field count: 5
             //
             // Metadata:
@@ -5911,7 +6109,7 @@ namespace dota2_dumper {
             namespace CAnimEnum {
                 constexpr std::ptrdiff_t m_value = 0x0; // uint8
             }
-            // Parent: None
+            // Parent: CAnimComponentUpdater
             // Field count: 1
             //
             // Metadata:
@@ -5929,7 +6127,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nVersion = 0x10; // int32
                 constexpr std::ptrdiff_t m_nType = 0x14; // int32
             }
-            // Parent: None
+            // Parent: CNmTargetValueNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -5938,7 +6136,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nInputValueNodeIdx = 0x10; // int16
                 constexpr std::ptrdiff_t m_mode = 0x14; // NmCachedValueMode_t
             }
-            // Parent: None
+            // Parent: CParticleFloatInput
             // Field count: 0
             //
             // Metadata:
@@ -5946,7 +6144,7 @@ namespace dota2_dumper {
             // MPropertyCustomEditor
             namespace CPerParticleFloatInput {
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -5993,7 +6191,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nAliasTableIB = 0x168; // int8
                 constexpr std::ptrdiff_t m_fTriangleAreaSize = 0x16C; // float32
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 2
             //
             // Metadata:
@@ -6012,7 +6210,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bExclusiveRootMotion = 0x0; // bitfield:1
                 constexpr std::ptrdiff_t m_bExclusiveRootMotionFirstFrame = 0x0; // bitfield:1
             }
-            // Parent: None
+            // Parent: CAnimTagBase
             // Field count: 5
             //
             // Metadata:
@@ -6025,7 +6223,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_BoneName = 0x70; // CUtlString
                 constexpr std::ptrdiff_t m_footstepJumpPhase = 0x78; // FootstepJumpPhase_t
             }
-            // Parent: None
+            // Parent: CConcreteAnimParameter
             // Field count: 3
             //
             // Metadata:
@@ -6036,7 +6234,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_enumOptions = 0x90; // CUtlVector<CUtlString>
                 constexpr std::ptrdiff_t m_vecEnumReferenced = 0xA8; // CUtlVector<uint64>
             }
-            // Parent: None
+            // Parent: CAnimTagBase
             // Field count: 1
             //
             // Metadata:
@@ -6074,7 +6272,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nLocalChannel = 0x8; // int32
                 constexpr std::ptrdiff_t m_container = 0x10; // CUtlBinaryBlock
             }
-            // Parent: None
+            // Parent: CAnimComponentUpdater
             // Field count: 7
             //
             // Metadata:
@@ -6151,7 +6349,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_footStrikeCycle = 0x34; // CFootCycle
                 constexpr std::ptrdiff_t m_footLandCycle = 0x38; // CFootCycle
             }
-            // Parent: None
+            // Parent: CAnimParameterBase
             // Field count: 2
             //
             // Metadata:
@@ -6171,7 +6369,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flWeight = 0x48; // float32
                 constexpr std::ptrdiff_t m_nDimensionStartIndex = 0x4C; // int32
             }
-            // Parent: None
+            // Parent: CMotionMetricEvaluator
             // Field count: 4
             //
             // Metadata:
@@ -6201,7 +6399,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_networkMode = 0x48; // AnimNodeNetworkMode
                 constexpr std::ptrdiff_t m_name = 0x50; // CUtlString
             }
-            // Parent: None
+            // Parent: CAnimActionUpdater
             // Field count: 2
             //
             // Metadata:
@@ -6210,7 +6408,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_hParam = 0x18; // CAnimParamHandle
                 constexpr std::ptrdiff_t m_value = 0x1A; // CAnimVariant
             }
-            // Parent: None
+            // Parent: CNmBoneMaskValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -6233,7 +6431,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nFrameCount = 0x14; // int32
                 constexpr std::ptrdiff_t m_nTickCount = 0x18; // int32
             }
-            // Parent: None
+            // Parent: CMotionMetricEvaluator
             // Field count: 1
             //
             // Metadata:
@@ -6250,7 +6448,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_hBuffer = 0x0; // uint64
                 constexpr std::ptrdiff_t m_nBindOffsetBytes = 0x10; // uint32
             }
-            // Parent: None
+            // Parent: CParticleCollectionFloatInput
             // Field count: 0
             //
             // Metadata:
@@ -6267,7 +6465,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_blendRanges = 0x0; // CUtlLeanVectorFixedGrowable<CNmParameterizedBlendNode::BlendRange_t,5>
                 constexpr std::ptrdiff_t m_parameterRange = 0x48; // Range_t
             }
-            // Parent: None
+            // Parent: CNmEntityAttributeEventBase
             // Field count: 1
             //
             // Metadata:
@@ -6275,7 +6473,7 @@ namespace dota2_dumper {
             namespace CNmEntityAttributeIntEvent {
                 constexpr std::ptrdiff_t m_nIntValue = 0x38; // int32
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -6312,7 +6510,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_FlexControllers = 0x68; // CUtlVector<CFlexController>
                 constexpr std::ptrdiff_t m_FlexRules = 0x80; // CUtlVector<CFlexRule>
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -6320,7 +6518,7 @@ namespace dota2_dumper {
             namespace CNmAndNode__CDefinition {
                 constexpr std::ptrdiff_t m_conditionNodeIndices = 0x10; // CUtlLeanVectorFixedGrowable<int16,4>
             }
-            // Parent: None
+            // Parent: CBaseConstraint
             // Field count: 4
             //
             // Metadata:
@@ -6331,7 +6529,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flMin = 0x6C; // float32
                 constexpr std::ptrdiff_t m_flMax = 0x70; // float32
             }
-            // Parent: None
+            // Parent: CAnimTagBase
             // Field count: 4
             //
             // Metadata:
@@ -6358,7 +6556,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bImplicitSeqIgnoreDelta = 0x6; // bool
                 constexpr std::ptrdiff_t m_bAnimGraphAdditive = 0x7; // bool
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 7
             //
             // Metadata:
@@ -6398,7 +6596,7 @@ namespace dota2_dumper {
             namespace CNmGraphNode__CDefinition {
                 constexpr std::ptrdiff_t m_nNodeIdx = 0x8; // int16
             }
-            // Parent: None
+            // Parent: CAnimationGraphVisualizerPrimitiveBase
             // Field count: 3
             //
             // Metadata:
@@ -6427,7 +6625,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_name = 0x0; // CBufferString
                 constexpr std::ptrdiff_t m_nType = 0x10; // int32
             }
-            // Parent: None
+            // Parent: CNmSpeedScaleBaseNode__CDefinition
             // Field count: 0
             //
             // Metadata:
@@ -6445,7 +6643,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nHandshakeMaskToDisableFirst = 0x0; // bitfield:7
                 constexpr std::ptrdiff_t m_bDisabled = 0x0; // bitfield:1
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 2
             //
             // Metadata:
@@ -6454,7 +6652,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_attachmentOrBoneID = 0x18; // CGlobalSymbol
                 constexpr std::ptrdiff_t m_audioInfo = 0x20; // NmContactAudioInfo_t
             }
-            // Parent: None
+            // Parent: CHandshakeAnimTagBase
             // Field count: 0
             //
             // Metadata:
@@ -6467,6 +6665,16 @@ namespace dota2_dumper {
             namespace CBoneConstraintPoseSpaceBone__Input_t {
                 constexpr std::ptrdiff_t m_inputValue = 0x0; // Vector
                 constexpr std::ptrdiff_t m_outputTransformList = 0x10; // CUtlVector<CTransform>
+            }
+            // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace ModelMeshDNARig_t {
+                constexpr std::ptrdiff_t m_nRig = 0x0; // int32
+                constexpr std::ptrdiff_t m_nBlock = 0x4; // int32
+                constexpr std::ptrdiff_t m_bBlendShapes = 0x8; // bool
             }
             // Parent: None
             // Field count: 10
@@ -6514,7 +6722,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_primaryWeightList = 0x8; // CNmBoneWeightList
                 constexpr std::ptrdiff_t m_secondaryWeightLists = 0x118; // CUtlLeanVector<CNmBoneWeightList>
             }
-            // Parent: None
+            // Parent: CAnimTagBase
             // Field count: 7
             //
             // Metadata:
@@ -6529,7 +6737,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bPlayOnServer = 0x6E; // bool
                 constexpr std::ptrdiff_t m_bPlayOnClient = 0x6F; // bool
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 6
             //
             // Metadata:
@@ -6562,6 +6770,7 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyAutoExpandSelf
             namespace NmContactAudioInfo_t {
                 constexpr std::ptrdiff_t m_audioActionID = 0x0; // CGlobalSymbol
                 constexpr std::ptrdiff_t m_audioTypeID = 0x8; // CGlobalSymbol
@@ -6596,7 +6805,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_modelSpaceSamplingChain = 0x1C8; // CUtlVector<CNmClip::ModelSpaceSamplingChainLink_t>
                 constexpr std::ptrdiff_t m_modelSpaceBoneSamplingIndices = 0x1E0; // CUtlVector<int32>
             }
-            // Parent: None
+            // Parent: CAnimActionUpdater
             // Field count: 2
             //
             // Metadata:
@@ -6605,11 +6814,11 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_componentID = 0x18; // AnimComponentID
                 constexpr std::ptrdiff_t m_bSetEnabled = 0x1C; // bool
             }
-            // Parent: None
+            // Parent: CNmBlendTaskBase
             // Field count: 0
             namespace CNmOverlayBlendTask {
             }
-            // Parent: None
+            // Parent: CNmPassthroughNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -6618,7 +6827,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nInputValueNodeIdx = 0x18; // int16
                 constexpr std::ptrdiff_t m_flDefaultInputValue = 0x1C; // float32
             }
-            // Parent: None
+            // Parent: CNmGraphNode__CDefinition
             // Field count: 0
             namespace CNmValueNode__CDefinition {
             }
@@ -6632,7 +6841,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_OwningAnimNodePaths = 0xC; // AnimNodeID[11]
                 constexpr std::ptrdiff_t m_nOwningAnimNodePathCount = 0x38; // int32
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Field count: 0
             //
             // Metadata:
@@ -6648,7 +6857,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_startTime = 0x0; // NmSyncTrackTime_t
                 constexpr std::ptrdiff_t m_endTime = 0x8; // NmSyncTrackTime_t
             }
-            // Parent: None
+            // Parent: CAnimationGraphVisualizerPrimitiveBase
             // Field count: 3
             //
             // Metadata:
@@ -6668,7 +6877,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flRotationOffset = 0x14; // float32
                 constexpr std::ptrdiff_t m_flProgression = 0x18; // float32
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Field count: 23
             //
             // Metadata:
@@ -6698,7 +6907,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flDistanceScale_MinScale = 0x13C; // float32
                 constexpr std::ptrdiff_t m_bEnableDistanceScaling = 0x140; // bool
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 0
             //
             // Metadata:
@@ -6744,7 +6953,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_CameraTrack = 0x18; // CUtlVector<SkeletonAnimCapture_t::Camera_t>
                 constexpr std::ptrdiff_t m_flRecordingTime = 0x30; // float32
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -6754,7 +6963,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nInputValueNodeIdx = 0x18; // int16
                 constexpr std::ptrdiff_t m_bIsInclusiveCheck = 0x1A; // bool
             }
-            // Parent: None
+            // Parent: CMotionNode
             // Field count: 3
             //
             // Metadata:
@@ -6764,7 +6973,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_hSequence = 0x40; // HSequence
                 constexpr std::ptrdiff_t m_flPlaybackSpeed = 0x44; // float32
             }
-            // Parent: None
+            // Parent: CNmPassthroughNode__CDefinition
             // Field count: 7
             //
             // Metadata:
@@ -6797,12 +7006,12 @@ namespace dota2_dumper {
             // MGetKV3ClassDefaults
             namespace CRenderMesh {
                 constexpr std::ptrdiff_t m_sceneObjects = 0x10; // CUtlLeanVectorFixedGrowable<CSceneObjectData,1>
-                constexpr std::ptrdiff_t m_constraints = 0xD0; // CUtlLeanVector<CBaseConstraint*>
-                constexpr std::ptrdiff_t m_skeleton = 0xE0; // CRenderSkeleton
-                constexpr std::ptrdiff_t m_bUseUV2ForCharting = 0x1F4; // bool
-                constexpr std::ptrdiff_t m_bEmbeddedMapMesh = 0x1F5; // bool
-                constexpr std::ptrdiff_t m_meshDeformParams = 0x218; // DynamicMeshDeformParams_t
-                constexpr std::ptrdiff_t m_pGroomData = 0x228; // CRenderGroom*
+                constexpr std::ptrdiff_t m_constraints = 0xD8; // CUtlLeanVector<CBaseConstraint*>
+                constexpr std::ptrdiff_t m_skeleton = 0xE8; // CRenderSkeleton
+                constexpr std::ptrdiff_t m_bUseUV2ForCharting = 0x244; // bool
+                constexpr std::ptrdiff_t m_bEmbeddedMapMesh = 0x245; // bool
+                constexpr std::ptrdiff_t m_meshDeformParams = 0x268; // DynamicMeshDeformParams_t
+                constexpr std::ptrdiff_t m_pGroomData = 0x278; // CRenderGroom*
             }
             // Parent: None
             // Field count: 8
@@ -6829,7 +7038,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flDuration = 0x18; // CAnimNetVar<float32>
                 constexpr std::ptrdiff_t m_flStartHeadingWS = 0x3C; // float32
             }
-            // Parent: None
+            // Parent: CNmPassthroughNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -6838,7 +7047,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nEnabledNodeIdx = 0x18; // int16
                 constexpr std::ptrdiff_t m_event = 0x20; // CNmBodyGroupEvent
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 5
             //
             // Metadata:
@@ -6863,7 +7072,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_compounds = 0x40; // CUtlLeanVector<RnCompoundDesc_t>
                 constexpr std::ptrdiff_t m_CollisionAttributeIndices = 0x50; // CUtlVector<uint16>
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -6872,7 +7081,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nInputValueNodeIdx = 0x10; // int16
                 constexpr std::ptrdiff_t m_curve = 0x18; // CPiecewiseCurve
             }
-            // Parent: None
+            // Parent: CAnimationGraphVisualizerPrimitiveBase
             // Field count: 2
             //
             // Metadata:
@@ -6881,7 +7090,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_xWsTransform = 0x40; // CTransform
                 constexpr std::ptrdiff_t m_flAxisSize = 0x60; // float32
             }
-            // Parent: None
+            // Parent: CBaseConstraint
             // Field count: 3
             //
             // Metadata:
@@ -6903,7 +7112,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flMin = 0x14; // float32
                 constexpr std::ptrdiff_t m_flMax = 0x18; // float32
             }
-            // Parent: None
+            // Parent: CParticleFloatInput
             // Field count: 0
             //
             // Metadata:
@@ -6942,7 +7151,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bApplyFootRotationLimits = 0x29; // bool
             }
             // Parent: None
-            // Field count: 5
+            // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -6952,8 +7161,9 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_invBindPose = 0x10; // matrix3x4_t
                 constexpr std::ptrdiff_t m_bbox = 0x40; // SkeletonBoneBounds_t
                 constexpr std::ptrdiff_t m_flSphereRadius = 0x58; // float32
+                constexpr std::ptrdiff_t m_bRenderOnly = 0x5C; // bool
             }
-            // Parent: None
+            // Parent: CMotionMetricEvaluator
             // Field count: 7
             //
             // Metadata:
@@ -6967,7 +7177,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bFilterGoalDistance = 0x61; // bool
                 constexpr std::ptrdiff_t m_bFilterGoalOvershoot = 0x62; // bool
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 3
             //
             // Metadata:
@@ -6977,7 +7187,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bResetOnFinish = 0x75; // bool
                 constexpr std::ptrdiff_t m_allTags = 0x78; // CUtlVector<CDirectPlaybackTagData>
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 2
             //
             // Metadata:
@@ -7007,7 +7217,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_proxyWriteParams = 0x38; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_eScriptType = 0x50; // AnimScriptType
             }
-            // Parent: None
+            // Parent: CBoneConstraintBase
             // Field count: 2
             //
             // Metadata:
@@ -7028,19 +7238,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flCycleZeroTime = 0x1C; // CAnimNetVar<float32>
                 constexpr std::ptrdiff_t m_resetCount = 0x28; // CAnimNetVar<uint8>
             }
-            // Parent: None
-            // Field count: 7
+            // Parent: CNmSoundEventBase
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CNmSoundEvent {
-                constexpr std::ptrdiff_t m_relevance = 0x18; // CNmEventRelevance_t
-                constexpr std::ptrdiff_t m_name = 0x20; // CUtlString
-                constexpr std::ptrdiff_t m_position = 0x28; // CNmSoundEvent::Position_t
-                constexpr std::ptrdiff_t m_attachmentName = 0x30; // CUtlString
+                constexpr std::ptrdiff_t m_name = 0x30; // CUtlString
                 constexpr std::ptrdiff_t m_tags = 0x38; // CUtlString
-                constexpr std::ptrdiff_t m_bContinuePlayingSoundAtDurationEnd = 0x40; // bool
-                constexpr std::ptrdiff_t m_flDurationInterruptionThreshold = 0x44; // float32
             }
             // Parent: None
             // Field count: 14
@@ -7063,7 +7268,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nAttachMeshDrawCallIdx = 0x98; // int32
                 constexpr std::ptrdiff_t m_bEnableSimulation = 0xAC; // bool
             }
-            // Parent: None
+            // Parent: CNmClipReferenceNode__CDefinition
             // Field count: 5
             //
             // Metadata:
@@ -7075,7 +7280,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bIgnoreInvalidOptions = 0x3A; // bool
                 constexpr std::ptrdiff_t m_bHasWeightsSet = 0x3B; // bool
             }
-            // Parent: None
+            // Parent: CBaseConstraint
             // Field count: 2
             //
             // Metadata:
@@ -7084,7 +7289,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nTargetAxis = 0x60; // int32
                 constexpr std::ptrdiff_t m_nSlaveAxis = 0x64; // int32
             }
-            // Parent: None
+            // Parent: CNmSpeedScaleBaseNode__CDefinition
             // Field count: 0
             //
             // Metadata:
@@ -7099,7 +7304,7 @@ namespace dota2_dumper {
             namespace CVPhysXSurfacePropertiesList {
                 constexpr std::ptrdiff_t m_surfacePropertiesList = 0x0; // CUtlVector<CPhysSurfaceProperties*>
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 5
             //
             // Metadata:
@@ -7125,7 +7330,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nPackedSurfaceTangentOs = 0x20; // uint32
                 constexpr std::ptrdiff_t m_nDataOffset_Segments = 0x24; // uint32
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Field count: 6
             //
             // Metadata:
@@ -7138,7 +7343,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_paramIndex = 0x88; // CAnimParamHandle
                 constexpr std::ptrdiff_t m_bLockWhenWaning = 0x8A; // bool
             }
-            // Parent: None
+            // Parent: CNmVectorValueNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -7147,7 +7352,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nInputValueNodeIdx = 0x10; // int16
                 constexpr std::ptrdiff_t m_bIsWorldSpaceTarget = 0x12; // bool
             }
-            // Parent: None
+            // Parent: CNmClipReferenceNode__CDefinition
             // Field count: 7
             //
             // Metadata:
@@ -7161,11 +7366,11 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bIsWorldSpaceTarget = 0x33; // bool
                 constexpr std::ptrdiff_t m_alignmentBoneID = 0x38; // CGlobalSymbol
             }
-            // Parent: None
+            // Parent: CNmValueNode__CDefinition
             // Field count: 0
             namespace CNmFloatValueNode__CDefinition {
             }
-            // Parent: None
+            // Parent: CAnimTagBase
             // Field count: 0
             //
             // Metadata:
@@ -7234,7 +7439,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_modelName = 0x8; // CUtlString
                 constexpr std::ptrdiff_t m_pSharedData = 0x10; // CSmartPtr<CAnimUpdateSharedData>
             }
-            // Parent: None
+            // Parent: CBaseConstraint
             // Field count: 1
             //
             // Metadata:
@@ -7242,7 +7447,7 @@ namespace dota2_dumper {
             namespace CBoneConstraintPoseSpaceBone {
                 constexpr std::ptrdiff_t m_inputList = 0x60; // CUtlVector<CBoneConstraintPoseSpaceBone::Input_t>
             }
-            // Parent: None
+            // Parent: CNmPoseTask
             // Field count: 3
             namespace CNmTwoBoneIKTask {
                 constexpr std::ptrdiff_t m_nEffectorBoneIdx = 0x70; // int32
@@ -7258,7 +7463,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_pChild = 0x0; // CSmartPtr<CMotionNode>
                 constexpr std::ptrdiff_t m_flKeyValue = 0x8; // float32
             }
-            // Parent: None
+            // Parent: CBoneConstraintBase
             // Field count: 5
             //
             // Metadata:
@@ -7270,7 +7475,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_inputList = 0x48; // CUtlVector<CBoneConstraintPoseSpaceMorph::Input_t>
                 constexpr std::ptrdiff_t m_bClamp = 0x60; // bool
             }
-            // Parent: None
+            // Parent: CConcreteAnimParameter
             // Field count: 4
             //
             // Metadata:
@@ -7287,6 +7492,7 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataRoot
             // MVDataOverlayType
             // MVDataAssociatedFile
             namespace CNmContactAudioActionVData {
@@ -7300,7 +7506,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_pAction = 0x0; // CSmartPtr<CAnimActionUpdater>
                 constexpr std::ptrdiff_t m_eBehavior = 0x8; // StateActionBehavior
             }
-            // Parent: None
+            // Parent: CAnimMotorUpdaterBase
             // Field count: 6
             //
             // Metadata:
@@ -7342,7 +7548,7 @@ namespace dota2_dumper {
             namespace CAnimParamHandleMap {
                 constexpr std::ptrdiff_t m_list = 0x0; // CUtlHashtable<uint16,int16>
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -7351,7 +7557,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nInputValueNodeIdx = 0x10; // int16
                 constexpr std::ptrdiff_t m_clampRange = 0x14; // Range_t
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -7381,7 +7587,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_vecBoneWorldMax = 0x1B0; // CUtlVector<Vector>
                 constexpr std::ptrdiff_t m_sequenceParams = 0x1C8; // CAnimSequenceParams
             }
-            // Parent: None
+            // Parent: CNmPassthroughNode__CDefinition
             // Field count: 8
             //
             // Metadata:
@@ -7396,7 +7602,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_maxAngularVelocityRadians = 0x28; // float32
                 constexpr std::ptrdiff_t m_overrideFlags = 0x2C; // CNmBitFlags
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 11
             //
             // Metadata:
@@ -7427,7 +7633,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_softContactFrequency = 0x10; // float32
                 constexpr std::ptrdiff_t m_softContactDampingRatio = 0x14; // float32
             }
-            // Parent: None
+            // Parent: CAnimationGraphVisualizerPrimitiveBase
             // Field count: 4
             //
             // Metadata:
@@ -7447,7 +7653,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_range = 0x0; // NmCompressionSettings_t::QuantizationRange_t
                 constexpr std::ptrdiff_t m_bIsStatic = 0x8; // bool
             }
-            // Parent: None
+            // Parent: CBoneConstraintBase
             // Field count: 4
             //
             // Metadata:
@@ -7458,14 +7664,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_sMorphChannelName = 0x30; // CUtlString
                 constexpr std::ptrdiff_t m_flRemap = 0x38; // float32[4]
             }
-            // Parent: None
+            // Parent: CBaseConstraint
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPointConstraint {
             }
-            // Parent: None
+            // Parent: CMotionMetricEvaluator
             // Field count: 0
             //
             // Metadata:
@@ -7490,7 +7696,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_value = 0x0; // CAnimVariant
                 constexpr std::ptrdiff_t m_flCycle = 0x14; // float32
             }
-            // Parent: None
+            // Parent: CNmPoseTask
             // Field count: 0
             namespace CNmFollowBoneTask {
             }
@@ -7547,7 +7753,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_projectionLinearTolerance = 0xF0; // float32
                 constexpr std::ptrdiff_t m_projectionAngularTolerance = 0xF4; // float32
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 5
             //
             // Metadata:
@@ -7558,6 +7764,18 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_comparison = 0x14; // CNmFloatComparisonNode::Comparison_t
                 constexpr std::ptrdiff_t m_flEpsilon = 0x18; // float32
                 constexpr std::ptrdiff_t m_flComparisonValue = 0x1C; // float32
+            }
+            // Parent: CNmEvent
+            // Field count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CNmSoundEventBase {
+                constexpr std::ptrdiff_t m_relevance = 0x18; // CNmEventRelevance_t
+                constexpr std::ptrdiff_t m_bContinuePlayingSoundAtDurationEnd = 0x1C; // bool
+                constexpr std::ptrdiff_t m_flDurationInterruptionThreshold = 0x20; // float32
+                constexpr std::ptrdiff_t m_position = 0x24; // CNmSoundEventBase::Position_t
+                constexpr std::ptrdiff_t m_attachmentName = 0x28; // CUtlString
             }
             // Parent: None
             // Field count: 10
@@ -7586,11 +7804,11 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_turnStartTime = 0x4; // float32
                 constexpr std::ptrdiff_t m_duration = 0x8; // float32
             }
-            // Parent: None
+            // Parent: CNmValueNode__CDefinition
             // Field count: 0
             namespace CNmTargetValueNode__CDefinition {
             }
-            // Parent: None
+            // Parent: CBaseConstraint
             // Field count: 0
             //
             // Metadata:
@@ -7606,7 +7824,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flCycle = 0x0; // CAnimNetVar<float32>
                 constexpr std::ptrdiff_t m_flPrevCycle = 0xC; // CAnimNetVar<float32>
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 12
             //
             // Metadata:
@@ -7625,7 +7843,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bApplyRotation = 0xA7; // bool
                 constexpr std::ptrdiff_t m_bLimitOnly = 0xA8; // bool
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -7635,7 +7853,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bOnlySampleBaseRootMotion = 0x12; // bool
                 constexpr std::ptrdiff_t m_layerDefinition = 0x18; // CUtlLeanVectorFixedGrowable<CNmLayerBlendNode::LayerDefinition_t,3>
             }
-            // Parent: None
+            // Parent: CNmPassthroughNode__CDefinition
             // Field count: 8
             //
             // Metadata:
@@ -7667,7 +7885,7 @@ namespace dota2_dumper {
             namespace JiggleBoneSettingsList_t {
                 constexpr std::ptrdiff_t m_boneSettings = 0x0; // CUtlVector<JiggleBoneSettings_t>
             }
-            // Parent: None
+            // Parent: CBinaryUpdateNode
             // Field count: 4
             //
             // Metadata:
@@ -7678,7 +7896,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bApplyChannelsSeparately = 0x99; // bool
                 constexpr std::ptrdiff_t m_bUseModelSpace = 0x9A; // bool
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -7697,7 +7915,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nIndex = 0x0; // uint16
                 constexpr std::ptrdiff_t m_eType = 0x2; // PoseType_t
             }
-            // Parent: None
+            // Parent: CNmIDValueNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -7706,7 +7924,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nSourceStateNodeIdx = 0x10; // int16
                 constexpr std::ptrdiff_t m_eventConditionRules = 0x14; // CNmBitFlags
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 2
             //
             // Metadata:
@@ -7715,7 +7933,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_targetHandles = 0x70; // CUtlVector<CSolveIKTargetHandle_t>
                 constexpr std::ptrdiff_t m_opFixedData = 0x88; // SolveIKChainPoseOpFixedSettings_t
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -7742,7 +7960,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_activityArray = 0x60; // CUtlVector<CAnimActivity>
                 constexpr std::ptrdiff_t m_poseSettingArray = 0x78; // CUtlVector<CSeqPoseSetting>
             }
-            // Parent: None
+            // Parent: CBinaryUpdateNode
             // Field count: 7
             //
             // Metadata:
@@ -7756,15 +7974,15 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_blendValueSource = 0xA8; // AnimValueSource
                 constexpr std::ptrdiff_t m_hBlendParameter = 0xAC; // CAnimParamHandle
             }
-            // Parent: None
+            // Parent: CAnimUpdateNodeBase
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CLeafUpdateNode {
             }
-            // Parent: None
-            // Field count: 50
+            // Parent: CParticleInput
+            // Field count: 51
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -7779,6 +7997,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nVectorAttribute = 0x68; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_nVectorComponent = 0x6C; // int32
                 constexpr std::ptrdiff_t m_bReverseOrder = 0x70; // bool
+                constexpr std::ptrdiff_t m_bAbsoluteValue = 0x71; // bool
                 constexpr std::ptrdiff_t m_flRandomMin = 0x74; // float32
                 constexpr std::ptrdiff_t m_flRandomMax = 0x78; // float32
                 constexpr std::ptrdiff_t m_bHasRandomSignFlip = 0x7C; // bool
@@ -7829,7 +8048,7 @@ namespace dota2_dumper {
             namespace SolveIKChainPoseOpFixedSettings_t {
                 constexpr std::ptrdiff_t m_ChainsToSolveData = 0x0; // CUtlVector<ChainToSolveData_t>
             }
-            // Parent: None
+            // Parent: CNmEntityAttributeEventBase
             // Field count: 1
             //
             // Metadata:
@@ -7837,7 +8056,7 @@ namespace dota2_dumper {
             namespace CNmEntityAttributeFloatEvent {
                 constexpr std::ptrdiff_t m_FloatValue = 0x38; // CPiecewiseCurve
             }
-            // Parent: None
+            // Parent: CNmIDValueNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -7869,7 +8088,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bConstrainTwist = 0x14D; // bool
                 constexpr std::ptrdiff_t m_flMaxTwist = 0x150; // float32
             }
-            // Parent: None
+            // Parent: CNmPoseTask
             // Field count: 0
             namespace CNmCachedPoseWriteTask {
             }
@@ -7910,7 +8129,7 @@ namespace dota2_dumper {
             namespace CFootTrajectories {
                 constexpr std::ptrdiff_t m_trajectories = 0x0; // CUtlVector<CFootTrajectory>
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -7930,14 +8149,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_sSequenceName = 0x8; // CGlobalSymbol
                 constexpr std::ptrdiff_t m_hSequence = 0x10; // CAnimNetVar<uint32>
             }
-            // Parent: None
+            // Parent: CMotionGraph
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CEditableMotionGraph {
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -7945,7 +8164,7 @@ namespace dota2_dumper {
             namespace CNmConstFloatNode__CDefinition {
                 constexpr std::ptrdiff_t m_flValue = 0x10; // float32
             }
-            // Parent: None
+            // Parent: CAnimTagBase
             // Field count: 0
             //
             // Metadata:
@@ -7953,7 +8172,7 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             namespace CStringAnimTag {
             }
-            // Parent: None
+            // Parent: CConcreteAnimParameter
             // Field count: 1
             //
             // Metadata:
@@ -7962,7 +8181,7 @@ namespace dota2_dumper {
             namespace CBoolAnimParameter {
                 constexpr std::ptrdiff_t m_bDefaultValue = 0x80; // bool
             }
-            // Parent: None
+            // Parent: CAnimTagBase
             // Field count: 1
             //
             // Metadata:
@@ -7980,7 +8199,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_name = 0x18; // CUtlString
                 constexpr std::ptrdiff_t m_id = 0x20; // AnimNodeID
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -7989,7 +8208,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_stateDefinitions = 0x10; // CUtlLeanVectorFixedGrowable<CNmStateMachineNode::StateDefinition_t,5>
                 constexpr std::ptrdiff_t m_nDefaultStateIndex = 0x130; // int16
             }
-            // Parent: None
+            // Parent: CAnimTagBase
             // Field count: 2
             //
             // Metadata:
@@ -7999,18 +8218,18 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nPriority = 0x58; // int32
                 constexpr std::ptrdiff_t m_bodyGroupSettings = 0x60; // CUtlVector<CBodyGroupSetting>
             }
-            // Parent: None
+            // Parent: CNmBlendTaskBase
             // Field count: 0
             namespace CNmModelSpaceBlendTask {
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CNmZeroPoseNode__CDefinition {
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 7
             //
             // Metadata:
@@ -8032,7 +8251,7 @@ namespace dota2_dumper {
             namespace AnimParamID {
                 constexpr std::ptrdiff_t m_id = 0x0; // uint32
             }
-            // Parent: None
+            // Parent: CNmBoneMaskValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -8058,7 +8277,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_processingType = 0x0; // AnimationProcessingType_t
                 constexpr std::ptrdiff_t m_elems = 0x8; // CUtlVector<AnimationDecodeDebugDumpElement_t>
             }
-            // Parent: None
+            // Parent: CNmIDValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -8078,7 +8297,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nLocalBoneArray = 0x20; // CUtlVector<int16>
                 constexpr std::ptrdiff_t m_flBoneScaleArray = 0x38; // CUtlVector<float32>
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Field count: 8
             //
             // Metadata:
@@ -8114,7 +8333,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flStartCycle = 0x1C; // float32
                 constexpr std::ptrdiff_t m_flEndCycle = 0x20; // float32
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 2
             //
             // Metadata:
@@ -8132,7 +8351,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_AnimgraphParameterNameOrientation = 0x1C; // AnimParamID
                 constexpr std::ptrdiff_t m_TargetCoordSystem = 0x20; // IKTargetCoordinateSystem
             }
-            // Parent: None
+            // Parent: CModelConfigElement
             // Field count: 1
             //
             // Metadata:
@@ -8140,11 +8359,11 @@ namespace dota2_dumper {
             namespace CModelConfigElement_SetRenderColor {
                 constexpr std::ptrdiff_t m_Color = 0x48; // Color
             }
-            // Parent: None
+            // Parent: CNmBlendTaskBase
             // Field count: 0
             namespace CNmAdditiveBlendTask {
             }
-            // Parent: None
+            // Parent: CNmPoseNode__CDefinition
             // Field count: 5
             //
             // Metadata:
@@ -8166,7 +8385,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_residualQuantizer = 0x80; // CProductQuantizer
                 constexpr std::ptrdiff_t m_codeIndices = 0xA0; // CUtlVector<MotionDBIndex>
             }
-            // Parent: None
+            // Parent: CMotionNode
             // Field count: 2
             //
             // Metadata:
@@ -8175,7 +8394,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_blendItems = 0x28; // CUtlVector<MotionBlendItem>
                 constexpr std::ptrdiff_t m_nParamIndex = 0x40; // int32
             }
-            // Parent: None
+            // Parent: CNmFloatValueNode__CDefinition
             // Field count: 2
             //
             // Metadata:
@@ -8184,7 +8403,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nSourceStateNodeIdx = 0x10; // int16
                 constexpr std::ptrdiff_t m_infoType = 0x12; // CNmCurrentSyncEventNode::InfoType_t
             }
-            // Parent: None
+            // Parent: CNmTargetValueNode__CDefinition
             // Field count: 0
             //
             // Metadata:
@@ -8200,7 +8419,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_vecCenter = 0x0; // Vector
                 constexpr std::ptrdiff_t m_vecSize = 0xC; // Vector
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 1
             //
             // Metadata:
@@ -8227,7 +8446,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bOverrideMassCenter = 0x88; // bool
                 constexpr std::ptrdiff_t m_vMassCenterOverride = 0x8C; // Vector
             }
-            // Parent: None
+            // Parent: CHandshakeAnimTagBase
             // Field count: 0
             //
             // Metadata:
@@ -8235,7 +8454,7 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             namespace CTaskHandshakeAnimTag {
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 13
             //
             // Metadata:
@@ -8275,7 +8494,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flBiasAndClampPitchOffset = 0xDC; // float32
                 constexpr std::ptrdiff_t m_biasAndClampBlendCurve = 0xE0; // CBlendCurve
             }
-            // Parent: None
+            // Parent: CAnimComponentUpdater
             // Field count: 1
             //
             // Metadata:
@@ -8283,7 +8502,7 @@ namespace dota2_dumper {
             namespace CAnimScriptComponentUpdater {
                 constexpr std::ptrdiff_t m_hScript = 0x30; // AnimScriptHandle
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 2
             //
             // Metadata:
@@ -8299,14 +8518,14 @@ namespace dota2_dumper {
             // MGetKV3ClassDefaults
             namespace CBoneConstraintBase {
             }
-            // Parent: None
+            // Parent: CPathAnimMotorUpdaterBase
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPathAnimMotorUpdater {
             }
-            // Parent: None
+            // Parent: CAnimTagBase
             // Field count: 4
             //
             // Metadata:
@@ -8318,7 +8537,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flValue = 0x64; // float32
                 constexpr std::ptrdiff_t m_Color = 0x68; // Color
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 3
             //
             // Metadata:
@@ -8337,7 +8556,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_ID = 0x0; // CGlobalSymbol
                 constexpr std::ptrdiff_t m_channelIDs = 0x8; // CUtlLeanVector<CGlobalSymbol>
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 1
             //
             // Metadata:
@@ -8375,7 +8594,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_end = 0x18; // float32
             }
             // Parent: None
-            // Field count: 9
+            // Field count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -8387,8 +8606,9 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_vertexBuffers = 0x20; // CUtlVector<ModelMeshBufferData_t>
                 constexpr std::ptrdiff_t m_indexBuffers = 0x38; // CUtlVector<ModelMeshBufferData_t>
                 constexpr std::ptrdiff_t m_toolsBuffers = 0x50; // CUtlVector<ModelMeshBufferData_t>
-                constexpr std::ptrdiff_t m_nVBIBBlock = 0x68; // int32
-                constexpr std::ptrdiff_t m_nToolsVBBlock = 0x6C; // int32
+                constexpr std::ptrdiff_t m_dnaRigs = 0x68; // CUtlVector<ModelMeshDNARig_t>
+                constexpr std::ptrdiff_t m_nVBIBBlock = 0x80; // int32
+                constexpr std::ptrdiff_t m_nToolsVBBlock = 0x84; // int32
             }
             // Parent: None
             // Field count: 6
@@ -8412,7 +8632,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flFadeInTime = 0x0; // float32
                 constexpr std::ptrdiff_t m_flFadeOutTime = 0x4; // float32
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 14
             //
             // Metadata:
@@ -8433,7 +8653,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bWarpAroundCenter = 0x90; // bool
                 constexpr std::ptrdiff_t m_flMaxAngle = 0x94; // float32
             }
-            // Parent: None
+            // Parent: CNmBoolValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -8441,7 +8661,7 @@ namespace dota2_dumper {
             namespace CNmVirtualParameterBoolNode__CDefinition {
                 constexpr std::ptrdiff_t m_nChildNodeIdx = 0x10; // int16
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 3
             //
             // Metadata:
@@ -8451,7 +8671,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_hParameterPosition = 0x88; // CAnimParamHandle
                 constexpr std::ptrdiff_t m_hParameterOrientation = 0x8A; // CAnimParamHandle
             }
-            // Parent: None
+            // Parent: CAnimComponentUpdater
             // Field count: 1
             //
             // Metadata:
@@ -8486,7 +8706,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nNumIterations = 0x4; // int32
                 constexpr std::ptrdiff_t m_EndEffectorRotationFixUpMode = 0x8; // EIKEndEffectorRotationFixUpMode
             }
-            // Parent: None
+            // Parent: CAnimUpdateNodeBase
             // Field count: 6
             //
             // Metadata:
@@ -8538,6 +8758,9 @@ namespace dota2_dumper {
             }
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedIntegerType
             namespace AttachmentHandle_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // uint8
             }
@@ -8579,7 +8802,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_sampleToConfig = 0xE8; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_hIsActiveScript = 0x100; // AnimScriptHandle
             }
-            // Parent: None
+            // Parent: CNmVectorValueNode__CDefinition
             // Field count: 1
             //
             // Metadata:
@@ -8597,7 +8820,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_startTime = 0x8; // NmPercent_t
                 constexpr std::ptrdiff_t m_duration = 0xC; // NmPercent_t
             }
-            // Parent: None
+            // Parent: CParticleCollectionVecInput
             // Field count: 0
             //
             // Metadata:
@@ -8618,14 +8841,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bHasOffsets = 0x2A; // bool
                 constexpr std::ptrdiff_t m_bIsSet = 0x2B; // bool
             }
-            // Parent: None
+            // Parent: CNmIDValueNode__CDefinition
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CNmControlParameterIDNode__CDefinition {
             }
-            // Parent: None
+            // Parent: CNmEvent
             // Field count: 3
             //
             // Metadata:
@@ -8635,7 +8858,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_groupName = 0x20; // CUtlString
                 constexpr std::ptrdiff_t m_choiceName = 0x28; // CUtlString
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
             // Field count: 5
             //
             // Metadata:
@@ -8652,13 +8875,14 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataRoot
             // MVDataOverlayType
             namespace CMoodVData {
                 constexpr std::ptrdiff_t m_sModelName = 0x0; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
                 constexpr std::ptrdiff_t m_nMoodType = 0xE0; // MoodType_t
                 constexpr std::ptrdiff_t m_animationLayers = 0xE8; // CUtlVector<MoodAnimationLayer_t>
             }
-            // Parent: None
+            // Parent: CModelConfigElement
             // Field count: 15
             //
             // Metadata:

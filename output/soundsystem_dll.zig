@@ -1,12 +1,18 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 pub const dota2_dumper = struct {
     pub const schemas = struct {
         // Module: soundsystem.dll
-        // Class count: 159
-        // Enum count: 34
+        // Class count: 160
+        // Enum count: 36
         pub const soundsystem_dll = struct {
+            // Alignment: 1
+            // Member count: 2
+            pub const VMixUpMixRule_t = enum(u8) {
+                DIVIDE = 0x0,
+                BROADCAST = 0x1
+            };
             // Alignment: 4
             // Member count: 3
             pub const SndSeqInstrumentType_t = enum(u32) {
@@ -96,6 +102,12 @@ pub const dota2_dumper = struct {
                 LFO_SHAPE_TRI = 0x2,
                 LFO_SHAPE_SAW = 0x3,
                 LFO_SHAPE_NOISE = 0x4
+            };
+            // Alignment: 1
+            // Member count: 2
+            pub const VMixCompressorType_t = enum(u8) {
+                MixBus = 0x0,
+                Smooth = 0x1
             };
             // Alignment: 4
             // Member count: 13
@@ -377,7 +389,7 @@ pub const dota2_dumper = struct {
             pub const CVMixInputBase = struct {
                 pub const m_name: usize = 0x0; // CUtlString
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 3
             //
             // Metadata:
@@ -385,11 +397,11 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerBlender = struct {
-                pub const m_firstSound: usize = 0x70; // CSoundContainerReference
-                pub const m_secondSound: usize = 0x90; // CSoundContainerReference
-                pub const m_flBlendFactor: usize = 0xB0; // float32
+                pub const m_firstSound: usize = 0x78; // CSoundContainerReference
+                pub const m_secondSound: usize = 0x98; // CSoundContainerReference
+                pub const m_flBlendFactor: usize = 0xB8; // float32
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -449,7 +461,7 @@ pub const dota2_dumper = struct {
                 pub const m_curve: usize = 0x18; // CPiecewiseCurve
                 pub const m_bSyncInstances: usize = 0x58; // bool
             };
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 6
             //
             // Metadata:
@@ -463,7 +475,7 @@ pub const dota2_dumper = struct {
                 pub const m_flOcclusionMax: usize = 0x18; // float32
                 pub const m_flTestDepth: usize = 0x1C; // float32
             };
-            // Parent: None
+            // Parent: CVoiceContainerAsyncGenerator
             // Field count: 6
             //
             // Metadata:
@@ -471,14 +483,14 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerRandomSampler = struct {
-                pub const m_flAmplitude: usize = 0x80; // float32
-                pub const m_flAmplitudeJitter: usize = 0x84; // float32
-                pub const m_flTimeJitter: usize = 0x88; // float32
-                pub const m_flMaxLength: usize = 0x8C; // float32
-                pub const m_nNumDelayVariations: usize = 0x90; // int32
-                pub const m_grainResources: usize = 0x98; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+                pub const m_flAmplitude: usize = 0x88; // float32
+                pub const m_flAmplitudeJitter: usize = 0x8C; // float32
+                pub const m_flTimeJitter: usize = 0x90; // float32
+                pub const m_flMaxLength: usize = 0x94; // float32
+                pub const m_nNumDelayVariations: usize = 0x98; // int32
+                pub const m_grainResources: usize = 0xA0; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 25
             //
             // Metadata:
@@ -510,7 +522,7 @@ pub const dota2_dumper = struct {
                 pub const m_paramBand: usize = 0x84; // CVMixParameterFloat
                 pub const m_paramTransmission: usize = 0x88; // CVMixDataOffset
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 9
             //
             // Metadata:
@@ -526,7 +538,7 @@ pub const dota2_dumper = struct {
                 pub const m_paramDelayLeft: usize = 0x44; // CVMixParameterFloat
                 pub const m_paramDelayRight: usize = 0x48; // CVMixParameterFloat
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 0
             //
             // Metadata:
@@ -556,11 +568,12 @@ pub const dota2_dumper = struct {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataRoot
             // MVDataNodeType
             pub const CDSPPresetMixgroupModifierTable = struct {
                 pub const m_table: usize = 0x0; // CUtlVector<CDspPresetModifierList>
             };
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 7
             //
             // Metadata:
@@ -575,7 +588,7 @@ pub const dota2_dumper = struct {
                 pub const m_groupBoundingBoxMinsOpvar: usize = 0x28; // CUtlString
                 pub const m_groupBoundingBoxMaxsOpvar: usize = 0x30; // CUtlString
             };
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 5
             //
             // Metadata:
@@ -601,7 +614,7 @@ pub const dota2_dumper = struct {
                 pub const m_sound: usize = 0x10; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
                 pub const m_pSound: usize = 0x18; // CVoiceContainerBase*
             };
-            // Parent: None
+            // Parent: CVoiceContainerGenerator
             // Field count: 0
             //
             // Metadata:
@@ -629,12 +642,13 @@ pub const dota2_dumper = struct {
             // Metadata:
             // MGetKV3ClassDefaults
             // MVDataNodeType
+            // MPropertyPolymorphicClass
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerAnalysisBase = struct {
                 pub const m_curve: usize = 0x8; // CPiecewiseCurve
             };
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 10
             //
             // Metadata:
@@ -652,7 +666,7 @@ pub const dota2_dumper = struct {
                 pub const m_strMinValueName: usize = 0x28; // CUtlString
                 pub const m_strMaxValueName: usize = 0x30; // CUtlString
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 3
             //
             // Metadata:
@@ -682,7 +696,7 @@ pub const dota2_dumper = struct {
             pub const SamplerVoice_t = struct {
                 pub const nNoteNum: usize = 0x0; // uint8
             };
-            // Parent: None
+            // Parent: CVMixInputBase
             // Field count: 1
             //
             // Metadata:
@@ -690,7 +704,7 @@ pub const dota2_dumper = struct {
             pub const CVMixControlInput = struct {
                 pub const m_flDefaultValue: usize = 0x10; // float32
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:
@@ -698,7 +712,7 @@ pub const dota2_dumper = struct {
             pub const CVMixBoxverbProcessorDesc = struct {
                 pub const m_desc: usize = 0x28; // VMixBoxverbDesc_t
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 4
             //
             // Metadata:
@@ -718,7 +732,7 @@ pub const dota2_dumper = struct {
                 pub const m_type: usize = 0x0; // VMixPannerType_t
                 pub const m_flStrength: usize = 0x4; // float32
             };
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 4
             //
             // Metadata:
@@ -730,7 +744,7 @@ pub const dota2_dumper = struct {
                 pub const m_priorityContributeButDontRead: usize = 0x18; // CUtlString
                 pub const m_bPriorityReadButDontContribute: usize = 0x20; // CUtlString
             };
-            // Parent: None
+            // Parent: CVoiceContainerGenerator
             // Field count: 3
             //
             // Metadata:
@@ -738,9 +752,9 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerRealtimeFMSineWave = struct {
-                pub const m_flCarrierFrequency: usize = 0x70; // float32
-                pub const m_flModulatorFrequency: usize = 0x74; // float32
-                pub const m_flModulatorAmount: usize = 0x78; // float32
+                pub const m_flCarrierFrequency: usize = 0x78; // float32
+                pub const m_flModulatorFrequency: usize = 0x7C; // float32
+                pub const m_flModulatorAmount: usize = 0x80; // float32
             };
             // Parent: None
             // Field count: 1
@@ -766,7 +780,7 @@ pub const dota2_dumper = struct {
                 pub const m_flModDepth: usize = 0x28; // float32
                 pub const m_bApplyAntialiasing: usize = 0x2C; // bool
             };
-            // Parent: None
+            // Parent: CSndSeqInstBaseSchema
             // Field count: 0
             //
             // Metadata:
@@ -774,7 +788,7 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             pub const CSndSeqInstSndEvtSchema = struct {
             };
-            // Parent: None
+            // Parent: CVMixInputBase
             // Field count: 1
             //
             // Metadata:
@@ -782,11 +796,11 @@ pub const dota2_dumper = struct {
             pub const CVMixNameInputMeter = struct {
                 pub const m_nValueIndex: usize = 0x10; // CVMixDataOffset
             };
-            // Parent: None
+            // Parent: ISndSeqInstruments
             // Field count: 0
             pub const CSndSeqInstruments = struct {
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:
@@ -823,6 +837,8 @@ pub const dota2_dumper = struct {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyAutoExpandSelf
+            // MPropertyPolymorphicClass
             pub const CSosGroupActionSchema = struct {
             };
             // Parent: None
@@ -830,6 +846,7 @@ pub const dota2_dumper = struct {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataRoot
             pub const CSosSoundEventGroupSchema = struct {
                 pub const m_nGroupType: usize = 0x8; // SosGroupType_t
                 pub const m_bBlocksEvents: usize = 0xC; // bool
@@ -848,7 +865,7 @@ pub const dota2_dumper = struct {
                 pub const m_opvarString: usize = 0x50; // CUtlString
                 pub const m_vActions: usize = 0x58; // CUtlVector<CSosGroupActionSchema*>
             };
-            // Parent: None
+            // Parent: CSndSeqInstBaseSchema
             // Field count: 11
             //
             // Metadata:
@@ -881,6 +898,8 @@ pub const dota2_dumper = struct {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyAutoExpandSelf
+            // MPropertyPolymorphicClass
             pub const CSndSeqInstBaseSchema = struct {
                 pub const m_nType: usize = 0x8; // SndSeqInstrumentType_t
                 pub const m_bStopCurrentEvents: usize = 0xE; // bool
@@ -905,7 +924,7 @@ pub const dota2_dumper = struct {
                 pub const m_bPeakMode: usize = 0x20; // bool
                 pub const m_bandDesc: usize = 0x24; // VMixDynamicsBand_t[3]
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -915,17 +934,18 @@ pub const dota2_dumper = struct {
                 pub const m_paramEQScale: usize = 0xC8; // CVMixParameterFloat
             };
             // Parent: None
-            // Field count: 6
+            // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub const CDSPMixgroupModifier = struct {
                 pub const m_mixgroup: usize = 0x0; // CUtlString
-                pub const m_flModifier: usize = 0x8; // float32
-                pub const m_flModifierMin: usize = 0xC; // float32
-                pub const m_flSourceModifier: usize = 0x10; // float32
-                pub const m_flSourceModifierMin: usize = 0x14; // float32
+                pub const m_flListenerReverbFar: usize = 0x8; // float32
+                pub const m_flListenerReverbNear: usize = 0xC; // float32
+                pub const m_flSourceReverbFar: usize = 0x10; // float32
+                pub const m_flSourceReverbNear: usize = 0x14; // float32
                 pub const m_flListenerReverbModifierWhenSourceReverbIsActive: usize = 0x18; // float32
+                pub const m_flTailVolume: usize = 0x1C; // float32
             };
             // Parent: None
             // Field count: 6
@@ -940,7 +960,7 @@ pub const dota2_dumper = struct {
                 pub const m_flEaseIn: usize = 0x60; // float32
                 pub const m_flEaseOut: usize = 0x64; // float32
             };
-            // Parent: None
+            // Parent: SndBeatEventKeys_t
             // Field count: 1
             //
             // Metadata:
@@ -960,7 +980,7 @@ pub const dota2_dumper = struct {
                 pub const m_bPeakMode: usize = 0xC; // bool
                 pub const m_bandDesc: usize = 0x10; // VMixDynamicsBand_t
             };
-            // Parent: None
+            // Parent: CVMixBaseGraphDescription
             // Field count: 5
             //
             // Metadata:
@@ -972,7 +992,7 @@ pub const dota2_dumper = struct {
                 pub const m_sources: usize = 0x100; // KeyValues3
                 pub const m_fixups: usize = 0x110; // CUtlVector<VMixPointerFixupEntry_t>
             };
-            // Parent: None
+            // Parent: CVoiceContainerAsyncGenerator
             // Field count: 1
             //
             // Metadata:
@@ -980,9 +1000,9 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerStaticAdditiveSynth = struct {
-                pub const m_tones: usize = 0x80; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>
+                pub const m_tones: usize = 0x88; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>
             };
-            // Parent: None
+            // Parent: CVoiceContainerGenerator
             // Field count: 9
             //
             // Metadata:
@@ -990,15 +1010,15 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerShapedNoise = struct {
-                pub const m_bUseCurveForFrequency: usize = 0x70; // bool
-                pub const m_flFrequency: usize = 0x74; // float32
-                pub const m_frequencySweep: usize = 0x78; // CPiecewiseCurve
-                pub const m_bUseCurveForResonance: usize = 0xB8; // bool
-                pub const m_flResonance: usize = 0xBC; // float32
-                pub const m_resonanceSweep: usize = 0xC0; // CPiecewiseCurve
-                pub const m_bUseCurveForAmplitude: usize = 0x100; // bool
-                pub const m_flGainInDecibels: usize = 0x104; // float32
-                pub const m_gainSweep: usize = 0x108; // CPiecewiseCurve
+                pub const m_bUseCurveForFrequency: usize = 0x78; // bool
+                pub const m_flFrequency: usize = 0x7C; // float32
+                pub const m_frequencySweep: usize = 0x80; // CPiecewiseCurve
+                pub const m_bUseCurveForResonance: usize = 0xC0; // bool
+                pub const m_flResonance: usize = 0xC4; // float32
+                pub const m_resonanceSweep: usize = 0xC8; // CPiecewiseCurve
+                pub const m_bUseCurveForAmplitude: usize = 0x108; // bool
+                pub const m_flGainInDecibels: usize = 0x10C; // float32
+                pub const m_gainSweep: usize = 0x110; // CPiecewiseCurve
             };
             // Parent: None
             // Field count: 2
@@ -1010,19 +1030,25 @@ pub const dota2_dumper = struct {
                 pub const m_modifiers: usize = 0x8; // CUtlVector<CDSPMixgroupModifier>
             };
             // Parent: None
-            // Field count: 2
+            // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataRoot
             // MVDataNodeType
+            // MPropertyPolymorphicClass
             // MVDataFileExtension
+            // MVDataSingleton
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerBase = struct {
-                pub const m_vSound: usize = 0x28; // CVSound
-                pub const m_pEnvelopeAnalyzer: usize = 0x68; // CVoiceContainerAnalysisBase*
+                pub const m_nResourceName: usize = 0x10; // CUtlStringToken
+                pub const m_bRegisteredVMix: usize = 0x14; // bool
+                pub const m_bIsValidForPlayback: usize = 0x15; // bool
+                pub const m_vSound: usize = 0x30; // CVSound
+                pub const m_pEnvelopeAnalyzer: usize = 0x70; // CVoiceContainerAnalysisBase*
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:
@@ -1030,7 +1056,7 @@ pub const dota2_dumper = struct {
             pub const CVMixDiffusorProcessorDesc = struct {
                 pub const m_desc: usize = 0x28; // VMixDiffusorDesc_t
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:
@@ -1052,23 +1078,23 @@ pub const dota2_dumper = struct {
                 pub const m_flMaxVolume: usize = 0x14; // float32
                 pub const m_strVectorStackParam: usize = 0x18; // CUtlString
             };
-            // Parent: None
+            // Parent: CVoiceContainerAsyncGenerator
             // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             pub const CVoiceContainerGranulator = struct {
-                pub const m_flGrainLength: usize = 0x80; // float32
-                pub const m_flGrainCrossfadeAmount: usize = 0x84; // float32
-                pub const m_flStartJitter: usize = 0x88; // float32
-                pub const m_flPlaybackJitter: usize = 0x8C; // float32
-                pub const m_bShouldWraparound: usize = 0x90; // bool
-                pub const m_sourceAudio: usize = 0x98; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                pub const m_bDoubleBufferSourceAudio: usize = 0xA0; // bool
-                pub const m_flMaxSourceLength: usize = 0xA4; // float32
+                pub const m_flGrainLength: usize = 0x88; // float32
+                pub const m_flGrainCrossfadeAmount: usize = 0x8C; // float32
+                pub const m_flStartJitter: usize = 0x90; // float32
+                pub const m_flPlaybackJitter: usize = 0x94; // float32
+                pub const m_bShouldWraparound: usize = 0x98; // bool
+                pub const m_sourceAudio: usize = 0xA0; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+                pub const m_bDoubleBufferSourceAudio: usize = 0xA8; // bool
+                pub const m_flMaxSourceLength: usize = 0xAC; // float32
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -1099,7 +1125,7 @@ pub const dota2_dumper = struct {
             pub const VMixEQ8Desc_t = struct {
                 pub const m_stages: usize = 0x0; // VMixEQFilterDesc_t[8]
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 3
             //
             // Metadata:
@@ -1109,7 +1135,7 @@ pub const dota2_dumper = struct {
                 pub const m_outParamLevel: usize = 0x58; // CVMixParameterFloat
                 pub const m_outParamdBLevel: usize = 0x5C; // CVMixParameterFloat
             };
-            // Parent: None
+            // Parent: VMixFilterDesc_t
             // Field count: 1
             //
             // Metadata:
@@ -1117,7 +1143,7 @@ pub const dota2_dumper = struct {
             pub const VMixEQFilterDesc_t = struct {
                 pub const m_nChannelSet: usize = 0x10; // VMixFilterChannelSet_t
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 8
             //
             // Metadata:
@@ -1125,14 +1151,14 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerLoopXFade = struct {
-                pub const m_sound: usize = 0x70; // CSoundContainerReference
-                pub const m_flLoopEnd: usize = 0x90; // float32
-                pub const m_flLoopStart: usize = 0x94; // float32
-                pub const m_flFadeOut: usize = 0x98; // float32
-                pub const m_flFadeIn: usize = 0x9C; // float32
-                pub const m_bPlayHead: usize = 0xA0; // bool
-                pub const m_bPlayTail: usize = 0xA1; // bool
-                pub const m_bEqualPow: usize = 0xA2; // bool
+                pub const m_sound: usize = 0x78; // CSoundContainerReference
+                pub const m_flLoopEnd: usize = 0x98; // float32
+                pub const m_flLoopStart: usize = 0x9C; // float32
+                pub const m_flFadeOut: usize = 0xA0; // float32
+                pub const m_flFadeIn: usize = 0xA4; // float32
+                pub const m_bPlayHead: usize = 0xA8; // bool
+                pub const m_bPlayTail: usize = 0xA9; // bool
+                pub const m_bEqualPow: usize = 0xAA; // bool
             };
             // Parent: None
             // Field count: 1
@@ -1169,7 +1195,7 @@ pub const dota2_dumper = struct {
                 pub const m_fadeOut: usize = 0x80; // float32
                 pub const m_mode: usize = 0x84; // EVsndPlaybackMode
             };
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 2
             //
             // Metadata:
@@ -1179,7 +1205,7 @@ pub const dota2_dumper = struct {
                 pub const m_bExcludeStoppedSounds: usize = 0x8; // bool
                 pub const m_strCountKeyName: usize = 0x10; // CUtlString
             };
-            // Parent: None
+            // Parent: CVoiceContainerAnalysisBase
             // Field count: 3
             //
             // Metadata:
@@ -1205,14 +1231,14 @@ pub const dota2_dumper = struct {
                 pub const m_paramEnable: usize = 0x20; // CVMixParameterFloat
                 pub const m_paramMix: usize = 0x24; // CVMixParameterFloat
             };
-            // Parent: None
+            // Parent: CVMixInputBase
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub const CVMixImpulseResponseInput = struct {
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 5
             //
             // Metadata:
@@ -1235,7 +1261,7 @@ pub const dota2_dumper = struct {
                 pub const m_nQuality: usize = 0x8; // int32
                 pub const m_nProcType: usize = 0xC; // int32
             };
-            // Parent: None
+            // Parent: CVMixInputBase
             // Field count: 1
             //
             // Metadata:
@@ -1243,7 +1269,7 @@ pub const dota2_dumper = struct {
             pub const CVMixControlOutput = struct {
                 pub const m_flDefaultValue: usize = 0x10; // float32
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 5
             //
             // Metadata:
@@ -1255,7 +1281,7 @@ pub const dota2_dumper = struct {
                 pub const m_paramModRate: usize = 0x60; // CVMixParameterFloat
                 pub const m_paramModDepth: usize = 0x64; // CVMixParameterFloat
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -1309,6 +1335,7 @@ pub const dota2_dumper = struct {
             //
             // Metadata:
             // MPropertyArrayElementNameKey
+            // MVDataAnonymousNode
             // MVDataOutlinerNameExpr
             // MGetKV3ClassDefaults
             pub const CSndBeatTrack = struct {
@@ -1318,7 +1345,7 @@ pub const dota2_dumper = struct {
                 pub const m_bSyncToVoice: usize = 0x28; // bool
                 pub const m_flBPM: usize = 0x2C; // float32
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 17
             //
             // Metadata:
@@ -1326,23 +1353,23 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerVsndRadioButton = struct {
-                pub const m_namespace: usize = 0x70; // CUtlString
-                pub const m_slot1: usize = 0x78; // CVsndRadioButtonSlot
-                pub const m_slot2: usize = 0x100; // CVsndRadioButtonSlot
-                pub const m_slot3: usize = 0x188; // CVsndRadioButtonSlot
-                pub const m_slot4: usize = 0x210; // CVsndRadioButtonSlot
-                pub const m_slot5: usize = 0x298; // CVsndRadioButtonSlot
-                pub const m_slot6: usize = 0x320; // CVsndRadioButtonSlot
-                pub const m_slot7: usize = 0x3A8; // CVsndRadioButtonSlot
-                pub const m_slot8: usize = 0x430; // CVsndRadioButtonSlot
-                pub const m_slot9: usize = 0x4B8; // CVsndRadioButtonSlot
-                pub const m_slot10: usize = 0x540; // CVsndRadioButtonSlot
-                pub const m_slot11: usize = 0x5C8; // CVsndRadioButtonSlot
-                pub const m_slot12: usize = 0x650; // CVsndRadioButtonSlot
-                pub const m_slot13: usize = 0x6D8; // CVsndRadioButtonSlot
-                pub const m_slot14: usize = 0x760; // CVsndRadioButtonSlot
-                pub const m_slot15: usize = 0x7E8; // CVsndRadioButtonSlot
-                pub const m_slot16: usize = 0x870; // CVsndRadioButtonSlot
+                pub const m_namespace: usize = 0x78; // CUtlString
+                pub const m_slot1: usize = 0x80; // CVsndRadioButtonSlot
+                pub const m_slot2: usize = 0x108; // CVsndRadioButtonSlot
+                pub const m_slot3: usize = 0x190; // CVsndRadioButtonSlot
+                pub const m_slot4: usize = 0x218; // CVsndRadioButtonSlot
+                pub const m_slot5: usize = 0x2A0; // CVsndRadioButtonSlot
+                pub const m_slot6: usize = 0x328; // CVsndRadioButtonSlot
+                pub const m_slot7: usize = 0x3B0; // CVsndRadioButtonSlot
+                pub const m_slot8: usize = 0x438; // CVsndRadioButtonSlot
+                pub const m_slot9: usize = 0x4C0; // CVsndRadioButtonSlot
+                pub const m_slot10: usize = 0x548; // CVsndRadioButtonSlot
+                pub const m_slot11: usize = 0x5D0; // CVsndRadioButtonSlot
+                pub const m_slot12: usize = 0x658; // CVsndRadioButtonSlot
+                pub const m_slot13: usize = 0x6E0; // CVsndRadioButtonSlot
+                pub const m_slot14: usize = 0x768; // CVsndRadioButtonSlot
+                pub const m_slot15: usize = 0x7F0; // CVsndRadioButtonSlot
+                pub const m_slot16: usize = 0x878; // CVsndRadioButtonSlot
             };
             // Parent: None
             // Field count: 2
@@ -1353,7 +1380,7 @@ pub const dota2_dumper = struct {
                 pub const m_flTime: usize = 0x0; // float32
                 pub const m_flValue: usize = 0x4; // float32
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 3
             //
             // Metadata:
@@ -1363,7 +1390,7 @@ pub const dota2_dumper = struct {
                 pub const m_paramFrequency: usize = 0x34; // CVMixParameterFloat
                 pub const m_paramPhase: usize = 0x38; // CVMixParameterFloat
             };
-            // Parent: None
+            // Parent: CVoiceContainerLoopTrigger
             // Field count: 1
             //
             // Metadata:
@@ -1371,16 +1398,16 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerLoopTriggerWithRandomPanner = struct {
-                pub const m_randomPannerControls: usize = 0xA0; // CRandomPannerControls
+                pub const m_randomPannerControls: usize = 0xA8; // CRandomPannerControls
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub const CVoiceContainerGenerator = struct {
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 1
             //
             // Metadata:
@@ -1388,7 +1415,7 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerSet = struct {
-                pub const m_soundsToPlay: usize = 0x70; // CUtlVector<CVoiceContainerSetElement>
+                pub const m_soundsToPlay: usize = 0x78; // CUtlVector<CVoiceContainerSetElement>
             };
             // Parent: None
             // Field count: 8
@@ -1405,7 +1432,7 @@ pub const dota2_dumper = struct {
                 pub const m_flLowCutoffFreq: usize = 0x18; // float32
                 pub const m_flHighCutoffFreq: usize = 0x1C; // float32
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 17
             //
             // Metadata:
@@ -1413,23 +1440,23 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerVsndTrigger = struct {
-                pub const m_namespace: usize = 0x70; // CUtlString
-                pub const m_slot1: usize = 0x78; // CVsndTriggerSlot
-                pub const m_slot2: usize = 0x100; // CVsndTriggerSlot
-                pub const m_slot3: usize = 0x188; // CVsndTriggerSlot
-                pub const m_slot4: usize = 0x210; // CVsndTriggerSlot
-                pub const m_slot5: usize = 0x298; // CVsndTriggerSlot
-                pub const m_slot6: usize = 0x320; // CVsndTriggerSlot
-                pub const m_slot7: usize = 0x3A8; // CVsndTriggerSlot
-                pub const m_slot8: usize = 0x430; // CVsndTriggerSlot
-                pub const m_slot9: usize = 0x4B8; // CVsndTriggerSlot
-                pub const m_slot10: usize = 0x540; // CVsndTriggerSlot
-                pub const m_slot11: usize = 0x5C8; // CVsndTriggerSlot
-                pub const m_slot12: usize = 0x650; // CVsndTriggerSlot
-                pub const m_slot13: usize = 0x6D8; // CVsndTriggerSlot
-                pub const m_slot14: usize = 0x760; // CVsndTriggerSlot
-                pub const m_slot15: usize = 0x7E8; // CVsndTriggerSlot
-                pub const m_slot16: usize = 0x870; // CVsndTriggerSlot
+                pub const m_namespace: usize = 0x78; // CUtlString
+                pub const m_slot1: usize = 0x80; // CVsndTriggerSlot
+                pub const m_slot2: usize = 0x108; // CVsndTriggerSlot
+                pub const m_slot3: usize = 0x190; // CVsndTriggerSlot
+                pub const m_slot4: usize = 0x218; // CVsndTriggerSlot
+                pub const m_slot5: usize = 0x2A0; // CVsndTriggerSlot
+                pub const m_slot6: usize = 0x328; // CVsndTriggerSlot
+                pub const m_slot7: usize = 0x3B0; // CVsndTriggerSlot
+                pub const m_slot8: usize = 0x438; // CVsndTriggerSlot
+                pub const m_slot9: usize = 0x4C0; // CVsndTriggerSlot
+                pub const m_slot10: usize = 0x548; // CVsndTriggerSlot
+                pub const m_slot11: usize = 0x5D0; // CVsndTriggerSlot
+                pub const m_slot12: usize = 0x658; // CVsndTriggerSlot
+                pub const m_slot13: usize = 0x6E0; // CVsndTriggerSlot
+                pub const m_slot14: usize = 0x768; // CVsndTriggerSlot
+                pub const m_slot15: usize = 0x7F0; // CVsndTriggerSlot
+                pub const m_slot16: usize = 0x878; // CVsndTriggerSlot
             };
             // Parent: None
             // Field count: 2
@@ -1444,13 +1471,15 @@ pub const dota2_dumper = struct {
             // Field count: 2
             //
             // Metadata:
+            // MVDataRoot
+            // MVDataSingleton
             // MPropertyFriendlyName
             // MGetKV3ClassDefaults
             pub const CSndBeatPatternManager = struct {
                 pub const m_vecPatterns: usize = 0x38; // CUtlVector<CSndBeatPattern>
                 pub const m_vecActiveTracks: usize = 0x70; // CUtlVector<CSndBeatTrack>
             };
-            // Parent: None
+            // Parent: CVoiceContainerGenerator
             // Field count: 0
             //
             // Metadata:
@@ -1464,7 +1493,7 @@ pub const dota2_dumper = struct {
             // MGetKV3ClassDefaults
             pub const CSoundInfoHeader = struct {
             };
-            // Parent: None
+            // Parent: CVMixBaseGraphDescription
             // Field count: 4
             //
             // Metadata:
@@ -1488,7 +1517,7 @@ pub const dota2_dumper = struct {
                 pub const itemPos: usize = 0x28; // Vector2D
             };
             // Parent: None
-            // Field count: 6
+            // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1499,8 +1528,9 @@ pub const dota2_dumper = struct {
                 pub const m_nChannels: usize = 0x30; // int32
                 pub const m_nSendOperator: usize = 0x34; // VMixSendOperator_t
                 pub const m_nMixDownRule: usize = 0x36; // VMixMixDownRule_t
+                pub const m_nUpMixRule: usize = 0x37; // VMixUpMixRule_t
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 4
             //
             // Metadata:
@@ -1511,7 +1541,7 @@ pub const dota2_dumper = struct {
                 pub const m_paramModRate: usize = 0x50; // CVMixParameterFloat
                 pub const m_paramModDepth: usize = 0x54; // CVMixParameterFloat
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -1529,7 +1559,7 @@ pub const dota2_dumper = struct {
                 pub const nNumVelocityZones: usize = 0x3; // uint8
                 pub const pVelocityZones: usize = 0x8; // VelocityZone_t*
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:
@@ -1551,7 +1581,7 @@ pub const dota2_dumper = struct {
                 pub const m_flFeedbackDiffusion1: usize = 0x14; // float32
                 pub const m_flFeedbackDiffusion2: usize = 0x18; // float32
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -1580,7 +1610,7 @@ pub const dota2_dumper = struct {
                 pub const m_sounds: usize = 0x8; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
                 pub const m_pSounds: usize = 0x20; // CUtlVector<CVoiceContainerBase*>
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 3
             //
             // Metadata:
@@ -1598,19 +1628,19 @@ pub const dota2_dumper = struct {
             pub const CVMixAdditionalOutput = struct {
                 pub const m_name: usize = 0x0; // CUtlString
             };
-            // Parent: None
+            // Parent: CVoiceContainerAsyncGenerator
             // Field count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             pub const CVoiceContainerTapePlayer = struct {
-                pub const m_bShouldWraparound: usize = 0x80; // bool
-                pub const m_sourceAudio: usize = 0x88; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                pub const m_flTapeSpeedAttackTime: usize = 0x90; // float32
-                pub const m_flTapeSpeedReleaseTime: usize = 0x94; // float32
+                pub const m_bShouldWraparound: usize = 0x88; // bool
+                pub const m_sourceAudio: usize = 0x90; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+                pub const m_flTapeSpeedAttackTime: usize = 0x98; // float32
+                pub const m_flTapeSpeedReleaseTime: usize = 0x9C; // float32
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 3
             //
             // Metadata:
@@ -1631,7 +1661,7 @@ pub const dota2_dumper = struct {
                 pub const m_flFeedback: usize = 0x8; // float32
                 pub const m_flOutputGain: usize = 0xC; // float32
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 7
             //
             // Metadata:
@@ -1645,7 +1675,7 @@ pub const dota2_dumper = struct {
                 pub const m_paramArrayPathingEQ: usize = 0x3C; // CVMixDataOffset
                 pub const m_paramArrayPathingCoefficients: usize = 0x40; // CVMixDataOffset
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -1655,7 +1685,7 @@ pub const dota2_dumper = struct {
                 pub const m_paramPan: usize = 0x30; // CVMixParameterFloat
             };
             // Parent: None
-            // Field count: 11
+            // Field count: 12
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1669,8 +1699,9 @@ pub const dota2_dumper = struct {
                 pub const m_flRMSTimeMS: usize = 0x18; // float32
                 pub const m_flWetMix: usize = 0x1C; // float32
                 pub const m_flSCHighPassFreq: usize = 0x20; // float32
-                pub const m_bPeakMode: usize = 0x24; // bool
-                pub const m_bAutoMakeupGain: usize = 0x25; // bool
+                pub const m_nCompressorType: usize = 0x24; // VMixCompressorType_t
+                pub const m_bPeakMode: usize = 0x25; // bool
+                pub const m_bAutoMakeupGain: usize = 0x26; // bool
             };
             // Parent: None
             // Field count: 1
@@ -1680,7 +1711,7 @@ pub const dota2_dumper = struct {
             pub const CVMixHeap = struct {
                 pub const m_storage: usize = 0x0; // CUtlLeanVector<uint32>
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 1
             //
             // Metadata:
@@ -1688,9 +1719,9 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerVMixSnd = struct {
-                pub const m_resourceName: usize = 0x180; // CUtlString
+                pub const m_resourceName: usize = 0x188; // CUtlString
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -1737,7 +1768,7 @@ pub const dota2_dumper = struct {
                 pub const m_EmphasisSamples: usize = 0x20; // CUtlVector<CAudioEmphasisSample>
                 pub const m_morphData: usize = 0x38; // CAudioMorphData
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 8
             //
             // Metadata:
@@ -1745,14 +1776,14 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerParameterBlender = struct {
-                pub const m_firstSound: usize = 0x70; // CSoundContainerReference
-                pub const m_secondSound: usize = 0x90; // CSoundContainerReference
-                pub const m_bEnableOcclusionBlend: usize = 0xB0; // bool
-                pub const m_curve1: usize = 0xB8; // CPiecewiseCurve
-                pub const m_curve2: usize = 0xF8; // CPiecewiseCurve
-                pub const m_bEnableDistanceBlend: usize = 0x138; // bool
-                pub const m_curve3: usize = 0x140; // CPiecewiseCurve
-                pub const m_curve4: usize = 0x180; // CPiecewiseCurve
+                pub const m_firstSound: usize = 0x78; // CSoundContainerReference
+                pub const m_secondSound: usize = 0x98; // CSoundContainerReference
+                pub const m_bEnableOcclusionBlend: usize = 0xB8; // bool
+                pub const m_curve1: usize = 0xC0; // CPiecewiseCurve
+                pub const m_curve2: usize = 0x100; // CPiecewiseCurve
+                pub const m_bEnableDistanceBlend: usize = 0x140; // bool
+                pub const m_curve3: usize = 0x148; // CPiecewiseCurve
+                pub const m_curve4: usize = 0x188; // CPiecewiseCurve
             };
             // Parent: None
             // Field count: 3
@@ -1764,7 +1795,7 @@ pub const dota2_dumper = struct {
                 pub const m_displayName: usize = 0x8; // CUtlString
                 pub const m_nDebugId: usize = 0x10; // uint32
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -1773,7 +1804,7 @@ pub const dota2_dumper = struct {
                 pub const m_desc: usize = 0x28; // VMixVocoderDesc_t
                 pub const m_paramBandwidth: usize = 0x50; // CVMixParameterFloat
             };
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 5
             //
             // Metadata:
@@ -1786,7 +1817,7 @@ pub const dota2_dumper = struct {
                 pub const m_bStopImmediate: usize = 0x14; // bool
                 pub const m_bCountStopped: usize = 0x15; // bool
             };
-            // Parent: None
+            // Parent: CVoiceContainerDecayingSineWave
             // Field count: 1
             //
             // Metadata:
@@ -1794,7 +1825,7 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerAmpedDecayingSineWave = struct {
-                pub const m_flGainAmount: usize = 0x78; // float32
+                pub const m_flGainAmount: usize = 0x80; // float32
             };
             // Parent: None
             // Field count: 8
@@ -1836,7 +1867,7 @@ pub const dota2_dumper = struct {
             pub const VMixEffectChainDesc_t = struct {
                 pub const m_effectName: usize = 0x0; // CUtlString
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:
@@ -1844,7 +1875,7 @@ pub const dota2_dumper = struct {
             pub const CVMixPlateReverbProcessorDesc = struct {
                 pub const m_desc: usize = 0x28; // VMixPlateverbDesc_t
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 3
             //
             // Metadata:
@@ -1852,9 +1883,9 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerMultiBlender = struct {
-                pub const m_soundsToPlay: usize = 0x70; // CSoundContainerReferenceArray
-                pub const m_flBlendFactor: usize = 0xA8; // float32
-                pub const m_flCrossover: usize = 0xAC; // float32
+                pub const m_soundsToPlay: usize = 0x78; // CSoundContainerReferenceArray
+                pub const m_flBlendFactor: usize = 0xB0; // float32
+                pub const m_flCrossover: usize = 0xB4; // float32
             };
             // Parent: None
             // Field count: 1
@@ -1900,7 +1931,7 @@ pub const dota2_dumper = struct {
                 pub const nNumSamples: usize = 0x2; // uint8
                 pub const pSamples: usize = 0x4; // uint32[4]
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 3
             //
             // Metadata:
@@ -1908,11 +1939,11 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerSelector = struct {
-                pub const m_mode: usize = 0x70; // PlayBackMode_t
-                pub const m_soundsToPlay: usize = 0x78; // CSoundContainerReferenceArray
-                pub const m_fProbabilityWeights: usize = 0xB0; // CUtlVector<float32>
+                pub const m_mode: usize = 0x78; // PlayBackMode_t
+                pub const m_soundsToPlay: usize = 0x80; // CSoundContainerReferenceArray
+                pub const m_fProbabilityWeights: usize = 0xB8; // CUtlVector<float32>
             };
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 1
             //
             // Metadata:
@@ -1921,7 +1952,7 @@ pub const dota2_dumper = struct {
             pub const CSosGroupActionSteamAudioDimensionProbeSchema = struct {
                 pub const m_flCalculationInterval: usize = 0x8; // float32
             };
-            // Parent: None
+            // Parent: SndBeatEventKeys_t
             // Field count: 1
             //
             // Metadata:
@@ -1929,7 +1960,7 @@ pub const dota2_dumper = struct {
             pub const SndBeatEventKeyedSndEvts_t = struct {
                 pub const m_strSoundEventName: usize = 0x10; // CUtlString
             };
-            // Parent: None
+            // Parent: CVMixInputBase
             // Field count: 1
             //
             // Metadata:
@@ -1937,7 +1968,7 @@ pub const dota2_dumper = struct {
             pub const CVMixGraphInput = struct {
                 pub const m_nOffset: usize = 0x10; // CVMixDataOffset
             };
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 2
             //
             // Metadata:
@@ -1947,7 +1978,7 @@ pub const dota2_dumper = struct {
                 pub const m_nMaxCount: usize = 0x8; // int32
                 pub const m_flMaxDuration: usize = 0xC; // float32
             };
-            // Parent: None
+            // Parent: SndBeatEventKeys_t
             // Field count: 3
             //
             // Metadata:
@@ -1957,7 +1988,7 @@ pub const dota2_dumper = struct {
                 pub const m_nNote: usize = 0x11; // uint8
                 pub const m_nVelocity: usize = 0x12; // uint8
             };
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 8
             //
             // Metadata:
@@ -1973,7 +2004,7 @@ pub const dota2_dumper = struct {
                 pub const m_resultVarName: usize = 0x20; // CUtlString
                 pub const m_bSaveToGroup: usize = 0x28; // bool
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 4
             //
             // Metadata:
@@ -1984,7 +2015,7 @@ pub const dota2_dumper = struct {
                 pub const m_outParamdBLevel: usize = 0x60; // CVMixParameterFloat
                 pub const m_outParamReduction: usize = 0x64; // CVMixParameterFloat
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 1
             //
             // Metadata:
@@ -1992,9 +2023,9 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerSwitch = struct {
-                pub const m_soundsToPlay: usize = 0x70; // CUtlVector<CSoundContainerReference>
+                pub const m_soundsToPlay: usize = 0x78; // CUtlVector<CSoundContainerReference>
             };
-            // Parent: None
+            // Parent: CVMixInputBase
             // Field count: 1
             //
             // Metadata:
@@ -2002,7 +2033,7 @@ pub const dota2_dumper = struct {
             pub const CVMixControlMeter = struct {
                 pub const m_nValueIndex: usize = 0x10; // CVMixDataOffset
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 3
             //
             // Metadata:
@@ -2010,11 +2041,11 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerEnum = struct {
-                pub const m_soundsToPlay: usize = 0x70; // CSoundContainerReferenceArray
-                pub const m_iSelection: usize = 0xA8; // int32
-                pub const m_flCrossfadeTime: usize = 0xAC; // float32
+                pub const m_soundsToPlay: usize = 0x78; // CSoundContainerReferenceArray
+                pub const m_iSelection: usize = 0xB0; // int32
+                pub const m_flCrossfadeTime: usize = 0xB4; // float32
             };
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 1
             //
             // Metadata:
@@ -2053,7 +2084,7 @@ pub const dota2_dumper = struct {
                 pub const m_bBassMono: usize = 0x10; // bool
                 pub const m_flBassFreq: usize = 0x14; // float32
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 5
             //
             // Metadata:
@@ -2061,22 +2092,23 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerLoopTrigger = struct {
-                pub const m_flRetriggerTimeMin: usize = 0x70; // float32
-                pub const m_flRetriggerTimeMax: usize = 0x74; // float32
-                pub const m_flFadeTime: usize = 0x78; // float32
-                pub const m_bCrossFade: usize = 0x7C; // bool
-                pub const m_sound: usize = 0x80; // CSoundContainerReference
+                pub const m_flRetriggerTimeMin: usize = 0x78; // float32
+                pub const m_flRetriggerTimeMax: usize = 0x7C; // float32
+                pub const m_flFadeTime: usize = 0x80; // float32
+                pub const m_bCrossFade: usize = 0x84; // bool
+                pub const m_sound: usize = 0x88; // CSoundContainerReference
             };
             // Parent: None
             // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataBase
             // MVDataNodeType
             pub const SndBeatEventKeys_t = struct {
                 pub const m_flKey: usize = 0x8; // float32
             };
-            // Parent: None
+            // Parent: CVoiceContainerGenerator
             // Field count: 2
             //
             // Metadata:
@@ -2084,10 +2116,10 @@ pub const dota2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerDecayingSineWave = struct {
-                pub const m_flFrequency: usize = 0x70; // float32
-                pub const m_flDecayTime: usize = 0x74; // float32
+                pub const m_flFrequency: usize = 0x78; // float32
+                pub const m_flDecayTime: usize = 0x7C; // float32
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 3
             //
             // Metadata:
@@ -2097,7 +2129,17 @@ pub const dota2_dumper = struct {
                 pub const m_paramCutoffFrequency: usize = 0x50; // CVMixParameterFloat
                 pub const m_paramDelay: usize = 0x54; // CVMixParameterFloat
             };
-            // Parent: None
+            // Parent: CVoiceContainerBase
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            pub const CVoiceContainerReference = struct {
+                pub const m_sound: usize = 0x78; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+            };
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:
@@ -2123,6 +2165,7 @@ pub const dota2_dumper = struct {
             //
             // Metadata:
             // MPropertyArrayElementNameKey
+            // MVDataAnonymousNode
             // MVDataOutlinerNameExpr
             // MGetKV3ClassDefaults
             pub const CSndBeatPattern = struct {
@@ -2144,7 +2187,7 @@ pub const dota2_dumper = struct {
                 pub const m_flSyncBeatMult: usize = 0x9C; // float32
                 pub const m_vecSyncPatternKeys: usize = 0xA0; // CUtlVector<SndBeatEventKeys_t>
             };
-            // Parent: None
+            // Parent: CVMixSubmix
             // Field count: 0
             //
             // Metadata:
@@ -2161,7 +2204,7 @@ pub const dota2_dumper = struct {
                 pub const m_freq: usize = 0x4; // float32
                 pub const m_flPhase: usize = 0x8; // float32
             };
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:

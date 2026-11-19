@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 #pragma once
 
@@ -9,9 +9,15 @@
 namespace dota2_dumper {
     namespace schemas {
         // Module: soundsystem.dll
-        // Class count: 159
-        // Enum count: 34
+        // Class count: 160
+        // Enum count: 36
         namespace soundsystem_dll {
+            // Alignment: 1
+            // Member count: 2
+            enum class VMixUpMixRule_t : uint8_t {
+                DIVIDE = 0x0,
+                BROADCAST = 0x1
+            };
             // Alignment: 4
             // Member count: 3
             enum class SndSeqInstrumentType_t : uint32_t {
@@ -101,6 +107,12 @@ namespace dota2_dumper {
                 LFO_SHAPE_TRI = 0x2,
                 LFO_SHAPE_SAW = 0x3,
                 LFO_SHAPE_NOISE = 0x4
+            };
+            // Alignment: 1
+            // Member count: 2
+            enum class VMixCompressorType_t : uint8_t {
+                MixBus = 0x0,
+                Smooth = 0x1
             };
             // Alignment: 4
             // Member count: 13
@@ -387,7 +399,7 @@ namespace dota2_dumper {
             namespace CVMixInputBase {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 3
             //
             // Metadata:
@@ -395,11 +407,11 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerBlender {
-                constexpr std::ptrdiff_t m_firstSound = 0x70; // CSoundContainerReference
-                constexpr std::ptrdiff_t m_secondSound = 0x90; // CSoundContainerReference
-                constexpr std::ptrdiff_t m_flBlendFactor = 0xB0; // float32
+                constexpr std::ptrdiff_t m_firstSound = 0x78; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_secondSound = 0x98; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_flBlendFactor = 0xB8; // float32
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -459,7 +471,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_curve = 0x18; // CPiecewiseCurve
                 constexpr std::ptrdiff_t m_bSyncInstances = 0x58; // bool
             }
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 6
             //
             // Metadata:
@@ -473,7 +485,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flOcclusionMax = 0x18; // float32
                 constexpr std::ptrdiff_t m_flTestDepth = 0x1C; // float32
             }
-            // Parent: None
+            // Parent: CVoiceContainerAsyncGenerator
             // Field count: 6
             //
             // Metadata:
@@ -481,14 +493,14 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerRandomSampler {
-                constexpr std::ptrdiff_t m_flAmplitude = 0x80; // float32
-                constexpr std::ptrdiff_t m_flAmplitudeJitter = 0x84; // float32
-                constexpr std::ptrdiff_t m_flTimeJitter = 0x88; // float32
-                constexpr std::ptrdiff_t m_flMaxLength = 0x8C; // float32
-                constexpr std::ptrdiff_t m_nNumDelayVariations = 0x90; // int32
-                constexpr std::ptrdiff_t m_grainResources = 0x98; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+                constexpr std::ptrdiff_t m_flAmplitude = 0x88; // float32
+                constexpr std::ptrdiff_t m_flAmplitudeJitter = 0x8C; // float32
+                constexpr std::ptrdiff_t m_flTimeJitter = 0x90; // float32
+                constexpr std::ptrdiff_t m_flMaxLength = 0x94; // float32
+                constexpr std::ptrdiff_t m_nNumDelayVariations = 0x98; // int32
+                constexpr std::ptrdiff_t m_grainResources = 0xA0; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 25
             //
             // Metadata:
@@ -520,7 +532,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_paramBand = 0x84; // CVMixParameterFloat
                 constexpr std::ptrdiff_t m_paramTransmission = 0x88; // CVMixDataOffset
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 9
             //
             // Metadata:
@@ -536,7 +548,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_paramDelayLeft = 0x44; // CVMixParameterFloat
                 constexpr std::ptrdiff_t m_paramDelayRight = 0x48; // CVMixParameterFloat
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 0
             //
             // Metadata:
@@ -566,11 +578,12 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataRoot
             // MVDataNodeType
             namespace CDSPPresetMixgroupModifierTable {
                 constexpr std::ptrdiff_t m_table = 0x0; // CUtlVector<CDspPresetModifierList>
             }
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 7
             //
             // Metadata:
@@ -585,7 +598,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_groupBoundingBoxMinsOpvar = 0x28; // CUtlString
                 constexpr std::ptrdiff_t m_groupBoundingBoxMaxsOpvar = 0x30; // CUtlString
             }
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 5
             //
             // Metadata:
@@ -611,7 +624,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_sound = 0x10; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
                 constexpr std::ptrdiff_t m_pSound = 0x18; // CVoiceContainerBase*
             }
-            // Parent: None
+            // Parent: CVoiceContainerGenerator
             // Field count: 0
             //
             // Metadata:
@@ -639,12 +652,13 @@ namespace dota2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             // MVDataNodeType
+            // MPropertyPolymorphicClass
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerAnalysisBase {
                 constexpr std::ptrdiff_t m_curve = 0x8; // CPiecewiseCurve
             }
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 10
             //
             // Metadata:
@@ -662,7 +676,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_strMinValueName = 0x28; // CUtlString
                 constexpr std::ptrdiff_t m_strMaxValueName = 0x30; // CUtlString
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 3
             //
             // Metadata:
@@ -692,7 +706,7 @@ namespace dota2_dumper {
             namespace SamplerVoice_t {
                 constexpr std::ptrdiff_t nNoteNum = 0x0; // uint8
             }
-            // Parent: None
+            // Parent: CVMixInputBase
             // Field count: 1
             //
             // Metadata:
@@ -700,7 +714,7 @@ namespace dota2_dumper {
             namespace CVMixControlInput {
                 constexpr std::ptrdiff_t m_flDefaultValue = 0x10; // float32
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:
@@ -708,7 +722,7 @@ namespace dota2_dumper {
             namespace CVMixBoxverbProcessorDesc {
                 constexpr std::ptrdiff_t m_desc = 0x28; // VMixBoxverbDesc_t
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 4
             //
             // Metadata:
@@ -728,7 +742,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_type = 0x0; // VMixPannerType_t
                 constexpr std::ptrdiff_t m_flStrength = 0x4; // float32
             }
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 4
             //
             // Metadata:
@@ -740,7 +754,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_priorityContributeButDontRead = 0x18; // CUtlString
                 constexpr std::ptrdiff_t m_bPriorityReadButDontContribute = 0x20; // CUtlString
             }
-            // Parent: None
+            // Parent: CVoiceContainerGenerator
             // Field count: 3
             //
             // Metadata:
@@ -748,9 +762,9 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerRealtimeFMSineWave {
-                constexpr std::ptrdiff_t m_flCarrierFrequency = 0x70; // float32
-                constexpr std::ptrdiff_t m_flModulatorFrequency = 0x74; // float32
-                constexpr std::ptrdiff_t m_flModulatorAmount = 0x78; // float32
+                constexpr std::ptrdiff_t m_flCarrierFrequency = 0x78; // float32
+                constexpr std::ptrdiff_t m_flModulatorFrequency = 0x7C; // float32
+                constexpr std::ptrdiff_t m_flModulatorAmount = 0x80; // float32
             }
             // Parent: None
             // Field count: 1
@@ -776,7 +790,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flModDepth = 0x28; // float32
                 constexpr std::ptrdiff_t m_bApplyAntialiasing = 0x2C; // bool
             }
-            // Parent: None
+            // Parent: CSndSeqInstBaseSchema
             // Field count: 0
             //
             // Metadata:
@@ -784,7 +798,7 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             namespace CSndSeqInstSndEvtSchema {
             }
-            // Parent: None
+            // Parent: CVMixInputBase
             // Field count: 1
             //
             // Metadata:
@@ -792,11 +806,11 @@ namespace dota2_dumper {
             namespace CVMixNameInputMeter {
                 constexpr std::ptrdiff_t m_nValueIndex = 0x10; // CVMixDataOffset
             }
-            // Parent: None
+            // Parent: ISndSeqInstruments
             // Field count: 0
             namespace CSndSeqInstruments {
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:
@@ -833,6 +847,8 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyAutoExpandSelf
+            // MPropertyPolymorphicClass
             namespace CSosGroupActionSchema {
             }
             // Parent: None
@@ -840,6 +856,7 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataRoot
             namespace CSosSoundEventGroupSchema {
                 constexpr std::ptrdiff_t m_nGroupType = 0x8; // SosGroupType_t
                 constexpr std::ptrdiff_t m_bBlocksEvents = 0xC; // bool
@@ -858,7 +875,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_opvarString = 0x50; // CUtlString
                 constexpr std::ptrdiff_t m_vActions = 0x58; // CUtlVector<CSosGroupActionSchema*>
             }
-            // Parent: None
+            // Parent: CSndSeqInstBaseSchema
             // Field count: 11
             //
             // Metadata:
@@ -891,6 +908,8 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyAutoExpandSelf
+            // MPropertyPolymorphicClass
             namespace CSndSeqInstBaseSchema {
                 constexpr std::ptrdiff_t m_nType = 0x8; // SndSeqInstrumentType_t
                 constexpr std::ptrdiff_t m_bStopCurrentEvents = 0xE; // bool
@@ -915,7 +934,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bPeakMode = 0x20; // bool
                 constexpr std::ptrdiff_t m_bandDesc = 0x24; // VMixDynamicsBand_t[3]
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -925,17 +944,18 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_paramEQScale = 0xC8; // CVMixParameterFloat
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CDSPMixgroupModifier {
                 constexpr std::ptrdiff_t m_mixgroup = 0x0; // CUtlString
-                constexpr std::ptrdiff_t m_flModifier = 0x8; // float32
-                constexpr std::ptrdiff_t m_flModifierMin = 0xC; // float32
-                constexpr std::ptrdiff_t m_flSourceModifier = 0x10; // float32
-                constexpr std::ptrdiff_t m_flSourceModifierMin = 0x14; // float32
+                constexpr std::ptrdiff_t m_flListenerReverbFar = 0x8; // float32
+                constexpr std::ptrdiff_t m_flListenerReverbNear = 0xC; // float32
+                constexpr std::ptrdiff_t m_flSourceReverbFar = 0x10; // float32
+                constexpr std::ptrdiff_t m_flSourceReverbNear = 0x14; // float32
                 constexpr std::ptrdiff_t m_flListenerReverbModifierWhenSourceReverbIsActive = 0x18; // float32
+                constexpr std::ptrdiff_t m_flTailVolume = 0x1C; // float32
             }
             // Parent: None
             // Field count: 6
@@ -950,7 +970,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flEaseIn = 0x60; // float32
                 constexpr std::ptrdiff_t m_flEaseOut = 0x64; // float32
             }
-            // Parent: None
+            // Parent: SndBeatEventKeys_t
             // Field count: 1
             //
             // Metadata:
@@ -970,7 +990,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bPeakMode = 0xC; // bool
                 constexpr std::ptrdiff_t m_bandDesc = 0x10; // VMixDynamicsBand_t
             }
-            // Parent: None
+            // Parent: CVMixBaseGraphDescription
             // Field count: 5
             //
             // Metadata:
@@ -982,7 +1002,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_sources = 0x100; // KeyValues3
                 constexpr std::ptrdiff_t m_fixups = 0x110; // CUtlVector<VMixPointerFixupEntry_t>
             }
-            // Parent: None
+            // Parent: CVoiceContainerAsyncGenerator
             // Field count: 1
             //
             // Metadata:
@@ -990,9 +1010,9 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerStaticAdditiveSynth {
-                constexpr std::ptrdiff_t m_tones = 0x80; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>
+                constexpr std::ptrdiff_t m_tones = 0x88; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>
             }
-            // Parent: None
+            // Parent: CVoiceContainerGenerator
             // Field count: 9
             //
             // Metadata:
@@ -1000,15 +1020,15 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerShapedNoise {
-                constexpr std::ptrdiff_t m_bUseCurveForFrequency = 0x70; // bool
-                constexpr std::ptrdiff_t m_flFrequency = 0x74; // float32
-                constexpr std::ptrdiff_t m_frequencySweep = 0x78; // CPiecewiseCurve
-                constexpr std::ptrdiff_t m_bUseCurveForResonance = 0xB8; // bool
-                constexpr std::ptrdiff_t m_flResonance = 0xBC; // float32
-                constexpr std::ptrdiff_t m_resonanceSweep = 0xC0; // CPiecewiseCurve
-                constexpr std::ptrdiff_t m_bUseCurveForAmplitude = 0x100; // bool
-                constexpr std::ptrdiff_t m_flGainInDecibels = 0x104; // float32
-                constexpr std::ptrdiff_t m_gainSweep = 0x108; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_bUseCurveForFrequency = 0x78; // bool
+                constexpr std::ptrdiff_t m_flFrequency = 0x7C; // float32
+                constexpr std::ptrdiff_t m_frequencySweep = 0x80; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_bUseCurveForResonance = 0xC0; // bool
+                constexpr std::ptrdiff_t m_flResonance = 0xC4; // float32
+                constexpr std::ptrdiff_t m_resonanceSweep = 0xC8; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_bUseCurveForAmplitude = 0x108; // bool
+                constexpr std::ptrdiff_t m_flGainInDecibels = 0x10C; // float32
+                constexpr std::ptrdiff_t m_gainSweep = 0x110; // CPiecewiseCurve
             }
             // Parent: None
             // Field count: 2
@@ -1020,19 +1040,25 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_modifiers = 0x8; // CUtlVector<CDSPMixgroupModifier>
             }
             // Parent: None
-            // Field count: 2
+            // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataRoot
             // MVDataNodeType
+            // MPropertyPolymorphicClass
             // MVDataFileExtension
+            // MVDataSingleton
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerBase {
-                constexpr std::ptrdiff_t m_vSound = 0x28; // CVSound
-                constexpr std::ptrdiff_t m_pEnvelopeAnalyzer = 0x68; // CVoiceContainerAnalysisBase*
+                constexpr std::ptrdiff_t m_nResourceName = 0x10; // CUtlStringToken
+                constexpr std::ptrdiff_t m_bRegisteredVMix = 0x14; // bool
+                constexpr std::ptrdiff_t m_bIsValidForPlayback = 0x15; // bool
+                constexpr std::ptrdiff_t m_vSound = 0x30; // CVSound
+                constexpr std::ptrdiff_t m_pEnvelopeAnalyzer = 0x70; // CVoiceContainerAnalysisBase*
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:
@@ -1040,7 +1066,7 @@ namespace dota2_dumper {
             namespace CVMixDiffusorProcessorDesc {
                 constexpr std::ptrdiff_t m_desc = 0x28; // VMixDiffusorDesc_t
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:
@@ -1062,23 +1088,23 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flMaxVolume = 0x14; // float32
                 constexpr std::ptrdiff_t m_strVectorStackParam = 0x18; // CUtlString
             }
-            // Parent: None
+            // Parent: CVoiceContainerAsyncGenerator
             // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             namespace CVoiceContainerGranulator {
-                constexpr std::ptrdiff_t m_flGrainLength = 0x80; // float32
-                constexpr std::ptrdiff_t m_flGrainCrossfadeAmount = 0x84; // float32
-                constexpr std::ptrdiff_t m_flStartJitter = 0x88; // float32
-                constexpr std::ptrdiff_t m_flPlaybackJitter = 0x8C; // float32
-                constexpr std::ptrdiff_t m_bShouldWraparound = 0x90; // bool
-                constexpr std::ptrdiff_t m_sourceAudio = 0x98; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                constexpr std::ptrdiff_t m_bDoubleBufferSourceAudio = 0xA0; // bool
-                constexpr std::ptrdiff_t m_flMaxSourceLength = 0xA4; // float32
+                constexpr std::ptrdiff_t m_flGrainLength = 0x88; // float32
+                constexpr std::ptrdiff_t m_flGrainCrossfadeAmount = 0x8C; // float32
+                constexpr std::ptrdiff_t m_flStartJitter = 0x90; // float32
+                constexpr std::ptrdiff_t m_flPlaybackJitter = 0x94; // float32
+                constexpr std::ptrdiff_t m_bShouldWraparound = 0x98; // bool
+                constexpr std::ptrdiff_t m_sourceAudio = 0xA0; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+                constexpr std::ptrdiff_t m_bDoubleBufferSourceAudio = 0xA8; // bool
+                constexpr std::ptrdiff_t m_flMaxSourceLength = 0xAC; // float32
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -1109,7 +1135,7 @@ namespace dota2_dumper {
             namespace VMixEQ8Desc_t {
                 constexpr std::ptrdiff_t m_stages = 0x0; // VMixEQFilterDesc_t[8]
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 3
             //
             // Metadata:
@@ -1119,7 +1145,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_outParamLevel = 0x58; // CVMixParameterFloat
                 constexpr std::ptrdiff_t m_outParamdBLevel = 0x5C; // CVMixParameterFloat
             }
-            // Parent: None
+            // Parent: VMixFilterDesc_t
             // Field count: 1
             //
             // Metadata:
@@ -1127,7 +1153,7 @@ namespace dota2_dumper {
             namespace VMixEQFilterDesc_t {
                 constexpr std::ptrdiff_t m_nChannelSet = 0x10; // VMixFilterChannelSet_t
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 8
             //
             // Metadata:
@@ -1135,14 +1161,14 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerLoopXFade {
-                constexpr std::ptrdiff_t m_sound = 0x70; // CSoundContainerReference
-                constexpr std::ptrdiff_t m_flLoopEnd = 0x90; // float32
-                constexpr std::ptrdiff_t m_flLoopStart = 0x94; // float32
-                constexpr std::ptrdiff_t m_flFadeOut = 0x98; // float32
-                constexpr std::ptrdiff_t m_flFadeIn = 0x9C; // float32
-                constexpr std::ptrdiff_t m_bPlayHead = 0xA0; // bool
-                constexpr std::ptrdiff_t m_bPlayTail = 0xA1; // bool
-                constexpr std::ptrdiff_t m_bEqualPow = 0xA2; // bool
+                constexpr std::ptrdiff_t m_sound = 0x78; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_flLoopEnd = 0x98; // float32
+                constexpr std::ptrdiff_t m_flLoopStart = 0x9C; // float32
+                constexpr std::ptrdiff_t m_flFadeOut = 0xA0; // float32
+                constexpr std::ptrdiff_t m_flFadeIn = 0xA4; // float32
+                constexpr std::ptrdiff_t m_bPlayHead = 0xA8; // bool
+                constexpr std::ptrdiff_t m_bPlayTail = 0xA9; // bool
+                constexpr std::ptrdiff_t m_bEqualPow = 0xAA; // bool
             }
             // Parent: None
             // Field count: 1
@@ -1179,7 +1205,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_fadeOut = 0x80; // float32
                 constexpr std::ptrdiff_t m_mode = 0x84; // EVsndPlaybackMode
             }
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 2
             //
             // Metadata:
@@ -1189,7 +1215,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bExcludeStoppedSounds = 0x8; // bool
                 constexpr std::ptrdiff_t m_strCountKeyName = 0x10; // CUtlString
             }
-            // Parent: None
+            // Parent: CVoiceContainerAnalysisBase
             // Field count: 3
             //
             // Metadata:
@@ -1215,14 +1241,14 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_paramEnable = 0x20; // CVMixParameterFloat
                 constexpr std::ptrdiff_t m_paramMix = 0x24; // CVMixParameterFloat
             }
-            // Parent: None
+            // Parent: CVMixInputBase
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CVMixImpulseResponseInput {
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 5
             //
             // Metadata:
@@ -1245,7 +1271,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nQuality = 0x8; // int32
                 constexpr std::ptrdiff_t m_nProcType = 0xC; // int32
             }
-            // Parent: None
+            // Parent: CVMixInputBase
             // Field count: 1
             //
             // Metadata:
@@ -1253,7 +1279,7 @@ namespace dota2_dumper {
             namespace CVMixControlOutput {
                 constexpr std::ptrdiff_t m_flDefaultValue = 0x10; // float32
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 5
             //
             // Metadata:
@@ -1265,7 +1291,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_paramModRate = 0x60; // CVMixParameterFloat
                 constexpr std::ptrdiff_t m_paramModDepth = 0x64; // CVMixParameterFloat
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -1319,6 +1345,7 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MPropertyArrayElementNameKey
+            // MVDataAnonymousNode
             // MVDataOutlinerNameExpr
             // MGetKV3ClassDefaults
             namespace CSndBeatTrack {
@@ -1328,7 +1355,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bSyncToVoice = 0x28; // bool
                 constexpr std::ptrdiff_t m_flBPM = 0x2C; // float32
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 17
             //
             // Metadata:
@@ -1336,23 +1363,23 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerVsndRadioButton {
-                constexpr std::ptrdiff_t m_namespace = 0x70; // CUtlString
-                constexpr std::ptrdiff_t m_slot1 = 0x78; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot2 = 0x100; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot3 = 0x188; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot4 = 0x210; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot5 = 0x298; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot6 = 0x320; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot7 = 0x3A8; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot8 = 0x430; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot9 = 0x4B8; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot10 = 0x540; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot11 = 0x5C8; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot12 = 0x650; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot13 = 0x6D8; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot14 = 0x760; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot15 = 0x7E8; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot16 = 0x870; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_namespace = 0x78; // CUtlString
+                constexpr std::ptrdiff_t m_slot1 = 0x80; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot2 = 0x108; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot3 = 0x190; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot4 = 0x218; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot5 = 0x2A0; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot6 = 0x328; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot7 = 0x3B0; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot8 = 0x438; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot9 = 0x4C0; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot10 = 0x548; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot11 = 0x5D0; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot12 = 0x658; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot13 = 0x6E0; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot14 = 0x768; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot15 = 0x7F0; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot16 = 0x878; // CVsndRadioButtonSlot
             }
             // Parent: None
             // Field count: 2
@@ -1363,7 +1390,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flTime = 0x0; // float32
                 constexpr std::ptrdiff_t m_flValue = 0x4; // float32
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 3
             //
             // Metadata:
@@ -1373,7 +1400,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_paramFrequency = 0x34; // CVMixParameterFloat
                 constexpr std::ptrdiff_t m_paramPhase = 0x38; // CVMixParameterFloat
             }
-            // Parent: None
+            // Parent: CVoiceContainerLoopTrigger
             // Field count: 1
             //
             // Metadata:
@@ -1381,16 +1408,16 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerLoopTriggerWithRandomPanner {
-                constexpr std::ptrdiff_t m_randomPannerControls = 0xA0; // CRandomPannerControls
+                constexpr std::ptrdiff_t m_randomPannerControls = 0xA8; // CRandomPannerControls
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CVoiceContainerGenerator {
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 1
             //
             // Metadata:
@@ -1398,7 +1425,7 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerSet {
-                constexpr std::ptrdiff_t m_soundsToPlay = 0x70; // CUtlVector<CVoiceContainerSetElement>
+                constexpr std::ptrdiff_t m_soundsToPlay = 0x78; // CUtlVector<CVoiceContainerSetElement>
             }
             // Parent: None
             // Field count: 8
@@ -1415,7 +1442,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flLowCutoffFreq = 0x18; // float32
                 constexpr std::ptrdiff_t m_flHighCutoffFreq = 0x1C; // float32
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 17
             //
             // Metadata:
@@ -1423,23 +1450,23 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerVsndTrigger {
-                constexpr std::ptrdiff_t m_namespace = 0x70; // CUtlString
-                constexpr std::ptrdiff_t m_slot1 = 0x78; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot2 = 0x100; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot3 = 0x188; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot4 = 0x210; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot5 = 0x298; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot6 = 0x320; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot7 = 0x3A8; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot8 = 0x430; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot9 = 0x4B8; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot10 = 0x540; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot11 = 0x5C8; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot12 = 0x650; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot13 = 0x6D8; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot14 = 0x760; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot15 = 0x7E8; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot16 = 0x870; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_namespace = 0x78; // CUtlString
+                constexpr std::ptrdiff_t m_slot1 = 0x80; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot2 = 0x108; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot3 = 0x190; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot4 = 0x218; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot5 = 0x2A0; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot6 = 0x328; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot7 = 0x3B0; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot8 = 0x438; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot9 = 0x4C0; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot10 = 0x548; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot11 = 0x5D0; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot12 = 0x658; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot13 = 0x6E0; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot14 = 0x768; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot15 = 0x7F0; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot16 = 0x878; // CVsndTriggerSlot
             }
             // Parent: None
             // Field count: 2
@@ -1454,13 +1481,15 @@ namespace dota2_dumper {
             // Field count: 2
             //
             // Metadata:
+            // MVDataRoot
+            // MVDataSingleton
             // MPropertyFriendlyName
             // MGetKV3ClassDefaults
             namespace CSndBeatPatternManager {
                 constexpr std::ptrdiff_t m_vecPatterns = 0x38; // CUtlVector<CSndBeatPattern>
                 constexpr std::ptrdiff_t m_vecActiveTracks = 0x70; // CUtlVector<CSndBeatTrack>
             }
-            // Parent: None
+            // Parent: CVoiceContainerGenerator
             // Field count: 0
             //
             // Metadata:
@@ -1474,7 +1503,7 @@ namespace dota2_dumper {
             // MGetKV3ClassDefaults
             namespace CSoundInfoHeader {
             }
-            // Parent: None
+            // Parent: CVMixBaseGraphDescription
             // Field count: 4
             //
             // Metadata:
@@ -1498,7 +1527,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t itemPos = 0x28; // Vector2D
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1509,8 +1538,9 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nChannels = 0x30; // int32
                 constexpr std::ptrdiff_t m_nSendOperator = 0x34; // VMixSendOperator_t
                 constexpr std::ptrdiff_t m_nMixDownRule = 0x36; // VMixMixDownRule_t
+                constexpr std::ptrdiff_t m_nUpMixRule = 0x37; // VMixUpMixRule_t
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 4
             //
             // Metadata:
@@ -1521,7 +1551,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_paramModRate = 0x50; // CVMixParameterFloat
                 constexpr std::ptrdiff_t m_paramModDepth = 0x54; // CVMixParameterFloat
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -1539,7 +1569,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t nNumVelocityZones = 0x3; // uint8
                 constexpr std::ptrdiff_t pVelocityZones = 0x8; // VelocityZone_t*
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:
@@ -1561,7 +1591,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flFeedbackDiffusion1 = 0x14; // float32
                 constexpr std::ptrdiff_t m_flFeedbackDiffusion2 = 0x18; // float32
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -1590,7 +1620,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_sounds = 0x8; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
                 constexpr std::ptrdiff_t m_pSounds = 0x20; // CUtlVector<CVoiceContainerBase*>
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 3
             //
             // Metadata:
@@ -1608,19 +1638,19 @@ namespace dota2_dumper {
             namespace CVMixAdditionalOutput {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
             }
-            // Parent: None
+            // Parent: CVoiceContainerAsyncGenerator
             // Field count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             namespace CVoiceContainerTapePlayer {
-                constexpr std::ptrdiff_t m_bShouldWraparound = 0x80; // bool
-                constexpr std::ptrdiff_t m_sourceAudio = 0x88; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                constexpr std::ptrdiff_t m_flTapeSpeedAttackTime = 0x90; // float32
-                constexpr std::ptrdiff_t m_flTapeSpeedReleaseTime = 0x94; // float32
+                constexpr std::ptrdiff_t m_bShouldWraparound = 0x88; // bool
+                constexpr std::ptrdiff_t m_sourceAudio = 0x90; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+                constexpr std::ptrdiff_t m_flTapeSpeedAttackTime = 0x98; // float32
+                constexpr std::ptrdiff_t m_flTapeSpeedReleaseTime = 0x9C; // float32
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 3
             //
             // Metadata:
@@ -1641,7 +1671,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flFeedback = 0x8; // float32
                 constexpr std::ptrdiff_t m_flOutputGain = 0xC; // float32
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 7
             //
             // Metadata:
@@ -1655,7 +1685,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_paramArrayPathingEQ = 0x3C; // CVMixDataOffset
                 constexpr std::ptrdiff_t m_paramArrayPathingCoefficients = 0x40; // CVMixDataOffset
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -1665,7 +1695,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_paramPan = 0x30; // CVMixParameterFloat
             }
             // Parent: None
-            // Field count: 11
+            // Field count: 12
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1679,8 +1709,9 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flRMSTimeMS = 0x18; // float32
                 constexpr std::ptrdiff_t m_flWetMix = 0x1C; // float32
                 constexpr std::ptrdiff_t m_flSCHighPassFreq = 0x20; // float32
-                constexpr std::ptrdiff_t m_bPeakMode = 0x24; // bool
-                constexpr std::ptrdiff_t m_bAutoMakeupGain = 0x25; // bool
+                constexpr std::ptrdiff_t m_nCompressorType = 0x24; // VMixCompressorType_t
+                constexpr std::ptrdiff_t m_bPeakMode = 0x25; // bool
+                constexpr std::ptrdiff_t m_bAutoMakeupGain = 0x26; // bool
             }
             // Parent: None
             // Field count: 1
@@ -1690,7 +1721,7 @@ namespace dota2_dumper {
             namespace CVMixHeap {
                 constexpr std::ptrdiff_t m_storage = 0x0; // CUtlLeanVector<uint32>
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 1
             //
             // Metadata:
@@ -1698,9 +1729,9 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerVMixSnd {
-                constexpr std::ptrdiff_t m_resourceName = 0x180; // CUtlString
+                constexpr std::ptrdiff_t m_resourceName = 0x188; // CUtlString
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -1747,7 +1778,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_EmphasisSamples = 0x20; // CUtlVector<CAudioEmphasisSample>
                 constexpr std::ptrdiff_t m_morphData = 0x38; // CAudioMorphData
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 8
             //
             // Metadata:
@@ -1755,14 +1786,14 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerParameterBlender {
-                constexpr std::ptrdiff_t m_firstSound = 0x70; // CSoundContainerReference
-                constexpr std::ptrdiff_t m_secondSound = 0x90; // CSoundContainerReference
-                constexpr std::ptrdiff_t m_bEnableOcclusionBlend = 0xB0; // bool
-                constexpr std::ptrdiff_t m_curve1 = 0xB8; // CPiecewiseCurve
-                constexpr std::ptrdiff_t m_curve2 = 0xF8; // CPiecewiseCurve
-                constexpr std::ptrdiff_t m_bEnableDistanceBlend = 0x138; // bool
-                constexpr std::ptrdiff_t m_curve3 = 0x140; // CPiecewiseCurve
-                constexpr std::ptrdiff_t m_curve4 = 0x180; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_firstSound = 0x78; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_secondSound = 0x98; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_bEnableOcclusionBlend = 0xB8; // bool
+                constexpr std::ptrdiff_t m_curve1 = 0xC0; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_curve2 = 0x100; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_bEnableDistanceBlend = 0x140; // bool
+                constexpr std::ptrdiff_t m_curve3 = 0x148; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_curve4 = 0x188; // CPiecewiseCurve
             }
             // Parent: None
             // Field count: 3
@@ -1774,7 +1805,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_displayName = 0x8; // CUtlString
                 constexpr std::ptrdiff_t m_nDebugId = 0x10; // uint32
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 2
             //
             // Metadata:
@@ -1783,7 +1814,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_desc = 0x28; // VMixVocoderDesc_t
                 constexpr std::ptrdiff_t m_paramBandwidth = 0x50; // CVMixParameterFloat
             }
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 5
             //
             // Metadata:
@@ -1796,7 +1827,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bStopImmediate = 0x14; // bool
                 constexpr std::ptrdiff_t m_bCountStopped = 0x15; // bool
             }
-            // Parent: None
+            // Parent: CVoiceContainerDecayingSineWave
             // Field count: 1
             //
             // Metadata:
@@ -1804,7 +1835,7 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerAmpedDecayingSineWave {
-                constexpr std::ptrdiff_t m_flGainAmount = 0x78; // float32
+                constexpr std::ptrdiff_t m_flGainAmount = 0x80; // float32
             }
             // Parent: None
             // Field count: 8
@@ -1846,7 +1877,7 @@ namespace dota2_dumper {
             namespace VMixEffectChainDesc_t {
                 constexpr std::ptrdiff_t m_effectName = 0x0; // CUtlString
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:
@@ -1854,7 +1885,7 @@ namespace dota2_dumper {
             namespace CVMixPlateReverbProcessorDesc {
                 constexpr std::ptrdiff_t m_desc = 0x28; // VMixPlateverbDesc_t
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 3
             //
             // Metadata:
@@ -1862,9 +1893,9 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerMultiBlender {
-                constexpr std::ptrdiff_t m_soundsToPlay = 0x70; // CSoundContainerReferenceArray
-                constexpr std::ptrdiff_t m_flBlendFactor = 0xA8; // float32
-                constexpr std::ptrdiff_t m_flCrossover = 0xAC; // float32
+                constexpr std::ptrdiff_t m_soundsToPlay = 0x78; // CSoundContainerReferenceArray
+                constexpr std::ptrdiff_t m_flBlendFactor = 0xB0; // float32
+                constexpr std::ptrdiff_t m_flCrossover = 0xB4; // float32
             }
             // Parent: None
             // Field count: 1
@@ -1910,7 +1941,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t nNumSamples = 0x2; // uint8
                 constexpr std::ptrdiff_t pSamples = 0x4; // uint32[4]
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 3
             //
             // Metadata:
@@ -1918,11 +1949,11 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerSelector {
-                constexpr std::ptrdiff_t m_mode = 0x70; // PlayBackMode_t
-                constexpr std::ptrdiff_t m_soundsToPlay = 0x78; // CSoundContainerReferenceArray
-                constexpr std::ptrdiff_t m_fProbabilityWeights = 0xB0; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_mode = 0x78; // PlayBackMode_t
+                constexpr std::ptrdiff_t m_soundsToPlay = 0x80; // CSoundContainerReferenceArray
+                constexpr std::ptrdiff_t m_fProbabilityWeights = 0xB8; // CUtlVector<float32>
             }
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 1
             //
             // Metadata:
@@ -1931,7 +1962,7 @@ namespace dota2_dumper {
             namespace CSosGroupActionSteamAudioDimensionProbeSchema {
                 constexpr std::ptrdiff_t m_flCalculationInterval = 0x8; // float32
             }
-            // Parent: None
+            // Parent: SndBeatEventKeys_t
             // Field count: 1
             //
             // Metadata:
@@ -1939,7 +1970,7 @@ namespace dota2_dumper {
             namespace SndBeatEventKeyedSndEvts_t {
                 constexpr std::ptrdiff_t m_strSoundEventName = 0x10; // CUtlString
             }
-            // Parent: None
+            // Parent: CVMixInputBase
             // Field count: 1
             //
             // Metadata:
@@ -1947,7 +1978,7 @@ namespace dota2_dumper {
             namespace CVMixGraphInput {
                 constexpr std::ptrdiff_t m_nOffset = 0x10; // CVMixDataOffset
             }
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 2
             //
             // Metadata:
@@ -1957,7 +1988,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nMaxCount = 0x8; // int32
                 constexpr std::ptrdiff_t m_flMaxDuration = 0xC; // float32
             }
-            // Parent: None
+            // Parent: SndBeatEventKeys_t
             // Field count: 3
             //
             // Metadata:
@@ -1967,7 +1998,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nNote = 0x11; // uint8
                 constexpr std::ptrdiff_t m_nVelocity = 0x12; // uint8
             }
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 8
             //
             // Metadata:
@@ -1983,7 +2014,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_resultVarName = 0x20; // CUtlString
                 constexpr std::ptrdiff_t m_bSaveToGroup = 0x28; // bool
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 4
             //
             // Metadata:
@@ -1994,7 +2025,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_outParamdBLevel = 0x60; // CVMixParameterFloat
                 constexpr std::ptrdiff_t m_outParamReduction = 0x64; // CVMixParameterFloat
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 1
             //
             // Metadata:
@@ -2002,9 +2033,9 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerSwitch {
-                constexpr std::ptrdiff_t m_soundsToPlay = 0x70; // CUtlVector<CSoundContainerReference>
+                constexpr std::ptrdiff_t m_soundsToPlay = 0x78; // CUtlVector<CSoundContainerReference>
             }
-            // Parent: None
+            // Parent: CVMixInputBase
             // Field count: 1
             //
             // Metadata:
@@ -2012,7 +2043,7 @@ namespace dota2_dumper {
             namespace CVMixControlMeter {
                 constexpr std::ptrdiff_t m_nValueIndex = 0x10; // CVMixDataOffset
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 3
             //
             // Metadata:
@@ -2020,11 +2051,11 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerEnum {
-                constexpr std::ptrdiff_t m_soundsToPlay = 0x70; // CSoundContainerReferenceArray
-                constexpr std::ptrdiff_t m_iSelection = 0xA8; // int32
-                constexpr std::ptrdiff_t m_flCrossfadeTime = 0xAC; // float32
+                constexpr std::ptrdiff_t m_soundsToPlay = 0x78; // CSoundContainerReferenceArray
+                constexpr std::ptrdiff_t m_iSelection = 0xB0; // int32
+                constexpr std::ptrdiff_t m_flCrossfadeTime = 0xB4; // float32
             }
-            // Parent: None
+            // Parent: CSosGroupActionSchema
             // Field count: 1
             //
             // Metadata:
@@ -2063,7 +2094,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_bBassMono = 0x10; // bool
                 constexpr std::ptrdiff_t m_flBassFreq = 0x14; // float32
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
             // Field count: 5
             //
             // Metadata:
@@ -2071,22 +2102,23 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerLoopTrigger {
-                constexpr std::ptrdiff_t m_flRetriggerTimeMin = 0x70; // float32
-                constexpr std::ptrdiff_t m_flRetriggerTimeMax = 0x74; // float32
-                constexpr std::ptrdiff_t m_flFadeTime = 0x78; // float32
-                constexpr std::ptrdiff_t m_bCrossFade = 0x7C; // bool
-                constexpr std::ptrdiff_t m_sound = 0x80; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_flRetriggerTimeMin = 0x78; // float32
+                constexpr std::ptrdiff_t m_flRetriggerTimeMax = 0x7C; // float32
+                constexpr std::ptrdiff_t m_flFadeTime = 0x80; // float32
+                constexpr std::ptrdiff_t m_bCrossFade = 0x84; // bool
+                constexpr std::ptrdiff_t m_sound = 0x88; // CSoundContainerReference
             }
             // Parent: None
             // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataBase
             // MVDataNodeType
             namespace SndBeatEventKeys_t {
                 constexpr std::ptrdiff_t m_flKey = 0x8; // float32
             }
-            // Parent: None
+            // Parent: CVoiceContainerGenerator
             // Field count: 2
             //
             // Metadata:
@@ -2094,10 +2126,10 @@ namespace dota2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerDecayingSineWave {
-                constexpr std::ptrdiff_t m_flFrequency = 0x70; // float32
-                constexpr std::ptrdiff_t m_flDecayTime = 0x74; // float32
+                constexpr std::ptrdiff_t m_flFrequency = 0x78; // float32
+                constexpr std::ptrdiff_t m_flDecayTime = 0x7C; // float32
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 3
             //
             // Metadata:
@@ -2107,7 +2139,17 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_paramCutoffFrequency = 0x50; // CVMixParameterFloat
                 constexpr std::ptrdiff_t m_paramDelay = 0x54; // CVMixParameterFloat
             }
-            // Parent: None
+            // Parent: CVoiceContainerBase
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            namespace CVoiceContainerReference {
+                constexpr std::ptrdiff_t m_sound = 0x78; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+            }
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:
@@ -2133,6 +2175,7 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MPropertyArrayElementNameKey
+            // MVDataAnonymousNode
             // MVDataOutlinerNameExpr
             // MGetKV3ClassDefaults
             namespace CSndBeatPattern {
@@ -2154,7 +2197,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flSyncBeatMult = 0x9C; // float32
                 constexpr std::ptrdiff_t m_vecSyncPatternKeys = 0xA0; // CUtlVector<SndBeatEventKeys_t>
             }
-            // Parent: None
+            // Parent: CVMixSubmix
             // Field count: 0
             //
             // Metadata:
@@ -2171,7 +2214,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_freq = 0x4; // float32
                 constexpr std::ptrdiff_t m_flPhase = 0x8; // float32
             }
-            // Parent: None
+            // Parent: CVMixBaseProcessorDesc
             // Field count: 1
             //
             // Metadata:

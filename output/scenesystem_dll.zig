@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 pub const dota2_dumper = struct {
     pub const schemas = struct {
@@ -195,7 +195,7 @@ pub const dota2_dumper = struct {
                 pub const m_fMaxObjectScale: usize = 0xC; // float32
                 pub const m_fSwitchDistances: usize = 0x10; // CUtlVector<float32>
             };
-            // Parent: None
+            // Parent: BaseSceneObjectOverride_t
             // Field count: 4
             //
             // Metadata:
@@ -294,7 +294,7 @@ pub const dota2_dumper = struct {
                 pub const m_flBeginCullSize: usize = 0xA4; // float32
                 pub const m_flEndCullSize: usize = 0xA8; // float32
             };
-            // Parent: None
+            // Parent: CSSDSMsg_LayerBase
             // Field count: 0
             //
             // Metadata:
@@ -363,7 +363,7 @@ pub const dota2_dumper = struct {
                 pub const m_LayerName: usize = 0x20; // CUtlString
                 pub const m_displayText: usize = 0x28; // CUtlString
             };
-            // Parent: None
+            // Parent: CSSDSMsg_LayerBase
             // Field count: 0
             //
             // Metadata:
@@ -431,7 +431,7 @@ pub const dota2_dumper = struct {
                 pub const m_viewId: usize = 0x0; // SceneViewId_t
                 pub const m_ViewName: usize = 0x10; // CUtlString
             };
-            // Parent: None
+            // Parent: BaseSceneObjectOverride_t
             // Field count: 4
             //
             // Metadata:

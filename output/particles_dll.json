@@ -8,71 +8,71 @@
       },
       "CBaseRendererSource2": {
         "fields": {
-          "m_bAnimateInFPS": 4248,
-          "m_bBlendFramesSeq0": 11356,
-          "m_bDisableZBuffering": 9464,
-          "m_bGammaCorrectVertexColors": 6144,
-          "m_bMaxLuminanceBlendingSequence0": 11357,
-          "m_bOnlyRenderInEffecsGameOverlay": 9203,
-          "m_bOnlyRenderInEffectsBloomPass": 9200,
-          "m_bOnlyRenderInEffectsWaterPass": 9201,
-          "m_bRefract": 8808,
-          "m_bRefract2Passes": 8810,
-          "m_bRefractSolid": 8809,
-          "m_bReverseZBuffering": 9463,
-          "m_bSaturateColorPreAlphaBlend": 6145,
-          "m_bStencilTestExclude": 9332,
-          "m_bTintByFOW": 7664,
-          "m_bTintByGlobalLight": 7665,
-          "m_bUseMixedResolutionRendering": 9202,
-          "m_bWriteStencilOnDepthFail": 9462,
-          "m_bWriteStencilOnDepthPass": 9461,
-          "m_flAddSelfAmount": 6152,
-          "m_flAlphaReferenceSoftness": 7680,
-          "m_flAlphaScale": 936,
-          "m_flAnimationRate": 4240,
-          "m_flBumpStrength": 4216,
-          "m_flCenterXOffset": 3464,
-          "m_flCenterYOffset": 3840,
-          "m_flDepthBias": 10976,
-          "m_flDesaturation": 6528,
-          "m_flDiffuseAmount": 5384,
-          "m_flDiffuseClamp": 5760,
-          "m_flFeatheringDepthMapFilter": 10600,
-          "m_flFeatheringFilter": 10224,
-          "m_flFeatheringMaxDist": 9848,
-          "m_flFeatheringMinDist": 9472,
-          "m_flFogAmount": 7288,
-          "m_flMotionVectorScaleU": 4256,
-          "m_flMotionVectorScaleV": 4632,
-          "m_flOverbrightFactor": 6904,
-          "m_flRadiusScale": 560,
-          "m_flRefractAmount": 8816,
-          "m_flRollScale": 1312,
-          "m_flSelfIllumAmount": 5008,
-          "m_flSourceAlphaValueToMapToOne": 8432,
-          "m_flSourceAlphaValueToMapToZero": 8056,
-          "m_nAlpha2Field": 1688,
-          "m_nAlphaReferenceType": 7676,
-          "m_nAnimationType": 4244,
-          "m_nColorBlendType": 3448,
-          "m_nCropTextureOverride": 4220,
-          "m_nFeatheringMode": 9468,
-          "m_nFogType": 7284,
-          "m_nHSVShiftControlPoint": 7280,
-          "m_nLightingControlPoint": 6136,
-          "m_nOutputBlendMode": 6140,
-          "m_nPerParticleAlphaRefWindow": 7672,
-          "m_nPerParticleAlphaReference": 7668,
-          "m_nRefractBlurRadius": 9192,
-          "m_nRefractBlurType": 9196,
-          "m_nShaderType": 3452,
-          "m_nSortMethod": 11352,
-          "m_stencilTestID": 9204,
-          "m_stencilWriteID": 9333,
-          "m_strShaderOverride": 3456,
-          "m_vecColorScale": 1696,
-          "m_vecTexturesInput": 4224
+          "m_bAnimateInFPS": 4240,
+          "m_bBlendFramesSeq0": 11348,
+          "m_bDisableZBuffering": 9456,
+          "m_bGammaCorrectVertexColors": 6136,
+          "m_bMaxLuminanceBlendingSequence0": 11349,
+          "m_bOnlyRenderInEffecsGameOverlay": 9195,
+          "m_bOnlyRenderInEffectsBloomPass": 9192,
+          "m_bOnlyRenderInEffectsWaterPass": 9193,
+          "m_bRefract": 8800,
+          "m_bRefract2Passes": 8802,
+          "m_bRefractSolid": 8801,
+          "m_bReverseZBuffering": 9455,
+          "m_bSaturateColorPreAlphaBlend": 6137,
+          "m_bStencilTestExclude": 9324,
+          "m_bTintByFOW": 7656,
+          "m_bTintByGlobalLight": 7657,
+          "m_bUseMixedResolutionRendering": 9194,
+          "m_bWriteStencilOnDepthFail": 9454,
+          "m_bWriteStencilOnDepthPass": 9453,
+          "m_flAddSelfAmount": 6144,
+          "m_flAlphaReferenceSoftness": 7672,
+          "m_flAlphaScale": 928,
+          "m_flAnimationRate": 4232,
+          "m_flBumpStrength": 4208,
+          "m_flCenterXOffset": 3456,
+          "m_flCenterYOffset": 3832,
+          "m_flDepthBias": 10968,
+          "m_flDesaturation": 6520,
+          "m_flDiffuseAmount": 5376,
+          "m_flDiffuseClamp": 5752,
+          "m_flFeatheringDepthMapFilter": 10592,
+          "m_flFeatheringFilter": 10216,
+          "m_flFeatheringMaxDist": 9840,
+          "m_flFeatheringMinDist": 9464,
+          "m_flFogAmount": 7280,
+          "m_flMotionVectorScaleU": 4248,
+          "m_flMotionVectorScaleV": 4624,
+          "m_flOverbrightFactor": 6896,
+          "m_flRadiusScale": 552,
+          "m_flRefractAmount": 8808,
+          "m_flRollScale": 1304,
+          "m_flSelfIllumAmount": 5000,
+          "m_flSourceAlphaValueToMapToOne": 8424,
+          "m_flSourceAlphaValueToMapToZero": 8048,
+          "m_nAlpha2Field": 1680,
+          "m_nAlphaReferenceType": 7668,
+          "m_nAnimationType": 4236,
+          "m_nColorBlendType": 3440,
+          "m_nCropTextureOverride": 4212,
+          "m_nFeatheringMode": 9460,
+          "m_nFogType": 7276,
+          "m_nHSVShiftControlPoint": 7272,
+          "m_nLightingControlPoint": 6128,
+          "m_nOutputBlendMode": 6132,
+          "m_nPerParticleAlphaRefWindow": 7664,
+          "m_nPerParticleAlphaReference": 7660,
+          "m_nRefractBlurRadius": 9184,
+          "m_nRefractBlurType": 9188,
+          "m_nShaderType": 3444,
+          "m_nSortMethod": 11344,
+          "m_stencilTestID": 9196,
+          "m_stencilWriteID": 9325,
+          "m_strShaderOverride": 3448,
+          "m_vecColorScale": 1688,
+          "m_vecTexturesInput": 4216
         },
         "metadata": [
           {
@@ -80,18 +80,18 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "CBaseTrailRenderer": {
         "fields": {
-          "m_bClampV": 13136,
-          "m_flEndFadeSize": 12384,
-          "m_flMaxSize": 12004,
-          "m_flMinSize": 12000,
-          "m_flStartFadeSize": 12008,
-          "m_flSubPixelAAScale": 12760,
-          "m_nOrientationControlPoint": 11996,
-          "m_nOrientationType": 11992
+          "m_bClampV": 13128,
+          "m_flEndFadeSize": 12376,
+          "m_flMaxSize": 11996,
+          "m_flMinSize": 11992,
+          "m_flStartFadeSize": 12000,
+          "m_flSubPixelAAScale": 12752,
+          "m_nOrientationControlPoint": 11988,
+          "m_nOrientationType": 11984
         },
         "metadata": [
           {
@@ -99,7 +99,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CBaseRendererSource2"
       },
       "CGeneralRandomRotation": {
         "fields": {
@@ -116,7 +116,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "CGeneralSpin": {
         "fields": {
@@ -130,7 +130,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "CPAssignment_t": {
         "fields": {
@@ -149,12 +149,12 @@
       "CParticleBindingRealPulse": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "CParticleCollectionBindingInstance"
       },
       "CParticleCollectionBindingInstance": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "CBasePulseGraphInstance"
       },
       "CParticleFunction": {
         "fields": {
@@ -192,7 +192,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunction"
       },
       "CParticleFunctionEmitter": {
         "fields": {
@@ -204,7 +204,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunction"
       },
       "CParticleFunctionForce": {
         "fields": {},
@@ -214,7 +214,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunction"
       },
       "CParticleFunctionInitializer": {
         "fields": {
@@ -226,7 +226,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunction"
       },
       "CParticleFunctionOperator": {
         "fields": {},
@@ -236,7 +236,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunction"
       },
       "CParticleFunctionPreEmission": {
         "fields": {
@@ -248,12 +248,12 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "CParticleFunctionRenderer": {
         "fields": {
           "VisibilityInputs": 480,
-          "m_bCannotBeRefracted": 552
+          "m_bCannotBeRefracted": 548
         },
         "metadata": [
           {
@@ -261,7 +261,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunction"
       },
       "CParticleMassCalculationParameters": {
         "fields": {
@@ -297,14 +297,14 @@
           "m_bEnableNamedValues": 645,
           "m_bInfiniteBounds": 644,
           "m_bIsGPUParticleSystem": 820,
-          "m_bScreenSpaceEffect": 864,
-          "m_bShouldBatch": 856,
-          "m_bShouldHitboxesFallbackToCollisionHulls": 859,
-          "m_bShouldHitboxesFallbackToRenderBounds": 857,
-          "m_bShouldHitboxesFallbackToSnapshot": 858,
-          "m_bShouldSort": 888,
-          "m_controlPointConfigurations": 960,
-          "m_flAggregateRadius": 852,
+          "m_bScreenSpaceEffect": 856,
+          "m_bShouldBatch": 848,
+          "m_bShouldHitboxesFallbackToCollisionHulls": 851,
+          "m_bShouldHitboxesFallbackToRenderBounds": 849,
+          "m_bShouldHitboxesFallbackToSnapshot": 850,
+          "m_bShouldSort": 880,
+          "m_controlPointConfigurations": 952,
+          "m_flAggregateRadius": 844,
           "m_flConstantLifespan": 708,
           "m_flConstantRadius": 696,
           "m_flConstantRotation": 700,
@@ -312,22 +312,22 @@
           "m_flCullFillCost": 748,
           "m_flCullRadius": 744,
           "m_flDepthSortBias": 636,
-          "m_flMaxCreationDistance": 844,
-          "m_flMaxDrawDistance": 836,
+          "m_flMaxCreationDistance": 836,
+          "m_flMaxDrawDistance": 828,
           "m_flMaximumSimTime": 804,
           "m_flMaximumTimeStep": 800,
           "m_flMinimumSimTime": 808,
           "m_flMinimumTimeStep": 812,
-          "m_flNoDrawTimeToGoToSleep": 832,
+          "m_flNoDrawTimeToGoToSleep": 824,
           "m_flPreSimulationTime": 792,
-          "m_flStartFadeDistance": 840,
+          "m_flStartFadeDistance": 832,
           "m_flStopSimulationAfterTime": 796,
           "m_hFallback": 760,
           "m_hLowViolenceDef": 776,
           "m_hReferenceReplacement": 784,
           "m_hSnapshot": 728,
-          "m_nAggregationMinAvailableParticles": 848,
-          "m_nAllowRenderControlPoint": 884,
+          "m_nAggregationMinAvailableParticles": 840,
+          "m_nAllowRenderControlPoint": 876,
           "m_nBehaviorVersion": 8,
           "m_nConstantSequenceNumber": 712,
           "m_nConstantSequenceNumber1": 716,
@@ -337,15 +337,13 @@
           "m_nGroupID": 608,
           "m_nInitialParticles": 600,
           "m_nMaxParticles": 604,
-          "m_nMinCPULevel": 824,
-          "m_nMinGPULevel": 828,
           "m_nMinimumFrames": 816,
-          "m_nSkipRenderControlPoint": 880,
+          "m_nSkipRenderControlPoint": 872,
           "m_nSnapshotControlPoint": 720,
           "m_nSortOverridePositionCP": 640,
-          "m_nViewModelEffect": 860,
+          "m_nViewModelEffect": 852,
           "m_pszCullReplacementName": 736,
-          "m_pszTargetLayerID": 872
+          "m_pszTargetLayerID": 864
         },
         "metadata": [
           {
@@ -353,13 +351,13 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "IParticleSystemDefinition"
       },
       "CParticleVisibilityInputs": {
         "fields": {
           "m_bDotCPAngles": 44,
           "m_bDotCameraAngles": 45,
-          "m_bRightEye": 68,
+          "m_bRightEye": 64,
           "m_flAlphaScaleMax": 52,
           "m_flAlphaScaleMin": 48,
           "m_flCameraBias": 0,
@@ -372,7 +370,6 @@
           "m_flInputPixelVisFade": 20,
           "m_flNoPixelVisibilityFallback": 24,
           "m_flProxyRadius": 8,
-          "m_flRadiusScaleFOVBase": 64,
           "m_flRadiusScaleMax": 60,
           "m_flRadiusScaleMin": 56,
           "m_nCPin": 4
@@ -425,7 +422,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_Base"
       },
       "CPulseCell_BaseLerp": {
         "fields": {
@@ -437,7 +434,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseYieldingInflow"
       },
       "CPulseCell_BaseLerp__CursorState_t": {
         "fields": {
@@ -460,7 +457,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_Base"
       },
       "CPulseCell_BaseState": {
         "fields": {},
@@ -474,7 +471,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseYieldingInflow"
       },
       "CPulseCell_BaseValue": {
         "fields": {},
@@ -484,7 +481,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_Base"
       },
       "CPulseCell_BaseYieldingInflow": {
         "fields": {
@@ -501,13 +498,12 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseFlow"
       },
       "CPulseCell_BooleanSwitchState": {
         "fields": {
-          "m_Condition": 216,
-          "m_WhenFalse": 432,
-          "m_WhenTrue": 360
+          "m_WhenFalse": 288,
+          "m_WhenTrue": 216
         },
         "metadata": [
           {
@@ -524,6 +520,18 @@
           },
           {
             "name": "MPulseEditorCanvasItemSpecKV3",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CPulseCell_BaseState"
+      },
+      "CPulseCell_BooleanSwitchState__CursorState_t": {
+        "fields": {
+          "m_Condition": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
           }
         ],
@@ -551,7 +559,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_WaitForCursorsWithTagBase"
       },
       "CPulseCell_FireCursors": {
         "fields": {
@@ -565,7 +573,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseYieldingInflow"
       },
       "CPulseCell_Inflow_BaseEntrypoint": {
         "fields": {
@@ -578,7 +586,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseFlow"
       },
       "CPulseCell_Inflow_EntOutputHandler": {
         "fields": {
@@ -592,7 +600,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_Inflow_BaseEntrypoint"
       },
       "CPulseCell_Inflow_EventHandler": {
         "fields": {
@@ -604,7 +612,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_Inflow_BaseEntrypoint"
       },
       "CPulseCell_Inflow_GraphHook": {
         "fields": {
@@ -616,7 +624,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_Inflow_BaseEntrypoint"
       },
       "CPulseCell_Inflow_Method": {
         "fields": {
@@ -632,7 +640,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_Inflow_BaseEntrypoint"
       },
       "CPulseCell_Inflow_ObservableVariableListener": {
         "fields": {
@@ -645,7 +653,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_Inflow_BaseEntrypoint"
       },
       "CPulseCell_Inflow_Wait": {
         "fields": {
@@ -673,7 +681,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseYieldingInflow"
       },
       "CPulseCell_Inflow_Yield": {
         "fields": {
@@ -685,7 +693,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseYieldingInflow"
       },
       "CPulseCell_InlineNodeSkipSelector": {
         "fields": {
@@ -698,14 +706,20 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MPulseFunctionHiddenInTool",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseFlow"
       },
       "CPulseCell_IntervalTimer": {
         "fields": {
           "m_Completed": 216,
-          "m_OnInterval": 288
+          "m_OnInterval": 288,
+          "m_bFireAtEnd": 361,
+          "m_bFireAtStart": 360
         },
         "metadata": [
           {
@@ -729,13 +743,14 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseYieldingInflow"
       },
       "CPulseCell_IntervalTimer__CursorState_t": {
         "fields": {
           "m_EndTime": 4,
           "m_StartTime": 0,
           "m_bCompleteOnNextWake": 16,
+          "m_bCompletingVeryCloseToEndOfInterval": 17,
           "m_flWaitInterval": 8,
           "m_flWaitIntervalHigh": 12
         },
@@ -755,7 +770,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseRequirement"
       },
       "CPulseCell_IsRequirementValid__Criteria_t": {
         "fields": {
@@ -782,7 +797,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseRequirement"
       },
       "CPulseCell_LimitCount__Criteria_t": {
         "fields": {
@@ -805,8 +820,7 @@
       },
       "CPulseCell_ObservableSwitchState": {
         "fields": {
-          "m_Cases": 360,
-          "m_SwitchValue": 216
+          "m_Cases": 216
         },
         "metadata": [
           {
@@ -822,6 +836,18 @@
             "type": "Unknown"
           }
         ],
+        "parent": "CPulseCell_BaseState"
+      },
+      "CPulseCell_ObservableSwitchState__CursorState_t": {
+        "fields": {
+          "m_SwitchValue": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "CPulseCell_Outflow_CycleOrdered": {
@@ -834,7 +860,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseFlow"
       },
       "CPulseCell_Outflow_CycleOrdered__InstanceState_t": {
         "fields": {
@@ -858,7 +884,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseFlow"
       },
       "CPulseCell_Outflow_CycleShuffled": {
         "fields": {
@@ -870,7 +896,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseFlow"
       },
       "CPulseCell_Outflow_CycleShuffled__InstanceState_t": {
         "fields": {
@@ -912,7 +938,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseFlow"
       },
       "CPulseCell_RaceCursors": {
         "fields": {
@@ -925,7 +951,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseYieldingInflow"
       },
       "CPulseCell_ReturnValues": {
         "fields": {},
@@ -935,7 +961,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseFlow"
       },
       "CPulseCell_Step_CallExternalMethod": {
         "fields": {
@@ -951,7 +977,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseYieldingInflow"
       },
       "CPulseCell_Step_DebugLog": {
         "fields": {},
@@ -961,7 +987,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseFlow"
       },
       "CPulseCell_Step_PublicOutput": {
         "fields": {
@@ -973,7 +999,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseFlow"
       },
       "CPulseCell_Timeline": {
         "fields": {
@@ -987,7 +1013,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseYieldingInflow"
       },
       "CPulseCell_Timeline__TimelineEvent_t": {
         "fields": {
@@ -1007,83 +1033,7 @@
           "m_UnknownKeys": 72
         },
         "metadata": [],
-        "parent": null
-      },
-      "CPulseCell_Value_Curve": {
-        "fields": {
-          "m_Curve": 72
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPropertyFriendlyName",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseCell_Value_Gradient": {
-        "fields": {
-          "m_Gradient": 72
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPropertyFriendlyName",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseCell_Value_RandomFloat": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPropertyFriendlyName",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseEditorHeaderIcon",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseCell_Value_RandomInt": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPropertyFriendlyName",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseEditorHeaderIcon",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
+        "parent": "CPulseCell_Base"
       },
       "CPulseCell_WaitForCursorsWithTag": {
         "fields": {
@@ -1100,6 +1050,10 @@
             "type": "Unknown"
           },
           {
+            "name": "MPulseEditorSearchExpr",
+            "type": "Unknown"
+          },
+          {
             "name": "MPropertyDescription",
             "type": "Unknown"
           },
@@ -1108,7 +1062,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_WaitForCursorsWithTagBase"
       },
       "CPulseCell_WaitForCursorsWithTagBase": {
         "fields": {
@@ -1125,12 +1079,11 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CPulseCell_BaseYieldingInflow"
       },
       "CPulseCell_WaitForObservable": {
         "fields": {
-          "m_Condition": 216,
-          "m_OnTrue": 360
+          "m_OnTrue": 216
         },
         "metadata": [
           {
@@ -1147,6 +1100,18 @@
           },
           {
             "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CPulseCell_BaseYieldingInflow"
+      },
+      "CPulseCell_WaitForObservable__CursorState_t": {
+        "fields": {
+          "m_Condition": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
           }
         ],
@@ -1168,7 +1133,8 @@
           "m_DomainSubType": 24,
           "m_DomainValues": 272,
           "m_InvokeBindings": 200,
-          "m_OutputConnections": 320,
+          "m_LambdaDefs": 320,
+          "m_OutputConnections": 344,
           "m_ParentMapName": 48,
           "m_ParentXmlName": 64,
           "m_PublicOutputs": 176,
@@ -1233,6 +1199,24 @@
         ],
         "parent": null
       },
+      "CPulse_LambdaDef": {
+        "fields": {
+          "m_DependentObservableBlackboardReferences": 144,
+          "m_DependentObservableTempVars": 168,
+          "m_DependentObservableVars": 120,
+          "m_EvaluateConnection": 0,
+          "m_PortName": 104,
+          "m_ResultType": 72,
+          "m_nEditorNodeID": 96
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CPulse_OutflowConnection": {
         "fields": {
           "m_OutflowRegisterMap": 24,
@@ -1246,7 +1230,7 @@
       "CPulse_ResumePoint": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "CPulse_OutflowConnection"
       },
       "CRandomNumberGeneratorParameters": {
         "fields": {
@@ -1269,7 +1253,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_INIT_AddVectorToVector": {
         "fields": {
@@ -1286,7 +1270,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_AgeNoise": {
         "fields": {
@@ -1305,7 +1289,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_ChaoticAttractor": {
         "fields": {
@@ -1325,7 +1309,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CheckParticleForWater": {
         "fields": {
@@ -1340,7 +1324,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_ColorLitPerParticle": {
         "fields": {
@@ -1358,7 +1342,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateAlongPath": {
         "fields": {
@@ -1373,9 +1357,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateFromCPs": {
         "fields": {
@@ -1390,7 +1378,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateFromParentParticles": {
         "fields": {
@@ -1407,7 +1395,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateFromPlaneCache": {
         "fields": {
@@ -1421,7 +1409,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateInEpitrochoid": {
         "fields": {
@@ -1442,7 +1430,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateOnGrid": {
         "fields": {
@@ -1463,12 +1451,14 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateOnModel": {
         "fields": {
           "m_HitboxSetName": 4592,
           "m_bEvenDistribution": 693,
+          "m_bInitColorToAlbedo": 4728,
+          "m_bInitNormal": 4729,
           "m_bLocalCoords": 4720,
           "m_bScaleToVolume": 692,
           "m_bUseBones": 4721,
@@ -1476,7 +1466,7 @@
           "m_flBoneVelocity": 2832,
           "m_flMaxBoneVelocity": 2836,
           "m_flMeshNormalOffset": 4724,
-          "m_flShellSize": 4728,
+          "m_flShellSize": 4736,
           "m_modelInput": 488,
           "m_nDesiredHitbox": 696,
           "m_nForceInModel": 688,
@@ -1489,9 +1479,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateOnModelAtHeight": {
         "fields": {
@@ -1516,7 +1510,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateParticleImpulse": {
         "fields": {
@@ -1532,7 +1526,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreatePhyllotaxis": {
         "fields": {
@@ -1557,7 +1551,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateSequentialPath": {
         "fields": {
@@ -1582,7 +1576,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateSequentialPathV2": {
         "fields": {
@@ -1601,9 +1595,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateSpiralSphere": {
         "fields": {
@@ -1620,7 +1618,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateWithinBox": {
         "fields": {
@@ -1637,7 +1635,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateWithinCapsuleTransform": {
         "fields": {
@@ -1659,7 +1657,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateWithinCone": {
         "fields": {
@@ -1675,9 +1673,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreateWithinSphereTransform": {
         "fields": {
@@ -1699,9 +1701,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_CreationNoise": {
         "fields": {
@@ -1722,7 +1728,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_DistanceCull": {
         "fields": {
@@ -1736,7 +1742,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_DistanceToCPInit": {
         "fields": {
@@ -1762,7 +1768,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_DistanceToNeighborCull": {
         "fields": {
@@ -1780,7 +1786,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_GlobalScale": {
         "fields": {
@@ -1797,7 +1803,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_InheritFromParentParticles": {
         "fields": {
@@ -1811,9 +1817,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_InheritVelocity": {
         "fields": {
@@ -1824,9 +1834,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_InitFloat": {
         "fields": {
@@ -1839,9 +1853,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_InitFloatCollection": {
         "fields": {
@@ -1854,7 +1872,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_InitFromCPSnapshot": {
         "fields": {
@@ -1875,9 +1893,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_InitFromParentKilled": {
         "fields": {
@@ -1888,9 +1910,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_InitFromVectorFieldSnapshot": {
         "fields": {
@@ -1906,7 +1932,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_InitSkinnedPositionFromCPSnapshot": {
         "fields": {
@@ -1934,9 +1960,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_InitVec": {
         "fields": {
@@ -1950,9 +1980,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_InitVecCollection": {
         "fields": {
@@ -1965,7 +1999,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_InitialRepulsionVelocity": {
         "fields": {
@@ -1989,7 +2023,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_InitialSequenceFromModel": {
         "fields": {
@@ -2008,7 +2042,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_InitialVelocityFromHitbox": {
         "fields": {
@@ -2024,7 +2058,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_InitialVelocityNoise": {
         "fields": {
@@ -2043,9 +2077,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_LifespanFromVelocity": {
         "fields": {
@@ -2064,7 +2102,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_ModelCull": {
         "fields": {
@@ -2080,7 +2118,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_MoveBetweenPoints": {
         "fields": {
@@ -2098,7 +2136,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_NormalAlignToCP": {
         "fields": {
@@ -2111,7 +2149,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_NormalOffset": {
         "fields": {
@@ -2127,7 +2165,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_OffsetVectorToVector": {
         "fields": {
@@ -2143,7 +2181,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_Orient2DRelToCP": {
         "fields": {
@@ -2157,7 +2195,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_PlaneCull": {
         "fields": {
@@ -2169,9 +2207,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_PointList": {
         "fields": {
@@ -2187,7 +2229,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_PositionOffset": {
         "fields": {
@@ -2202,9 +2244,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_PositionOffsetToCP": {
         "fields": {
@@ -2218,7 +2264,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_PositionPlaceOnGround": {
         "fields": {
@@ -2242,9 +2288,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_PositionWarp": {
         "fields": {
@@ -2265,7 +2315,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_PositionWarpScalar": {
         "fields": {
@@ -2282,7 +2332,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_QuantizeFloat": {
         "fields": {
@@ -2295,7 +2345,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RadiusFromCPObject": {
         "fields": {
@@ -2307,7 +2357,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RandomAlpha": {
         "fields": {
@@ -2322,7 +2372,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RandomAlphaWindowThreshold": {
         "fields": {
@@ -2336,7 +2386,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RandomColor": {
         "fields": {
@@ -2355,9 +2405,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RandomLifeTime": {
         "fields": {
@@ -2371,7 +2425,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RandomModelSequence": {
         "fields": {
@@ -2385,7 +2439,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RandomNamedModelBodyPart": {
         "fields": {},
@@ -2395,7 +2449,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_INIT_RandomNamedModelElement"
       },
       "C_INIT_RandomNamedModelElement": {
         "fields": {
@@ -2412,7 +2466,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RandomNamedModelMeshGroup": {
         "fields": {},
@@ -2422,7 +2476,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_INIT_RandomNamedModelElement"
       },
       "C_INIT_RandomNamedModelSequence": {
         "fields": {},
@@ -2432,7 +2486,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_INIT_RandomNamedModelElement"
       },
       "C_INIT_RandomRadius": {
         "fields": {
@@ -2446,7 +2500,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RandomRotation": {
         "fields": {},
@@ -2456,7 +2510,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CGeneralRandomRotation"
       },
       "C_INIT_RandomRotationSpeed": {
         "fields": {},
@@ -2466,7 +2520,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CGeneralRandomRotation"
       },
       "C_INIT_RandomScalar": {
         "fields": {
@@ -2481,7 +2535,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RandomSecondSequence": {
         "fields": {
@@ -2494,7 +2548,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RandomSequence": {
         "fields": {
@@ -2508,9 +2562,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RandomTrailLength": {
         "fields": {
@@ -2524,7 +2582,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RandomVector": {
         "fields": {
@@ -2539,7 +2597,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RandomVectorComponent": {
         "fields": {
@@ -2554,7 +2612,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RandomYaw": {
         "fields": {},
@@ -2564,7 +2622,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CGeneralRandomRotation"
       },
       "C_INIT_RandomYawFlip": {
         "fields": {
@@ -2574,9 +2632,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RemapInitialDirectionToTransformToVector": {
         "fields": {
@@ -2591,9 +2653,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RemapInitialTransformDirectionToRotation": {
         "fields": {
@@ -2608,7 +2674,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RemapInitialVisibilityScalar": {
         "fields": {
@@ -2624,7 +2690,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RemapNamedModelBodyPartToScalar": {
         "fields": {},
@@ -2634,7 +2700,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_INIT_RemapNamedModelElementToScalar"
       },
       "C_INIT_RemapNamedModelElementToScalar": {
         "fields": {
@@ -2652,7 +2718,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RemapNamedModelMeshGroupToScalar": {
         "fields": {},
@@ -2662,7 +2728,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_INIT_RemapNamedModelElementToScalar"
       },
       "C_INIT_RemapNamedModelSequenceToScalar": {
         "fields": {},
@@ -2672,7 +2738,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_INIT_RemapNamedModelElementToScalar"
       },
       "C_INIT_RemapParticleCountToNamedModelBodyPartScalar": {
         "fields": {},
@@ -2682,7 +2748,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_INIT_RemapParticleCountToNamedModelElementScalar"
       },
       "C_INIT_RemapParticleCountToNamedModelElementScalar": {
         "fields": {
@@ -2697,7 +2763,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_INIT_RemapParticleCountToScalar"
       },
       "C_INIT_RemapParticleCountToNamedModelMeshGroupScalar": {
         "fields": {},
@@ -2707,7 +2773,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_INIT_RemapParticleCountToNamedModelElementScalar"
       },
       "C_INIT_RemapParticleCountToNamedModelSequenceScalar": {
         "fields": {},
@@ -2717,7 +2783,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_INIT_RemapParticleCountToNamedModelElementScalar"
       },
       "C_INIT_RemapParticleCountToScalar": {
         "fields": {
@@ -2740,7 +2806,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RemapQAnglesToRotation": {
         "fields": {
@@ -2752,7 +2818,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RemapScalarToVector": {
         "fields": {
@@ -2775,7 +2841,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RemapTransformOrientationToRotations": {
         "fields": {
@@ -2790,7 +2856,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RemapTransformToVector": {
         "fields": {
@@ -2814,7 +2880,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RingWave": {
         "fields": {
@@ -2834,9 +2900,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_RtEnvCull": {
         "fields": {
@@ -2853,9 +2923,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_ScaleVelocity": {
         "fields": {
@@ -2867,7 +2941,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_ScreenSpacePositionOfTarget": {
         "fields": {
@@ -2882,7 +2956,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_SequenceFromCP": {
         "fields": {
@@ -2897,7 +2971,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_SequenceLifeTime": {
         "fields": {
@@ -2909,7 +2983,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_SetAttributeToScalarExpression": {
         "fields": {
@@ -2926,7 +3000,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_SetFloatAttributeToVectorExpression": {
         "fields": {
@@ -2943,7 +3017,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_SetHitboxToClosest": {
         "fields": {
@@ -2963,7 +3037,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_SetHitboxToModel": {
         "fields": {
@@ -2984,7 +3058,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_SetRigidAttachment": {
         "fields": {
@@ -2999,7 +3073,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_SetVectorAttributeToVectorExpression": {
         "fields": {
@@ -3017,7 +3091,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_SkyVisCull": {
         "fields": {
@@ -3030,9 +3104,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_StatusEffect": {
         "fields": {
@@ -3061,7 +3139,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_StatusEffectCitadel": {
         "fields": {
@@ -3091,14 +3169,15 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_StatusEffectTf": {
         "fields": {
           "m_bAnimatedDetail": 560,
+          "m_bAnimatedNormal": 561,
+          "m_flSFXAnimationTimeOffset": 568,
+          "m_flSFXAnimationTimePerFrame": 564,
           "m_flSFXColorWarpAmount": 488,
-          "m_flSFXDetailAnimationTimeOffset": 568,
-          "m_flSFXDetailAnimationTimePerFrame": 564,
           "m_flSFXEnvMapAmount": 576,
           "m_flSFXMetalnessAmount": 496,
           "m_flSFXNormalAmount": 492,
@@ -3125,7 +3204,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_VelocityFromCP": {
         "fields": {
@@ -3138,9 +3217,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_VelocityFromNormal": {
         "fields": {
@@ -3152,9 +3235,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_VelocityFromWind": {
         "fields": {
@@ -3168,7 +3255,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_VelocityRadialRandom": {
         "fields": {
@@ -3187,7 +3274,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_INIT_VelocityRandom": {
         "fields": {
@@ -3203,9 +3290,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionInitializer"
       },
       "C_OP_AlphaDecay": {
         "fields": {
@@ -3217,7 +3308,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_AttractToControlPoint": {
         "fields": {
@@ -3233,9 +3324,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_BasicMovement": {
         "fields": {
@@ -3249,9 +3344,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_BoxConstraint": {
         "fields": {
@@ -3267,7 +3366,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionConstraint"
       },
       "C_OP_CPOffsetToPercentageBetweenCPs": {
         "fields": {
@@ -3289,7 +3388,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_CPVelocityForce": {
         "fields": {
@@ -3302,7 +3401,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_CalculateVectorAttribute": {
         "fields": {
@@ -3324,7 +3423,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_Callback": {
         "fields": {},
@@ -3334,7 +3433,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_ChladniWave": {
         "fields": {
@@ -3355,7 +3454,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ChooseRandomChildrenInGroup": {
         "fields": {
@@ -3368,7 +3467,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_ClampScalar": {
         "fields": {
@@ -3382,7 +3481,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ClampVector": {
         "fields": {
@@ -3396,25 +3495,25 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ClientPhysics": {
         "fields": {
-          "m_bDeleteSim": 1338,
-          "m_bKillParticles": 1337,
-          "m_bRespectExclusionVolumes": 1336,
-          "m_bStartAsleep": 568,
-          "m_bUseHighQualitySimulation": 1328,
-          "m_flPlayerWakeRadius": 576,
-          "m_flVehicleWakeRadius": 952,
-          "m_nColorBlendType": 1348,
-          "m_nControlPoint": 1340,
-          "m_nForcedSimId": 1344,
-          "m_nForcedStatusEffects": 1352,
-          "m_nMaxParticleCount": 1332,
-          "m_nNoCollisionAttribute": 1356,
-          "m_nZeroGravityAttribute": 1360,
-          "m_strPhysicsType": 560
+          "m_bDeleteSim": 1330,
+          "m_bKillParticles": 1329,
+          "m_bRespectExclusionVolumes": 1328,
+          "m_bStartAsleep": 560,
+          "m_bUseHighQualitySimulation": 1320,
+          "m_flPlayerWakeRadius": 568,
+          "m_flVehicleWakeRadius": 944,
+          "m_nColorBlendType": 1340,
+          "m_nControlPoint": 1332,
+          "m_nForcedSimId": 1336,
+          "m_nForcedStatusEffects": 1344,
+          "m_nMaxParticleCount": 1324,
+          "m_nNoCollisionAttribute": 1348,
+          "m_nZeroGravityAttribute": 1352,
+          "m_strPhysicsType": 552
         },
         "metadata": [
           {
@@ -3422,7 +3521,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_CollideWithParentParticles": {
         "fields": {
@@ -3435,7 +3534,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionConstraint"
       },
       "C_OP_CollideWithSelf": {
         "fields": {
@@ -3448,7 +3547,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionConstraint"
       },
       "C_OP_ColorAdjustHSL": {
         "fields": {
@@ -3462,7 +3561,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ColorInterpolate": {
         "fields": {
@@ -3478,7 +3577,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ColorInterpolateRandom": {
         "fields": {
@@ -3495,7 +3594,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ConnectParentParticleToNearest": {
         "fields": {
@@ -3511,7 +3610,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ConstrainDistance": {
         "fields": {
@@ -3525,9 +3624,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionConstraint"
       },
       "C_OP_ConstrainDistanceToPath": {
         "fields": {
@@ -3546,7 +3649,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionConstraint"
       },
       "C_OP_ConstrainDistanceToUserSpecifiedPath": {
         "fields": {
@@ -3562,7 +3665,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionConstraint"
       },
       "C_OP_ConstrainLineLength": {
         "fields": {
@@ -3575,7 +3678,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionConstraint"
       },
       "C_OP_ContinuousEmitter": {
         "fields": {
@@ -3598,7 +3701,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionEmitter"
       },
       "C_OP_ControlPointToRadialScreenSpace": {
         "fields": {
@@ -3614,7 +3717,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_ControlpointLight": {
         "fields": {
@@ -3658,15 +3761,15 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_CreateParticleSystemRenderer": {
         "fields": {
-          "m_AggregationPos": 600,
-          "m_hEffect": 560,
-          "m_nEventType": 568,
-          "m_szParticleConfig": 592,
-          "m_vecCPs": 576
+          "m_AggregationPos": 592,
+          "m_hEffect": 552,
+          "m_nEventType": 560,
+          "m_szParticleConfig": 584,
+          "m_vecCPs": 568
         },
         "metadata": [
           {
@@ -3674,7 +3777,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_Cull": {
         "fields": {
@@ -3689,7 +3792,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_CurlNoiseForce": {
         "fields": {
@@ -3705,9 +3808,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_CycleScalar": {
         "fields": {
@@ -3728,7 +3835,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_CylindricalDistanceToTransform": {
         "fields": {
@@ -3750,7 +3857,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_DampenToCP": {
         "fields": {
@@ -3764,7 +3871,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_Decay": {
         "fields": {
@@ -3775,9 +3882,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_DecayClampCount": {
         "fields": {
@@ -3789,7 +3900,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_DecayMaintainCount": {
         "fields": {
@@ -3807,7 +3918,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_DecayOffscreen": {
         "fields": {
@@ -3819,7 +3930,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_DensityForce": {
         "fields": {
@@ -3833,7 +3944,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_DifferencePreviousParticle": {
         "fields": {
@@ -3853,7 +3964,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_Diffusion": {
         "fields": {
@@ -3867,7 +3978,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_DirectionBetweenVecsToVec": {
         "fields": {
@@ -3881,7 +3992,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_DistanceBetweenCPsToCP": {
         "fields": {
@@ -3907,7 +4018,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_DistanceBetweenTransforms": {
         "fields": {
@@ -3931,7 +4042,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_DistanceBetweenVecs": {
         "fields": {
@@ -3951,7 +4062,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_DistanceCull": {
         "fields": {
@@ -3967,7 +4078,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_DistanceToTransform": {
         "fields": {
@@ -3991,9 +4102,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_DragRelativeToPlane": {
         "fields": {
@@ -4009,7 +4124,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_DriveCPFromGlobalSoundFloat": {
         "fields": {
@@ -4029,7 +4144,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_EnableChildrenFromParentParticleCount": {
         "fields": {
@@ -4046,7 +4161,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_EndCapDecay": {
         "fields": {},
@@ -4056,7 +4171,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_EndCapTimedDecay": {
         "fields": {
@@ -4066,9 +4181,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_EndCapTimedFreeze": {
         "fields": {
@@ -4080,7 +4199,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ExternalGameImpulseForce": {
         "fields": {
@@ -4096,7 +4215,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_ExternalWindForce": {
         "fields": {
@@ -4116,9 +4235,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_FadeAndKill": {
         "fields": {
@@ -4136,7 +4259,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_FadeAndKillForTracers": {
         "fields": {
@@ -4153,7 +4276,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_FadeIn": {
         "fields": {
@@ -4168,7 +4291,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_FadeInSimple": {
         "fields": {
@@ -4179,9 +4302,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_FadeOut": {
         "fields": {
@@ -4198,7 +4325,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_FadeOutSimple": {
         "fields": {
@@ -4209,9 +4336,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ForceBasedOnDistanceToPlane": {
         "fields": {
@@ -4229,7 +4360,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_ForceControlPointStub": {
         "fields": {
@@ -4241,26 +4372,26 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_GameDecalRenderer": {
         "fields": {
-          "m_bNoDecalsOnOwner": 7355,
-          "m_bRandomDecalRotation": 7353,
-          "m_bRandomlySelectDecalInGroup": 7354,
-          "m_bUseGameDefaultDecalSize": 7352,
-          "m_bVisualizeTraces": 7356,
-          "m_flDecalRotation": 5224,
-          "m_flDecalSize": 4472,
-          "m_flTraceBloat": 4096,
-          "m_nCollisionGroup": 584,
-          "m_nDecalGroupIndex": 4848,
-          "m_nEventType": 568,
-          "m_nInteractionMask": 576,
-          "m_sDecalGroupName": 560,
-          "m_vModulationColor": 5600,
-          "m_vecEndPos": 2344,
-          "m_vecStartPos": 592
+          "m_bNoDecalsOnOwner": 7347,
+          "m_bRandomDecalRotation": 7345,
+          "m_bRandomlySelectDecalInGroup": 7346,
+          "m_bUseGameDefaultDecalSize": 7344,
+          "m_bVisualizeTraces": 7348,
+          "m_flDecalRotation": 5216,
+          "m_flDecalSize": 4464,
+          "m_flTraceBloat": 4088,
+          "m_nCollisionGroup": 576,
+          "m_nDecalGroupIndex": 4840,
+          "m_nEventType": 560,
+          "m_nInteractionMask": 568,
+          "m_sDecalGroupName": 552,
+          "m_vModulationColor": 5592,
+          "m_vecEndPos": 2336,
+          "m_vecStartPos": 584
         },
         "metadata": [
           {
@@ -4268,15 +4399,15 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_GameLiquidSpill": {
         "fields": {
-          "m_bCheckExposedToSky": 1688,
-          "m_flExpirationTime": 936,
-          "m_flLiquidContentsField": 560,
-          "m_flRadius": 1312,
-          "m_nAmountAttribute": 1692
+          "m_bCheckExposedToSky": 1680,
+          "m_flExpirationTime": 928,
+          "m_flLiquidContentsField": 552,
+          "m_flRadius": 1304,
+          "m_nAmountAttribute": 1684
         },
         "metadata": [
           {
@@ -4284,7 +4415,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_GlobalLight": {
         "fields": {
@@ -4298,7 +4429,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_HSVShiftToCP": {
         "fields": {
@@ -4313,7 +4444,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_InheritFromParentParticles": {
         "fields": {
@@ -4336,7 +4467,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_InheritFromParentParticlesV2": {
         "fields": {
@@ -4359,7 +4490,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_InheritFromPeerSystem": {
         "fields": {
@@ -4374,7 +4505,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_InstantaneousEmitter": {
         "fields": {
@@ -4394,7 +4525,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionEmitter"
       },
       "C_OP_InterpolateRadius": {
         "fields": {
@@ -4409,9 +4540,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_IntraParticleForce": {
         "fields": {
@@ -4429,7 +4564,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_LagCompensation": {
         "fields": {
@@ -4444,7 +4579,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_LazyCullCompareFloat": {
         "fields": {
@@ -4458,7 +4593,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_LerpEndCapScalar": {
         "fields": {
@@ -4470,9 +4605,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_LerpEndCapVector": {
         "fields": {
@@ -4484,9 +4623,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_LerpScalar": {
         "fields": {
@@ -4501,7 +4644,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_LerpToInitialPosition": {
         "fields": {
@@ -4517,7 +4660,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_LerpToOtherAttribute": {
         "fields": {
@@ -4532,7 +4675,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_LerpVector": {
         "fields": {
@@ -4548,7 +4691,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_LightningSnapshotGenerator": {
         "fields": {
@@ -4579,7 +4722,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_LocalAccelerationForce": {
         "fields": {
@@ -4593,7 +4736,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_LockPoints": {
         "fields": {
@@ -4610,7 +4753,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_LockToBone": {
         "fields": {
@@ -4634,9 +4777,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_LockToPointList": {
         "fields": {
@@ -4652,7 +4799,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_LockToSavedSequentialPath": {
         "fields": {
@@ -4675,7 +4822,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_LockToSavedSequentialPathV2": {
         "fields": {
@@ -4694,7 +4841,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_MaintainEmitter": {
         "fields": {
@@ -4714,7 +4861,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionEmitter"
       },
       "C_OP_MaintainSequentialPath": {
         "fields": {
@@ -4732,7 +4879,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_MaxVelocity": {
         "fields": {
@@ -4745,7 +4892,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ModelCull": {
         "fields": {
@@ -4761,7 +4908,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ModelDampenMovement": {
         "fields": {
@@ -4779,7 +4926,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ModelSurfaceSnapshotGenerator": {
         "fields": {
@@ -4800,7 +4947,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_MoveToHitbox": {
         "fields": {
@@ -4820,7 +4967,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_MovementLoopInsideSphere": {
         "fields": {
@@ -4835,7 +4982,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_MovementMaintainOffset": {
         "fields": {
@@ -4849,7 +4996,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_MovementMoveAlongSkinnedCPSnapshot": {
         "fields": {
@@ -4866,7 +5013,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_MovementPlaceOnGround": {
         "fields": {
@@ -4895,7 +5042,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_MovementRigidAttachToCP": {
         "fields": {
@@ -4912,7 +5059,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_MovementRotateParticleAroundAxis": {
         "fields": {
@@ -4927,7 +5074,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_MovementSkinnedPositionFromCPSnapshot": {
         "fields": {
@@ -4950,7 +5097,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_MultiSegmentDisplaySnapshotGenerator": {
         "fields": {
@@ -4976,7 +5123,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_Noise": {
         "fields": {
@@ -4991,9 +5138,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_NoiseEmitter": {
         "fields": {
@@ -5019,7 +5170,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionEmitter"
       },
       "C_OP_NormalLock": {
         "fields": {
@@ -5031,7 +5182,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_NormalizeVector": {
         "fields": {
@@ -5044,7 +5195,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_Orient2DRelToCP": {
         "fields": {
@@ -5059,7 +5210,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_OrientTo2dDirection": {
         "fields": {
@@ -5074,7 +5225,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_OscillateScalar": {
         "fields": {
@@ -5098,7 +5249,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_OscillateScalarSimple": {
         "fields": {
@@ -5114,7 +5265,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_OscillateVector": {
         "fields": {
@@ -5140,7 +5291,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_OscillateVectorSimple": {
         "fields": {
@@ -5157,7 +5308,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ParentVortices": {
         "fields": {
@@ -5171,7 +5322,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_PerParticleForce": {
         "fields": {
@@ -5185,7 +5336,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_PercentageBetweenTransformLerpCPs": {
         "fields": {
@@ -5208,7 +5359,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_PercentageBetweenTransforms": {
         "fields": {
@@ -5229,7 +5380,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_PercentageBetweenTransformsVector": {
         "fields": {
@@ -5250,7 +5401,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_PinParticleToCP": {
         "fields": {
@@ -5275,7 +5426,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_PinRopeSegmentParticleToParent": {
         "fields": {
@@ -5289,7 +5440,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_PlanarConstraint": {
         "fields": {
@@ -5308,7 +5459,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionConstraint"
       },
       "C_OP_PlaneCull": {
         "fields": {
@@ -5323,7 +5474,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_PlayEndCapWhenFinished": {
         "fields": {
@@ -5336,7 +5487,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_PointVectorAtNextParticle": {
         "fields": {
@@ -5350,7 +5501,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_PositionLock": {
         "fields": {
@@ -5374,9 +5525,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_QuantizeCPComponent": {
         "fields": {
@@ -5391,7 +5546,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_QuantizeFloat": {
         "fields": {
@@ -5404,7 +5559,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RadiusDecay": {
         "fields": {
@@ -5416,7 +5571,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RampCPLinearRandom": {
         "fields": {
@@ -5430,7 +5585,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_RampScalarLinear": {
         "fields": {
@@ -5449,7 +5604,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RampScalarLinearSimple": {
         "fields": {
@@ -5464,7 +5619,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RampScalarSpline": {
         "fields": {
@@ -5485,7 +5640,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RampScalarSplineSimple": {
         "fields": {
@@ -5501,7 +5656,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RandomForce": {
         "fields": {
@@ -5512,9 +5667,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_ReadFromNeighboringParticle": {
         "fields": {
@@ -5530,7 +5689,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ReinitializeScalarEndCap": {
         "fields": {
@@ -5544,7 +5703,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapAverageHitboxSpeedtoCP": {
         "fields": {
@@ -5566,7 +5725,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_RemapAverageScalarValuetoCP": {
         "fields": {
@@ -5583,7 +5742,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_RemapBoundingVolumetoCP": {
         "fields": {
@@ -5599,7 +5758,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_RemapCPVelocityToVector": {
         "fields": {
@@ -5614,7 +5773,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapCPtoCP": {
         "fields": {
@@ -5635,7 +5794,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_RemapCPtoScalar": {
         "fields": {
@@ -5657,7 +5816,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapCPtoVector": {
         "fields": {
@@ -5681,7 +5840,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapControlPointDirectionToVector": {
         "fields": {
@@ -5695,7 +5854,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapControlPointOrientationToRotation": {
         "fields": {
@@ -5710,7 +5869,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapCrossProductOfTwoVectorsToVector": {
         "fields": {
@@ -5725,7 +5884,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapDensityGradientToVectorAttribute": {
         "fields": {
@@ -5738,7 +5897,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapDensityToVector": {
         "fields": {
@@ -5757,7 +5916,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapDirectionToCPToVector": {
         "fields": {
@@ -5775,7 +5934,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapDistanceToLineSegmentBase": {
         "fields": {
@@ -5791,7 +5950,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapDistanceToLineSegmentToScalar": {
         "fields": {
@@ -5805,7 +5964,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_OP_RemapDistanceToLineSegmentBase"
       },
       "C_OP_RemapDistanceToLineSegmentToVector": {
         "fields": {
@@ -5819,7 +5978,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_OP_RemapDistanceToLineSegmentBase"
       },
       "C_OP_RemapDotProductToCP": {
         "fields": {
@@ -5838,7 +5997,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_RemapDotProductToScalar": {
         "fields": {
@@ -5860,7 +6019,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapExternalWindToCP": {
         "fields": {
@@ -5876,7 +6035,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_RemapGravityToVector": {
         "fields": {
@@ -5891,7 +6050,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapModelVolumetoCP": {
         "fields": {
@@ -5913,7 +6072,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_RemapNamedModelBodyPartEndCap": {
         "fields": {},
@@ -5923,7 +6082,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_OP_RemapNamedModelElementEndCap"
       },
       "C_OP_RemapNamedModelBodyPartOnceTimed": {
         "fields": {},
@@ -5933,7 +6092,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_OP_RemapNamedModelElementOnceTimed"
       },
       "C_OP_RemapNamedModelElementEndCap": {
         "fields": {
@@ -5951,7 +6110,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapNamedModelElementOnceTimed": {
         "fields": {
@@ -5971,7 +6130,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapNamedModelMeshGroupEndCap": {
         "fields": {},
@@ -5981,7 +6140,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_OP_RemapNamedModelElementEndCap"
       },
       "C_OP_RemapNamedModelMeshGroupOnceTimed": {
         "fields": {},
@@ -5991,7 +6150,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_OP_RemapNamedModelElementOnceTimed"
       },
       "C_OP_RemapNamedModelSequenceEndCap": {
         "fields": {},
@@ -6001,7 +6160,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_OP_RemapNamedModelElementEndCap"
       },
       "C_OP_RemapNamedModelSequenceOnceTimed": {
         "fields": {},
@@ -6011,7 +6170,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "C_OP_RemapNamedModelElementOnceTimed"
       },
       "C_OP_RemapParticleCountOnScalarEndCap": {
         "fields": {
@@ -6029,7 +6188,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapParticleCountToScalar": {
         "fields": {
@@ -6047,7 +6206,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapScalar": {
         "fields": {
@@ -6065,7 +6224,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapScalarEndCap": {
         "fields": {
@@ -6082,7 +6241,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapScalarOnceTimed": {
         "fields": {
@@ -6101,7 +6260,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapSpeed": {
         "fields": {
@@ -6119,7 +6278,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapSpeedtoCP": {
         "fields": {
@@ -6138,7 +6297,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_RemapTransformOrientationToRotations": {
         "fields": {
@@ -6153,7 +6312,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapTransformOrientationToYaw": {
         "fields": {
@@ -6168,7 +6327,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapTransformToVelocity": {
         "fields": {
@@ -6180,7 +6339,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapTransformVisibilityToScalar": {
         "fields": {
@@ -6199,7 +6358,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapTransformVisibilityToVector": {
         "fields": {
@@ -6218,7 +6377,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapVectorComponentToScalar": {
         "fields": {
@@ -6232,7 +6391,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapVectorToRotations": {
         "fields": {
@@ -6245,7 +6404,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapVectortoCP": {
         "fields": {
@@ -6259,7 +6418,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapVelocityToVector": {
         "fields": {
@@ -6273,7 +6432,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RemapVisibilityScalar": {
         "fields": {
@@ -6291,18 +6450,18 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RenderAsModels": {
         "fields": {
-          "m_ModelList": 560,
-          "m_bFitToModelSize": 592,
-          "m_bNonUniformScaling": 593,
-          "m_flModelScale": 588,
-          "m_nSizeCullBloat": 608,
-          "m_nXAxisScalingAttribute": 596,
-          "m_nYAxisScalingAttribute": 600,
-          "m_nZAxisScalingAttribute": 604
+          "m_ModelList": 552,
+          "m_bFitToModelSize": 584,
+          "m_bNonUniformScaling": 585,
+          "m_flModelScale": 580,
+          "m_nSizeCullBloat": 600,
+          "m_nXAxisScalingAttribute": 588,
+          "m_nYAxisScalingAttribute": 592,
+          "m_nZAxisScalingAttribute": 596
         },
         "metadata": [
           {
@@ -6310,11 +6469,12 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_RenderBlobs": {
         "fields": {
           "m_MaterialVars": 1704,
+          "m_bUseParticleColorForVertColor": 552,
           "m_cubeWidth": 560,
           "m_cutoffRadius": 936,
           "m_hMaterial": 1752,
@@ -6329,34 +6489,34 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_RenderCables": {
         "fields": {
-          "m_LightingTransform": 5376,
-          "m_MaterialFloatVars": 5480,
-          "m_MaterialVecVars": 5512,
-          "m_bDrawCableCaps": 5344,
-          "m_bOnlyRenderInEffectsBloomPass": 5373,
-          "m_flAlphaScale": 936,
-          "m_flCapOffsetAmount": 5352,
-          "m_flCapRoundness": 5348,
-          "m_flColorMapOffsetU": 4216,
-          "m_flColorMapOffsetV": 3840,
-          "m_flNormalMapOffsetU": 4968,
-          "m_flNormalMapOffsetV": 4592,
-          "m_flRadiusScale": 560,
-          "m_flTessScale": 5356,
-          "m_flTextureRepeatsCircumference": 3464,
-          "m_flTextureRepeatsPerSegment": 3088,
-          "m_hMaterial": 3072,
-          "m_nColorBlendType": 3064,
-          "m_nForceRoundnessFixed": 5372,
-          "m_nMaxTesselation": 5364,
-          "m_nMinTesselation": 5360,
-          "m_nRoundness": 5368,
-          "m_nTextureRepetitionMode": 3080,
-          "m_vecColorScale": 1312
+          "m_LightingTransform": 5368,
+          "m_MaterialFloatVars": 5472,
+          "m_MaterialVecVars": 5504,
+          "m_bDrawCableCaps": 5336,
+          "m_bOnlyRenderInEffectsBloomPass": 5365,
+          "m_flAlphaScale": 928,
+          "m_flCapOffsetAmount": 5344,
+          "m_flCapRoundness": 5340,
+          "m_flColorMapOffsetU": 4208,
+          "m_flColorMapOffsetV": 3832,
+          "m_flNormalMapOffsetU": 4960,
+          "m_flNormalMapOffsetV": 4584,
+          "m_flRadiusScale": 552,
+          "m_flTessScale": 5348,
+          "m_flTextureRepeatsCircumference": 3456,
+          "m_flTextureRepeatsPerSegment": 3080,
+          "m_hMaterial": 3064,
+          "m_nColorBlendType": 3056,
+          "m_nForceRoundnessFixed": 5364,
+          "m_nMaxTesselation": 5356,
+          "m_nMinTesselation": 5352,
+          "m_nRoundness": 5360,
+          "m_nTextureRepetitionMode": 3072,
+          "m_vecColorScale": 1304
         },
         "metadata": [
           {
@@ -6364,13 +6524,13 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_RenderClientPhysicsImpulse": {
         "fields": {
-          "m_flMagnitude": 936,
-          "m_flRadius": 560,
-          "m_nSimIdFilter": 1312
+          "m_flMagnitude": 928,
+          "m_flRadius": 552,
+          "m_nSimIdFilter": 1304
         },
         "metadata": [
           {
@@ -6378,506 +6538,39 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_RenderClothForce": {
         "fields": {},
         "metadata": [
           {
+            "name": "MObsoleteParticleFunction",
+            "type": "Unknown"
+          },
+          {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_RenderDeferredLight": {
         "fields": {
-          "m_bUseAlphaTestWindow": 2333,
-          "m_bUseTexture": 2332,
-          "m_flAlphaScale": 564,
-          "m_flDistanceFalloff": 2364,
-          "m_flLightDistance": 2356,
-          "m_flRadiusScale": 560,
-          "m_flSpotFoV": 2368,
-          "m_flStartFalloff": 2360,
-          "m_hTexture": 2336,
-          "m_nAlpha2Field": 568,
-          "m_nAlphaTestPointField": 2344,
-          "m_nAlphaTestRangeField": 2348,
-          "m_nAlphaTestSharpnessField": 2352,
-          "m_nColorBlendType": 2328,
-          "m_nHSVShiftControlPoint": 2372,
-          "m_vecColorScale": 576
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderFlattenGrass": {
-        "fields": {
-          "m_flFlattenStrength": 560,
-          "m_flRadiusScale": 568,
-          "m_nStrengthFieldOverride": 564
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderGpuImplicit": {
-        "fields": {
-          "m_bUsePerParticleRadius": 560,
-          "m_fGridSize": 576,
-          "m_fIsosurfaceThreshold": 1328,
-          "m_fRadiusScale": 952,
-          "m_hMaterial": 1712,
-          "m_nIndexCountKb": 568,
-          "m_nScaleCP": 1704,
-          "m_nVertexCountKb": 564
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderLightBeam": {
-        "fields": {
-          "m_bCastShadows": 3464,
-          "m_bDebugOrientation": 8240,
-          "m_bDynamicBounce": 3465,
-          "m_flBounceScale": 3472,
-          "m_flBrightnessLumensPerMeter": 2712,
-          "m_flFogContribution": 7488,
-          "m_flInnerConeAngle": 4976,
-          "m_flLightStyleTime": 2336,
-          "m_flNumberOfLightsToCreate": 3088,
-          "m_flOuterConeAngle": 5352,
-          "m_flRange": 4224,
-          "m_flRenderFilter": 7864,
-          "m_flSkirt": 3848,
-          "m_flThickness": 4600,
+          "m_bUseAlphaTestWindow": 2325,
+          "m_bUseTexture": 2324,
+          "m_flAlphaScale": 556,
+          "m_flDistanceFalloff": 2356,
+          "m_flLightDistance": 2348,
+          "m_flRadiusScale": 552,
+          "m_flSpotFoV": 2360,
+          "m_flStartFalloff": 2352,
+          "m_hTexture": 2328,
+          "m_nAlpha2Field": 560,
+          "m_nAlphaTestPointField": 2336,
+          "m_nAlphaTestRangeField": 2340,
+          "m_nAlphaTestSharpnessField": 2344,
           "m_nColorBlendType": 2320,
-          "m_nFogLightingMode": 7480,
-          "m_nMaxAllowed": 560,
-          "m_strLightStyle": 2328,
-          "m_vColorBlend": 568,
-          "m_vecConeRotationOffset": 5728
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderLights": {
-        "fields": {
-          "m_bAnimateInFPS": 576,
-          "m_flAnimationRate": 568,
-          "m_flEndFadeSize": 592,
-          "m_flMaxSize": 584,
-          "m_flMinSize": 580,
-          "m_flStartFadeSize": 588,
-          "m_nAnimationType": 572
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderMaterialProxy": {
-        "fields": {
-          "m_MaterialVars": 568,
-          "m_flAlpha": 2728,
-          "m_flMaterialOverrideEnabled": 600,
-          "m_hOverrideMaterial": 592,
-          "m_nColorBlendType": 3104,
-          "m_nMaterialControlPoint": 560,
-          "m_nProxyType": 564,
-          "m_vecColorScale": 976
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderModels": {
-        "fields": {
-          "m_ActivityName": 6280,
-          "m_ClothEffectName": 6794,
-          "m_EconSlotName": 8132,
-          "m_MaterialVars": 7256,
-          "m_ModelList": 568,
-          "m_SequenceName": 6536,
-          "m_bAcceptsDecals": 8398,
-          "m_bAllowApproximateTransforms": 8401,
-          "m_bAnimated": 5880,
-          "m_bCenterOffset": 602,
-          "m_bDisableClothGroundCollision": 6793,
-          "m_bDisableDepthPrepass": 8397,
-          "m_bDisableShadows": 8396,
-          "m_bDoNotDrawInParticlePass": 8400,
-          "m_bEnableClothSimulation": 6792,
-          "m_bForceDrawInterlevedWithSiblings": 8399,
-          "m_bForceLoopingAnimation": 6265,
-          "m_bIgnoreNormal": 600,
-          "m_bIgnoreRadius": 4112,
-          "m_bLocalScale": 5872,
-          "m_bManualAnimFrame": 6267,
-          "m_bOnlyRenderInEffecsGameOverlay": 563,
-          "m_bOnlyRenderInEffectsBloomPass": 560,
-          "m_bOnlyRenderInEffectsWaterPass": 561,
-          "m_bOrientZ": 601,
-          "m_bOriginalModel": 8388,
-          "m_bOverrideTranslucentMaterials": 6872,
-          "m_bResetAnimOnStop": 6266,
-          "m_bScaleAnimationRate": 6264,
-          "m_bSuppressTint": 8389,
-          "m_bUseMixedResolutionRendering": 562,
-          "m_flAlphaScale": 9040,
-          "m_flAnimationRate": 5888,
-          "m_flLightStyleTime": 11568,
-          "m_flManualModelSelection": 7656,
-          "m_flRadiusScale": 8664,
-          "m_flRenderFilter": 7280,
-          "m_flRollScale": 9416,
-          "m_hOverrideMaterial": 6864,
-          "m_modelInput": 8032,
-          "m_nAlpha2Field": 9792,
-          "m_nAnimationField": 6272,
-          "m_nAnimationScaleField": 6268,
-          "m_nBodyGroupField": 592,
-          "m_nColorBlendType": 11552,
-          "m_nLOD": 8128,
-          "m_nManualFrameField": 6276,
-          "m_nModelScaleCP": 4116,
-          "m_nSizeCullBloat": 5876,
-          "m_nSkin": 6880,
-          "m_nSubModelField": 596,
-          "m_nSubModelFieldType": 8392,
-          "m_strLightStyle": 11560,
-          "m_szRenderAttribute": 8402,
-          "m_vecColorScale": 9800,
-          "m_vecComponentScale": 4120,
-          "m_vecLocalOffset": 608,
-          "m_vecLocalRotation": 2360
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderOmni2Light": {
-        "fields": {
-          "m_bCastShadows": 3472,
-          "m_bDynamicBounce": 3473,
-          "m_bFog": 3856,
-          "m_bSphericalCookie": 11896,
-          "m_flBarnNearSizeX": 8880,
-          "m_flBarnNearSizeY": 9256,
-          "m_flBarnShape": 8504,
-          "m_flBarnSoftX": 9632,
-          "m_flBarnSoftY": 10008,
-          "m_flBounceScale": 3480,
-          "m_flBrightnessCandelas": 3096,
-          "m_flBrightnessLumens": 2720,
-          "m_flFOVAngle": 8128,
-          "m_flFogScale": 3864,
-          "m_flInnerConeAngle": 11136,
-          "m_flLightStyleTime": 2336,
-          "m_flLuminaireRadius": 4240,
-          "m_flOuterConeAngle": 11512,
-          "m_flRange": 10760,
-          "m_flSkirt": 10384,
-          "m_hLightCookie": 11888,
-          "m_nBrightnessUnit": 2712,
-          "m_nColorBlendType": 2320,
-          "m_nLightType": 560,
-          "m_nMaxAllowed": 564,
-          "m_nOrientationType": 4616,
-          "m_strLightStyle": 2328,
-          "m_vColorBlend": 568,
-          "m_vNormal": 4624,
-          "m_vTarget": 6376
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderPoints": {
-        "fields": {
-          "m_hMaterial": 560
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderPostProcessing": {
-        "fields": {
-          "m_flPostProcessStrength": 560,
-          "m_hPostTexture": 936,
-          "m_nPriority": 944
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderProjected": {
-        "fields": {
-          "m_MaterialVars": 984,
-          "m_bEnableProjectedDepthControls": 564,
-          "m_bFlipHorizontal": 563,
-          "m_bOrientToNormal": 980,
-          "m_bProjectCharacter": 560,
-          "m_bProjectWater": 562,
-          "m_bProjectWorld": 561,
-          "m_flAlphaScale": 1384,
-          "m_flAnimationTimeScale": 976,
-          "m_flMaterialSelection": 600,
-          "m_flMaxProjectionDepth": 572,
-          "m_flMinProjectionDepth": 568,
-          "m_flRadiusScale": 1008,
-          "m_flRollScale": 1760,
-          "m_nAlpha2Field": 2136,
-          "m_nColorBlendType": 3896,
-          "m_vecColorScale": 2144,
-          "m_vecProjectedMaterials": 576
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderRopes": {
-        "fields": {
-          "m_bClampV": 13548,
-          "m_bClosedLoop": 13585,
-          "m_bDrawAsOpaque": 13604,
-          "m_bEnableFadingAndClamping": 11992,
-          "m_bGenerateNormals": 13605,
-          "m_bReverseOrder": 13584,
-          "m_bSortBySegmentID": 13592,
-          "m_bUseScalarForTextureCoordinate": 13573,
-          "m_flEndFadeDot": 12016,
-          "m_flEndFadeSize": 12008,
-          "m_flMaxSize": 12000,
-          "m_flMinSize": 11996,
-          "m_flRadiusTaper": 12400,
-          "m_flScalarAttributeTextureCoordScale": 13580,
-          "m_flScaleVOffsetByControlPointDistance": 13568,
-          "m_flScaleVScrollByControlPointDistance": 13564,
-          "m_flScaleVSizeByControlPointDistance": 13560,
-          "m_flStartFadeDot": 12012,
-          "m_flStartFadeSize": 12004,
-          "m_flSubPixelAAScale": 12024,
-          "m_flTessScale": 12412,
-          "m_flTextureVOffset": 13168,
-          "m_flTextureVScrollRate": 12792,
-          "m_flTextureVWorldSize": 12416,
-          "m_nMaxTesselation": 12408,
-          "m_nMinTesselation": 12404,
-          "m_nOrientationType": 13596,
-          "m_nScalarFieldForTextureCoordinate": 13576,
-          "m_nScaleCP1": 13552,
-          "m_nScaleCP2": 13556,
-          "m_nSplitField": 13588,
-          "m_nTextureVParamsCP": 13544,
-          "m_nVectorFieldForOrientation": 13600
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderScreenShake": {
-        "fields": {
-          "m_flAmplitudeScale": 572,
-          "m_flDurationScale": 560,
-          "m_flFrequencyScale": 568,
-          "m_flRadiusScale": 564,
-          "m_nAmplitudeField": 588,
-          "m_nDurationField": 580,
-          "m_nFilterCP": 592,
-          "m_nFrequencyField": 584,
-          "m_nRadiusField": 576
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderScreenVelocityRotate": {
-        "fields": {
-          "m_flForwardDegrees": 564,
-          "m_flRotateRateDegrees": 560
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderSimpleModelCollection": {
-        "fields": {
-          "m_bAcceptsDecals": 1050,
-          "m_bCenterOffset": 560,
-          "m_bDisableMotionBlur": 1049,
-          "m_bDisableShadows": 1048,
-          "m_fDrawFilter": 1056,
-          "m_fSizeCullScale": 672,
-          "m_hModel": 568,
-          "m_modelInput": 576,
-          "m_nAngularVelocityField": 1432
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderSound": {
-        "fields": {
-          "m_bSuppressStopSoundEvent": 856,
-          "m_flDurationScale": 560,
-          "m_flPitchScale": 568,
-          "m_flSndLvlScale": 564,
-          "m_flVolumeScale": 572,
-          "m_nCPReference": 596,
-          "m_nChannel": 592,
-          "m_nDurationField": 580,
-          "m_nPitchField": 584,
-          "m_nSndLvlField": 576,
-          "m_nVolumeField": 588,
-          "m_pszSoundName": 600
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderSprites": {
-        "fields": {
-          "m_OutlineColor": 14288,
-          "m_bDistanceAlpha": 14272,
-          "m_bOutline": 14284,
-          "m_bParticleShadows": 16824,
-          "m_bSequenceNumbersAreRawSequenceIndices": 12368,
-          "m_bSoftEdges": 14273,
-          "m_bUseYawWithNormalAligned": 12380,
-          "m_flEdgeSoftnessEnd": 14280,
-          "m_flEdgeSoftnessStart": 14276,
-          "m_flEndFadeDot": 14268,
-          "m_flEndFadeSize": 13888,
-          "m_flLightingDirectionality": 16448,
-          "m_flLightingTessellation": 16072,
-          "m_flMaxSize": 12760,
-          "m_flMinSize": 12384,
-          "m_flOutlineEnd0": 14304,
-          "m_flOutlineEnd1": 14308,
-          "m_flOutlineStart0": 14296,
-          "m_flOutlineStart1": 14300,
-          "m_flShadowDensity": 16828,
-          "m_flStartFadeDot": 14264,
-          "m_flStartFadeSize": 13512,
-          "m_flSubPixelAAScale": 13136,
-          "m_nLightingMode": 14312,
-          "m_nOrientationControlPoint": 12376,
-          "m_nOrientationType": 12372,
-          "m_nOutlineAlpha": 14292,
-          "m_nSequenceOverride": 11992,
-          "m_vecLightingOverride": 14320
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "C_OP_RenderStandardLight": {
-        "fields": {
-          "m_bCastShadows": 3088,
-          "m_bClosedLoop": 6145,
-          "m_bDynamicBounce": 3089,
-          "m_bIgnoreDT": 6160,
-          "m_bRenderDiffuse": 5736,
-          "m_bRenderSpecular": 5737,
-          "m_bReverseOrder": 6144,
-          "m_flBounceScale": 3096,
-          "m_flCapsuleLength": 6140,
-          "m_flConstrainRadiusToLengthRatio": 6164,
-          "m_flFalloffLinearity": 4608,
-          "m_flFiftyPercentFalloff": 4984,
-          "m_flFogContribution": 5760,
-          "m_flIntensity": 2712,
-          "m_flLengthFadeInTime": 6172,
-          "m_flLengthScale": 6168,
-          "m_flLightStyleTime": 2336,
-          "m_flMaxLength": 6152,
-          "m_flMinLength": 6156,
-          "m_flPhi": 3848,
-          "m_flRadiusMultiplier": 4224,
-          "m_flTheta": 3472,
-          "m_flZeroPercentFalloff": 5360,
-          "m_lightCookie": 5744,
-          "m_nAttenuationStyle": 4600,
-          "m_nCapsuleLightBehavior": 6136,
-          "m_nColorBlendType": 2320,
-          "m_nFogLightingMode": 5756,
-          "m_nLightType": 560,
-          "m_nMaxAllowed": 564,
-          "m_nPrevPntSource": 6148,
-          "m_nPriority": 5752,
-          "m_strLightStyle": 2328,
+          "m_nHSVShiftControlPoint": 2364,
           "m_vecColorScale": 568
         },
         "metadata": [
@@ -6886,17 +6579,510 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
+      },
+      "C_OP_RenderFlattenGrass": {
+        "fields": {
+          "m_flFlattenStrength": 552,
+          "m_flRadiusScale": 560,
+          "m_nStrengthFieldOverride": 556
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
+      },
+      "C_OP_RenderGpuImplicit": {
+        "fields": {
+          "m_bUseParticleColorForVertColor": 1712,
+          "m_bUsePerParticleRadius": 552,
+          "m_fGridSize": 568,
+          "m_fIsosurfaceThreshold": 1320,
+          "m_fRadiusScale": 944,
+          "m_hMaterial": 1704,
+          "m_nIndexCountKb": 560,
+          "m_nScaleCP": 1696,
+          "m_nVertexCountKb": 556
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
+      },
+      "C_OP_RenderLightBeam": {
+        "fields": {
+          "m_bCastShadows": 3456,
+          "m_bDebugOrientation": 8232,
+          "m_bDynamicBounce": 3457,
+          "m_flBounceScale": 3464,
+          "m_flBrightnessLumensPerMeter": 2704,
+          "m_flFogContribution": 7480,
+          "m_flInnerConeAngle": 4968,
+          "m_flLightStyleTime": 2328,
+          "m_flNumberOfLightsToCreate": 3080,
+          "m_flOuterConeAngle": 5344,
+          "m_flRange": 4216,
+          "m_flRenderFilter": 7856,
+          "m_flSkirt": 3840,
+          "m_flThickness": 4592,
+          "m_nColorBlendType": 2312,
+          "m_nFogLightingMode": 7472,
+          "m_nMaxAllowed": 552,
+          "m_strLightStyle": 2320,
+          "m_vColorBlend": 560,
+          "m_vecConeRotationOffset": 5720
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
+      },
+      "C_OP_RenderLights": {
+        "fields": {
+          "m_bAnimateInFPS": 568,
+          "m_flAnimationRate": 560,
+          "m_flEndFadeSize": 584,
+          "m_flMaxSize": 576,
+          "m_flMinSize": 572,
+          "m_flStartFadeSize": 580,
+          "m_nAnimationType": 564
+        },
+        "metadata": [
+          {
+            "name": "MObsoleteParticleFunction",
+            "type": "Unknown"
+          },
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "C_OP_RenderPoints"
+      },
+      "C_OP_RenderMaterialProxy": {
+        "fields": {
+          "m_MaterialVars": 560,
+          "m_flAlpha": 2720,
+          "m_flMaterialOverrideEnabled": 592,
+          "m_hOverrideMaterial": 584,
+          "m_nColorBlendType": 3096,
+          "m_nMaterialControlPoint": 552,
+          "m_nProxyType": 556,
+          "m_vecColorScale": 968
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
+      },
+      "C_OP_RenderModels": {
+        "fields": {
+          "m_ActivityName": 6272,
+          "m_ClothEffectName": 6786,
+          "m_EconSlotName": 8124,
+          "m_MaterialVars": 7248,
+          "m_ModelList": 560,
+          "m_SequenceName": 6528,
+          "m_bAcceptsDecals": 8390,
+          "m_bAllowApproximateTransforms": 8393,
+          "m_bAnimated": 5872,
+          "m_bCenterOffset": 594,
+          "m_bDisableClothGroundCollision": 6785,
+          "m_bDisableDepthPrepass": 8389,
+          "m_bDisableShadows": 8388,
+          "m_bDoNotDrawInParticlePass": 8392,
+          "m_bEnableClothSimulation": 6784,
+          "m_bForceDrawInterlevedWithSiblings": 8391,
+          "m_bForceLoopingAnimation": 6257,
+          "m_bIgnoreNormal": 592,
+          "m_bIgnoreRadius": 4104,
+          "m_bLocalScale": 5864,
+          "m_bManualAnimFrame": 6259,
+          "m_bOnlyRenderInEffecsGameOverlay": 555,
+          "m_bOnlyRenderInEffectsBloomPass": 552,
+          "m_bOnlyRenderInEffectsWaterPass": 553,
+          "m_bOrientZ": 593,
+          "m_bOriginalModel": 8380,
+          "m_bOverrideTranslucentMaterials": 6864,
+          "m_bResetAnimOnStop": 6258,
+          "m_bScaleAnimationRate": 6256,
+          "m_bSuppressTint": 8381,
+          "m_bUseMixedResolutionRendering": 554,
+          "m_flAlphaScale": 9032,
+          "m_flAnimationRate": 5880,
+          "m_flLightStyleTime": 11560,
+          "m_flManualModelSelection": 7648,
+          "m_flRadiusScale": 8656,
+          "m_flRenderFilter": 7272,
+          "m_flRollScale": 9408,
+          "m_hOverrideMaterial": 6856,
+          "m_modelInput": 8024,
+          "m_nAlpha2Field": 9784,
+          "m_nAnimationField": 6264,
+          "m_nAnimationScaleField": 6260,
+          "m_nBodyGroupField": 584,
+          "m_nColorBlendType": 11544,
+          "m_nLOD": 8120,
+          "m_nManualFrameField": 6268,
+          "m_nModelScaleCP": 4108,
+          "m_nSizeCullBloat": 5868,
+          "m_nSkin": 6872,
+          "m_nSubModelField": 588,
+          "m_nSubModelFieldType": 8384,
+          "m_strLightStyle": 11552,
+          "m_szRenderAttribute": 8394,
+          "m_vecColorScale": 9792,
+          "m_vecComponentScale": 4112,
+          "m_vecLocalOffset": 600,
+          "m_vecLocalRotation": 2352
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
+      },
+      "C_OP_RenderOmni2Light": {
+        "fields": {
+          "m_bCastShadows": 3464,
+          "m_bDynamicBounce": 3465,
+          "m_bFog": 3848,
+          "m_bSphericalCookie": 12264,
+          "m_flBarnNearSizeX": 9248,
+          "m_flBarnNearSizeY": 9624,
+          "m_flBarnShape": 8872,
+          "m_flBarnSoftX": 10000,
+          "m_flBarnSoftY": 10376,
+          "m_flBounceScale": 3472,
+          "m_flBrightnessCandelas": 3088,
+          "m_flBrightnessLumens": 2712,
+          "m_flFOVAngle": 8496,
+          "m_flFogScale": 3856,
+          "m_flInnerConeAngle": 11504,
+          "m_flLightStyleTime": 2328,
+          "m_flLuminaireRadius": 4608,
+          "m_flMinRoughness": 4232,
+          "m_flOuterConeAngle": 11880,
+          "m_flRange": 11128,
+          "m_flSkirt": 10752,
+          "m_hLightCookie": 12256,
+          "m_nBrightnessUnit": 2704,
+          "m_nColorBlendType": 2312,
+          "m_nLightType": 552,
+          "m_nMaxAllowed": 556,
+          "m_nOrientationType": 4984,
+          "m_strLightStyle": 2320,
+          "m_vColorBlend": 560,
+          "m_vNormal": 4992,
+          "m_vTarget": 6744
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
+      },
+      "C_OP_RenderPoints": {
+        "fields": {
+          "m_hMaterial": 552
+        },
+        "metadata": [
+          {
+            "name": "MObsoleteParticleFunction",
+            "type": "Unknown"
+          },
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
+      },
+      "C_OP_RenderPostProcessing": {
+        "fields": {
+          "m_flPostProcessStrength": 552,
+          "m_hPostTexture": 928,
+          "m_nPriority": 936
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
+      },
+      "C_OP_RenderProjected": {
+        "fields": {
+          "m_MaterialVars": 976,
+          "m_bEnableProjectedDepthControls": 556,
+          "m_bFlipHorizontal": 555,
+          "m_bOrientToNormal": 972,
+          "m_bProjectCharacter": 552,
+          "m_bProjectWater": 554,
+          "m_bProjectWorld": 553,
+          "m_flAlphaScale": 1376,
+          "m_flAnimationTimeScale": 968,
+          "m_flMaterialSelection": 592,
+          "m_flMaxProjectionDepth": 564,
+          "m_flMinProjectionDepth": 560,
+          "m_flRadiusScale": 1000,
+          "m_flRollScale": 1752,
+          "m_nAlpha2Field": 2128,
+          "m_nColorBlendType": 3888,
+          "m_vecColorScale": 2136,
+          "m_vecProjectedMaterials": 568
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
+      },
+      "C_OP_RenderRopes": {
+        "fields": {
+          "m_bClampV": 13540,
+          "m_bClosedLoop": 13577,
+          "m_bDrawAsOpaque": 13596,
+          "m_bEnableFadingAndClamping": 11984,
+          "m_bGenerateNormals": 13597,
+          "m_bReverseOrder": 13576,
+          "m_bSortBySegmentID": 13584,
+          "m_bUseScalarForTextureCoordinate": 13565,
+          "m_flEndFadeDot": 12008,
+          "m_flEndFadeSize": 12000,
+          "m_flMaxSize": 11992,
+          "m_flMinSize": 11988,
+          "m_flRadiusTaper": 12392,
+          "m_flScalarAttributeTextureCoordScale": 13572,
+          "m_flScaleVOffsetByControlPointDistance": 13560,
+          "m_flScaleVScrollByControlPointDistance": 13556,
+          "m_flScaleVSizeByControlPointDistance": 13552,
+          "m_flStartFadeDot": 12004,
+          "m_flStartFadeSize": 11996,
+          "m_flSubPixelAAScale": 12016,
+          "m_flTessScale": 12404,
+          "m_flTextureVOffset": 13160,
+          "m_flTextureVScrollRate": 12784,
+          "m_flTextureVWorldSize": 12408,
+          "m_nMaxTesselation": 12400,
+          "m_nMinTesselation": 12396,
+          "m_nOrientationType": 13588,
+          "m_nScalarFieldForTextureCoordinate": 13568,
+          "m_nScaleCP1": 13544,
+          "m_nScaleCP2": 13548,
+          "m_nSplitField": 13580,
+          "m_nTextureVParamsCP": 13536,
+          "m_nVectorFieldForOrientation": 13592
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CBaseRendererSource2"
+      },
+      "C_OP_RenderScreenShake": {
+        "fields": {
+          "m_flAmplitudeScale": 564,
+          "m_flDurationScale": 552,
+          "m_flFrequencyScale": 560,
+          "m_flRadiusScale": 556,
+          "m_nAmplitudeField": 580,
+          "m_nDurationField": 572,
+          "m_nFilterCP": 584,
+          "m_nFrequencyField": 576,
+          "m_nRadiusField": 568
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
+      },
+      "C_OP_RenderScreenVelocityRotate": {
+        "fields": {
+          "m_flForwardDegrees": 556,
+          "m_flRotateRateDegrees": 552
+        },
+        "metadata": [
+          {
+            "name": "MObsoleteParticleFunction",
+            "type": "Unknown"
+          },
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
+      },
+      "C_OP_RenderSimpleModelCollection": {
+        "fields": {
+          "m_bAcceptsDecals": 1042,
+          "m_bCenterOffset": 552,
+          "m_bDisableMotionBlur": 1041,
+          "m_bDisableShadows": 1040,
+          "m_fDrawFilter": 1048,
+          "m_fSizeCullScale": 664,
+          "m_hModel": 560,
+          "m_modelInput": 568,
+          "m_nAngularVelocityField": 1424
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
+      },
+      "C_OP_RenderSound": {
+        "fields": {
+          "m_bSuppressStopSoundEvent": 848,
+          "m_flDurationScale": 552,
+          "m_flPitchScale": 560,
+          "m_flSndLvlScale": 556,
+          "m_flVolumeScale": 564,
+          "m_nCPReference": 588,
+          "m_nChannel": 584,
+          "m_nDurationField": 572,
+          "m_nPitchField": 576,
+          "m_nSndLvlField": 568,
+          "m_nVolumeField": 580,
+          "m_pszSoundName": 592
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
+      },
+      "C_OP_RenderSprites": {
+        "fields": {
+          "m_OutlineColor": 14280,
+          "m_bDistanceAlpha": 14264,
+          "m_bOutline": 14276,
+          "m_bParticleShadows": 16816,
+          "m_bSequenceNumbersAreRawSequenceIndices": 12360,
+          "m_bSoftEdges": 14265,
+          "m_bUseYawWithNormalAligned": 12372,
+          "m_flEdgeSoftnessEnd": 14272,
+          "m_flEdgeSoftnessStart": 14268,
+          "m_flEndFadeDot": 14260,
+          "m_flEndFadeSize": 13880,
+          "m_flLightingDirectionality": 16440,
+          "m_flLightingTessellation": 16064,
+          "m_flMaxSize": 12752,
+          "m_flMinSize": 12376,
+          "m_flOutlineEnd0": 14296,
+          "m_flOutlineEnd1": 14300,
+          "m_flOutlineStart0": 14288,
+          "m_flOutlineStart1": 14292,
+          "m_flShadowDensity": 16820,
+          "m_flStartFadeDot": 14256,
+          "m_flStartFadeSize": 13504,
+          "m_flSubPixelAAScale": 13128,
+          "m_nLightingMode": 14304,
+          "m_nOrientationControlPoint": 12368,
+          "m_nOrientationType": 12364,
+          "m_nOutlineAlpha": 14284,
+          "m_nSequenceOverride": 11984,
+          "m_vecLightingOverride": 14312
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CBaseRendererSource2"
+      },
+      "C_OP_RenderStandardLight": {
+        "fields": {
+          "m_bCastShadows": 3080,
+          "m_bClosedLoop": 6137,
+          "m_bDynamicBounce": 3081,
+          "m_bIgnoreDT": 6152,
+          "m_bRenderDiffuse": 5728,
+          "m_bRenderSpecular": 5729,
+          "m_bReverseOrder": 6136,
+          "m_flBounceScale": 3088,
+          "m_flCapsuleLength": 6132,
+          "m_flConstrainRadiusToLengthRatio": 6156,
+          "m_flFalloffLinearity": 4600,
+          "m_flFiftyPercentFalloff": 4976,
+          "m_flFogContribution": 5752,
+          "m_flIntensity": 2704,
+          "m_flLengthFadeInTime": 6164,
+          "m_flLengthScale": 6160,
+          "m_flLightStyleTime": 2328,
+          "m_flMaxLength": 6144,
+          "m_flMinLength": 6148,
+          "m_flPhi": 3840,
+          "m_flRadiusMultiplier": 4216,
+          "m_flTheta": 3464,
+          "m_flZeroPercentFalloff": 5352,
+          "m_lightCookie": 5736,
+          "m_nAttenuationStyle": 4592,
+          "m_nCapsuleLightBehavior": 6128,
+          "m_nColorBlendType": 2312,
+          "m_nFogLightingMode": 5748,
+          "m_nLightType": 552,
+          "m_nMaxAllowed": 556,
+          "m_nPrevPntSource": 6140,
+          "m_nPriority": 5744,
+          "m_strLightStyle": 2320,
+          "m_vecColorScale": 560
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_RenderStatusEffect": {
         "fields": {
-          "m_pTextureColorWarp": 560,
-          "m_pTextureDetail2": 568,
-          "m_pTextureDiffuseWarp": 576,
-          "m_pTextureEnvMap": 608,
-          "m_pTextureFresnelColorWarp": 584,
-          "m_pTextureFresnelWarp": 592,
-          "m_pTextureSpecularWarp": 600
+          "m_pTextureColorWarp": 552,
+          "m_pTextureDetail2": 560,
+          "m_pTextureDiffuseWarp": 568,
+          "m_pTextureEnvMap": 600,
+          "m_pTextureFresnelColorWarp": 576,
+          "m_pTextureFresnelWarp": 584,
+          "m_pTextureSpecularWarp": 592
         },
         "metadata": [
           {
@@ -6904,16 +7090,16 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_RenderStatusEffectCitadel": {
         "fields": {
-          "m_pTextureColorWarp": 560,
-          "m_pTextureDetail": 600,
-          "m_pTextureMetalness": 576,
-          "m_pTextureNormal": 568,
-          "m_pTextureRoughness": 584,
-          "m_pTextureSelfIllum": 592
+          "m_pTextureColorWarp": 552,
+          "m_pTextureDetail": 592,
+          "m_pTextureMetalness": 568,
+          "m_pTextureNormal": 560,
+          "m_pTextureRoughness": 576,
+          "m_pTextureSelfIllum": 584
         },
         "metadata": [
           {
@@ -6921,17 +7107,17 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_RenderStatusEffectTf": {
         "fields": {
-          "m_pTextureColorWarp": 560,
-          "m_pTextureDetail": 600,
-          "m_pTextureEnvMap": 608,
-          "m_pTextureMetalness": 576,
-          "m_pTextureNormal": 568,
-          "m_pTextureRoughness": 584,
-          "m_pTextureSelfIllum": 592
+          "m_pTextureColorWarp": 552,
+          "m_pTextureDetail": 592,
+          "m_pTextureEnvMap": 600,
+          "m_pTextureMetalness": 568,
+          "m_pTextureNormal": 560,
+          "m_pTextureRoughness": 576,
+          "m_pTextureSelfIllum": 584
         },
         "metadata": [
           {
@@ -6939,12 +7125,12 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_RenderText": {
         "fields": {
-          "m_DefaultText": 568,
-          "m_OutlineColor": 560
+          "m_DefaultText": 560,
+          "m_OutlineColor": 552
         },
         "metadata": [
           {
@@ -6952,51 +7138,55 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_RenderTrails": {
         "fields": {
-          "m_bEnableFadingAndClamping": 13144,
-          "m_bFlipUVBasedOnPitchYaw": 18204,
-          "m_bIgnoreDT": 13168,
-          "m_flConstrainRadiusToLengthRatio": 13172,
-          "m_flEndFadeDot": 13152,
-          "m_flForwardShift": 18200,
-          "m_flHeadAlphaScale": 15312,
-          "m_flLengthFadeInTime": 13180,
-          "m_flLengthScale": 13176,
-          "m_flMaxLength": 13160,
-          "m_flMinLength": 13164,
-          "m_flRadiusHeadTaper": 13184,
-          "m_flRadiusTaper": 15688,
-          "m_flStartFadeDot": 13148,
-          "m_flTailAlphaScale": 17816,
-          "m_nHorizCropField": 18192,
-          "m_nPrevPntSource": 13156,
-          "m_nVertCropField": 18196,
-          "m_vecHeadColorScale": 13560,
-          "m_vecTailColorScale": 16064
+          "m_bEnableFadingAndClamping": 13136,
+          "m_bFlipUVBasedOnPitchYaw": 18196,
+          "m_bIgnoreDT": 13160,
+          "m_flConstrainRadiusToLengthRatio": 13164,
+          "m_flEndFadeDot": 13144,
+          "m_flForwardShift": 18192,
+          "m_flHeadAlphaScale": 15304,
+          "m_flLengthFadeInTime": 13172,
+          "m_flLengthScale": 13168,
+          "m_flMaxLength": 13152,
+          "m_flMinLength": 13156,
+          "m_flRadiusHeadTaper": 13176,
+          "m_flRadiusTaper": 15680,
+          "m_flStartFadeDot": 13140,
+          "m_flTailAlphaScale": 17808,
+          "m_nHorizCropField": 18184,
+          "m_nPrevPntSource": 13148,
+          "m_nVertCropField": 18188,
+          "m_vecHeadColorScale": 13552,
+          "m_vecTailColorScale": 16056
         },
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CBaseTrailRenderer"
       },
       "C_OP_RenderTreeShake": {
         "fields": {
-          "m_flControlPointOrientationAmount": 592,
-          "m_flPeakStrength": 560,
-          "m_flRadialAmount": 588,
-          "m_flRadius": 568,
-          "m_flShakeDuration": 576,
-          "m_flTransitionTime": 580,
-          "m_flTwistAmount": 584,
-          "m_nControlPointForLinearDirection": 596,
-          "m_nPeakStrengthFieldOverride": 564,
-          "m_nRadiusFieldOverride": 572
+          "m_flControlPointOrientationAmount": 584,
+          "m_flPeakStrength": 552,
+          "m_flRadialAmount": 580,
+          "m_flRadius": 560,
+          "m_flShakeDuration": 568,
+          "m_flTransitionTime": 572,
+          "m_flTwistAmount": 576,
+          "m_nControlPointForLinearDirection": 588,
+          "m_nPeakStrengthFieldOverride": 556,
+          "m_nRadiusFieldOverride": 564
         },
         "metadata": [
           {
@@ -7004,14 +7194,14 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_RenderVRHapticEvent": {
         "fields": {
-          "m_flAmplitude": 576,
-          "m_nHand": 560,
-          "m_nOutputField": 568,
-          "m_nOutputHandCP": 564
+          "m_flAmplitude": 568,
+          "m_nHand": 552,
+          "m_nOutputField": 560,
+          "m_nOutputHandCP": 556
         },
         "metadata": [
           {
@@ -7019,25 +7209,25 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_RenderVolumetricEmitter": {
         "fields": {
-          "m_flDensity": 6592,
-          "m_flFalloff": 8472,
-          "m_flKillDensityScale": 8096,
-          "m_flKillRadius": 7720,
-          "m_flMagnitude": 7344,
-          "m_flRadius": 6216,
-          "m_flSpeed": 5840,
-          "m_flTemperature": 6968,
-          "m_nCreationType": 572,
-          "m_nEventType": 576,
-          "m_nType": 568,
-          "m_strChannelType": 560,
-          "m_vPrevPosition": 4088,
-          "m_vecPos": 584,
-          "m_vecVelocity": 2336
+          "m_flDensity": 6584,
+          "m_flFalloff": 8464,
+          "m_flKillDensityScale": 8088,
+          "m_flKillRadius": 7712,
+          "m_flMagnitude": 7336,
+          "m_flRadius": 6208,
+          "m_flSpeed": 5832,
+          "m_flTemperature": 6960,
+          "m_nCreationType": 564,
+          "m_nEventType": 568,
+          "m_nType": 560,
+          "m_strChannelType": 552,
+          "m_vPrevPosition": 4080,
+          "m_vecPos": 576,
+          "m_vecVelocity": 2328
         },
         "metadata": [
           {
@@ -7045,7 +7235,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_RepeatedTriggerChildGroup": {
         "fields": {
@@ -7061,7 +7251,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_RestartAfterDuration": {
         "fields": {
@@ -7078,7 +7268,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RopePathSnapshotGenerator": {
         "fields": {
@@ -7106,7 +7296,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_RopeSpringConstraint": {
         "fields": {
@@ -7122,7 +7312,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionConstraint"
       },
       "C_OP_RotateVector": {
         "fields": {
@@ -7140,7 +7330,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_RtEnvCull": {
         "fields": {
@@ -7156,9 +7346,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ScreenSpaceDistanceToEdge": {
         "fields": {
@@ -7173,7 +7367,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ScreenSpacePositionOfTarget": {
         "fields": {
@@ -7189,7 +7383,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ScreenSpaceRotateTowardTarget": {
         "fields": {
@@ -7204,7 +7398,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SelectivelyEnableChildren": {
         "fields": {
@@ -7220,7 +7414,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SequenceFromModel": {
         "fields": {
@@ -7239,7 +7433,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetAttributeToScalarExpression": {
         "fields": {
@@ -7256,7 +7450,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetCPOrientationToDirection": {
         "fields": {
@@ -7269,7 +7463,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetCPOrientationToGroundNormal": {
         "fields": {
@@ -7289,7 +7483,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetCPOrientationToPointAtCP": {
         "fields": {
@@ -7306,7 +7500,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetCPtoVector": {
         "fields": {
@@ -7319,7 +7513,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetChildControlPoints": {
         "fields": {
@@ -7337,7 +7531,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetControlPointFieldFromVectorExpression": {
         "fields": {
@@ -7355,7 +7549,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointFieldToScalarExpression": {
         "fields": {
@@ -7373,7 +7567,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointFieldToWater": {
         "fields": {
@@ -7387,7 +7581,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointFromObjectScale": {
         "fields": {
@@ -7400,7 +7594,23 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
+      },
+      "C_OP_SetControlPointFromRenderAttribute": {
+        "fields": {
+          "m_flDefaultValue": 628,
+          "m_nCPInput": 488,
+          "m_nCPOutput": 492,
+          "m_nComponent": 496,
+          "m_pszAttributeName": 500
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointOrientation": {
         "fields": {
@@ -7419,7 +7629,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointOrientationToCPVelocity": {
         "fields": {
@@ -7432,7 +7642,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointPositionToRandomActiveCP": {
         "fields": {
@@ -7447,7 +7657,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointPositionToTimeOfDayValue": {
         "fields": {
@@ -7461,7 +7671,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointPositions": {
         "fields": {
@@ -7484,7 +7694,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointRotation": {
         "fields": {
@@ -7499,7 +7709,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointToCPVelocity": {
         "fields": {
@@ -7516,7 +7726,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointToCenter": {
         "fields": {
@@ -7531,7 +7741,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointToHMD": {
         "fields": {
@@ -7545,7 +7755,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointToHand": {
         "fields": {
@@ -7560,7 +7770,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointToImpactPoint": {
         "fields": {
@@ -7583,7 +7793,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointToPlayer": {
         "fields": {
@@ -7600,7 +7810,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointToVectorExpression": {
         "fields": {
@@ -7617,7 +7827,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointToWaterSurface": {
         "fields": {
@@ -7635,7 +7845,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetControlPointsToModelParticles": {
         "fields": {
@@ -7653,7 +7863,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetControlPointsToParticle": {
         "fields": {
@@ -7672,7 +7882,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetFloat": {
         "fields": {
@@ -7685,9 +7895,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetFloatAttributeToVectorExpression": {
         "fields": {
@@ -7704,7 +7918,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetFloatCollection": {
         "fields": {
@@ -7719,7 +7933,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetFromCPSnapshot": {
         "fields": {
@@ -7743,7 +7957,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetGravityToCP": {
         "fields": {
@@ -7760,7 +7974,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetParentControlPointsToChildCP": {
         "fields": {
@@ -7776,7 +7990,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetPerChildControlPoint": {
         "fields": {
@@ -7795,7 +8009,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetPerChildControlPointFromAttribute": {
         "fields": {
@@ -7814,7 +8028,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetRandomControlPointPosition": {
         "fields": {
@@ -7833,7 +8047,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetSimulationRate": {
         "fields": {
@@ -7845,7 +8059,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetSingleControlPointPosition": {
         "fields": {
@@ -7860,7 +8074,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetToCP": {
         "fields": {
@@ -7874,7 +8088,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetUserEvent": {
         "fields": {
@@ -7890,7 +8104,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetVariable": {
         "fields": {
@@ -7907,7 +8121,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_SetVec": {
         "fields": {
@@ -7921,9 +8135,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SetVectorAttributeToVectorExpression": {
         "fields": {
@@ -7941,7 +8159,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_ShapeMatchingConstraint": {
         "fields": {
@@ -7953,7 +8171,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionConstraint"
       },
       "C_OP_SnapshotRigidSkinToBones": {
         "fields": {
@@ -7967,7 +8185,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_SnapshotSkinToBones": {
         "fields": {
@@ -7983,9 +8201,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_Spin": {
         "fields": {},
@@ -7995,7 +8217,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CGeneralSpin"
       },
       "C_OP_SpinUpdate": {
         "fields": {},
@@ -8003,9 +8225,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CSpinUpdateBase"
       },
       "C_OP_SpinYaw": {
         "fields": {},
@@ -8015,7 +8241,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CGeneralSpin"
       },
       "C_OP_SpringToVectorConstraint": {
         "fields": {
@@ -8031,7 +8257,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionConstraint"
       },
       "C_OP_StopAfterCPDuration": {
         "fields": {
@@ -8045,7 +8271,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionPreEmission"
       },
       "C_OP_TeleportBeam": {
         "fields": {
@@ -8067,7 +8293,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_TimeVaryingForce": {
         "fields": {
@@ -8082,7 +8308,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_TurbulenceForce": {
         "fields": {
@@ -8101,7 +8327,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_TwistAroundAxis": {
         "fields": {
@@ -8116,7 +8342,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_UpdateLightSource": {
         "fields": {
@@ -8133,7 +8359,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_VectorFieldSnapshot": {
         "fields": {
@@ -8153,7 +8379,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_VectorNoise": {
         "fields": {
@@ -8171,7 +8397,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_VelocityDecay": {
         "fields": {
@@ -8183,7 +8409,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_VelocityMatchingForce": {
         "fields": {
@@ -8200,18 +8426,18 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionOperator"
       },
       "C_OP_WaterImpulseRenderer": {
         "fields": {
-          "m_bIsRadialWind": 4192,
-          "m_flMagnitude": 2688,
-          "m_flRadius": 2312,
-          "m_flShape": 3064,
-          "m_flWindSpeed": 3440,
-          "m_flWobble": 3816,
-          "m_nEventType": 4196,
-          "m_vecPos": 560
+          "m_bIsRadialWind": 4184,
+          "m_flMagnitude": 2680,
+          "m_flRadius": 2304,
+          "m_flShape": 3056,
+          "m_flWindSpeed": 3432,
+          "m_flWobble": 3808,
+          "m_nEventType": 4188,
+          "m_vecPos": 552
         },
         "metadata": [
           {
@@ -8219,7 +8445,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionRenderer"
       },
       "C_OP_WindForce": {
         "fields": {
@@ -8231,7 +8457,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_WorldCollideConstraint": {
         "fields": {},
@@ -8241,7 +8467,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionConstraint"
       },
       "C_OP_WorldTraceConstraint": {
         "fields": {
@@ -8278,9 +8504,13 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
+          },
+          {
+            "name": "MGPUParticleFunction",
+            "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CParticleFunctionConstraint"
       },
       "CollisionGroupContext_t": {
         "fields": {
@@ -8369,6 +8599,31 @@
           "m_DestinationFlowNodeID": 72,
           "m_RequirementNodeIDs": 80,
           "m_nCursorStateBlockIndex": 104
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "PGDInstruction_t": {
+        "fields": {
+          "m_nBlackboardReferenceIdx": 36,
+          "m_nCallInfoIndex": 28,
+          "m_nChunk": 20,
+          "m_nCode": 0,
+          "m_nConstIdx": 32,
+          "m_nDestInstruction": 24,
+          "m_nDomainValueIdx": 34,
+          "m_nInvokeBindingIndex": 16,
+          "m_nLambdaIdx": 14,
+          "m_nReg0": 8,
+          "m_nReg1": 10,
+          "m_nReg2": 12,
+          "m_nTempVarIdx": 38,
+          "m_nVar": 4
         },
         "metadata": [
           {
@@ -8477,7 +8732,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "PointDefinition_t"
       },
       "PointDefinition_t": {
         "fields": {
@@ -8558,12 +8813,12 @@
       "SignatureOutflow_Continue": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "CPulse_OutflowConnection"
       },
       "SignatureOutflow_Resume": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "CPulse_ResumePoint"
       },
       "TextureControls_t": {
         "fields": {
@@ -9280,6 +9535,169 @@
           "WakeImmediate": 1
         },
         "type": "uint32"
+      },
+      "PulseInstructionCode_t": {
+        "alignment": 2,
+        "members": {
+          "ADD": 28,
+          "ADD_FLOAT": 57,
+          "ADD_FLOAT_GAMETIME": 65,
+          "ADD_GAMETIME_FLOAT": 64,
+          "ADD_INT": 56,
+          "ADD_STRING": 58,
+          "ADD_VEC2": 59,
+          "ADD_VEC3": 60,
+          "ADD_VEC3WS_VEC3": 61,
+          "ADD_VEC3_VEC3WS": 62,
+          "ADD_VEC4": 63,
+          "AND": 37,
+          "BIND_LAMBDA": 49,
+          "BROADCAST_INVOKE": 15,
+          "BROADCAST_INVOKE_ARRAY_DOMAIN": 156,
+          "BROADCAST_INVOKE_ARRAY_SIMPLE": 155,
+          "BROADCAST_INVOKE_DOMAIN": 154,
+          "CELL_INVOKE": 13,
+          "CHUNK_LEAP": 8,
+          "CHUNK_LEAP_COND": 9,
+          "CONVERT_VALUE": 42,
+          "COPY": 25,
+          "CREATE_CHILD_CURSOR_OUTFLOW": 12,
+          "DETACH_REGISTER": 19,
+          "DIV": 31,
+          "DIV_FLOAT": 77,
+          "ELEMENT_ACCESS": 41,
+          "ELEMENT_ACCESS_COLOR_RGB": 152,
+          "ELEMENT_ACCESS_VEC2": 148,
+          "ELEMENT_ACCESS_VEC3": 149,
+          "ELEMENT_ACCESS_VEC3WS": 150,
+          "ELEMENT_ACCESS_VEC4": 151,
+          "EQ": 35,
+          "EQ_ANIM_SEQUENCE": 138,
+          "EQ_ARRAY": 134,
+          "EQ_BOOL": 86,
+          "EQ_COLOR_RGB": 108,
+          "EQ_EHANDLE": 112,
+          "EQ_ENTITY_NAME": 122,
+          "EQ_ENUM": 130,
+          "EQ_FLOAT": 90,
+          "EQ_GAMETIME": 110,
+          "EQ_INT": 88,
+          "EQ_LEAF": 124,
+          "EQ_MODEL_MATERIAL_GROUP": 126,
+          "EQ_PANEL_HANDLE": 132,
+          "EQ_PARTICLE_EHANDLE": 136,
+          "EQ_QANGLE": 98,
+          "EQ_RESOURCE": 114,
+          "EQ_RESOURCE_NAME": 116,
+          "EQ_SNDEVT_GUID": 118,
+          "EQ_SNDEVT_NAME": 120,
+          "EQ_STRING": 92,
+          "EQ_TRANSFORM": 104,
+          "EQ_TRANSFORMWS": 106,
+          "EQ_VARIANT": 128,
+          "EQ_VDATA_CHOICE": 140,
+          "EQ_VEC2": 94,
+          "EQ_VEC3": 96,
+          "EQ_VEC3WS": 100,
+          "EQ_VEC4": 102,
+          "GET_ARRAY_ELEMENT": 23,
+          "GET_BLACKBOARD_REFERENCE": 44,
+          "GET_CONST": 22,
+          "GET_CONST_INLINE_STORAGE": 153,
+          "GET_DOMAIN_VALUE": 24,
+          "GET_TEMPVAR": 46,
+          "GET_VAR": 17,
+          "GET_VAR_DETACH": 18,
+          "IMMEDIATE_HALT": 1,
+          "INVALID": 0,
+          "JUMP": 6,
+          "JUMP_COND": 7,
+          "LAST_SERIALIZED_CODE": 50,
+          "LIBRARY_INVOKE": 14,
+          "LOOP_BREAK": 4,
+          "LT": 33,
+          "LTE": 34,
+          "LTE_FLOAT": 84,
+          "LTE_GAMETIME": 85,
+          "LTE_INT": 83,
+          "LT_FLOAT": 81,
+          "LT_GAMETIME": 82,
+          "LT_INT": 80,
+          "MOD": 32,
+          "MOD_FLOAT": 79,
+          "MOD_INT": 78,
+          "MUL": 30,
+          "MUL_FLOAT": 76,
+          "MUL_INT": 75,
+          "NE": 36,
+          "NEGATE": 27,
+          "NEGATE_FLOAT": 52,
+          "NEGATE_INT": 51,
+          "NEGATE_VEC2": 53,
+          "NEGATE_VEC3": 54,
+          "NEGATE_VEC4": 55,
+          "NE_ANIM_SEQUENCE": 139,
+          "NE_ARRAY": 135,
+          "NE_BOOL": 87,
+          "NE_COLOR_RGB": 109,
+          "NE_EHANDLE": 113,
+          "NE_ENTITY_NAME": 123,
+          "NE_ENUM": 131,
+          "NE_FLOAT": 91,
+          "NE_GAMETIME": 111,
+          "NE_INT": 89,
+          "NE_LEAF": 125,
+          "NE_MODEL_MATERIAL_GROUP": 127,
+          "NE_PANEL_HANDLE": 133,
+          "NE_PARTICLE_EHANDLE": 137,
+          "NE_QANGLE": 99,
+          "NE_RESOURCE": 115,
+          "NE_RESOURCE_NAME": 117,
+          "NE_SNDEVT_GUID": 119,
+          "NE_SNDEVT_NAME": 121,
+          "NE_STRING": 93,
+          "NE_TRANSFORM": 105,
+          "NE_TRANSFORMWS": 107,
+          "NE_VARIANT": 129,
+          "NE_VDATA_CHOICE": 141,
+          "NE_VEC2": 95,
+          "NE_VEC3": 97,
+          "NE_VEC3WS": 101,
+          "NE_VEC4": 103,
+          "NOP": 5,
+          "NOT": 26,
+          "OR": 38,
+          "PULSE_CALL_ASYNC_FIRE": 11,
+          "PULSE_CALL_SYNC": 10,
+          "REINTERPRET_INSTANCE": 43,
+          "RETURN_VALUE": 3,
+          "RETURN_VOID": 2,
+          "SCALE": 39,
+          "SCALE_INV": 40,
+          "SCALE_INV_VEC2": 146,
+          "SCALE_INV_VEC3": 145,
+          "SCALE_INV_VEC4": 147,
+          "SCALE_VEC2": 143,
+          "SCALE_VEC3": 142,
+          "SCALE_VEC4": 144,
+          "SET_BLACKBOARD_REFERENCE": 45,
+          "SET_TEMPVAR": 47,
+          "SET_TEMPVAR_OBSERVABLE": 48,
+          "SET_VAR": 16,
+          "SET_VAR_ARRAY_ELEMENT_1D": 20,
+          "SET_VAR_OBSERVABLE": 21,
+          "SUB": 29,
+          "SUB_FLOAT": 67,
+          "SUB_GAMETIME": 74,
+          "SUB_GAMETIME_FLOAT": 73,
+          "SUB_INT": 66,
+          "SUB_VEC2": 68,
+          "SUB_VEC3": 69,
+          "SUB_VEC3WS_VEC3": 70,
+          "SUB_VEC3WS_VEC3WS": 71,
+          "SUB_VEC4": 72
+        },
+        "type": "uint16"
       },
       "PulseMethodCallMode_t": {
         "alignment": 4,

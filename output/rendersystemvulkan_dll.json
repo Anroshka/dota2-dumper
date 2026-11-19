@@ -74,7 +74,12 @@
         "fields": {
           "m_Value": 0
         },
-        "metadata": [],
+        "metadata": [
+          {
+            "name": "MIsBoxedIntegerType",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "VsInputSignatureElement_t": {

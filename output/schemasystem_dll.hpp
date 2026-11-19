@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 #pragma once
 
@@ -141,7 +141,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_ResourceTypes = 0x160; // CResourceArray<CResourcePointer<CResourceString>>
                 constexpr std::ptrdiff_t m_KV3 = 0x168; // KeyValues3
             }
-            // Parent: None
+            // Parent: CExampleSchemaVData_PolymorphicBase
             // Field count: 1
             //
             // Metadata:
@@ -157,7 +157,7 @@ namespace dota2_dumper {
             namespace CExampleSchemaVData_PolymorphicBase {
                 constexpr std::ptrdiff_t m_nBase = 0x8; // int32
             }
-            // Parent: None
+            // Parent: CExampleSchemaVData_PolymorphicBase
             // Field count: 1
             //
             // Metadata:
@@ -167,6 +167,9 @@ namespace dota2_dumper {
             }
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedIntegerType
             namespace ResourceId_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // uint64
             }

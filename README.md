@@ -38,6 +38,19 @@ Linux or as an administrator on Windows.
 - `-h, --help`: Print help.
 - `-V, --version`: Print version.
 
+## Current snapshot
+
+The checked-in output targets Dota 2 patch 7.42, client version 6985
+(SourceRevision 11258601) on Windows x64 with Vulkan.
+The 7.42 world-to-screen path reads the projection matrix from a view object.
+The old static `dwViewMatrix` signature does not match this build, so the
+6985 snapshot omits that offset. Older clients with a unique match still emit it.
+
+Interface output contains module-relative addresses for factories that return a
+static object directly. The previous `VMixEditTool001` entry was outside
+`soundsystem.dll` and has been removed. `dwSoundSystem` is derived from the
+verified static `SoundSystem001` registration.
+
 ## Offset semantics and build information
 
 Module offsets are relative to the named DLL. Names containing an object suffix
@@ -62,7 +75,7 @@ not DLL-relative addresses.
   restarted after an update. Remote connector captures or missing metadata use `null`.
   The dumper does not fetch the latest online version and label it as the captured build.
 - `dwSoundSystem_engineViewData` was removed because its signature is not confirmed
-  in the current Dota build.
+  in the audited 6972 build.
 
 Buttons such as `jump`, `duck`, and `reload` are enumerated from Dota's registered
 Source 2 button list. Their presence does not mean that the corresponding action is
@@ -74,7 +87,7 @@ states such as -2/-3 and high-bit flags. Rust/Zig enum aliases that become equal
 after conversion are emitted once; JSON retains all original names and values.
 
 A missing/ambiguous required offset signature, failed analysis stage, or missing
-client schema now stops the capture before generated files are written. Field-level
+client classes or enums stop the capture before generated files are written. Field-level
 schema reads and interface enumeration remain best-effort; a successful capture is
 not proof that every field's semantics have been independently verified.
 
@@ -98,7 +111,8 @@ cargo test --release -- --ignored --nocapture
 The live test rescans the running process and checks object targets using RTTI and
 checks basic network/window values. It does not trust the checked-in snapshot.
 
-Check generated fields, cross-format offsets, and compile every Rust/C++ output
+Check snapshot timestamps, duplicate names, module ownership of schema files,
+and cross-format offsets, buttons, and interfaces. Compile every Rust/C++ output
 file with the installed `rustc` and `g++` compilers:
 
 ```text

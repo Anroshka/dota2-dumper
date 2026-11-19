@@ -47,11 +47,49 @@
       },
       "CSteamAudioBakedOcclusionData": {
         "fields": {
-          "m_probes": 16,
+          "m_probes": 24,
           "m_settings": 0,
-          "m_vecPathingDeviation": 48,
-          "m_vecPathingRatio": 24,
-          "m_vecReflectionEnergy": 72
+          "m_vecDynamicObjectPairs": 128,
+          "m_vecDynamicObjects": 104,
+          "m_vecPathingDeviation": 56,
+          "m_vecPathingRatio": 32,
+          "m_vecReflectionEnergy": 80
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSteamAudioBakedOcclusionDynamicObject": {
+        "fields": {
+          "m_nHammerIdHash": 16,
+          "m_sHammerId": 8,
+          "m_sName": 0,
+          "m_vecPairs": 24,
+          "m_vecPathingDeviationDeltas": 72,
+          "m_vecPathingRatioDeltas": 48,
+          "m_vecReflectionEnergyDeltas": 96
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSteamAudioBakedOcclusionDynamicObjectPair": {
+        "fields": {
+          "m_nHammerIdHashA": 8,
+          "m_nHammerIdHashB": 12,
+          "m_sName": 0,
+          "m_vecPairs": 16,
+          "m_vecPathingDeviationResiduals": 64,
+          "m_vecPathingRatioResiduals": 40,
+          "m_vecReflectionEnergyResiduals": 88
         },
         "metadata": [
           {
@@ -200,8 +238,10 @@
         "fields": {
           "m_bEnablePathing": 0,
           "m_bEnableReflections": 1,
+          "m_flSpatialFilterRadiusFactor": 16,
           "m_nReflectionBounces": 8,
-          "m_nReflectionRays": 4
+          "m_nReflectionRays": 4,
+          "m_nSpatialFilterMode": 12
         },
         "metadata": [
           {

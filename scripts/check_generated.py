@@ -7,22 +7,61 @@ import shutil
 import subprocess
 
 
-def check(root, build_dir, compile_rust=False, compile_cpp=False):
-    offsets = json.loads((root / 'offsets.json').read_text(encoding='utf-8'))
-    expected = {name: value for module in offsets.values() for name, value in module.items()}
-    for extension in ('cs', 'hpp', 'rs', 'zig'):
-        text = (root / f'offsets.{extension}').read_text(encoding='utf-8')
-        actual = {name: int(value, 16) for name, value in
-                  re.findall(r'(dw\w+)[^\n=]*=\s*(0x[0-9A-Fa-f]+)', text)}
+FORMATS = ('cs', 'hpp', 'json', 'rs', 'zig')
+MODULE = re.compile(r'^\s*// Module: (\S+)$', re.MULTILINE)
+CONSTANT = re.compile(r'(?:r#|@")?(\w+)"?(?:: usize)?\s*=\s*(0x[\dA-Fa-f]+);')
+
+
+def read_json(path):
+    def unique_object(pairs):
+        result = {}
+        for name, value in pairs:
+            if name in result:
+                raise ValueError(f'{path}: duplicate key {name!r}')
+            result[name] = value
+        return result
+
+    return json.loads(path.read_text(encoding='utf-8'), object_pairs_hook=unique_object)
+
+
+def check_constants(root, stem):
+    expected = read_json(root / f'{stem}.json')
+    for extension in FORMATS:
+        if extension == 'json':
+            continue
+        path = root / f'{stem}.{extension}'
+        sections = MODULE.split(path.read_text(encoding='utf-8'))
+        actual = {}
+        for module, body in zip(sections[1::2], sections[2::2]):
+            if module in actual:
+                raise ValueError(f'{path}: duplicate module {module}')
+            entries = CONSTANT.findall(body)
+            values = {name: int(value, 16) for name, value in entries}
+            if len(entries) != len(values):
+                raise ValueError(f'{path}: duplicate constants in {module}')
+            actual[module] = values
         if actual != expected:
-            raise ValueError(f'offsets.{extension} disagrees with offsets.json')
+            raise ValueError(f'{path} disagrees with {stem}.json')
+    return sum(map(len, expected.values()))
+
+
+def check(root, build_dir, compile_rust=False, compile_cpp=False):
+    info = read_json(root / 'info.json')
+    timestamp = info['timestamp'].replace('T', ' ').removesuffix('+00:00') + ' UTC'
+    counts = {stem: check_constants(root, stem)
+              for stem in ('offsets', 'buttons', 'interfaces')}
 
     modules = classes = enums = 0
+    stems = set(counts)
     for path in root.glob('*_dll.json'):
-        document = json.loads(path.read_text(encoding='utf-8'))
-        if len(document) != 1:
-            raise ValueError(f'{path}: expected one schema module')
-        body = next(iter(document.values()))
+        document = read_json(path)
+        module = path.stem.removesuffix('_dll') + '.dll'
+        if set(document) != {module}:
+            raise ValueError(f'{path}: expected schema for {module}')
+        body = document[module]
+        if module == 'client.dll' and not (body['classes'] and body['enums']):
+            raise ValueError(f'{path}: missing client classes or enums')
+        stems.add(path.stem)
         modules += 1
         classes += len(body['classes'])
         enums += len(body['enums'])
@@ -30,11 +69,33 @@ def check(root, build_dir, compile_rust=False, compile_cpp=False):
             for field, offset in cls['fields'].items():
                 if not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*', field) or offset < 0:
                     raise ValueError(f'{path}: invalid schema field in {name}: {field!r}={offset}')
-        for extension in ('cs', 'hpp', 'rs', 'zig'):
-            if not path.with_suffix('.' + extension).is_file():
-                raise ValueError(f'missing {path.with_suffix("." + extension)}')
-    if not modules:
-        raise ValueError('no schema modules found')
+        for extension in FORMATS:
+            if extension == 'json':
+                continue
+            schema_path = path.with_suffix('.' + extension)
+            text = schema_path.read_text(encoding='utf-8')
+            if MODULE.findall(text) != [module]:
+                raise ValueError(f'{schema_path}: expected schema for {module}')
+            for label, key in (('Class', 'classes'), ('Enum', 'enums')):
+                counts_in_header = re.findall(rf'// {label} count: (\d+)', text)
+                if counts_in_header != [str(len(body[key]))]:
+                    raise ValueError(f'{schema_path}: {key} count disagrees with JSON')
+    if 'client_dll' not in stems:
+        raise ValueError('no client.dll schema found')
+
+    expected_files = {f'{stem}.{extension}' for stem in stems for extension in FORMATS}
+    expected_files.add('info.json')
+    actual_files = {path.name for path in root.iterdir() if path.suffix[1:] in FORMATS}
+    if actual_files != expected_files:
+        missing = sorted(expected_files - actual_files)
+        unexpected = sorted(actual_files - expected_files)
+        raise ValueError(f'snapshot files differ: missing={missing}, unexpected={unexpected}')
+    for name in sorted(expected_files):
+        if not name.endswith('.json'):
+            with (root / name).open(encoding='utf-8') as file:
+                file.readline()
+                if file.readline().strip() != '// ' + timestamp:
+                    raise ValueError(f'{root / name}: timestamp disagrees with info.json')
 
     build_dir.mkdir(parents=True, exist_ok=True)
     compiled = {}
@@ -57,7 +118,7 @@ def check(root, build_dir, compile_rust=False, compile_cpp=False):
             if result.returncode:
                 raise ValueError(f'{path} failed compilation:\n{result.stderr}')
         compiled[extension] = len(files)
-    return dict(offsets=len(expected), modules=modules, classes=classes, enums=enums,
+    return dict(**counts, modules=modules, classes=classes, enums=enums,
                 compiled=compiled)
 
 

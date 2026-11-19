@@ -1,12 +1,12 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod dota2_dumper {
     pub mod schemas {
         // Module: resourcesystem.dll
-        // Class count: 62
+        // Class count: 61
         // Enum count: 5
         pub mod resourcesystem_dll {
             // Alignment: 4
@@ -126,6 +126,9 @@ pub mod dota2_dumper {
             }
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedIntegerType
             pub mod FuseFunctionIndex_t {
                 pub const m_Value: usize = 0x0; // uint16
             }
@@ -135,6 +138,13 @@ pub mod dota2_dumper {
             // Metadata:
             // MResourceTypeForInfoType
             pub mod InfoForResourceTypeCGcExportableExternalData {
+            }
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCSurfaceGraph2 {
             }
             // Parent: None
             // Field count: 0
@@ -328,13 +338,6 @@ pub mod dota2_dumper {
             //
             // Metadata:
             // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCSurfaceGraph {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
             pub mod InfoForResourceTypeCCSGOEconItem {
             }
             // Parent: None
@@ -361,13 +364,6 @@ pub mod dota2_dumper {
             // Metadata:
             // MResourceTypeForInfoType
             pub mod InfoForResourceTypeCCompositeMaterialKit {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCVMixListResource {
             }
             // Parent: None
             // Field count: 0
@@ -489,6 +485,9 @@ pub mod dota2_dumper {
             }
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedIntegerType
             pub mod FuseVariableIndex_t {
                 pub const m_Value: usize = 0x0; // uint16
             }

@@ -1,11 +1,17 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: soundsystem.dll
-    // Class count: 159
-    // Enum count: 34
+    // Class count: 160
+    // Enum count: 36
     public static class SoundsystemDll {
+        // Alignment: 1
+        // Member count: 2
+        public enum VMixUpMixRule_t : byte {
+            DIVIDE = 0x0,
+            BROADCAST = 0x1
+        }
         // Alignment: 4
         // Member count: 3
         public enum SndSeqInstrumentType_t : uint {
@@ -95,6 +101,12 @@ namespace Dota2Dumper.Schemas {
             LFO_SHAPE_TRI = 0x2,
             LFO_SHAPE_SAW = 0x3,
             LFO_SHAPE_NOISE = 0x4
+        }
+        // Alignment: 1
+        // Member count: 2
+        public enum VMixCompressorType_t : byte {
+            MixBus = 0x0,
+            Smooth = 0x1
         }
         // Alignment: 4
         // Member count: 13
@@ -381,7 +393,7 @@ namespace Dota2Dumper.Schemas {
         public static class CVMixInputBase {
             public const nint m_name = 0x0; // CUtlString
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
         // Field count: 3
         //
         // Metadata:
@@ -389,11 +401,11 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerBlender {
-            public const nint m_firstSound = 0x70; // CSoundContainerReference
-            public const nint m_secondSound = 0x90; // CSoundContainerReference
-            public const nint m_flBlendFactor = 0xB0; // float32
+            public const nint m_firstSound = 0x78; // CSoundContainerReference
+            public const nint m_secondSound = 0x98; // CSoundContainerReference
+            public const nint m_flBlendFactor = 0xB8; // float32
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 2
         //
         // Metadata:
@@ -453,7 +465,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_curve = 0x18; // CPiecewiseCurve
             public const nint m_bSyncInstances = 0x58; // bool
         }
-        // Parent: None
+        // Parent: CSosGroupActionSchema
         // Field count: 6
         //
         // Metadata:
@@ -467,7 +479,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flOcclusionMax = 0x18; // float32
             public const nint m_flTestDepth = 0x1C; // float32
         }
-        // Parent: None
+        // Parent: CVoiceContainerAsyncGenerator
         // Field count: 6
         //
         // Metadata:
@@ -475,14 +487,14 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerRandomSampler {
-            public const nint m_flAmplitude = 0x80; // float32
-            public const nint m_flAmplitudeJitter = 0x84; // float32
-            public const nint m_flTimeJitter = 0x88; // float32
-            public const nint m_flMaxLength = 0x8C; // float32
-            public const nint m_nNumDelayVariations = 0x90; // int32
-            public const nint m_grainResources = 0x98; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+            public const nint m_flAmplitude = 0x88; // float32
+            public const nint m_flAmplitudeJitter = 0x8C; // float32
+            public const nint m_flTimeJitter = 0x90; // float32
+            public const nint m_flMaxLength = 0x94; // float32
+            public const nint m_nNumDelayVariations = 0x98; // int32
+            public const nint m_grainResources = 0xA0; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 25
         //
         // Metadata:
@@ -514,7 +526,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_paramBand = 0x84; // CVMixParameterFloat
             public const nint m_paramTransmission = 0x88; // CVMixDataOffset
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 9
         //
         // Metadata:
@@ -530,7 +542,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_paramDelayLeft = 0x44; // CVMixParameterFloat
             public const nint m_paramDelayRight = 0x48; // CVMixParameterFloat
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
         // Field count: 0
         //
         // Metadata:
@@ -560,11 +572,12 @@ namespace Dota2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MVDataRoot
         // MVDataNodeType
         public static class CDSPPresetMixgroupModifierTable {
             public const nint m_table = 0x0; // CUtlVector<CDspPresetModifierList>
         }
-        // Parent: None
+        // Parent: CSosGroupActionSchema
         // Field count: 7
         //
         // Metadata:
@@ -579,7 +592,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_groupBoundingBoxMinsOpvar = 0x28; // CUtlString
             public const nint m_groupBoundingBoxMaxsOpvar = 0x30; // CUtlString
         }
-        // Parent: None
+        // Parent: CSosGroupActionSchema
         // Field count: 5
         //
         // Metadata:
@@ -605,7 +618,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_sound = 0x10; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
             public const nint m_pSound = 0x18; // CVoiceContainerBase*
         }
-        // Parent: None
+        // Parent: CVoiceContainerGenerator
         // Field count: 0
         //
         // Metadata:
@@ -633,12 +646,13 @@ namespace Dota2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         // MVDataNodeType
+        // MPropertyPolymorphicClass
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerAnalysisBase {
             public const nint m_curve = 0x8; // CPiecewiseCurve
         }
-        // Parent: None
+        // Parent: CSosGroupActionSchema
         // Field count: 10
         //
         // Metadata:
@@ -656,7 +670,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_strMinValueName = 0x28; // CUtlString
             public const nint m_strMaxValueName = 0x30; // CUtlString
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 3
         //
         // Metadata:
@@ -686,7 +700,7 @@ namespace Dota2Dumper.Schemas {
         public static class SamplerVoice_t {
             public const nint nNoteNum = 0x0; // uint8
         }
-        // Parent: None
+        // Parent: CVMixInputBase
         // Field count: 1
         //
         // Metadata:
@@ -694,7 +708,7 @@ namespace Dota2Dumper.Schemas {
         public static class CVMixControlInput {
             public const nint m_flDefaultValue = 0x10; // float32
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 1
         //
         // Metadata:
@@ -702,7 +716,7 @@ namespace Dota2Dumper.Schemas {
         public static class CVMixBoxverbProcessorDesc {
             public const nint m_desc = 0x28; // VMixBoxverbDesc_t
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 4
         //
         // Metadata:
@@ -722,7 +736,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_type = 0x0; // VMixPannerType_t
             public const nint m_flStrength = 0x4; // float32
         }
-        // Parent: None
+        // Parent: CSosGroupActionSchema
         // Field count: 4
         //
         // Metadata:
@@ -734,7 +748,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_priorityContributeButDontRead = 0x18; // CUtlString
             public const nint m_bPriorityReadButDontContribute = 0x20; // CUtlString
         }
-        // Parent: None
+        // Parent: CVoiceContainerGenerator
         // Field count: 3
         //
         // Metadata:
@@ -742,9 +756,9 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerRealtimeFMSineWave {
-            public const nint m_flCarrierFrequency = 0x70; // float32
-            public const nint m_flModulatorFrequency = 0x74; // float32
-            public const nint m_flModulatorAmount = 0x78; // float32
+            public const nint m_flCarrierFrequency = 0x78; // float32
+            public const nint m_flModulatorFrequency = 0x7C; // float32
+            public const nint m_flModulatorAmount = 0x80; // float32
         }
         // Parent: None
         // Field count: 1
@@ -770,7 +784,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flModDepth = 0x28; // float32
             public const nint m_bApplyAntialiasing = 0x2C; // bool
         }
-        // Parent: None
+        // Parent: CSndSeqInstBaseSchema
         // Field count: 0
         //
         // Metadata:
@@ -778,7 +792,7 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         public static class CSndSeqInstSndEvtSchema {
         }
-        // Parent: None
+        // Parent: CVMixInputBase
         // Field count: 1
         //
         // Metadata:
@@ -786,11 +800,11 @@ namespace Dota2Dumper.Schemas {
         public static class CVMixNameInputMeter {
             public const nint m_nValueIndex = 0x10; // CVMixDataOffset
         }
-        // Parent: None
+        // Parent: ISndSeqInstruments
         // Field count: 0
         public static class CSndSeqInstruments {
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 1
         //
         // Metadata:
@@ -827,6 +841,8 @@ namespace Dota2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MPropertyAutoExpandSelf
+        // MPropertyPolymorphicClass
         public static class CSosGroupActionSchema {
         }
         // Parent: None
@@ -834,6 +850,7 @@ namespace Dota2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MVDataRoot
         public static class CSosSoundEventGroupSchema {
             public const nint m_nGroupType = 0x8; // SosGroupType_t
             public const nint m_bBlocksEvents = 0xC; // bool
@@ -852,7 +869,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_opvarString = 0x50; // CUtlString
             public const nint m_vActions = 0x58; // CUtlVector<CSosGroupActionSchema*>
         }
-        // Parent: None
+        // Parent: CSndSeqInstBaseSchema
         // Field count: 11
         //
         // Metadata:
@@ -885,6 +902,8 @@ namespace Dota2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MPropertyAutoExpandSelf
+        // MPropertyPolymorphicClass
         public static class CSndSeqInstBaseSchema {
             public const nint m_nType = 0x8; // SndSeqInstrumentType_t
             public const nint m_bStopCurrentEvents = 0xE; // bool
@@ -909,7 +928,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_bPeakMode = 0x20; // bool
             public const nint m_bandDesc = 0x24; // VMixDynamicsBand_t[3]
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 2
         //
         // Metadata:
@@ -919,17 +938,18 @@ namespace Dota2Dumper.Schemas {
             public const nint m_paramEQScale = 0xC8; // CVMixParameterFloat
         }
         // Parent: None
-        // Field count: 6
+        // Field count: 7
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CDSPMixgroupModifier {
             public const nint m_mixgroup = 0x0; // CUtlString
-            public const nint m_flModifier = 0x8; // float32
-            public const nint m_flModifierMin = 0xC; // float32
-            public const nint m_flSourceModifier = 0x10; // float32
-            public const nint m_flSourceModifierMin = 0x14; // float32
+            public const nint m_flListenerReverbFar = 0x8; // float32
+            public const nint m_flListenerReverbNear = 0xC; // float32
+            public const nint m_flSourceReverbFar = 0x10; // float32
+            public const nint m_flSourceReverbNear = 0x14; // float32
             public const nint m_flListenerReverbModifierWhenSourceReverbIsActive = 0x18; // float32
+            public const nint m_flTailVolume = 0x1C; // float32
         }
         // Parent: None
         // Field count: 6
@@ -944,7 +964,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flEaseIn = 0x60; // float32
             public const nint m_flEaseOut = 0x64; // float32
         }
-        // Parent: None
+        // Parent: SndBeatEventKeys_t
         // Field count: 1
         //
         // Metadata:
@@ -964,7 +984,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_bPeakMode = 0xC; // bool
             public const nint m_bandDesc = 0x10; // VMixDynamicsBand_t
         }
-        // Parent: None
+        // Parent: CVMixBaseGraphDescription
         // Field count: 5
         //
         // Metadata:
@@ -976,7 +996,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_sources = 0x100; // KeyValues3
             public const nint m_fixups = 0x110; // CUtlVector<VMixPointerFixupEntry_t>
         }
-        // Parent: None
+        // Parent: CVoiceContainerAsyncGenerator
         // Field count: 1
         //
         // Metadata:
@@ -984,9 +1004,9 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerStaticAdditiveSynth {
-            public const nint m_tones = 0x80; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>
+            public const nint m_tones = 0x88; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>
         }
-        // Parent: None
+        // Parent: CVoiceContainerGenerator
         // Field count: 9
         //
         // Metadata:
@@ -994,15 +1014,15 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerShapedNoise {
-            public const nint m_bUseCurveForFrequency = 0x70; // bool
-            public const nint m_flFrequency = 0x74; // float32
-            public const nint m_frequencySweep = 0x78; // CPiecewiseCurve
-            public const nint m_bUseCurveForResonance = 0xB8; // bool
-            public const nint m_flResonance = 0xBC; // float32
-            public const nint m_resonanceSweep = 0xC0; // CPiecewiseCurve
-            public const nint m_bUseCurveForAmplitude = 0x100; // bool
-            public const nint m_flGainInDecibels = 0x104; // float32
-            public const nint m_gainSweep = 0x108; // CPiecewiseCurve
+            public const nint m_bUseCurveForFrequency = 0x78; // bool
+            public const nint m_flFrequency = 0x7C; // float32
+            public const nint m_frequencySweep = 0x80; // CPiecewiseCurve
+            public const nint m_bUseCurveForResonance = 0xC0; // bool
+            public const nint m_flResonance = 0xC4; // float32
+            public const nint m_resonanceSweep = 0xC8; // CPiecewiseCurve
+            public const nint m_bUseCurveForAmplitude = 0x108; // bool
+            public const nint m_flGainInDecibels = 0x10C; // float32
+            public const nint m_gainSweep = 0x110; // CPiecewiseCurve
         }
         // Parent: None
         // Field count: 2
@@ -1014,19 +1034,25 @@ namespace Dota2Dumper.Schemas {
             public const nint m_modifiers = 0x8; // CUtlVector<CDSPMixgroupModifier>
         }
         // Parent: None
-        // Field count: 2
+        // Field count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MVDataRoot
         // MVDataNodeType
+        // MPropertyPolymorphicClass
         // MVDataFileExtension
+        // MVDataSingleton
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerBase {
-            public const nint m_vSound = 0x28; // CVSound
-            public const nint m_pEnvelopeAnalyzer = 0x68; // CVoiceContainerAnalysisBase*
+            public const nint m_nResourceName = 0x10; // CUtlStringToken
+            public const nint m_bRegisteredVMix = 0x14; // bool
+            public const nint m_bIsValidForPlayback = 0x15; // bool
+            public const nint m_vSound = 0x30; // CVSound
+            public const nint m_pEnvelopeAnalyzer = 0x70; // CVoiceContainerAnalysisBase*
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 1
         //
         // Metadata:
@@ -1034,7 +1060,7 @@ namespace Dota2Dumper.Schemas {
         public static class CVMixDiffusorProcessorDesc {
             public const nint m_desc = 0x28; // VMixDiffusorDesc_t
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 1
         //
         // Metadata:
@@ -1056,23 +1082,23 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flMaxVolume = 0x14; // float32
             public const nint m_strVectorStackParam = 0x18; // CUtlString
         }
-        // Parent: None
+        // Parent: CVoiceContainerAsyncGenerator
         // Field count: 8
         //
         // Metadata:
         // MGetKV3ClassDefaults
         // MPropertyFriendlyName
         public static class CVoiceContainerGranulator {
-            public const nint m_flGrainLength = 0x80; // float32
-            public const nint m_flGrainCrossfadeAmount = 0x84; // float32
-            public const nint m_flStartJitter = 0x88; // float32
-            public const nint m_flPlaybackJitter = 0x8C; // float32
-            public const nint m_bShouldWraparound = 0x90; // bool
-            public const nint m_sourceAudio = 0x98; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-            public const nint m_bDoubleBufferSourceAudio = 0xA0; // bool
-            public const nint m_flMaxSourceLength = 0xA4; // float32
+            public const nint m_flGrainLength = 0x88; // float32
+            public const nint m_flGrainCrossfadeAmount = 0x8C; // float32
+            public const nint m_flStartJitter = 0x90; // float32
+            public const nint m_flPlaybackJitter = 0x94; // float32
+            public const nint m_bShouldWraparound = 0x98; // bool
+            public const nint m_sourceAudio = 0xA0; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+            public const nint m_bDoubleBufferSourceAudio = 0xA8; // bool
+            public const nint m_flMaxSourceLength = 0xAC; // float32
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 2
         //
         // Metadata:
@@ -1103,7 +1129,7 @@ namespace Dota2Dumper.Schemas {
         public static class VMixEQ8Desc_t {
             public const nint m_stages = 0x0; // VMixEQFilterDesc_t[8]
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 3
         //
         // Metadata:
@@ -1113,7 +1139,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_outParamLevel = 0x58; // CVMixParameterFloat
             public const nint m_outParamdBLevel = 0x5C; // CVMixParameterFloat
         }
-        // Parent: None
+        // Parent: VMixFilterDesc_t
         // Field count: 1
         //
         // Metadata:
@@ -1121,7 +1147,7 @@ namespace Dota2Dumper.Schemas {
         public static class VMixEQFilterDesc_t {
             public const nint m_nChannelSet = 0x10; // VMixFilterChannelSet_t
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
         // Field count: 8
         //
         // Metadata:
@@ -1129,14 +1155,14 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerLoopXFade {
-            public const nint m_sound = 0x70; // CSoundContainerReference
-            public const nint m_flLoopEnd = 0x90; // float32
-            public const nint m_flLoopStart = 0x94; // float32
-            public const nint m_flFadeOut = 0x98; // float32
-            public const nint m_flFadeIn = 0x9C; // float32
-            public const nint m_bPlayHead = 0xA0; // bool
-            public const nint m_bPlayTail = 0xA1; // bool
-            public const nint m_bEqualPow = 0xA2; // bool
+            public const nint m_sound = 0x78; // CSoundContainerReference
+            public const nint m_flLoopEnd = 0x98; // float32
+            public const nint m_flLoopStart = 0x9C; // float32
+            public const nint m_flFadeOut = 0xA0; // float32
+            public const nint m_flFadeIn = 0xA4; // float32
+            public const nint m_bPlayHead = 0xA8; // bool
+            public const nint m_bPlayTail = 0xA9; // bool
+            public const nint m_bEqualPow = 0xAA; // bool
         }
         // Parent: None
         // Field count: 1
@@ -1173,7 +1199,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_fadeOut = 0x80; // float32
             public const nint m_mode = 0x84; // EVsndPlaybackMode
         }
-        // Parent: None
+        // Parent: CSosGroupActionSchema
         // Field count: 2
         //
         // Metadata:
@@ -1183,7 +1209,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_bExcludeStoppedSounds = 0x8; // bool
             public const nint m_strCountKeyName = 0x10; // CUtlString
         }
-        // Parent: None
+        // Parent: CVoiceContainerAnalysisBase
         // Field count: 3
         //
         // Metadata:
@@ -1209,14 +1235,14 @@ namespace Dota2Dumper.Schemas {
             public const nint m_paramEnable = 0x20; // CVMixParameterFloat
             public const nint m_paramMix = 0x24; // CVMixParameterFloat
         }
-        // Parent: None
+        // Parent: CVMixInputBase
         // Field count: 0
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CVMixImpulseResponseInput {
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 5
         //
         // Metadata:
@@ -1239,7 +1265,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_nQuality = 0x8; // int32
             public const nint m_nProcType = 0xC; // int32
         }
-        // Parent: None
+        // Parent: CVMixInputBase
         // Field count: 1
         //
         // Metadata:
@@ -1247,7 +1273,7 @@ namespace Dota2Dumper.Schemas {
         public static class CVMixControlOutput {
             public const nint m_flDefaultValue = 0x10; // float32
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 5
         //
         // Metadata:
@@ -1259,7 +1285,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_paramModRate = 0x60; // CVMixParameterFloat
             public const nint m_paramModDepth = 0x64; // CVMixParameterFloat
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 2
         //
         // Metadata:
@@ -1313,6 +1339,7 @@ namespace Dota2Dumper.Schemas {
         //
         // Metadata:
         // MPropertyArrayElementNameKey
+        // MVDataAnonymousNode
         // MVDataOutlinerNameExpr
         // MGetKV3ClassDefaults
         public static class CSndBeatTrack {
@@ -1322,7 +1349,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_bSyncToVoice = 0x28; // bool
             public const nint m_flBPM = 0x2C; // float32
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
         // Field count: 17
         //
         // Metadata:
@@ -1330,23 +1357,23 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerVsndRadioButton {
-            public const nint m_namespace = 0x70; // CUtlString
-            public const nint m_slot1 = 0x78; // CVsndRadioButtonSlot
-            public const nint m_slot2 = 0x100; // CVsndRadioButtonSlot
-            public const nint m_slot3 = 0x188; // CVsndRadioButtonSlot
-            public const nint m_slot4 = 0x210; // CVsndRadioButtonSlot
-            public const nint m_slot5 = 0x298; // CVsndRadioButtonSlot
-            public const nint m_slot6 = 0x320; // CVsndRadioButtonSlot
-            public const nint m_slot7 = 0x3A8; // CVsndRadioButtonSlot
-            public const nint m_slot8 = 0x430; // CVsndRadioButtonSlot
-            public const nint m_slot9 = 0x4B8; // CVsndRadioButtonSlot
-            public const nint m_slot10 = 0x540; // CVsndRadioButtonSlot
-            public const nint m_slot11 = 0x5C8; // CVsndRadioButtonSlot
-            public const nint m_slot12 = 0x650; // CVsndRadioButtonSlot
-            public const nint m_slot13 = 0x6D8; // CVsndRadioButtonSlot
-            public const nint m_slot14 = 0x760; // CVsndRadioButtonSlot
-            public const nint m_slot15 = 0x7E8; // CVsndRadioButtonSlot
-            public const nint m_slot16 = 0x870; // CVsndRadioButtonSlot
+            public const nint m_namespace = 0x78; // CUtlString
+            public const nint m_slot1 = 0x80; // CVsndRadioButtonSlot
+            public const nint m_slot2 = 0x108; // CVsndRadioButtonSlot
+            public const nint m_slot3 = 0x190; // CVsndRadioButtonSlot
+            public const nint m_slot4 = 0x218; // CVsndRadioButtonSlot
+            public const nint m_slot5 = 0x2A0; // CVsndRadioButtonSlot
+            public const nint m_slot6 = 0x328; // CVsndRadioButtonSlot
+            public const nint m_slot7 = 0x3B0; // CVsndRadioButtonSlot
+            public const nint m_slot8 = 0x438; // CVsndRadioButtonSlot
+            public const nint m_slot9 = 0x4C0; // CVsndRadioButtonSlot
+            public const nint m_slot10 = 0x548; // CVsndRadioButtonSlot
+            public const nint m_slot11 = 0x5D0; // CVsndRadioButtonSlot
+            public const nint m_slot12 = 0x658; // CVsndRadioButtonSlot
+            public const nint m_slot13 = 0x6E0; // CVsndRadioButtonSlot
+            public const nint m_slot14 = 0x768; // CVsndRadioButtonSlot
+            public const nint m_slot15 = 0x7F0; // CVsndRadioButtonSlot
+            public const nint m_slot16 = 0x878; // CVsndRadioButtonSlot
         }
         // Parent: None
         // Field count: 2
@@ -1357,7 +1384,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flTime = 0x0; // float32
             public const nint m_flValue = 0x4; // float32
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 3
         //
         // Metadata:
@@ -1367,7 +1394,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_paramFrequency = 0x34; // CVMixParameterFloat
             public const nint m_paramPhase = 0x38; // CVMixParameterFloat
         }
-        // Parent: None
+        // Parent: CVoiceContainerLoopTrigger
         // Field count: 1
         //
         // Metadata:
@@ -1375,16 +1402,16 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerLoopTriggerWithRandomPanner {
-            public const nint m_randomPannerControls = 0xA0; // CRandomPannerControls
+            public const nint m_randomPannerControls = 0xA8; // CRandomPannerControls
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
         // Field count: 0
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CVoiceContainerGenerator {
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
         // Field count: 1
         //
         // Metadata:
@@ -1392,7 +1419,7 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerSet {
-            public const nint m_soundsToPlay = 0x70; // CUtlVector<CVoiceContainerSetElement>
+            public const nint m_soundsToPlay = 0x78; // CUtlVector<CVoiceContainerSetElement>
         }
         // Parent: None
         // Field count: 8
@@ -1409,7 +1436,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flLowCutoffFreq = 0x18; // float32
             public const nint m_flHighCutoffFreq = 0x1C; // float32
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
         // Field count: 17
         //
         // Metadata:
@@ -1417,23 +1444,23 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerVsndTrigger {
-            public const nint m_namespace = 0x70; // CUtlString
-            public const nint m_slot1 = 0x78; // CVsndTriggerSlot
-            public const nint m_slot2 = 0x100; // CVsndTriggerSlot
-            public const nint m_slot3 = 0x188; // CVsndTriggerSlot
-            public const nint m_slot4 = 0x210; // CVsndTriggerSlot
-            public const nint m_slot5 = 0x298; // CVsndTriggerSlot
-            public const nint m_slot6 = 0x320; // CVsndTriggerSlot
-            public const nint m_slot7 = 0x3A8; // CVsndTriggerSlot
-            public const nint m_slot8 = 0x430; // CVsndTriggerSlot
-            public const nint m_slot9 = 0x4B8; // CVsndTriggerSlot
-            public const nint m_slot10 = 0x540; // CVsndTriggerSlot
-            public const nint m_slot11 = 0x5C8; // CVsndTriggerSlot
-            public const nint m_slot12 = 0x650; // CVsndTriggerSlot
-            public const nint m_slot13 = 0x6D8; // CVsndTriggerSlot
-            public const nint m_slot14 = 0x760; // CVsndTriggerSlot
-            public const nint m_slot15 = 0x7E8; // CVsndTriggerSlot
-            public const nint m_slot16 = 0x870; // CVsndTriggerSlot
+            public const nint m_namespace = 0x78; // CUtlString
+            public const nint m_slot1 = 0x80; // CVsndTriggerSlot
+            public const nint m_slot2 = 0x108; // CVsndTriggerSlot
+            public const nint m_slot3 = 0x190; // CVsndTriggerSlot
+            public const nint m_slot4 = 0x218; // CVsndTriggerSlot
+            public const nint m_slot5 = 0x2A0; // CVsndTriggerSlot
+            public const nint m_slot6 = 0x328; // CVsndTriggerSlot
+            public const nint m_slot7 = 0x3B0; // CVsndTriggerSlot
+            public const nint m_slot8 = 0x438; // CVsndTriggerSlot
+            public const nint m_slot9 = 0x4C0; // CVsndTriggerSlot
+            public const nint m_slot10 = 0x548; // CVsndTriggerSlot
+            public const nint m_slot11 = 0x5D0; // CVsndTriggerSlot
+            public const nint m_slot12 = 0x658; // CVsndTriggerSlot
+            public const nint m_slot13 = 0x6E0; // CVsndTriggerSlot
+            public const nint m_slot14 = 0x768; // CVsndTriggerSlot
+            public const nint m_slot15 = 0x7F0; // CVsndTriggerSlot
+            public const nint m_slot16 = 0x878; // CVsndTriggerSlot
         }
         // Parent: None
         // Field count: 2
@@ -1448,13 +1475,15 @@ namespace Dota2Dumper.Schemas {
         // Field count: 2
         //
         // Metadata:
+        // MVDataRoot
+        // MVDataSingleton
         // MPropertyFriendlyName
         // MGetKV3ClassDefaults
         public static class CSndBeatPatternManager {
             public const nint m_vecPatterns = 0x38; // CUtlVector<CSndBeatPattern>
             public const nint m_vecActiveTracks = 0x70; // CUtlVector<CSndBeatTrack>
         }
-        // Parent: None
+        // Parent: CVoiceContainerGenerator
         // Field count: 0
         //
         // Metadata:
@@ -1468,7 +1497,7 @@ namespace Dota2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CSoundInfoHeader {
         }
-        // Parent: None
+        // Parent: CVMixBaseGraphDescription
         // Field count: 4
         //
         // Metadata:
@@ -1492,7 +1521,7 @@ namespace Dota2Dumper.Schemas {
             public const nint itemPos = 0x28; // Vector2D
         }
         // Parent: None
-        // Field count: 6
+        // Field count: 7
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1503,8 +1532,9 @@ namespace Dota2Dumper.Schemas {
             public const nint m_nChannels = 0x30; // int32
             public const nint m_nSendOperator = 0x34; // VMixSendOperator_t
             public const nint m_nMixDownRule = 0x36; // VMixMixDownRule_t
+            public const nint m_nUpMixRule = 0x37; // VMixUpMixRule_t
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 4
         //
         // Metadata:
@@ -1515,7 +1545,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_paramModRate = 0x50; // CVMixParameterFloat
             public const nint m_paramModDepth = 0x54; // CVMixParameterFloat
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 2
         //
         // Metadata:
@@ -1533,7 +1563,7 @@ namespace Dota2Dumper.Schemas {
             public const nint nNumVelocityZones = 0x3; // uint8
             public const nint pVelocityZones = 0x8; // VelocityZone_t*
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 1
         //
         // Metadata:
@@ -1555,7 +1585,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flFeedbackDiffusion1 = 0x14; // float32
             public const nint m_flFeedbackDiffusion2 = 0x18; // float32
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 2
         //
         // Metadata:
@@ -1584,7 +1614,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_sounds = 0x8; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
             public const nint m_pSounds = 0x20; // CUtlVector<CVoiceContainerBase*>
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 3
         //
         // Metadata:
@@ -1602,19 +1632,19 @@ namespace Dota2Dumper.Schemas {
         public static class CVMixAdditionalOutput {
             public const nint m_name = 0x0; // CUtlString
         }
-        // Parent: None
+        // Parent: CVoiceContainerAsyncGenerator
         // Field count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
         // MPropertyFriendlyName
         public static class CVoiceContainerTapePlayer {
-            public const nint m_bShouldWraparound = 0x80; // bool
-            public const nint m_sourceAudio = 0x88; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-            public const nint m_flTapeSpeedAttackTime = 0x90; // float32
-            public const nint m_flTapeSpeedReleaseTime = 0x94; // float32
+            public const nint m_bShouldWraparound = 0x88; // bool
+            public const nint m_sourceAudio = 0x90; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+            public const nint m_flTapeSpeedAttackTime = 0x98; // float32
+            public const nint m_flTapeSpeedReleaseTime = 0x9C; // float32
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 3
         //
         // Metadata:
@@ -1635,7 +1665,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flFeedback = 0x8; // float32
             public const nint m_flOutputGain = 0xC; // float32
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 7
         //
         // Metadata:
@@ -1649,7 +1679,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_paramArrayPathingEQ = 0x3C; // CVMixDataOffset
             public const nint m_paramArrayPathingCoefficients = 0x40; // CVMixDataOffset
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 2
         //
         // Metadata:
@@ -1659,7 +1689,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_paramPan = 0x30; // CVMixParameterFloat
         }
         // Parent: None
-        // Field count: 11
+        // Field count: 12
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1673,8 +1703,9 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flRMSTimeMS = 0x18; // float32
             public const nint m_flWetMix = 0x1C; // float32
             public const nint m_flSCHighPassFreq = 0x20; // float32
-            public const nint m_bPeakMode = 0x24; // bool
-            public const nint m_bAutoMakeupGain = 0x25; // bool
+            public const nint m_nCompressorType = 0x24; // VMixCompressorType_t
+            public const nint m_bPeakMode = 0x25; // bool
+            public const nint m_bAutoMakeupGain = 0x26; // bool
         }
         // Parent: None
         // Field count: 1
@@ -1684,7 +1715,7 @@ namespace Dota2Dumper.Schemas {
         public static class CVMixHeap {
             public const nint m_storage = 0x0; // CUtlLeanVector<uint32>
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
         // Field count: 1
         //
         // Metadata:
@@ -1692,9 +1723,9 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerVMixSnd {
-            public const nint m_resourceName = 0x180; // CUtlString
+            public const nint m_resourceName = 0x188; // CUtlString
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 2
         //
         // Metadata:
@@ -1741,7 +1772,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_EmphasisSamples = 0x20; // CUtlVector<CAudioEmphasisSample>
             public const nint m_morphData = 0x38; // CAudioMorphData
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
         // Field count: 8
         //
         // Metadata:
@@ -1749,14 +1780,14 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerParameterBlender {
-            public const nint m_firstSound = 0x70; // CSoundContainerReference
-            public const nint m_secondSound = 0x90; // CSoundContainerReference
-            public const nint m_bEnableOcclusionBlend = 0xB0; // bool
-            public const nint m_curve1 = 0xB8; // CPiecewiseCurve
-            public const nint m_curve2 = 0xF8; // CPiecewiseCurve
-            public const nint m_bEnableDistanceBlend = 0x138; // bool
-            public const nint m_curve3 = 0x140; // CPiecewiseCurve
-            public const nint m_curve4 = 0x180; // CPiecewiseCurve
+            public const nint m_firstSound = 0x78; // CSoundContainerReference
+            public const nint m_secondSound = 0x98; // CSoundContainerReference
+            public const nint m_bEnableOcclusionBlend = 0xB8; // bool
+            public const nint m_curve1 = 0xC0; // CPiecewiseCurve
+            public const nint m_curve2 = 0x100; // CPiecewiseCurve
+            public const nint m_bEnableDistanceBlend = 0x140; // bool
+            public const nint m_curve3 = 0x148; // CPiecewiseCurve
+            public const nint m_curve4 = 0x188; // CPiecewiseCurve
         }
         // Parent: None
         // Field count: 3
@@ -1768,7 +1799,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_displayName = 0x8; // CUtlString
             public const nint m_nDebugId = 0x10; // uint32
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 2
         //
         // Metadata:
@@ -1777,7 +1808,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_desc = 0x28; // VMixVocoderDesc_t
             public const nint m_paramBandwidth = 0x50; // CVMixParameterFloat
         }
-        // Parent: None
+        // Parent: CSosGroupActionSchema
         // Field count: 5
         //
         // Metadata:
@@ -1790,7 +1821,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_bStopImmediate = 0x14; // bool
             public const nint m_bCountStopped = 0x15; // bool
         }
-        // Parent: None
+        // Parent: CVoiceContainerDecayingSineWave
         // Field count: 1
         //
         // Metadata:
@@ -1798,7 +1829,7 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerAmpedDecayingSineWave {
-            public const nint m_flGainAmount = 0x78; // float32
+            public const nint m_flGainAmount = 0x80; // float32
         }
         // Parent: None
         // Field count: 8
@@ -1840,7 +1871,7 @@ namespace Dota2Dumper.Schemas {
         public static class VMixEffectChainDesc_t {
             public const nint m_effectName = 0x0; // CUtlString
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 1
         //
         // Metadata:
@@ -1848,7 +1879,7 @@ namespace Dota2Dumper.Schemas {
         public static class CVMixPlateReverbProcessorDesc {
             public const nint m_desc = 0x28; // VMixPlateverbDesc_t
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
         // Field count: 3
         //
         // Metadata:
@@ -1856,9 +1887,9 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerMultiBlender {
-            public const nint m_soundsToPlay = 0x70; // CSoundContainerReferenceArray
-            public const nint m_flBlendFactor = 0xA8; // float32
-            public const nint m_flCrossover = 0xAC; // float32
+            public const nint m_soundsToPlay = 0x78; // CSoundContainerReferenceArray
+            public const nint m_flBlendFactor = 0xB0; // float32
+            public const nint m_flCrossover = 0xB4; // float32
         }
         // Parent: None
         // Field count: 1
@@ -1904,7 +1935,7 @@ namespace Dota2Dumper.Schemas {
             public const nint nNumSamples = 0x2; // uint8
             public const nint pSamples = 0x4; // uint32[4]
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
         // Field count: 3
         //
         // Metadata:
@@ -1912,11 +1943,11 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerSelector {
-            public const nint m_mode = 0x70; // PlayBackMode_t
-            public const nint m_soundsToPlay = 0x78; // CSoundContainerReferenceArray
-            public const nint m_fProbabilityWeights = 0xB0; // CUtlVector<float32>
+            public const nint m_mode = 0x78; // PlayBackMode_t
+            public const nint m_soundsToPlay = 0x80; // CSoundContainerReferenceArray
+            public const nint m_fProbabilityWeights = 0xB8; // CUtlVector<float32>
         }
-        // Parent: None
+        // Parent: CSosGroupActionSchema
         // Field count: 1
         //
         // Metadata:
@@ -1925,7 +1956,7 @@ namespace Dota2Dumper.Schemas {
         public static class CSosGroupActionSteamAudioDimensionProbeSchema {
             public const nint m_flCalculationInterval = 0x8; // float32
         }
-        // Parent: None
+        // Parent: SndBeatEventKeys_t
         // Field count: 1
         //
         // Metadata:
@@ -1933,7 +1964,7 @@ namespace Dota2Dumper.Schemas {
         public static class SndBeatEventKeyedSndEvts_t {
             public const nint m_strSoundEventName = 0x10; // CUtlString
         }
-        // Parent: None
+        // Parent: CVMixInputBase
         // Field count: 1
         //
         // Metadata:
@@ -1941,7 +1972,7 @@ namespace Dota2Dumper.Schemas {
         public static class CVMixGraphInput {
             public const nint m_nOffset = 0x10; // CVMixDataOffset
         }
-        // Parent: None
+        // Parent: CSosGroupActionSchema
         // Field count: 2
         //
         // Metadata:
@@ -1951,7 +1982,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_nMaxCount = 0x8; // int32
             public const nint m_flMaxDuration = 0xC; // float32
         }
-        // Parent: None
+        // Parent: SndBeatEventKeys_t
         // Field count: 3
         //
         // Metadata:
@@ -1961,7 +1992,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_nNote = 0x11; // uint8
             public const nint m_nVelocity = 0x12; // uint8
         }
-        // Parent: None
+        // Parent: CSosGroupActionSchema
         // Field count: 8
         //
         // Metadata:
@@ -1977,7 +2008,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_resultVarName = 0x20; // CUtlString
             public const nint m_bSaveToGroup = 0x28; // bool
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 4
         //
         // Metadata:
@@ -1988,7 +2019,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_outParamdBLevel = 0x60; // CVMixParameterFloat
             public const nint m_outParamReduction = 0x64; // CVMixParameterFloat
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
         // Field count: 1
         //
         // Metadata:
@@ -1996,9 +2027,9 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerSwitch {
-            public const nint m_soundsToPlay = 0x70; // CUtlVector<CSoundContainerReference>
+            public const nint m_soundsToPlay = 0x78; // CUtlVector<CSoundContainerReference>
         }
-        // Parent: None
+        // Parent: CVMixInputBase
         // Field count: 1
         //
         // Metadata:
@@ -2006,7 +2037,7 @@ namespace Dota2Dumper.Schemas {
         public static class CVMixControlMeter {
             public const nint m_nValueIndex = 0x10; // CVMixDataOffset
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
         // Field count: 3
         //
         // Metadata:
@@ -2014,11 +2045,11 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerEnum {
-            public const nint m_soundsToPlay = 0x70; // CSoundContainerReferenceArray
-            public const nint m_iSelection = 0xA8; // int32
-            public const nint m_flCrossfadeTime = 0xAC; // float32
+            public const nint m_soundsToPlay = 0x78; // CSoundContainerReferenceArray
+            public const nint m_iSelection = 0xB0; // int32
+            public const nint m_flCrossfadeTime = 0xB4; // float32
         }
-        // Parent: None
+        // Parent: CSosGroupActionSchema
         // Field count: 1
         //
         // Metadata:
@@ -2057,7 +2088,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_bBassMono = 0x10; // bool
             public const nint m_flBassFreq = 0x14; // float32
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
         // Field count: 5
         //
         // Metadata:
@@ -2065,22 +2096,23 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerLoopTrigger {
-            public const nint m_flRetriggerTimeMin = 0x70; // float32
-            public const nint m_flRetriggerTimeMax = 0x74; // float32
-            public const nint m_flFadeTime = 0x78; // float32
-            public const nint m_bCrossFade = 0x7C; // bool
-            public const nint m_sound = 0x80; // CSoundContainerReference
+            public const nint m_flRetriggerTimeMin = 0x78; // float32
+            public const nint m_flRetriggerTimeMax = 0x7C; // float32
+            public const nint m_flFadeTime = 0x80; // float32
+            public const nint m_bCrossFade = 0x84; // bool
+            public const nint m_sound = 0x88; // CSoundContainerReference
         }
         // Parent: None
         // Field count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MVDataBase
         // MVDataNodeType
         public static class SndBeatEventKeys_t {
             public const nint m_flKey = 0x8; // float32
         }
-        // Parent: None
+        // Parent: CVoiceContainerGenerator
         // Field count: 2
         //
         // Metadata:
@@ -2088,10 +2120,10 @@ namespace Dota2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerDecayingSineWave {
-            public const nint m_flFrequency = 0x70; // float32
-            public const nint m_flDecayTime = 0x74; // float32
+            public const nint m_flFrequency = 0x78; // float32
+            public const nint m_flDecayTime = 0x7C; // float32
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 3
         //
         // Metadata:
@@ -2101,7 +2133,17 @@ namespace Dota2Dumper.Schemas {
             public const nint m_paramCutoffFrequency = 0x50; // CVMixParameterFloat
             public const nint m_paramDelay = 0x54; // CVMixParameterFloat
         }
-        // Parent: None
+        // Parent: CVoiceContainerBase
+        // Field count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
+        // MPropertyDescription
+        public static class CVoiceContainerReference {
+            public const nint m_sound = 0x78; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+        }
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 1
         //
         // Metadata:
@@ -2127,6 +2169,7 @@ namespace Dota2Dumper.Schemas {
         //
         // Metadata:
         // MPropertyArrayElementNameKey
+        // MVDataAnonymousNode
         // MVDataOutlinerNameExpr
         // MGetKV3ClassDefaults
         public static class CSndBeatPattern {
@@ -2148,7 +2191,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flSyncBeatMult = 0x9C; // float32
             public const nint m_vecSyncPatternKeys = 0xA0; // CUtlVector<SndBeatEventKeys_t>
         }
-        // Parent: None
+        // Parent: CVMixSubmix
         // Field count: 0
         //
         // Metadata:
@@ -2165,7 +2208,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_freq = 0x4; // float32
             public const nint m_flPhase = 0x8; // float32
         }
-        // Parent: None
+        // Parent: CVMixBaseProcessorDesc
         // Field count: 1
         //
         // Metadata:

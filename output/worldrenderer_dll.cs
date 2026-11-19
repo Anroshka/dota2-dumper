@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: worldrenderer.dll
@@ -17,7 +17,7 @@ namespace Dota2Dumper.Schemas {
         // Field count: 0
         public static class CEntityComponent {
         }
-        // Parent: None
+        // Parent: CEntityComponent
         // Field count: 1
         //
         // Metadata:

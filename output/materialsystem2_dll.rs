@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -59,7 +59,7 @@ pub mod dota2_dumper {
             pub mod MaterialParam_t {
                 pub const m_name: usize = 0x0; // CUtlString
             }
-            // Parent: None
+            // Parent: MaterialParam_t
             // Field count: 1
             //
             // Metadata:
@@ -67,7 +67,7 @@ pub mod dota2_dumper {
             pub mod MaterialParamVector_t {
                 pub const m_value: usize = 0x8; // Vector4D
             }
-            // Parent: None
+            // Parent: MaterialParam_t
             // Field count: 1
             //
             // Metadata:
@@ -97,7 +97,7 @@ pub mod dota2_dumper {
                 pub const m_bHasLocalExposureParams: usize = 0x144; // bool
                 pub const m_localExposureParams: usize = 0x148; // PostProcessingLocalExposureParameters_t
             }
-            // Parent: None
+            // Parent: MaterialParam_t
             // Field count: 1
             //
             // Metadata:
@@ -167,7 +167,7 @@ pub mod dota2_dumper {
                 pub const m_fWaterDensity: usize = 0x18; // float32
                 pub const m_fWaterDepthBlurRadius: usize = 0x1C; // float32
             }
-            // Parent: None
+            // Parent: MaterialParam_t
             // Field count: 1
             //
             // Metadata:
@@ -219,7 +219,7 @@ pub mod dota2_dumper {
                 pub const m_flBlurWeight: usize = 0x38; // float32[5]
                 pub const m_vBlurTint: usize = 0x4C; // Vector[5]
             }
-            // Parent: None
+            // Parent: MaterialParam_t
             // Field count: 1
             //
             // Metadata:
@@ -238,7 +238,7 @@ pub mod dota2_dumper {
                 pub const m_fSigma: usize = 0x8; // float32
                 pub const m_fBoostLocalContrast: usize = 0xC; // float32
             }
-            // Parent: None
+            // Parent: MaterialParam_t
             // Field count: 1
             //
             // Metadata:

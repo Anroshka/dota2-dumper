@@ -11,7 +11,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "MaterialParam_t"
       },
       "MaterialParamFloat_t": {
         "fields": {
@@ -23,7 +23,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "MaterialParam_t"
       },
       "MaterialParamInt_t": {
         "fields": {
@@ -35,7 +35,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "MaterialParam_t"
       },
       "MaterialParamString_t": {
         "fields": {
@@ -47,7 +47,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "MaterialParam_t"
       },
       "MaterialParamTexture_t": {
         "fields": {
@@ -59,7 +59,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "MaterialParam_t"
       },
       "MaterialParamVector_t": {
         "fields": {
@@ -71,7 +71,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "MaterialParam_t"
       },
       "MaterialParam_t": {
         "fields": {

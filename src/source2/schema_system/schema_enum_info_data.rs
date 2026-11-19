@@ -19,7 +19,6 @@ pub struct SchemaEnumInfoData {
     pub static_metadata_count: u16,                          // 0x001E
     pub enumerators: Pointer64<[SchemaEnumeratorInfoData]>,  // 0x0020
     pub static_metadata: Pointer64<SchemaMetadataEntryData>, // 0x0028
-    pub type_scope: Pointer64<SchemaSystemTypeScope>,        // 0x0030
-    pub min_enumerator_value: i64,                           // 0x0038
-    pub max_enumerator_value: i64,                           // 0x0040
+    pub legacy_type_scope: Pointer64<SchemaSystemTypeScope>, // 0x0030 (pre-7.42)
+    pub type_scope: Pointer64<SchemaSystemTypeScope>,        // 0x0038 (7.42)
 }

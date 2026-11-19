@@ -1,6 +1,6 @@
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, BTreeSet};
 
-use anyhow::{Result, bail};
+use anyhow::{Result, bail, ensure};
 
 use log::debug;
 
@@ -24,12 +24,14 @@ pub fn buttons<P: Process + MemoryView>(process: &mut P) -> Result<ButtonMap> {
 
     let mut save = [0; 2];
 
-    if !view
-        .scanner()
-        .finds_code(pattern!("488b15${'} 4885d2 74? 488b02 4885c0"), &mut save)
+    let scanner = view.scanner();
+    // Dota 7.42: the constructor links the previous head at KeyButton::next.
+    if !scanner.finds_code(
+        pattern!("488b05${'} 48898388000000 488bc3 48891d${} 4883c420 5b c3"),
+        &mut save,
+    ) && !scanner.finds_code(pattern!("488b15${'} 4885d2 74? 488b02 4885c0"), &mut save)
     {
-        log::warn!("outdated button list pattern");
-        return Ok(ButtonMap::new());
+        bail!("missing or ambiguous button list pattern");
     }
 
     let list_head = match process.read_addr64(module.base + save[1]).data_part() {
@@ -50,9 +52,14 @@ fn read_buttons(
 ) -> Result<ButtonMap> {
     let mut result = ButtonMap::new();
 
+    let mut seen = BTreeSet::new();
     let mut button_ptr = Pointer64::<KeyButton>::from(list_head);
 
     while !button_ptr.is_null() {
+        ensure!(
+            seen.insert(button_ptr.address()),
+            "cycle in registered button list"
+        );
         let button = mem.read_ptr(button_ptr).data_part()?;
         let name = mem.read_utf8_lossy(button.name.address(), 32).data_part()?;
 
@@ -67,6 +74,15 @@ fn read_buttons(
                 state_rva
             );
 
+            ensure!(
+                state_rva < module.size,
+                "button {name} is outside {}",
+                module.name
+            );
+            ensure!(
+                !result.contains_key(&name),
+                "duplicate registered button {name}"
+            );
             result.insert(name, state_rva);
         }
 

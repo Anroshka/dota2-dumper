@@ -1,10 +1,10 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 pub const dota2_dumper = struct {
     pub const schemas = struct {
         // Module: vphysics2.dll
-        // Class count: 117
+        // Class count: 119
         // Enum count: 5
         pub const vphysics2_dll = struct {
             // Alignment: 4
@@ -50,7 +50,7 @@ pub const dota2_dumper = struct {
                 GENERIC_SHAPE_CAPSULE = 0x3,
                 GENERIC_SHAPE_HULL = 0x4
             };
-            // Parent: None
+            // Parent: RnShapeDesc_t
             // Field count: 1
             //
             // Metadata:
@@ -58,7 +58,7 @@ pub const dota2_dumper = struct {
             pub const RnSphereDesc_t = struct {
                 pub const m_Sphere: usize = 0x18; // RnSphere_t
             };
-            // Parent: None
+            // Parent: RnShapeDesc_t
             // Field count: 1
             //
             // Metadata:
@@ -74,7 +74,7 @@ pub const dota2_dumper = struct {
             pub const RnSoftbodyParticle_t = struct {
                 pub const m_flMassInv: usize = 0x0; // float32
             };
-            // Parent: None
+            // Parent: RnShapeDesc_t
             // Field count: 1
             //
             // Metadata:
@@ -82,7 +82,7 @@ pub const dota2_dumper = struct {
             pub const RnHullDesc_t = struct {
                 pub const m_Hull: usize = 0x18; // RnHull_t
             };
-            // Parent: None
+            // Parent: RnShapeDesc_t
             // Field count: 1
             //
             // Metadata:
@@ -91,7 +91,7 @@ pub const dota2_dumper = struct {
                 pub const m_Capsule: usize = 0x18; // RnCapsule_t
             };
             // Parent: None
-            // Field count: 115
+            // Field count: 116
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -192,27 +192,28 @@ pub const dota2_dumper = struct {
                 pub const m_SkelParents: usize = 0x6C8; // CUtlVector<int16>
                 pub const m_DynNodeWindBases: usize = 0x6E0; // CUtlVector<FeNodeWindBase_t>
                 pub const m_SelfCollisionLayers: usize = 0x6F8; // CUtlVector<FeModelSelfCollisionLayer_t>
-                pub const m_flInternalPressure: usize = 0x710; // float32
-                pub const m_flDefaultTimeDilation: usize = 0x714; // float32
-                pub const m_flWindage: usize = 0x718; // float32
-                pub const m_flWindDrag: usize = 0x71C; // float32
-                pub const m_flDefaultSurfaceStretch: usize = 0x720; // float32
-                pub const m_flDefaultThreadStretch: usize = 0x724; // float32
-                pub const m_flDefaultGravityScale: usize = 0x728; // float32
-                pub const m_flDefaultVelAirDrag: usize = 0x72C; // float32
-                pub const m_flDefaultExpAirDrag: usize = 0x730; // float32
-                pub const m_flDefaultVelQuadAirDrag: usize = 0x734; // float32
-                pub const m_flDefaultExpQuadAirDrag: usize = 0x738; // float32
-                pub const m_flRodVelocitySmoothRate: usize = 0x73C; // float32
-                pub const m_flQuadVelocitySmoothRate: usize = 0x740; // float32
-                pub const m_flAddWorldCollisionRadius: usize = 0x744; // float32
-                pub const m_flDefaultVolumetricSolveAmount: usize = 0x748; // float32
-                pub const m_flMotionSmoothCDT: usize = 0x74C; // float32
-                pub const m_flLocalDrag1: usize = 0x750; // float32
-                pub const m_nRodVelocitySmoothIterations: usize = 0x754; // uint16
-                pub const m_nQuadVelocitySmoothIterations: usize = 0x756; // uint16
+                pub const m_Deformers: usize = 0x710; // CUtlVector<FeModelDeformer_t>
+                pub const m_flInternalPressure: usize = 0x728; // float32
+                pub const m_flDefaultTimeDilation: usize = 0x72C; // float32
+                pub const m_flWindage: usize = 0x730; // float32
+                pub const m_flWindDrag: usize = 0x734; // float32
+                pub const m_flDefaultSurfaceStretch: usize = 0x738; // float32
+                pub const m_flDefaultThreadStretch: usize = 0x73C; // float32
+                pub const m_flDefaultGravityScale: usize = 0x740; // float32
+                pub const m_flDefaultVelAirDrag: usize = 0x744; // float32
+                pub const m_flDefaultExpAirDrag: usize = 0x748; // float32
+                pub const m_flDefaultVelQuadAirDrag: usize = 0x74C; // float32
+                pub const m_flDefaultExpQuadAirDrag: usize = 0x750; // float32
+                pub const m_flRodVelocitySmoothRate: usize = 0x754; // float32
+                pub const m_flQuadVelocitySmoothRate: usize = 0x758; // float32
+                pub const m_flAddWorldCollisionRadius: usize = 0x75C; // float32
+                pub const m_flDefaultVolumetricSolveAmount: usize = 0x760; // float32
+                pub const m_flMotionSmoothCDT: usize = 0x764; // float32
+                pub const m_flLocalDrag1: usize = 0x768; // float32
+                pub const m_nRodVelocitySmoothIterations: usize = 0x76C; // uint16
+                pub const m_nQuadVelocitySmoothIterations: usize = 0x76E; // uint16
             };
-            // Parent: None
+            // Parent: RnShapeDesc_t
             // Field count: 1
             //
             // Metadata:
@@ -239,7 +240,7 @@ pub const dota2_dumper = struct {
                 pub const m_flRadius: usize = 0x18; // float32
                 pub const m_nParticle: usize = 0x1C; // uint16[2]
             };
-            // Parent: None
+            // Parent: RnBodyDesc_t
             // Field count: 1
             //
             // Metadata:
@@ -247,7 +248,7 @@ pub const dota2_dumper = struct {
             pub const vphysics_save_cphysicsbody_t = struct {
                 pub const m_nOldPointer: usize = 0xE0; // uint64
             };
-            // Parent: None
+            // Parent: FeBoxRigid_t
             // Field count: 3
             //
             // Metadata:
@@ -276,7 +277,7 @@ pub const dota2_dumper = struct {
                 pub const m_nParentHash: usize = 0x0; // uint32
                 pub const m_nChildNode: usize = 0x4; // uint16
             };
-            // Parent: None
+            // Parent: IPhysicsBodyList
             // Field count: 2
             pub const IPhysAggregateInstance = struct {
                 pub const m_pSkeleton: usize = 0x8; // void*
@@ -361,7 +362,7 @@ pub const dota2_dumper = struct {
             // Field count: 0
             pub const IPhysicsBodyList = struct {
             };
-            // Parent: None
+            // Parent: FeSphereRigid_t
             // Field count: 3
             //
             // Metadata:
@@ -543,6 +544,17 @@ pub const dota2_dumper = struct {
                 pub const m_flSurfaceArea: usize = 0xBC; // float32
             };
             // Parent: None
+            // Field count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const FeModelDeformer_t__FfdLayerZ_t = struct {
+                pub const flZin: usize = 0x0; // float32
+                pub const flZout: usize = 0x4; // float32
+                pub const flScale: usize = 0x8; // float32
+                pub const flGoalStrength: usize = 0xC; // float32
+            };
+            // Parent: None
             // Field count: 2
             pub const VertexPositionNormal_t = struct {
                 pub const m_vPosition: usize = 0x0; // Vector
@@ -563,7 +575,7 @@ pub const dota2_dumper = struct {
                 pub const m_nType: usize = 0x0; // bitfield:3
                 pub const m_nSubtreeEndOrCompoundId: usize = 0x0; // bitfield:29
             };
-            // Parent: None
+            // Parent: FeSDFRigid_t
             // Field count: 3
             //
             // Metadata:
@@ -823,7 +835,7 @@ pub const dota2_dumper = struct {
                 pub const m_nTriangleOffset: usize = 0x1C; // uint32
             };
             // Parent: None
-            // Field count: 5
+            // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -833,6 +845,7 @@ pub const dota2_dumper = struct {
                 pub const nEnd: usize = 0x2C; // uint16
                 pub const nNode: usize = 0x2E; // uint16
                 pub const nBeginDynamic: usize = 0x30; // uint16
+                pub const nFlags: usize = 0x32; // uint16
             };
             // Parent: None
             // Field count: 4
@@ -916,6 +929,7 @@ pub const dota2_dumper = struct {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataRoot
             // MVDataOutlinerLeafNameFn
             pub const CollisionDetailLayerInfo_t = struct {
                 pub const m_sDescription: usize = 0x0; // CUtlString
@@ -1109,7 +1123,7 @@ pub const dota2_dumper = struct {
                 pub const v2: usize = 0x14; // Vector2D
             };
             // Parent: None
-            // Field count: 15
+            // Field count: 14
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1125,10 +1139,9 @@ pub const dota2_dumper = struct {
                 pub const m_VertexPositions: usize = 0x70; // CUtlVector<Vector>
                 pub const m_FacePlanes: usize = 0x88; // CUtlVector<RnPlane_t>
                 pub const m_nFlags: usize = 0xA0; // uint32
-                pub const m_pRegionSVM: usize = 0xA8; // CRegionSVM*
-                pub const m_Vertices: usize = 0xB0; // CUtlVector<RnVertex_t>
-                pub const m_Edges: usize = 0xC8; // CUtlVector<RnHalfEdge_t>
-                pub const m_Faces: usize = 0xE0; // CUtlVector<RnFace_t>
+                pub const m_Vertices: usize = 0xA8; // CUtlVector<RnVertex_t>
+                pub const m_Edges: usize = 0xC0; // CUtlVector<RnHalfEdge_t>
+                pub const m_Faces: usize = 0xD8; // CUtlVector<RnFace_t>
             };
             // Parent: None
             // Field count: 5
@@ -1164,6 +1177,9 @@ pub const dota2_dumper = struct {
             };
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedIntegerType
             pub const PhysicsParticleId_t = struct {
                 pub const m_Value: usize = 0x0; // uint32
             };
@@ -1315,11 +1331,12 @@ pub const dota2_dumper = struct {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataRoot
             pub const CollisionDetailLayerInfo_t__Name_t = struct {
                 pub const m_nNameToken: usize = 0x0; // CUtlStringToken
                 pub const m_sNameString: usize = 0x8; // CUtlString
             };
-            // Parent: None
+            // Parent: FeTaperedCapsuleRigid_t
             // Field count: 3
             //
             // Metadata:
@@ -1407,6 +1424,19 @@ pub const dota2_dumper = struct {
                 pub const w2: usize = 0x40; // fltx4
                 pub const v1x: usize = 0x50; // fltx4
                 pub const v2: usize = 0x60; // FourVectors2D
+            };
+            // Parent: None
+            // Field count: 6
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const FeModelDeformer_t = struct {
+                pub const m_FfdZLayers: usize = 0x0; // FeModelDeformer_t::FfdLayerZ_t[3]
+                pub const m_flDisplayRadius: usize = 0x30; // float32
+                pub const m_nVertexMapNameHash: usize = 0x34; // uint32
+                pub const m_nVertexMapIndex: usize = 0x38; // uint16
+                pub const m_nReferenceNode: usize = 0x3A; // uint16
+                pub const m_nFlags: usize = 0x3C; // uint32
             };
             // Parent: None
             // Field count: 1

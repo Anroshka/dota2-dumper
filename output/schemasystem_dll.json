@@ -36,7 +36,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CExampleSchemaVData_PolymorphicBase"
       },
       "CExampleSchemaVData_PolymorphicDerivedB": {
         "fields": {
@@ -48,7 +48,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CExampleSchemaVData_PolymorphicBase"
       },
       "CSchemaSystemInternalRegistration": {
         "fields": {
@@ -93,7 +93,12 @@
         "fields": {
           "m_Value": 0
         },
-        "metadata": [],
+        "metadata": [
+          {
+            "name": "MIsBoxedIntegerType",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       }
     },

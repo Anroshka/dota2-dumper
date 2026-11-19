@@ -40,7 +40,7 @@ pub fn analyze_all<P: Process + MemoryView>(process: &mut P) -> Result<AnalysisR
         interfaces.len()
     );
 
-    let offsets = offsets(process).context("offset analysis failed")?;
+    let offsets = offsets(process, &interfaces).context("offset analysis failed")?;
 
     info!(
         "found {} offsets across {} modules",
@@ -53,8 +53,10 @@ pub fn analyze_all<P: Process + MemoryView>(process: &mut P) -> Result<AnalysisR
 
     let schemas = schemas(process).context("schema analysis failed")?;
     ensure!(
-        schemas.contains_key("client.dll"),
-        "client.dll schemas missing"
+        schemas
+            .get("client.dll")
+            .is_some_and(|(classes, enums)| !classes.is_empty() && !enums.is_empty()),
+        "client.dll classes or enums missing"
     );
 
     let (class_count, enum_count) =

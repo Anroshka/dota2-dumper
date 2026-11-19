@@ -141,6 +141,10 @@
             "type": "Unknown"
           },
           {
+            "name": "MVDataRoot",
+            "type": "Unknown"
+          },
+          {
             "name": "MVDataOutlinerLeafNameFn",
             "type": "Unknown"
           }
@@ -155,6 +159,10 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MVDataRoot",
             "type": "Unknown"
           }
         ],
@@ -323,7 +331,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "FeBoxRigid_t"
       },
       "FeBuildSDFRigid_t": {
         "fields": {
@@ -337,7 +345,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "FeSDFRigid_t"
       },
       "FeBuildSphereRigid_t": {
         "fields": {
@@ -351,7 +359,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "FeSphereRigid_t"
       },
       "FeBuildTaperedCapsuleRigid_t": {
         "fields": {
@@ -365,7 +373,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "FeTaperedCapsuleRigid_t"
       },
       "FeCollisionPlane_t": {
         "fields": {
@@ -485,6 +493,7 @@
           "bone": 0,
           "nBeginDynamic": 48,
           "nEnd": 44,
+          "nFlags": 50,
           "nNode": 46,
           "vCenter": 32
         },
@@ -562,6 +571,38 @@
           "flWeight": 0,
           "nNode": 16,
           "nReserved": 22
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "FeModelDeformer_t": {
+        "fields": {
+          "m_FfdZLayers": 0,
+          "m_flDisplayRadius": 48,
+          "m_nFlags": 60,
+          "m_nReferenceNode": 58,
+          "m_nVertexMapIndex": 56,
+          "m_nVertexMapNameHash": 52
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "FeModelDeformer_t__FfdLayerZ_t": {
+        "fields": {
+          "flGoalStrength": 12,
+          "flScale": 8,
+          "flZin": 0,
+          "flZout": 4
         },
         "metadata": [
           {
@@ -1145,7 +1186,7 @@
           "m_pSkeleton": 8
         },
         "metadata": [],
-        "parent": null
+        "parent": "IPhysicsBodyList"
       },
       "IPhysicsBody": {
         "fields": {},
@@ -1220,6 +1261,7 @@
           "m_CtrlOffsets": 672,
           "m_CtrlOsOffsets": 696,
           "m_CtrlSoftOffsets": 1320,
+          "m_Deformers": 1808,
           "m_DynKinLinks": 504,
           "m_DynNodeFriction": 912,
           "m_DynNodeVertexSet": 1496,
@@ -1280,25 +1322,25 @@
           "m_VertexSetNames": 1520,
           "m_WorldCollisionNodes": 1056,
           "m_WorldCollisionParams": 840,
-          "m_flAddWorldCollisionRadius": 1860,
-          "m_flDefaultExpAirDrag": 1840,
-          "m_flDefaultExpQuadAirDrag": 1848,
-          "m_flDefaultGravityScale": 1832,
-          "m_flDefaultSurfaceStretch": 1824,
-          "m_flDefaultThreadStretch": 1828,
-          "m_flDefaultTimeDilation": 1812,
-          "m_flDefaultVelAirDrag": 1836,
-          "m_flDefaultVelQuadAirDrag": 1844,
-          "m_flDefaultVolumetricSolveAmount": 1864,
-          "m_flInternalPressure": 1808,
-          "m_flLocalDrag1": 1872,
+          "m_flAddWorldCollisionRadius": 1884,
+          "m_flDefaultExpAirDrag": 1864,
+          "m_flDefaultExpQuadAirDrag": 1872,
+          "m_flDefaultGravityScale": 1856,
+          "m_flDefaultSurfaceStretch": 1848,
+          "m_flDefaultThreadStretch": 1852,
+          "m_flDefaultTimeDilation": 1836,
+          "m_flDefaultVelAirDrag": 1860,
+          "m_flDefaultVelQuadAirDrag": 1868,
+          "m_flDefaultVolumetricSolveAmount": 1888,
+          "m_flInternalPressure": 1832,
+          "m_flLocalDrag1": 1896,
           "m_flLocalForce": 56,
           "m_flLocalRotation": 60,
-          "m_flMotionSmoothCDT": 1868,
-          "m_flQuadVelocitySmoothRate": 1856,
-          "m_flRodVelocitySmoothRate": 1852,
-          "m_flWindDrag": 1820,
-          "m_flWindage": 1816,
+          "m_flMotionSmoothCDT": 1892,
+          "m_flQuadVelocitySmoothRate": 1880,
+          "m_flRodVelocitySmoothRate": 1876,
+          "m_flWindDrag": 1844,
+          "m_flWindage": 1840,
           "m_nDynamicNodeFlags": 52,
           "m_nExtraGoalIterations": 1446,
           "m_nExtraIterations": 1447,
@@ -1308,9 +1350,9 @@
           "m_nNodeCount": 64,
           "m_nQuadCount1": 80,
           "m_nQuadCount2": 82,
-          "m_nQuadVelocitySmoothIterations": 1878,
+          "m_nQuadVelocitySmoothIterations": 1902,
           "m_nReservedUint8": 1444,
-          "m_nRodVelocitySmoothIterations": 1876,
+          "m_nRodVelocitySmoothIterations": 1900,
           "m_nRopeCount": 88,
           "m_nRotLockStaticNodes": 68,
           "m_nSimdQuadCount1": 76,
@@ -1335,7 +1377,12 @@
         "fields": {
           "m_Value": 0
         },
-        "metadata": [],
+        "metadata": [
+          {
+            "name": "MIsBoxedIntegerType",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "RnBlendVertex_t": {
@@ -1414,7 +1461,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "RnShapeDesc_t"
       },
       "RnCapsule_t": {
         "fields": {
@@ -1439,7 +1486,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "RnShapeDesc_t"
       },
       "RnCompoundTreeNode_t": {
         "fields": {
@@ -1530,23 +1577,22 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "RnShapeDesc_t"
       },
       "RnHull_t": {
         "fields": {
           "m_Bounds": 20,
-          "m_Edges": 200,
+          "m_Edges": 192,
           "m_FacePlanes": 136,
-          "m_Faces": 224,
+          "m_Faces": 216,
           "m_MassProperties": 56,
           "m_VertexPositions": 112,
-          "m_Vertices": 176,
+          "m_Vertices": 168,
           "m_flMaxAngularRadius": 12,
           "m_flMinCentroidRadius": 16,
           "m_flSurfaceArea": 108,
           "m_flVolume": 104,
           "m_nFlags": 160,
-          "m_pRegionSVM": 168,
           "m_vCentroid": 0,
           "m_vOrthographicAreas": 44
         },
@@ -1568,7 +1614,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "RnShapeDesc_t"
       },
       "RnMesh_t": {
         "fields": {
@@ -1687,7 +1733,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "RnShapeDesc_t"
       },
       "RnTriangle_t": {
         "fields": {
@@ -1798,7 +1844,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "RnBodyDesc_t"
       },
       "vphysics_save_ragdoll_control_t": {
         "fields": {

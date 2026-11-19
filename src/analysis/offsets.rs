@@ -12,6 +12,8 @@ use pelite::pe64::{Pe, PeView, Rva};
 
 use phf::{Map, phf_map};
 
+use super::InterfaceMap;
+
 pub type OffsetMap = BTreeMap<String, BTreeMap<String, Rva>>;
 
 macro_rules! pattern_map {
@@ -80,7 +82,6 @@ pattern_map! {
         "dwGameEntitySystem_entityCount" => pattern!("ff81u4 4885d2") => None,
         "dwGameRules" => pattern!("f6c1010f85${} 4c8b05${'} 4d85") => None,
         "dwGlobalVars" => pattern!("488915${'} 488942") => None,
-        "dwViewMatrix" => pattern!("488d0d${'} 48c1e006") => None,
         "dwViewRender" => pattern!("488905${'} 488bc8 4885c0") => None,
     },
     engine2 => {
@@ -98,19 +99,18 @@ pattern_map! {
     input_system => {
         "dwInputSystem" => pattern!("488905${'} 33c0") => None,
     },
-    soundsystem => {
-        "dwSoundSystem" => pattern!("488d0d${'} e8${} 488b0d${} [3] 4c8b82") => None,
-    },
 }
 
-pub fn offsets<P: Process + MemoryView>(process: &mut P) -> Result<OffsetMap> {
+pub fn offsets<P: Process + MemoryView>(
+    process: &mut P,
+    interfaces: &InterfaceMap,
+) -> Result<OffsetMap> {
     let mut map = BTreeMap::new();
 
-    let modules: [(&str, fn(PeView) -> Result<BTreeMap<String, u32>>); 4] = [
+    let modules: [(&str, fn(PeView) -> Result<BTreeMap<String, u32>>); 3] = [
         ("client.dll", client::offsets),
         ("engine2.dll", engine2::offsets),
         ("inputsystem.dll", input_system::offsets),
-        ("soundsystem.dll", soundsystem::offsets),
     ];
 
     for (module_name, offsets) in &modules {
@@ -124,8 +124,28 @@ pub fn offsets<P: Process + MemoryView>(process: &mut P) -> Result<OffsetMap> {
         let view =
             PeView::from_bytes(&buf).with_context(|| format!("invalid PE image: {module_name}"))?;
 
-        map.insert(module_name.to_string(), offsets(view)?);
+        let mut module_offsets = offsets(view)?;
+        if *module_name == "client.dll" {
+            // Older clients exposed a static matrix array. Dota 7.42 projects from per-view data.
+            let mut save = [0; 2];
+            if view
+                .scanner()
+                .finds_code(pattern!("488d0d${'} 48c1e006"), &mut save)
+            {
+                module_offsets.insert("dwViewMatrix".to_string(), save[1]);
+            }
+        }
+        map.insert(module_name.to_string(), module_offsets);
     }
+
+    let sound_system = interfaces
+        .get("soundsystem.dll")
+        .and_then(|module| module.get("SoundSystem001"))
+        .context("soundsystem.dll::SoundSystem001 is missing")?;
+    map.insert(
+        "soundsystem.dll".to_string(),
+        BTreeMap::from([("dwSoundSystem".to_string(), Rva::try_from(*sound_system)?)]),
+    );
 
     Ok(map)
 }
@@ -143,7 +163,8 @@ mod tests {
     fn live_offset_targets() -> Result<()> {
         let mut process = setup()?;
         // Scan the running image, not a potentially stale output/offsets.json.
-        let found = offsets(&mut process)?;
+        let interfaces = crate::analysis::interfaces(&mut process)?;
+        let found = offsets(&mut process, &interfaces)?;
         assert!(!found["client.dll"].contains_key("dwGameEntitySystem_highestEntityIndex"));
         assert!(!found["engine2.dll"].contains_key("dwBuildNumber"));
         assert!(!found["soundsystem.dll"].contains_key("dwSoundSystem_engineViewData"));

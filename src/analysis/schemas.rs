@@ -108,7 +108,8 @@ fn read_class_binding(
             .data_part()
             .ok()?;
 
-        (!parent_name.is_empty()).then_some(parent_name)
+        (!parent_name.is_empty() && !parent_name.chars().any(char::is_control))
+            .then_some(parent_name)
     });
 
     let fields = read_class_binding_fields(mem, &binding)?;
@@ -192,22 +193,16 @@ fn read_class_binding_metadata(
                 Err(_) => return acc,
             };
 
-            if metadata.network_value.is_null() {
-                return acc;
-            }
-
             let name = match mem.read_utf8(metadata.name.address(), 128).data_part() {
                 Ok(n) => n,
                 Err(_) => return acc,
             };
 
-            let network_value = match mem.read_ptr(metadata.network_value).data_part() {
-                Ok(nv) => nv,
-                Err(_) => return acc,
-            };
-
             let metadata_entry = match name.as_str() {
                 "MNetworkChangeCallback" => unsafe {
+                    let Ok(network_value) = mem.read_ptr(metadata.network_value).data_part() else {
+                        return acc;
+                    };
                     let name = match mem
                         .read_utf8(network_value.value.name_ptr.address(), 128)
                         .data_part()
@@ -219,6 +214,9 @@ fn read_class_binding_metadata(
                     ClassMetadata::NetworkChangeCallback { name }
                 },
                 "MNetworkVarNames" => unsafe {
+                    let Ok(network_value) = mem.read_ptr(metadata.network_value).data_part() else {
+                        return acc;
+                    };
                     let var_value = network_value.value.var_value;
 
                     let name = match mem.read_utf8(var_value.name.address(), 128).data_part() {
@@ -252,10 +250,14 @@ fn read_enum_binding(
     global_scope: Address,
 ) -> Result<Enum> {
     let binding = mem.read_ptr(binding_ptr).data_part()?;
-    if binding.type_scope.address() != expected_scope
-        && (global_scope.is_null() || binding.type_scope.address() != global_scope)
-    {
+    let owns = |scope: Address| {
+        scope == expected_scope || (!global_scope.is_null() && scope == global_scope)
+    };
+    if !owns(binding.type_scope.address()) && !owns(binding.legacy_type_scope.address()) {
         bail!("enum candidate does not belong to this type scope");
+    }
+    if !matches!(binding.size, 1 | 2 | 4 | 8) || !matches!(binding.alignment, 1 | 2 | 4 | 8) {
+        bail!("invalid enum size or alignment");
     }
 
     let name = mem.read_utf8(binding.name.address(), 128).data_part()?;

@@ -88,7 +88,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CEntityComponent"
       },
       "CVariantDefaultAllocator": {
         "fields": {},
@@ -109,7 +109,7 @@
         "fields": {
           "m_nFlags": 36,
           "m_nRuntimeIndex": 32,
-          "m_pBaseClassComponentHelper": 88,
+          "m_pBaseClassComponentHelper": 120,
           "m_pCPPClassname": 8,
           "m_pName": 0,
           "m_pNetworkDataReferencedDescription": 16,
@@ -147,7 +147,7 @@
           "m_nTotalTicksThisFrame": 56
         },
         "metadata": [],
-        "parent": null
+        "parent": "EventSimulate_t"
       },
       "EventAppShutdown_t": {
         "fields": {
@@ -169,14 +169,16 @@
         "parent": null
       },
       "EventClientAdvanceNonRenderedFrame_t": {
-        "fields": {},
+        "fields": {
+          "m_bRenderOnly": 0
+        },
         "metadata": [],
         "parent": null
       },
       "EventClientAdvanceTick_t": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "EventAdvanceTick_t"
       },
       "EventClientFrameSimulate_t": {
         "fields": {
@@ -202,7 +204,7 @@
       "EventClientPauseSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "EventSimulate_t"
       },
       "EventClientPollInput_t": {
         "fields": {
@@ -214,7 +216,8 @@
       },
       "EventClientPollNetworking_t": {
         "fields": {
-          "m_nTickCount": 0
+          "m_nTickCount": 0,
+          "m_nTotalTicks": 4
         },
         "metadata": [],
         "parent": null
@@ -222,7 +225,7 @@
       "EventClientPostAdvanceTick_t": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "EventPostAdvanceTick_t"
       },
       "EventClientPostOutput_t": {
         "fields": {
@@ -238,12 +241,12 @@
       "EventClientPostSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "EventSimulate_t"
       },
       "EventClientPreOutputParallelWithServer_t": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "EventClientPreOutput_t"
       },
       "EventClientPreOutput_t": {
         "fields": {
@@ -260,7 +263,7 @@
       "EventClientPreSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "EventSimulate_t"
       },
       "EventClientProcessGameInput_t": {
         "fields": {
@@ -298,7 +301,7 @@
       "EventClientSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "EventSimulate_t"
       },
       "EventFrameBoundary_t": {
         "fields": {
@@ -312,6 +315,11 @@
         "metadata": [],
         "parent": null
       },
+      "EventPlayerConsoleCommand_t": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
       "EventPostAdvanceTick_t": {
         "fields": {
           "m_nCurrentTick": 48,
@@ -320,7 +328,7 @@
           "m_nTotalTicksThisFrame": 56
         },
         "metadata": [],
-        "parent": null
+        "parent": "EventSimulate_t"
       },
       "EventPostDataUpdate_t": {
         "fields": {
@@ -346,7 +354,7 @@
       "EventServerAdvanceTick_t": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "EventAdvanceTick_t"
       },
       "EventServerBeginAsyncPostTickWork_t": {
         "fields": {
@@ -358,7 +366,7 @@
       "EventServerBeginSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "EventSimulate_t"
       },
       "EventServerEndAsyncPostTickWork_t": {
         "fields": {},
@@ -375,26 +383,26 @@
       "EventServerPollNetworking_t": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "EventSimulate_t"
       },
       "EventServerPostAdvanceTick_t": {
         "fields": {
           "m_bLastTickBeforeClientUpdate": 64
         },
         "metadata": [],
-        "parent": null
+        "parent": "EventPostAdvanceTick_t"
       },
       "EventServerPostSimulate_t": {
         "fields": {
           "m_bLastTickBeforeClientUpdate": 48
         },
         "metadata": [],
-        "parent": null
+        "parent": "EventSimulate_t"
       },
       "EventServerProcessNetworking_t": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "EventSimulate_t"
       },
       "EventSetTime_t": {
         "fields": {
@@ -437,14 +445,24 @@
         "fields": {
           "m_Value": 0
         },
-        "metadata": [],
+        "metadata": [
+          {
+            "name": "MIsBoxedIntegerType",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "GameTime_t": {
         "fields": {
           "m_Value": 0
         },
-        "metadata": [],
+        "metadata": [
+          {
+            "name": "MIsBoxedFloatType",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       }
     },

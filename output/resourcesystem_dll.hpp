@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@
 namespace dota2_dumper {
     namespace schemas {
         // Module: resourcesystem.dll
-        // Class count: 62
+        // Class count: 61
         // Enum count: 5
         namespace resourcesystem_dll {
             // Alignment: 4
@@ -124,6 +124,9 @@ namespace dota2_dumper {
             }
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedIntegerType
             namespace FuseFunctionIndex_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // uint16
             }
@@ -133,6 +136,13 @@ namespace dota2_dumper {
             // Metadata:
             // MResourceTypeForInfoType
             namespace InfoForResourceTypeCGcExportableExternalData {
+            }
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            namespace InfoForResourceTypeCSurfaceGraph2 {
             }
             // Parent: None
             // Field count: 0
@@ -326,13 +336,6 @@ namespace dota2_dumper {
             //
             // Metadata:
             // MResourceTypeForInfoType
-            namespace InfoForResourceTypeCSurfaceGraph {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
             namespace InfoForResourceTypeCCSGOEconItem {
             }
             // Parent: None
@@ -359,13 +362,6 @@ namespace dota2_dumper {
             // Metadata:
             // MResourceTypeForInfoType
             namespace InfoForResourceTypeCCompositeMaterialKit {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            namespace InfoForResourceTypeCVMixListResource {
             }
             // Parent: None
             // Field count: 0
@@ -487,6 +483,9 @@ namespace dota2_dumper {
             }
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedIntegerType
             namespace FuseVariableIndex_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // uint16
             }

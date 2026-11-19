@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@
 namespace dota2_dumper {
     namespace schemas {
         // Module: engine2.dll
-        // Class count: 57
+        // Class count: 58
         // Enum count: 2
         namespace engine2_dll {
             // Alignment: 4
@@ -38,7 +38,7 @@ namespace dota2_dumper {
             // Field count: 0
             namespace CEntityComponent {
             }
-            // Parent: None
+            // Parent: CEntityComponent
             // Field count: 1
             //
             // Metadata:
@@ -65,7 +65,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_pPrevByClass = 0x60; // CEntityIdentity*
                 constexpr std::ptrdiff_t m_pNextByClass = 0x68; // CEntityIdentity*
             }
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 0
             namespace EventClientPostSimulate_t {
             }
@@ -76,7 +76,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flRealTime = 0x28; // float32
                 constexpr std::ptrdiff_t m_flFrameTime = 0x2C; // float32
             }
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 4
             namespace EventPostAdvanceTick_t {
                 constexpr std::ptrdiff_t m_nCurrentTick = 0x30; // int32
@@ -102,7 +102,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flRenderFrameTimeUnbounded = 0x30; // float32
                 constexpr std::ptrdiff_t m_bRenderOnly = 0x34; // bool
             }
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 1
             namespace EventServerPostSimulate_t {
                 constexpr std::ptrdiff_t m_bLastTickBeforeClientUpdate = 0x30; // bool
@@ -117,10 +117,13 @@ namespace dota2_dumper {
             }
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedFloatType
             namespace GameTime_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // float32
             }
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 0
             namespace EventServerBeginSimulate_t {
             }
@@ -145,7 +148,7 @@ namespace dota2_dumper {
             // Field count: 0
             namespace EventServerEndAsyncPostTickWork_t {
             }
-            // Parent: None
+            // Parent: EventAdvanceTick_t
             // Field count: 0
             namespace EventClientAdvanceTick_t {
             }
@@ -154,7 +157,7 @@ namespace dota2_dumper {
             namespace CNetworkVarChainer {
                 constexpr std::ptrdiff_t m_PathIndex = 0x20; // ChangeAccessorFieldPathIndex_t
             }
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 0
             namespace EventClientSimulate_t {
             }
@@ -169,8 +172,15 @@ namespace dota2_dumper {
             }
             // Parent: None
             // Field count: 1
+            //
+            // Metadata:
+            // MIsBoxedIntegerType
             namespace GameTick_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // int32
+            }
+            // Parent: None
+            // Field count: 0
+            namespace EventPlayerConsoleCommand_t {
             }
             // Parent: None
             // Field count: 2
@@ -200,7 +210,7 @@ namespace dota2_dumper {
             namespace EventAppShutdown_t {
                 constexpr std::ptrdiff_t m_nDummy0 = 0x0; // int32
             }
-            // Parent: None
+            // Parent: EventPostAdvanceTick_t
             // Field count: 1
             namespace EventServerPostAdvanceTick_t {
                 constexpr std::ptrdiff_t m_bLastTickBeforeClientUpdate = 0x40; // bool
@@ -215,11 +225,11 @@ namespace dota2_dumper {
             namespace EventPostDataUpdate_t {
                 constexpr std::ptrdiff_t m_nCount = 0x0; // int32
             }
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 0
             namespace EventClientPreSimulate_t {
             }
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 0
             namespace EventClientPauseSimulate_t {
             }
@@ -234,11 +244,11 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_Attributes = 0x0; // CUtlOrderedMap<CUtlStringTokenNoRegistration,Attribute_t>
                 constexpr std::ptrdiff_t m_Names = 0x28; // CUtlOrderedMap<CUtlStringTokenNoRegistration,CUtlString>
             }
-            // Parent: None
+            // Parent: EventClientPreOutput_t
             // Field count: 0
             namespace EventClientPreOutputParallelWithServer_t {
             }
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 4
             namespace EventAdvanceTick_t {
                 constexpr std::ptrdiff_t m_nCurrentTick = 0x30; // int32
@@ -250,7 +260,7 @@ namespace dota2_dumper {
             // Field count: 0
             namespace EventSplitScreenStateChanged_t {
             }
-            // Parent: None
+            // Parent: EventPostAdvanceTick_t
             // Field count: 0
             namespace EventClientPostAdvanceTick_t {
             }
@@ -289,7 +299,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_flFrameTime = 0x2C; // float32
                 constexpr std::ptrdiff_t m_bScheduleSendTickPacket = 0x30; // bool
             }
-            // Parent: None
+            // Parent: EventAdvanceTick_t
             // Field count: 0
             namespace EventServerAdvanceTick_t {
             }
@@ -317,10 +327,11 @@ namespace dota2_dumper {
             namespace CEntityKeyValues {
             }
             // Parent: None
-            // Field count: 0
+            // Field count: 1
             namespace EventClientAdvanceNonRenderedFrame_t {
+                constexpr std::ptrdiff_t m_bRenderOnly = 0x0; // bool
             }
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 0
             namespace EventServerProcessNetworking_t {
             }
@@ -337,7 +348,7 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_pNetworkDataReferencedPtrPropDescription = 0x18; // char*
                 constexpr std::ptrdiff_t m_nRuntimeIndex = 0x20; // int32
                 constexpr std::ptrdiff_t m_nFlags = 0x24; // uint32
-                constexpr std::ptrdiff_t m_pBaseClassComponentHelper = 0x58; // CEntityComponentHelper*
+                constexpr std::ptrdiff_t m_pBaseClassComponentHelper = 0x78; // CEntityComponentHelper*
             }
             // Parent: None
             // Field count: 4
@@ -348,9 +359,10 @@ namespace dota2_dumper {
                 constexpr std::ptrdiff_t m_nRenderHeight = 0x24; // int32
             }
             // Parent: None
-            // Field count: 1
+            // Field count: 2
             namespace EventClientPollNetworking_t {
                 constexpr std::ptrdiff_t m_nTickCount = 0x0; // int32
+                constexpr std::ptrdiff_t m_nTotalTicks = 0x4; // int32
             }
             // Parent: None
             // Field count: 1
@@ -370,7 +382,7 @@ namespace dota2_dumper {
             namespace EventServerEndSimulate_t {
                 constexpr std::ptrdiff_t m_bLastTick = 0x0; // bool
             }
-            // Parent: None
+            // Parent: EventSimulate_t
             // Field count: 0
             namespace EventServerPollNetworking_t {
             }

@@ -93,14 +93,24 @@
         "fields": {
           "m_Value": 0
         },
-        "metadata": [],
+        "metadata": [
+          {
+            "name": "MIsBoxedIntegerType",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "FuseVariableIndex_t": {
         "fields": {
           "m_Value": 0
         },
-        "metadata": [],
+        "metadata": [
+          {
+            "name": "MIsBoxedIntegerType",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "InfoForResourceTypeCAnimData": {
@@ -343,7 +353,7 @@
         ],
         "parent": null
       },
-      "InfoForResourceTypeCSurfaceGraph": {
+      "InfoForResourceTypeCSurfaceGraph2": {
         "fields": {},
         "metadata": [
           {
@@ -404,16 +414,6 @@
         "parent": null
       },
       "InfoForResourceTypeCVDataResource": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MResourceTypeForInfoType",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "InfoForResourceTypeCVMixListResource": {
         "fields": {},
         "metadata": [
           {

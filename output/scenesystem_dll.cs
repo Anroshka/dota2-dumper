@@ -1,5 +1,5 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: scenesystem.dll
@@ -196,7 +196,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_fMaxObjectScale = 0xC; // float32
             public const nint m_fSwitchDistances = 0x10; // CUtlVector<float32>
         }
-        // Parent: None
+        // Parent: BaseSceneObjectOverride_t
         // Field count: 4
         //
         // Metadata:
@@ -295,7 +295,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_flBeginCullSize = 0xA4; // float32
             public const nint m_flEndCullSize = 0xA8; // float32
         }
-        // Parent: None
+        // Parent: CSSDSMsg_LayerBase
         // Field count: 0
         //
         // Metadata:
@@ -364,7 +364,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_LayerName = 0x20; // CUtlString
             public const nint m_displayText = 0x28; // CUtlString
         }
-        // Parent: None
+        // Parent: CSSDSMsg_LayerBase
         // Field count: 0
         //
         // Metadata:
@@ -432,7 +432,7 @@ namespace Dota2Dumper.Schemas {
             public const nint m_viewId = 0x0; // SceneViewId_t
             public const nint m_ViewName = 0x10; // CUtlString
         }
-        // Parent: None
+        // Parent: BaseSceneObjectOverride_t
         // Field count: 4
         //
         // Metadata:

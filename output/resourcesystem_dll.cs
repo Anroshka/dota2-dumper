@@ -1,9 +1,9 @@
 // Generated using https://github.com/Anroshka/dota2-dumper
-// 2026-11-07 09:16:29.927261200 UTC
+// 2026-11-19 23:56:39.632743400 UTC
 
 namespace Dota2Dumper.Schemas {
     // Module: resourcesystem.dll
-    // Class count: 62
+    // Class count: 61
     // Enum count: 5
     public static class ResourcesystemDll {
         // Alignment: 4
@@ -118,6 +118,9 @@ namespace Dota2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 1
+        //
+        // Metadata:
+        // MIsBoxedIntegerType
         public static class FuseFunctionIndex_t {
             public const nint m_Value = 0x0; // uint16
         }
@@ -127,6 +130,13 @@ namespace Dota2Dumper.Schemas {
         // Metadata:
         // MResourceTypeForInfoType
         public static class InfoForResourceTypeCGcExportableExternalData {
+        }
+        // Parent: None
+        // Field count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCSurfaceGraph2 {
         }
         // Parent: None
         // Field count: 0
@@ -320,13 +330,6 @@ namespace Dota2Dumper.Schemas {
         //
         // Metadata:
         // MResourceTypeForInfoType
-        public static class InfoForResourceTypeCSurfaceGraph {
-        }
-        // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MResourceTypeForInfoType
         public static class InfoForResourceTypeCCSGOEconItem {
         }
         // Parent: None
@@ -353,13 +356,6 @@ namespace Dota2Dumper.Schemas {
         // Metadata:
         // MResourceTypeForInfoType
         public static class InfoForResourceTypeCCompositeMaterialKit {
-        }
-        // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MResourceTypeForInfoType
-        public static class InfoForResourceTypeCVMixListResource {
         }
         // Parent: None
         // Field count: 0
@@ -481,6 +477,9 @@ namespace Dota2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 1
+        //
+        // Metadata:
+        // MIsBoxedIntegerType
         public static class FuseVariableIndex_t {
             public const nint m_Value = 0x0; // uint16
         }
