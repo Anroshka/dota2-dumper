@@ -1,17 +1,24 @@
-# dota2-dumper
+# Dota 2 Dumper
 
-An external offset/interface/schema dumper for the Windows x64 build of Dota 2. Powered
-by [memflow](https://github.com/memflow/memflow).
+Dump Dota 2 offsets, interfaces, registered buttons, and Source 2 schemas on
+Windows x64. Export to JSON, Rust, C++, C#, and Zig.
 
-## Getting Started
+The pre-generated snapshot covers **Dota 2 patch 7.42, client 6985** with Vulkan.
 
-Download the [latest release](https://github.com/Anroshka/dota2-dumper/releases/latest) or build from source.
-Use a current stable Rust toolchain; this refresh was validated with Rust 1.96.1.
+[Download for Windows](https://github.com/Anroshka/dota2-dumper/releases/latest/download/dota2-dumper.exe) · [Download the 6985 snapshot](https://github.com/Anroshka/dota2-dumper/releases/download/v0.2.1/dota2-dumper-output-6985.zip) · [Browse the JSON offsets](output/offsets.json)
+
+## Quick start
+
+1. Launch Dota 2. The main menu is enough for a basic capture.
+2. Open PowerShell in the folder containing the executable and run this command.
+
+   ```powershell
+   .\dota2-dumper.exe -o output -vv
+   ```
+
+Build from source with `cargo build --release`. The current build was validated with Rust 1.96.1.
 
 ## Usage
-
-1. Ensure the game is running (Being in the main menu should suffice).
-2. Run the `dota2-dumper` executable.
 
 _Note:_ If you run the executable without specifying an optional memflow connector name, it will automatically use the
 [memflow-native](https://github.com/memflow/memflow-native) OS layer to read the memory of the game process. If you
@@ -38,10 +45,9 @@ Linux or as an administrator on Windows.
 - `-h, --help`: Print help.
 - `-V, --version`: Print version.
 
-## Current snapshot
+## Snapshot notes
 
-The checked-in output targets Dota 2 patch 7.42, client version 6985
-(SourceRevision 11258601) on Windows x64 with Vulkan.
+The 6985 snapshot was captured from SourceRevision 11258601 on Windows x64 with Vulkan.
 The 7.42 world-to-screen path reads the projection matrix from a view object.
 The old static `dwViewMatrix` signature does not match this build, so the
 6985 snapshot omits that offset. Older clients with a unique match still emit it.
