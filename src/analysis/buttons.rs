@@ -1,6 +1,6 @@
 use std::collections::{BTreeMap, BTreeSet};
 
-use anyhow::{Result, bail, ensure};
+use anyhow::{Context, Result, bail, ensure};
 
 use log::debug;
 
@@ -9,6 +9,7 @@ use memflow::prelude::v1::*;
 use pelite::pattern;
 use pelite::pe64::{Pe, PeView};
 
+use crate::memory::{read_c_string, read_code_image};
 use crate::source2::KeyButton;
 
 pub type ButtonMap = BTreeMap<String, umem>;
@@ -16,9 +17,7 @@ pub type ButtonMap = BTreeMap<String, umem>;
 pub fn buttons<P: Process + MemoryView>(process: &mut P) -> Result<ButtonMap> {
     let module = process.module_by_name("client.dll")?;
 
-    let buf = process
-        .read_raw(module.base, module.size as _)
-        .data_part()?;
+    let buf = read_code_image(process, &module)?;
 
     let view = PeView::from_bytes(&buf)?;
 
@@ -34,13 +33,10 @@ pub fn buttons<P: Process + MemoryView>(process: &mut P) -> Result<ButtonMap> {
         bail!("missing or ambiguous button list pattern");
     }
 
-    let list_head = match process.read_addr64(module.base + save[1]).data_part() {
-        Ok(h) => h,
-        Err(e) => {
-            log::warn!("failed to read button list head: {}", e);
-            return Ok(ButtonMap::new());
-        }
-    };
+    let list_head = process
+        .read_addr64(module.base + save[1])
+        .data()
+        .context("reading button list head")?;
 
     read_buttons(process, &module, list_head)
 }
@@ -60,8 +56,9 @@ fn read_buttons(
             seen.insert(button_ptr.address()),
             "cycle in registered button list"
         );
-        let button = mem.read_ptr(button_ptr).data_part()?;
-        let name = mem.read_utf8_lossy(button.name.address(), 32).data_part()?;
+        let button = mem.read_ptr(button_ptr).data()?;
+        let name = read_c_string(mem, button.name.address())?;
+        ensure!(!name.is_empty(), "empty registered button name");
 
         let state_addr = button_ptr.address() + offset_of!(KeyButton.state);
 

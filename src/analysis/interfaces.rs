@@ -1,6 +1,6 @@
 use std::collections::{BTreeMap, BTreeSet};
 
-use anyhow::{Result, ensure};
+use anyhow::{Context, Result, ensure};
 
 use log::debug;
 
@@ -9,50 +9,60 @@ use memflow::prelude::v1::*;
 use pelite::pe64::exports::Export;
 use pelite::pe64::{Pe, PeView};
 
-use crate::memory::address;
+use crate::memory::{address, read_c_string};
 use crate::source2::InterfaceReg;
 
 pub type InterfaceMap = BTreeMap<String, BTreeMap<String, umem>>;
 
 pub fn interfaces<P: Process + MemoryView>(process: &mut P) -> Result<InterfaceMap> {
-    process
-        .module_list()?
-        .iter()
-        .filter_map(|module| {
-            let buf = process
-                .read_raw(module.base, module.size as _)
-                .data_part()
-                .ok()?;
+    let mut result = InterfaceMap::new();
+    for module in process.module_list()? {
+        let name = module.name.to_string();
+        let entries = module_interfaces(process, &module)
+            .with_context(|| format!("reading interfaces in {name}"))?;
+        if !entries.is_empty() {
+            ensure!(
+                !result.contains_key(&name),
+                "duplicate interface module {name}"
+            );
+            result.insert(name, entries);
+        }
+    }
+    Ok(result)
+}
 
-            let view = PeView::from_bytes(&buf).ok()?;
-
-            let ci_export = view
-                .exports()
-                .ok()?
-                .by()
-                .ok()?
-                .name("CreateInterface")
-                .ok()?;
-
-            match ci_export {
-                Export::Symbol(symbol) => {
-                    let entry = module.base + symbol;
-                    let opcode: [u8; 3] = process.read(entry).data_part().ok()?;
-                    if !matches!(opcode, [0x4C | 0x48, 0x8B, op] if op & 0xC7 == 0x05) {
-                        return None;
-                    }
-                    let list_ptr = address::resolve_rip(process, entry).ok()?;
-                    let list_head = process.read_addr64(list_ptr).data_part().ok()?;
-
-                    return read_interfaces(process, module, list_head)
-                        .ok()
-                        .filter(|ifaces| !ifaces.is_empty())
-                        .map(|ifaces| Ok((module.name.to_string(), ifaces)));
-                }
-                _ => None,
-            }
-        })
-        .collect()
+fn module_interfaces(
+    process: &mut impl MemoryView,
+    module: &ModuleInfo,
+) -> Result<BTreeMap<String, umem>> {
+    // Some loaded images contain unmapped pages outside the export directory.
+    let buf = process
+        .read_raw(module.base, module.size as _)
+        .data_part()?;
+    let view = PeView::from_bytes(&buf)?;
+    let exports = match view.exports() {
+        Ok(exports) => exports.by()?,
+        Err(pelite::Error::Null) => return Ok(BTreeMap::new()),
+        Err(err) => return Err(err.into()),
+    };
+    let symbol = match exports.name("CreateInterface") {
+        Ok(Export::Symbol(symbol)) => symbol,
+        Ok(_) => {
+            log::warn!("skipping forwarded CreateInterface in {}", module.name);
+            return Ok(BTreeMap::new());
+        }
+        Err(pelite::Error::Null) => return Ok(BTreeMap::new()),
+        Err(err) => return Err(err.into()),
+    };
+    let entry = module.base + symbol;
+    let opcode: [u8; 3] = process.read(entry).data()?;
+    if !matches!(opcode, [0x4C | 0x48, 0x8B, op] if op & 0xC7 == 0x05) {
+        log::warn!("unsupported CreateInterface entry point in {}", module.name);
+        return Ok(BTreeMap::new());
+    }
+    let list_ptr = address::resolve_rip(process, entry)?;
+    let list_head = process.read_addr64(list_ptr).data()?;
+    read_interfaces(process, module, list_head)
 }
 
 fn read_interfaces(
@@ -71,11 +81,12 @@ fn read_interfaces(
             "cycle in {} interface list",
             module.name
         );
-        let reg = mem.read_ptr(reg_ptr).data_part()?;
+        let reg = mem.read_ptr(reg_ptr).data()?;
         reg_ptr = reg.next;
-        let name = mem.read_utf8(reg.name.address(), 128).data_part()?;
+        let name = read_c_string(mem, reg.name.address())?;
+        ensure!(!name.is_empty(), "empty interface name");
         let function = reg.create_fn.address();
-        let bytes: [u8; 8] = mem.read(function).data_part()?;
+        let bytes: [u8; 8] = mem.read(function).data()?;
         if !matches!(bytes, [0x48, 0x8D, 0x05, .., 0xC3]) {
             debug!("skipping non-static interface {}::{name}", module.name);
             continue;

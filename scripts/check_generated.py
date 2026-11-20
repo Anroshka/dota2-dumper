@@ -45,6 +45,113 @@ def check_constants(root, stem):
     return sum(map(len, expected.values()))
 
 
+IDENT = r'(?:r#)?\w+|@"\w+"'
+TYPE_HEADERS = {
+    'cs': (rf'public static class ({IDENT})', rf'public enum ({IDENT}) : (\w+)'),
+    'hpp': (rf'namespace ({IDENT})', rf'enum class ({IDENT}) : (\w+)'),
+    'rs': (rf'pub mod ({IDENT})', rf'pub enum ({IDENT})'),
+    'zig': (rf'pub const ({IDENT}) = struct', rf'pub const ({IDENT}) = enum\((\w+)\)'),
+}
+FIELD_START = {'cs': 'public const nint ', 'hpp': 'constexpr std::ptrdiff_t ',
+               'rs': 'pub const ', 'zig': 'pub const '}
+WIDTHS = {
+    'byte': 1, 'ushort': 2, 'uint': 4, 'ulong': 8,
+    **{f'{prefix}{width * 8}{suffix}': width for width in (1, 2, 4, 8)
+       for prefix, suffix in (('u', ''), ('uint', '_t'))},
+}
+
+
+def spelling(name, extension):
+    if extension == 'rs' and name in ('Self', 'self', 'super', 'crate'):
+        return name + '_'
+    return name
+
+
+def parse_schema(text, extension, path):
+    class_header, enum_header = TYPE_HEADERS[extension]
+    member_pattern = re.compile(
+        rf'({IDENT}) = (?:unchecked\(\(\w+\)(-?\d+)\)|(0x[\dA-Fa-f]+)),?'
+    )
+    field_pattern = re.compile(
+        rf'{FIELD_START[extension]}({IDENT})(?:: usize)? = (0x[\dA-Fa-f]+);(?: // .*)?'
+    )
+    classes, enums = {}, {}
+    body = MODULE.split(text)[2].splitlines()
+    # The first structural declaration after the module comment wraps all schema types.
+    wrapper = next(i for i, line in enumerate(body) if re.fullmatch(class_header + r' \{', line.strip()))
+    rows = iter(body[wrapper + 1:])
+    repr_width = None
+    for line in rows:
+        line = line.strip()
+        repr_match = re.fullmatch(r'#\[repr\((\w+)\)\]', line)
+        if repr_match:
+            repr_width = WIDTHS[repr_match[1]]
+            continue
+        enum = re.fullmatch(enum_header + r' \{', line)
+        cls = re.fullmatch(class_header + r' \{', line)
+        if not (enum or cls):
+            continue
+
+        name = (enum or cls)[1].removeprefix('r#').removeprefix('@"').removesuffix('"')
+        table = enums if enum else classes
+        if name in table:
+            raise ValueError(f'{path}: duplicate schema type {name}')
+        fields = {}
+        width = (repr_width if extension == 'rs' else WIDTHS[enum[2]]) if enum else None
+        repr_width = None
+        for declaration in rows:
+            declaration = declaration.strip()
+            if declaration in ('}', '};'):
+                break
+            if not declaration:
+                continue
+            match = (member_pattern if enum else field_pattern).fullmatch(declaration)
+            if not match:
+                raise ValueError(f'{path}::{name}: invalid declaration {declaration!r}')
+            field = match[1].removeprefix('r#').removeprefix('@"').removesuffix('"')
+            if field in fields:
+                raise ValueError(f'{path}::{name}: duplicate member {field}')
+            if enum:
+                value = int(match[2], 10) if match[2] is not None else int(match[3], 16)
+                if match[2] is not None:
+                    value &= (1 << (8 * width)) - 1
+            else:
+                value = int(match[2], 16)
+            fields[field] = value
+        table[name] = (width, fields) if enum else fields
+    return classes, enums
+
+
+def check_schema_values(text, extension, path, body):
+    classes, enums = parse_schema(text, extension, path)
+    if classes.keys() != {spelling(name, extension) for name in body['classes']}:
+        raise ValueError(f'{path}: class names disagree with JSON')
+    for name, cls in body['classes'].items():
+        expected = {spelling(field, extension): value for field, value in cls['fields'].items()}
+        if classes[spelling(name, extension)] != expected:
+            raise ValueError(f'{path}::{name}: field offsets disagree with JSON')
+    if enums.keys() != {spelling(name, extension) for name in body['enums']}:
+        raise ValueError(f'{path}: enum names disagree with JSON')
+    for name, item in body['enums'].items():
+        width, actual = enums[spelling(name, extension)]
+        if width != item['alignment']:
+            raise ValueError(f'{path}::{name}: enum width disagrees with JSON')
+        mask = (1 << (8 * width)) - 1
+        expected = {spelling(member, extension): value & mask
+                    for member, value in item['members'].items()}
+        if extension in ('rs', 'zig'):
+            # Rust and Zig use one declared name per discriminant. Any one of the
+            # original names for a value is a valid choice.
+            values = set(actual.values())
+            agrees = (len(actual) == len(values)
+                       and values == set(expected.values())
+                       and all(expected.get(member) == value for member, value in actual.items()))
+        else:
+            agrees = actual == expected
+        if not agrees:
+            raise ValueError(f'{path}::{name}: enum members disagree with JSON')
+
+
 def check(root, build_dir, compile_rust=False, compile_cpp=False):
     info = read_json(root / 'info.json')
     timestamp = info['timestamp'].replace('T', ' ').removesuffix('+00:00') + ' UTC'
@@ -67,7 +174,7 @@ def check(root, build_dir, compile_rust=False, compile_cpp=False):
         enums += len(body['enums'])
         for name, cls in body['classes'].items():
             for field, offset in cls['fields'].items():
-                if not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*', field) or offset < 0:
+                if not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*', field) or type(offset) is not int or offset < 0:
                     raise ValueError(f'{path}: invalid schema field in {name}: {field!r}={offset}')
         for extension in FORMATS:
             if extension == 'json':
@@ -80,6 +187,7 @@ def check(root, build_dir, compile_rust=False, compile_cpp=False):
                 counts_in_header = re.findall(rf'// {label} count: (\d+)', text)
                 if counts_in_header != [str(len(body[key]))]:
                     raise ValueError(f'{schema_path}: {key} count disagrees with JSON')
+            check_schema_values(text, extension, schema_path, body)
     if 'client_dll' not in stems:
         raise ValueError('no client.dll schema found')
 

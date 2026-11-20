@@ -1,8 +1,9 @@
+use std::collections::BTreeSet;
 use std::fmt::{self, Write};
 use std::fs;
 use std::path::Path;
 
-use anyhow::{Result, anyhow};
+use anyhow::{Result, anyhow, ensure};
 
 use chrono::{DateTime, Utc};
 
@@ -19,6 +20,9 @@ mod formatter;
 mod interfaces;
 mod offsets;
 mod schemas;
+mod snapshot;
+
+const BANNER: &str = "// Generated using https://github.com/Anroshka/dota2-dumper";
 
 enum Item<'a> {
     Buttons(&'a ButtonMap),
@@ -35,7 +39,7 @@ impl<'a> Item<'a> {
             "json" => self.write_json(fmt),
             "rs" => self.write_rs(fmt),
             "zig" => self.write_zig(fmt),
-            _ => unimplemented!(),
+            _ => Err(fmt::Error),
         }
     }
 }
@@ -112,7 +116,7 @@ impl<'a> Output<'a> {
         result: &'a AnalysisResult,
         read_local_files: bool,
     ) -> Result<Self> {
-        fs::create_dir_all(&out_dir)?;
+        validate_schema_names(&result.schemas)?;
 
         Ok(Self {
             file_types,
@@ -125,6 +129,7 @@ impl<'a> Output<'a> {
     }
 
     pub fn dump_all<P: MemoryView + Process>(&self, process: &mut P) -> Result<()> {
+        let snapshot = snapshot::SnapshotDirectory::new(self.out_dir)?;
         let items = [
             ("buttons", Item::Buttons(&self.result.buttons)),
             ("interfaces", Item::Interfaces(&self.result.interfaces)),
@@ -132,17 +137,16 @@ impl<'a> Output<'a> {
         ];
 
         for (file_name, item) in &items {
-            self.dump_item(file_name, item)?;
+            self.dump_item(snapshot.path(), file_name, item)?;
         }
 
-        self.dump_schemas()?;
-        self.dump_info(process)?;
-
-        Ok(())
+        self.dump_schemas(snapshot.path())?;
+        self.dump_info(snapshot.path(), process)?;
+        snapshot.publish()
     }
 
-    fn dump_info<P: MemoryView + Process>(&self, process: &mut P) -> Result<()> {
-        let file_path = self.out_dir.join("info.json");
+    fn dump_info<P: MemoryView + Process>(&self, dir: &Path, process: &mut P) -> Result<()> {
+        let file_path = dir.join("info.json");
 
         // The old dwBuildNumber signature reads 48 in build 6972, not ClientVersion.
         // Do not disguise a failed read with the latest version of a different build
@@ -176,7 +180,7 @@ impl<'a> Output<'a> {
         Ok(())
     }
 
-    fn dump_item(&self, file_name: &str, item: &Item) -> Result<()> {
+    fn dump_item(&self, dir: &Path, file_name: &str, item: &Item) -> Result<()> {
         for file_type in self.file_types {
             let mut out = String::new();
             let mut fmt = Formatter::new(&mut out, self.indent_size);
@@ -187,7 +191,7 @@ impl<'a> Output<'a> {
 
             item.write(&mut fmt, file_type)?;
 
-            let file_path = self.out_dir.join(format!("{}.{}", file_name, file_type));
+            let file_path = dir.join(format!("{}.{}", file_name, file_type));
 
             fs::write(&file_path, out)?;
         }
@@ -195,25 +199,81 @@ impl<'a> Output<'a> {
         Ok(())
     }
 
-    fn dump_schemas(&self) -> Result<()> {
+    fn dump_schemas(&self, dir: &Path) -> Result<()> {
         for (module_name, (classes, enums)) in &self.result.schemas {
             let map = SchemaMap::from([(module_name.clone(), (classes.clone(), enums.clone()))]);
 
-            self.dump_item(&slugify(&module_name), &Item::Schemas(&map))?;
+            self.dump_item(dir, &slugify(module_name), &Item::Schemas(&map))?;
         }
 
         Ok(())
     }
 
     fn write_banner(&self, fmt: &mut Formatter<'_>) -> Result<()> {
-        writeln!(
-            fmt,
-            "// Generated using https://github.com/Anroshka/dota2-dumper"
-        )?;
+        writeln!(fmt, "{BANNER}")?;
         writeln!(fmt, "// {}\n", self.timestamp)?;
 
         Ok(())
     }
+}
+
+fn validate_schema_names(schemas: &SchemaMap) -> Result<()> {
+    let mut stems = BTreeSet::from([
+        "buttons".to_string(),
+        "interfaces".to_string(),
+        "offsets".to_string(),
+        "info".to_string(),
+    ]);
+    for (module, (classes, enums)) in schemas {
+        ensure!(
+            stems.insert(slugify(module).to_ascii_lowercase()),
+            "schema output filename collision for {module}"
+        );
+        let symbols = classes
+            .iter()
+            .map(|class| class.name.as_str())
+            .chain(enums.iter().map(|item| item.name.as_str()));
+        let mut names = BTreeSet::new();
+        let mut rust_names = BTreeSet::new();
+        for symbol in symbols {
+            let name = slugify(symbol);
+            ensure!(
+                names.insert(name.clone()) && rust_names.insert(rust_ident(&name)),
+                "{module}: conflicting schema type name {symbol}"
+            );
+        }
+        for class in classes {
+            validate_members(
+                module,
+                &class.name,
+                class.fields.iter().map(|field| field.name.as_str()),
+            )?;
+        }
+        for item in enums {
+            validate_members(
+                module,
+                &item.name,
+                item.members.iter().map(|member| member.name.as_str()),
+            )?;
+        }
+    }
+    Ok(())
+}
+
+fn validate_members<'a>(
+    module: &str,
+    owner: &str,
+    names: impl Iterator<Item = &'a str>,
+) -> Result<()> {
+    let mut raw = BTreeSet::new();
+    let mut rust = BTreeSet::new();
+    for name in names {
+        ensure!(
+            raw.insert(name) && rust.insert(rust_ident(name)),
+            "{module}::{owner}: conflicting member name {name}"
+        );
+    }
+    Ok(())
 }
 
 #[inline]
@@ -260,6 +320,22 @@ mod tests {
         assert_eq!(rust_ident("gen"), "r#gen");
         assert_eq!(rust_ident("Self"), "Self_");
         assert_eq!(rust_ident("m_name"), "m_name");
+    }
+
+    #[test]
+    fn rejects_schema_names_that_collapse_to_one_key() {
+        let make_class = |name: &str| super::Class {
+            name: name.to_string(),
+            module_name: "client.dll".to_string(),
+            parent_name: None,
+            metadata: Vec::new(),
+            fields: Vec::new(),
+        };
+        let schemas = super::SchemaMap::from([(
+            "client.dll".to_string(),
+            (vec![make_class("A::B"), make_class("A__B")], Vec::new()),
+        )]);
+        assert!(super::validate_schema_names(&schemas).is_err());
     }
 
     #[test]

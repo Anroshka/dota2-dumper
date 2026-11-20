@@ -7,3 +7,6 @@ Cargo.lock
 *.log
 __pycache__/
 *.pyc
+*.dota2-dumper.lock
+*.dota2-dumper.previous/
+.dota2-dumper-stage-*/

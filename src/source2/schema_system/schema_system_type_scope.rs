@@ -1,5 +1,3 @@
-use std::ffi::c_char;
-
 use memflow::prelude::v1::*;
 
 use super::{SchemaClassBinding, SchemaEnumBinding};
@@ -10,7 +8,7 @@ use crate::source2::UtlTsHash;
 #[repr(C)]
 pub struct SchemaSystemTypeScope {
     pad_0: [u8; 0x8],                                   // 0x0000
-    pub name: [c_char; 256],                            // 0x0008
+    pub name: [u8; 256],                                // 0x0008
     pub global_scope: Pointer64<SchemaSystemTypeScope>, // 0x0108
     pad_1: [u8; 0x450],                                 // 0x0110
     pub class_bindings: UtlTsHash<SchemaClassBinding>,  // 0x0560

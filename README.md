@@ -5,7 +5,7 @@ by [memflow](https://github.com/memflow/memflow).
 
 ## Getting Started
 
-You can download the latest release or compile it yourself.
+Download the [latest release](https://github.com/Anroshka/dota2-dumper/releases/latest) or build from source.
 Use a current stable Rust toolchain; this refresh was validated with Rust 1.96.1.
 
 ## Usage
@@ -86,15 +86,16 @@ Unsigned enum output preserves the underlying-width bit pattern, including Dota
 states such as -2/-3 and high-bit flags. Rust/Zig enum aliases that become equal
 after conversion are emitted once; JSON retains all original names and values.
 
-A missing/ambiguous required offset signature, failed analysis stage, or missing
-client classes or enums stop the capture before generated files are written. Field-level
-schema reads and interface enumeration remain best-effort; a successful capture is
-not proof that every field's semantics have been independently verified.
+Missing or ambiguous required signatures, incomplete schema reads, and errors
+reading a registered interface stop the capture. The dumper reports the affected
+module when a schema or interface read fails.
 
-Generate each refresh into a **new directory**. Schema files depend on loaded modules
-(including the active renderer); old files in an existing output directory are not
-automatically deleted. The checked-in snapshot uses Vulkan, so it contains
-`rendersystemvulkan_dll.*` rather than stale `rendersystemdx11_dll.*` files.
+The dumper writes a complete snapshot to a temporary directory and then replaces
+the requested output directory. An existing directory may contain only files from
+a previous dump. On a retry, the dumper restores the previous snapshot if a
+replacement was interrupted after the old directory was moved aside.
+Schema files depend on loaded modules, including the active renderer. The
+checked-in snapshot uses Vulkan.
 
 The native backend and live checks are validated on Windows x64. The current scanner
 reads PE images; native Linux ELF Dota support is not implemented.
@@ -111,8 +112,8 @@ cargo test --release -- --ignored --nocapture
 The live test rescans the running process and checks object targets using RTTI and
 checks basic network/window values. It does not trust the checked-in snapshot.
 
-Check snapshot timestamps, duplicate names, module ownership of schema files,
-and cross-format offsets, buttons, and interfaces. Compile every Rust/C++ output
+Check snapshot timestamps, duplicate names, module ownership, and values across
+formats for offsets, buttons, interfaces, schema fields, and enum members. Compile every Rust/C++ output
 file with the installed `rustc` and `g++` compilers:
 
 ```text

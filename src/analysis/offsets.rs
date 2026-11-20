@@ -13,6 +13,7 @@ use pelite::pe64::{Pe, PeView, Rva};
 use phf::{Map, phf_map};
 
 use super::InterfaceMap;
+use crate::memory::read_code_image;
 
 pub type OffsetMap = BTreeMap<String, BTreeMap<String, Rva>>;
 
@@ -117,9 +118,7 @@ pub fn offsets<P: Process + MemoryView>(
         let module = process
             .module_by_name(module_name)
             .with_context(|| format!("required module {module_name} not found"))?;
-        let buf = process
-            .read_raw(module.base, module.size as _)
-            .data_part()
+        let buf = read_code_image(process, &module)
             .with_context(|| format!("failed to read {module_name}"))?;
         let view =
             PeView::from_bytes(&buf).with_context(|| format!("invalid PE image: {module_name}"))?;

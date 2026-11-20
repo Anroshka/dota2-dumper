@@ -6,7 +6,7 @@ use std::path::PathBuf;
 use std::str::FromStr;
 use std::time::Instant;
 
-use anyhow::Result;
+use anyhow::{Context, Result};
 
 use clap::{ArgAction, Parser};
 
@@ -39,6 +39,7 @@ struct Args {
         short,
         long,
         value_delimiter = ',',
+        value_parser = ["cs", "hpp", "json", "rs", "zig"],
         default_values = ["cs", "hpp", "json", "rs", "zig"]
     )]
     file_types: Vec<String>,
@@ -95,7 +96,9 @@ fn main() -> Result<()> {
 
     let conn_args = args
         .connector_args
-        .map(|s| ConnectorArgs::from_str(&s).expect("unable to parse connector arguments"))
+        .map(|s| ConnectorArgs::from_str(&s))
+        .transpose()
+        .context("invalid connector arguments")?
         .unwrap_or_default();
 
     let read_local_files = args.connector.is_none();

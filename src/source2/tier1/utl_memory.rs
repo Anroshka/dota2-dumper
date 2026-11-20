@@ -18,6 +18,6 @@ impl<T: Pod> UtlMemory<T> {
             return Err(ErrorKind::OutOfBounds.into());
         }
 
-        mem.read_ptr(self.data.at(index as _)).data_part()
+        mem.read_ptr(self.data.at(index as _)).data()
     }
 }

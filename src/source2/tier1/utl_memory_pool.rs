@@ -22,7 +22,7 @@ pub struct UtlMemoryPoolBlob {
 pub struct UtlMemoryPool {
     pub block_size: i32,                         // 0x0000
     pub blocks_per_blob: i32,                    // 0x0004
-    pub grow_mode: MemoryPoolGrowType,           // 0x0008
+    pub grow_mode: u32,                          // 0x0008
     pub blocks_allocated: i32,                   // 0x000C
     pub peak_allocated: i32,                     // 0x0010
     pub alignment: u16,                          // 0x0014

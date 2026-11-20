@@ -77,13 +77,14 @@ pub struct SchemaType {
     pad_0: [u8; 0x8],                                 // 0x0000
     pub name: Pointer64<ReprCString>,                 // 0x0008
     pub type_scope: Pointer64<SchemaSystemTypeScope>, // 0x0010
-    pub type_category: SchemaTypeCategory,            // 0x0018
-    pub atomic_category: SchemaAtomicCategory,        // 0x0019
+    pub type_category: u8,                            // 0x0018
+    pub atomic_category: u8,                          // 0x0019
     pub value: SchemaTypeUnion,                       // 0x0020
 }
 
 unsafe impl Pod for SchemaType {}
 
+#[repr(C)]
 pub union SchemaTypeUnion {
     pub r#type: Pointer64<SchemaType>,
     pub class_binding: Pointer64<SchemaClassBinding>,
